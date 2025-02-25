@@ -438,7 +438,7 @@ def save_html(driver, did, fname):
     
     return question_data_id
 
-def make_filename(qtitle, qid, dataid):
+def make_filename(qtitle, qid, dataid, tid=0):
     fname = ""
 
     exams = [
@@ -541,6 +541,10 @@ def make_filename(qtitle, qid, dataid):
             fname = 'isaca/CISM2/CISM-Q' + format(int(qid), '04') + '.html'
         elif qtitle == "Exam CISA topic 2":
             fname = 'isaca/CISA2/CISA-Q' + format(int(qid), '04') + '.html'
+        elif qtitle == "Exam AZ-104":
+            fname = 'microsoft/AZ104/AZ104-T' + format(int(tid), '02') + '-Q' + format(int(qid), '03') + '.html'
+        elif qtitle == "Exam AZ-305":
+            fname = 'microsoft/AZ305/AZ305-T' + format(int(tid), '02') + '-Q' + format(int(qid), '03') + '.html'
         
         # elif qtitle == 'Exam AWS Certified Developer Associate topic 1':
         #     fname = 'aws/DVA/DVA-Q' + format(int(qid), '04') + '.html'
@@ -628,10 +632,13 @@ def save_kr(driver, fname):
     header.contents = [BeautifulSoup(header_contents, 'html.parser')]
 
     container = bs_en.find("div", {"class": "discussion-header-container"})
-    progress_contents = container.find("div", {"class": "progress"}).decode_contents()
+    progress_element = container.find("div", {"class": "progress"})
+    progress_contents = progress_element.decode_contents() if progress_element else None
+    #progress_contents = container.find("div", {"class": "progress"}).decode_contents()
     container_kr = BeautifulSoup(container_contents, 'html.parser')
     progress = container_kr.find("div", {"class": "progress"})
-    progress.contents = [BeautifulSoup(progress_contents, 'html.parser')]
+    if progress and progress_contents is not None:
+        progress.contents = [BeautifulSoup(progress_contents, 'html.parser')]
     container.contents = [BeautifulSoup(container_kr.decode_contents(), 'html.parser')]
  
     discussion_contents_en = bs_en.find("div", {"class": "discussion-page-comments-section"}).decode_contents()
@@ -753,6 +760,14 @@ def read_Exam_list(fname):
 
     return df
 
+def read_AZ_Exam_list(fname):
+
+    df = pd.read_csv(fname, delimiter='\t', encoding='utf-8', header=None,
+                    names=['Topic', 'ExamNo', 'DiscussNo', 'DataNo', 'DiscussURL'],
+                    index_col=False)
+
+    return df
+
 def refresh_all_exam(exam_list_file, qtitle):
     start_time = time.time()
     df = read_Exam_list(exam_list_file)
@@ -779,7 +794,6 @@ def refresh_all_exam(exam_list_file, qtitle):
             if (len(fname) <= 0): 
                 new_data_id = 0
             else:
-
                 new_data_id = make_question_file(driver, fname, url, did)
                 translate_page_to_kr(driver, fname)
                 save_kr(driver, fname)
@@ -799,6 +813,47 @@ def refresh_all_exam(exam_list_file, qtitle):
         with open(fn, 'w') as file:
             file.write('0\n')
 
+    end_time = time.time()
+    duration = end_time - start_time
+    formatted_duration = timedelta(seconds=duration)
+
+    print(f"Function duration: {formatted_duration}")
+
+    driver.close()
+    driver.quit()
+
+def refresh_AZ_exam(exam_list_file, qtitle):
+    start_time = time.time()
+    df = read_AZ_Exam_list(exam_list_file)
+
+    driver = set_chrome_driver()
+    # driver.set_window_position(1800,10)
+
+    for i in range(len(df))[10:]:
+        tid = int(df.at[i, 'Topic'])
+        qid = int(df.at[i, 'ExamNo'])
+        did = int(df.at[i, 'DiscussNo'])
+        dataid = int(df.at[i, 'DataNo'])
+        if did == 0:
+            continue
+
+        url = str(df.at[i, 'DiscussURL'])
+        print(qtitle+"\t"+str(tid)+"\t"+str(qid)+"\t"+url, flush=True)
+        try:
+            fname = make_filename(qtitle, qid, dataid, tid)
+            if (len(fname) <= 0): 
+                new_data_id = 0
+            else:
+                new_data_id = make_question_file(driver, fname, url, did)
+                translate_page_to_kr(driver, fname)
+                save_kr(driver, fname)
+
+        except Exception as e:
+            print("Error:", str(e))
+            print(f"*** Make question error !!! {e}")
+            err = True
+            break
+        
     end_time = time.time()
     duration = end_time - start_time
     formatted_duration = timedelta(seconds=duration)
@@ -953,7 +1008,12 @@ if __name__ == "__main__":
     # FORUM_NAME = 'isaca'
     # refresh_from_forum(DISCUSS, FORUM_NAME, 1)    
 
-    DISCUSS = 'AzureDiscuss.txt'
-    FORUM_NAME = 'microsoft'
-    refresh_from_forum(DISCUSS, FORUM_NAME, 1)
+    # DISCUSS = 'AzureDiscuss.txt'
+    # FORUM_NAME = 'microsoft'
+    # refresh_from_forum(DISCUSS, FORUM_NAME, 1)
 
+    AZ305 = 'Exam AZ-305'
+    refresh_AZ_exam('AZ305_Exam.csv', AZ305)
+
+    AZ104 = 'Exam AZ-104'
+    refresh_AZ_exam('AZ104_Exam.csv', AZ104)
