@@ -1,0 +1,4491 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body class="home2"><div style="position:relative;">
+<!-- meta tag -->
+<meta charset="utf-8"/>
+<title>Exam AZ-104 topic 5 question 44 discussion</title>
+<!-- responsive tag -->
+<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<!-- bootstrap v4 css -->
+<link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<!-- font-awesome css -->
+<link defhref="../../../css/font-awesome.min.css" href="../../../css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<!-- slick css -->
+<link defhref="../../../css/slick.css" href="../../../css/slick.css" rel="stylesheet" type="text/css"/>
+<!-- rsmenu transitions CSS -->
+<link defhref="../../../css/rsmenu-transitions.css" href="../../../css/rsmenu-transitions.css" rel="stylesheet" type="text/css"/>
+<link href="../../../css/style.css?ver=1" rel="stylesheet" type="text/css"/>
+<link href="../../../css/color/default.css" rel="stylesheet" type="text/css"/>
+<!-- responsive css -->
+<link href="../../../css/responsive.css" rel="stylesheet" type="text/css"/>
+<link href="../../../css/forum.css" rel="stylesheet" type="text/css"/>
+<div class="sec-spacer pt-20">
+<div class="container">
+<div class="container action-row-container border-0 p-0 mb-2">
+<div class="container action-row clearfix d-flex">
+<i class="fa fm fa-language fa-2x mr-2"></i>
+<a class="btn show-english" href="javascript:void(0)">English</a>
+<a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
+<span class="pagination-container ml-auto">
+<span id="page-indicator"><strong></strong></span>
+<span class="pagination-nav ml-4">
+<a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
+<a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
+</span>
+</span>
+</div>
+</div>
+<script src="../../../js/questions.js"></script>
+<!-- BEGIN Discussions header / title -->
+<div class="row">
+<div class="col-12">
+<div class="discussion-list-header">
+<h1><i class="fa fa-file-text-o mr-3"></i>시험 AZ-104 주제 5 질문 44 토론</h1>
+</div>
+<div class="discussion-list-header-en" style="display: none;">
+<h1><i class="fa fa-file-text-o mr-3"></i>Exam AZ-104 topic 5 question 44 discussion</h1>
+</div>
+</div>
+</div>
+<!-- END Discussions header / title -->
+<!-- BEGIN Discussion Content -->
+<div class="row">
+<div class="col-12">
+<div class="discussion-header-container">
+<!-- Question -->
+<div class="question-discussion-header">
+						
+							Microsoft의
+						 <a class="discussion-link" href="/exams/microsoft/az-104/">AZ-104 의 실제 시험 문제</a>
+<div>
+							질문 #: 44 <br/>
+							주제 #: 5
+						</div>
+</div>
+<div class="question-body mt-3 pt-3 border-top" data-id="804527">
+<p class="card-text">
+							
+								핫스팟 - <br/>VM1이라는 Azure 가상 머신이 VNet1이라는 가상 네트워크에 연결되어 있습니다. VM1의 구성은 다음과 같습니다. <br/>✑ 서브넷: 10.0.0.0/24 <br/>✑ 가용성 집합: AVSet <br/>✑ 네트워크 보안 그룹(NSG): 없음 <br/>✑ 개인 IP 주소: 10.0.0.4(동적) <br/>✑ 공용 IP 주소: 40.90.219.6(동적) <br/>slb1이라는 표준 인터넷 연결 부하 분산 장치를 배포합니다. <br/>VM1에 대한 연결을 허용하도록 slb1을 구성해야 합니다. <br/>slb1을 구성할 때 VM1에 어떤 변경 사항을 적용해야 합니까? 답하려면 답 영역에서 적절한 옵션을 선택하세요. <br/>참고: 각 올바른 선택은 1점입니다. <br/>핫 영역:<br/><img class="in-exam-image" src="/exam-assets/media/exam-media/04223/0041900001.jpg"/><br/>
+</p>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
+<a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
+<div class="card-text question-answer bg-light white-text" style="display: none;">
+<span class="correct-answer-box"><strong>제안된 답변:</strong>
+<span class="correct-answer"><img class="in-exam-image" src="/exam-assets/media/exam-media/04223/0041900002.jpg"/></span>
+<br/>
+</span>
+<span class="answer-description"> 
+								VM1의 개인 IP 주소를 정적으로 변경합니다. <br/>상자 1: VM1에서 공용 IP 주소 제거 <br/>참고: 공용 로드 밸런서는 가상 네트워크 내의 가상 머신(VM)에 대한 아웃바운드 연결을 제공할 수 있습니다. 이러한 연결은 개인 IP 주소를 공용 IP 주소로 변환하여 수행됩니다. 공용 로드 밸런서는 인터넷 트래픽을 VM으로 로드 밸런싱하는 데 사용됩니다. <br/>상자 2: NSG 만들기 및 구성 <br/>NSG는 허용된 트래픽을 명시적으로 허용하는 데 사용됩니다. 가상 머신 리소스의 서브넷 또는 NIC에 NSG가 없으면 트래픽이 이 리소스에 도달할 수 없습니다. <br/>참조: <br/>https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-overview
+							</span>
+</div>
+</div>
+<!-- / Question  -->
+</div>
+<div class="discussion-header-container-en" style="display: none;">
+<!-- Question -->
+<div class="question-discussion-header">
+						
+							Actual exam question from
+						
+						Microsoft's
+						<a class="discussion-link" href="/exams/microsoft/az-104/">AZ-104</a>
+<div>
+							Question #: 44<br/>
+							Topic #: 5
+						</div>
+</div>
+<div class="question-body mt-3 pt-3 border-top" data-id="804527">
+<p class="card-text">
+							
+								HOTSPOT -<br/>You have an Azure virtual machine named VM1 that connects to a virtual network named VNet1. VM1 has the following configurations:<br/>✑ Subnet: 10.0.0.0/24<br/>✑ Availability set: AVSet<br/>✑ Network security group (NSG): None<br/>✑ Private IP address: 10.0.0.4 (dynamic)<br/>✑ Public IP address: 40.90.219.6 (dynamic)<br/>You deploy a standard, Internet-facing load balancer named slb1.<br/>You need to configure slb1 to allow connectivity to VM1.<br/>Which changes should you apply to VM1 as you configure slb1? To answer, select the appropriate options in the answer area.<br/>NOTE: Each correct selection is worth one point.<br/>Hot Area:<br/><img class="in-exam-image" src="/exam-assets/media/exam-media/04223/0041900001.jpg"/><br/>
+</p>
+<a class="btn btn-primary reveal-solution" href="#">Show Suggested Answer</a>
+<a class="btn btn-primary hide-solution d-none" href="#">Hide Answer</a>
+<div class="card-text question-answer bg-light white-text">
+<span class="correct-answer-box"><strong>Suggested Answer:</strong>
+<span class="correct-answer"><img class="in-exam-image" src="/exam-assets/media/exam-media/04223/0041900002.jpg"/></span>
+<br/>
+</span>
+<span class="answer-description">
+								Change the private IP address of VM1 to static<br/>Box 1: Remove the public IP address from VM1<br/>Note: A public load balancer can provide outbound connections for virtual machines (VMs) inside your virtual network. These connections are accomplished by translating their private IP addresses to public IP addresses. Public Load Balancers are used to load balance internet traffic to your VMs.<br/>Box 2: Create and configure an NSG<br/>NSGs are used to explicitly permit allowed traffic. If you do not have an NSG on a subnet or NIC of your virtual machine resource, traffic is not allowed to reach this resource.<br/>Reference:<br/>https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-overview
+							</span>
+</div>
+</div>
+<!-- / Question  -->
+</div>
+<div class="comments-wrapper">
+<a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
+<div class="discussion-page-comments-section" data-discussion-question-id="51446" style="display: none">
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
+<!-- discussion.html -->
+<!-- Discussion start -->
+<div class="container outer-discussion-container">
+<div class="row">
+<div class="comments-container p-2 w-100">
+<!-- New comment start -->
+<!-- New comment end -->
+<div class="discussion-container">
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="360659" id="comment-360659">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				믈란토니에서
+			</h5>
+</a>
+<span class="badge badge-primary">
+				높은 투표수<i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="화 18 5월 2021 18:26">2021-05-19 03:26</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">정답: 상자 1: VM1에서 공용 IP 주소 제거 참고: 공용 로드 밸런서는 가상 네트워크 내의 가상 머신(VM)에 대한 아웃바운드 연결을 제공할 수 있습니다. 이러한 연결은 개인 IP 주소를 공용 IP 주소로 변환하여 수행됩니다. 공용 로드 밸런서는 인터넷 트래픽을 VM으로 로드 밸런싱하는 데 사용됩니다. 로드 밸런서와 공용 IP 주소 SKU는 공용 IP 주소와 함께 사용할 때 일치해야 합니다. 기본 SKU IP만 기본 SKU 로드 밸런서에서 작동하고 표준 SKU IP만 표준 SKU 로드 밸런서에서 작동합니다. 상자 2: NSG 만들기 및 구성 NSG는 허용된 트래픽을 명시적으로 허용하는 데 사용됩니다. 가상 머신 리소스의 서브넷 또는 NIC에 NSG가 없으면 트래픽이 이 리소스에 도달할 수 없습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">172</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="634675" id="comment-634675">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				같은 느낌
+			</h5>
+</a>
+<span class="comment-date align-middle" title="목 21 7월 2022 4:51 PM">2022-07-22 01:51</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">IP와 LB의 SKU에 대한 것 같습니다. IP와 LB의 SKU가 일치해야 합니다. 동적 IP는 SKU Basic이므로 표준 LB에서는 작동하지 않습니다. https://docs.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses#sku를 참조하세요.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="360660" id="comment-360660">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				믈란토니에서
+			</h5>
+</a>
+<span class="comment-date align-middle" title="화 18 5월 2021 18:27">2021-05-19 03:27</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">참고: LB와 동일한 위치와 동일한 가상 네트워크에 있는 가상 머신만 연결할 수 있습니다. 또한 백엔드 풀에 추가할 때 VM의 상태는 중요하지 않습니다. 참조: https://docs.microsoft.com/en-us/azure/aks/load-balancer-standard https://docs.microsoft.com/en-us/azure/virtual-network/public-ip-addresses https://stackoverflow.com/questions/52882024/cannot-add-vm-to-standard-azure-load-balancer https://docs.microsoft.com/en-us/azure/load-balancer/skus https://docs.microsoft.com/en-us/azure/load-balancer/backend-pool-management</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">25</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="526833" id="comment-526833">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				넷스퍼드
+			</h5>
+</a>
+<span class="comment-date align-middle" title="화 18 1월 2022 17:54">2022-01-19 02:54</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">상자 1: 공용 IP 제거. 하지만 이것을 옵션으로 강제하는 것은 보이지 않았습니다. "공용 IP 주소가 가상 머신에 할당되거나 가상 머신이 아웃바운드 규칙이 있거나 없이 표준 부하 분산 장치의 백엔드 풀에 배치되면 기본 아웃바운드 액세스 IP가 비활성화됩니다. Azure 가상 네트워크 NAT 게이트웨이 리소스가 가상 머신의 서브넷에 할당되면 기본 아웃바운드 액세스 IP가 비활성화됩니다."라는 내용을 찾았습니다. https://docs.microsoft.com/en-us/azure/load-balancer/quickstart-load-balancer-standard-public-portal?tabs=option-1-create-load-balancer-standard. 제가 가장 큰 문제는 어떤 답변도 "필수"로 보이지 않는다는 것입니다. 전형적인 MS 질문입니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="648899" id="comment-648899">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				홀리더드
+			</h5>
+</a>
+<span class="comment-date align-middle" title="금 19 8월 2022 12:46">2022-08-19 21:46</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">2022년 8월 19일에 시험을 봤습니다. 870점을 받았습니다. 약 85%의 질문이 ET에도 있었습니다. 답변: Box1: VM1에서 공용 IP 주소 제거 Box2: NSG 생성 및 구성</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">13</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="821244" id="comment-821244">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				코난바브
+			</h5>
+</a>
+<span class="comment-date align-middle" title="토 25 2월 2023 07:54">2023-02-25 16:54</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">mlantonis는 항상 그렇듯이 옳습니다. 랩에서 테스트했습니다. VM에 동적(따라서 기본) 공용 IP가 있는 경우 다음 오류 메시지와 함께 BE 풀에 선택할 수 없습니다. "리소스 IP 주소의 SKU가 로드 밸런서의 SKU와 다릅니다."</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">5</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="631468" id="comment-631468">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				엔칸19
+			</h5>
+</a>
+<span class="comment-date align-middle" title="목 14 7월 2022 6:58 PM">2022-07-15 03:58</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">공용 IP를 제거하는 유일한 이유는 그 본질(동적) 때문입니다. 기본 SKU 공용 IP는 동적 또는 정적일 수 있습니다. 표준 SKU 공용 IP는 정적이어야 합니다. 표준 SKU LB에는 표준 SKU 공용 IP가 필요하며, 그렇지 않은 경우 제거하세요.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">13</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="515618" id="comment-515618">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				프라드
+			</h5>
+</a>
+<span class="badge badge-primary">
+				높은 투표수<i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="월 03 1월 2022 11:30">2022-01-03 20:30</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">여러분!! 간단하죠! 댓글 섹션에 있는 복잡한 텍스트북 설명에 헷갈리지 마세요. 1) VM1에서 공용 IP 주소 제거 --&gt; 이유는 LB를 만들고 백엔드 풀에 VM을 추가할 때 VM에 공용 IP가 할당되지 않았는지 확인하기 때문입니다. 2) NSG를 만들고 구성합니다. --&gt; 이 질문에서 주의해야 할 핵심 사항은 "STANDAR LB"입니다. 표준 LB의 백엔드 풀 VM은 반드시 NSG를 연결하고 허용할 필수 포트로 구성해야 합니다. 저는 기본 SKU로 LB를 만들었고 표준은 만들지 않았습니다. 예: 기본 SKU LB를 사용하면 NSG 없이도 RDP를 통해 VM에 연결할 수 있었습니다. 이제 표준 LB로 테스트할 때 VM NIC에 대한 NSG를 구성하고 포트 3389에서 RDP를 허용해야 했습니다. NSG 없이는 연결할 수 없습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">47</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1359183" id="comment-1359183">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				네이선12345
+			</h5>
+</a>
+<span class="badge badge-primary">
+				가장 최근<i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="목 20 2월 2025 10:04">2025-02-20 19:04</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">제가 아는 바에 따르면 로드 밸런서에는 고정 IP 주소가 필요하므로 BOX 1: 공용 IP 주소를 제거합니다. BOX 2: 개인 IP를 고정 IP로 변경합니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1339635" id="comment-1339635">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				토르0007
+			</h5>
+</a>
+<span class="comment-date align-middle" title="일 12 1월 2025 19:39">2025-01-13 04:39</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">영어: 상자 1: VM1에서 공용 IP 주소 제거 상자 2: NSG 만들기 및 구성 MS 문서에서: 표준 부하 분산 장치 및 표준 공용 IP 주소는 네트워크 보안 그룹(NSG)에서 열지 않는 한 인바운드 연결에 닫힙니다.NSG를 사용하여 허용된 트래픽을 명시적으로 허용합니다.가상 머신 리소스의 서브넷 또는 네트워크 인터페이스 카드(NIC)에 NSG가 없으면 트래픽이 리소스에 도달할 수 없습니다.참조: https://learn.microsoft.com/en-us/azure/load-balancer/load-balancer-overview 또한 MS 설명서에는 ILB 백엔드 풀의 VM에 대한 언급이 없으며 IP 주소(개인 IP)는 정적이어야 합니다.참조: https://learn.microsoft.com/en-us/azure/load-balancer/backend-pool-management https://learn.microsoft.com/en-us/azure/load-balancer/components</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1302247" id="comment-1302247">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				0378d43
+			</h5>
+</a>
+<span class="comment-date align-middle" title="목 24 10월 2024 02:50 AM">2024-10-24 11:50</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">개인 IP를 정적으로 변경하고, 표준 로드 밸런서이므로 VM에서 공용 IP를 제거합니다. 그렇지 않으면 두 VM이 모두 동일한 VNET에 있어야 합니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1289528" id="comment-1289528">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				[제거됨]
+			</h5>
+</a>
+<span class="comment-date align-middle" title="목 26 9월 2024 16:37">2024-09-27 01:37</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">옳은</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1178081" id="comment-1178081">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				감사합니다
+			</h5>
+</a>
+<span class="comment-date align-middle" title="수 2024년 3월 20일 10:24">2024-03-20 19:24</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">- VM1에 NSG를 생성하고 할당합니다. - VM1에서 공용 IP 주소를 제거합니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1163797" id="comment-1163797">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				1828b9d
+			</h5>
+</a>
+<span class="comment-date align-middle" title="금 01 3월 2024 23:02">2024-03-02 08:02</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">이 문제는 2024년 1월 3일 시험에 있었습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1018474" id="comment-1018474">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				간체프
+			</h5>
+</a>
+<span class="comment-date align-middle" title="수 27 9월 2023 07:27">2023-09-27 16:27</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">저는 약간 혼란스럽습니다. 방금 시나리오를 테스트해 보았고 LB1의 FrontEnd IP를 통해 VM1에 SSH로 접속할 수 있었습니다. NSG는 없고, VM1에는 자체 Public IP가 있으며, 심지어 홈 PC에서 SSH를 하는 데도 문제가 없습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1096763" id="comment-1096763">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				[제거됨]
+			</h5>
+</a>
+<span class="comment-date align-middle" title="목 14 12월 2023 20:47">2023-12-15 05:47</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Standard 또는 Basic LB를 만들었나요? 설명하시는 시나리오는 기본적으로 연결을 허용하는 Basic LB와 관련이 있는 것 같습니다. 반면 Standard LB는 연결을 필터링하기 위해 NSG를 연결해야 합니다. 질문에서 Standard LB를 지정하므로 시나리오에 설명된 목표를 달성하려면 NSG가 필요하다고 생각합니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="823415" id="comment-823415">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				브보어899
+			</h5>
+</a>
+<span class="comment-date align-middle" title="월 27 2월 2023 09:44">2023-02-27 18:44</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">오늘 2월 26일 시험에 합격했습니다. 이 문제가 시험에 나왔습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="804979" id="comment-804979">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				죽이다
+			</h5>
+</a>
+<span class="comment-date align-middle" title="토 11 2월 2023 05:09">2023-02-11 14:09</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">요약: 상자 1 또는 2에 대한 정답은 없습니다.과거에는 제한이 있었을지 모르지만 2023년 2월 현재 적용되지 않습니다.근거: 랩 테스트 결과(2023년 2월): 표준 SKU LB 생성 VM(FreeBSD) 생성: - 기본 PIP - 동적 LIP - 가용성 세트에서 - 네트워크 보안 그룹 없음 LB에서 백엔드 풀을 생성하려고 시도: - LB에서 백엔드 풀(IP 구성)을 생성하고 위의 VM을 LB의 백엔드 풀에 추가할 수 있습니다.따라서 실제로 백엔드 풀을 생성하기 위해 반드시 해야 할 일은 없습니다.상자 1에 대한 정답은 없습니다.다음으로 LB에서 VM이 있는 백엔드 풀에 대한 TCP22에 대한 새 부하 분산 규칙을 ​​생성했습니다.문제 없이 성공했습니다.Putty에서 TCP22의 LB 프런트엔드 PIP에 연결을 시도했고 수락할 인증서 팝업이 나타났습니다. 인증서를 수락하고 로그인 프롬프트가 표시되었으므로 실제로 LB에서 VM1에 연결하는 데 반드시 해야 할 일은 없습니다. Box 2에 대한 정답은 없습니다. 어쨌든 이는 시험을 위한 좋은 연습이었습니다 :)</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="706833" id="comment-706833">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				클렉삼스
+			</h5>
+</a>
+<span class="comment-date align-middle" title="토 29 10월 2022 02:08">2022-10-29 11:08</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">box1: 동적 IP가 표준 LB와 호환되지 않으므로 IP를 제거합니다. box2: NSG는 표준 로드 밸런서가 제로 트러스트 네트워크 보안 모델에 기반하기 때문입니다. 표준 로드 밸런서와 표준 공용 IP 주소는 네트워크 보안 그룹에서 열지 않는 한 인바운드 연결에 닫힙니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">5</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="652001" id="comment-652001">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				엠앤코스
+			</h5>
+</a>
+<span class="comment-date align-middle" title="금 26 8월 2022 04:32">2022-08-26 13:32</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">주어진 답변</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="634699" id="comment-634699">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				더머
+			</h5>
+</a>
+<span class="comment-date align-middle" title="목 21 7월 2022 오후 5:56">2022-07-22 02:56</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-overview#securebydefault를 참조하세요. - 표준 부하 분산 장치는 제로 트러스트 네트워크 보안 모델에 기반합니다. - 표준 부하 분산 장치는 기본적으로 보안되며 가상 네트워크의 일부입니다. 가상 네트워크는 비공개적이고 격리된 네트워크입니다. - 표준 부하 분산 장치와 표준 공용 IP 주소는 네트워크 보안 그룹에서 열지 않는 한 인바운드 연결에 닫힙니다. NSG는 허용된 트래픽을 명시적으로 허용하는 데 사용됩니다. 가상 머신 리소스의 서브넷이나 NIC에 NSG가 없으면 트래픽이 이 리소스에 도달할 수 없습니다. NSG에 대해 알아보고 시나리오에 적용하는 방법을 알아보려면 네트워크 보안 그룹을 참조하세요. - 기본 부하 분산 장치는 기본적으로 인터넷에 열려 있습니다. - 부하 분산 장치는 고객 데이터를 저장하지 않습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="619586" id="comment-619586">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				레이지리눅스
+			</h5>
+</a>
+<span class="comment-date align-middle" title="화 21 6월 2022 05:24">2022-06-21 14:24</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">주어진 답변은 정확하고 mlantonis는 잘 설명되어 있습니다</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="614198" id="comment-614198">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				스쿠비스낵86
+			</h5>
+</a>
+<span class="comment-date align-middle" title="목 09 6월 2022 21:39">2022-06-10 06:39</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">방금 Azure Portal에서 테스트했습니다. NSG 없이도 VM을 백엔드 풀에 넣을 수 있었습니다. 동적 IP 주소는 기본 IP이므로 표준 부하 분산 장치와 호환되지 않습니다. 기본 IP는 표준 LB와 혼합하여 사용할 수 없습니다. 동적 주소는 NIC에서 삭제하고 정적 주소를 만들어야 했습니다. mlantonis는 실제로 이 부분에서 틀렸습니다. 또한 전면 LB는 자체적으로 공용 IP 주소가 있으므로 공용 IP 주소가 있는 VM이 ​​필요하지 않습니다. 삭제 상자 1: VM1에서 공용 IP 주소 제거 상자 2: 개인 IP 주소를 다시 정적 주소로 변경, VM을 백엔드 풀에 연결하는 데 NSG가 필요하지 않습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="884221" id="comment-884221">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				와인과 같은
+			</h5>
+</a>
+<span class="comment-date align-middle" title="토 29 4월 2023 12:25">2023-04-29 21:25</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">여기를 확인해 보세요 - 표준 로드 밸런서의 경우 백엔드 풀의 VM은 네트워크 보안 그룹에 속하는 네트워크 인터페이스를 가져야 합니다. 링크: https://learn.microsoft.com/en-us/azure/load-balancer/quickstart-load-balancer-standard-public-cli</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="570969" id="comment-570969">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				도비25
+			</h5>
+</a>
+<span class="comment-date align-middle" title="토 19 3월 2022 10:52">2022-03-19 19:52</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">오늘 19/03/2022 시험 때 이걸 받았어요</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="568522" id="comment-568522">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				호세버추얼
+			</h5>
+</a>
+<span class="comment-date align-middle" title="화 15 3월 2022 17:36">2022-03-16 02:36</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Box1은 개인 IP를 고정 IP로 변경해야 한다고 생각합니다. 설명서를 잘 이해했다면 고정 개인 IP 주소와 NSG가 모두 필요합니다. Box 1은 무엇을 "반드시" 해야 하는지 묻습니다. 공용 IP 주소를 "반드시" 삭제해야 한다고 생각하지 않습니다. 그냥 작동하지 않을 뿐입니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="529229" id="comment-529229">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				파비오비
+			</h5>
+</a>
+<span class="comment-date align-middle" title="금 21 1월 2022 16:58">2022-01-22 01:58</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">맞습니다. 상자 2와 관련하여 이유는 표준 부하 분산 장치가 "네트워크 보안 그룹에서 허용하지 않는 한 인바운드 흐름에 닫힘"이기 때문입니다. https://docs.microsoft.com/en-us/azure/load-balancer/skus#skus</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="510902" id="comment-510902">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				마르코_아이미
+			</h5>
+</a>
+<span class="comment-date align-middle" title="화 28 12월 2021 09:12">2021-12-28 18:12</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">여러분, 농담이에요? LB를 위한 다이나믹???????????????</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="433065" id="comment-433065">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				차우다4
+			</h5>
+</a>
+<span class="comment-date align-middle" title="금 27 8월 2021 14:28">2021-08-27 23:28</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Azure에서 이를 설정하여 확인했습니다.상자 1: VM1에서 공용 IP 주소 제거 - 표준 SKU 공용 IP 구성이 있거나 공용 IP 구성이 없는 백엔드 풀에 가상 머신만 연결할 수 있습니다.VM의 공용 IP는 동적이므로 IP는 기본 SKU IP여야 합니다.기본 SKU IP가 있는 이러한 VM을 표준 SKU 부하 분산 장치에 추가할 수 없습니다.공용 IP를 제거하거나 표준 SKU IP로 변환하지 않는 한 VM은 선택을 위해 백엔드 풀 포털에 표시되지도 않습니다.상자 2: NSG 만들기 및 구성 - 표준 부하 분산 장치는 제로 트러스트 네트워크 보안 모델에 기반합니다.표준 부하 분산 장치와 표준 공용 IP 주소는 네트워크 보안 그룹에서 열지 않는 한 인바운드 연결에 닫힙니다.NSG는 허용된 트래픽을 명시적으로 허용하는 데 사용됩니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">12</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="574068" id="comment-574068">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				모즈비우스_
+			</h5>
+</a>
+<span class="comment-date align-middle" title="목 24 3월 2022 05:37">2022-03-24 14:37</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">정확하고 자세한 설명 감사합니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="385416" id="comment-385416">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				비명을 지르는 손
+			</h5>
+</a>
+<span class="comment-date align-middle" title="토 19 6월 2021 12:29">2021-06-19 21:29</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">이유는 다음과 같습니다. VM1에 NSG를 생성하여 할당하고 VM1의 개인 IP 주소를 정적으로 변경하세요.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">6</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="384811" id="comment-384811">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				제이비65
+			</h5>
+</a>
+<span class="comment-date align-middle" title="금 18 6월 2021 14:34">2021-06-18 23:34</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">백엔드 풀을 만들기 전에 개인 IP를 정적으로 설정해야 합니다. 그렇지 않으면 재부팅 시 변경될 수 있으며 백엔드 풀이 유효하지 않습니다. 많은 사람들이 지적했듯이 연결하기 전에 "기본 SKU 로드 밸런서는 기본 SKU IP 주소를 사용하는데, 이는 표준 SKU IP 주소가 필요하기 때문에 표준 SKU 로드 밸런서와 호환되지 않습니다." IP 주소는 동적으로 할당되므로 "기본 SKU"가 됩니다. 따라서 공용 IP 주소를 제거하세요. NSG는 필요하지 않습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="384824" id="comment-384824">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				제이비65
+			</h5>
+</a>
+<span class="comment-date align-middle" title="금 18 6월 2021 14:44">2021-06-18 23:44</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">실제로 그렇게 하세요 :) "표준 로드 밸런서와 표준 공용 IP 주소는 네트워크 보안 그룹에서 열지 않는 한 인바운드 연결에 닫힙니다. NSG는 허용된 트래픽을 명시적으로 허용하는 데 사용됩니다. 가상 머신 리소스의 서브넷이나 NIC에 NSG가 없으면 트래픽이 이 리소스에 도달할 수 없습니다." 따라서 답은 1) 개인 IP 변경 2) NSG 생성이어야 합니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="614201" id="comment-614201">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				스쿠비스낵86
+			</h5>
+</a>
+<span class="comment-date align-middle" title="목 09 6월 2022 21:41">2022-06-10 06:41</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">방금 Azure Portal에서 테스트했습니다. NSG 없이도 VM을 백엔드 풀에 넣을 수 있었습니다. 동적 IP 주소는 기본 IP이므로 표준 부하 분산 장치와 호환되지 않습니다. 기본 IP는 표준 LB와 혼합하여 사용할 수 없습니다. 동적 주소는 NIC에서 삭제하고 정적 주소를 만들어야 했습니다. mlantonis는 실제로 이 부분에서 틀렸습니다. 또한 전면 LB는 자체적으로 공용 IP 주소가 있으므로 공용 IP 주소가 있는 VM이 ​​필요하지 않습니다. 삭제 상자 1: VM1에서 공용 IP 주소 제거 상자 2: 개인 IP 주소를 다시 정적 주소로 변경, VM을 백엔드 풀에 연결하는 데 NSG가 필요하지 않습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="370225" id="comment-370225">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				란불레
+			</h5>
+</a>
+<span class="comment-date align-middle" title="일 30 5월 2021 14:43">2021-05-30 23:43</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">정답은 https://docs.microsoft.com/en-us/azure/load-balancer/quickstart-load-balancer-standard-public-portal?tabs=option-1-create-load-balancer-standard 입니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="363111" id="comment-363111">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				배저03
+			</h5>
+</a>
+<span class="comment-date align-middle" title="금 21 5월 2021 16:58">2021-05-22 01:58</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">VM에 개인 IP를 할당한 다음 NSG를 생성하여 할당해야 한다고 생각합니다. VM을 다시 시작하면 동일한 IP를 수신할지 확신할 수 없습니다(동적임). 그러면 백엔드 풀에 도달할 수 없게 됩니다(또는 프로브 실패로 인해 건강하지 않음). 표준 LB는 작동하려면 NSG가 필요합니다("기본적으로 보안됨").</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="353750" id="comment-353750">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				전에
+			</h5>
+</a>
+<span class="comment-date align-middle" title="월 10 5월 2021 15:30">2021-05-11 00:30</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">정답은 다음과 같습니다. "기본 SKU 로드 밸런서는 기본 SKU IP 주소를 사용하는데, 이는 표준 SKU IP 주소가 필요하기 때문에 표준 SKU 로드 밸런서와 호환되지 않습니다." IP 주소는 동적으로 할당되므로 "기본 SKU"가 됩니다. 답변 1: 공용 IP 제거 답변 2: NSG 만들기 및 구성 https://docs.microsoft.com/en-us/azure/aks/load-balancer-standard</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">10</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="384825" id="comment-384825">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				제이비65
+			</h5>
+</a>
+<span class="comment-date align-middle" title="금 18 6월 2021 14:45">2021-06-18 23:45</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">이것은 VM이 아닌 LB에 적용됩니다!!! - "기본 SKU 로드 밸런서는 기본 SKU IP 주소를 사용하는데, 이는 표준 SKU IP 주소가 필요하기 때문에 표준 SKU 로드 밸런서와 호환되지 않습니다." IP 주소는 동적으로 할당되므로 "기본 SKU"가 됩니다. 따라서 여기서는 관련이 없습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="360137" id="comment-360137">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				모닝스타
+			</h5>
+</a>
+<span class="comment-date align-middle" title="화 18 5월 2021 08:10">2021-05-18 17:10</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">하지만 왜 NSG를 NGS 기본 규칙으로 사용해야 할까요? 2번째 규칙은 로드 밸런서의 트래픽을 허용합니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="369857" id="comment-369857">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				전에
+			</h5>
+</a>
+<span class="comment-date align-middle" title="일 30 5월 2021 06:38">2021-05-30 15:38</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">질문에서는 NSG가 없다고 합니다. 즉, NSG가 없으면 NSG에 정의된 기본 규칙이 없습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="369861" id="comment-369861">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				전에
+			</h5>
+</a>
+<span class="comment-date align-middle" title="일 30 5월 2021 06:46">2021-05-30 15:46</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">표준 SKU 공용 IP는 동적 할당을 가질 수 없습니다. 기본 SKU IP를 표준 SKU LB와 연결할 수 없습니다. 표준 LB는 기본적으로 안전하므로(표준 IP와 마찬가지로) NSG를 통해 이러한 연결을 명시적으로 허용하지 않으면 연결할 수 없습니다. 따라서 하단 상자는 "NSG 생성 및 구성"이어야 합니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="348861" id="comment-348861">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				왜냐면요
+			</h5>
+</a>
+<span class="comment-date align-middle" title="월 03 5월 2021 19:25">2021-05-04 04:25</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">https://docs.microsoft.com/en-us/azure/load-balancer/quickstart-load-balancer-standard-public-portal?tabs=option-1-create-load-balancer-standard</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="348859" id="comment-348859">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				왜냐면요
+			</h5>
+</a>
+<span class="comment-date align-middle" title="월 03 5월 2021 19:22">2021-05-04 04:22</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">표준 로드 밸런서는 제로 트러스트 네트워크 보안 모델에 기반합니다. 표준 로드 밸런서는 기본적으로 보안이 유지되며 가상 네트워크의 일부입니다. 가상 네트워크는 비공개적이고 격리된 네트워크입니다. 표준 로드 밸런서와 표준 공용 IP 주소는 네트워크 보안 그룹에서 열지 않는 한 인바운드 연결에 닫힙니다. NSG는 허용된 트래픽을 명시적으로 허용하는 데 사용됩니다. 가상 머신 리소스의 서브넷이나 NIC에 NSG가 없으면 트래픽이 이 리소스에 도달할 수 없습니다. NSG에 대해 알아보고 시나리오에 적용하는 방법은 네트워크 보안 그룹을 참조하세요. 기본 로드 밸런서는 기본적으로 인터넷에 열려 있습니다. 로드 밸런서는 고객 데이터를 저장하지 않습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="360141" id="comment-360141">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				모닝스타
+			</h5>
+</a>
+<span class="comment-date align-middle" title="화 18 5월 2021 08:13">2021-05-18 17:13</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">하지만 마이크로소프트의 NSG 문서를 읽어보면(3개의 서브넷 다이어그램과 4개의 NSG) 마지막 서브넷에는 NSG가 연결되어 있지 않았습니다. 그리고 저는 그것을 NSG가 연결되어 있지 않아서 모든 통신을 처리할 수 있다고 읽습니다. 그리고 또한 VM에 NSG를 연결하는 것이 좋지만 필수는 아니라고 말합니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="347157" id="comment-347157">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				라울가르
+			</h5>
+</a>
+<span class="comment-date align-middle" title="토 01 5월 2021 19:33">2021-05-02 04:33</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">설명을 보면 답이 맞는 것 같습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="350693" id="comment-350693">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				모흐나르
+			</h5>
+</a>
+<span class="comment-date align-middle" title="목 06 5월 2021 06:26">2021-05-06 15:26</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Box 1의 답은 무엇입니까? 개인 IP 주소를 정적으로 변경하는 것입니까 아니면 VM1에서 공용 IP를 제거하는 것입니까?</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="353833" id="comment-353833">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				라울가르
+			</h5>
+</a>
+<span class="comment-date align-middle" title="월 10 5월 2021 17:07">2021-05-11 02:07</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">가장 적절한 방법은 공개 IP를 제거하고 비공개 IP만 남겨두는 것이라고 생각합니다. SKU 기본 IP 공개에는 제한이 있지만 질문에서는 이에 대해 아무 말도 하지 않습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Discussion end -->
+<script type="text/javascript">
+function eventFire(el, etype){
+  if (el.fireEvent) {
+    el.fireEvent('on' + etype);
+  } else {
+    var evObj = document.createEvent('Events');
+    evObj.initEvent(etype, true, false);
+    el.dispatchEvent(evObj);
+  }
+	const checkboxes = document.querySelectorAll('.vote-checkboxes input')
+	if(checkboxes.length < 1){
+		const switchToSimpleCommentWrap = document.querySelectorAll('.switch-to-simple-comment-wrap')
+		const votingCommentBrackets = document.querySelectorAll('.voting-comment-brackets')
+		switchToSimpleCommentWrap.forEach((item)=> item.style.display = 'inline-block')
+		votingCommentBrackets.forEach((item)=> item.style.display = 'none')
+	}
+  console.log(etype);
+}
+function doVotingClick() {
+	eventFire(document.getElementById('votinglink'), 'click');
+}
+
+//doVotingClick();
+setTimeout(doVotingClick, 200);
+</script>
+</div>
+</div>
+<div class="comments-wrapper-en" style="display: none;">
+<a class="badge reveal-comment" href="javascript:void(0)">Show Comments</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">Hide Comments</a>
+<div class="discussion-page-comments-section-en" data-discussion-question-id="51446" style="display: none">
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">Comments</h4></div>
+<!-- discussion.html -->
+<!-- Discussion start -->
+<div class="container outer-discussion-container">
+<div class="row">
+<div class="comments-container p-2 w-100">
+<!-- New comment start -->
+<!-- New comment end -->
+<div class="discussion-container">
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="360659" id="comment-360659">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				mlantonis
+			</h5>
+</a>
+<span class="badge badge-primary">
+				Highly Voted <i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="Tue 18 May 2021 18:26">2021-05-19 03:26</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Correct Answer:
+
+Box 1: Remove the public IP address from VM1
+Note: A public load balancer can provide outbound connections for virtual machines (VMs) inside your virtual network. These connections are accomplished by translating their private IP addresses to public IP addresses. Public Load Balancers are used to load balance internet traffic to your VMs. Load balancer and the public IP address SKU must match when you use them with public IP addresses. Only Basic SKU IPs work with the Basic SKU load balancer and only Standard SKU IPs work with Standard SKU load balancers.
+
+Box 2: Create and configure an NSG
+NSGs are used to explicitly permit allowed traffic. If you do not have an NSG on a subnet or NIC of your virtual machine resource, traffic is not allowed to reach this resource.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">172</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="634675" id="comment-634675">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				SentaSama
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Thu 21 Jul 2022 16:51">2022-07-22 01:51</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">I think its more about the SKU of the IP and LB. The SKUs of the IP and LB need to match. As Dynamic IPs are if SKU Basic, this doesn't work with the standard LB.
+
+See https://docs.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses#sku</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">2</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="360660" id="comment-360660">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				mlantonis
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Tue 18 May 2021 18:27">2021-05-19 03:27</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Note: You can only attach virtual machines that are in the same location and on the same virtual network as the LB. Also, when adding them to a backend pool, it doesn’t matter in which status are the VMs.
+
+ 
+Reference:
+
+https://docs.microsoft.com/en-us/azure/aks/load-balancer-standard
+
+https://docs.microsoft.com/en-us/azure/virtual-network/public-ip-addresses
+
+https://stackoverflow.com/questions/52882024/cannot-add-vm-to-standard-azure-load-balancer
+
+https://docs.microsoft.com/en-us/azure/load-balancer/skus
+
+https://docs.microsoft.com/en-us/azure/load-balancer/backend-pool-management</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">25</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="526833" id="comment-526833">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Netspud
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Tue 18 Jan 2022 17:54">2022-01-19 02:54</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Box 1: Remove Publilc IP.
+But not seen anything that was forcing this as the option. Found this "The default outbound access IP is disabled when a public IP address is assigned to the virtual machine, or the virtual machine is placed in the backend pool of a Standard Load Balancer with or without outbound rules. If a Azure Virtual Network NAT gateway resource is assigned to the subnet of the virtual machine, the default outbound access IP is disabled." here : https://docs.microsoft.com/en-us/azure/load-balancer/quickstart-load-balancer-standard-public-portal?tabs=option-1-create-load-balancer-standard. 
+My big issues is I don't see any of the answers as a "MUST". Typical MS question.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">2</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="648899" id="comment-648899">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Holydud
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Fri 19 Aug 2022 12:46">2022-08-19 21:46</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Was on exam 19 Aug 2022. Scored 870. Around 85% questions were also on ET. Answered:
+
+Box1: Remove the public IP address from VM1
+Box2: Create and configure an NSG</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">13</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="821244" id="comment-821244">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				ConanBarb
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Sat 25 Feb 2023 07:54">2023-02-25 16:54</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">mlantonis is correct as always.
+
+Tested in lab. If the VM has a dynamic (hence basic) public IP it cannot be chosen to the B-E pool with the following error msg:
+"The SKU of the resource's IP address is different from the SKU of the load balancer."</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">5</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="631468" id="comment-631468">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				nkhan19
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Thu 14 Jul 2022 18:58">2022-07-15 03:58</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">the only reason to remove public IP is due to its nature (dynamic) 
+
+only Basic SKU Public IP can be Dynamic or Static 
+Standard SKU public IP can only be STATIC
+
+Standard SKU LB needs Standard SKU public IP or else remove it.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">13</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="515618" id="comment-515618">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Pradh
+			</h5>
+</a>
+<span class="badge badge-primary">
+				Highly Voted <i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="Mon 03 Jan 2022 11:30">2022-01-03 20:30</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Guys !! its simple! Don't get confused with  complicated text book explanation in comment section .
+
+1) Remove Public IP address from VM1  --&gt; Reason being when you create a LB and add VM to backend pool make sure VM doesn't have a Public IP assigned to it .
+
+2) Create and configure an NSG .  --&gt; key thing to notice in question is "STANDAR LB " . Backend pool VM in standard LB should compulsorily have NSG associated to it and configured with required port to be allowed. 
+
+I created an LB with Basic sku and not standard.. 
+
+Example : 
+
+With basic sku LB i was able to connect vm via rdp without any nsg.. 
+
+Now when I tested with standard LB I had to configure and NSG for the vm nic and allow port 3389 to rdp it.. Without nsg it won't allow to connect</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">47</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1359183" id="comment-1359183">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Nathan12345
+			</h5>
+</a>
+<span class="badge badge-primary">
+				Most Recent <i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="Thu 20 Feb 2025 10:04">2025-02-20 19:04</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">As per my knowledge, a Static IP address is required for the load balancer, so 
+
+BOX 1 : Remove the public IP address
+ BOX 2: Change the private IP to static.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1339635" id="comment-1339635">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Thor0007
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Sun 12 Jan 2025 19:39">2025-01-13 04:39</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Box 1: Remove the public IP address from VM1
+
+Box 2: Create and configure an NSG
+
+
+From MS article :
+
+Standard load balancers and standard public IP addresses are closed to inbound connections, unless network security groups (NSGs) open them. You use NSGs to explicitly permit allowed traffic. If you don't have an NSG on a subnet or network interface card (NIC) of your virtual machine resource, traffic isn't allowed to reach the resource.
+
+Ref : https://learn.microsoft.com/en-us/azure/load-balancer/load-balancer-overview
+
+Also there is no mentioned in MS documentation of VM in ILB backend pool IP address (private IP's) should be static. 
+
+ref : 
+
+https://learn.microsoft.com/en-us/azure/load-balancer/backend-pool-management
+
+https://learn.microsoft.com/en-us/azure/load-balancer/components</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1302247" id="comment-1302247">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				0378d43
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Thu 24 Oct 2024 02:50">2024-10-24 11:50</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Change the Private IP to Static and Remove Public IP from VM as it is Standard Load Balancer else both the VM needs to be in the same VNET.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1289528" id="comment-1289528">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				[Removed]
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Thu 26 Sep 2024 16:37">2024-09-27 01:37</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">CORRECT</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">3</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1178081" id="comment-1178081">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				tashakori
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Wed 20 Mar 2024 10:24">2024-03-20 19:24</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">- Create and assign NSG to VM1
+- Remove the public IP Adress from VM1</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1163797" id="comment-1163797">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				1828b9d
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Fri 01 Mar 2024 23:02">2024-03-02 08:02</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">This question was in exam 01/03/2024</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">4</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1018474" id="comment-1018474">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Ganchev
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Wed 27 Sep 2023 07:27">2023-09-27 16:27</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">I am a bit confused. Just testet the scenario and I was able to SSH access the VM1 over LB1's FrontEnd IP. No NSG exists, VM1 has its Public IP and even that no problem to SSH from home PC.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1096763" id="comment-1096763">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				[Removed]
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Thu 14 Dec 2023 20:47">2023-12-15 05:47</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Did you create a Standard or a Basic LB? The scenario you are describing seems to be related to a Basic LB which allows connection by default whilst a Standard LB needs a NSG to be attached to it in order to filter connections. The question specifies a Standard LB so I believe you need a NSG to achieve the goal described in the scenario.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="823415" id="comment-823415">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				vbohr899
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Mon 27 Feb 2023 09:44">2023-02-27 18:44</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Cleared Exam today 26 Feb, This question was there in exam.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">3</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="804979" id="comment-804979">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				GBAU
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Sat 11 Feb 2023 05:09">2023-02-11 14:09</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Summary:  There is no correct answer for Box 1 or 2
+Maybe historically there were limitations but as Feb 2023, they do not apply.
+
+Justification:
+
+Lab Test Results (Feb '23):
+Created Standard SKU LB
+
+Created VM (FreeBSD) with :
+-Basic PIP
+-Dynamic LIP
+-In an Availability Set
+-NO Network Security Group
+
+Attempted to create a Backend Pool in the LB:
+-I could create a BackEnd pool (IP Configuration) on the LB and add this VM above to the Backend pool of the LB.
+
+So there is actually NOTHING you MUST do to CREATE the backend pool.
+There is no correct answer for Box 1
+
+NEXT
+
+I created a new load balancing rule for TCP22 on the LB to the backend pool with the VM in it. Succeeded no problem
+
+Attempted Connection to FrontEnd PIP of LB on TCP22 in Putty and got the certificate pop up you would accept.  Accepted the certificate and got the login prompt
+
+So there is actually NOTHING you MUST do to CONNECT to VM1 from the LB
+There is no correct answer for Box 2
+
+It was all good practice for me for my exam anyway :)</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">3</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="706833" id="comment-706833">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				klexams
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Sat 29 Oct 2022 02:08">2022-10-29 11:08</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">box1: remove IP because dynamic IP is not compatible with standard LB.
+box2: NSG because Standard load balancer is built on the zero trust network security model. Standard load balancers and standard public IP addresses are closed to inbound connections unless opened by Network Security Groups.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">5</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="652001" id="comment-652001">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				EmnCours
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Fri 26 Aug 2022 04:32">2022-08-26 13:32</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Given Answer</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="634699" id="comment-634699">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Dumber
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Thu 21 Jul 2022 17:56">2022-07-22 02:56</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">please see:
+https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-overview#securebydefault
+
+
+- Standard load balancer is built on the zero trust network security model.
+
+- Standard Load Balancer is secure by default and part of your virtual network. The virtual network is a private and isolated network.
+
+- Standard load balancers and standard public IP addresses are closed to inbound connections unless opened by Network Security Groups. NSGs are used to explicitly permit allowed traffic. If you don't have an NSG on a subnet or NIC of your virtual machine resource, traffic isn't allowed to reach this resource. To learn about NSGs and how to apply them to your scenario, see Network Security Groups.
+
+- Basic load balancer is open to the internet by default.
+
+- Load balancer doesn't store customer data.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">3</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="619586" id="comment-619586">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Lazylinux
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Tue 21 Jun 2022 05:24">2022-06-21 14:24</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Given Answer is correct and  mlantonis is well explained</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">2</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="614198" id="comment-614198">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Scoobysnaks86
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Thu 09 Jun 2022 21:39">2022-06-10 06:39</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Just tested in the Azure portal. I was able to put the VM in the backend pool WITHOUT a NSG. The dynamic IP addresses are not compatible with a standard load balancer, as those IP's are basic. Basic Ip's cannot be mixed and used with a standard LB. The dynamic addresses had to be deleted from the NIC, and a static one created. mlantonis actually wrong on this one. Also, front facing LB's do not need Vms with public IP addresses as they have one themselves. Delete it
+Box 1: Remove the public IP address from VM1
+Box2: Change Private IP address to static
+again, you do not need a NSG to connect a VM to a backend pool</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">2</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="884221" id="comment-884221">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				vinsom
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Sat 29 Apr 2023 12:25">2023-04-29 21:25</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Pls check this - 
+For a standard load balancer, the VMs in the backend pool are required to have network interfaces that belong to a network security group. 
+Link: https://learn.microsoft.com/en-us/azure/load-balancer/quickstart-load-balancer-standard-public-cli</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="570969" id="comment-570969">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Dobby25
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Sat 19 Mar 2022 10:52">2022-03-19 19:52</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Received this on my exam today 19/03/2022</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="568522" id="comment-568522">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				josevirtual
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Tue 15 Mar 2022 17:36">2022-03-16 02:36</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">I think that Box1 should be to change the private IP to static. If I understood well the documentation, you need both a static private IP address and a NSG. Box 1 asks what you "must" do. I don't think you "must" delete the public IP address, it just won't work.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">2</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="529229" id="comment-529229">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				FabioVi
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Fri 21 Jan 2022 16:58">2022-01-22 01:58</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Correct. Regarding box 2, reason is because Standard Load Balancer is "Closed to inbound flows unless allowed by a network security group"
+
+https://docs.microsoft.com/en-us/azure/load-balancer/skus#skus</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">3</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="510902" id="comment-510902">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				marco_aimi
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Tue 28 Dec 2021 09:12">2021-12-28 18:12</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">guys, joke? Dinamic for LB??????????????</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">3</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="433065" id="comment-433065">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				chaudha4
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Fri 27 Aug 2021 14:28">2021-08-27 23:28</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Verified it in Azure by setting this up.
+
+Box 1: Remove the public IP address from VM1 - You can only attach virtual machines in the backend pool that have a standard SKU public IP configuration or no public IP configuration. Since the Public IP of VM is dynamic, the IP must be a Basic SKU IP. You cannot add such a VM (with Basic SKU IP) to a standard SKU load balancer. The VM does not even show up in the backend pool portal for selection unless you remove the public IP or convert it to a Standard SKU IP.
+
+Box 2: Create and configure an NSG - Standard load balancer is built on the zero trust network security model. Standard load balancers and standard public IP addresses are closed to inbound connections unless opened by Network Security Groups. NSGs are used to explicitly permit allowed traffic.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">12</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="574068" id="comment-574068">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Mozbius_
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Thu 24 Mar 2022 05:37">2022-03-24 14:37</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Thank you for the precision / explanation.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="385416" id="comment-385416">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				ScreamingHand
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Sat 19 Jun 2021 12:29">2021-06-19 21:29</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Why not:
+Create and assign an NSG to VM1
+Change the private IP address of VM1 to static
+?</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">6</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="384811" id="comment-384811">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				JayBee65
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Fri 18 Jun 2021 14:34">2021-06-18 23:34</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Before you can create the backend pool you must set the private IP to static, otherwise this may change on reboot, and the backend pool would not be valid..
+
+Before you connect as many people have called out - "Basic SKU Load Balancers use Basic SKU IP Addresses, which aren't compatible with Standard SKU Load Balancers as they require Standard SKU IP Addresses" The IP Addresses are Dynamically assigned, therefore making them, "Basic SKU.". So remove the public IP address.
+
+You don't NEED a NSG.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">3</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="384824" id="comment-384824">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				JayBee65
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Fri 18 Jun 2021 14:44">2021-06-18 23:44</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Actually you do :) "Standard load balancers and standard public IP addresses are closed to inbound connections unless opened by Network Security Groups. NSGs are used to explicitly permit allowed traffic. If you don't have an NSG on a subnet or NIC of your virtual machine resource, traffic isn't allowed to reach this resource. "
+So answer must be 1) Change private IP 2) Create NSG</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">3</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="614201" id="comment-614201">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Scoobysnaks86
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Thu 09 Jun 2022 21:41">2022-06-10 06:41</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Just tested in the Azure portal. I was able to put the VM in the backend pool WITHOUT a NSG. The dynamic IP addresses are not compatible with a standard load balancer, as those IP's are basic. Basic Ip's cannot be mixed and used with a standard LB. The dynamic addresses had to be deleted from the NIC, and a static one created. mlantonis actually wrong on this one. Also, front facing LB's do not need Vms with public IP addresses as they have one themselves. Delete it
+Box 1: Remove the public IP address from VM1
+Box2: Change Private IP address to static
+again, you do not need a NSG to connect a VM to a backend pool</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">3</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="370225" id="comment-370225">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				ranbhule
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Sun 30 May 2021 14:43">2021-05-30 23:43</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Answer is correct,
+
+https://docs.microsoft.com/en-us/azure/load-balancer/quickstart-load-balancer-standard-public-portal?tabs=option-1-create-load-balancer-standard</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">2</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="363111" id="comment-363111">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Bursuc03
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Fri 21 May 2021 16:58">2021-05-22 01:58</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">I think you need to assign a private IP to the VM, then create and assign a NSG.
+If you restart the VM, you cannot be sure it will receive the same IP (it's dynamic) - then the backend pool will be unreachable (or unhealthy, due to failed probe).
+The standard LB needs a NSG to function ("secure by default")</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">4</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="353750" id="comment-353750">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Kiano
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Mon 10 May 2021 15:30">2021-05-11 00:30</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">The answer is correct:
+"Basic SKU Load Balancers use Basic SKU IP Addresses, which aren't compatible with Standard SKU Load Balancers as they require Standard SKU IP Addresses" The IP Addresses are Dynamically assigned, therefore making them, "Basic SKU." 
+Ans1: remove Public IP 
+Ans2: Create &amp; configure NSG 
+https://docs.microsoft.com/en-us/azure/aks/load-balancer-standard</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">10</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="384825" id="comment-384825">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				JayBee65
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Fri 18 Jun 2021 14:45">2021-06-18 23:45</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">This applies to the LB not the VM!!! - "Basic SKU Load Balancers use Basic SKU IP Addresses, which aren't compatible with Standard SKU Load Balancers as they require Standard SKU IP Addresses" The IP Addresses are Dynamically assigned, therefore making them, "Basic SKU." 
+Therefore its irrelevant here.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">2</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="360137" id="comment-360137">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				MorningStar
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Tue 18 May 2021 08:10">2021-05-18 17:10</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">But why to use NSG as NGS default rule NO.2 allows traffic from Load balancer.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="369857" id="comment-369857">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Kiano
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Sun 30 May 2021 06:38">2021-05-30 15:38</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">The question says there is no NSG. So, When you don't have a NSG, you don't have the default rules defined in the NSG.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">4</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="369861" id="comment-369861">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Kiano
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Sun 30 May 2021 06:46">2021-05-30 15:46</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Standard SKU Public IPs cannot have Dynamic assignments. We cannot associate Basic SKUs IPs with Standard SKUs LBs.
+Standard LBs are secure by default (like Standard IPs), so we won't be able to connect to them without explicitly allowing such connections via NSG... So, bottom-box must be "Create and configure NSG".</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">2</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="348861" id="comment-348861">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				whynotguru
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Mon 03 May 2021 19:25">2021-05-04 04:25</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">https://docs.microsoft.com/en-us/azure/load-balancer/quickstart-load-balancer-standard-public-portal?tabs=option-1-create-load-balancer-standard</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="348859" id="comment-348859">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				whynotguru
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Mon 03 May 2021 19:22">2021-05-04 04:22</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Standard load balancer is built on the zero trust network security model.
+
+Standard Load Balancer is secure by default and part of your virtual network. The virtual network is a private and isolated network.
+
+Standard load balancers and standard public IP addresses are closed to inbound connections unless opened by Network Security Groups. NSGs are used to explicitly permit allowed traffic. If you don't have an NSG on a subnet or NIC of your virtual machine resource, traffic isn't allowed to reach this resource. To learn about NSGs and how to apply them to your scenario, see Network Security Groups.
+
+Basic load balancer is open to the internet by default.
+
+Load balancer doesn't store customer data.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">3</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="360141" id="comment-360141">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				MorningStar
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Tue 18 May 2021 08:13">2021-05-18 17:13</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">But if u read the doc of NSG on microsoft with those ( 3 subnet diagram and 4 nsg ) the last subnet had no NSG attached to it . And i reads that as No NSG attached to it so it can take all communication . 
+And also it says its advisable to atach NSG to ur VM but no Mandatory</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="347157" id="comment-347157">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				raulgar
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Sat 01 May 2021 19:33">2021-05-02 04:33</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">for the explanaitions the answers look correct</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">4</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="350693" id="comment-350693">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				MohnR
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Thu 06 May 2021 06:26">2021-05-06 15:26</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">what's the answer for Box 1 ?
+Is it Change the Private IP address to Static or Remove Public IP from VM1?</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">2</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="353833" id="comment-353833">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				raulgar
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Mon 10 May 2021 17:07">2021-05-11 02:07</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">I think that the most apropiate is remove public ip and leave only the private.There are limitations about sku basic ip public, but the question doesn't say nothing about it</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Discussion end -->
+<script type="text/javascript">
+function eventFire(el, etype){
+  if (el.fireEvent) {
+    el.fireEvent('on' + etype);
+  } else {
+    var evObj = document.createEvent('Events');
+    evObj.initEvent(etype, true, false);
+    el.dispatchEvent(evObj);
+  }
+	const checkboxes = document.querySelectorAll('.vote-checkboxes input')
+	if(checkboxes.length < 1){
+		const switchToSimpleCommentWrap = document.querySelectorAll('.switch-to-simple-comment-wrap')
+		const votingCommentBrackets = document.querySelectorAll('.voting-comment-brackets')
+		switchToSimpleCommentWrap.forEach((item)=> item.style.display = 'inline-block')
+		votingCommentBrackets.forEach((item)=> item.style.display = 'none')
+	}
+  console.log(etype);
+}
+function doVotingClick() {
+	eventFire(document.getElementById('votinglink'), 'click');
+}
+
+//doVotingClick();
+setTimeout(doVotingClick, 200);
+</script>
+</div>
+</div>
+</div>
+</div>
+<!-- END Discussion Content -->
+</div>
+</div>
+<!-- start scrollUp  -->
+<div class="d-print-none" id="scrollUp">
+<i class="fa fa-angle-up"></i>
+</div>
+<!-- Popper JS -->
+<script src="../../../js/popper.min.js"></script>
+<!-- jquery latest version -->
+<script src="../../../js/jquery.min.js"></script>
+<!-- bootstrap js -->
+<script src="../../../js/bootstrap.min.js"></script>
+<!-- slick.min js -->
+<script src="../../../js/slick.min.js"></script>
+<!-- wow js -->
+<script src="../../../js/wow.min.js"></script>
+<!-- main js -->
+<script src="../../../js/main.js"></script>
+<script type="text/javascript">
+    // Activate tooltips
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    })
+
+    $(document).ready(function () {
+        // Load stylesheets in a deferred way:
+        $('link[defhref]').each(function() {
+            $(this).attr('href', $(this).attr('defhref'));
+            //var src = $(this).attr('href');
+            //loadStyleSheet(src);
+        });
+
+        // Load mobile images in a deferred way:
+        var isMobile = window.matchMedia("only screen and (max-width: 490px)").matches;
+        if (isMobile) {
+            $('img[mobile-defsrc]').each(function () {
+                $(this).attr('src', $(this).attr('mobile-defsrc')).removeAttr('defsrc');
+            });
+        }
+
+        // Load images in a deferred way:
+        $('img[defsrc]').each(function() {
+            $(this).attr('src',$(this).attr('defsrc'));
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function (){
+        set_voting_configuration_by_question($(".question-body"));
+    });
+</script>
+<script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
+<script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
+</div>
+</body>
+</html>

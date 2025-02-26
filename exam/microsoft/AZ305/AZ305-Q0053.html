@@ -1,0 +1,3377 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body class="home2"><div style="position:relative;">
+<!-- meta tag -->
+<meta charset="utf-8"/>
+<title>Exam AZ-305 topic 2 question 18 discussion</title>
+<!-- responsive tag -->
+<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<!-- bootstrap v4 css -->
+<link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<!-- font-awesome css -->
+<link defhref="../../../css/font-awesome.min.css" href="../../../css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<!-- slick css -->
+<link defhref="../../../css/slick.css" href="../../../css/slick.css" rel="stylesheet" type="text/css"/>
+<!-- rsmenu transitions CSS -->
+<link defhref="../../../css/rsmenu-transitions.css" href="../../../css/rsmenu-transitions.css" rel="stylesheet" type="text/css"/>
+<link href="../../../css/style.css?ver=1" rel="stylesheet" type="text/css"/>
+<link href="../../../css/color/default.css" rel="stylesheet" type="text/css"/>
+<!-- responsive css -->
+<link href="../../../css/responsive.css" rel="stylesheet" type="text/css"/>
+<link href="../../../css/forum.css" rel="stylesheet" type="text/css"/>
+<div class="sec-spacer pt-20">
+<div class="container">
+<div class="container action-row-container border-0 p-0 mb-2">
+<div class="container action-row clearfix d-flex">
+<i class="fa fm fa-language fa-2x mr-2"></i>
+<a class="btn show-english" href="javascript:void(0)">English</a>
+<a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
+<span class="pagination-container ml-auto">
+<span id="page-indicator"><strong></strong></span>
+<span class="pagination-nav ml-4">
+<a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
+<a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
+</span>
+</span>
+</div>
+</div>
+<script src="../../../js/questions.js"></script>
+<!-- BEGIN Discussions header / title -->
+<div class="row">
+<div class="col-12">
+<div class="discussion-list-header">
+<h1><i class="fa fa-file-text-o mr-3"></i>시험 AZ-305 주제 2 질문 18 토론</h1>
+</div>
+<div class="discussion-list-header-en" style="display: none;">
+<h1><i class="fa fa-file-text-o mr-3"></i>Exam AZ-305 topic 2 question 18 discussion</h1>
+</div>
+</div>
+</div>
+<!-- END Discussions header / title -->
+<!-- BEGIN Discussion Content -->
+<div class="row">
+<div class="col-12">
+<div class="discussion-header-container">
+<!-- Question -->
+<div class="question-discussion-header">
+						
+							Microsoft의
+						 <a class="discussion-link" href="/exams/microsoft/az-305/">AZ-305 의 실제 시험 문제</a>
+<div>
+							질문 #: 18 <br/>
+							주제 #: 2
+						</div>
+</div>
+<div class="question-body mt-3 pt-3 border-top" data-id="804693">
+<p class="card-text">
+							
+								HOTSPOT - <br/>보고를 지원하기 위한 데이터 저장소 솔루션을 설계하고 있습니다. <br/>이 솔루션은 Azure Event Hubs를 사용하여 JSON 형식으로 대량의 데이터를 수집합니다. 데이터가 도착하면 Event Hubs가 데이터를 저장소에 씁니다. 이 솔루션은 다음 요구 사항을 충족해야 합니다. <br/>✑ 날짜 및 시간별로 디렉터리에 데이터를 구성합니다. <br/>✑ 저장된 데이터를 직접 쿼리하여 요약된 테이블로 변환한 다음 데이터 웨어하우스에 저장할 <br/>수 있도록 합니다. ✑ 데이터 웨어하우스가 50TB의 관계형 데이터를 저장하고 200~300개의 동시 읽기 작업을 지원할 수 있는지 확인합니다. <br/>각 유형의 데이터 저장소에 대해 어떤 서비스를 권장해야 합니까? 답하려면 답변 영역에서 적절한 옵션을 선택합니다. <br/>참고: 각 정답은 1점입니다. <br/>핫 영역:<br/><img class="in-exam-image" src="/exam-assets/media/exam-media/04224/0011200001.jpg"/><br/>
+</p>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
+<a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
+<div class="card-text question-answer bg-light white-text" style="display: none;">
+<span class="correct-answer-box"><strong>제안된 답변:</strong>
+<span class="correct-answer"><img class="in-exam-image" src="/exam-assets/media/exam-media/04224/0011200002.jpg"/></span>
+<br/>
+</span>
+<span class="answer-description"> 
+								상자 1: Azure Data Lake Storage Gen2 <br/>Azure Data Explorer는 Azure Blob Storage 및 Azure Data Lake Storage(Gen1 및 Gen2)와 통합되어 외부 저장소에 저장된 데이터에 대한 빠르고 캐시되고 인덱싱된 액세스를 제공합니다. Azure Data Explorer에 미리 수집하지 않고도 데이터를 분석하고 쿼리할 수 있습니다. 수집된 외부 데이터와 수집되지 않은 외부 데이터를 동시에 쿼리할 수도 있습니다. <br/>Azure Data Lake Storage는 빅데이터 분석 워크로드에 최적화된 스토리지입니다. <br/>사용 사례: 로그 파일, IoT 데이터, 클릭 스트림, 대규모 데이터 세트와 같은 일괄, 대화형, 스트리밍 분석 및 머신 러닝 데이터 <br/>상자 2: Azure SQL Database Hyperscale <br/>Azure SQL Database Hyperscale은 최대 100TB의 스토리지를 제공하는 OLTP 및 고처리량 분석 워크로드에 최적화되어 있습니다. <br/>Hyperscale 데이터베이스는 최대 100TB의 데이터를 지원하고 높은 처리량과 성능을 제공하며 워크로드 요구 사항에 맞게 빠르게 확장할 수 있습니다. 연결, 쿼리 처리, 데이터베이스 엔진 기능 등은 Azure SQL Database의 다른 데이터베이스와 마찬가지로 작동합니다. <br/>Hyperscale은 여러 수준에서 캐싱이 있는 다계층 아키텍처입니다. 효과적인 IOPS는 작업 부하에 따라 달라집니다. <br/>비교 대상: <br/>일반 용도: vCore당 500 IOPS, 최대 7,000 IOPS <br/>비즈니스에 중요: 최대 200,000 IOPS, 5,000 IOPS <br/>잘못된 예: <br/>* Azure Synapse Analytics 전용 SQL 풀. <br/><br/>최대 데이터베이스 크기: 240TB - <br/>최대 128개의 동시 쿼리가 실행되고 나머지 쿼리는 큐에 대기합니다. <br/>참조: <br/>https://docs.microsoft.com/en-us/azure/data-explorer/data-lake-query-data https://docs.microsoft.com/en-us/azure/azure-sql/database/service-tier-hyperscale https://docs.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-service-capacity-limits
+							</span>
+</div>
+</div>
+<!-- / Question  -->
+</div>
+<div class="discussion-header-container-en" style="display: none;">
+<!-- Question -->
+<div class="question-discussion-header">
+						
+							Actual exam question from
+						
+						Microsoft's
+						<a class="discussion-link" href="/exams/microsoft/az-305/">AZ-305</a>
+<div>
+							Question #: 18<br/>
+							Topic #: 2
+						</div>
+</div>
+<div class="question-body mt-3 pt-3 border-top" data-id="804693">
+<p class="card-text">
+							
+								HOTSPOT -<br/>You are designing a data storage solution to support reporting.<br/>The solution will ingest high volumes of data in the JSON format by using Azure Event Hubs. As the data arrives, Event Hubs will write the data to storage. The solution must meet the following requirements:<br/>✑ Organize data in directories by date and time.<br/>✑ Allow stored data to be queried directly, transformed into summarized tables, and then stored in a data warehouse.<br/>✑ Ensure that the data warehouse can store 50 TB of relational data and support between 200 and 300 concurrent read operations.<br/>Which service should you recommend for each type of data store? To answer, select the appropriate options in the answer area.<br/>NOTE: Each correct selection is worth one point.<br/>Hot Area:<br/><img class="in-exam-image" src="/exam-assets/media/exam-media/04224/0011200001.jpg"/><br/>
+</p>
+<a class="btn btn-primary reveal-solution" href="#">Show Suggested Answer</a>
+<a class="btn btn-primary hide-solution d-none" href="#">Hide Answer</a>
+<div class="card-text question-answer bg-light white-text">
+<span class="correct-answer-box"><strong>Suggested Answer:</strong>
+<span class="correct-answer"><img class="in-exam-image" src="/exam-assets/media/exam-media/04224/0011200002.jpg"/></span>
+<br/>
+</span>
+<span class="answer-description">
+								Box 1: Azure Data Lake Storage Gen2<br/>Azure Data Explorer integrates with Azure Blob Storage and Azure Data Lake Storage (Gen1 and Gen2), providing fast, cached, and indexed access to data stored in external storage. You can analyze and query data without prior ingestion into Azure Data Explorer. You can also query across ingested and uningested external data simultaneously.<br/>Azure Data Lake Storage is optimized storage for big data analytics workloads.<br/>Use cases: Batch, interactive, streaming analytics and machine learning data such as log files, IoT data, click streams, large datasets<br/>Box 2: Azure SQL Database Hyperscale<br/>Azure SQL Database Hyperscale is optimized for OLTP and high throughput analytics workloads with storage up to 100TB.<br/>A Hyperscale database supports up to 100 TB of data and provides high throughput and performance, as well as rapid scaling to adapt to the workload requirements. Connectivity, query processing, database engine features, etc. work like any other database in Azure SQL Database.<br/>Hyperscale is a multi-tiered architecture with caching at multiple levels. Effective IOPS will depend on the workload.<br/>Compare to:<br/>General purpose: 500 IOPS per vCore with 7,000 maximum IOPS<br/>Business critical: 5,000 IOPS with 200,000 maximum IOPS<br/>Incorrect:<br/>* Azure Synapse Analytics Dedicated SQL pool.<br/><br/>Max database size: 240 TB -<br/>A maximum of 128 concurrent queries will execute and remaining queries will be queued.<br/>Reference:<br/>https://docs.microsoft.com/en-us/azure/data-explorer/data-lake-query-data https://docs.microsoft.com/en-us/azure/azure-sql/database/service-tier-hyperscale https://docs.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-service-capacity-limits
+							</span>
+</div>
+</div>
+<!-- / Question  -->
+</div>
+<div class="comments-wrapper">
+<a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
+<div class="discussion-page-comments-section" data-discussion-question-id="80098" style="display: none">
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
+<!-- discussion.html -->
+<!-- Discussion start -->
+<div class="container outer-discussion-container">
+<div class="row">
+<div class="comments-container p-2 w-100">
+<!-- New comment start -->
+<!-- New comment end -->
+<div class="discussion-container">
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="659714" id="comment-659714">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				스노우누들
+			</h5>
+</a>
+<span class="badge badge-primary">
+				높은 투표수<i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="월 05 9월 2022 06:05">2022-09-05 15:05</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Azure Synapse Analytics SQL 풀은 128개의 동시 쿼리만 지원합니다. "최대 128개의 동시 쿼리가 실행되고 나머지 쿼리는 큐에 저장됩니다." https://docs.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-service-capacity-limits Azure SQL 하이퍼스케일에는 읽기 복제본이 있으며 최대 100TB의 데이터 크기를 지원합니다. 따라서 정답은 하이퍼스케일이어야 한다고 생각합니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">44</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="950773" id="comment-950773">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				나어쨌든
+			</h5>
+</a>
+<span class="badge badge-primary">
+				높은 투표수<i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="목 13 7월 2023 4:55 PM">2023-07-14 01:55</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">1. 수집 데이터용 데이터 저장소: b. Azure Data Lake Storage Gen2. Azure Data Lake Storage Gen2는 빅데이터 분석을 위해 설계되었으며, 고성능 파일 시스템의 힘과 방대한 규모 및 경제성을 결합하여 빅데이터 분석 속도를 높이는 데 도움이 됩니다. 이를 통해 데이터를 날짜 및 시간별로 디렉터리에 구성할 수 있습니다. 2. 데이터 웨어하우스용 데이터 저장소: c. Azure SQL Database Hyperscale. Azure SQL Database Hyperscale은 고성능을 제공하도록 설계된 확장성이 뛰어난 서비스 계층으로, 최대 100TB의 데이터를 지원합니다. Azure SQL Database의 Hyperscale 서비스 계층은 vCore 기반 구매 모델의 최신 서비스 계층입니다. 이 서비스 계층은 Azure 아키텍처를 활용하여 Azure SQL Database의 저장소 및 컴퓨팅 리소스를 범용 및 비즈니스 중요 서비스 계층에서 사용할 수 있는 제한을 크게 넘어 확장하는 확장성이 뛰어난 저장소 및 컴퓨팅 성능 계층입니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">30</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1310671" id="comment-1310671">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				[제거됨]
+			</h5>
+</a>
+<span class="badge badge-primary">
+				가장 최근<i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="화 12 11월 2024 16:05">2024-11-13 01:05</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">옳은</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1280873" id="comment-1280873">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				티라위
+			</h5>
+</a>
+<span class="comment-date align-middle" title="월 09 9월 2024 14:37">2024-09-09 23:37</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">수집된 데이터의 데이터 저장소: Azure Data Lake Storage Gen2 데이터웨어하우스의 데이터 저장소: Azure Synapse Analytics 전용 SQL 풀</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1234907" id="comment-1234907">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				23169fd
+			</h5>
+</a>
+<span class="comment-date align-middle" title="금 21 6월 2024 22:17">2024-06-22 07:17</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">수집된 데이터의 데이터 저장소: Azure Data Lake Storage Gen2: 이 서비스는 빅데이터 분석에 최적화되어 있으며 날짜와 시간별로 데이터를 구성할 수 있습니다. 또한 효율적인 데이터 구성에 유용한 계층적 네임스페이스를 지원합니다. 데이터 웨어하우스의 데이터 저장소: Azure Synapse Analytics 전용 SQL 풀: 이 서비스는 대규모 데이터 웨어하우징을 처리하도록 설계되었으며 50TB의 관계형 데이터를 저장할 수 있으며 읽기 작업에 대한 높은 동시성을 지원하므로 요구 사항에 적합합니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1277699" id="comment-1277699">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				조솔라
+			</h5>
+</a>
+<span class="comment-date align-middle" title="화 03 9월 2024 17:41">2024-09-04 02:41</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">질문의 동시 쿼리 수는 200-300개입니다. Azure Synapse Analytics는 최대 128개의 동시 쿼리를 지원하는데, 이는 질문 요구 사항보다 훨씬 낮습니다. 그렇다면 Azure Synapse는 여기서 가장 좋은 옵션이 아닙니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1234909" id="comment-1234909">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				23169fd
+			</h5>
+</a>
+<span class="comment-date align-middle" title="금 21 6월 2024 22:19">2024-06-22 07:19</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Azure SQL Database Hyperscale은 다음에 가장 적합합니다. 대규모 트랜잭션 데이터베이스. OLTP(온라인 트랜잭션 처리)에 대한 고성능 및 확장성이 필요한 워크로드. Azure Synapse Analytics Dedicated SQL Pools은 다음에 가장 적합합니다. 대규모 데이터 웨어하우징. 복잡한 분석 쿼리 및 보고. 읽기 작업에 높은 동시성이 필요한 시나리오.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1206370" id="comment-1206370">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				체인
+			</h5>
+</a>
+<span class="comment-date align-middle" title="토 05월 04 2024 09:01">2024-05-04 18:01</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">수집된 데이터의 데이터 저장소의 경우 Azure Data Lake Storage Gen2를 권장합니다. 이 제품은 대량의 데이터를 처리하도록 설계되었으며 날짜와 시간별로 디렉터리에 데이터를 구성할 수 있습니다. 또한 저장된 데이터에 대한 직접 쿼리도 지원합니다. 데이터 웨어하우스의 경우 Azure Synapse Analytics Dedicated SQL Pools를 권장합니다. 이 제품은 대량의 관계형 데이터(최대 페타바이트)를 처리하도록 설계되었으며 많은 수의 동시 읽기 작업을 지원합니다. 또한 데이터를 요약된 테이블로 변환할 수 있습니다. Azure Synapse Analytics는 Azure Data Lake Storage Gen2와 완벽하게 통합되어 종단 간 데이터 솔루션을 제공합니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1277700" id="comment-1277700">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				조솔라
+			</h5>
+</a>
+<span class="comment-date align-middle" title="화 03 9월 2024 17:42">2024-09-04 02:42</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">질문의 동시 쿼리 수는 200-300개입니다. Azure Synapse Analytics는 최대 128개의 동시 쿼리를 지원하는데, 이는 질문 요구 사항보다 훨씬 낮습니다. 그렇다면 Azure Synapse는 여기서 가장 좋은 옵션이 아닙니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1177901" id="comment-1177901">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				바린더82
+			</h5>
+</a>
+<span class="comment-date align-middle" title="수 20 3월 2024 04:49">2024-03-20 13:49</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">최종 답변: 1. Azure Data Lake Storage Gen2. 2. Azure SQL Database Hyperscale.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1113556" id="comment-1113556">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				피터프007
+			</h5>
+</a>
+<span class="comment-date align-middle" title="목 04 1월 2024 11:40">2024-01-04 20:40</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">오늘 시험을 봤습니다 - 2024년 1월 4일</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">15</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1077922" id="comment-1077922">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				폴_화이트
+			</h5>
+</a>
+<span class="comment-date align-middle" title="목 23 11월 2023 00:40">2023-11-23 09:40</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">수집된 데이터의 경우 zure Data Lake Storage Gen2를 사용하는 것이 좋습니다. 이는 빅데이터 분석을 위한 확장성이 높고 비용 효율적인 데이터 레이크 솔루션입니다. 데이터 웨어하우스의 경우 Azure Synapse Analytics(이전 SQL Data Warehouse)를 사용하는 것이 좋습니다. 이는 엔터프라이즈 데이터 웨어하우징과 빅데이터 분석을 결합한 분석 서비스입니다. 서버리스 또는 프로비저닝된 리소스를 사용하여 규모에 맞게 데이터를 쿼리할 수 있는 자유를 제공합니다. 50TB의 관계형 데이터를 저장할 수 있으며 200~300개의 동시 읽기 작업을 지원할 수 있습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="976056" id="comment-976056">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				메학2020
+			</h5>
+</a>
+<span class="comment-date align-middle" title="화 08 8월 2023 23:41">2023-08-09 08:41</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">옳은 답은 무엇일까요?</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="862274" id="comment-862274">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				빅블루
+			</h5>
+</a>
+<span class="comment-date align-middle" title="수 05 4월 2023 18:11">2023-04-06 03:11</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">무엇을 선택해야 할지 모르겠다면 가장 싼 것 또는 "더 비용 안전한" 것을 선택하세요. 제 생각에는 Synapse가 요구 사항을 충족하더라도 Azure SQL Database Hyperscale이 답입니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="847301" id="comment-847301">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				나어쨌든
+			</h5>
+</a>
+<span class="comment-date align-middle" title="수 22 3월 2023 17:52">2023-03-23 ​​02:52</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">1. 수집된 데이터의 데이터 저장소: B. Azure Data Lake Storage Gen2 Azure Data Lake Storage Gen2는 빅데이터 분석 워크로드를 위해 설계되었으며, 날짜 및 시간, 계층적 네임스페이스별로 디렉터리에 데이터를 구성하는 것을 지원합니다. 또한 저장된 데이터를 직접 쿼리할 수 있으며 Azure Event Hubs와 잘 통합되어 있습니다. 2. 데이터 웨어하우스의 데이터 저장소: C. Azure SQL Database Hyperscale은 데이터 웨어하우스의 데이터 저장소에 대한 대체 옵션입니다. Azure SQL Database 내의 단일 데이터베이스에 대한 확장성이 뛰어난 서비스 계층으로, 최대 100TB까지 자동 확장할 수 있습니다. 많은 수의 동시 연결을 지원하고 빠른 확장 기능을 제공합니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="843952" id="comment-843952">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				나선
+			</h5>
+</a>
+<span class="comment-date align-middle" title="일 19 3월 2023 17:32">2023-03-20 02:32</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">두 번째는 하이퍼스케일입니다. https://learn.microsoft.com/en-us/azure/azure-sql/database/service-tier-hyperscale-frequently-asked-questions-faq?view=azuresql#how-can-i-choose-between-azure-synapse-analytics-and-azure-sql-database-hyperscale- Microsoft 문서를 기반으로 합니다. 이러한 유형의 시나리오의 경우 하이퍼스케일이 작동합니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="843943" id="comment-843943">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				나선
+			</h5>
+</a>
+<span class="comment-date align-middle" title="일 19 3월 2023 17:26">2023-03-20 02:26</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Hyperscale은 OLAP(데이터웨어하우스)가 아닌 OLTP입니다. Synapse는 DW입니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="822274" id="comment-822274">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				젤크
+			</h5>
+</a>
+<span class="comment-date align-middle" title="일 26 2월 2023 11:55">2023-02-26 20:55</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">1. Azure Data Lake Storage Gen2 2. Azure SQL DB Hyperscale https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction Azure Data Lake Storage Gen2는 Azure Blob Storage를 기반으로 구축된 빅데이터 분석 전용 기능 세트입니다. Data Lake Storage Gen2는 Azure Data Lake Storage Gen1의 기능을 Azure Blob Storage와 통합합니다. 예를 들어, Data Lake Storage Gen2는 파일 시스템 의미 체계, 파일 수준 보안 및 확장성을 제공합니다. 이러한 기능은 Blob Storage를 기반으로 구축되므로 고가용성/재해 복구 기능이 있는 저비용 계층형 스토리지도 제공됩니다. https://learn.microsoft.com/en-us/azure/azure-sql/database/service-tier-hyperscale?view=azuresql#what-are-the-hyperscale-capabilities Azure SQL Database의 Hyperscale 서비스 계층은 다음과 같은 추가 기능을 제공합니다. - 최대 100TB의 데이터베이스 크기 지원.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="819634" id="comment-819634">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				알파벳
+			</h5>
+</a>
+<span class="comment-date align-middle" title="목 23 2월 2023 20:30">2023-02-24 05:30</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">답은 Azure Synapse Analytics SQLPool이어야 한다고 생각합니다. 왜냐하면 데이터가 디렉터리의 ADLS에 저장되면 데이터를 직접 쿼리하고 변환하여 테이블에 저장해야 하기 때문입니다. Synapse에는 그런 기능이 있습니다. ???</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="806012" id="comment-806012">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				푸트라19
+			</h5>
+</a>
+<span class="comment-date align-middle" title="일 12 2월 2023 07:05">2023-02-12 16:05</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">시냅스 대 하이퍼스케일, 어느 것이 더 나은 답일까요?</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="805084" id="comment-805084">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				OPT_001122
+			</h5>
+</a>
+<span class="comment-date align-middle" title="토 11 2월 2023 09:38">2023-02-11 18:38</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">상자 1: Azure Data Lake Storage Gen2 상자 2: Azure SQL Database Hyperscale</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">5</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="797064" id="comment-797064">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				루크
+			</h5>
+</a>
+<span class="comment-date align-middle" title="금 03 2월 2023 14:24">2023-02-03 23:24</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">chatgpt에 따르면 Azure Data Lake Storage Gen2와 Azure Blob Storage는 모두 JSON을 저장할 수 있지만 Azure Data Lake Storage Gen2는 분석이 관련된 이 시나리오에서 더 나은 성과를 보입니다. Azure Synapse Analytics 전용 SQL 풀은 동시 읽기 제한이 Azure SQL Database Hyperscale에 대해 설정되지 않았기 때문에 더 나은 답입니다. 또한 Azure Synapse Analytics 전용 SQL 풀은 이 목적에 맞게 최적화되어 있습니다. 50TB도 100TB 제한보다 낮습니다. 따라서 답은 Azure Data Lake Storage Gen2 Azure Synapse Analytics 전용 SQL 풀입니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="807816" id="comment-807816">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				np2021
+			</h5>
+</a>
+<span class="comment-date align-middle" title="월 13 2월 2023 22:30">2023-02-14 07:30</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">chatgpt 답변은 중단되어야 한다는 데 동의합니다. 사람들이 말하는 것만큼 똑똑하거나 관련 답변을 조사하는 데 포괄적이지 않습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">7</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="798063" id="comment-798063">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				제카위9630
+			</h5>
+</a>
+<span class="comment-date align-middle" title="토 04 2월 2023 15:50">2023-02-05 00:50</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">chatgpt 답변은 그만하세요. 이런 질문에 관해서는 생각보다 똑똑하지 않습니다. "bit 이게 정답이 아니냐"고 후속 질문을 하면, 선택한 답이 왜 정답인지 변호하는 대신 바로 "오, 맞아요"라고 말할 겁니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">10</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="799896" id="comment-799896">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				루크
+			</h5>
+</a>
+<span class="comment-date align-middle" title="월 06 2월 2023 16:25">2023-02-07 01:25</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Azure Stream Analytics도 Event Hub에서 Azure SQL Database로의 미리보기 상태라는 걸 추가하는 걸 깜빡했습니다. 그래서, 저는 Azure Synapse Analytics가 더 나은 답이라고 생각합니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="799890" id="comment-799890">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				루크
+			</h5>
+</a>
+<span class="comment-date align-middle" title="월 06 2월 2023 16:15">2023-02-07 01:15</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">죄송합니다. 잘못된 설명을 복사했습니다. 실제로 두 솔루션 모두 언뜻 보기에는 실행 가능하지만 실제로는 핵심적인 차이가 있습니다. 솔루션은 데이터를 직접 수집해야 합니다. 데이터를 수집하여 Azure SQL Database로 직접 변환할 수 없으며, 이를 위해서는 Azure Stream Analytics와 같은 매체를 사용해야 합니다. 그러나 Azure Synapse Analytics를 사용하면 직접 수행할 수 있습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="799907" id="comment-799907">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				루크
+			</h5>
+</a>
+<span class="comment-date align-middle" title="월 06 2월 2023 16:37">2023-02-07 01:37</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">아, 만약 당신이 묻는다면. 동시 쿼리와 동시 세션에는 차이가 있습니다. 이 시나리오는 동시 읽기, 즉 동시 쿼리, 즉 동시 세션을 요구합니다. 세션이 채워진 후에만 대기열이 시작됩니다. Azure Synapse Analytics는 최대 1000개의 동시 세션을 수행할 수 있으며 최대 60TB의 행 저장소를 수행할 수 있습니다. 실제로 첫눈에 보기에 모든 요구 사항을 충족합니다. 그래서 아무도 그 비교를 하지 않는 이유와 SQL Database Hyperscale이 더 적합하다고 생각하는 이유를 잘 모르겠습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="986041" id="comment-986041">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				어드벤처치크
+			</h5>
+</a>
+<span class="comment-date align-middle" title="일 20 8월 2023 21:43">2023-08-21 06:43</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">jecawi9630 - 정확히 그래요. 그래서 인간은 여전히 ​​스스로 연구하고 생각하는 법을 알아야 하고 ChatGPT가 복음이 아니에요.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="747186" id="comment-747186">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				오렌지SG
+			</h5>
+</a>
+<span class="comment-date align-middle" title="금 16 12월 2022 13:46">2022-12-16 22:46</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">상자 2는 'Azure SQL Database Hyperscale' 키워드는 '데이터웨어하우스', '50TB 관계형 데이터', '200 및 300 동시 읽기' Azure SQL Database Hyperscale FAQ https://learn.microsoft.com/en-us/azure/azure-sql/database/service-tier-hyperscale-frequently-asked-questions-faq Azure Synapse Analytics와 Azure SQL Database Hyperscale 중에서 어떻게 선택해야 합니까? 현재 SQL Server를 데이터웨어하우스로 사용하여 대화형 분석 쿼리를 실행 중인 경우 Hyperscale은 저렴한 비용으로 소규모 및 중규모 데이터웨어하우스(예: 몇 TB에서 최대 100TB)를 호스팅할 수 있고 최소한의 T-SQL 코드 변경으로 SQL Server 데이터웨어하우스 워크로드를 Hyperscale로 마이그레이션할 수 있기 때문에 좋은 옵션입니다. 복잡한 쿼리와 100MB/초가 넘는 지속적인 수집 속도로 대규모 데이터 분석을 실행하거나 병렬 데이터 웨어하우스(PDW), Teradata 또는 기타 대규모 병렬 처리(MPP) 데이터 웨어하우스를 사용하는 경우 Azure Synapse Analytics가 가장 좋은 선택일 수 있습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">12</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="717392" id="comment-717392">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				상상하다
+			</h5>
+</a>
+<span class="comment-date align-middle" title="일 13 11월 2022 16:14">2022-11-14 01:14</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">왜 comos DB SQL API는 아닌가요?</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">8</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="714684" id="comment-714684">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				jp_mcgee
+			</h5>
+</a>
+<span class="comment-date align-middle" title="수 09 11월 2022 16:19">2022-11-10 01:19</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">틀렸어요!! 박스 2에는 JSON과 같은 비정형 데이터를 읽을 수 있는 데이터웨어하우스라는 옵션이 하나뿐입니다... Synapse는 JSON을 읽을 수 있는 데이터웨어하우스입니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="775486" id="comment-775486">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				파브리티데브
+			</h5>
+</a>
+<span class="comment-date align-middle" title="토 14 1월 2023 15:11">2023-01-15 00:11</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">요점을 놓친 것 같습니다. 주의 깊게 읽어보세요. "저장된 데이터를 직접 쿼리하고, 요약된 테이블로 변환한 다음, 데이터 웨어하우스에 저장하도록 허용합니다." 기본적으로 첫 번째 솔루션은 JSON 데이터를 읽고 테이블로 변환해야 한다는 의미입니다. 두 번째 솔루션은 이미 변환된 데이터를 테이블 형식으로 저장해야 하는 데이터 웨어하우스입니다. 따라서 SQL이 최적의 솔루션입니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="716144" id="comment-716144">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				jp_mcgee
+			</h5>
+</a>
+<span class="comment-date align-middle" title="금 11 11월 2022 15:50">2022-11-12 00:50</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">수정, SQL Server도 JSON을 처리할 수 있습니다: https://learn.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-the-copy-statement</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				업보팅</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="714429" id="comment-714429">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				azuredemo2022세
+			</h5>
+</a>
+<span class="comment-date align-middle" title="수 09 11월 2022 10:30">2022-11-09 19:30</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">주어진 답은 정답입니다</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="659370" id="comment-659370">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				아칸데오포
+			</h5>
+</a>
+<span class="comment-date align-middle" title="일 04 9월 2022 17:54">2022-09-05 02:54</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">B는 SQL Database Hyperscale이 아닌 Azure Synapse Analytics SQL 풀이어야 한다고 생각합니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">7</span> 번
+			 
+				업보팅됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Discussion end -->
+<script type="text/javascript">
+function eventFire(el, etype){
+  if (el.fireEvent) {
+    el.fireEvent('on' + etype);
+  } else {
+    var evObj = document.createEvent('Events');
+    evObj.initEvent(etype, true, false);
+    el.dispatchEvent(evObj);
+  }
+	const checkboxes = document.querySelectorAll('.vote-checkboxes input')
+	if(checkboxes.length < 1){
+		const switchToSimpleCommentWrap = document.querySelectorAll('.switch-to-simple-comment-wrap')
+		const votingCommentBrackets = document.querySelectorAll('.voting-comment-brackets')
+		switchToSimpleCommentWrap.forEach((item)=> item.style.display = 'inline-block')
+		votingCommentBrackets.forEach((item)=> item.style.display = 'none')
+	}
+  console.log(etype);
+}
+function doVotingClick() {
+	eventFire(document.getElementById('votinglink'), 'click');
+}
+
+//doVotingClick();
+setTimeout(doVotingClick, 200);
+</script>
+</div>
+</div>
+<div class="comments-wrapper-en" style="display: none;">
+<a class="badge reveal-comment" href="javascript:void(0)">Show Comments</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">Hide Comments</a>
+<div class="discussion-page-comments-section-en" data-discussion-question-id="80098" style="display: none">
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">Comments</h4></div>
+<!-- discussion.html -->
+<!-- Discussion start -->
+<div class="container outer-discussion-container">
+<div class="row">
+<div class="comments-container p-2 w-100">
+<!-- New comment start -->
+<!-- New comment end -->
+<div class="discussion-container">
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="659714" id="comment-659714">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Snownoodles
+			</h5>
+</a>
+<span class="badge badge-primary">
+				Highly Voted <i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="Mon 05 Sep 2022 06:05">2022-09-05 15:05</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Azure Synapse Analytics SQL pool only support 128 concurrent queries:
+"A maximum of 128 concurrent queries will execute and remaining queries will be queued"
+https://docs.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-service-capacity-limits
+Azure Sql hyperscale have read replica... and supports up to 100TB data size.
+So I think the correct answer should be Hyperscale</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">44</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="950773" id="comment-950773">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				NotMeAnyWay
+			</h5>
+</a>
+<span class="badge badge-primary">
+				Highly Voted <i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="Thu 13 Jul 2023 16:55">2023-07-14 01:55</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">1. Data store for the ingestion data: b. Azure Data Lake Storage Gen2. 
+
+Azure Data Lake Storage Gen2 is designed for big data analytics, it combines the power of a high-performance file system with massive scale and economy to help you speed up your big data analytics. It allows the data to be organized in directories by date and time. 
+
+2. Data store for the data warehouse: c. Azure SQL Database Hyperscale. 
+
+Azure SQL Database Hyperscale is a highly scalable service tier that is designed to provide high performance, and supports up to 100 TB of data. The Hyperscale service tier in Azure SQL Database is the newest service tier in the vCore-based purchasing model. This service tier is a highly scalable storage and compute performance tier that leverages the Azure architecture to scale out the storage and compute resources for an Azure SQL Database substantially beyond the limits available for the General Purpose and Business Critical service tiers.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">30</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1310671" id="comment-1310671">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				[Removed]
+			</h5>
+</a>
+<span class="badge badge-primary">
+				Most Recent <i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="Tue 12 Nov 2024 16:05">2024-11-13 01:05</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">CORRECT</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1280873" id="comment-1280873">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Teerawee
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Mon 09 Sep 2024 14:37">2024-09-09 23:37</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Data store for the ingested data:    Azure Data Lake Storage Gen2
+Data store for the data warehouse: Azure Synapse Analytics dedicated SQL pools</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">2</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1234907" id="comment-1234907">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				23169fd
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Fri 21 Jun 2024 22:17">2024-06-22 07:17</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Data store for the ingested data:
+
+Azure Data Lake Storage Gen2: This service is optimized for big data analytics and can organize data by date and time. It also supports hierarchical namespace which is useful for efficient data organization.
+Data store for the data warehouse:
+
+Azure Synapse Analytics dedicated SQL pools: This service is designed to handle large-scale data warehousing, can store 50 TB of relational data, and supports high concurrency for read operations, making it suitable for your needs.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1277699" id="comment-1277699">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				josola
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Tue 03 Sep 2024 17:41">2024-09-04 02:41</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">The question's number of concurrent queries is between 200-300. 
+Azure Synapse Analytics  supports up to 128 concurrent queries, which is well below the question requirement. Then Azure Synapse is not the best option here.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1234909" id="comment-1234909">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				23169fd
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Fri 21 Jun 2024 22:19">2024-06-22 07:19</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Azure SQL Database Hyperscale is best suited for:
+
+Large transactional databases.
+Workloads requiring high performance and scalability for OLTP (Online Transaction Processing).
+Azure Synapse Analytics Dedicated SQL Pools is best suited for:
+
+Large-scale data warehousing.
+Complex analytical queries and reporting.
+Scenarios requiring high concurrency for read operations.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1206370" id="comment-1206370">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Chenn
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Sat 04 May 2024 09:01">2024-05-04 18:01</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">For the data store for ingested data, Azure Data Lake Storage Gen2 is recommended. It is designed to handle high volumes of data and allows you to organize data in directories by date and time. It also supports direct querying of stored data. 
+
+For the data warehouse, Azure Synapse Analytics Dedicated SQL Pools is recommended. It is designed to handle large volumes of relational data (up to petabytes) and supports a high number of concurrent read operations. It also allows for data transformation into summarized tables. Azure Synapse Analytics integrates seamlessly with Azure Data Lake Storage Gen2, providing an end-to-end data solution.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1277700" id="comment-1277700">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				josola
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Tue 03 Sep 2024 17:42">2024-09-04 02:42</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">The question's number of concurrent queries is between 200-300. 
+Azure Synapse Analytics  supports up to 128 concurrent queries, which is well below the question requirement. Then Azure Synapse is not the best option here.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1177901" id="comment-1177901">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				varinder82
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Wed 20 Mar 2024 04:49">2024-03-20 13:49</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Final Answer:
+1. Azure Data Lake Storage Gen2.
+2. Azure SQL Database Hyperscale.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1113556" id="comment-1113556">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				peterp007
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Thu 04 Jan 2024 11:40">2024-01-04 20:40</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Was on my Exam Today - 4th Jan 2024</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">15</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1077922" id="comment-1077922">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Paul_white
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Thu 23 Nov 2023 00:40">2023-11-23 09:40</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">For the ingested data, I recommend using zure Data Lake Storage Gen2. 
+It is a highly scalable and cost-effective data lake solution for big data analytics. 
+
+For the data warehouse, I recommend using Azure Synapse Analytics (formerly SQL Data Warehouse). It is an analytics service that brings together enterprise data warehousing and Big Data analytics. It gives you the freedom to query data on your terms, using either serverless or provisioned resources at scale. It can store 50 TB of relational data and support between 200 and 300 concurrent read operations.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="976056" id="comment-976056">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				mehak2020
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Tue 08 Aug 2023 23:41">2023-08-09 08:41</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">What would be right answer ?</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="862274" id="comment-862274">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Bigbluee
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Wed 05 Apr 2023 18:11">2023-04-06 03:11</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">If You dont know what to choose, choose cheapest one or "more cost safe" so IMO, Azure SQL Database Hyperscale is the answer even if Synapse meets requirements.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">3</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="847301" id="comment-847301">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				NotMeAnyWay
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Wed 22 Mar 2023 17:52">2023-03-23 02:52</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">1. Data store for the ingested data: B. Azure Data Lake Storage Gen2
+Azure Data Lake Storage Gen2 is designed for big data analytics workloads and supports organizing data in directories by date and time, as well as hierarchical namespace. It also allows stored data to be queried directly and is well-integrated with Azure Event Hubs.
+
+2. Data store for the data warehouse: C. Azure SQL Database Hyperscale is an alternative option for the data store for the data warehouse. It is a highly scalable service tier for single databases within Azure SQL Database that can auto-scale up to 100 TB. It supports a large number of concurrent connections and offers rapid scaling capabilities.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">2</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="843952" id="comment-843952">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Helice
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Sun 19 Mar 2023 17:32">2023-03-20 02:32</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">The second is hyperscale: https://learn.microsoft.com/en-us/azure/azure-sql/database/service-tier-hyperscale-frequently-asked-questions-faq?view=azuresql#how-can-i-choose-between-azure-synapse-analytics-and-azure-sql-database-hyperscale- based on Microsoft docs. For this type of scenarios, Hyperscale works</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">3</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="843943" id="comment-843943">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Helice
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Sun 19 Mar 2023 17:26">2023-03-20 02:26</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Hyperscale is OLTP not OLAP (Data warehouse). Synapse is a DW</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">3</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="822274" id="comment-822274">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				zellck
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Sun 26 Feb 2023 11:55">2023-02-26 20:55</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">1. Azure Data Lake Storage Gen2
+2. Azure SQL DB Hyperscale
+
+https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction
+Azure Data Lake Storage Gen2 is a set of capabilities dedicated to big data analytics, built on Azure Blob Storage.
+
+Data Lake Storage Gen2 converges the capabilities of Azure Data Lake Storage Gen1 with Azure Blob Storage. For example, Data Lake Storage Gen2 provides file system semantics, file-level security, and scale. Because these capabilities are built on Blob storage, you'll also get low-cost, tiered storage, with high availability/disaster recovery capabilities.
+
+https://learn.microsoft.com/en-us/azure/azure-sql/database/service-tier-hyperscale?view=azuresql#what-are-the-hyperscale-capabilities
+The Hyperscale service tier in Azure SQL Database provides the following additional capabilities:
+- Support for up to 100 TB of database size.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">4</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="819634" id="comment-819634">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				abxc
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Thu 23 Feb 2023 20:30">2023-02-24 05:30</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">I think the answer should be Azure Synapse Analytics SQLPool 
+bcz: once data is stored in ADLS in directories, data needs to be queried directly and transformed and stored in tables.
+Synapse has that capability. ???</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">2</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="806012" id="comment-806012">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Putra19
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Sun 12 Feb 2023 07:05">2023-02-12 16:05</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">synapse vs hyperscale which is the better answer?</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="805084" id="comment-805084">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				OPT_001122
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Sat 11 Feb 2023 09:38">2023-02-11 18:38</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Box 1: Azure Data Lake Storage Gen2
+Box 2: Azure SQL Database Hyperscale</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">5</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="797064" id="comment-797064">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Lu5ck
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Fri 03 Feb 2023 14:24">2023-02-03 23:24</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">According to chatgpt,
+Both Azure Data Lake Storage Gen2 and Azure Blob storage can store json but Azure Data Lake Storage Gen2 does a better job at it for this scenario where analytics is involve.
+
+Azure Synapse Analytics dedicated SQL pools is a better answer because the concurrent read limit is not established for Azure SQL Database Hyperscale. Furthermore, Azure Synapse Analytics dedicated SQL pools is optimized to for this purpose. 50TB is below the 100TB limit as well.
+
+Thus the answer is
+Azure Data Lake Storage Gen2
+Azure Synapse Analytics dedicated SQL pools</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">2</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="807816" id="comment-807816">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				np2021
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Mon 13 Feb 2023 22:30">2023-02-14 07:30</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">I agree chatgpt answers need to stop. It is not as smart, or comprehensive at researching a relevant answer as people make out.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">7</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="798063" id="comment-798063">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				jecawi9630
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Sat 04 Feb 2023 15:50">2023-02-05 00:50</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Please stop with your chatgpt answers. It’s not as smart as you think when it comes to questions like this. If you ask a follow up question saying “bit isn’t this the correct answer” it will immediately say “oh yeah you’re right” instead of defending why the answer it chose was correct.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">10</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="799896" id="comment-799896">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Lu5ck
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Mon 06 Feb 2023 16:25">2023-02-07 01:25</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">I forgot to add that Azure Stream Analytics is also in preview state for Event Hub to Azure SQL Database. So yea, I think Azure Synapse Analytics is the better answer.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="799890" id="comment-799890">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Lu5ck
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Mon 06 Feb 2023 16:15">2023-02-07 01:15</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">I am sorry, I copied the wrong explanation. The reality is both solutions are viable at first glance but there is indeed a key difference. The solution must ingest the data DIRECTLY. We cannot ingest the data and transform it directly into Azure SQL Database, that will require the use of a medium like Azure Stream Analytics. However, we can indeed do it directly with Azure Synapse Analytics.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">3</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="799907" id="comment-799907">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Lu5ck
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Mon 06 Feb 2023 16:37">2023-02-07 01:37</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Ah, in case you asked. There is a difference between concurrent queries and concurrent session. The scenario require concurrent read aka concurrent query aka concurrent session. The queues will only kick in after the session is filled. Azure Synapse Analytics can do up to 1000 concurrent session and can do rowstore up to 60 TB. It actually fit all requirements at first glance. So I am unsure why nobody make that comparisons and why they think SQL Database Hyperscale is better fit.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="986041" id="comment-986041">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				AdventureChick
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Sun 20 Aug 2023 21:43">2023-08-21 06:43</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">jecawi9630 - exactly.  Which is why humans still need to know how to research and think for themselves and ChatGPT isn't the gospel.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">2</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="747186" id="comment-747186">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				OrangeSG
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Fri 16 Dec 2022 13:46">2022-12-16 22:46</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Box 2 shall be 'Azure SQL Database Hyperscale'
+Keyword are ‘data warehouse’,  ‘50 TB of relational data’, ‘200 and 300 concurrent read’
+
+Azure SQL Database Hyperscale FAQ
+https://learn.microsoft.com/en-us/azure/azure-sql/database/service-tier-hyperscale-frequently-asked-questions-faq
+
+How can I choose between Azure Synapse Analytics and Azure SQL Database Hyperscale?
+
+If you are currently running interactive analytics queries using SQL Server as a data warehouse, Hyperscale is a great option because you can host small and mid-size data warehouses (such as a few TB up to 100 TB) at a lower cost, and you can migrate your SQL Server data warehouse workloads to Hyperscale with minimal T-SQL code changes.
+If you are running data analytics on a large scale with complex queries and sustained ingestion rates higher than 100 MB/s, or using Parallel Data Warehouse (PDW), Teradata, or other Massively Parallel Processing (MPP) data warehouses, Azure Synapse Analytics may be the best choice.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">12</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="717392" id="comment-717392">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				infimagine
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Sun 13 Nov 2022 16:14">2022-11-14 01:14</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">why not comos DB SQL API?</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">8</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="714684" id="comment-714684">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				jp_mcgee
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Wed 09 Nov 2022 16:19">2022-11-10 01:19</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">WRONG!!
+Box 2 only has only one option which is a data warehouse that can read unstructured data like JSON....Synapse is a data warehouse that can read JSON.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="775486" id="comment-775486">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				FabrityDev
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Sat 14 Jan 2023 15:11">2023-01-15 00:11</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">You kinda miss the point. Read carefully:
+ "Allow stored data to be queried directly, transformed into summarized tables, and then stored in a data warehouse."
+It basically means that the first solution should read JSON data and transform it into tables. The second solution is a data warehous which is supposed to store already transformed data in table format. Therefore SQL is an optimal solution.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">3</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="716144" id="comment-716144">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				jp_mcgee
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Fri 11 Nov 2022 15:50">2022-11-12 00:50</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Correction, SQL Server can also process JSON:
+https://learn.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-the-copy-statement</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="714429" id="comment-714429">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				azuredemo2022three
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Wed 09 Nov 2022 10:30">2022-11-09 19:30</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">The given answer is correct</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">3</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="659370" id="comment-659370">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Akandeopo
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Sun 04 Sep 2022 17:54">2022-09-05 02:54</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">I think B should be Azure Synapse Analytics SQL pool and not SQL Database Hyperscale</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">7</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Discussion end -->
+<script type="text/javascript">
+function eventFire(el, etype){
+  if (el.fireEvent) {
+    el.fireEvent('on' + etype);
+  } else {
+    var evObj = document.createEvent('Events');
+    evObj.initEvent(etype, true, false);
+    el.dispatchEvent(evObj);
+  }
+	const checkboxes = document.querySelectorAll('.vote-checkboxes input')
+	if(checkboxes.length < 1){
+		const switchToSimpleCommentWrap = document.querySelectorAll('.switch-to-simple-comment-wrap')
+		const votingCommentBrackets = document.querySelectorAll('.voting-comment-brackets')
+		switchToSimpleCommentWrap.forEach((item)=> item.style.display = 'inline-block')
+		votingCommentBrackets.forEach((item)=> item.style.display = 'none')
+	}
+  console.log(etype);
+}
+function doVotingClick() {
+	eventFire(document.getElementById('votinglink'), 'click');
+}
+
+//doVotingClick();
+setTimeout(doVotingClick, 200);
+</script>
+</div>
+</div>
+</div>
+</div>
+<!-- END Discussion Content -->
+</div>
+</div>
+<!-- start scrollUp  -->
+<div class="d-print-none" id="scrollUp">
+<i class="fa fa-angle-up"></i>
+</div>
+<!-- Popper JS -->
+<script src="../../../js/popper.min.js"></script>
+<!-- jquery latest version -->
+<script src="../../../js/jquery.min.js"></script>
+<!-- bootstrap js -->
+<script src="../../../js/bootstrap.min.js"></script>
+<!-- slick.min js -->
+<script src="../../../js/slick.min.js"></script>
+<!-- wow js -->
+<script src="../../../js/wow.min.js"></script>
+<!-- main js -->
+<script src="../../../js/main.js"></script>
+<script type="text/javascript">
+    // Activate tooltips
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    })
+
+    $(document).ready(function () {
+        // Load stylesheets in a deferred way:
+        $('link[defhref]').each(function() {
+            $(this).attr('href', $(this).attr('defhref'));
+            //var src = $(this).attr('href');
+            //loadStyleSheet(src);
+        });
+
+        // Load mobile images in a deferred way:
+        var isMobile = window.matchMedia("only screen and (max-width: 490px)").matches;
+        if (isMobile) {
+            $('img[mobile-defsrc]').each(function () {
+                $(this).attr('src', $(this).attr('mobile-defsrc')).removeAttr('defsrc');
+            });
+        }
+
+        // Load images in a deferred way:
+        $('img[defsrc]').each(function() {
+            $(this).attr('src',$(this).attr('defsrc'));
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function (){
+        set_voting_configuration_by_question($(".question-body"));
+    });
+</script>
+<script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
+<script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
+</div>
+</body>
+</html>

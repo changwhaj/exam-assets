@@ -23,6 +23,8 @@ var questionDetails = {
     'SAA2-Q': { qLength: 822, qDirectory: 'aws/SAA_C02' },
     'SAP-Q': { qLength: 1019, qDirectory: 'aws/SAP' },
 
+    'AZ104-Q': { qLength: 606, qDirectory: 'microsoft/AZ104' },
+    'AZ305-Q': { qLength: 286, qDirectory: 'microsoft/AZ305' },
 };
 
 function getQuestionLength(questionName) {
