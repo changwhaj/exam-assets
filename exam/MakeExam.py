@@ -71,24 +71,6 @@ def set_chrome_driver():
     
     return driver
 
-def set_translate_to_kr_old(driver):
-    actionChains = ActionChains(driver)
-    actionChains.context_click().perform()
-
-    if platform.system() == "Darwin":
-        pyautogui.moveTo(x=150, y=350, duration=1)
-    elif platform.system() == "Windows":
-        for i in range(3):
-            pyautogui.press('up')
-
-        pyautogui.press('enter')
-        # pyautogui.sleep(1)
-        
-        # pyautogui.moveTo(x=150, y=345, duration=1)
-        # pyautogui.moveTo(x=150, y=365, duration=1)
-        # pyautogui.click()
-    time.sleep(1)
-
 def send_key_to_background_window(window_title, key):
     import ctypes
 
@@ -117,23 +99,30 @@ def set_translate_to_kr(driver):
         # pyautogui.hotkey('T')
         time.sleep(1)
 
-        pattern = r'>답변 숨기기<'
         bs = BeautifulSoup(driver.page_source, 'html.parser')
+
+        pattern = r'>답변 숨기기<'
         match = re.search(pattern, str(bs))
         if match:
             pyautogui.hotkey('ESC')
             return
         
+        pattern = r'>댓글</font'
+        match = re.search(pattern, str(bs))
+        if match:
+            pyautogui.hotkey('ESC')
+            return
+        # print(bs)
         if platform.system() == "Windows":
             import winsound
             winsound.PlaySound("SystemExclamation", winsound.SND_ALIAS)
         ###time.sleep(1)
-
-        try:
-            driver.switch_to.window(driver.window_handles[1])
-            driver.close()
-        except Exception as e:
-            pass
+        
+        # try:
+        #     driver.switch_to.window(driver.window_handles[1])
+        #     driver.close()
+        # except Exception as e:
+        #     pass
 
 def scroll_page(driver):
     # Set the interval between scrolls in seconds
@@ -179,25 +168,25 @@ def set_headless_mode(driver, headless):
 
 def read_discuss_list(fname):
     df = pd.read_csv(fname, delimiter='\t', encoding='utf-8', header=None, 
-                    names=['ExamType', 'ExamNo', 'DiscussNo', 'DataID', 'LastPost', 'DiscussURL'], 
+                    names=['ExamType', 'ExamNo', 'DiscussNo', 'DataID', 'PostDate', 'DiscussURL'], 
                     index_col=False)
     
     df['ExamType'] = df['ExamType'].str.strip()
     df['ExamNo'] = df['ExamNo'].astype(int)
     df['DiscussNo'] = df['DiscussNo'].astype(int)
     df['DataID'] = df['DataID'].astype(int)
-    df['LastPost'] = pd.to_datetime(df['LastPost'], format='%Y-%m-%d %H:%M')
+    df['PostDate'] = pd.to_datetime(df['PostDate'], format='%Y-%m-%d %H:%M')
     df['DiscussURL'] = df['DiscussURL'].str.strip()
 
     df.drop_duplicates(inplace=True)
-    return df.sort_values(by=['LastPost', 'DiscussNo'], ascending=[False, False])
+    return df.sort_values(by=['PostDate', 'DiscussNo'], ascending=[False, False])
 
 def write_discuss_list(df, fname):
-    df['LastPost'] = df.groupby(['ExamType', 'ExamNo', 'DiscussNo'])['LastPost'].transform('max')
+    df['PostDate'] = df.groupby(['ExamType', 'ExamNo', 'DiscussNo'])['PostDate'].transform('max')
     df.drop_duplicates(subset=['ExamType', 'ExamNo', 'DiscussNo'], keep='last', inplace=True)
     df['MaxDataID'] = df.groupby(['ExamType', 'ExamNo'])['DataID'].transform('max')
     df['Chk'] = df.apply(lambda row: 1 if row['DataID'] == row['MaxDataID'] else 0, axis=1)
-    df = df.sort_values(['Chk', 'LastPost', 'DiscussNo'], ascending=[False, False, False]).drop(columns=['MaxDataID', 'Chk'])
+    df = df.sort_values(['Chk', 'PostDate', 'DiscussNo'], ascending=[False, False, False]).drop(columns=['MaxDataID', 'Chk'])
     df.to_csv(fname, sep='\t', header=False, index=False)
 
 def open_forum(driver, forum_name, pageno):
@@ -234,6 +223,14 @@ def open_exam(driver, discuss_url):
         time.sleep(1)
     
     return
+
+def open_template_discuss():
+    template = "./TEMPLATE_Discuss.html"
+    with open(template, 'r', encoding='utf-8') as file:
+        html_content = file.read()
+        
+    bs = BeautifulSoup(html_content, 'html.parser')
+    return bs
 
 def open_template_exam():
     template = "./TEMPLATE.html"
@@ -343,6 +340,67 @@ def replace_duscuss(driver, discuss_id):
                 comment_span.string = kst_time.strftime("%Y-%m-%d %H:%M")
 
     return bs
+
+def open_new_discussion(driver, discuss_id):
+    if (len(str(discuss_id)) <= 0):
+        return ""
+
+    discuss_url = f"https://www.examtopics.com/ajax/discussion/load-complete/?discussion-id={discuss_id}"
+
+    driver.execute_script("window.open()");
+    driver.switch_to.window(driver.window_handles[1]);
+    page = driver.get(discuss_url)
+    time.sleep(1)
+    
+    html = driver.page_source
+    bs = BeautifulSoup(html, 'html.parser')
+
+    remove_discuss_element(driver)
+
+    bs = BeautifulSoup(driver.page_source, 'html.parser')
+    div_discuss = bs.find_all("div", {"class": "container outer-discussion-container"})[0]
+
+    comment_spans = bs.find_all('span', class_='comment-date')
+    for comment_span in comment_spans:
+        title = comment_span.get('title')
+        if title:
+            kst_time = parser.parse(str(title).replace("midnight", "12:00 a.m.").replace("noon", "12:00 p.m.")) + timedelta(hours=9)
+            comment_span.string = kst_time.strftime("%Y-%m-%d %H:%M")
+
+    div = bs.find('div', attrs={'class': 'container outer-discussion-container'})
+
+    div_discuss.contents = [BeautifulSoup(div.decode_contents(), 'html.parser')]
+    discussion_en = div.decode_contents()
+
+    new_html = f"""
+<!DOCTYPE html><html lang="ko">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+    <title>Exam Topics Discussion</title>
+</head>
+<body>
+    <div>Comments</div>
+    {str(bs)}
+</body>
+</html>
+"""
+    driver.execute_script("document.documentElement.innerHTML = arguments[0];", new_html)
+
+    set_translate_to_kr(driver)
+    scroll_page(driver)
+
+    html = driver.page_source
+    bs = BeautifulSoup(html, 'html.parser')
+
+    pattern = r'</*font[^<]*>'
+    discussion_kr = bs.find("div", {"class": "container outer-discussion-container"}).decode_contents()
+    discussion_kr = re.sub(pattern, '', discussion_kr)
+
+    driver.close();
+    driver.switch_to.window(driver.window_handles[0]);
+
+    return (discussion_en, discussion_kr)
 
 def get_question_data_id(fname):
     pattern = r'<div class="question-body mt-3 pt-3 border-top" data-id="([0-9]+)">'
@@ -541,10 +599,30 @@ def make_filename(qtitle, qid, dataid, tid=0):
             fname = 'isaca/CISM2/CISM-Q' + format(int(qid), '04') + '.html'
         elif qtitle == "Exam CISA topic 2":
             fname = 'isaca/CISA2/CISA-Q' + format(int(qid), '04') + '.html'
-        elif qtitle == "Exam AZ-104":
-            fname = 'microsoft/AZ104/AZ104-T' + format(int(tid), '02') + '-Q' + format(int(qid), '03') + '.html'
-        elif qtitle == "Exam AZ-305":
-            fname = 'microsoft/AZ305/AZ305-T' + format(int(tid), '02') + '-Q' + format(int(qid), '03') + '.html'
+        elif qtitle.startswith("Exam AZ-104"):
+            az104_df = read_AZ_Exam_list('AZ104_Exam.csv')
+            az104_df = az104_df.sort_values(by=['DataNo'], ascending=[True])
+            if (dataid > 0):
+                idx = az104_df.index.get_loc(az104_df[(az104_df['DataNo'] == dataid) & 
+                                                    (az104_df['ExamNo'] == qid)].index[0])
+            elif (tid > 0):
+                idx = az104_df.index.get_loc(az104_df[(az104_df['Topic'] == tid) & 
+                                                    (az104_df['ExamNo'] == qid)].index[0])
+            else:
+                return fname
+            fname = 'ms/AZ104/AZ104-Q' + format(int(idx+1), '04') + '.html'
+        elif qtitle.startswith("Exam AZ-305"):
+            az305_df = read_AZ_Exam_list('AZ305_Exam.csv')
+            az305_df = az305_df.sort_values(by=['DataNo'], ascending=[True])
+            if (dataid > 0):
+                idx = az305_df.index.get_loc(az305_df[(az305_df['DataNo'] == dataid) & 
+                                                    (az305_df['ExamNo'] == qid)].index[0])
+            elif (tid > 0):
+                idx = az305_df.index.get_loc(az305_df[(az305_df['Topic'] == tid) & 
+                                                    (az305_df['ExamNo'] == qid)].index[0])
+            else:
+                return fname
+            fname = 'ms/AZ305/AZ305-Q' + format(int(idx+1), '04') + '.html'
         
         # elif qtitle == 'Exam AWS Certified Developer Associate topic 1':
         #     fname = 'aws/DVA/DVA-Q' + format(int(qid), '04') + '.html'
@@ -576,6 +654,82 @@ def make_question_file(driver, fname, url, did):
     data_id = save_html(driver, did, fname)
 
     return data_id
+
+def translate_discuss_to_kr(driver, fname, discuss_id):
+    if platform.system() == "Windows":
+        url = f'file:///E:/MyProjects/ExamTopics/exam-assets/exam/{fname}'
+    elif platform.system() == "Darwin":
+        url = f'file:///Users/changwhaj/MyProjects/ExamTopics/exam-assets/exam/{fname}'
+    # url = f'http://127.0.0.1:5500/exam-assets/exam/{fname}'
+    driver.get(url)
+    driver.switch_to.window(driver.window_handles[0])
+
+    div_full_discuss = open_discuss(driver, discuss_id)
+
+    driver.find_element(By.CSS_SELECTOR, 'a.btn.btn-primary.reveal-solution').click()
+    driver.find_element(By.CSS_SELECTOR, 'a.badge.reveal-comment').click()
+    set_translate_to_kr(driver)
+    driver.find_element(By.CSS_SELECTOR, 'a.btn.btn-primary.hide-solution').click()
+    scroll_page(driver)
+    try:
+        driver.find_element(By.CSS_SELECTOR, '#scrollUp').click()
+    except Exception as e:
+        pass
+    time.sleep(1)
+    driver.find_element(By.CSS_SELECTOR, 'a.badge.hide-comment').click()
+
+    try:
+        driver.execute_script("arguments[0].remove();", driver.find_element(By.CSS_SELECTOR, '#goog-gt-tt'))
+    except Exception as e:
+        pass
+    try:
+        driver.execute_script("arguments[0].remove();", driver.find_element(By.CSS_SELECTOR, 'head > link'))
+        driver.execute_script("arguments[0].removeAttribute('class');", driver.find_element(By.TAG_NAME, 'html'))
+    except Exception as e:
+        print(f"*** Error translate_discuss_to_kr !!!")
+        pass
+
+def save_new_discuss(driver, fname, did, progress):
+
+    bs = BeautifulSoup(driver.page_source, 'html.parser')
+    pattern = r'</*font[^<]*>'
+    header_contents = bs.find("div", {"class": "discussion-list-header"}).decode_contents()
+    header_contents = re.sub(pattern, '', header_contents)
+    container_contents = bs.find("div", {"class": "discussion-header-container"}).decode_contents()
+    container_contents = re.sub(pattern, '', container_contents)
+    discussion_contents = bs.find("div", {"class": "discussion-page-comments-section"}).decode_contents()
+    discussion_contents = re.sub(pattern, '', discussion_contents)
+    # pattern = r'<!-- Additional optional vote button: <a href=.+</a>-->'
+    # container_contents = re.sub(pattern, '', container_contents)
+
+    (d_en, d_kr) = open_new_discussion(driver, did)
+
+    with open(fname, "r", encoding='utf-8') as file:
+        html = file.read()
+        file.close()
+            
+    #print(html)
+    bs = BeautifulSoup(html, 'html.parser')
+
+    container = bs.find("div", {"class": "discussion-header-container"})
+    progress_el = container.find("div", {"class": "progress"})
+    if progress_el: progress_el.contents = [BeautifulSoup(progress, 'html.parser')] 
+
+    container = bs.find("div", {"class": "discussion-header-container-en"})
+    progress_el = container.find("div", {"class": "progress"})
+    if progress_el: progress_el.contents = [BeautifulSoup(progress, 'html.parser')] 
+    #progress_el.contents = [BeautifulSoup(progress, 'html.parser')] if progress_el else None
+
+    discussion = bs.find("div", {"class": "discussion-page-comments-section"})
+    diss_con = discussion.find("div", {"class": "container outer-discussion-container"})
+    diss_con.contents = [BeautifulSoup(d_kr, 'html.parser')]
+
+    discussion = bs.find("div", {"class": "discussion-page-comments-section-en"})
+    diss_con = discussion.find("div", {"class": "container outer-discussion-container"})
+    diss_con.contents = [BeautifulSoup(d_en, 'html.parser')]
+
+    with open(fname, "w", encoding='utf-8') as file:
+        file.write(str(bs))
 
 def translate_page_to_kr(driver, fname):
     if platform.system() == "Windows":
@@ -653,17 +807,11 @@ def save_kr(driver, fname):
     with open(fname, "w", encoding='utf-8') as file:
         file.write(str(bs_en))
 
-def refresh_from_forum(discuss_list, forum_name, last_page):
-
-    df = read_discuss_list(discuss_list)
-    refresh = False
-    driver = set_chrome_driver()
-    # driver.set_window_position(1800,10)
-    prev_last_post = df['LastPost'][0]
-    new_df = pd.DataFrame(columns=['ExamType', 'ExamNo', 'DiscussNo', 'DataID', 'LastPost', 'DiscussURL'])
+def get_new_discuss_list(driver, forum_name, prev_last_post):
+    new_df = pd.DataFrame(columns=['ExamType', 'ExamNo', 'DiscussNo', 'DataID', 'PostDate', 'DiscussURL'])
     
     found = False
-    for p in range(1000)[:]:
+    for p in range(1000)[25:]:
         if found == True: break
         pageno = p + 1
 
@@ -679,8 +827,8 @@ def refresh_from_forum(discuss_list, forum_name, last_page):
         span = bs.find_all("span", {"class": "recent-post-time"})
     
         for i in range(len(a)):
-            last_post = parser.parse(str(span[i*2+1]["title"]).replace("midnight", "12:00 a.m.").replace("noon", "12:00 p.m."))
-            if ((p >= last_page)& (last_post <= prev_last_post)): 
+            postdate = parser.parse(str(span[i*2+1]["title"]).replace("midnight", "12:00 a.m.").replace("noon", "12:00 p.m."))
+            if (postdate <= prev_last_post): 
                 found = True
                 break
 
@@ -691,8 +839,19 @@ def refresh_from_forum(discuss_list, forum_name, last_page):
             url = str(a[i]["href"])
             did = int(url.split('/')[4].split('-')[0])
 
-            new_row = { 'ExamType': qtitle, 'ExamNo': qid, 'DiscussNo': did, 'DataID': 0, 'LastPost': last_post, 'DiscussURL': url }
+            new_row = { 'ExamType': qtitle, 'ExamNo': qid, 'DiscussNo': did, 'DataID': 0, 'PostDate': postdate, 'DiscussURL': url }
             new_df = pd.concat([new_df, pd.DataFrame([new_row])], ignore_index=True) 
+
+    return new_df
+
+def refresh_from_forum(discuss_list, forum_name, last_page):
+
+    df = read_discuss_list(discuss_list)
+    refresh = False
+    driver = set_chrome_driver()
+    # driver.set_window_position(1800,10)
+
+    new_df = get_new_discuss_list(driver, forum_name, df['PostDate'][0])
 
     for index in range(len(new_df)-1, -1, -1):
         row = new_df.iloc[index]
@@ -700,8 +859,8 @@ def refresh_from_forum(discuss_list, forum_name, last_page):
         qid = row['ExamNo']
         did = row['DiscussNo']
         url = row['DiscussURL']
-        last_post = row['LastPost']
-        print(qtitle+"\t"+str(qid)+"\t"+str(did)+"\t"+str(last_post)+"\t"+url, end=' ', flush=True)
+        newpost = row['PostDate']
+        print(qtitle+"\t"+str(qid)+"\t"+str(did)+"\t"+str(newpost)+"\t"+url, end=' ', flush=True)
 
         replace = False    
         data_id = 0
@@ -709,16 +868,16 @@ def refresh_from_forum(discuss_list, forum_name, last_page):
             print("Same question found !!!")
 
             data_id = int(df[(df['ExamType'] == qtitle) & (df['ExamNo'] == qid) & (df['DiscussNo'] == did)]['DataID'].iloc[0])
-            LastPost = parser.parse(str(df[(df['ExamType'] == qtitle) & (df['ExamNo'] == qid) & (df['DiscussNo'] == did)]['LastPost'].iloc[0]))
-            if (data_id > 0) & (LastPost == last_post):
-                print('Same discussion post, continue!!! LastPost: ' + str(LastPost))
+            oldpost = parser.parse(str(df[(df['ExamType'] == qtitle) & (df['ExamNo'] == qid) & (df['DiscussNo'] == did)]['PostDate'].iloc[0]))
+            if (data_id > 0) & (oldpost == newpost):
+                print('Same discussion post, continue!!! PostDate: ' + str(oldpost))
                 continue
 
             # Old post found. Skip this.
-            if LastPost > last_post: continue
+            if oldpost > newpost: continue
 
             # Recent discussion post found. Remove old discussion list and add new discussion
-            if (data_id == 0) | (LastPost < last_post):
+            if (data_id == 0) | (oldpost < newpost):
                 replace = True
         else:
             print("New question found !!!")
@@ -727,20 +886,33 @@ def refresh_from_forum(discuss_list, forum_name, last_page):
         if (len(fname) <= 0): 
             new_data_id = data_id
         else:
-            new_data_id = make_question_file(driver, fname, url, did)
-            print(f'data_id={data_id}, new_data_id={new_data_id}, fname={fname}')
-            if (data_id > 0 ) & (data_id != new_data_id):
-                break
-            translate_page_to_kr(driver, fname)
-            save_kr(driver, fname)
+            file_data_id = get_question_data_id(fname)
+            if file_data_id == 0:
+                new_data_id = make_question_file(driver, fname, url, did)
+                # print(f'data_id={data_id}, new_data_id={new_data_id}, fname={fname}')
+                if (data_id > 0 ) & (data_id != new_data_id):
+                    break
+                translate_page_to_kr(driver, fname)
+                save_kr(driver, fname)
+            else:
+                new_data_id = file_data_id
+                open_exam(driver, url)
+                driver.switch_to.window(driver.window_handles[0])
+                if (driver.title != '404 - Page not found') & (len(driver.title) > 20):
+                    bs = BeautifulSoup(driver.page_source, 'html.parser')
+                    container = bs.find("div", {"class": "discussion-header-container"})
+                    progress_element = container.find("div", {"class": "progress"})
+                    progress = progress_element.decode_contents() if progress_element else None
+
+                save_new_discuss(driver, fname, did, progress)
 
         if (replace == True):    
             data_id = int(df[(df['ExamType'] == qtitle) & (df['ExamNo'] == qid) & (df['DiscussNo'] == did)]['DataID'].iloc[0])
-            if (LastPost < last_post):
-                print('Recent discussion post : ' + str(LastPost) + ' ==> ' + str(last_post))
+            if (oldpost < newpost):
+                print('Recent discussion post : ' + str(oldpost) + ' ==> ' + str(newpost))
                 df = df.drop(df[(df['ExamType'] == qtitle) & (df['ExamNo'] == qid) & (df['DiscussNo'] == did)].index)
 
-        new_row = [{ 'ExamType': qtitle, 'ExamNo': qid, 'DiscussNo': did, 'DataID': new_data_id, 'LastPost': last_post, 'DiscussURL': url }]
+        new_row = [{ 'ExamType': qtitle, 'ExamNo': qid, 'DiscussNo': did, 'DataID': new_data_id, 'PostDate': newpost, 'DiscussURL': url }]
         df = pd.concat([df, pd.DataFrame(new_row)], ignore_index=True)
         if index % 20 == 0:
             write_discuss_list(df, discuss_list)
@@ -753,7 +925,6 @@ def refresh_from_forum(discuss_list, forum_name, last_page):
     time.sleep(1)
 
 def read_Exam_list(fname):
-
     df = pd.read_csv(fname, delimiter='\t', encoding='utf-8', header=None,
                     names=['ExamNo', 'DiscussNo', 'DataNo', 'DiscussURL'],
                     index_col=False)
@@ -1008,12 +1179,12 @@ if __name__ == "__main__":
     # FORUM_NAME = 'isaca'
     # refresh_from_forum(DISCUSS, FORUM_NAME, 1)    
 
-    # DISCUSS = 'AzureDiscuss.txt'
-    # FORUM_NAME = 'microsoft'
-    # refresh_from_forum(DISCUSS, FORUM_NAME, 1)
+    DISCUSS = 'AzureDiscuss.txt'
+    FORUM_NAME = 'microsoft'
+    refresh_from_forum(DISCUSS, FORUM_NAME, 1)
 
-    AZ305 = 'Exam AZ-305'
-    refresh_AZ_exam('AZ305_Exam.csv', AZ305)
+    # AZ305 = 'Exam AZ-305'
+    # refresh_AZ_exam('AZ305_Exam.csv', AZ305)
 
-    AZ104 = 'Exam AZ-104'
-    refresh_AZ_exam('AZ104_Exam.csv', AZ104)
+    # AZ104 = 'Exam AZ-104'
+    # refresh_AZ_exam('AZ104_Exam.csv', AZ104)
