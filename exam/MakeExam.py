@@ -811,7 +811,7 @@ def get_new_discuss_list(driver, forum_name, prev_last_post):
     new_df = pd.DataFrame(columns=['ExamType', 'ExamNo', 'DiscussNo', 'DataID', 'PostDate', 'DiscussURL'])
     
     found = False
-    for p in range(1000)[25:]:
+    for p in range(1000)[:]:
         if found == True: break
         pageno = p + 1
 
