@@ -914,7 +914,7 @@ def refresh_from_forum(discuss_list, forum_name, last_page):
 
         new_row = [{ 'ExamType': qtitle, 'ExamNo': qid, 'DiscussNo': did, 'DataID': new_data_id, 'PostDate': newpost, 'DiscussURL': url }]
         df = pd.concat([df, pd.DataFrame(new_row)], ignore_index=True)
-        if index % 20 == 0:
+        if index % 100 == 0:
             write_discuss_list(df, discuss_list)
             print(f'Write Discuss List {index} / {len(new_df)}')
 
@@ -1171,17 +1171,17 @@ if __name__ == "__main__":
     # FORUM_NAME = 'cncf'
     # refresh_from_forum(DISCUSS, FORUM_NAME, 1)    
 
-    # DISCUSS = 'AmazonDiscuss.txt'
-    # FORUM_NAME = 'amazon'
-    # refresh_from_forum(DISCUSS, FORUM_NAME, 1)
+    DISCUSS = 'AmazonDiscuss.txt'
+    FORUM_NAME = 'amazon'
+    refresh_from_forum(DISCUSS, FORUM_NAME, 1)
     
     # DISCUSS = 'IsacaDiscuss.txt'
     # FORUM_NAME = 'isaca'
     # refresh_from_forum(DISCUSS, FORUM_NAME, 1)    
 
-    DISCUSS = 'AzureDiscuss.txt'
-    FORUM_NAME = 'microsoft'
-    refresh_from_forum(DISCUSS, FORUM_NAME, 1)
+    # DISCUSS = 'AzureDiscuss.txt'
+    # FORUM_NAME = 'microsoft'
+    # refresh_from_forum(DISCUSS, FORUM_NAME, 1)
 
     # AZ305 = 'Exam AZ-305'
     # refresh_AZ_exam('AZ305_Exam.csv', AZ305)
