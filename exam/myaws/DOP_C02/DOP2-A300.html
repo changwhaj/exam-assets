@@ -3,7 +3,10 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Crect x='3' y='2' width='18' height='20' rx='3' ry='3' fill='%23FFD700' stroke='black' stroke-width='2'/%3E%3Cpath d='M15 2V8H21' fill='%2300BFFF' stroke='black' stroke-width='2'/%3E%3Cline x1='6' y1='10' x2='18' y2='10' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cline x1='6' y1='14' x2='18' y2='14' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cline x1='6' y1='18' x2='12' y2='18' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cpath d='M7 19L10 22L15 15' stroke='%23ADFF2F' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
 <script>
+	const PASSKEY = "DOP2";
+	const PASSLABEL = "passdop2";
 	const discuss_id = [
 		143395, 143880, 143394, 143393, 143392, 143391, 143792, 143389, 143378, 143377,
 		143893, 143894, 143406, 143405, 143912, 143404, 143403, 143402, 143401, 143399,
@@ -13,21 +16,23 @@
 	];
 
 	function openExam(exam_no) {
-			if (exam_no-251 >= 0 && exam_no-251 < discuss_id.length) {
-				const url = `https://changwhaj.github.io/exam-assets/exam/aws/DOP_C02/DOP2-Q${String(exam_no).padStart(4, '0')}.html`;
-					window.open(url, 'exam');
-			} else {
-					return 0;
-			}
+		if (exam_no-251 >= 0 && exam_no-251 < discuss_id.length) {
+			if (typeof PASSKEY !== "undefined" && passwd !== undefined && passwd != PASSKEY) return 0;
+			const url = `https://changwhaj.github.io/exam-assets/exam/aws/DOP_C02/DOP2-Q${String(exam_no).padStart(4, '0')}.html`;
+			window.open(url, 'exam');
+		} else {
+			return 0;
+		}
 	}
 
 	function openExamTopics(exam_no) {
 		if (exam_no-251 >= 0 && exam_no-251 < discuss_id.length) {
+			if (typeof PASSKEY !== "undefined" && passwd !== undefined && passwd != PASSKEY) return 0;
 			const url = `https://www.examtopics.com/discussions/amazon/view/${discuss_id[exam_no-251]}-exam/`;
-					window.open(url, 'topics');
-			} else {
-					return 0;
-			}
+			window.open(url, 'topics');
+		} else {
+			return 0;
+		}
 	}
 </script>
 </head>

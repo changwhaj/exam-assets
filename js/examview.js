@@ -1,6 +1,10 @@
     /* Hide & Show answers */
     $('body').on('click', '.btn.reveal-solution', function (e) {
         e.preventDefault();
+        // if (passwd != PASSKEY) return;
+        // console.log(passwd);
+        if (typeof PASSKEY !== "undefined" && passwd !== undefined && passwd != PASSKEY) return;
+
         $(this).parent('.question-body').find('.question-answer').fadeIn(100);
         $(this).parent('.question-body').find('.hide-solution').removeClass('d-none');
         $(this).parent('.question-body').find('.correct-hidden').addClass('correct-choice');
@@ -9,6 +13,9 @@
 
     $('body').on('click', '.btn.hide-solution', function (e) {
         e.preventDefault();
+        // console.log(passwd);
+        if (typeof PASSKEY !== "undefined" && passwd !== undefined && passwd != PASSKEY) return;
+
         $(this).parent('.question-body').find('.question-answer').fadeOut(100);
         $(this).parent('.question-body').find('.reveal-solution').removeClass('d-none');
         $(this).parent('.question-body').find('.correct-hidden').removeClass('correct-choice');
@@ -109,3 +116,48 @@
         container.find('.comments-wrapper').fadeIn(0);
         $(this).addClass('d-none');
     });
+
+    function getCookie(name) {
+        return document.cookie
+            .split('; ')
+            .map(cookie => cookie.split('='))
+            .reduce((acc, [key, value]) => {
+                acc[key] = decodeURIComponent(value);
+                return acc;
+            }, {})[name];
+        }
+    
+    function setCookie(name, value, options = {}) {
+        options = {
+            path: '/', // 기본적으로 사이트 전체에서 유효하도록 설정
+            sameSite: 'Lax', // 보안 강화를 위해 기본 SameSite 설정 추가
+            ...options
+        };
+    
+        if (options.expires instanceof Date) {
+            options.expires = options.expires.toUTCString();
+        }
+    
+        let cookieParts = [`${encodeURIComponent(name)}=${encodeURIComponent(value)}`];
+    
+        for (let [key, val] of Object.entries(options)) {
+            cookieParts.push(val === true ? key : `${key}=${val}`);
+        }
+    
+        document.cookie = cookieParts.join("; ");
+    }
+    var passwd = "";
+    if (typeof PASSLABEL !== "undefined") {    
+        passwd = getCookie(PASSLABEL);
+        if (passwd == undefined) {
+            passwd = prompt("Please enter password for use this page");
+            if ((passwd || "").toUpperCase() === PASSKEY) {
+                var expDate = new Date();
+                expDate.setMonth(expDate.getMonth() + 1);
+                expDate = expDate.toUTCString();
+                setCookie(PASSLABEL, passwd, {secure: true, 'expires': expDate});
+            }
+        }
+        // passwd = getCookie(PASSLABEL);
+    }
+    // console.log(passwd);
