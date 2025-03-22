@@ -3,6 +3,8 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Crect x='3' y='2' width='18' height='20' rx='3' ry='3' fill='%23FFD700' stroke='black' stroke-width='2'/%3E%3Cpath d='M15 2V8H21' fill='%2300BFFF' stroke='black' stroke-width='2'/%3E%3Cline x1='6' y1='10' x2='18' y2='10' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cline x1='6' y1='14' x2='18' y2='14' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cline x1='6' y1='18' x2='12' y2='18' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cpath d='M7 19L10 22L15 15' stroke='%23ADFF2F' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<script src="exampass.js"></script>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
@@ -56,7 +58,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 질문 54 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(54)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 문제 54 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 54 discussion</h1>
@@ -128,7 +130,8 @@
 <span class="correct-answer">C (OK)</span>
 <br/>
 </span>
-<span class="answer-description"><div class="col-12 pt-2 pb-2">C: pullRequestCreated와 pullRequestSourceBranchUpdated 이벤트에 반응하는 Amazon EventBridge 규칙을 사용하여 CodePipeline 파이프라인을 호출하고, CodeBuild 작업을 통해 애플리케이션 테스트를 실행하는 방법입니다. 이 규칙은 풀 리퀘스트 생성 및 소스 브랜치 업데이트에 반응하여 자동으로 테스트를 실행하고, 테스트 배지를 풀 요청에 댓글로 게시하여 개발자가 검토 중에 쉽게 볼 수 있도록 합니다.<br/>
+<span class="answer-description"><div class="col-12 pt-2 pb-2">C: pullRequestCreated와 pullRequestSourceBranchUpdated 이벤트에 반응하는 Amazon EventBridge 규칙을 사용하여 CodePipeline 파이프라인을 호출하고, CodeBuild 작업을 통해 애플리케이션 테스트를 실행하는 방법입니다. 이 규칙은 풀 리퀘스트 생성 및 소스 브랜치 업데이트에 반응하여 자동으로 테스트를 실행하고, 테스트 배지를 풀 요청에 댓글로 게시하여 개발자가 검토 중에 쉽게 볼 수 있도록 합니다.
+<br/>
 <br/>
 이 방법은 자동화된 코드 검토를 가능하게 하여, 개발 팀이 풀 리퀘스트를 검토할 때 자동화된 테스트 결과를 더 쉽게 확인할 수 있도록 해 줍니다.</div></span>
 <div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분포</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="36 votes." data-toggle="tooltip" role="progressbar" style="width: 65%; display: flex;" title="">C (65%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="11 votes." data-toggle="tooltip" role="progressbar" style="width: 20%; display: flex;" title="">B (20%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="8 votes." data-toggle="tooltip" role="progressbar" style="width: 15%; display: flex;" title="">D (15%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
@@ -1627,31 +1630,6 @@
 </div>
 </div>
 <!-- Discussion end -->
-<script type="text/javascript">
-function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype);
-  } else {
-    var evObj = document.createEvent('Events');
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
-	const checkboxes = document.querySelectorAll('.vote-checkboxes input')
-	if(checkboxes.length < 1){
-		const switchToSimpleCommentWrap = document.querySelectorAll('.switch-to-simple-comment-wrap')
-		const votingCommentBrackets = document.querySelectorAll('.voting-comment-brackets')
-		switchToSimpleCommentWrap.forEach((item)=> item.style.display = 'inline-block')
-		votingCommentBrackets.forEach((item)=> item.style.display = 'none')
-	}
-  console.log(etype);
-}
-function doVotingClick() {
-	eventFire(document.getElementById('votinglink'), 'click');
-}
-
-//doVotingClick();
-setTimeout(doVotingClick, 200);
-</script>
 </div>
 </div>
 <div class="comments-wrapper-en" style="display: none;">
@@ -3111,31 +3089,6 @@ based on the requirements of automating testing of pull requests in CodeCommit a
 </div>
 </div>
 <!-- Discussion end -->
-<script type="text/javascript">
-function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype);
-  } else {
-    var evObj = document.createEvent('Events');
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
-	const checkboxes = document.querySelectorAll('.vote-checkboxes input')
-	if(checkboxes.length < 1){
-		const switchToSimpleCommentWrap = document.querySelectorAll('.switch-to-simple-comment-wrap')
-		const votingCommentBrackets = document.querySelectorAll('.voting-comment-brackets')
-		switchToSimpleCommentWrap.forEach((item)=> item.style.display = 'inline-block')
-		votingCommentBrackets.forEach((item)=> item.style.display = 'none')
-	}
-  console.log(etype);
-}
-function doVotingClick() {
-	eventFire(document.getElementById('votinglink'), 'click');
-}
-
-//doVotingClick();
-setTimeout(doVotingClick, 200);
-</script>
 </div>
 </div>
 </div>

@@ -4,39 +4,7 @@
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Crect x='3' y='2' width='18' height='20' rx='3' ry='3' fill='%23FFD700' stroke='black' stroke-width='2'/%3E%3Cpath d='M15 2V8H21' fill='%2300BFFF' stroke='black' stroke-width='2'/%3E%3Cline x1='6' y1='10' x2='18' y2='10' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cline x1='6' y1='14' x2='18' y2='14' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cline x1='6' y1='18' x2='12' y2='18' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cpath d='M7 19L10 22L15 15' stroke='%23ADFF2F' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
-<script>
-	const PASSKEY = "DOP2";
-	const PASSLABEL = "passdop2";
-	const discuss_id = [
-		105229, 105230, 105490, 105332, 105457, 105265, 105504, 105266, 105235, 105505,
-		105236, 105508, 105512, 105513, 105514, 105519, 105520, 105239, 105240, 105242,
-		105524, 105243, 105247, 105569, 105570, 105335, 105572, 106206, 106179, 105252,
-		105336, 105337, 106198, 106213, 106199, 106261, 106307, 105438, 106215, 106309,
-		106310, 106311, 106312, 106274, 105584, 106272, 106271, 106270, 106269, 106268,
-	];
-
-	function openExam(exam_no) {
-		if (exam_no-1 >= 0 && exam_no-1 < discuss_id.length) {
-			if (typeof PASSKEY !== "undefined" && passwd !== undefined && passwd != PASSKEY) return 0;
-
-			const url = `https://changwhaj.github.io/exam-assets/exam/aws/DOP_C02/DOP2-Q${String(exam_no).padStart(4, '0')}.html`;
-			window.open(url, 'exam');
-		} else {
-			return 0;
-		}
-	}
-
-	function openExamTopics(exam_no) {
-		if (exam_no-1 >= 0 && exam_no-1 < discuss_id.length) {
-			if (typeof PASSKEY !== "undefined" && passwd !== undefined && passwd != PASSKEY) return 0;
-
-			const url = `https://www.examtopics.com/discussions/amazon/view/${discuss_id[exam_no-1]}-exam/`;
-			window.open(url, 'topics');
-		} else {
-			return 0;
-		}
-	}
-</script>
+<script src="exampass.js"></script>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
@@ -64,7 +32,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(1)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(1)" style="color: yellow;">문제 1</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(1)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(1)" style="color: yellow;">문제 1</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 1 discussion</h1>
@@ -231,7 +199,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(2)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(2)" style="color: yellow;">문제 2</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(2)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(2)" style="color: yellow;">문제 2</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 2 discussion</h1>
@@ -400,7 +368,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(3)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(3)" style="color: yellow;">문제 3</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(3)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(3)" style="color: yellow;">문제 3</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 3 discussion</h1>
@@ -567,7 +535,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(4)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(4)" style="color: yellow;">문제 4</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(4)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(4)" style="color: yellow;">문제 4</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 4 discussion</h1>
@@ -731,7 +699,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(5)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(5)" style="color: yellow;">문제 5</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(5)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(5)" style="color: yellow;">문제 5</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 5 discussion</h1>
@@ -899,7 +867,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(6)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(6)" style="color: yellow;">문제 6</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(6)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(6)" style="color: yellow;">문제 6</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 6 discussion</h1>
@@ -1114,7 +1082,7 @@ KMS 키 정책 수정 및 권한 부여:
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(7)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(7)" style="color: yellow;">문제 7</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(7)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(7)" style="color: yellow;">문제 7</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 7 discussion</h1>
@@ -1304,7 +1272,7 @@ D는 CodeDeploy에서 애플리케이션을 생성하고, 인플레이스 배포
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(8)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(8)" style="color: yellow;">문제 8</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(8)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(8)" style="color: yellow;">문제 8</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 8 discussion</h1>
@@ -1496,7 +1464,7 @@ Firewall Manager 정책을 설정하여 조직 내에서 생성되는 새로운 
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(9)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(9)" style="color: yellow;">문제 9</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(9)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(9)" style="color: yellow;">문제 9</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 9 discussion</h1>
@@ -1674,7 +1642,7 @@ D: AWS Security Hub는 주로 보안 결과를 집계하고 관리하는 데 중
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(10)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(10)" style="color: yellow;">문제 10</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(10)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(10)" style="color: yellow;">문제 10</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 10 discussion</h1>
@@ -1849,7 +1817,7 @@ CodeBuild 서비스 역할 수정: CodeBuild 프로젝트의 서비스 역할에
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(11)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(11)" style="color: yellow;">문제 11</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(11)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(11)" style="color: yellow;">문제 11</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 11 discussion</h1>
@@ -2066,7 +2034,7 @@ IAM Identity Center에서 권한 집합을 생성하고, 필요한 권한을 포
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(12)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(12)" style="color: yellow;">문제 12</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(12)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(12)" style="color: yellow;">문제 12</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 12 discussion</h1>
@@ -2263,7 +2231,7 @@ WriteThrottleEvents 지표는 DynamoDB 테이블이 쓰기 요청을 제한(thro
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(13)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(13)" style="color: yellow;">문제 13</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(13)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(13)" style="color: yellow;">문제 13</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 13 discussion</h1>
@@ -2432,7 +2400,7 @@ WriteThrottleEvents 지표는 DynamoDB 테이블이 쓰기 요청을 제한(thro
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(14)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(14)" style="color: yellow;">문제 14</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(14)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(14)" style="color: yellow;">문제 14</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 14 discussion</h1>
@@ -2599,7 +2567,7 @@ WriteThrottleEvents 지표는 DynamoDB 테이블이 쓰기 요청을 제한(thro
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(15)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(15)" style="color: yellow;">문제 15</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(15)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(15)" style="color: yellow;">문제 15</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 15 discussion</h1>
@@ -2778,7 +2746,7 @@ D: 보안 그룹을 통해 아티팩트 리포지토리에 대한 아웃바운�
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(16)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(16)" style="color: yellow;">문제 16</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(16)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(16)" style="color: yellow;">문제 16</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 16 discussion</h1>
@@ -2943,7 +2911,7 @@ D: 보안 그룹을 통해 아티팩트 리포지토리에 대한 아웃바운�
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(17)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(17)" style="color: yellow;">문제 17</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(17)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(17)" style="color: yellow;">문제 17</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 17 discussion</h1>
@@ -3124,7 +3092,7 @@ D: 모든 AWS 서비스의 이벤트를 구독하는 사용자 지정 EventBridg
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(18)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(18)" style="color: yellow;">문제 18</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(18)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(18)" style="color: yellow;">문제 18</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 18 discussion</h1>
@@ -3317,7 +3285,7 @@ C: ALB를 NLB로 교체하는 방법이지만, 이는 불필요한 변경이며,
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(19)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(19)" style="color: yellow;">문제 19</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(19)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(19)" style="color: yellow;">문제 19</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 19 discussion</h1>
@@ -3495,7 +3463,7 @@ C: control_tower_parameters 입력에 추가 값을 추가하는 방법이지만
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(20)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(20)" style="color: yellow;">문제 20</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(20)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(20)" style="color: yellow;">문제 20</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 20 discussion</h1>
@@ -3672,7 +3640,7 @@ D: EC2의 이벤트 소스와 인스턴스 유지 관리 이벤트 유형을 구
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(21)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(21)" style="color: yellow;">문제 21</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(21)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(21)" style="color: yellow;">문제 21</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 21 discussion</h1>
@@ -3851,7 +3819,7 @@ C: AWS CodePipeline과 AWS Secrets Manager를 활용하여 빌드 아티팩트�
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(22)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(22)" style="color: yellow;">문제 22</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(22)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(22)" style="color: yellow;">문제 22</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 22 discussion</h1>
@@ -4032,7 +4000,7 @@ D: EC2 및 S3 버킷 리소스를 AWS OpsWorks Stacks 리소스로 교체하고,
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(23)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(23)" style="color: yellow;">문제 23</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(23)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(23)" style="color: yellow;">문제 23</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 23 discussion</h1>
@@ -4243,7 +4211,7 @@ D: eu-west-1의 S3 버킷에서 us-east-1의 S3 버킷으로 S3 교차 리전 �
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(24)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(24)" style="color: yellow;">문제 24</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(24)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(24)" style="color: yellow;">문제 24</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 24 discussion</h1>
@@ -4427,7 +4395,7 @@ D: AWS CloudFormation의 UserData 속성을 사용하여 인스턴스 시작 시
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(25)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(25)" style="color: yellow;">문제 25</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(25)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(25)" style="color: yellow;">문제 25</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 25 discussion</h1>
@@ -4619,7 +4587,7 @@ D: ec2:ResourceTag/department를 ${aws:PrincipalTag/department}와 비교하지 
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(26)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(26)" style="color: yellow;">문제 26</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(26)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(26)" style="color: yellow;">문제 26</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 26 discussion</h1>
@@ -4807,7 +4775,7 @@ C 및 D: IAM 권한 경계를 사용하는 방법이지만, 권한 경계는 IAM
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(27)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(27)" style="color: yellow;">문제 27</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(27)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(27)" style="color: yellow;">문제 27</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 27 discussion</h1>
@@ -4988,7 +4956,7 @@ C: AWS CodeArtifact와 AWS CodeDeploy를 사용하여 애플리케이션을 배�
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(28)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(28)" style="color: yellow;">문제 28</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(28)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(28)" style="color: yellow;">문제 28</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 28 discussion</h1>
@@ -5170,7 +5138,7 @@ C: Amazon CloudWatch 구독 필터를 사용하지만, 이는 로그 스트림�
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(29)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(29)" style="color: yellow;">문제 29</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(29)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(29)" style="color: yellow;">문제 29</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 29 discussion</h1>
@@ -5403,7 +5371,7 @@ C 및 F: Amazon Cognito를 사용하는 방법이지만, 이는 주로 애플리
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(30)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(30)" style="color: yellow;">문제 30</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(30)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(30)" style="color: yellow;">문제 30</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 30 discussion</h1>
@@ -5602,7 +5570,7 @@ D: Amazon Inspector는 주로 EC2 인스턴스의 보안 취약성 평가에 사
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(31)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(31)" style="color: yellow;">문제 31</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(31)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(31)" style="color: yellow;">문제 31</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 31 discussion</h1>
@@ -5787,7 +5755,7 @@ C 및 D: Amazon S3 로깅을 사용하는 방법은 EKS 구성 요소의 로그�
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(32)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(32)" style="color: yellow;">문제 32</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(32)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(32)" style="color: yellow;">문제 32</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 32 discussion</h1>
@@ -6021,7 +5989,7 @@ E: ECS 서비스의 대상 그룹에서 액세스 로깅을 활성화하는 것�
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(33)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(33)" style="color: yellow;">문제 33</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(33)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(33)" style="color: yellow;">문제 33</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 33 discussion</h1>
@@ -6202,7 +6170,7 @@ D: AWS Systems Manager를 사용하여 기업 리포지토리를 포함한 새�
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(34)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(34)" style="color: yellow;">문제 34</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(34)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(34)" style="color: yellow;">문제 34</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 34 discussion</h1>
@@ -6383,7 +6351,7 @@ D: AfterAllowTraffic 수명 주기 이벤트를 사용하여 테스트 스크립
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(35)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(35)" style="color: yellow;">문제 35</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(35)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(35)" style="color: yellow;">문제 35</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 35 discussion</h1>
@@ -6565,7 +6533,7 @@ D: S3 동일 지역 복제를 사용하여 S3 버킷에서 직접 수행된 모�
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(36)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(36)" style="color: yellow;">문제 36</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(36)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(36)" style="color: yellow;">문제 36</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 36 discussion</h1>
@@ -6803,7 +6771,7 @@ F: 대상 버킷에 복제 규칙을 생성할 필요는 없습니다. 복제 �
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(37)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(37)" style="color: yellow;">문제 37</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(37)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(37)" style="color: yellow;">문제 37</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 37 discussion</h1>
@@ -7031,7 +6999,7 @@ F: 마스터 계정에서 AmazonEC2ReadOnlyAccess 관리형 정책이 연결된 
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(38)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(38)" style="color: yellow;">문제 38</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(38)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(38)" style="color: yellow;">문제 38</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 38 discussion</h1>
@@ -7232,7 +7200,7 @@ D: 각 위성에 대해 별도의 가상 대기열을 생성하고, 변환할 �
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(39)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(39)" style="color: yellow;">문제 39</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(39)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(39)" style="color: yellow;">문제 39</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 39 discussion</h1>
@@ -7411,7 +7379,7 @@ C: CloudFormation StackSets를 사용하여 여러 계정과 리전에 걸쳐 �
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(40)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(40)" style="color: yellow;">문제 40</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(40)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(40)" style="color: yellow;">문제 40</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 40 discussion</h1>
@@ -7595,7 +7563,7 @@ D: NAT 인스턴스를 NAT 게이트웨이로 교체하여 각 가용성 영역�
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(41)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(41)" style="color: yellow;">문제 41</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(41)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(41)" style="color: yellow;">문제 41</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 41 discussion</h1>
@@ -7788,7 +7756,7 @@ D: 파이프라인 코드를 수정하여 각 단계의 끝에서 이벤트를 �
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(42)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(42)" style="color: yellow;">문제 42</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(42)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(42)" style="color: yellow;">문제 42</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 42 discussion</h1>
@@ -7967,7 +7935,7 @@ D: Amazon Inspector를 사용하여 보안 그룹을 확인하는 방법입니�
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(43)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(43)" style="color: yellow;">문제 43</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(43)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(43)" style="color: yellow;">문제 43</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 43 discussion</h1>
@@ -8178,7 +8146,7 @@ E: 애플리케이션을 수정하여 통계 데이터를 CloudWatch 메트릭�
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(44)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(44)" style="color: yellow;">문제 44</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(44)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(44)" style="color: yellow;">문제 44</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 44 discussion</h1>
@@ -8386,7 +8354,7 @@ C: Lambda 함수를 사용하여 CloudFormation 템플릿을 수정하고 스택
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(45)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(45)" style="color: yellow;">문제 45</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(45)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(45)" style="color: yellow;">문제 45</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 45 discussion</h1>
@@ -8565,7 +8533,7 @@ D: StatusCheckFailed_Instance 메트릭에 대한 알람을 생성하고 인스�
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(46)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(46)" style="color: yellow;">문제 46</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(46)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(46)" style="color: yellow;">문제 46</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 46 discussion</h1>
@@ -8767,7 +8735,7 @@ C: CodeBuild를 사용하여 ALB에서 인스턴스를 등록 해제하고 다�
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(47)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(47)" style="color: yellow;">문제 47</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(47)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(47)" style="color: yellow;">문제 47</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 47 discussion</h1>
@@ -8997,7 +8965,7 @@ E: Amazon EventBridge를 사용하여 패치 창을 예약할 수 있지만, Sys
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(48)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(48)" style="color: yellow;">문제 48</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(48)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(48)" style="color: yellow;">문제 48</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 48 discussion</h1>
@@ -9176,7 +9144,7 @@ C: Amazon EventBridge 규칙을 사용하여 CreateManagedAccount 이벤트를 �
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(49)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(49)" style="color: yellow;">문제 49</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(49)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(49)" style="color: yellow;">문제 49</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 49 discussion</h1>
@@ -9366,7 +9334,7 @@ D: 고객 정보와 구매 내역을 Amazon DynamoDB 글로벌 테이블에 저�
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><a href="javascript:void(0);" onclick="openExam(50)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="openExamTopics(50)" style="color: yellow;">문제 50</a> 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(50)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 <a href="javascript:void(0);" onclick="if (typeof openExam === 'function') openExam(50)" style="color: yellow;">문제 50</a> 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 50 discussion</h1>

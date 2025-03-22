@@ -3,6 +3,8 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Crect x='3' y='2' width='18' height='20' rx='3' ry='3' fill='%23FFD700' stroke='black' stroke-width='2'/%3E%3Cpath d='M15 2V8H21' fill='%2300BFFF' stroke='black' stroke-width='2'/%3E%3Cline x1='6' y1='10' x2='18' y2='10' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cline x1='6' y1='14' x2='18' y2='14' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cline x1='6' y1='18' x2='12' y2='18' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cpath d='M7 19L10 22L15 15' stroke='%23ADFF2F' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<script src="exampass.js"></script>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
@@ -56,7 +58,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 질문 25 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(25)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 문제 25 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 25 discussion</h1>
@@ -124,27 +126,42 @@
 <span class="correct-answer">C (OK)</span>
 <br/>
 </span>
-<span class="answer-description"><div class="col-12 pt-2 pb-2">회사는 여러 AWS 계정을 보유하고 있으며, AWS IAM Identity Center(AWS Single Sign-On)를 Microsoft Azure DevOps와 통합하여 사용하고 있습니다. 액세스 제어를 위해 속성 기반 액세스 제어(ABAC)를 활성화하였으며, 속성 매핑으로 department 키를 ${path:enterprise.department}에 매핑하였습니다. 모든 기존 Amazon EC2 인스턴스에는 department 태그가 적용되어 있으며, 이는 회사의 세 부서(d1, d2, d3)를 나타냅니다. DevOps 엔지니어는 각 Azure AD 사용자가 자신의 부서 이름으로 태그된 EC2 인스턴스에만 액세스할 수 있도록 최소한의 관리 작업으로 정책을 작성해야 합니다.<br/>
+<span class="answer-description"><div class="col-12 pt-2 pb-2">회사는 여러 AWS 계정을 보유하고 있으며, AWS IAM Identity Center(AWS Single Sign-On)를 Microsoft Azure DevOps와 통합하여 사용하고 있습니다. 액세스 제어를 위해 속성 기반 액세스 제어(ABAC)를 활성화하였으며, 속성 매핑으로 department 키를 ${path:enterprise.department}에 매핑하였습니다. 모든 기존 Amazon EC2 인스턴스에는 department 태그가 적용되어 있으며, 이는 회사의 세 부서(d1, d2, d3)를 나타냅니다. DevOps 엔지니어는 각 Azure AD 사용자가 자신의 부서 이름으로 태그된 EC2 인스턴스에만 액세스할 수 있도록 최소한의 관리 작업으로 정책을 작성해야 합니다.
 <br/>
-이를 위해 사용자 지정 권한 정책에 다음과 같은 조건 키를 포함해야 합니다:<br/>
 <br/>
-json<br/>
-복사<br/>
-편집<br/>
-"Condition": {<br/>
-    "StringEquals": {<br/>
-        "ec2:ResourceTag/department": "${aws:PrincipalTag/department}"<br/>
-    }<br/>
-}<br/>
-이 조건은 EC2 인스턴스의 department 태그와 사용자의 department 속성이 일치할 때만 액세스를 허용합니다. 이를 통해 각 사용자는 자신의 부서에 해당하는 인스턴스에만 접근할 수 있으며, 관리 작업을 최소화할 수 있습니다.<br/>
+이를 위해 사용자 지정 권한 정책에 다음과 같은 조건 키를 포함해야 합니다:
 <br/>
-다른 옵션들과 비교해보면:<br/>
 <br/>
-A: aws:PrincipalTag/department를 ${aws:PrincipalTag/department}와 비교하는데, 이는 리소스의 태그가 아닌 사용자 속성 간의 비교이므로 적합하지 않습니다.<br/>
+json
 <br/>
-B: aws:RequestTag/department를 ${aws:PrincipalTag/department}와 비교하는데, 이는 리소스 생성 시 태그를 지정하는 데 사용되며, 기존 리소스에 대한 액세스 제어에는 적합하지 않습니다.<br/>
+복사
 <br/>
-D: ec2:ResourceTag/department를 ${aws:PrincipalTag/department}와 비교하지 않고, 모든 사용자가 모든 인스턴스에 접근할 수 있게 되어 보안 요구 사항을 충족하지 못합니다.<br/>
+편집
+<br/>
+"Condition": {
+<br/>
+    "StringEquals": {
+<br/>
+        "ec2:ResourceTag/department": "${aws:PrincipalTag/department}"
+<br/>
+    }
+<br/>
+}
+<br/>
+이 조건은 EC2 인스턴스의 department 태그와 사용자의 department 속성이 일치할 때만 액세스를 허용합니다. 이를 통해 각 사용자는 자신의 부서에 해당하는 인스턴스에만 접근할 수 있으며, 관리 작업을 최소화할 수 있습니다.
+<br/>
+<br/>
+다른 옵션들과 비교해보면:
+<br/>
+<br/>
+A: aws:PrincipalTag/department를 ${aws:PrincipalTag/department}와 비교하는데, 이는 리소스의 태그가 아닌 사용자 속성 간의 비교이므로 적합하지 않습니다.
+<br/>
+<br/>
+B: aws:RequestTag/department를 ${aws:PrincipalTag/department}와 비교하는데, 이는 리소스 생성 시 태그를 지정하는 데 사용되며, 기존 리소스에 대한 액세스 제어에는 적합하지 않습니다.
+<br/>
+<br/>
+D: ec2:ResourceTag/department를 ${aws:PrincipalTag/department}와 비교하지 않고, 모든 사용자가 모든 인스턴스에 접근할 수 있게 되어 보안 요구 사항을 충족하지 못합니다.
+<br/>
 <br/>
 따라서, C가 회사의 요구 사항을 가장 효과적으로 충족합니다.</div></span>
 <div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분포</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="9 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">C (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
@@ -464,31 +481,6 @@ D: ec2:ResourceTag/department를 ${aws:PrincipalTag/department}와 비교하지 
 </div>
 </div>
 <!-- Discussion end -->
-<script type="text/javascript">
-function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype);
-  } else {
-    var evObj = document.createEvent('Events');
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
-	const checkboxes = document.querySelectorAll('.vote-checkboxes input')
-	if(checkboxes.length < 1){
-		const switchToSimpleCommentWrap = document.querySelectorAll('.switch-to-simple-comment-wrap')
-		const votingCommentBrackets = document.querySelectorAll('.voting-comment-brackets')
-		switchToSimpleCommentWrap.forEach((item)=> item.style.display = 'inline-block')
-		votingCommentBrackets.forEach((item)=> item.style.display = 'none')
-	}
-  console.log(etype);
-}
-function doVotingClick() {
-	eventFire(document.getElementById('votinglink'), 'click');
-}
-
-//doVotingClick();
-setTimeout(doVotingClick, 200);
-</script>
 </div>
 </div>
 <div class="comments-wrapper-en" style="display: none;">
@@ -737,31 +729,6 @@ https://docs.aws.amazon.com/singlesignon/latest/userguide/configure-abac.html</d
 </div>
 </div>
 <!-- Discussion end -->
-<script type="text/javascript">
-function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype);
-  } else {
-    var evObj = document.createEvent('Events');
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
-	const checkboxes = document.querySelectorAll('.vote-checkboxes input')
-	if(checkboxes.length < 1){
-		const switchToSimpleCommentWrap = document.querySelectorAll('.switch-to-simple-comment-wrap')
-		const votingCommentBrackets = document.querySelectorAll('.voting-comment-brackets')
-		switchToSimpleCommentWrap.forEach((item)=> item.style.display = 'inline-block')
-		votingCommentBrackets.forEach((item)=> item.style.display = 'none')
-	}
-  console.log(etype);
-}
-function doVotingClick() {
-	eventFire(document.getElementById('votinglink'), 'click');
-}
-
-//doVotingClick();
-setTimeout(doVotingClick, 200);
-</script>
 </div>
 </div>
 </div>

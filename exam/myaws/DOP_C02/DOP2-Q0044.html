@@ -3,6 +3,8 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Crect x='3' y='2' width='18' height='20' rx='3' ry='3' fill='%23FFD700' stroke='black' stroke-width='2'/%3E%3Cpath d='M15 2V8H21' fill='%2300BFFF' stroke='black' stroke-width='2'/%3E%3Cline x1='6' y1='10' x2='18' y2='10' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cline x1='6' y1='14' x2='18' y2='14' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cline x1='6' y1='18' x2='12' y2='18' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cpath d='M7 19L10 22L15 15' stroke='%23ADFF2F' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<script src="exampass.js"></script>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
@@ -56,7 +58,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 질문 44 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(44)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 문제 44 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 44 discussion</h1>
@@ -128,33 +130,50 @@
 <span class="correct-answer">D (OK)</span>
 <br/>
 </span>
-<span class="answer-description"><div class="col-12 pt-2 pb-2">회사는 MySQL 호환 Amazon Aurora Multi-AZ DB 클러스터를 사용하고 있으며, 재해 복구를 위해 교차 리전 읽기 복제본을 생성했습니다. DevOps 엔지니어는 장애 발생 시 이 복제본을 자동으로 프로모션하여 기본 데이터베이스 인스턴스로 전환하고자 합니다.<br/>
+<span class="answer-description"><div class="col-12 pt-2 pb-2">회사는 MySQL 호환 Amazon Aurora Multi-AZ DB 클러스터를 사용하고 있으며, 재해 복구를 위해 교차 리전 읽기 복제본을 생성했습니다. DevOps 엔지니어는 장애 발생 시 이 복제본을 자동으로 프로모션하여 기본 데이터베이스 인스턴스로 전환하고자 합니다.
 <br/>
-D는 다음과 같은 단계를 통해 이러한 요구 사항을 충족합니다:<br/>
 <br/>
-AWS Systems Manager Parameter Store에 Aurora 엔드포인트 저장:<br/>
+D는 다음과 같은 단계를 통해 이러한 요구 사항을 충족합니다:
 <br/>
-애플리케이션이 데이터베이스에 연결할 때 사용할 엔드포인트를 Parameter Store에 저장합니다.<br/>
-Amazon EventBridge 이벤트 생성:<br/>
 <br/>
-데이터베이스 장애를 감지하는 이벤트를 설정합니다.<br/>
-AWS Lambda 함수 실행:<br/>
+AWS Systems Manager Parameter Store에 Aurora 엔드포인트 저장:
 <br/>
-EventBridge 이벤트에 의해 트리거되는 Lambda 함수를 생성하여 다음 작업을 수행합니다:<br/>
-읽기 복제본을 기본 인스턴스로 프로모션합니다.<br/>
-Parameter Store에 저장된 엔드포인트 URL을 새로 프로모션된 인스턴스의 엔드포인트로 업데이트합니다.<br/>
-애플리케이션 코드 수정:<br/>
 <br/>
-데이터베이스 연결이 실패할 경우 Parameter Store에서 최신 엔드포인트를 다시 로드하도록 애플리케이션을 코딩합니다.<br/>
-이 접근 방식은 장애 발생 시 자동으로 읽기 복제본을 프로모션하고, 애플리케이션이 새로운 기본 데이터베이스 인스턴스에 연결할 수 있도록 엔드포인트 정보를 동적으로 업데이트합니다.<br/>
+애플리케이션이 데이터베이스에 연결할 때 사용할 엔드포인트를 Parameter Store에 저장합니다.
 <br/>
-다른 옵션들과 비교해보면:<br/>
+Amazon EventBridge 이벤트 생성:
 <br/>
-A: Route 53의 상태 확인과 CNAME을 사용하여 기본 및 복제본 엔드포인트를 모두 가리키도록 설정하는 것은 읽기 복제본을 자동으로 프로모션하는 기능을 제공하지 않습니다. 또한, AWS CloudTrail의 RDS 실패 알림을 SNS를 통해 Lambda 함수로 연결하는 것은 지연이 발생할 수 있으며, 복제본 프로모션을 자동화하는 데 적합하지 않을 수 있습니다.<br/>
 <br/>
-B: Aurora 사용자 지정 엔드포인트를 생성하여 기본 인스턴스를 가리키도록 하고, CloudTrail을 통해 Lambda 함수를 실행하여 복제본을 프로모션하는 방법은 CloudTrail 이벤트의 지연으로 인해 실시간 프로모션에 부적합할 수 있습니다. 또한, 사용자 지정 엔드포인트를 수동으로 업데이트해야 하는 추가 작업이 필요합니다.<br/>
+데이터베이스 장애를 감지하는 이벤트를 설정합니다.
 <br/>
-C: Lambda 함수를 사용하여 CloudFormation 템플릿을 수정하고 스택을 업데이트하여 복제본을 프로모션하는 방법은 복잡성이 높으며, 스택 업데이트로 인한 추가적인 지연이 발생할 수 있습니다.<br/>
+AWS Lambda 함수 실행:
+<br/>
+<br/>
+EventBridge 이벤트에 의해 트리거되는 Lambda 함수를 생성하여 다음 작업을 수행합니다:
+<br/>
+읽기 복제본을 기본 인스턴스로 프로모션합니다.
+<br/>
+Parameter Store에 저장된 엔드포인트 URL을 새로 프로모션된 인스턴스의 엔드포인트로 업데이트합니다.
+<br/>
+애플리케이션 코드 수정:
+<br/>
+<br/>
+데이터베이스 연결이 실패할 경우 Parameter Store에서 최신 엔드포인트를 다시 로드하도록 애플리케이션을 코딩합니다.
+<br/>
+이 접근 방식은 장애 발생 시 자동으로 읽기 복제본을 프로모션하고, 애플리케이션이 새로운 기본 데이터베이스 인스턴스에 연결할 수 있도록 엔드포인트 정보를 동적으로 업데이트합니다.
+<br/>
+<br/>
+다른 옵션들과 비교해보면:
+<br/>
+<br/>
+A: Route 53의 상태 확인과 CNAME을 사용하여 기본 및 복제본 엔드포인트를 모두 가리키도록 설정하는 것은 읽기 복제본을 자동으로 프로모션하는 기능을 제공하지 않습니다. 또한, AWS CloudTrail의 RDS 실패 알림을 SNS를 통해 Lambda 함수로 연결하는 것은 지연이 발생할 수 있으며, 복제본 프로모션을 자동화하는 데 적합하지 않을 수 있습니다.
+<br/>
+<br/>
+B: Aurora 사용자 지정 엔드포인트를 생성하여 기본 인스턴스를 가리키도록 하고, CloudTrail을 통해 Lambda 함수를 실행하여 복제본을 프로모션하는 방법은 CloudTrail 이벤트의 지연으로 인해 실시간 프로모션에 부적합할 수 있습니다. 또한, 사용자 지정 엔드포인트를 수동으로 업데이트해야 하는 추가 작업이 필요합니다.
+<br/>
+<br/>
+C: Lambda 함수를 사용하여 CloudFormation 템플릿을 수정하고 스택을 업데이트하여 복제본을 프로모션하는 방법은 복잡성이 높으며, 스택 업데이트로 인한 추가적인 지연이 발생할 수 있습니다.
+<br/>
 <br/>
 따라서, D가 가장 효과적이고 자동화된 솔루션을 제공합니다.</div></span>
 <div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분포</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="18 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">D (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
@@ -828,31 +847,6 @@ C: Lambda 함수를 사용하여 CloudFormation 템플릿을 수정하고 스택
 </div>
 </div>
 <!-- Discussion end -->
-<script type="text/javascript">
-function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype);
-  } else {
-    var evObj = document.createEvent('Events');
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
-	const checkboxes = document.querySelectorAll('.vote-checkboxes input')
-	if(checkboxes.length < 1){
-		const switchToSimpleCommentWrap = document.querySelectorAll('.switch-to-simple-comment-wrap')
-		const votingCommentBrackets = document.querySelectorAll('.voting-comment-brackets')
-		switchToSimpleCommentWrap.forEach((item)=> item.style.display = 'inline-block')
-		votingCommentBrackets.forEach((item)=> item.style.display = 'none')
-	}
-  console.log(etype);
-}
-function doVotingClick() {
-	eventFire(document.getElementById('votinglink'), 'click');
-}
-
-//doVotingClick();
-setTimeout(doVotingClick, 200);
-</script>
 </div>
 </div>
 <div class="comments-wrapper-en" style="display: none;">
@@ -1470,31 +1464,6 @@ Therefore, Option D is the correct solution.</div>
 </div>
 </div>
 <!-- Discussion end -->
-<script type="text/javascript">
-function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype);
-  } else {
-    var evObj = document.createEvent('Events');
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
-	const checkboxes = document.querySelectorAll('.vote-checkboxes input')
-	if(checkboxes.length < 1){
-		const switchToSimpleCommentWrap = document.querySelectorAll('.switch-to-simple-comment-wrap')
-		const votingCommentBrackets = document.querySelectorAll('.voting-comment-brackets')
-		switchToSimpleCommentWrap.forEach((item)=> item.style.display = 'inline-block')
-		votingCommentBrackets.forEach((item)=> item.style.display = 'none')
-	}
-  console.log(etype);
-}
-function doVotingClick() {
-	eventFire(document.getElementById('votinglink'), 'click');
-}
-
-//doVotingClick();
-setTimeout(doVotingClick, 200);
-</script>
 </div>
 </div>
 </div>

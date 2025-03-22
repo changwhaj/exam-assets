@@ -3,6 +3,8 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Crect x='3' y='2' width='18' height='20' rx='3' ry='3' fill='%23FFD700' stroke='black' stroke-width='2'/%3E%3Cpath d='M15 2V8H21' fill='%2300BFFF' stroke='black' stroke-width='2'/%3E%3Cline x1='6' y1='10' x2='18' y2='10' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cline x1='6' y1='14' x2='18' y2='14' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cline x1='6' y1='18' x2='12' y2='18' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cpath d='M7 19L10 22L15 15' stroke='%23ADFF2F' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<script src="exampass.js"></script>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
@@ -56,7 +58,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 질문 194 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(194)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 문제 194 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 194 discussion</h1>
@@ -142,11 +144,14 @@
 <span class="correct-answer">B ==&gt; BDE</span>
 <br/>
 </span>
-<span class="answer-description"><div class="col-12 pt-2 pb-2">B: "Resource": "*"를 "Resource": "arn:aws:ec2:*:*:instance/*"로 변경하여 리소스를 EC2 인스턴스로 제한합니다. 이는 최소 권한 원칙을 준수하며, 불필요한 리소스 접근을 제한합니다.<br/>
+<span class="answer-description"><div class="col-12 pt-2 pb-2">B: "Resource": "*"를 "Resource": "arn:aws:ec2:*:*:instance/*"로 변경하여 리소스를 EC2 인스턴스로 제한합니다. 이는 최소 권한 원칙을 준수하며, 불필요한 리소스 접근을 제한합니다.
 <br/>
-D: "Environment: NonProduction" 태그를 기준으로 EC2 인스턴스에만 권한을 부여하는 조건을 추가하여, 비생산 환경에만 권한을 적용하도록 합니다.<br/>
 <br/>
-E: "Action": "ec2:*"를 "Action": "ec2:StopInstances"로 변경하여 인스턴스를 중지하는 작업만 허용하도록 제한합니다. 이를 통해 중지 작업만 수행하도록 제한하여 최소 권한을 구현합니다.<br/>
+D: "Environment: NonProduction" 태그를 기준으로 EC2 인스턴스에만 권한을 부여하는 조건을 추가하여, 비생산 환경에만 권한을 적용하도록 합니다.
+<br/>
+<br/>
+E: "Action": "ec2:*"를 "Action": "ec2:StopInstances"로 변경하여 인스턴스를 중지하는 작업만 허용하도록 제한합니다. 이를 통해 중지 작업만 수행하도록 제한하여 최소 권한을 구현합니다.
+<br/>
 <br/>
 이 세 가지 변경은 IAM 정책을 최소 권한 원칙에 맞게 구성하고, 정확한 리소스와 액션만 허용하여 보안을 강화합니다.</div></span>
 <div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분포</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="23 votes." data-toggle="tooltip" role="progressbar" style="width: 59%; display: flex;" title="">B (59%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="8 votes." data-toggle="tooltip" role="progressbar" style="width: 21%; display: flex;" title="">A (21%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="8 votes." data-toggle="tooltip" role="progressbar" style="width: 21%; display: flex;" title="">D (21%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
@@ -1267,31 +1272,6 @@ E: "Action": "ec2:*"를 "Action": "ec2:StopInstances"로 변경하여 인스턴�
 </div>
 </div>
 <!-- Discussion end -->
-<script type="text/javascript">
-function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype);
-  } else {
-    var evObj = document.createEvent('Events');
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
-	const checkboxes = document.querySelectorAll('.vote-checkboxes input')
-	if(checkboxes.length < 1){
-		const switchToSimpleCommentWrap = document.querySelectorAll('.switch-to-simple-comment-wrap')
-		const votingCommentBrackets = document.querySelectorAll('.voting-comment-brackets')
-		switchToSimpleCommentWrap.forEach((item)=> item.style.display = 'inline-block')
-		votingCommentBrackets.forEach((item)=> item.style.display = 'none')
-	}
-  console.log(etype);
-}
-function doVotingClick() {
-	eventFire(document.getElementById('votinglink'), 'click');
-}
-
-//doVotingClick();
-setTimeout(doVotingClick, 200);
-</script>
 </div>
 </div>
 <div class="comments-wrapper-en" style="display: none;">
@@ -2360,31 +2340,6 @@ Principal condition is usually for resource policies.</div>
 </div>
 </div>
 <!-- Discussion end -->
-<script type="text/javascript">
-function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype);
-  } else {
-    var evObj = document.createEvent('Events');
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
-	const checkboxes = document.querySelectorAll('.vote-checkboxes input')
-	if(checkboxes.length < 1){
-		const switchToSimpleCommentWrap = document.querySelectorAll('.switch-to-simple-comment-wrap')
-		const votingCommentBrackets = document.querySelectorAll('.voting-comment-brackets')
-		switchToSimpleCommentWrap.forEach((item)=> item.style.display = 'inline-block')
-		votingCommentBrackets.forEach((item)=> item.style.display = 'none')
-	}
-  console.log(etype);
-}
-function doVotingClick() {
-	eventFire(document.getElementById('votinglink'), 'click');
-}
-
-//doVotingClick();
-setTimeout(doVotingClick, 200);
-</script>
 </div>
 </div>
 </div>

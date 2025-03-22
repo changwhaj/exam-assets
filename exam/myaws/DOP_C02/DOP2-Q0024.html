@@ -3,6 +3,8 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Crect x='3' y='2' width='18' height='20' rx='3' ry='3' fill='%23FFD700' stroke='black' stroke-width='2'/%3E%3Cpath d='M15 2V8H21' fill='%2300BFFF' stroke='black' stroke-width='2'/%3E%3Cline x1='6' y1='10' x2='18' y2='10' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cline x1='6' y1='14' x2='18' y2='14' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cline x1='6' y1='18' x2='12' y2='18' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cpath d='M7 19L10 22L15 15' stroke='%23ADFF2F' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<script src="exampass.js"></script>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
@@ -56,7 +58,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 질문 24 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(24)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 문제 24 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 24 discussion</h1>
@@ -128,19 +130,29 @@
 <span class="correct-answer">B (OK)</span>
 <br/>
 </span>
-<span class="answer-description"><div class="col-12 pt-2 pb-2">B는 AWS OpsWorks를 사용하여 자동 복구 기능을 활성화하고, OpsWorks의 라이프사이클 이벤트를 사용하여 S3에서 메타데이터를 가져와 인스턴스에 업데이트하는 방법입니다. OpsWorks는 EC2 인스턴스의 상태를 모니터링하고, 장애가 발생하면 인스턴스를 자동으로 재시작할 수 있는 기능을 제공합니다. 이 방법은 인스턴스가 응답하지 않는 경우 자동으로 재시작을 수행하며, 메타데이터를 S3에서 가져와 인스턴스에 적용할 수 있어 요구 사항을 충족합니다.<br/>
+<span class="answer-description"><div class="col-12 pt-2 pb-2">B는 AWS OpsWorks를 사용하여 자동 복구 기능을 활성화하고, OpsWorks의 라이프사이클 이벤트를 사용하여 S3에서 메타데이터를 가져와 인스턴스에 업데이트하는 방법입니다. OpsWorks는 EC2 인스턴스의 상태를 모니터링하고, 장애가 발생하면 인스턴스를 자동으로 재시작할 수 있는 기능을 제공합니다. 이 방법은 인스턴스가 응답하지 않는 경우 자동으로 재시작을 수행하며, 메타데이터를 S3에서 가져와 인스턴스에 적용할 수 있어 요구 사항을 충족합니다.
 <br/>
-A: CloudWatch 알람과 S3 이벤트 알림을 사용하여 메타데이터를 처리하는 방법이지만, OpsWorks보다 자동 복구에 대한 관리가 복잡합니다.<br/>
-C: EC2 자동 복구를 사용하지만, S3 이벤트 알림을 통해 메타데이터를 푸시하는 방식은 OpsWorks보다 더 복잡할 수 있습니다.<br/>
-D: CloudFormation을 사용한 배포 방법으로, S3에서 메타데이터를 검색하는 작업과 관련된 자동화가 부족합니다.<br/>
 <br/>
-회사는 Amazon EC2 인스턴스에서 애플리케이션을 실행하며, 애플리케이션 메타데이터는 Amazon S3에 저장되어 있습니다. 인스턴스가 재시작되거나 응답하지 않을 경우 자동으로 복구되어야 하며, 재시작 시 S3에서 메타데이터를 가져와야 합니다.<br/>
-C는 EC2 자동 복구 기능을 사용하여 인스턴스에 장애가 발생하면 자동으로 중지하고 다시 시작합니다. 또한, S3 이벤트 알림을 설정하여 인스턴스가 다시 실행 상태로 돌아오면 메타데이터를 인스턴스에 푸시합니다. 이 접근 방식은 인스턴스의 가용성을 유지하고, 재시작 시 필요한 메타데이터를 자동으로 로드할 수 있도록 합니다.<br/>
+A: CloudWatch 알람과 S3 이벤트 알림을 사용하여 메타데이터를 처리하는 방법이지만, OpsWorks보다 자동 복구에 대한 관리가 복잡합니다.
 <br/>
-다른 옵션들과 비교해보면:<br/>
-A: CloudWatch 알람을 사용하여 인스턴스를 복구하고, S3 이벤트 알림을 통해 메타데이터를 푸시하는 방법입니다. 그러나 S3 이벤트 알림은 객체 생성 또는 삭제 시에만 트리거되므로, 인스턴스 재시작 시 메타데이터를 푸시하는 데 적합하지 않을 수 있습니다.<br/>
-B: AWS OpsWorks의 자동 복구 기능과 라이프사이클 이벤트를 사용하는 방법입니다. 그러나 OpsWorks는 현재 더 이상 사용되지 않는 서비스로, 새로운 애플리케이션에 적용하기에는 적합하지 않을 수 있습니다.<br/>
-D: AWS CloudFormation의 UserData 속성을 사용하여 인스턴스 시작 시 S3에서 메타데이터를 가져오는 방법입니다. 그러나 이 방법은 인스턴스가 비정상적으로 종료되었을 때 자동으로 복구하는 기능을 제공하지 않습니다.<br/>
+C: EC2 자동 복구를 사용하지만, S3 이벤트 알림을 통해 메타데이터를 푸시하는 방식은 OpsWorks보다 더 복잡할 수 있습니다.
+<br/>
+D: CloudFormation을 사용한 배포 방법으로, S3에서 메타데이터를 검색하는 작업과 관련된 자동화가 부족합니다.
+<br/>
+<br/>
+회사는 Amazon EC2 인스턴스에서 애플리케이션을 실행하며, 애플리케이션 메타데이터는 Amazon S3에 저장되어 있습니다. 인스턴스가 재시작되거나 응답하지 않을 경우 자동으로 복구되어야 하며, 재시작 시 S3에서 메타데이터를 가져와야 합니다.
+<br/>
+C는 EC2 자동 복구 기능을 사용하여 인스턴스에 장애가 발생하면 자동으로 중지하고 다시 시작합니다. 또한, S3 이벤트 알림을 설정하여 인스턴스가 다시 실행 상태로 돌아오면 메타데이터를 인스턴스에 푸시합니다. 이 접근 방식은 인스턴스의 가용성을 유지하고, 재시작 시 필요한 메타데이터를 자동으로 로드할 수 있도록 합니다.
+<br/>
+<br/>
+다른 옵션들과 비교해보면:
+<br/>
+A: CloudWatch 알람을 사용하여 인스턴스를 복구하고, S3 이벤트 알림을 통해 메타데이터를 푸시하는 방법입니다. 그러나 S3 이벤트 알림은 객체 생성 또는 삭제 시에만 트리거되므로, 인스턴스 재시작 시 메타데이터를 푸시하는 데 적합하지 않을 수 있습니다.
+<br/>
+B: AWS OpsWorks의 자동 복구 기능과 라이프사이클 이벤트를 사용하는 방법입니다. 그러나 OpsWorks는 현재 더 이상 사용되지 않는 서비스로, 새로운 애플리케이션에 적용하기에는 적합하지 않을 수 있습니다.
+<br/>
+D: AWS CloudFormation의 UserData 속성을 사용하여 인스턴스 시작 시 S3에서 메타데이터를 가져오는 방법입니다. 그러나 이 방법은 인스턴스가 비정상적으로 종료되었을 때 자동으로 복구하는 기능을 제공하지 않습니다.
+<br/>
 따라서, C가 회사의 요구 사항을 가장 효과적으로 충족합니다.</div></span>
 <div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분포</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="30 votes." data-toggle="tooltip" role="progressbar" style="width: 97%; display: flex;" title="">B (97%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="1 votes." data-toggle="tooltip" role="progressbar" style="width: 3%; display: flex;" title="">3%</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
@@ -1201,31 +1213,6 @@ D: AWS CloudFormation의 UserData 속성을 사용하여 인스턴스 시작 시
 </div>
 </div>
 <!-- Discussion end -->
-<script type="text/javascript">
-function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype);
-  } else {
-    var evObj = document.createEvent('Events');
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
-	const checkboxes = document.querySelectorAll('.vote-checkboxes input')
-	if(checkboxes.length < 1){
-		const switchToSimpleCommentWrap = document.querySelectorAll('.switch-to-simple-comment-wrap')
-		const votingCommentBrackets = document.querySelectorAll('.voting-comment-brackets')
-		switchToSimpleCommentWrap.forEach((item)=> item.style.display = 'inline-block')
-		votingCommentBrackets.forEach((item)=> item.style.display = 'none')
-	}
-  console.log(etype);
-}
-function doVotingClick() {
-	eventFire(document.getElementById('votinglink'), 'click');
-}
-
-//doVotingClick();
-setTimeout(doVotingClick, 200);
-</script>
 </div>
 </div>
 <div class="comments-wrapper-en" style="display: none;">
@@ -2231,31 +2218,6 @@ Additionally, an S3 event notification can be set up to push the metadata to the
 </div>
 </div>
 <!-- Discussion end -->
-<script type="text/javascript">
-function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype);
-  } else {
-    var evObj = document.createEvent('Events');
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
-	const checkboxes = document.querySelectorAll('.vote-checkboxes input')
-	if(checkboxes.length < 1){
-		const switchToSimpleCommentWrap = document.querySelectorAll('.switch-to-simple-comment-wrap')
-		const votingCommentBrackets = document.querySelectorAll('.voting-comment-brackets')
-		switchToSimpleCommentWrap.forEach((item)=> item.style.display = 'inline-block')
-		votingCommentBrackets.forEach((item)=> item.style.display = 'none')
-	}
-  console.log(etype);
-}
-function doVotingClick() {
-	eventFire(document.getElementById('votinglink'), 'click');
-}
-
-//doVotingClick();
-setTimeout(doVotingClick, 200);
-</script>
 </div>
 </div>
 </div>

@@ -3,6 +3,8 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Crect x='3' y='2' width='18' height='20' rx='3' ry='3' fill='%23FFD700' stroke='black' stroke-width='2'/%3E%3Cpath d='M15 2V8H21' fill='%2300BFFF' stroke='black' stroke-width='2'/%3E%3Cline x1='6' y1='10' x2='18' y2='10' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cline x1='6' y1='14' x2='18' y2='14' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cline x1='6' y1='18' x2='12' y2='18' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cpath d='M7 19L10 22L15 15' stroke='%23ADFF2F' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<script src="exampass.js"></script>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
@@ -56,7 +58,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 질문 45 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(45)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 문제 45 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 45 discussion</h1>
@@ -128,17 +130,23 @@
 <span class="correct-answer">C (OK)</span>
 <br/>
 </span>
-<span class="answer-description"><div class="col-12 pt-2 pb-2">회사는 Amazon EBS 스토리지를 사용하는 Amazon EC2 인스턴스에서 스테이징 웹사이트를 호스팅하고 있으며, 네트워크 연결 문제나 정전 시 최소한의 데이터 손실로 빠르게 복구하기를 원합니다. 이를 위해 Amazon CloudWatch에서 StatusCheckFailed_System 메트릭에 대한 알람을 생성하고, 해당 알람이 트리거될 때 EC2 인스턴스 복구 작업을 수행하도록 설정하는 것이 가장 적합합니다.<br/>
+<span class="answer-description"><div class="col-12 pt-2 pb-2">회사는 Amazon EBS 스토리지를 사용하는 Amazon EC2 인스턴스에서 스테이징 웹사이트를 호스팅하고 있으며, 네트워크 연결 문제나 정전 시 최소한의 데이터 손실로 빠르게 복구하기를 원합니다. 이를 위해 Amazon CloudWatch에서 StatusCheckFailed_System 메트릭에 대한 알람을 생성하고, 해당 알람이 트리거될 때 EC2 인스턴스 복구 작업을 수행하도록 설정하는 것이 가장 적합합니다.
 <br/>
-StatusCheckFailed_System 메트릭은 인스턴스의 기본 호스트 시스템에서 발생하는 네트워크 연결 문제나 전원 장애와 같은 이슈를 모니터링합니다. 이러한 시스템 수준의 문제가 감지되면, CloudWatch 알람을 통해 자동으로 인스턴스를 복구하도록 설정할 수 있습니다. 복구 작업은 인스턴스를 동일한 인스턴스 ID로 새로운 호스트로 이동시키며, 이 과정에서 인스턴스 스토어 데이터는 손실될 수 있지만, Amazon EBS에 저장된 데이터는 유지됩니다.<br/>
 <br/>
-다른 옵션들과 비교해보면:<br/>
+StatusCheckFailed_System 메트릭은 인스턴스의 기본 호스트 시스템에서 발생하는 네트워크 연결 문제나 전원 장애와 같은 이슈를 모니터링합니다. 이러한 시스템 수준의 문제가 감지되면, CloudWatch 알람을 통해 자동으로 인스턴스를 복구하도록 설정할 수 있습니다. 복구 작업은 인스턴스를 동일한 인스턴스 ID로 새로운 호스트로 이동시키며, 이 과정에서 인스턴스 스토어 데이터는 손실될 수 있지만, Amazon EBS에 저장된 데이터는 유지됩니다.
 <br/>
-A: EC2 인스턴스를 최소, 최대, 원하는 용량을 1로 설정한 Auto Scaling 그룹에 추가하는 것은 인스턴스 장애 시 새로운 인스턴스를 시작할 수 있지만, 기존 인스턴스의 EBS 볼륨을 자동으로 연결하지 않으므로 데이터 손실이 발생할 수 있습니다.<br/>
 <br/>
-B: 라이프사이클 후크를 사용하여 인스턴스 종료 시 EBS 볼륨을 분리하는 것은 데이터 보존에 도움이 될 수 있지만, 네트워크 문제나 전원 장애와 같은 예기치 않은 장애 상황에서는 적용되지 않을 수 있습니다.<br/>
+다른 옵션들과 비교해보면:
 <br/>
-D: StatusCheckFailed_Instance 메트릭에 대한 알람을 생성하고 인스턴스를 재부팅하는 것은 인스턴스 수준의 문제를 해결하는 데 도움이 되지만, 시스템 수준의 문제(예: 호스트의 전원 장애)에는 효과적이지 않을 수 있습니다.<br/>
+<br/>
+A: EC2 인스턴스를 최소, 최대, 원하는 용량을 1로 설정한 Auto Scaling 그룹에 추가하는 것은 인스턴스 장애 시 새로운 인스턴스를 시작할 수 있지만, 기존 인스턴스의 EBS 볼륨을 자동으로 연결하지 않으므로 데이터 손실이 발생할 수 있습니다.
+<br/>
+<br/>
+B: 라이프사이클 후크를 사용하여 인스턴스 종료 시 EBS 볼륨을 분리하는 것은 데이터 보존에 도움이 될 수 있지만, 네트워크 문제나 전원 장애와 같은 예기치 않은 장애 상황에서는 적용되지 않을 수 있습니다.
+<br/>
+<br/>
+D: StatusCheckFailed_Instance 메트릭에 대한 알람을 생성하고 인스턴스를 재부팅하는 것은 인스턴스 수준의 문제를 해결하는 데 도움이 되지만, 시스템 수준의 문제(예: 호스트의 전원 장애)에는 효과적이지 않을 수 있습니다.
+<br/>
 <br/>
 따라서, C를 선택하는 것이 회사의 요구 사항을 가장 효과적으로 충족합니다.</div></span>
 <div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분포</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="36 votes." data-toggle="tooltip" role="progressbar" style="width: 95%; display: flex;" title="">C (95%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="3%" data-toggle="tooltip" role="progressbar" style="width: 5%; display: flex;" title="">3%</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
@@ -1031,31 +1039,6 @@ D: StatusCheckFailed_Instance 메트릭에 대한 알람을 생성하고 인스�
 </div>
 </div>
 <!-- Discussion end -->
-<script type="text/javascript">
-function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype);
-  } else {
-    var evObj = document.createEvent('Events');
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
-	const checkboxes = document.querySelectorAll('.vote-checkboxes input')
-	if(checkboxes.length < 1){
-		const switchToSimpleCommentWrap = document.querySelectorAll('.switch-to-simple-comment-wrap')
-		const votingCommentBrackets = document.querySelectorAll('.voting-comment-brackets')
-		switchToSimpleCommentWrap.forEach((item)=> item.style.display = 'inline-block')
-		votingCommentBrackets.forEach((item)=> item.style.display = 'none')
-	}
-  console.log(etype);
-}
-function doVotingClick() {
-	eventFire(document.getElementById('votinglink'), 'click');
-}
-
-//doVotingClick();
-setTimeout(doVotingClick, 200);
-</script>
 </div>
 </div>
 <div class="comments-wrapper-en" style="display: none;">
@@ -1900,31 +1883,6 @@ I believe option A is quickest recovery, and if Data needed to be backup then op
 </div>
 </div>
 <!-- Discussion end -->
-<script type="text/javascript">
-function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype);
-  } else {
-    var evObj = document.createEvent('Events');
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
-	const checkboxes = document.querySelectorAll('.vote-checkboxes input')
-	if(checkboxes.length < 1){
-		const switchToSimpleCommentWrap = document.querySelectorAll('.switch-to-simple-comment-wrap')
-		const votingCommentBrackets = document.querySelectorAll('.voting-comment-brackets')
-		switchToSimpleCommentWrap.forEach((item)=> item.style.display = 'inline-block')
-		votingCommentBrackets.forEach((item)=> item.style.display = 'none')
-	}
-  console.log(etype);
-}
-function doVotingClick() {
-	eventFire(document.getElementById('votinglink'), 'click');
-}
-
-//doVotingClick();
-setTimeout(doVotingClick, 200);
-</script>
 </div>
 </div>
 </div>

@@ -3,6 +3,8 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Crect x='3' y='2' width='18' height='20' rx='3' ry='3' fill='%23FFD700' stroke='black' stroke-width='2'/%3E%3Cpath d='M15 2V8H21' fill='%2300BFFF' stroke='black' stroke-width='2'/%3E%3Cline x1='6' y1='10' x2='18' y2='10' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cline x1='6' y1='14' x2='18' y2='14' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cline x1='6' y1='18' x2='12' y2='18' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cpath d='M7 19L10 22L15 15' stroke='%23ADFF2F' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<script src="exampass.js"></script>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
@@ -56,7 +58,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS Certified DevOps Engineer - Professional DOP-C02 주제 1 질문 11 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(11)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 문제 11 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 11 discussion</h1>
@@ -146,17 +148,24 @@
 <span class="correct-answer">BCF (OK)</span>
 <br/>
 </span>
-<span class="answer-description"><div class="col-12 pt-2 pb-2">회사의 DevOps 팀은 AWS IAM Identity Center(AWS Single Sign-On)를 외부 ID 공급자(IdP)와 통합하여 SAML 2.0을 구성하였습니다. 팀은 최소 권한 원칙을 적용하여 각 팀이 자신의 리소스만 빌드하고 관리할 수 있도록 하는 강력한 권한 모델을 원합니다. 이를 위해 다음 단계를 수행할 수 있습니다:<br/>
+<span class="answer-description"><div class="col-12 pt-2 pb-2">회사의 DevOps 팀은 AWS IAM Identity Center(AWS Single Sign-On)를 외부 ID 공급자(IdP)와 통합하여 SAML 2.0을 구성하였습니다. 팀은 최소 권한 원칙을 적용하여 각 팀이 자신의 리소스만 빌드하고 관리할 수 있도록 하는 강력한 권한 모델을 원합니다. 이를 위해 다음 단계를 수행할 수 있습니다:
 <br/>
-IdP에서 그룹 생성 및 사용자 할당 (C):<br/>
 <br/>
-외부 IdP에서 그룹을 생성하고, 해당 그룹에 사용자를 배치합니다. 이 그룹은 특정 팀을 나타내며, 팀 구성원들을 포함합니다.<br/>
-IAM Identity Center에서 속성 기반 액세스 제어 활성화 및 IdP 속성 매핑 (F):<br/>
+IdP에서 그룹 생성 및 사용자 할당 (C):
 <br/>
-IAM Identity Center에서 속성 기반 액세스 제어(ABAC)를 활성화합니다. 이를 통해 IdP에서 전달된 사용자 속성을 기반으로 AWS에서 액세스 권한을 제어할 수 있습니다. IdP에서 사용자 속성을 키-값 쌍으로 매핑하여, AWS에서 해당 속성을 인식하고 활용할 수 있도록 설정합니다.<br/>
-권한 집합 생성 및 정책 첨부 (B):<br/>
 <br/>
-IAM Identity Center에서 권한 집합을 생성하고, 필요한 권한을 포함하는 인라인 정책을 첨부합니다. 이 정책에서는 aws:PrincipalTag 조건 키를 사용하여 권한 범위를 지정합니다. 예를 들어, 팀의 리소스에 특정 태그(예: Team=Alpha)를 적용하고, 정책에서 해당 태그를 가진 리소스에만 액세스할 수 있도록 제한합니다.<br/>
+외부 IdP에서 그룹을 생성하고, 해당 그룹에 사용자를 배치합니다. 이 그룹은 특정 팀을 나타내며, 팀 구성원들을 포함합니다.
+<br/>
+IAM Identity Center에서 속성 기반 액세스 제어 활성화 및 IdP 속성 매핑 (F):
+<br/>
+<br/>
+IAM Identity Center에서 속성 기반 액세스 제어(ABAC)를 활성화합니다. 이를 통해 IdP에서 전달된 사용자 속성을 기반으로 AWS에서 액세스 권한을 제어할 수 있습니다. IdP에서 사용자 속성을 키-값 쌍으로 매핑하여, AWS에서 해당 속성을 인식하고 활용할 수 있도록 설정합니다.
+<br/>
+권한 집합 생성 및 정책 첨부 (B):
+<br/>
+<br/>
+IAM Identity Center에서 권한 집합을 생성하고, 필요한 권한을 포함하는 인라인 정책을 첨부합니다. 이 정책에서는 aws:PrincipalTag 조건 키를 사용하여 권한 범위를 지정합니다. 예를 들어, 팀의 리소스에 특정 태그(예: Team=Alpha)를 적용하고, 정책에서 해당 태그를 가진 리소스에만 액세스할 수 있도록 제한합니다.
+<br/>
 이러한 단계를 통해 각 팀은 자신의 리소스에만 액세스할 수 있으며, 최소 권한 원칙을 효과적으로 적용할 수 있습니다. 속성 기반 액세스 제어를 활용하여 관리 효율성을 높이고, 권한 관리를 단순화할 수 있습니다.</div></span>
 <div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분포</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="34 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">BCF (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
@@ -1151,31 +1160,6 @@ IAM Identity Center에서 권한 집합을 생성하고, 필요한 권한을 포
 </div>
 </div>
 <!-- Discussion end -->
-<script type="text/javascript">
-function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype);
-  } else {
-    var evObj = document.createEvent('Events');
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
-	const checkboxes = document.querySelectorAll('.vote-checkboxes input')
-	if(checkboxes.length < 1){
-		const switchToSimpleCommentWrap = document.querySelectorAll('.switch-to-simple-comment-wrap')
-		const votingCommentBrackets = document.querySelectorAll('.voting-comment-brackets')
-		switchToSimpleCommentWrap.forEach((item)=> item.style.display = 'inline-block')
-		votingCommentBrackets.forEach((item)=> item.style.display = 'none')
-	}
-  console.log(etype);
-}
-function doVotingClick() {
-	eventFire(document.getElementById('votinglink'), 'click');
-}
-
-//doVotingClick();
-setTimeout(doVotingClick, 200);
-</script>
 </div>
 </div>
 <div class="comments-wrapper-en" style="display: none;">
@@ -2089,31 +2073,6 @@ https://docs.aws.amazon.com/singlesignon/latest/userguide/abac.html</div>
 </div>
 </div>
 <!-- Discussion end -->
-<script type="text/javascript">
-function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype);
-  } else {
-    var evObj = document.createEvent('Events');
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
-	const checkboxes = document.querySelectorAll('.vote-checkboxes input')
-	if(checkboxes.length < 1){
-		const switchToSimpleCommentWrap = document.querySelectorAll('.switch-to-simple-comment-wrap')
-		const votingCommentBrackets = document.querySelectorAll('.voting-comment-brackets')
-		switchToSimpleCommentWrap.forEach((item)=> item.style.display = 'inline-block')
-		votingCommentBrackets.forEach((item)=> item.style.display = 'none')
-	}
-  console.log(etype);
-}
-function doVotingClick() {
-	eventFire(document.getElementById('votinglink'), 'click');
-}
-
-//doVotingClick();
-setTimeout(doVotingClick, 200);
-</script>
 </div>
 </div>
 </div>

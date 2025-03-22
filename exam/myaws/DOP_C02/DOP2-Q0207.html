@@ -3,6 +3,8 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Crect x='3' y='2' width='18' height='20' rx='3' ry='3' fill='%23FFD700' stroke='black' stroke-width='2'/%3E%3Cpath d='M15 2V8H21' fill='%2300BFFF' stroke='black' stroke-width='2'/%3E%3Cline x1='6' y1='10' x2='18' y2='10' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cline x1='6' y1='14' x2='18' y2='14' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cline x1='6' y1='18' x2='12' y2='18' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cpath d='M7 19L10 22L15 15' stroke='%23ADFF2F' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<script src="exampass.js"></script>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
@@ -56,7 +58,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 질문 207 토론</h1>
+<h1><a href="javascript:void(0);" onclick="if (typeof openExamTopics === 'function') openExamTopics(207)" style="color: white;"><i class="fa fa-file-text-o mr-3"></i></a>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 문제 207 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 207 discussion</h1>
@@ -128,10 +130,13 @@
 <span class="correct-answer">D (OK)</span>
 <br/>
 </span>
-<span class="answer-description"><div class="col-12 pt-2 pb-2">D는 AWS Config를 사용하여 CloudFormation 스택에 대한 드리프트 감지를 설정하고, cloudformation-stack-drift-detection-check 관리 규칙을 활용하여 드리프트 감지 결과를 AWS Config에서 평가하는 방법입니다. 이 규칙을 사용하여 스택의 구성 변경을 추적하고, 드리프트 감지 시 EventBridge 규칙을 트리거하여 SNS 토픽에 알림을 보내는 방식입니다.<br/>
+<span class="answer-description"><div class="col-12 pt-2 pb-2">D는 AWS Config를 사용하여 CloudFormation 스택에 대한 드리프트 감지를 설정하고, cloudformation-stack-drift-detection-check 관리 규칙을 활용하여 드리프트 감지 결과를 AWS Config에서 평가하는 방법입니다. 이 규칙을 사용하여 스택의 구성 변경을 추적하고, 드리프트 감지 시 EventBridge 규칙을 트리거하여 SNS 토픽에 알림을 보내는 방식입니다.
 <br/>
-AWS Config는 CloudFormation 스택의 구성 변경을 모니터링하고, 드리프트가 감지되면 즉시 SNS를 통해 알림을 전송할 수 있습니다.<br/>
-EventBridge 규칙을 설정하여 드리프트 감지 이벤트에 반응하고, SNS 알림을 전송합니다.<br/>
+<br/>
+AWS Config는 CloudFormation 스택의 구성 변경을 모니터링하고, 드리프트가 감지되면 즉시 SNS를 통해 알림을 전송할 수 있습니다.
+<br/>
+EventBridge 규칙을 설정하여 드리프트 감지 이벤트에 반응하고, SNS 알림을 전송합니다.
+<br/>
 이 방법은 드리프트 감지 후 즉각적인 알림을 제공하는 효율적이고 자동화된 솔루션을 제공합니다.</div></span>
 <div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분포</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="29 votes." data-toggle="tooltip" role="progressbar" style="width: 76%; display: flex;" title="">D (76%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="8 votes." data-toggle="tooltip" role="progressbar" style="width: 21%; display: flex;" title="">B (21%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="1 votes." data-toggle="tooltip" role="progressbar" style="width: 3%; display: flex;" title="">3%</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
@@ -1021,31 +1026,6 @@ EventBridge 규칙을 설정하여 드리프트 감지 이벤트에 반응하고
 </div>
 </div>
 <!-- Discussion end -->
-<script type="text/javascript">
-function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype);
-  } else {
-    var evObj = document.createEvent('Events');
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
-	const checkboxes = document.querySelectorAll('.vote-checkboxes input')
-	if(checkboxes.length < 1){
-		const switchToSimpleCommentWrap = document.querySelectorAll('.switch-to-simple-comment-wrap')
-		const votingCommentBrackets = document.querySelectorAll('.voting-comment-brackets')
-		switchToSimpleCommentWrap.forEach((item)=> item.style.display = 'inline-block')
-		votingCommentBrackets.forEach((item)=> item.style.display = 'none')
-	}
-  console.log(etype);
-}
-function doVotingClick() {
-	eventFire(document.getElementById('votinglink'), 'click');
-}
-
-//doVotingClick();
-setTimeout(doVotingClick, 200);
-</script>
 </div>
 </div>
 <div class="comments-wrapper-en" style="display: none;">
@@ -1911,31 +1891,6 @@ With CloudWatch Events (now a part of EventBridge) https://aws.amazon.com/fr/blo
 </div>
 </div>
 <!-- Discussion end -->
-<script type="text/javascript">
-function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype);
-  } else {
-    var evObj = document.createEvent('Events');
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
-	const checkboxes = document.querySelectorAll('.vote-checkboxes input')
-	if(checkboxes.length < 1){
-		const switchToSimpleCommentWrap = document.querySelectorAll('.switch-to-simple-comment-wrap')
-		const votingCommentBrackets = document.querySelectorAll('.voting-comment-brackets')
-		switchToSimpleCommentWrap.forEach((item)=> item.style.display = 'inline-block')
-		votingCommentBrackets.forEach((item)=> item.style.display = 'none')
-	}
-  console.log(etype);
-}
-function doVotingClick() {
-	eventFire(document.getElementById('votinglink'), 'click');
-}
-
-//doVotingClick();
-setTimeout(doVotingClick, 200);
-</script>
 </div>
 </div>
 </div>
