@@ -69,10 +69,10 @@
 <div class="col-12">
 <div class="discussion-header-container">
 <!-- Question -->
-<div class="question-discussion-header"><a class="discussion-link">Amazon의 AWS Certified DevOps Engineer - Professional DOP-C02</a> 
+<div class="question-discussion-header">
 						
-							의 시험 문제
-						<a class="discussion-link"></a>
+							Amazon의
+						 <a class="discussion-link">AWS Certified DevOps Engineer - Professional DOP-C02의 시험 문제</a>
 <div>
 							질문 #: 30 <br/>
 							주제 #: 1
@@ -231,7 +231,7 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				rlf
+				알에프
 			</h5>
 </a>
 <span class="badge badge-primary">
@@ -272,7 +272,7 @@
 				플라코
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 8월 16일 금요일 20:54">2024-08-17 05:54</span>
+<span class="comment-date align-middle" title="금 16 8월 2024 20:54">2024-08-17 05:54</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">옵션 B를 사용하면 사용자 계정에서 공개 액세스 차단 기능을 끄면 알림을 받지만, 그렇게 하는 것을 막지는 못합니다. 이 질문은 구현이 사용자가 해당 작업을 완전히 성공적으로 수행할 수 없게 해야 한다는 것을 요구합니다.</div>
@@ -304,13 +304,13 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				뜻밖에
+				즉흥적
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 11월 20일 수요일 14:10">2024-11-20 23:10</span>
+<span class="comment-date align-middle" title="수 20 11월 2024 14:10">2024-11-20 23:10</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">C 답변이 실제로 맞는 것 같으므로 자세히 설명하겠습니다. 하지만 B가 틀린 이유에 대한 몇 가지 추가 세부 정보를 지적하고 싶습니다. 질문에서는 사용자가 알림을 끌 수 없다고 묻습니다. 사용자는 공개 액세스 차단 기능을 끌 수 있어야 합니다. 따라서 B는 후자를 구현하지 않기 때문에 틀리지 않습니다. B는 PutPublicAccessBlock("Bucket"이 포함되지 않음)이기 때문에 틀렸습니다. 또한, BlockPublicPolicy가 False로 설정되었는지 확인하는 조건을 eventbridge 규칙에 추가해야 합니다. 조건이 없으면 모든 PutPublicAccessBlock 이벤트에 대한 알림을 받게 되므로 유효하다고 간주되는 이벤트에도 알림을 받게 됩니다.</div>
+<div class="comment-content">더 자세히 설명하자면, 답 C가 실제로 맞는 것 같습니다. 하지만 B가 틀린 이유에 대한 몇 가지 추가 세부 사항을 지적하고 싶습니다. 질문에서는 사용자가 알림을 끌 수 없다고 묻습니다. 사용자는 공개 액세스 차단 기능을 끌 수 있어야 합니다. 따라서 B는 후자를 구현하지 않기 때문에 틀리지 않습니다. B는 PutPublicAccessBlock("Bucket"이 포함되지 않음)이기 때문에 틀렸습니다. 또한, BlockPublicPolicy가 False로 설정되었는지 확인하는 조건을 eventbridge 규칙에 추가해야 합니다. 조건이 없으면 모든 PutPublicAccessBlock 이벤트에 대한 알림을 받게 되므로 유효하다고 간주되는 이벤트에도 알림을 받게 됩니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -339,13 +339,13 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				뜻밖에
+				즉흥적
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 11월 20일 수 14:15">2024-11-20 23:15</span>
+<span class="comment-date align-middle" title="수 20 11월 2024 14:15">2024-11-20 23:15</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">편집할 수 없어서 안타깝네요. 수정하겠습니다. PutBucketPublicAccessBlock은 실제로 IAM 권한이고 필터링해야 할 내용입니다. 그리고 옵션 B의 CloudFormation 솔루션은 사용자가 이벤트 브리지 규칙을 비활성화(따라서 알림 비활성화)하는 것을 방지하는 보호 장치가 없습니다.</div>
+<div class="comment-content">편집할 수 없어서 안타깝네요. 수정하겠습니다. PutBucketPublicAccessBlock은 실제로 IAM 권한이고 필터링해야 할 내용입니다. 그리고 옵션 B의 Cloudformation 솔루션은 사용자가 이벤트 브리지 규칙을 비활성화(따라서 알림 비활성화)하는 것을 방지하는 보호 장치가 없습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -412,11 +412,11 @@
 <span class="badge badge-primary">
 				가장 최근<i class="fa fa-clock-o"></i>
 </span>
-<span class="comment-date align-middle" title="2024년 9월 5일 목요일 23:13">2024-09-06 08:13</span>
+<span class="comment-date align-middle" title="목 05 9월 2024 23:13">2024-09-06 08:13</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">GuardDuty 정책 정책:S3/BucketBlockPublicAccessDisabled "IAM 엔터티가 버킷에서 S3 Block Public Access를 비활성화하는 데 사용된 API를 호출했습니다." "데이터 소스: CloudTrail 관리 이벤트" "이 결과는 Block Public Access가 나열된 S3 버킷에 대해 비활성화되었음을 알려줍니다. 활성화된 경우 S3 Block Public Access 설정은 버킷에 적용된 정책 또는 액세스 제어 목록(ACL)을 필터링하여 데이터의 의도치 않은 공개 노출을 방지하는 보안 조치로 사용됩니다." https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_finding-types-s3.html#policy-s3-bucketblockpublicaccessdisabled</div>
+<div class="comment-content">GuardDuty 정책 정책:S3/BucketBlockPublicAccessDisabled "IAM 엔터티가 버킷에서 S3 Block Public Access를 비활성화하는 데 사용된 API를 호출했습니다." "데이터 소스: CloudTrail 관리 이벤트" "이 발견 사항은 Block Public Access가 나열된 S3 버킷에 대해 비활성화되었음을 알려줍니다. 활성화된 경우 S3 Block Public Access 설정은 버킷에 적용된 정책 또는 액세스 제어 목록(ACL)을 필터링하여 데이터의 의도치 않은 공개 노출을 방지하는 보안 조치로 사용됩니다." https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_finding-types-s3.html#policy-s3-bucketblockpublicaccessdisabled</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -456,7 +456,7 @@
 				제임스프
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 7월 25일 목요일 오전 10:39">2024-07-25 19:39</span>
+<span class="comment-date align-middle" title="목 25 7월 2024 10:39 AM">2024-07-25 19:39</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
@@ -500,7 +500,7 @@
 				에푸엔1
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 7월 1일 월요일 06:07">2024-07-01 15:07</span>
+<span class="comment-date align-middle" title="월 01 7월 2024 06:07">2024-07-01 15:07</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
@@ -588,10 +588,10 @@
 				고멜
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 5월 30일 (목) 20:31">2024-05-31 05:31</span>
+<span class="comment-date align-middle" title="목 30 5월 2024 20:31">2024-05-31 05:31</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">저는 요구 사항과 코멘트 중 일부를 읽기 시작할 때까지 답이 "C"라고 확신했습니다. "구현은 조직의 개별 멤버 계정이 알림을 끌 수 없도록 보장해야 합니다"라는 문구는 "A"에 더 가깝습니다. "C"의 경우 단일 계정에 대한 관리자 권한이 있는 사람이 해당 계정에서 알림을 끌 수 있기 때문입니다. 다른 사람들이 지적했듯이, S3 공개 액세스와 관련된 GuardDuty 발견 사항이 많이 있습니다. GuardDuty와 EventBridge 패턴이 "s3" 및 "Public"과 같은 일부 키워드에 대해 SNS를 트리거하는 것은 조직 전체에 이를 적용하는 데 의미가 있는 것 같습니다. 조직에서 GuardDuty를 사용한 경험이 충분하지 않아 100% 확신할 수는 없지만 SNS 요구 사항에 대한 강조로 인해 이것이 속임수 질문일 수 있다고 생각합니다.</div>
+<div class="comment-content">저는 요구 사항과 주석을 읽어보기 전까지 답이 "C"라고 확신했습니다. "구현은 조직의 개별 멤버 계정이 알림을 끌 수 없도록 보장해야 합니다"라는 문구는 "A"에 더 가깝습니다. "C"의 경우 단일 계정에 대한 관리자 권한이 있는 사람이 해당 계정에서 알림을 끌 수 있기 때문입니다. 다른 사람들이 지적했듯이, S3 공개 액세스와 관련된 GuardDuty 발견 사항이 많이 있습니다. GuardDuty와 EventBridge 패턴이 "s3" 및 "Public"과 같은 일부 키워드에 대해 SNS를 트리거하는 것은 조직 전체에 이를 적용하는 데 의미가 있는 것 같습니다. 조직에서 GuardDuty를 사용한 경험이 충분하지 않아 100% 확신할 수는 없지만 SNS 요구 사항에 대한 강조로 인해 이것이 속임수 질문일 수 있다고 생각합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -623,10 +623,10 @@
 				고멜
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 9월 5일 목요일 23:12">2024-09-06 08:12</span>
+<span class="comment-date align-middle" title="목 05 9월 2024 23:12">2024-09-06 08:12</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">GuardDuty 정책 정책:S3/BucketBlockPublicAccessDisabled "IAM 엔터티가 버킷에서 S3 Block Public Access를 비활성화하는 데 사용된 API를 호출했습니다." "데이터 소스: CloudTrail 관리 이벤트" "이 결과는 Block Public Access가 나열된 S3 버킷에 대해 비활성화되었음을 알려줍니다. 활성화된 경우 S3 Block Public Access 설정은 버킷에 적용된 정책 또는 액세스 제어 목록(ACL)을 필터링하여 데이터의 의도치 않은 공개 노출을 방지하는 보안 조치로 사용됩니다." https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_finding-types-s3.html#policy-s3-bucketblockpublicaccessdisabled</div>
+<div class="comment-content">GuardDuty 정책 정책:S3/BucketBlockPublicAccessDisabled "IAM 엔터티가 버킷에서 S3 Block Public Access를 비활성화하는 데 사용된 API를 호출했습니다." "데이터 소스: CloudTrail 관리 이벤트" "이 발견 사항은 Block Public Access가 나열된 S3 버킷에 대해 비활성화되었음을 알려줍니다. 활성화된 경우 S3 Block Public Access 설정은 버킷에 적용된 정책 또는 액세스 제어 목록(ACL)을 필터링하여 데이터의 의도치 않은 공개 노출을 방지하는 보안 조치로 사용됩니다." https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_finding-types-s3.html#policy-s3-bucketblockpublicaccessdisabled</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -718,7 +718,7 @@
 				저1남자
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 4월 21일 일요일 14:53">2024-04-21 23:53</span>
+<span class="comment-date align-middle" title="일 21 4월 2024 14:53">2024-04-21 23:53</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">기술적으로 A로 충분할 것입니다. 질문은 퍼블릭 액세스 차단이 비활성화될 때만 알림을 받도록 요청하는 것입니다. 다음 GuardDuty 결과를 참조하세요. https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_finding-types-s3.html#policy-s3-bucketblockpublicaccessdisabled AWS Organizations 위임된 관리자 기능을 사용하면 여러 GuardDuty 계정을 간편하게 관리할 수 있습니다. 이 기능을 사용하면 AWS Organizations 관리 계정에서 멤버 계정을 전체 조직의 GuardDuty 관리자로 지정할 수 있습니다. 그러면 위임된 GuardDuty 관리자에게 조직의 모든 기존 및 미래 계정에 대해 GuardDuty를 활성화하고 관리할 수 있는 권한이 부여됩니다.</div>
@@ -805,7 +805,7 @@
 				4555894
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 3월 8일 금요일 14:11">2024-03-08 23:11</span>
+<span class="comment-date align-middle" title="금 08 3월 2024 14:11">2024-03-08 23:11</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
@@ -846,10 +846,10 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				따분한 사람
+				아기
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 3월 5일 화요일 19:17">2024-03-06 04:17</span>
+<span class="comment-date align-middle" title="화 05 3월 2024 19:17">2024-03-06 04:17</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">정답은 C입니다. 적합성 팩은 AWS Config 규칙과 수정 작업의 모음으로, 계정과 리전에서 단일 엔터티로 또는 AWS Organizations의 조직 전체에 쉽게 배포할 수 있습니다. AWS Systems Manager 문서(SSM 문서)를 사용하여 AWS에 적합성 팩 템플릿을 저장하고 SSM 문서 이름을 사용하여 적합성 팩을 직접 배포할 수도 있습니다.</div>
@@ -892,7 +892,7 @@
 				로키007
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 2월 22일 목요일 00:59">2024-02-22 09:59</span>
+<span class="comment-date align-middle" title="목 22 2월 2024 00:59">2024-02-22 09:59</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">안녕하세요. 기여자 접근 권한이 있는 분이 계시다면 모든 질문 PDF를 Telegram @rater250으로 전달해 주시겠습니까? 기꺼이 지불해 드리겠습니다.</div>
@@ -935,7 +935,7 @@
 				thanhnv142
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 1월 29일 (월) 오후 3시 10분">2024-01-30 00:10</span>
+<span class="comment-date align-middle" title="월 29 1월 2024 15:10">2024-01-30 00:10</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">C가 맞습니다. AWS 구성은 관리자만 수정할 수 있으며 멤버 계정은 수정할 수 없습니다.</div>
@@ -970,7 +970,7 @@
 				thanhnv142
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 2월 1일 목요일 15:53">2024-02-02 00:53</span>
+<span class="comment-date align-middle" title="목 01 2월 2024 15:53">2024-02-02 00:53</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">명확히 설명하겠습니다. B는 다음과 같은 이유로 올바르지 않습니다. "CloudFormation StackSets를 사용하여 조직의 모든 계정에 스택을 배포합니다"는 이 AWS 조직의 모든 계정(최대 수백 개의 계정)에 SNS 토픽과 EventBridge 규칙을 배포한다는 의미입니다. 이는 매우 비용이 많이 드는 배포가 될 것입니다.</div>
@@ -1021,10 +1021,10 @@
 				뜨거운 피
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 1월 27일 토요일 12:16">2024-01-27 21:16</span>
+<span class="comment-date align-middle" title="토 1월 27, 2024 12:16">2024-01-27 21:16</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">옵션 B도 유효한 경우가 아닙니다. EventBridge를 사용하여 구성을 직접 사용할 수 있기 때문입니다. Clod Trail을 사용해야 하는 이유는 규칙이 변경되면 AWS 구성 규칙 s3-bucket-public-read-prohibited를 사용할 수 있기 때문입니다. EventBridge는 SNS를 트리거합니다.</div>
+<div class="comment-content">옵션 B도 유효한 경우가 아닙니다. EventBridge를 사용하여 구성을 직접 사용할 수 있기 때문입니다. Clod Trail을 사용해야 하는 이유는 규칙이 변경되면 AWS 구성 규칙 S3-bucket-public-read-prohibited를 사용할 수 있기 때문입니다. EventBridge는 SNS를 트리거합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -1064,10 +1064,10 @@
 				뜨거운 피
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 1월 27일 토요일 12:12">2024-01-27 21:12</span>
+<span class="comment-date align-middle" title="토 1월 27, 2024 12:12">2024-01-27 21:12</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">옵션 B와 C가 헷갈렸는데, 옵션 C에서 시스템 관리자를 사용하여 SNS를 트리거할 때를 생각해 봅시다. 간단히 구성 규칙 준수 변경을 확인하는 eventbridge run을 사용할 수 있습니다. 준수가 변경되면 대상으로 SNS를 지정합니다. 네, 시스템 관리자 자동화 문서를 지정하여 SNS를 트리거할 수도 있지만 왜 사용할지 SNS를 직접 사용하겠습니다. 따라서 위에서 단어 B를 보면 여전히 올바른 옵션입니다. 주된 이유는 SNS를 트리거하는 데 시스템 관리자가 필요하지 않기 때문입니다. 게다가 시스템 관리자를 트리거하는 eventbridge 규칙에 대한 언급이 없고, 구성에서 직접 트리거할 수 없습니다.</div>
+<div class="comment-content">옵션 B와 C가 헷갈렸는데, 옵션 C에서 시스템 관리자를 사용하여 SNS를 트리거할 때를 생각해 봅시다. 간단히 구성 규칙 준수 변경을 확인하는 eventbridge run을 사용할 수 있습니다. 준수가 변경되면 대상으로 SNS를 지정합니다. 네, 시스템 관리자 자동화 문서를 지정하여 SNS를 트리거할 수도 있지만 왜 사용할지 저는 SNS를 직접 사용할 것입니다. 따라서 위에서 단어 B를 살펴보면 여전히 올바른 옵션입니다. 주된 이유는 SNS를 트리거하는 데 시스템 관리자가 필요하지 않기 때문입니다. 게다가 시스템 관리자를 트리거하는 eventbridge 규칙에 대한 언급이 없고, 구성에서 직접 트리거할 수 없습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -1107,7 +1107,7 @@
 				뜨거운 피
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 1월 27일 토요일 12:10">2024-01-27 21:10</span>
+<span class="comment-date align-middle" title="토 27 1월 2024 12:10">2024-01-27 21:10</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">옵션 B와 C가 헷갈렸는데, 옵션 C에서 시스템 관리자를 사용하여 SNS를 트리거할 때를 생각해 봅시다. 구성 규칙 준수 변경을 확인하는 이벤트브릿지 실행을 간단히 사용할 수 있습니다. 준수가 변경되면 대상으로 SNS를 지정합니다. 네, 시스템 관리자 자동화 문서를 지정하여 SNS를 트리거할 수도 있지만 왜 사용할지 SNS를 직접 사용할 것입니다. 그래서 위에서 단어 B를 보면 여전히 올바른 옵션입니다. 주된 이유는 SNS를 트리거하는 데 시스템 관리자가 필요하지 않기 때문입니다.</div>
@@ -1198,7 +1198,7 @@
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
-<div class="comment-content">B가 아닌데 다른 사용자가 끌 수 있기 때문입니다. 조직의 AWS 구성에서는 루트의 관리자만 이를 수행할 수 있습니다.</div>
+<div class="comment-content">B가 아닌데 다른 사용자가 끌 수 있기 때문입니다. 조직의 AWS 구성을 사용하면 루트의 관리자만 이를 수행할 수 있습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -1238,7 +1238,7 @@
 				졸타르_즈
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 12월 21일 목요일 14:39">2023-12-21 23:39</span>
+<span class="comment-date align-middle" title="목 21 12월 2023 14:39">2023-12-21 23:39</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
@@ -1279,10 +1279,10 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				z_insert
+				z_삽입
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 12월 21일 목요일 05:50">2023-12-21 14:50</span>
+<span class="comment-date align-middle" title="목 21 12월 2023 05:50">2023-12-21 14:50</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
@@ -1326,7 +1326,7 @@
 				졸타르_즈
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 11월 19일 일요일 19:20">2023-11-20 04:20</span>
+<span class="comment-date align-middle" title="일 19 11월 2023 19:20">2023-11-20 04:20</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
@@ -1370,7 +1370,7 @@
 				DZ_벤
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 11월 1일 수 00:21">2023-11-01 09:21</span>
+<span class="comment-date align-middle" title="수 01 11월 2023 00:21">2023-11-01 09:21</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">A여야 합니다. 찾기 유형은 "Policy:S3/AccountBlockPublicAccessDisabled"여야 합니다. C는 틀렸습니다. 제가 아는 한 이 작업을 하려면 최소한 EventBridge 규칙과 Lambda도 만들어야 하기 때문입니다.</div>
@@ -1405,7 +1405,7 @@
 				재규어루우우
 			</h5>
 </a>
-<span class="comment-date align-middle" title="수 01월 03 2024 12:06">2024-01-03 21:06</span>
+<span class="comment-date align-middle" title="수 03 1월 2024 12:06">2024-01-03 21:06</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">A가 될 수 없습니다. 이것은 문제를 해결하는 것과 아무런 관련이 없습니다. C라고 생각합니다. aws config를 사용하여 조직 수준에서 변경 사항을 모니터링할 수 있으며 람다를 사용하여 시정 조치를 취할 수 있습니다. C가 확실히 맞습니다.</div>
@@ -1499,7 +1499,7 @@
 				시험
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 9월 22일 금요일 16:11">2023-09-23 01:11</span>
+<span class="comment-date align-middle" title="금 22 9월 2023 16:11">2023-09-23 01:11</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">C는 괜찮을 거야</div>
@@ -1539,10 +1539,10 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				RVivek
+				알 리벡
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 9월 18일 (월) 12:53">2023-09-18 21:53</span>
+<span class="comment-date align-middle" title="월 9월 18, 2023 12:53 PM">2023-09-18 21:53</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
@@ -1665,7 +1665,7 @@
 				로버트하이에나
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 11월 15일 수 12:55">2023-11-15 21:55</span>
+<span class="comment-date align-middle" title="수 15 11월 2023 12:55">2023-11-15 21:55</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">네, 동의합니다. SCP는 모든 답변에서 빠졌습니다.</div>
@@ -1716,7 +1716,7 @@
 				ixdb
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 8월 13일 일요일 10:11">2023-08-13 19:11</span>
+<span class="comment-date align-middle" title="일 13 8월 2023 10:11">2023-08-13 19:11</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">C AWS Config를 사용하면 조직 내의 모든 AWS 계정에서 AWS Config 규칙을 관리할 수 있습니다. 다음을 수행할 수 있습니다. 조직의 모든 계정에서 AWS Config 규칙을 중앙에서 만들고, 업데이트하고, 삭제합니다. 모든 계정에 공통된 AWS Config 규칙 세트를 배포하고 AWS Config 규칙을 만들지 않아야 하는 계정을 지정합니다. AWS Organizations의 관리 계정에서 API를 사용하여 기본 AWS Config 규칙이 조직의 멤버 계정에서 수정되지 않도록 하여 거버넌스를 시행합니다.</div>
@@ -1759,7 +1759,7 @@
 				베르만
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 8월 1일 화요일 10:53">2023-08-01 19:53</span>
+<span class="comment-date align-middle" title="화 01 8월 2023 10:53">2023-08-01 19:53</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
@@ -1803,7 +1803,7 @@
 				런트
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 28일 금 21:56">2023-07-29 06:56</span>
+<span class="comment-date align-middle" title="금 28 7월 2023 21:56">2023-07-29 06:56</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
@@ -1935,7 +1935,7 @@
 				타르타루스23
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 6월 19일 월요일 22:41">2023-06-20 07:41</span>
+<span class="comment-date align-middle" title="월 19 6월 2023 22:41">2023-06-20 07:41</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
@@ -1971,7 +1971,7 @@
 				팬큐10
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 8월 21일 월요일 10:47">2023-08-21 19:47</span>
+<span class="comment-date align-middle" title="월 21 8월 2023 10:47">2023-08-21 19:47</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">동의합니다. B가 옳습니다.</div>
@@ -2054,7 +2054,7 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				rlf
+				알에프
 			</h5>
 </a>
 <span class="comment-date align-middle" title="토 28 10월 2023 16:16">2023-10-29 01:16</span>
@@ -2108,7 +2108,7 @@
 				마드페로
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 6월 15일 (목) 14:05">2023-06-15 23:05</span>
+<span class="comment-date align-middle" title="목 6월 15, 2023 14:05">2023-06-15 23:05</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
@@ -2193,7 +2193,7 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				bcx
+				숨은 참조
 			</h5>
 </a>
 <span class="comment-date align-middle" title="화 30 5월 2023 17:46">2023-05-31 02:46</span>
@@ -2236,10 +2236,10 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				블러드 1257
+				qan1257
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 5월 26일 금 10:34">2023-05-26 19:34</span>
+<span class="comment-date align-middle" title="금 26 5월 2023 10:34">2023-05-26 19:34</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">A와 D는 틀렸습니다. AWS GuardDuty는 AWS 환경 내에서 악성 활동에 대한 위협 탐지 및 모니터링에 중점을 둡니다. VPC 흐름 로그, CloudTrail 로그, DNS 로그와 같은 다양한 데이터 소스를 분석하지만 S3 버킷 정책을 특별히 검사하지는 않습니다. AWS Inspector는 EC2 인스턴스의 보안 및 규정 준수를 평가하는 데 도움이 되는 보안 평가 서비스입니다. 일반적인 취약성에 대한 보안 평가를 수행하고 수정을 위한 권장 사항을 제공합니다. C는 틀렸습니다. 집계기를 설정해야 하지만 각 계정에서 규칙을 만들지 않아야 하기 때문입니다. https://docs.aws.amazon.com/organizations/latest/userguide/services-that-can-integrate-config.html B는 맞습니다. 개별 계정에서 규칙을 삭제한 경우 dirft 탐지를 통해 관리되지 않는 변경 사항을 탐지할 수 있습니다. https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html</div>
@@ -2279,7 +2279,7 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				그가 온다
+				그는 온다.
 			</h5>
 </a>
 <span class="comment-date align-middle" title="수 24 5월 2023 07:04">2023-05-24 16:04</span>
@@ -2326,7 +2326,7 @@
 				디미드롤
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 5월 12일 금요일 20:00">2023-05-13 05:00</span>
+<span class="comment-date align-middle" title="금 12 5월 2023 20:00">2023-05-13 05:00</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
@@ -2397,7 +2397,7 @@
 				베르만
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 8월 1일 화요일 10:51">2023-08-01 19:51</span>
+<span class="comment-date align-middle" title="화 01 8월 2023 10:51">2023-08-01 19:51</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">Config Service를 통해 여러 계정에 구성 규칙을 배포할 수 없습니다. Config Aggregator는 그런 방식으로 작동하지 않습니다. A가 맞습니다.</div>
@@ -2453,7 +2453,7 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				Zoe_zoe
+				조이_조이
 			</h5>
 </a>
 <span class="comment-date align-middle" title="수 03 5월 2023 11:08">2023-05-03 20:08</span>
@@ -2540,7 +2540,7 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				5까지
+				5아가
 			</h5>
 </a>
 <span class="comment-date align-middle" title="수 26 4월 2023 06:37">2023-04-26 15:37</span>
@@ -2587,7 +2587,7 @@
 				헨리브르
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 4월 24일 (월) 02:43">2023-04-24 11:43</span>
+<span class="comment-date align-middle" title="월 24 4월 2023 02:43">2023-04-24 11:43</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
@@ -2628,10 +2628,10 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				jqso234
+				제이큐소234
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 4월 14일 금요일 19:50">2023-04-15 04:50</span>
+<span class="comment-date align-middle" title="금 14 4월 2023 19:50">2023-04-15 04:50</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
@@ -2751,31 +2751,6 @@
 </div>
 </div>
 <!-- Discussion end -->
-<script type="text/javascript">
-function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype);
-  } else {
-    var evObj = document.createEvent('Events');
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
-	const checkboxes = document.querySelectorAll('.vote-checkboxes input')
-	if(checkboxes.length < 1){
-		const switchToSimpleCommentWrap = document.querySelectorAll('.switch-to-simple-comment-wrap')
-		const votingCommentBrackets = document.querySelectorAll('.voting-comment-brackets')
-		switchToSimpleCommentWrap.forEach((item)=> item.style.display = 'inline-block')
-		votingCommentBrackets.forEach((item)=> item.style.display = 'none')
-	}
-  console.log(etype);
-}
-function doVotingClick() {
-	eventFire(document.getElementById('votinglink'), 'click');
-}
-
-//doVotingClick();
-setTimeout(doVotingClick, 200);
-</script>
 </div>
 </div>
 <div class="comments-wrapper-en" style="display: none;">
@@ -5398,31 +5373,6 @@ https://docs.aws.amazon.com/config/latest/developerguide/conformance-packs.html<
 </div>
 </div>
 <!-- Discussion end -->
-<script type="text/javascript">
-function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype);
-  } else {
-    var evObj = document.createEvent('Events');
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
-	const checkboxes = document.querySelectorAll('.vote-checkboxes input')
-	if(checkboxes.length < 1){
-		const switchToSimpleCommentWrap = document.querySelectorAll('.switch-to-simple-comment-wrap')
-		const votingCommentBrackets = document.querySelectorAll('.voting-comment-brackets')
-		switchToSimpleCommentWrap.forEach((item)=> item.style.display = 'inline-block')
-		votingCommentBrackets.forEach((item)=> item.style.display = 'none')
-	}
-  console.log(etype);
-}
-function doVotingClick() {
-	eventFire(document.getElementById('votinglink'), 'click');
-}
-
-//doVotingClick();
-setTimeout(doVotingClick, 200);
-</script>
 </div>
 </div>
 </div>

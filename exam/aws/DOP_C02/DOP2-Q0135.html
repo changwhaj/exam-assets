@@ -69,10 +69,10 @@
 <div class="col-12">
 <div class="discussion-header-container">
 <!-- Question -->
-<div class="question-discussion-header"><a class="discussion-link">Amazon의 AWS Certified DevOps Engineer - Professional DOP-C02</a> 
+<div class="question-discussion-header">
 						
-							의 시험 문제
-						<a class="discussion-link"></a>
+							Amazon의
+						 <a class="discussion-link">AWS Certified DevOps Engineer - Professional DOP-C02의 시험 문제</a>
 <div>
 							질문 #: 135 <br/>
 							주제 #: 1
@@ -117,7 +117,7 @@
 													D.
 												</span> 
 											
-											AWS Cloud9 환경과 보조 리전에 CodeCommit 리포지토리를 만듭니다. 기본 리전의 CodeCommit 리포지토리를 AWS Cloud9 환경의 원격 리포지토리로 구성합니다. 보조 리전의 CodeCommit 리포지토리를 AWS Cloud9 환경에 연결합니다.
+											AWS Cloud9 환경과 보조 리전에 CodeCommit 리포지토리를 만듭니다. AWS Cloud9 환경에서 기본 리전의 CodeCommit 리포지토리를 원격 리포지토리로 구성합니다. 보조 리전의 CodeCommit 리포지토리를 AWS Cloud9 환경에 연결합니다.
 										</li>
 </ul>
 </div>
@@ -233,10 +233,10 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				따분한 사람
+				아기
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 7월 2일 화 20:27">2024-07-03 05:27</span>
+<span class="comment-date align-middle" title="화 02 7월 2024 20:27">2024-07-03 05:27</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">D가 솔루션이 아닌 이유는? 2차 지역의 개발자가 AWS Cloud9 환경에서 1차 지역의 codecommit 저장소를 원격 저장소로 구성할 수 있다면, 원격으로 개발하고 모든 git 기능을 수행할 수 있습니다.</div>
@@ -282,7 +282,7 @@
 <span class="comment-date align-middle" title="토 22 6월 2024 06:52">2024-06-22 15:52</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">A: (아니요) "AWS CodeBuild 프로젝트를 만들어 기본 리전의 CodeCommit 리포지토리를 보조 리전의 CodeCommit 리포지토리로 Git 미러링 작업을 수행합니다." CodeBuild는 자체적으로 "git 미러링" 작업을 수행할 수 없습니다. 모든 온라인 예제에는 Lambda를 호출하는 CodeCommit 작업(직접 또는 EventWatch를 통해)이 있으며, 이 작업은 fargate(또는 EC2)를 호출하여 실제 git 미러링을 수행합니다. A: (아니요) "CodeBuild 프로젝트를 호출하는 AWS Lambda 함수를 만듭니다. 이는 온라인 예제와 정반대입니다. B: (아니요) "AWS Fargate 작업을 만들어 기본 리전의 CodeCommit 리포지토리를 Git 미러링 작업하고 결과를 S3 버킷으로 복사합니다." CodeCommit 리포지토리에서 S3 버킷으로 "git" 미러링 작업 복사를 사용하는 것이 정말 의미가 있습니까? "git" "mirror"를 사용하는 모든 온라인 예제에는 CodeCommit 리포지토리가 원격 대상으로 있습니다.</div>
+<div class="comment-content">A: (아니요) "AWS CodeBuild 프로젝트를 만들어 기본 리전의 CodeCommit 리포지토리를 보조 리전의 CodeCommit 리포지토리로 Git 미러링 작업을 수행합니다." CodeBuild는 "git 미러링" 작업을 직접 수행할 수 없습니다. 모든 온라인 예제에는 Lambda를 호출하는 CodeCommit 작업(직접 또는 EventWatch를 통해)이 있으며, 이 작업은 fargate(또는 EC2)를 호출하여 실제 git 미러링을 수행합니다. A: (아니요) "CodeBuild 프로젝트를 호출하는 AWS Lambda 함수를 만듭니다. 이는 온라인 예제와 정반대입니다. B: (아니요) "AWS Fargate 작업을 만들어 기본 리전의 CodeCommit 리포지토리를 Git 미러링 작업하고 결과를 S3 버킷으로 복사합니다." CodeCommit 리포지토리에서 S3 버킷으로 "git" 미러링 작업 복사를 사용하는 것이 정말 의미가 있을까요? "git" "mirror"를 사용하는 모든 온라인 예제에는 CodeCommit 리포지토리가 원격 대상으로 있습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -317,7 +317,7 @@
 <span class="comment-date align-middle" title="토 22 6월 2024 06:54">2024-06-22 15:54</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">여기서의 구체적인 요구 사항은 "재해 복구 기능"과 "일상적인 운영을 보조 AWS 지역으로 전환하는 기능"이 아닙니다. 이는 조사 중입니다. 구체적인 요구 사항은 "회사가 보조 지역에서 코드를 개발할 수 있는 기능을 제공하는 것"입니다. "회사가 보조 지역을 사용해야 하는 경우 개발자는 로컬 Git 구성에 원격 URL을 추가할 수 있습니다." 저는 여기서의 구체적인 요구 사항이 개발자에게 완전한 원격 개발 환경을 제공하는 것(DR 솔루션을 제공하는 것이 아님)인 것처럼 들립니다. 사실이라면 동일한 로컬 CodeCommit 리포지토리가 있는 Cloud9 웹 개발 환경(git 등 포함)을 사용하는 것이 허용됩니다. 저는 개발자가 아니지만 구체적인 기준 문구와 논리로 인해 "C"에 더 가깝습니다.</div>
+<div class="comment-content">여기서의 구체적인 요구 사항은 "재해 복구 기능"과 "일상적인 운영을 보조 AWS 지역으로 전환하는 기능"이 아닙니다. 이는 조사 중입니다. 구체적인 요구 사항은 "회사가 보조 지역에서 코드를 개발할 수 있는 기능을 제공하는 것"입니다. "회사가 보조 지역을 사용해야 하는 경우 개발자는 로컬 Git 구성에 원격 URL을 추가할 수 있습니다." 저는 여기서의 구체적인 요구 사항이 개발자에게 완전한 원격 개발 환경을 제공하는 것(DR 솔루션을 제공하는 것이 아님)인 것처럼 들립니다. 사실이라면 동일한 로컬 CodeCommit 리포지토리가 있는 Cloud9 웹 개발 환경(git 등 포함)을 사용하는 것이 허용됩니다. 저는 개발자가 아니지만 구체적인 기준 문구와 논리로 인해 "C"에 더 기울어집니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -387,7 +387,7 @@
 <span class="comment-date align-middle" title="토 22 6월 2024 07:24">2024-06-22 16:24</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">또한 "git" "mirror"도 수행된다고 가정하면 "D"가 잘 작동할 것이라고 덧붙이고 싶습니다(솔루션에 정의되지 않은 추가 단계가 있음). "D"가 완전한 솔루션이라고 말하는 것은 없습니다. 여기서 유일한 요구 사항은 개발자에게 개발할 수 있는 원격 환경을 제공하는 것입니다.</div>
+<div class="comment-content">또한 "git" "mirror"도 수행된다고 가정하면 "D"가 잘 작동할 것이라고 덧붙이고 싶습니다(솔루션에 정의되지 않은 추가 단계가 있지만). "D"가 완전한 솔루션이라고 말하는 것은 없습니다. 여기서 유일한 요구 사항은 개발자에게 개발할 수 있는 원격 환경을 제공하는 것입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -529,10 +529,10 @@
 				thanhnv142
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 2월 9일 금요일 14:24">2024-02-09 23:24</span>
+<span class="comment-date align-middle" title="금 09 2월 2024 14:24">2024-02-09 23:24</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">A가 정답입니다. &lt;보조 지역에서 코드 개발&gt;: 코드 커밋은 자동으로 지역 간 복제할 수 없습니다. 이 복제 작업을 수행하려면 도구를 사용해야 합니다. B: S3를 보조 리포로 사용하는 것은 잘못된 내용입니다. C와 D: codecommit을 보조 리포로 사용하는 것에 대한 언급이 없습니다.</div>
+<div class="comment-content">A는 정답입니다. &lt;보조 지역에서 코드 개발&gt;: 코드 커밋은 자동으로 지역 간 복제할 수 없습니다. 이 복제 작업을 수행하려면 도구를 사용해야 합니다. B: S3를 보조 리포로 사용하는 것은 잘못된 내용입니다. C와 D: codecommit을 보조 리포로 사용하는 것에 대한 언급이 없습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -621,7 +621,7 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				svjl
+				스윌
 			</h5>
 </a>
 <span class="comment-date align-middle" title="금 08 12월 2023 15:19">2023-12-09 00:19</span>
@@ -707,10 +707,10 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				밴더건
+				뜨내기
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 11월 19일 일요일 05:41">2023-11-19 14:41</span>
+<span class="comment-date align-middle" title="일 19 11월 2023 05:41">2023-11-19 14:41</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
@@ -795,7 +795,7 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				RVivek
+				알 리벡
 			</h5>
 </a>
 <span class="comment-date align-middle" title="수 20 9월 2023 14:24">2023-09-20 23:24</span>
@@ -842,7 +842,7 @@
 				ixdb
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 9월 1일 금요일 15:07">2023-09-02 00:07</span>
+<span class="comment-date align-middle" title="금 01 9월 2023 15:07">2023-09-02 00:07</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
@@ -918,31 +918,6 @@
 </div>
 </div>
 <!-- Discussion end -->
-<script type="text/javascript">
-function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype);
-  } else {
-    var evObj = document.createEvent('Events');
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
-	const checkboxes = document.querySelectorAll('.vote-checkboxes input')
-	if(checkboxes.length < 1){
-		const switchToSimpleCommentWrap = document.querySelectorAll('.switch-to-simple-comment-wrap')
-		const votingCommentBrackets = document.querySelectorAll('.voting-comment-brackets')
-		switchToSimpleCommentWrap.forEach((item)=> item.style.display = 'inline-block')
-		votingCommentBrackets.forEach((item)=> item.style.display = 'none')
-	}
-  console.log(etype);
-}
-function doVotingClick() {
-	eventFire(document.getElementById('votinglink'), 'click');
-}
-
-//doVotingClick();
-setTimeout(doVotingClick, 200);
-</script>
 </div>
 </div>
 <div class="comments-wrapper-en" style="display: none;">
@@ -1685,31 +1660,6 @@ Correct answer is A</div>
 </div>
 </div>
 <!-- Discussion end -->
-<script type="text/javascript">
-function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype);
-  } else {
-    var evObj = document.createEvent('Events');
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
-	const checkboxes = document.querySelectorAll('.vote-checkboxes input')
-	if(checkboxes.length < 1){
-		const switchToSimpleCommentWrap = document.querySelectorAll('.switch-to-simple-comment-wrap')
-		const votingCommentBrackets = document.querySelectorAll('.voting-comment-brackets')
-		switchToSimpleCommentWrap.forEach((item)=> item.style.display = 'inline-block')
-		votingCommentBrackets.forEach((item)=> item.style.display = 'none')
-	}
-  console.log(etype);
-}
-function doVotingClick() {
-	eventFire(document.getElementById('votinglink'), 'click');
-}
-
-//doVotingClick();
-setTimeout(doVotingClick, 200);
-</script>
 </div>
 </div>
 </div>

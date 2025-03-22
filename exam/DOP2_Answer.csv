@@ -3365,3 +3365,52 @@ B는 CloudWatch 알람을 사용하여 구성 변경 사항을 수동으로 되돌리도록 알리는 방법�
 C는 CloudFormation을 사용하여 구성 변경을 롤백하는 방법으로, 자동으로 되돌리는 과정보다는 수동 업데이트가 필요합니다.
 D는 AWS Trusted Advisor를 사용하여 비준수 구성을 확인하지만, 변경 사항을 수동으로 적용하는 방식으로 자동화된 리버트가 되지 않으므로 이 방법은 적합하지 않습니다.
 따라서 A가 가장 적합한 솔루션입니다."
+https://changwhaj.github.io/exam-assets/exam/aws/DOP_C02/DOP2-Q0354.html,"정답: 
+
+설명:
+"
+https://changwhaj.github.io/exam-assets/exam/aws/DOP_C02/DOP2-Q0355.html,"정답: 
+
+설명:
+"
+https://changwhaj.github.io/exam-assets/exam/aws/DOP_C02/DOP2-Q0356.html,"정답: 
+
+설명:
+"
+https://changwhaj.github.io/exam-assets/exam/aws/DOP_C02/DOP2-Q0357.html,"정답: 
+
+설명:
+"
+https://changwhaj.github.io/exam-assets/exam/aws/DOP_C02/DOP2-Q0358.html,"정답: 
+
+설명:
+"
+https://changwhaj.github.io/exam-assets/exam/aws/DOP_C02/DOP2-Q0359.html,"정답: 
+
+설명:
+"
+https://changwhaj.github.io/exam-assets/exam/aws/DOP_C02/DOP2-Q0360.html,"정답: 
+
+설명:
+"
+https://changwhaj.github.io/exam-assets/exam/aws/DOP_C02/DOP2-Q0361.html,"정답: A
+
+설명: 회사의 DevOps 팀은 Node Package Manager(NPM) 오픈 소스 라이브러리를 사용하여 애플리케이션을 빌드하고 있습니다. 이러한 라이브러리를 사설 NPM 저장소에 호스팅하고, 새로운 버전의 라이브러리에 대한 검사를 수행하려면 다음과 같은 조치가 필요합니다:
+
+AWS CodeArtifact 저장소 생성: npm-store라는 업스트림 저장소를 포함한 AWS CodeArtifact 저장소를 생성합니다. 이를 통해 공용 NPM 저장소의 패키지를 프록시하고 캐싱할 수 있습니다.
+
+빌드 프로세스 구성: 애플리케이션 빌드 프로세스가 기본 NPM 소스로 CodeArtifact 저장소를 사용하도록 설정합니다. 이를 통해 모든 종속성이 사설 저장소를 통해 관리됩니다.
+
+AWS CodePipeline 설정: 새로운 패키지 버전에 대한 자동 검증을 수행하는 AWS CodePipeline 파이프라인을 구축합니다. 검증에 실패한 패키지는 unlisted 상태로 설정하여 빌드에 포함되지 않도록 합니다.
+
+이러한 접근 방식은 운영 효율성을 높이고, 수동 작업 없이도 종속성 관리를 자동화할 수 있습니다."
+https://changwhaj.github.io/exam-assets/exam/aws/DOP_C02/DOP2-Q0362.html,"정답: 
+
+설명:
+"
+https://changwhaj.github.io/exam-assets/exam/aws/DOP_C02/DOP2-Q0363.html,"정답: A
+
+설명:
+AWS 계정 내 모든 Application Load Balancer(ALB)에 AWS WAF를 적용하고, 제거되더라도 자동으로 다시 추가되도록 보장하려면 AWS Config의 alb-waf-enabled 관리 규칙을 활성화해야 합니다.
+또한, AWS Systems Manager Automation 문서를 생성하여 ALB에서 AWS WAF가 제거될 경우 자동으로 다시 추가하는 수정 작업을 설정하면 이를 자동화할 수 있습니다.
+이 솔루션을 사용하면 보안 정책이 항상 유지되며, 수동 개입 없이 WAF가 ALB에 지속적으로 적용됩니다."

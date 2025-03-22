@@ -224,14 +224,6 @@ def open_exam(driver, discuss_url):
     
     return
 
-def open_template_discuss():
-    template = "./TEMPLATE_Discuss.html"
-    with open(template, 'r', encoding='utf-8') as file:
-        html_content = file.read()
-        
-    bs = BeautifulSoup(html_content, 'html.parser')
-    return bs
-
 def open_template_exam():
     template = "./TEMPLATE.html"
     with open(template, 'r', encoding='utf-8') as file:
@@ -277,7 +269,8 @@ def remove_discuss_element(driver):
 
     driver.execute_script("""
         var divs = document.getElementsByClassName('comment-head');
-
+        var scripts = document.querySelectorAll('script');
+        
         for (var i=0; i < divs.length; i++) {
             divs[i].querySelectorAll("a")[0].removeAttribute("href");
         }
@@ -289,6 +282,7 @@ def remove_discuss_element(driver):
                 alinks[j].removeAttribute("href");
             }
         }
+        scripts.forEach(script => script.remove());
     """)
     
 def open_discuss(driver, discuss_id):
@@ -299,14 +293,17 @@ def open_discuss(driver, discuss_id):
 
     driver.execute_script("window.open()");
     driver.switch_to.window(driver.window_handles[1]);
-    page = driver.get(discuss_url)
+    driver.get(discuss_url)
     time.sleep(1)
     
     remove_discuss_element(driver)
 
-    html = driver.page_source
-    bs = BeautifulSoup(html, 'html.parser')
+    bs = BeautifulSoup(driver.page_source, 'html.parser')
     
+    # 모든 <script> 태그 제거
+    for script in bs.find_all("script"):
+        script.extract()
+
     driver.close();
     driver.switch_to.window(driver.window_handles[0]);
 
@@ -349,15 +346,17 @@ def open_new_discussion(driver, discuss_id):
 
     driver.execute_script("window.open()");
     driver.switch_to.window(driver.window_handles[1]);
-    page = driver.get(discuss_url)
+    driver.get(discuss_url)
     time.sleep(1)
     
-    html = driver.page_source
-    bs = BeautifulSoup(html, 'html.parser')
-
     remove_discuss_element(driver)
 
     bs = BeautifulSoup(driver.page_source, 'html.parser')
+    
+    # 모든 <script> 태그 제거
+    for script in bs.find_all("script"):
+        script.extract()
+
     div_discuss = bs.find_all("div", {"class": "container outer-discussion-container"})[0]
 
     comment_spans = bs.find_all('span', class_='comment-date')
@@ -458,7 +457,11 @@ def save_html(driver, did, fname):
 
     header_contents = bs.find("div", {"class": "discussion-list-header"}).decode_contents()
     container_contents = bs.find("div", {"class": "discussion-header-container"}).decode_contents()
-    discussion_contents = bs.find("div", {"class": "discussion-page-comments-section"}).decode_contents()
+    discussion = bs.find("div", {"class": "discussion-page-comments-section"})
+    # 모든 <script> 태그 제거
+    for script in discussion.find_all("script"):
+        script.extract()
+    discussion_contents = discussion.decode_contents()
 
     bs = open_template_exam()
 
@@ -887,18 +890,20 @@ def refresh_from_forum(discuss_list, forum_name, last_page):
             new_data_id = data_id
         else:
             file_data_id = get_question_data_id(fname)
-            if file_data_id == 0:
+            if file_data_id == 0:   # New Exam
                 new_data_id = make_question_file(driver, fname, url, did)
                 # print(f'data_id={data_id}, new_data_id={new_data_id}, fname={fname}')
                 if (data_id > 0 ) & (data_id != new_data_id):
                     break
                 translate_page_to_kr(driver, fname)
                 save_kr(driver, fname)
-            else:
+            else:                   # Refresh Discussion
                 new_data_id = file_data_id
                 open_exam(driver, url)
                 driver.switch_to.window(driver.window_handles[0])
                 if (driver.title != '404 - Page not found') & (len(driver.title) > 20):
+                    remove_exam_element(driver)
+
                     bs = BeautifulSoup(driver.page_source, 'html.parser')
                     container = bs.find("div", {"class": "discussion-header-container"})
                     progress_element = container.find("div", {"class": "progress"})
@@ -1074,7 +1079,7 @@ def refresh_all_exam_answer(exam_list_file, exam_answer_file, qtitle):
     df = read_Exam_list(exam_list_file)
     df_answer = read_Exam_answer(exam_answer_file)
 
-    for i in range(len(df))[:]:
+    for i in range(len(df))[352:]:
         qid = int(df.at[i, 'ExamNo'])
         did = int(df.at[i, 'DiscussNo'])
         dataid = int(df.at[i, 'DataNo'])
@@ -1143,9 +1148,9 @@ if __name__ == "__main__":
     # DAS = "Exam AWS Certified Data Analytics - Specialty topic 1"
     # refresh_all_exam('DAS_Exam.csv', DAS)         # OK 164
     
-   DOP2 = "Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1"
-   # refresh_all_exam('DOP2_Exam.csv', DOP2)       # OK 134
-   refresh_all_exam_answer('DOP2_Exam.csv', 'DOP2_Answer.csv', DOP2)
+    DOP2 = "Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1"
+    # refresh_all_exam('DOP2_Exam.csv', DOP2)       # OK 134
+    # refresh_all_exam_answer('DOP2_Exam.csv', 'DOP2_Answer.csv', DOP2)
     
     # SCS2 = "Exam AWS Certified Security - Specialty SCS-C02 topic 1"
     # refresh_all_exam('SCS2_Exam.csv', SCS2)
@@ -1171,9 +1176,9 @@ if __name__ == "__main__":
     # FORUM_NAME = 'cncf'
     # refresh_from_forum(DISCUSS, FORUM_NAME, 1)    
 
-    # DISCUSS = 'AmazonDiscuss.txt'
-    # FORUM_NAME = 'amazon'
-    # refresh_from_forum(DISCUSS, FORUM_NAME, 1)
+    DISCUSS = 'AmazonDiscuss.txt'
+    FORUM_NAME = 'amazon'
+    refresh_from_forum(DISCUSS, FORUM_NAME, 1)
     
     # DISCUSS = 'IsacaDiscuss.txt'
     # FORUM_NAME = 'isaca'

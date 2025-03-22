@@ -69,10 +69,10 @@
 <div class="col-12">
 <div class="discussion-header-container">
 <!-- Question -->
-<div class="question-discussion-header"><a class="discussion-link">Amazon의 AWS Certified DevOps Engineer - Professional DOP-C02</a> 
+<div class="question-discussion-header">
 						
-							의 시험 문제
-						<a class="discussion-link"></a>
+							Amazon의
+						 <a class="discussion-link">AWS Certified DevOps Engineer - Professional DOP-C02의 시험 문제</a>
 <div>
 							질문 #: 12 <br/>
 							주제 #: 1
@@ -117,7 +117,7 @@
 													D.
 												</span> 
 											
-											DynamoDB 테이블에 대한 WriteThrottleEvents 메트릭을 확인합니다. 테이블의 스케일링 정책에 대한 최대 쓰기 용량 단위(WCU)를 늘립니다.
+											DynamoDB 테이블에 대한 WriteThrottleEvents 메트릭을 확인합니다. 테이블의 확장 정책에 대한 최대 쓰기 용량 단위(WCU)를 늘립니다.
 										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
                 가장 많이 투표된
             </span></li>
@@ -259,7 +259,7 @@
 <span class="badge badge-primary">
 				높은 투표수<i class="fa fa-thumbs-up"></i>
 </span>
-<span class="comment-date align-middle" title="2023년 6월 8일 목요일 12:29">2023-06-08 21:29</span>
+<span class="comment-date align-middle" title="목 08 6월 2023 12:29">2023-06-08 21:29</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>AD</strong></span></div>
@@ -300,7 +300,7 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				kiwtirApp
+				키위티르앱
 			</h5>
 </a>
 <span class="badge badge-primary">
@@ -341,7 +341,7 @@
 				티지브이
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 6월 13일 (목) 12:01">2024-06-13 21:01</span>
+<span class="comment-date align-middle" title="목 6월 13, 2024 12:01">2024-06-13 21:01</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">D: 이 작업은 WriteThrottleEvents 메트릭이 높으면 DynamoDB가 쓰기 용량이 부족하여 쓰기를 제한하고 있음을 나타내기 때문에 중요합니다. 최대 WCU를 늘리면 테이블이 Lambda 함수에 필요한 증가된 쓰기 처리량을 처리할 수 있으므로 주문 처리 지연이 줄어듭니다. DynamoDB에서 자동 확장이 활성화되어 있어도 WriteThrottleEvents 메트릭을 모니터링하는 것이 중요합니다. 자동 확장은 작업 부하에 따라 용량을 조정하지만 수요의 급격한 급증에 항상 대처하거나 이 특정 사용 사례에 최적으로 구성되지 않을 수 있습니다. 최대 쓰기 용량 단위(WCU)가 적절하게 설정되어 있는지 확인하면 피크 시간 동안 제한을 방지하는 데 도움이 될 수 있습니다.</div>
@@ -392,7 +392,7 @@
 				thanhnv142
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 1월 28일 일요일 04:54">2024-01-28 13:54</span>
+<span class="comment-date align-middle" title="일 28 1월 2024 04:54">2024-01-28 13:54</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">A와 D가 정답입니다. A: ApproximateAgeOfOldestMessage를 확인하고 동시성을 그에 따라 늘립니다. D: throttleevent(거부된 요청 수)를 확인하고 최대 쓰기 횟수를 그에 따라 늘립니다.</div>
@@ -435,7 +435,7 @@
 				스프라오
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 11월 19일 일요일 07:35">2023-11-19 16:35</span>
+<span class="comment-date align-middle" title="일 19 11월 2023 07:35">2023-11-19 16:35</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">답은 A와 C여야 합니다. DynamoDB는 자동 크기 조정을 활성화했기 때문에 Writethrottle이 적용되지 않으므로 D는 틀립니다.</div>
@@ -518,13 +518,13 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				욘페른츠
+				욘펀즈
 			</h5>
 </a>
 <span class="comment-date align-middle" title="일 10 9월 2023 20:43">2023-09-11 05:43</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">A: SQS 대기열의 ApproximateAgeOfOldestMessage 메트릭을 확인하세요. 이 연령이 높으면 Lambda 함수의 동시성 제한을 늘리면 처리 속도가 빨라집니다. D: DynamoDB 테이블의 WriteThrottleEvents 메트릭을 확인하세요. 쓰기 작업이 제한되는 경우 테이블의 스케일링 정책에 대한 최대 WCU를 늘리면 도움이 될 수 있습니다.</div>
+<div class="comment-content">A: SQS 대기열의 ApproximateAgeOfOldestMessage 메트릭을 확인하세요. 이 연령이 높으면 Lambda 함수의 동시성 제한을 늘리면 처리 속도가 빨라집니다. D: DynamoDB 테이블의 WriteThrottleEvents 메트릭을 확인하세요. 쓰기 작업이 제한되는 경우 테이블의 확장 정책에 대한 최대 WCU를 늘리면 도움이 될 수 있습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -608,7 +608,7 @@
 				알스2020
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 4월 14일 금요일 22:11">2023-04-15 07:11</span>
+<span class="comment-date align-middle" title="금 14 4월 2023 22:11">2023-04-15 07:11</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">a와 d는 정확합니다</div>
@@ -651,7 +651,7 @@
 				그
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 4월 7일 금요일 14:59">2023-04-07 23:59</span>
+<span class="comment-date align-middle" title="금 07 4월 2023 14:59">2023-04-07 23:59</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>AD</strong></span></div>
@@ -684,31 +684,6 @@
 </div>
 </div>
 <!-- Discussion end -->
-<script type="text/javascript">
-function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype);
-  } else {
-    var evObj = document.createEvent('Events');
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
-	const checkboxes = document.querySelectorAll('.vote-checkboxes input')
-	if(checkboxes.length < 1){
-		const switchToSimpleCommentWrap = document.querySelectorAll('.switch-to-simple-comment-wrap')
-		const votingCommentBrackets = document.querySelectorAll('.voting-comment-brackets')
-		switchToSimpleCommentWrap.forEach((item)=> item.style.display = 'inline-block')
-		votingCommentBrackets.forEach((item)=> item.style.display = 'none')
-	}
-  console.log(etype);
-}
-function doVotingClick() {
-	eventFire(document.getElementById('votinglink'), 'click');
-}
-
-//doVotingClick();
-setTimeout(doVotingClick, 200);
-</script>
 </div>
 </div>
 <div class="comments-wrapper-en" style="display: none;">
@@ -1180,31 +1155,6 @@ D: Check the WriteThrottleEvents metric for the DynamoDB table. If write operati
 </div>
 </div>
 <!-- Discussion end -->
-<script type="text/javascript">
-function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent('on' + etype);
-  } else {
-    var evObj = document.createEvent('Events');
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
-	const checkboxes = document.querySelectorAll('.vote-checkboxes input')
-	if(checkboxes.length < 1){
-		const switchToSimpleCommentWrap = document.querySelectorAll('.switch-to-simple-comment-wrap')
-		const votingCommentBrackets = document.querySelectorAll('.voting-comment-brackets')
-		switchToSimpleCommentWrap.forEach((item)=> item.style.display = 'inline-block')
-		votingCommentBrackets.forEach((item)=> item.style.display = 'none')
-	}
-  console.log(etype);
-}
-function doVotingClick() {
-	eventFire(document.getElementById('votinglink'), 'click');
-}
-
-//doVotingClick();
-setTimeout(doVotingClick, 200);
-</script>
 </div>
 </div>
 </div>
