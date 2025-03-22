@@ -41,7 +41,16 @@
     157101, 0,      169071,
 	];
 
-	function openExam(exam_no) {
+	function openExam(num) {
+        var exam_no;
+        if (num === undefined) {
+            var pathSegments = window.location.pathname.split("/");
+            var pageName = pathSegments.pop();
+            var pageArr = pageName.match(/.+-Q(\d+)\.html/)
+            exam_no = (pageArr !== null && pageArr[1] ? parseInt(pageArr[1], 10) : 0);
+        } else {
+            exam_no = num
+        }         
 		if (exam_no-1 >= 0 && exam_no-1 < discuss_id.length) {
 			if (typeof PASSKEY !== "undefined" && passwd !== undefined && passwd != PASSKEY) return 0;
 
@@ -52,7 +61,16 @@
 		}
 	}
 
-	function openExamTopics(exam_no) {
+	function openExamTopics(num) {
+        var exam_no;
+        if (num === undefined) {
+            var pathSegments = window.location.pathname.split("/");
+            var pageName = pathSegments.pop();
+            var pageArr = pageName.match(/.+-Q(\d+)\.html/)
+            exam_no = (pageArr !== null && pageArr[1] ? parseInt(pageArr[1], 10) : 0);
+        } else {
+            exam_no = num
+        }         
 		if (exam_no-1 >= 0 && exam_no-1 < discuss_id.length) {
 			if (typeof PASSKEY !== "undefined" && passwd !== undefined && passwd != PASSKEY) return 0;
 
