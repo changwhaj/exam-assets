@@ -251,7 +251,24 @@ def remove_exam_element(driver):
         driver.execute_script("arguments[0].remove();", driver.find_element(By.CSS_SELECTOR, 'div.action-row-container.mb-4'))
         driver.execute_script("arguments[0].remove();", driver.find_element(By.CLASS_NAME, 'all-questions-link'));
         driver.execute_script("arguments[0].remove();", driver.find_element(By.CLASS_NAME, 'discussion-meta-data'));
-        driver.execute_script("arguments[0].remove();", driver.find_element(By.CLASS_NAME, 'vote-answer-button'));        
+        driver.execute_script("arguments[0].remove();", driver.find_element(By.CLASS_NAME, 'vote-answer-button'));     
+        driver.execute_script("arguments[0].remove();", driver.find_element(By.CSS_SELECTOR, 'div.popup-content'))
+        driver.execute_script("""
+            var popup = document.getElementById('notRemoverPopup');
+            if (popup) {
+                // 바로 위의 <style> 요소 제거
+                const prev = popup.previousElementSibling;
+                if (prev && prev.tagName.toLowerCase() === 'style') {
+                    prev.remove();
+                }
+
+                // 바로 아래의 <script> 요소 제거
+                const next = popup.nextElementSibling;
+                if (next && next.tagName.toLowerCase() === 'script') {
+                    next.remove();
+                }
+            }
+        """)
         driver.execute_script("arguments[0].removeAttribute('class');", driver.find_element(By.TAG_NAME, 'html'))
         driver.execute_script("arguments[0].removeAttribute('href');", driver.find_element(By.CLASS_NAME, 'discussion-link'))
         driver.execute_script("arguments[0].removeAttribute('href');", driver.find_element(By.CLASS_NAME, 'title-username'))
