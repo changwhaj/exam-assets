@@ -3,7 +3,7 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Crect x='3' y='2' width='18' height='20' rx='3' ry='3' fill='%2300D700' stroke='black' stroke-width='2'/%3E%3Cpath d='M15 2V8H21' fill='%2300BFFF' stroke='black' stroke-width='2'/%3E%3Cline x1='6' y1='10' x2='18' y2='10' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cline x1='6' y1='14' x2='18' y2='14' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cline x1='6' y1='18' x2='12' y2='18' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cpath d='M7 19L10 22L15 15' stroke='%23ADFF00' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Crect x='3' y='2' width='18' height='20' rx='3' ry='3' fill='%2300D700' stroke='black' stroke-width='2'/%3E%3Cpath d='M15 2V8H21' fill='%2300BFFF' stroke='black' stroke-width='2'/%3E%3Cline x1='6' y1='10' x2='18' y2='10' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cline x1='6' y1='14' x2='18' y2='14' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cline x1='6' y1='18' x2='12' y2='18' stroke='%23FF6347' stroke-width='1.8'/%3E%3Cpath d='M7 19L10 22L15 15' stroke='%23ADFF00' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
 <script src="exampass.js"></script>
 </head>
 <body class="home2"><div style="position:relative;">
@@ -155,31 +155,74 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				스피드2패스트
+				스피드투패스트
 			</h5>
 </a>
 <span class="badge badge-primary">
-				높은 투표수<i class="fa fa-thumbs-up"></i>
+				높은 투표 수<i class="fa fa-thumbs-up"></i>
 </span>
-<span class="comment-date align-middle" title="화 28 9월 2021 07:38">2021-09-28 16:38</span>
+<span class="comment-date align-middle" title="2021년 9월 28일 화요일 오전 7시 38분">2021-09-28 16:38</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">해결책이 잘못된 것 같습니다.아니요/예/아니요(테스트하지 않음)여야 함 아니요: Server2는 DNS에 Server1을 사용합니다.Server1에는 131.107.50.50에 대한 host2.contoso.com 레코드가 없습니다.VNET1에 개인 영역 contoso.com에 대한 가상 네트워크 링크가 있는 경우 작동합니다.예: Server2는 DNS에 Server1을 사용합니다.Server1에는 131.107.10.15에 대한 host1.contoso.com 레코드가 있습니다.아니요: Server3은 DNS로 10.10.0.4를 사용합니다(VNET2에서 상속됨).10.10.0.4(Server1)에는 host2.contoso.com에 대한 레코드가 없습니다.VNET1의 DNS가 VNET2에 설정되어 있으므로 VNET2의 개인 영역 contoso.com에 대한 가상 네트워크 링크는 사용되지 않습니다.VNET1 DNS는 개인 영역 contoso.com을 인식하지 못합니다. VNET1에 개인 영역 contoso.com에 대한 가상 네트워크 링크가 있으면 작동합니다.</div>
+<div class="comment-content">해결책이 잘못된 것 같습니다. 아니요/예/아니요(테스트하지 않음)로 설정해야 합니다. 아니요: Server2는 Server1을 DNS로 사용합니다. Server1에는 131.107.50.50에 대한 host2.contoso.com 레코드가 없습니다. VNET1에 개인 영역 contoso.com에 대한 가상 네트워크 링크가 있는 경우 작동합니다. 예: Server2는 Server1을 DNS로 사용합니다. Server1에는 131.107.10.15에 대한 host1.contoso.com 레코드가 있습니다. 아니요: Server3은 VNET2에서 상속된 10.10.0.4를 DNS로 사용합니다. 10.10.0.4(Server1)에는 host2.contoso.com에 대한 레코드가 없습니다. VNET1의 DNS가 VNET2에 설정되어 있으므로 VNET2의 개인 영역 contoso.com에 대한 가상 네트워크 링크는 사용되지 않습니다. VNET1 DNS는 개인 영역 contoso.com을 인식하지 못합니다. VNET1에 개인 영역 contoso.com에 대한 가상 네트워크 링크가 있으면 작동합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">126</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">128</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
 </div>
 <div class="comment-replies">
 <!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1569633" id="comment-1569633">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				댄싱커비
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2025년 5월 17일 토요일 14:05">2025-05-17 23:05</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">이 질문이 처음에는 너무 헷갈렸어요. 주어진 답변을 제대로 분석하고 이해해야 했죠. 이 문제를 해결해 주신 모든 분들께 감사드립니다. 저도 동의해요. 아니요/네/아니요.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
 <!-- single_comment.html -->
 <div class="media comment-container" data-comment-id="1188400" id="comment-1188400">
 <a class="minimize-comment comment-toggle" href="#">
@@ -193,10 +236,10 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				보테와이즈맨
+				보보더와이즈먼
 			</h5>
 </a>
-<span class="comment-date align-middle" title="수 03 4월 2024 03:19">2024-04-03 12:19</span>
+<span class="comment-date align-middle" title="2024년 4월 3일 수요일 03:19">2024-04-03 12:19</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">동의합니다. NYN이어야 합니다. Server2와 Server3 모두 DNS 확인을 위해 Server1에 의존합니다.</div>
@@ -208,7 +251,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -239,7 +282,7 @@
 				더올드원
 			</h5>
 </a>
-<span class="comment-date align-middle" title="금 01 10월 2021 01:46">2021-10-01 10:46</span>
+<span class="comment-date align-middle" title="2021년 10월 1일 금요일 01:46">2021-10-01 10:46</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">나도 똑같은 걸 얻었어</div>
@@ -251,7 +294,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				업보팅됨</span>
+				추천함</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -274,19 +317,19 @@
 				알렉스_피
 			</h5>
 </a>
-<span class="comment-date align-middle" title="일 03 10월 2021 19:47">2021-10-04 04:47</span>
+<span class="comment-date align-middle" title="2021년 10월 3일 일요일 오후 7시 47분">2021-10-04 04:47</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">Server3가 DNS 서버에 10.10.0.4를 사용하는 방법!? 설명해 주시겠어요? NIC3의 경우 DNS 설정이 "가상 네트워크에서 상속"입니다. 또한 Server3는 VNET2에 있습니다. VNET2는 host2.contoso.com에 대한 레코드가 있는 개인 영역 contoso.com에 연결되어 있습니다. 따라서 Server3는 이를 해결할 수 있습니다. 3번째는 YES라고 생각합니다! NYY</div>
+<div class="comment-content">Server3가 DNS 서버로 10.10.0.4를 어떻게 사용하는 걸까요? 설명해 주시겠어요? NIC3의 DNS 설정은 "가상 네트워크에서 상속"입니다. 또한 Server3은 VNET2에 있습니다. VNET2는 host2.contoso.com에 대한 레코드가 있는 개인 영역 contoso.com에 연결되어 있습니다. 따라서 Server3은 이를 해결할 수 있습니다. 3번째는 YES라고 생각합니다! NYY</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">35</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">36</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -309,10 +352,10 @@
 				더올드원
 			</h5>
 </a>
-<span class="comment-date align-middle" title="일 17 10월 2021 18:28">2021-10-18 03:28</span>
+<span class="comment-date align-middle" title="2021년 10월 17일 일요일 18:28">2021-10-18 03:28</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">Alex-p 난 당신이 어디서 오는지 알겠어요</div>
+<div class="comment-content">Alex-p 당신이 무슨 말을 하는지 알겠어요</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -321,7 +364,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -352,19 +395,19 @@
 				엔잘렉스1
 			</h5>
 </a>
-<span class="comment-date align-middle" title="토 23 10월 2021 22:02">2021-10-24 07:02</span>
+<span class="comment-date align-middle" title="2021년 10월 23일 토요일 22:02">2021-10-24 07:02</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">Vnet2에는 DNS 10.10.10.4가 구성되어 있습니다. 이 DNS의 포워더가 Azure로 구성되지 않는 한(그리고 이 정보가 없음) 연결된 개인 영역은 영향을 미치지 않습니다.</div>
+<div class="comment-content">Vnet2에는 DNS 10.10.10.4가 구성되어 있습니다. 이 DNS의 포워더가 Azure에 구성되어 있지 않으면(그리고 이 정보가 없다면) 연결된 프라이빗 영역은 영향을 미치지 않습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">5</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">6</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -384,13 +427,13 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				샤라트 조기
+				샤라트조기
 			</h5>
 </a>
-<span class="comment-date align-middle" title="금 07 1월 2022 18:28">2022-01-08 03:28</span>
+<span class="comment-date align-middle" title="2022년 1월 7일 금요일 오후 6시 28분">2022-01-08 03:28</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">VNET2는 DNS 서버로 10.10.10.4가 없습니다. 해당 DNS 서버는 VNET1에 속한 NIC2입니다. VNET2는 host2.contoso.com의 레코드인 private.contoso.com에 연결됩니다. 따라서 해결되어야 합니다.</div>
+<div class="comment-content">VNET2에는 10.10.10.4 DNS 서버가 없습니다. 해당 DNS 서버는 VNET1에 속한 NIC2의 DNS 서버입니다. VNET2는 private.contoso.com에 연결되어 있으며, 이 주소는 host2.contoso.com의 레코드로 사용됩니다. 따라서 이 주소는 확인되어야 합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -399,7 +442,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -419,10 +462,10 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				샤라트 조기
+				샤라트조기
 			</h5>
 </a>
-<span class="comment-date align-middle" title="금 08 4월 2022 17:32">2022-04-09 02:32</span>
+<span class="comment-date align-middle" title="2022년 4월 8일 금요일 17:32">2022-04-09 02:32</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">제 말을 취소하겠습니다. NIC에서 구성된 DNS가 VNET에서 구성된 DNS보다 우선합니다.</div>
@@ -431,9 +474,9 @@
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">5</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -464,10 +507,10 @@
 				호세버추얼
 			</h5>
 </a>
-<span class="comment-date align-middle" title="수 23 3월 2022 18:44">2022-03-24 03:44</span>
+<span class="comment-date align-middle" title="2022년 3월 23일 수요일 18:44">2022-03-24 03:44</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">첫 번째 테이블을 보세요. VNET 2는 10.10.0.4로 구성되어 있습니다. 좀 지저분하죠.</div>
+<div class="comment-content">첫 번째 표를 보면 VNET 2에 10.10.0.4가 구성되어 있습니다. 좀 복잡해 보이네요.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -475,7 +518,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
 			 
-				업보팅</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -506,10 +549,10 @@
 				지피12
 			</h5>
 </a>
-<span class="comment-date align-middle" title="수 23 3월 2022 16:14">2022-03-24 01:14</span>
+<span class="comment-date align-middle" title="2022년 3월 23일 수요일 16:14">2022-03-24 01:14</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">아마도 첫 번째 테이블이 보이지 않는 건가요? VNET2는 확실히 10.10.0.4를 DNS 서버로 가지고 있습니다.</div>
+<div class="comment-content">첫 번째 테이블이 보이지 않나요? VNET2의 DNS 서버는 10.10.0.4입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -517,7 +560,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -580,10 +623,10 @@
 				csm198611
 			</h5>
 </a>
-<span class="comment-date align-middle" title="수 27 10월 2021 17:15">2021-10-28 02:15</span>
+<span class="comment-date align-middle" title="2021년 10월 27일 수요일 17:15">2021-10-28 02:15</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">내 연구실과 동일한 결과입니다.</div>
+<div class="comment-content">내 연구실에서 실시한 결과와 동일하네요.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -592,7 +635,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">7</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -623,10 +666,10 @@
 				모즈비우스_
 			</h5>
 </a>
-<span class="comment-date align-middle" title="월 21 2월 2022 07:28">2022-02-21 16:28</span>
+<span class="comment-date align-middle" title="2022년 2월 21일 월요일 오전 7시 28분">2022-02-21 16:28</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">혼란스럽습니다... * Server1은 Virtual Network 1의 DNS입니다. * Azure 개인 DNS 영역은 Virtual Network 2에 연결되어 있습니다. Virtual Network 2에서 발견되는 Server3를 상속하는 DNS가 Virtual Network 1의 Server1을 참조 DNS로 사용하는 이유는 무엇입니까? 누군가 설명해 줄 수 있습니까?</div>
+<div class="comment-content">헷갈리는 부분이 있는데요... * Server1은 Virtual Network 1의 DNS입니다. * Azure 프라이빗 DNS 영역은 Virtual Network 2에 연결되어 있습니다. Virtual Network 2에 있는 Server3을 상속하는 DNS가 Virtual Network 1의 Server1을 참조 DNS로 사용하는 이유는 무엇인가요? 누가 설명해 주시겠어요?</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -635,7 +678,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -658,7 +701,7 @@
 				모즈비우스_
 			</h5>
 </a>
-<span class="comment-date align-middle" title="월 21 2월 2022 07:30">2022-02-21 16:30</span>
+<span class="comment-date align-middle" title="2022년 2월 21일 월요일 오전 7시 30분">2022-02-21 16:30</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">피어링 때문에 Vnet2가 Vnet1의 DNS를 사용하고 있나요?</div>
@@ -670,7 +713,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
 			 
-				업보팅</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -709,10 +752,10 @@
 				[제거됨]
 			</h5>
 </a>
-<span class="comment-date align-middle" title="일 02 1월 2022 13:47">2022-01-02 22:47</span>
+<span class="comment-date align-middle" title="2022년 1월 2일 일요일 13:47">2022-01-02 22:47</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">나는 이에 동의한다. 답은 No, Yes, No여야 한다.</div>
+<div class="comment-content">저도 동의합니다. 답은 '아니요', '예', '아니요'여야 합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -721,7 +764,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -752,10 +795,10 @@
 				프르제마86
 			</h5>
 </a>
-<span class="comment-date align-middle" title="목 15 12월 2022 10:31">2022-12-15 19:31</span>
+<span class="comment-date align-middle" title="2022년 12월 15일 목요일 오전 10시 31분">2022-12-15 19:31</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">나는 이 답변에 동의한다. N/Y/NI는 이런 질문을 싫어한다. 이런 시나리오는 현실에서는 존재하지 않는다. 내가 프로덕션에서 이런 것을 본다면 엔지니어에게 소리를 지르겠다.</div>
+<div class="comment-content">N/Y/NI는 이런 질문을 싫어합니다. 이런 상황은 현실에 존재하지 않습니다. 만약 제가 프로덕션에서 이런 상황을 본다면 엔지니어들에게 큰 소리로 항의할 겁니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -764,7 +807,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">25</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -792,13 +835,13 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				이티지그11
+				itgg11
 			</h5>
 </a>
-<span class="comment-date align-middle" title="화 22 2월 2022 07:45">2022-02-22 16:45</span>
+<span class="comment-date align-middle" title="2022년 2월 22일 화요일 오전 7시 45분">2022-02-22 16:45</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">답변 3은 올바르지 않습니다. 실험실에서 테스트해서 확인해야 했습니다. 답변 3은 YES입니다. Server3은 host2.contoso.com을 확인할 수 있습니다. 이유: Server3은 host2.contoso.com 131.107.50.50에 대한 "A" 레코드가 포함된 개인 DNS 영역에 연결된 VNET2에 연결되어 있습니다.</div>
+<div class="comment-content">3번 답은 틀렸습니다. 실험실에서 직접 테스트해서 확인해야 했습니다. 3번 답은 '예'입니다. Server3은 host2.contoso.com을 확인할 수 있습니다. 이유: Server3은 VNET2에 연결되어 있으며, VNET2는 host2.contoso.com에 대한 "A" 레코드가 포함된 개인 DNS 영역(131.107.50.50)에 연결되어 있습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -807,7 +850,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">25</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -830,10 +873,10 @@
 				마법이 일어난다
 			</h5>
 </a>
-<span class="comment-date align-middle" title="목 31 3월 2022 19:47">2022-04-01 04:47</span>
+<span class="comment-date align-middle" title="2022년 3월 31일 목요일 19:47">2022-04-01 04:47</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">랩에 피어링을 설정했는지 정말 확신하시나요? Server3은 실제로 DNS Server1에 도달하여 다른 IP로 변환합니다. No/Yes/No인 것 같습니다.</div>
+<div class="comment-content">연구실에도 피어링을 설정하셨나요? 서버 3은 실제로 서버 1의 DNS에 접속하여 다른 IP로 연결될 겁니다. 아니요/예/아니요로 설정되어 있는 것 같습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -842,7 +885,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">6</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -865,7 +908,7 @@
 				제루81
 			</h5>
 </a>
-<span class="comment-date align-middle" title="목 08 2월 2024 09:21">2024-02-08 18:21</span>
+<span class="comment-date align-middle" title="2024년 2월 8일 목요일 오전 9시 21분">2024-02-08 18:21</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">피어링에 대한 내용을 어디서 읽어보셨나요?</div>
@@ -877,7 +920,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
 			 
-				업보팅</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -900,7 +943,7 @@
 				제루81
 			</h5>
 </a>
-<span class="comment-date align-middle" title="목 08 2월 2024 09:25">2024-02-08 18:25</span>
+<span class="comment-date align-middle" title="2024년 2월 8일 목요일 오전 9시 25분">2024-02-08 18:25</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">알았어요</div>
@@ -912,7 +955,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
 			 
-				업보팅</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -976,21 +1019,21 @@
 			</h5>
 </a>
 <span class="badge badge-primary">
-				높은 투표수<i class="fa fa-thumbs-up"></i>
+				높은 투표 수<i class="fa fa-thumbs-up"></i>
 </span>
-<span class="comment-date align-middle" title="화 05 10월 2021 14:17">2021-10-05 23:17</span>
+<span class="comment-date align-middle" title="2021년 10월 5일 화요일 오후 2시 17분">2021-10-05 23:17</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">방금 직접 테스트해 보았는데, 결과는 다음과 같습니다. 서버 2는 host2.contoso.com을 확인합니다. 아니요. 서버 1에서 호스팅하는 DNS 영역에는 host1만 있으므로 확인할 수 없습니다. 서버 2에서 server1을 DNS 서버로 사용하도록 설정하면 다른 DNS 서버를 사용하지 않습니다. 서버 2는 server1에서 호스팅하는 DNS 주소인 131.107.10.15에 대해 host1.contoso.com을 확인합니다. 서버 3은 Azure에서 호스팅하는 DNS 주소인 131.107.50.50에 대해 host2.contoso.com을 확인합니다. 서버 3도 Azure에서 호스팅하는 DNS 주소인 host1.contoso.com을 확인할 수 있습니다(물론). 도움이 되길 바랍니다 :)</div>
+<div class="comment-content">방금 직접 테스트해 봤는데, 결과는 다음과 같았습니다. 서버 2는 host2.contoso.com을 확인합니다. 아니요. 서버 1에서 호스팅하는 DNS 영역에는 host1만 있으므로 확인할 수 없습니다. 서버 2에서 server1을 DNS 서버로 사용하도록 설정하면 다른 DNS 서버를 사용하지 않습니다. 서버 2는 host1.contoso.com을 확인합니다. 예: 서버 1에서 호스팅하는 DNS 주소, 즉 131.107.10.15입니다. 서버 3은 host2.contoso.com을 Azure에서 호스팅하는 DNS 주소, 즉 131.107.50.50으로 확인합니다. 서버 3도 host1.contoso.com을 Azure에서 호스팅하는 DNS 주소로 확인할 수 있습니다(물론). 도움이 되셨으면 좋겠습니다 :)</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">64</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">66</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -1013,19 +1056,19 @@
 				슬림셰이디
 			</h5>
 </a>
-<span class="comment-date align-middle" title="화 05 10월 2021 14:36">2021-10-05 23:36</span>
+<span class="comment-date align-middle" title="2021년 10월 5일 화요일 오후 2시 36분">2021-10-05 23:36</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">사실 다시 댓글을 읽은 후에 VNET2에서 server1 DNS 서버를 설정하는 것을 잊었다는 것을 알았습니다. 이렇게 하고 서버를 업데이트했을 때 server3은 server1에서 호스팅하는 DNS 서버를 사용하고 있었기 때문에 더 이상 host2.contoso.com을 확인할 수 없었습니다. 그래서 답은 NO-YES-NO라고 말합니다.</div>
+<div class="comment-content">사실 다시 댓글을 읽은 후 VNET2에서 server1 DNS 서버를 설정하는 것을 잊었다는 것을 알았습니다. 이렇게 하고 서버를 업데이트했을 때 server3은 server1에서 호스팅하는 DNS 서버를 사용하고 있었기 때문에 더 이상 host2.contoso.com을 확인할 수 없었습니다. 그래서 답은 NO-YES-NO라고 말합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">57</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">59</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -1053,13 +1096,13 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				mdw시스템운영
+				mdwSysOps
 			</h5>
 </a>
-<span class="comment-date align-middle" title="일 05 3월 2023 11:59">2023-03-05 20:59</span>
+<span class="comment-date align-middle" title="2023년 3월 5일 일요일 오전 11시 59분">2023-03-05 20:59</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">이것이 정답이에요!!</div>
+<div class="comment-content">이것이 정답입니다!!</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -1068,7 +1111,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -1096,13 +1139,13 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				이지엠엘
+				이제이엠엘
 			</h5>
 </a>
-<span class="comment-date align-middle" title="수 13 10월 2021 13:35">2021-10-13 22:35</span>
+<span class="comment-date align-middle" title="2021년 10월 13일 수요일 13:35">2021-10-13 22:35</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">slimshady, 당신의 테스트에서 vnet을 들여다보셨나요? 감사합니다.</div>
+<div class="comment-content">slimshady님, 테스트에서 VNET을 살펴보셨나요? 감사합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -1111,7 +1154,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				업보팅됨</span>
+				추천함</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -1142,7 +1185,7 @@
 				고포아딜
 			</h5>
 </a>
-<span class="comment-date align-middle" title="수 31 1월 2024 11:11">2024-01-31 20:11</span>
+<span class="comment-date align-middle" title="2024년 1월 31일 수요일 11:11">2024-01-31 20:11</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">slimshady의 의견에 동의해요!</div>
@@ -1154,7 +1197,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -1169,6 +1212,95 @@
 	</div>
 </div>
 </div>
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1413835" id="comment-1413835">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				8ac3742
+			</h5>
+</a>
+<span class="badge badge-primary">
+				가장 최근<i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="2025년 3월 31일 월요일 00:01">2025-03-31 09:01</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">1. N 2. Y 3.N Server 2(NIC2)와 Server3(NIC1)의 DNS 서버는 Server1입니다. NIC의 DNS 서버는 vNet의 DNS 서버보다 우선하므로 개인 DNS 영역 contso.com은 Server 3의 DNS 서버가 아닙니다. server1에 A 레코드가 있는 것은 host1.contoso.com뿐입니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1401747" id="comment-1401747">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				그린틱
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2025년 3월 22일 토요일 오전 4시 14분">2025-03-22 13:14</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">이 질문은 당신이 이 얽히고설킨 사실을 정리할 수 있는지 테스트하고 싶습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+			 
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
 <!-- Nesting end -->
 </div>
 </div>
@@ -1193,10 +1325,7 @@
 				아메드 사이드 19872025
 			</h5>
 </a>
-<span class="badge badge-primary">
-				가장 최근<i class="fa fa-clock-o"></i>
-</span>
-<span class="comment-date align-middle" title="월 20 1월 2025 11:55">2025-01-20 20:55</span>
+<span class="comment-date align-middle" title="2025년 1월 20일 월요일 오전 11시 55분">2025-01-20 20:55</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">테스트 랩 답변 100% 참은 NYN입니다</div>
@@ -1206,9 +1335,9 @@
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
 			 
-				업보팅</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -1236,13 +1365,13 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				납달리
+				네프탈리
 			</h5>
 </a>
-<span class="comment-date align-middle" title="월 11 11월 2024 23:34">2024-11-12 08:34</span>
+<span class="comment-date align-middle" title="2024년 11월 11일 월요일 23:34">2024-11-12 08:34</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">Server2는 host2.contoso.com을 131.107.50.50으로 확인합니다. Server2는 VNET1에 있으며, 가상 네트워크에서 DNS 구성을 상속받았기 때문에 기본적으로 Azure에서 제공하는 DNS 서버를 사용합니다. Azure에서 제공하는 DNS 서버는 VNET2에 연결된 개인 DNS 영역 contoso.com에 대한 지식이 없습니다. 따라서 Server2는 host2.contoso.com을 131.107.50.50으로 확인할 수 없습니다. 해당 레코드는 VNET2에 연결된 Azure 개인 DNS 영역에서만 사용할 수 있기 때문입니다. 답변: 아니요 Server2는 host1.contoso.com을 131.107.10.15로 확인합니다. 이전 사례와 마찬가지로 Server2는 VNET1에 있으며 Azure에서 제공하는 DNS 서버에 의존합니다. host1.contoso.com에 대한 레코드는 역시 VNET1에 있는 Server1에서 호스팅하는 DNS 서버에 있습니다. Server1이 contoso.com 영역에 대한 DNS 서버로 구성되었으므로 Server2는 host1.contoso.com을 131.107.10.15로 확인할 수 있습니다. 답변: 예</div>
+<div class="comment-content">Server2는 host2.contoso.com을 131.107.50.50으로 확인합니다. Server2는 VNET1에 있으며, VNET1은 가상 네트워크에서 DNS 구성을 상속받기 때문에 기본적으로 Azure에서 제공하는 DNS 서버를 사용합니다. Azure에서 제공하는 DNS 서버는 VNET2에 연결된 프라이빗 DNS 영역 contoso.com에 대한 정보를 가지고 있지 않습니다. 따라서 Server2는 host2.contoso.com을 131.107.50.50으로 확인할 수 없습니다. 해당 레코드는 VNET2에 연결된 Azure 프라이빗 DNS 영역에서만 사용할 수 있기 때문입니다. 답변: 아니요. Server2는 host1.contoso.com을 131.107.10.15로 확인합니다. 이전 사례와 마찬가지로 Server2는 VNET1에 있으며 Azure에서 제공하는 DNS 서버를 사용합니다. host1.contoso.com에 대한 레코드는 Server1이 호스팅하는 DNS 서버에 존재하며, 이 서버 역시 VNET1에 있습니다. Server1이 contoso.com 영역의 DNS 서버로 구성되어 있으므로 Server2는 host1.contoso.com을 131.107.10.15로 확인할 수 있습니다. 답변: 예</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -1251,7 +1380,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
 			 
-				업보팅</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -1282,19 +1411,19 @@
 				단코
 			</h5>
 </a>
-<span class="comment-date align-middle" title="월 14 10월 2024 23:36">2024-10-15 08:36</span>
+<span class="comment-date align-middle" title="2024년 10월 14일 월요일 23:36">2024-10-15 08:36</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">NYY Server2는 host2.contoso.com을 131.107.50.50으로 확인합니다. 아니요: Server2는 VNET1에 있으며 DNS 서버는 가상 네트워크에서 상속합니다. VNET2에 연결된 개인 DNS 영역에 직접 액세스할 수 없습니다. 따라서 이 레코드를 확인할 수 없습니다. Server2는 host1.contoso.com을 131.107.10.15로 확인합니다. 예: Server2는 host1.contoso.com이 공개 DNS 영역이고 Azure에서 제공하는 DNS를 통해 액세스할 수 있으므로 이를 확인할 수 있습니다. Server3은 host2.contoso.com을 131.107.50.50으로 확인합니다. 예: Server3은 개인 DNS 영역에 대한 가상 네트워크 링크가 있는 VNET2에 있습니다. 따라서 host2.contoso.com을 확인할 수 있습니다.</div>
+<div class="comment-content">NYY Server2는 host2.contoso.com을 131.107.50.50으로 확인합니다. 아니요: Server2는 VNET1에 있으며, 해당 DNS 서버는 가상 네트워크에서 상속합니다. VNET2에 연결된 프라이빗 DNS 영역에 직접 액세스할 수 없습니다. 따라서 이 레코드를 확인할 수 없습니다. Server2는 host1.contoso.com을 131.107.10.15로 확인합니다. 예: Server2는 host1.contoso.com이 공용 DNS 영역이고 Azure에서 제공하는 DNS를 통해 액세스할 수 있으므로 이를 확인할 수 있습니다. Server3은 host2.contoso.com을 131.107.50.50으로 확인합니다. 예: Server3은 VNET2에 있으며, 해당 VNET2는 프라이빗 DNS 영역에 대한 가상 네트워크 링크를 가지고 있습니다. 따라서 host2.contoso.com을 확인할 수 있습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
 			 
-				업보팅</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -1325,10 +1454,10 @@
 				[제거됨]
 			</h5>
 </a>
-<span class="comment-date align-middle" title="금 27 9월 2024 13:10">2024-09-27 22:10</span>
+<span class="comment-date align-middle" title="2024년 9월 27일 금요일 13:10">2024-09-27 22:10</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">틀렸어요 아니요 예 아니요</div>
+<div class="comment-content">틀림 아니요 예 아니요</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -1337,7 +1466,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				업보팅됨</span>
+				추천함</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -1365,13 +1494,13 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				감사합니다
+				타샤코리
 			</h5>
 </a>
-<span class="comment-date align-middle" title="수 2024년 3월 20일 15:51">2024-03-21 00:51</span>
+<span class="comment-date align-middle" title="2024년 3월 20일 수요일 15:51">2024-03-21 00:51</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">아니오 예 예</div>
+<div class="comment-content">아니요 예 예</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -1380,7 +1509,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -1411,10 +1540,10 @@
 				지미카스프
 			</h5>
 </a>
-<span class="comment-date align-middle" title="일 03 3월 2024 18:23">2024-03-04 03:23</span>
+<span class="comment-date align-middle" title="2024년 3월 3일 일요일 오후 6시 23분">2024-03-04 03:23</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">답은 YNY입니다. VNet의 기본 DNS 설정을 사용할 경우 VNet에 연결된 프라이빗 DNS 영역이 먼저 쿼리됩니다. Azure에서 제공하는 DNS 서버가 다음으로 쿼리됩니다. 그러나 VNet에 사용자 지정 DNS 서버가 정의된 경우 해당 VNet에 연결된 프라이빗 DNS 영역은 사용자 지정 설정이 이름 확인 순서를 재정의하기 때문에 자동으로 쿼리되지 않습니다. https://learn.microsoft.com/en-us/azure/dns/private-dns-privatednszone#private-dns-zone-resolution</div>
+<div class="comment-content">정답은 YNY입니다. VNet의 기본 DNS 설정을 사용하면 VNet에 연결된 프라이빗 DNS 영역이 먼저 쿼리됩니다. Azure에서 제공하는 DNS 서버가 다음으로 쿼리됩니다. 그러나 VNet에 사용자 지정 DNS 서버가 정의된 경우, 사용자 지정 설정이 이름 확인 순서를 재정의하기 때문에 해당 VNet에 연결된 프라이빗 DNS 영역은 자동으로 쿼리되지 않습니다. https://learn.microsoft.com/en-us/azure/dns/private-dns-privatednszone#private-dns-zone-resolution</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -1423,7 +1552,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				업보팅됨</span>
+				추천함</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -1446,10 +1575,10 @@
 				지미카스프
 			</h5>
 </a>
-<span class="comment-date align-middle" title="일 03 3월 2024 18:24">2024-03-04 03:24</span>
+<span class="comment-date align-middle" title="2024년 3월 3일 일요일 오후 6시 24분">2024-03-04 03:24</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">미안합니다. 제 말은 NYN이에요.</div>
+<div class="comment-content">죄송합니다. NYN이라고 말하고 싶습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -1458,7 +1587,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">5</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -1497,10 +1626,10 @@
 				러블리그루비
 			</h5>
 </a>
-<span class="comment-date align-middle" title="월 26 2월 2024 05:50">2024-02-26 14:50</span>
+<span class="comment-date align-middle" title="2024년 2월 26일 월요일 오전 5시 50분">2024-02-26 14:50</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">Chat GPT가 여기보다 더 잘 답변해 줄 수 있습니다. Server2가 host2.contoso.com을 131.107.50.50으로 변환합니다. YES입니다. Server2가 host1.contoso.com을 131.107.10.15로 변환하지 않습니다. 정답은 YES입니다. Server2가 host1.contoso.com을 131.107.10.15로 변환합니다. Server3이 host2.contoso.com을 131.107.50.50으로 변환합니다. YES입니다.</div>
+<div class="comment-content">Chat GPT가 여기보다 더 나은 답변을 드릴 수 있습니다. 서버 2는 host2.contoso.com을 131.107.50.50으로 확인합니다. YES입니다. 서버 2는 host1.contoso.com을 131.107.10.15로 확인하지 않습니다. 정답은 YES입니다. 서버 2는 host1.contoso.com을 131.107.10.15로 확인합니다. 서버 3은 host2.contoso.com을 131.107.50.50으로 확인합니다. YES입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -1509,7 +1638,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
 			 
-				업보팅</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -1532,10 +1661,10 @@
 				조쉬219
 			</h5>
 </a>
-<span class="comment-date align-middle" title="수 20 11월 2024 11:08">2024-11-20 20:08</span>
+<span class="comment-date align-middle" title="2024년 11월 20일 수요일 11:08">2024-11-20 20:08</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">GPT 채팅을 계속하면 몇 분 후에 NO YES NO라고 나올 겁니다 :-) 나중에 감사 인사를 전해주세요</div>
+<div class="comment-content">GPT 채팅을 계속하면 몇 분 후에 NO YES NO라고 나올 거예요 :-) 나중에 감사 인사를 전해주세요</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -1544,7 +1673,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
 			 
-				업보팅</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -1583,10 +1712,10 @@
 				rnd3131
 			</h5>
 </a>
-<span class="comment-date align-middle" title="일 21 1월 2024 21:54">2024-01-22 06:54</span>
+<span class="comment-date align-middle" title="2024년 1월 21일 일요일 21:54">2024-01-22 06:54</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">피어링된 VNet의 DNS 독립적인 DNS 구성: Azure의 각 VNet은 자체 DNS 서버로 구성할 수 있습니다. VNet을 피어링할 때 이러한 구성은 독립적으로 유지됩니다. VNet은 피어링된 VNet의 DNS 서버 설정을 상속하거나 재정의하지 않습니다. 피어링된 VNet 간 확인: 피어링된 VNet의 리소스는 해당 VNet의 DNS 설정에 따라 DNS 이름을 확인할 수 있습니다. VNet A의 리소스가 VNet B의 DNS 서버에서 관리하는 이름을 확인해야 하는 경우 VNet B의 DNS 서버에 액세스할 수 있고 필요한 DNS 전달 또는 조건부 전달이 설정되어 있으면 이를 수행할 수 있습니다. 사용자 지정 DNS 시나리오: 사용자 지정 DNS 서버가 있는 시나리오에서는 피어링된 VNet에서 적절한 이름 확인을 보장하기 위해 DNS 전달 또는 조건부 전달을 구성해야 할 수 있습니다. Azure 제공 DNS: Azure 제공 DNS를 사용하는 경우 Azure의 리소스(예: VM)에 대한 이름 확인은 추가 구성 없이 피어링된 VNet에서 작동합니다.</div>
+<div class="comment-content">피어링된 VNet의 DNS 독립 DNS 구성: Azure의 각 VNet은 자체 DNS 서버로 구성할 수 있습니다. VNet을 피어링하면 이러한 구성은 독립적으로 유지됩니다. VNet은 피어링된 VNet의 DNS 서버 설정을 상속하거나 재정의하지 않습니다. 피어링된 VNet 간 확인: 피어링된 VNet의 리소스는 해당 VNet의 DNS 설정에 따라 DNS 이름을 확인할 수 있습니다. VNet A의 리소스가 VNet B의 DNS 서버에서 관리하는 이름을 확인해야 하는 경우 VNet B의 DNS 서버에 액세스할 수 있고 필요한 DNS 전달 또는 조건부 전달이 설정되어 있으면 이를 수행할 수 있습니다. 사용자 지정 DNS 시나리오: 사용자 지정 DNS 서버가 있는 시나리오에서는 피어링된 VNet에서 적절한 이름 확인을 보장하기 위해 DNS 전달 또는 조건부 전달을 구성해야 할 수 있습니다. Azure 제공 DNS: Azure 제공 DNS를 사용하는 경우 Azure의 리소스(예: VM)에 대한 이름 확인은 추가 구성 없이 피어링된 VNet에서 작동합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -1595,7 +1724,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -1623,13 +1752,13 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				잭키_시험
+				재키_시험
 			</h5>
 </a>
-<span class="comment-date align-middle" title="목 21 12월 2023 05:51">2023-12-21 14:51</span>
+<span class="comment-date align-middle" title="2023년 12월 21일 목요일 오전 5시 51분">2023-12-21 14:51</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">진짜 엉터리 디자인이네요. 엔지니어를 해고하고 이 문제를 해결하세요.</div>
+<div class="comment-content">정말 엉터리 디자인이네요. 엔지니어를 해고하고 이 문제를 해결하세요.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -1638,7 +1767,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">6</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -1669,19 +1798,19 @@
 				프리스완
 			</h5>
 </a>
-<span class="comment-date align-middle" title="목 28 9월 2023 17:59">2023-09-29 02:59</span>
+<span class="comment-date align-middle" title="2023년 9월 28일 목요일 17:59">2023-09-29 02:59</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">서버 2가 서버 1 DNS에 연결합니다. 1. 아니요 - 호스트 2에 대한 항목이 없습니다. 2. 예 - 호스트 1이 131.10710.15를 찾았습니다. 서버 3이 VNET2를 사용했습니다. 3. 예 - 호스트 2가 131.107.50.50으로 발견되었습니다. 해결되었습니다.</div>
+<div class="comment-content">서버 2가 서버 1 DNS에 연결합니다. 1. 아니요 - 호스트 2에 대한 항목이 없습니다. 2. 예 - 호스트 1이 131.10710.15를 찾았습니다. 서버 3이 VNET2를 사용했습니다. 3. 예 - 호스트 2가 131.107.50.50으로 발견되었습니다. 해결됨</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -1712,10 +1841,10 @@
 				일렉트루스
 			</h5>
 </a>
-<span class="comment-date align-middle" title="금 18 8월 2023 16:42">2023-08-19 01:42</span>
+<span class="comment-date align-middle" title="2023년 8월 18일 금요일 16:42">2023-08-19 01:42</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">오늘 시험은 2023년 8월 18일입니다. 첫 번째 질문은 달랐습니다. Server1이었습니다.</div>
+<div class="comment-content">오늘 시험은 2023년 8월 18일입니다. 첫 번째 문제가 달랐는데, Server1이었습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -1724,7 +1853,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">5</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -1755,19 +1884,19 @@
 				노만말릭101
 			</h5>
 </a>
-<span class="comment-date align-middle" title="금 18 8월 2023 11:22">2023-08-18 20:22</span>
+<span class="comment-date align-middle" title="2023년 8월 18일 금요일 오전 11시 22분">2023-08-18 20:22</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">도대체 뭐야? 두 번째 질문마다 혼란이 있어. 왜 엄청난 돈을 지불한 후에도 정확한 답변을 얻을 수 없는 거지?</div>
+<div class="comment-content">도대체 뭐야? 두 번째 질문마다 헷갈리네. 왜 엄청난 돈을 내고도 정확한 답을 얻을 수 없는 거지?</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">6</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">7</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -1795,13 +1924,13 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				콰덩인포2
+				쿼크둥인포2
 			</h5>
 </a>
-<span class="comment-date align-middle" title="월 07 8월 2023 13:24">2023-08-07 22:24</span>
+<span class="comment-date align-middle" title="2023년 8월 7일 월요일 13:24">2023-08-07 22:24</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">서버 2 =&gt; NIC2 =&gt; 10.10.0.4 =&gt; host2.contoso.com =&gt; 항목 없음 =&gt; 없음 서버 2 =&gt; NIC2 =&gt; 10.10.0.4 =&gt; host1.contoso.com =&gt; 131.107.10.15 =&gt; 예 서버 3 =&gt; NIC3 =&gt; VNET2 =&gt; 10.10.0.4 =&gt; host2.contoso.com =&gt; 항목 없음 =&gt; 없음</div>
+<div class="comment-content">서버 2 =&gt; NIC2 =&gt; 10.10.0.4 =&gt; host2.contoso.com =&gt; 항목 없음 =&gt; 없음 서버 2 =&gt; NIC2 =&gt; 10.10.0.4 =&gt; host1.contoso.com =&gt; 131.107.10.15 =&gt; 있음 서버 3 =&gt; NIC3 =&gt; VNET2 =&gt; 10.10.0.4 =&gt; host2.contoso.com =&gt; 항목 없음 =&gt; 없음</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -1810,7 +1939,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">15</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -1841,7 +1970,7 @@
 				호세테1106
 			</h5>
 </a>
-<span class="comment-date align-middle" title="금 21 7월 2023 10:07">2023-07-21 19:07</span>
+<span class="comment-date align-middle" title="2023년 7월 21일 금요일 오전 10시 7분">2023-07-21 19:07</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">NYN이 맞습니다!</div>
@@ -1853,7 +1982,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				업보팅됨</span>
+				추천함</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -1884,10 +2013,10 @@
 				레이자31
 			</h5>
 </a>
-<span class="comment-date align-middle" title="토 24 6월 2023 10:49">2023-06-24 19:49</span>
+<span class="comment-date align-middle" title="2023년 6월 24일 토요일 오전 10시 49분">2023-06-24 19:49</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">사이트에 제공된 답변에 왜 이렇게 많은 오답이 있는지 이해할 수 없습니다. 시험 주제는 더 나아져야 합니다.</div>
+<div class="comment-content">사이트에 제공된 답변에 왜 이렇게 많은 오답이 있는지 이해가 안 됩니다. 시험 주제를 개선해야 합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -1896,7 +2025,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">9</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -1916,13 +2045,13 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				누르 살만
+				누르살만
 			</h5>
 </a>
-<span class="comment-date align-middle" title="목 6월 29, 2023 18:47">2023-06-30 03:47</span>
+<span class="comment-date align-middle" title="2023년 6월 29일 목요일 18:47">2023-06-30 03:47</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">실제 마이크로소프트 시험에서 ET와 같은 잘못된 답을 선택하지 않도록 주의하세요. 알고리즘이 있기 때문에 평생 금지될 수 있습니다.</div>
+<div class="comment-content">실제 마이크로소프트 시험에서 ET와 같은 오답을 선택하지 않도록 주의하세요. 알고리즘이 있기 때문에 평생 접속이 금지될 수 있습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -1931,7 +2060,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">6</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -1954,10 +2083,10 @@
 				인디429
 			</h5>
 </a>
-<span class="comment-date align-middle" title="목 21 12월 2023 16:31">2023-12-22 01:31</span>
+<span class="comment-date align-middle" title="2023년 12월 21일 목요일 16:31">2023-12-22 01:31</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">그것을 어떻게 아시나요?</div>
+<div class="comment-content">어떻게 그걸 아셨나요?</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -1966,7 +2095,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -2013,10 +2142,10 @@
 				랜덤닉네임
 			</h5>
 </a>
-<span class="comment-date align-middle" title="수 21 6월 2023 16:02">2023-06-22 01:02</span>
+<span class="comment-date align-middle" title="2023년 6월 21일 수요일 16:02">2023-06-22 01:02</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">N,Y,Y에 동의합니다. hanyahmed의 의견이 가장 타당합니다. box3은 https://learn.microsoft.com/en-us/azure/dns/private-dns-virtual-network-links에서 확인하세요. "Azure에서 개인 DNS 영역을 만든 후에는 가상 네트워크를 연결해야 합니다. 연결되면 해당 가상 네트워크에 호스팅된 VM이 개인 DNS 영역에 액세스할 수 있습니다. 모든 개인 DNS 영역에는 가상 네트워크 링크 자식 리소스 모음이 있습니다. 이러한 리소스 각각은 가상 네트워크에 대한 연결을 나타냅니다. 가상 네트워크는 등록 또는 확인 가상 네트워크로 개인 DNS 영역에 연결될 수 있습니다."</div>
+<div class="comment-content">N, Y, Y의 의견에 동의합니다. hanyahmed의 의견이 가장 타당합니다. 3번 항목은 https://learn.microsoft.com/en-us/azure/dns/private-dns-virtual-network-links를 참조하세요. "Azure에서 개인 DNS 영역을 만든 후에는 가상 네트워크를 연결해야 합니다. 연결되면 해당 가상 네트워크에 호스팅된 VM이 개인 DNS 영역에 액세스할 수 있습니다. 모든 개인 DNS 영역에는 가상 네트워크 링크 자식 리소스 모음이 있습니다. 이러한 각 리소스는 가상 네트워크에 대한 연결을 나타냅니다. 가상 네트워크는 등록 또는 확인 가상 네트워크로 개인 DNS 영역에 연결될 수 있습니다."</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -2025,7 +2154,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -2056,10 +2185,10 @@
 				피코707
 			</h5>
 </a>
-<span class="comment-date align-middle" title="월 05 6월 2023 17:29">2023-06-06 02:29</span>
+<span class="comment-date align-middle" title="2023년 6월 5일 월요일 오후 5시 29분">2023-06-06 02:29</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">저는 이렇게 봅니다. Server2 =&gt; NIC2 =&gt; NIC2 DNS 10.0.0.4 = YES Server2 =&gt; NIC2 =&gt; NIC2 DNS 10.0.0.4 = YES Server3 =&gt; NIC3 =&gt; VNET2 DNS 제공 10.0.0.4 = YES</div>
+<div class="comment-content">저는 이렇게 생각합니다. Server2 =&gt; NIC2 =&gt; NIC2 DNS 10.0.0.4 = 예 Server2 =&gt; NIC2 =&gt; NIC2 DNS 10.0.0.4 = 예 Server3 =&gt; NIC3 =&gt; VNET2 DNS 제공 10.0.0.4 = 예</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -2068,7 +2197,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				업보팅됨</span>
+				추천함</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -2096,10 +2225,10 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				샤미안지
+				시아미안지
 			</h5>
 </a>
-<span class="comment-date align-middle" title="수 24 5월 2023 11:40">2023-05-24 20:40</span>
+<span class="comment-date align-middle" title="2023년 5월 24일 수요일 11:40">2023-05-24 20:40</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">정답은 No/Yes/No 입니다.</div>
@@ -2111,7 +2240,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -2142,10 +2271,10 @@
 				프리스완
 			</h5>
 </a>
-<span class="comment-date align-middle" title="토 22 4월 2023 05:40">2023-04-22 14:40</span>
+<span class="comment-date align-middle" title="2023년 4월 22일 토요일 오전 5시 40분">2023-04-22 14:40</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">1. 아니요(서버 2 – NIC2는 서버 1 DNS를 기준으로 확인) 2. 예(서버 2 – NIC2는 서버 1 DNS를 기준으로 확인) 3. 예(서버 2 – NIC3은 VNET2를 상속하여 확인)</div>
+<div class="comment-content">1. 아니요(서버 2 – NIC2는 서버 1 DNS를 기준으로 확인됨) 2. 예(서버 2 – NIC2는 서버 1 DNS를 기준으로 확인됨) 3. 예(서버 2 – NIC3은 VNET2를 상속하여 확인됨)</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -2154,7 +2283,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">8</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -2185,10 +2314,10 @@
 				구퍼
 			</h5>
 </a>
-<span class="comment-date align-middle" title="월 03 4월 2023 10:32">2023-04-03 19:32</span>
+<span class="comment-date align-middle" title="2023년 4월 3일 월요일 오전 10시 32분">2023-04-03 19:32</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">Server2 = Nic2 - DNS 서버 10.10.0.4 = A 레코드 Host2.contoso.com = 사용할 수 없음 Server2 = Nic2 - DNS 서버 10.10.0.4 = A 레코드 Host1.contoso.com = 131.107.10.15 Server3 = Nic3 - Azure 개인 DNS = A 레코드 Host2.contoso.com = 131.107.50.50 답은 다음과 같습니다. NYY</div>
+<div class="comment-content">Server2 = Nic2 - DNS 서버 10.10.0.4 = A-레코드 Host2.contoso.com = 사용할 수 없음 Server2 = Nic2 - DNS 서버 10.10.0.4 = A-레코드 Host1.contoso.com = 131.107.10.15 Server3 = Nic3 - Azure 개인 DNS = A-레코드 Host2.contoso.com = 131.107.50.50 정답은 다음과 같습니다. NYY</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -2197,7 +2326,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">7</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -2228,10 +2357,10 @@
 				램스_84zO6n
 			</h5>
 </a>
-<span class="comment-date align-middle" title="수 29 3월 2023 19:46">2023-03-30 04:46</span>
+<span class="comment-date align-middle" title="2023년 3월 29일 수요일 19:46">2023-03-30 04:46</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">- [ ] 아니요 - Host2는 개인 영역의 A 레코드입니다. Server2는 개인 영역에 연결되지 않은 VNET1에 있습니다. - [ ] 예 - host1은 개인 영역과 공개 영역에 모두 있습니다. Server2는 공개 영역에 액세스할 수 있으며 host1을 131.107.10.15 IP로 확인합니다. - [ ] 예. - host2는 개인 영역에만 있습니다. VNET2가 개인 영역에 연결되었습니다. Server3은 VNET2에 있으며 host2를 131.107.50.50으로 확인합니다.</div>
+<div class="comment-content">- [ ] 아니요 - Host2는 프라이빗 영역의 A 레코드입니다. Server2는 프라이빗 영역에 연결되지 않은 VNET1에 있습니다. - [ ] 예 - Host1은 프라이빗 영역과 퍼블릭 영역 모두에 있습니다. Server2는 퍼블릭 영역에 액세스할 수 있으며 Host1의 IP 주소를 131.107.10.15로 확인합니다. - [ ] 예 - Host2는 프라이빗 영역에만 있습니다. VNET2는 프라이빗 영역에 연결되어 있습니다. Server3은 VNET2에 있으며 Host2의 IP 주소를 131.107.50.50으로 확인합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -2240,7 +2369,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -2271,10 +2400,10 @@
 				커트맥거트
 			</h5>
 </a>
-<span class="comment-date align-middle" title="일 19 2월 2023 17:20">2023-02-20 02:20</span>
+<span class="comment-date align-middle" title="2023년 2월 19일 일요일 17:20">2023-02-20 02:20</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">vnet1은 azure dns를 사용합니다. vnet2는 azure private zone contoso.com에 연결되어 있지만 vnet2는 10.0.0.4 server1 dns를 사용합니다. . server2 nic 2는 vnet1에 있지만 nic는 10.0.0.4 dns를 지정합니다. server3 nic 3은 vnet2에 있으며 vnet2에서 상속된 10.0.0.4 dns를 사용합니다. . 10.0.0.4 server1 dns에 host2 레코드가 없습니다. 10.0.0.4 server1 dns에 따르면 host1은 .15 주소에 있습니다. . 아니요, server2는 host2를 확인할 수 없습니다. 예, server2는 host1을 .15 주소로 확인합니다. 아니요, server3은 host2를 확인할 수 없습니다.</div>
+<div class="comment-content">vnet1은 Azure DNS를 사용합니다. vnet2는 Azure 개인 영역 contoso.com에 연결되어 있지만 vnet2는 10.0.0.4 server1 DNS를 사용합니다. . server2 NIC 2는 vnet1에 있지만 NIC는 10.0.0.4 DNS를 지정합니다. . server3 NIC 3은 vnet2에 있으며 vnet2에서 상속된 10.0.0.4 DNS를 사용합니다. . 10.0.0.4 server1 DNS에 host2 레코드가 없습니다. 10.0.0.4 server1 DNS에 따르면 host1은 .15 주소에 있습니다. . 아니요, server2는 host2를 확인할 수 없습니다. 예, server2는 host1을 .15 주소로 확인합니다. 아니요, server3은 host2를 확인할 수 없습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -2283,7 +2412,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -2314,10 +2443,10 @@
 				젤크
 			</h5>
 </a>
-<span class="comment-date align-middle" title="일 12 2월 2023 03:36">2023-02-12 12:36</span>
+<span class="comment-date align-middle" title="2023년 2월 12일 일요일 오전 3시 36분">2023-02-12 12:36</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">NYN이 답입니다. 1. 사용자 지정 DNS 서버에서 해결되지 않음1 2. 사용자 지정 DNS 서버에서 해결됨1 3. 사용자 지정 DNS 서버에서 해결되지 않음1</div>
+<div class="comment-content">정답은 NYN입니다. 1. 사용자 지정 DNS 서버에서 확인되지 않음1 2. 사용자 지정 DNS 서버에서 확인됨1 3. 사용자 지정 DNS 서버에서 확인되지 않음1</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -2326,7 +2455,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				업보팅됨</span>
+				추천함</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -2354,13 +2483,13 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				죽이다
+				GBAU
 			</h5>
 </a>
-<span class="comment-date align-middle" title="토 11 2월 2023 08:07">2023-02-11 17:07</span>
+<span class="comment-date align-middle" title="2023년 2월 11일 토요일 오전 8시 7분">2023-02-11 17:07</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">아니요 예 아니요 키: Server1은 자신을 contoso.com에 대한 권한이 있는 것으로 간주합니다(기본 DNS 영역). 레코드가 없으면 게임 오버입니다. Server2는 Server 1의 DNS 서버를 가져옵니다(NIC2는 Server1의 IP로 하드 설정됨). Server1에 해당 레코드가 없으므로 Server2는 host2.contoso.com을 확인할 수 없습니다. Server2는 host1.contoso.com을 Server1의 레코드인 131.107.10.15로 확인합니다. Server3(NIC3)은 VNET(VNET2)에서 상속하는데, 이는 Server1이기도 합니다. Server3은 host2.contoso.com을 Server2와 동일하게 확인하지 않고 확인합니다. 아니요 예 아니요</div>
+<div class="comment-content">아니요 예 아니요 키: Server1은 자신을 contoso.com에 대한 권한이 있는 것으로 간주합니다(주 DNS 영역). 레코드가 없으면 게임 끝입니다. Server2는 Server 1의 DNS 서버를 가져옵니다(NIC2는 Server1의 IP로 하드 설정됨). Server1에 해당 레코드가 없으므로 Server2는 host2.contoso.com을 확인할 수 없습니다. Server2는 해당 레코드가 Server1의 레코드인 131.107.10.15로 host1.contoso.com을 확인합니다. Server3(NIC3)은 Server1이기도 한 VNET(VNET2)에서 상속받습니다. Server3은 확인 없이 Server2와 동일하게 host2.contoso.com을 확인합니다. 아니요 예 아니요</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -2369,7 +2498,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">6</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -2400,7 +2529,7 @@
 				[제거됨]
 			</h5>
 </a>
-<span class="comment-date align-middle" title="목 09 2월 2023 10:11">2023-02-09 19:11</span>
+<span class="comment-date align-middle" title="2023년 2월 9일 목요일 오전 10시 11분">2023-02-09 19:11</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">서버 3은 VNET2에 연결되어 호스트 2(n/y/y)를 확인할 수 있습니다.</div>
@@ -2412,7 +2541,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -2435,7 +2564,7 @@
 				커트맥거트
 			</h5>
 </a>
-<span class="comment-date align-middle" title="일 19 2월 2023 17:25">2023-02-20 02:25</span>
+<span class="comment-date align-middle" title="2023년 2월 19일 일요일 17:25">2023-02-20 02:25</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">vnet2는 dns에 대해 10.0.0.4를 지정하고, 10.0.0.4 dns에는 host2가 없습니다.</div>
@@ -2447,7 +2576,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -2483,10 +2612,10 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				디씨2k79
+				dc2k79
 			</h5>
 </a>
-<span class="comment-date align-middle" title="수 26 10월 2022 15:35">2022-10-27 00:35</span>
+<span class="comment-date align-middle" title="2022년 10월 26일 수요일 15:35">2022-10-27 00:35</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">아니오/예/아니오</div>
@@ -2498,7 +2627,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
 			 
-				업보팅</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -2529,10 +2658,10 @@
 				클렉삼스
 			</h5>
 </a>
-<span class="comment-date align-middle" title="토 22 10월 2022 00:54">2022-10-22 09:54</span>
+<span class="comment-date align-middle" title="2022년 10월 22일 토요일 00:54">2022-10-22 09:54</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">NYY 1. Server2 &gt; NIC2 &gt; VNET1. NIC2에는 host2 레코드가 없는 DNS 10.0.0.4가 있습니다. 2. Server2 &gt; NIC2 &gt; VNET1. NIC2에는 host1 레코드가 있는 DNS 10.0.0.4가 있습니다. 3. Server3 &gt; NIC3 &gt; VNET2. VNET3에는 host2 레코드가 있는 Azure 개인 DNS가 있습니다.</div>
+<div class="comment-content">NYY 1. 서버2 &gt; NIC2 &gt; VNET1. NIC2에는 host2 레코드가 없는 DNS 10.0.0.4가 있습니다. 2. 서버2 &gt; NIC2 &gt; VNET1. NIC2에는 host1 레코드가 있는 DNS 10.0.0.4가 있습니다. 3. 서버3 &gt; NIC3 &gt; VNET2. VNET3에는 host2 레코드가 있는 Azure 개인 DNS가 있습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -2541,7 +2670,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">8</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -2564,10 +2693,10 @@
 				클렉삼스
 			</h5>
 </a>
-<span class="comment-date align-middle" title="토 29 10월 2022 04:42">2022-10-29 13:42</span>
+<span class="comment-date align-middle" title="2022년 10월 29일 토요일 오전 4시 42분">2022-10-29 13:42</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">죄송합니다. NYN 3이어야 합니다. Server3 &gt; NIC3 &gt; VNET2. VNET2에는 host2 레코드가 있는 DNS 10.0.0.4가 있습니다.</div>
+<div class="comment-content">죄송합니다. NYN 3이어야 합니다. Server3 &gt; NIC3 &gt; VNET2. VNET2의 DNS는 10.0.0.4이고, 여기에 host2 레코드가 있습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -2576,7 +2705,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">6</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -2612,10 +2741,10 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				히타이트
+				히팃
 			</h5>
 </a>
-<span class="comment-date align-middle" title="수 19 10월 2022 00:16">2022-10-19 09:16</span>
+<span class="comment-date align-middle" title="2022년 10월 19일 수요일 00:16">2022-10-19 09:16</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">NYN Server3의 DNS는 10.10.0.4이므로 Server3에서 이를 확인할 수 있습니다.</div>
@@ -2627,7 +2756,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
 			 
-				업보팅</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -2655,13 +2784,13 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				캠81
+				켐81
 			</h5>
 </a>
-<span class="comment-date align-middle" title="월 03 10월 2022 09:47">2022-10-03 18:47</span>
+<span class="comment-date align-middle" title="2022년 10월 3일 월요일 오전 9시 47분">2022-10-03 18:47</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">그래서 저는 거의 모든 사람이 처음 두 상자, 아니요, 예에 동의하는 것 같습니다. 하지만 마지막 상자가 혼란을 주고 있습니다... 서버 3/NIC3는 DNS에 VNET 기본 설정을 사용하도록 설정되어 있고, 질문에서 마지막 상자 위에 VNET2는 VNET2에 연결된 Azure Private DNS를 사용하도록 설정되어 있다고 명확히 언급되어 있습니다. 그래서 마지막 상자는 분명히 YES이며 호스트를 확인할 수 있습니다.</div>
+<div class="comment-content">제 생각에는 거의 모든 사람이 처음 두 항목(아니요, 예)에 동의하는 것 같습니다. 하지만 마지막 항목은 약간 혼란스럽습니다. 서버 3/NIC3은 DNS에 VNET 기본 설정을 사용하도록 설정되어 있고, 질문 위에 마지막 항목(VNET2는 VNET2에 연결된 Azure 프라이빗 DNS를 사용하도록 설정되어 있음)이 명확하게 명시되어 있습니다. 따라서 마지막 항목(예, 호스트를 확인할 수 있음)은 분명히 "예"입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -2670,7 +2799,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
 			 
-				업보팅</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -2690,13 +2819,13 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				캠81
+				켐81
 			</h5>
 </a>
-<span class="comment-date align-middle" title="화 01 11월 2022 12:02">2022-11-01 21:02</span>
+<span class="comment-date align-middle" title="2022년 11월 1일 화요일 12:02">2022-11-01 21:02</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">여기서 제 자신을 바로잡고 싶습니다. 제 마지막 답은 NYN입니다. 첫 번째 표에서 DNS 서버가 VNET1에 위치한 사용자 server1로 구성되었고 server3 NIC가 vnet으로 구성된 DNS를 사용하도록 설정되어 있다고 명확하게 명시되어 있습니다. 따라서 마지막 상자는 아니요입니다. 저처럼 혼란스러웠던 사람들에게 도움이 되었으면 좋겠습니다. :D</div>
+<div class="comment-content">여기서 제 생각을 바로잡고 싶습니다. 제 최종 답은 NYN입니다. 첫 번째 표에는 DNS 서버가 VNET1에 위치한 사용자 server1로 구성되었고, server3 NIC는 vnet으로 구성된 DNS를 사용하도록 설정되어 있다고 명시되어 있습니다. 따라서 마지막 칸은 '아니요'입니다. 저처럼 헷갈리셨던 분들께 도움이 되셨으면 좋겠습니다. :D</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -2705,7 +2834,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				업보팅됨</span>
+				추천함</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -2744,7 +2873,7 @@
 				데이비드1990
 			</h5>
 </a>
-<span class="comment-date align-middle" title="목 22 9월 2022 14:01">2022-09-22 23:01</span>
+<span class="comment-date align-middle" title="2022년 9월 22일 목요일 14:01">2022-09-22 23:01</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">NYY가 맞습니다</div>
@@ -2756,7 +2885,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
 			 
-				업보팅</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -2787,10 +2916,10 @@
 				랜디0077
 			</h5>
 </a>
-<span class="comment-date align-middle" title="수 21 9월 2022 07:05">2022-09-21 16:05</span>
+<span class="comment-date align-middle" title="2022년 9월 21일 수요일 오전 7시 5분">2022-09-21 16:05</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">NYY입니다. NIC에서 구성된 DNS가 우선합니다.</div>
+<div class="comment-content">NYY입니다. NIC에 구성된 DNS가 우선합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -2799,7 +2928,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
 			 
-				업보팅</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -2827,13 +2956,13 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				일렉치에
+				엘레치에
 			</h5>
 </a>
-<span class="comment-date align-middle" title="금 02 9월 2022 10:42">2022-09-02 19:42</span>
+<span class="comment-date align-middle" title="2022년 9월 2일 금요일 오전 10시 42분">2022-09-02 19:42</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">글쎄요, 질문이 너무 까다롭거든요!!! DNS 서버 테이블이나 VNET2 레코드 테이블에 "host2.contoso.com"에 대한 레코드가 전혀 없거든요. 다음 두 가지만 있습니다: 1. "서버 DNS 레코드 테이블"에 IP가 131.107.10.15인 host1.contoso.com 2. "VNET2 레코드 테이블"에 IP가 131.107.200.20인 host1 3. "VNET2 레코드 테이블"에 IP가 131.107.200.50인 host2</div>
+<div class="comment-content">질문이 너무 까다롭네요!!! DNS 서버 테이블이나 VNET2 레코드 테이블에 "host2.contoso.com" 레코드가 전혀 없거든요. 1. "서버 DNS 레코드 테이블"에 IP 주소가 131.107.10.15인 host1.contoso.com 레코드 2. "VNET2 레코드 테이블"에 IP 주소가 131.107.200.20인 host1 레코드 3. "VNET2 레코드 테이블"에 IP 주소가 131.107.200.50인 host2 레코드 3개만 있습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -2842,7 +2971,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -2870,13 +2999,13 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				이티지그11
+				itgg11
 			</h5>
 </a>
-<span class="comment-date align-middle" title="화 22 2월 2022 07:46">2022-02-22 16:46</span>
+<span class="comment-date align-middle" title="2022년 2월 22일 화요일 오전 7시 46분">2022-02-22 16:46</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">답변: 아니요, 네, 네. Speed2fast에 더 많은 정보와 함께 답변했습니다.</div>
+<div class="comment-content">답변: 아니요, 예, 예. Speed2fast에 자세한 정보와 함께 답변했습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -2885,7 +3014,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -2916,7 +3045,7 @@
 				니드호그
 			</h5>
 </a>
-<span class="comment-date align-middle" title="화 01 2월 2022 16:20">2022-02-02 01:20</span>
+<span class="comment-date align-middle" title="2022년 2월 1일 화요일 오후 4시 20분">2022-02-02 01:20</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">오늘 시험은 2022년 2월 1일입니다. 1000점 중 761점이었지만 괜찮았어요! :D ExamTopics와 여러분 모두에게 감사드립니다!</div>
@@ -2928,7 +3057,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">5</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -2948,13 +3077,13 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				열쇠
+				콘차
 			</h5>
 </a>
-<span class="comment-date align-middle" title="화 22 2월 2022 15:20">2022-02-23 00:20</span>
+<span class="comment-date align-middle" title="2022년 2월 22일 화요일 15:20">2022-02-23 00:20</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">이것이 정답인가요?</div>
+<div class="comment-content">이게 정답인가요?</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -2963,7 +3092,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -3002,10 +3131,10 @@
 				사라_모
 			</h5>
 </a>
-<span class="comment-date align-middle" title="금 14 1월 2022 02:50">2022-01-14 11:50</span>
+<span class="comment-date align-middle" title="2022년 1월 14일 금요일 02:50">2022-01-14 11:50</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">나는 이에 동의한다. 답은 No, Yes, No여야 한다.</div>
+<div class="comment-content">저도 동의합니다. 답은 '아니요', '예', '아니요'여야 합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -3014,7 +3143,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -3042,13 +3171,13 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				하냐메드
+				하냐흐메드
 			</h5>
 </a>
-<span class="comment-date align-middle" title="금 31 12월 2021 18:49">2022-01-01 03:49</span>
+<span class="comment-date align-middle" title="2021년 12월 31일 금요일 오후 6시 49분">2022-01-01 03:49</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">아니요 Server2 --&gt; NIC2 ---&gt; VNET1 --&gt; NIC2의 DNS 설정은 10.10.0.4 "DNS server1"입니다. 예 Server2 --&gt; NIC2 ---&gt; VNET1 --&gt; NIC2의 DNS 설정은 10.10.0.4 "DNS server1"입니다. 예 Server3 --&gt; NIC3 ---&gt; VNET2 --&gt; 가상 네트워크 "Azure Private DNS가 있는 가상 링크"의 DNS 설정</div>
+<div class="comment-content">아니요 Server2 --&gt; NIC2 ---&gt; VNET1 --&gt; NIC2의 DNS 설정은 10.10.0.4 "DNS 서버1"입니다. 예 Server2 --&gt; NIC2 ---&gt; VNET1 --&gt; NIC2의 DNS 설정은 10.10.0.4 "DNS 서버1"입니다. 예 Server3 --&gt; NIC3 ---&gt; VNET2 --&gt; 가상 네트워크 "Azure Private DNS가 있는 가상 링크"의 DNS 설정</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -3057,7 +3186,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">12</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -3080,7 +3209,7 @@
 				팔991l
 			</h5>
 </a>
-<span class="comment-date align-middle" title="화 22 3월 2022 01:26">2022-03-22 10:26</span>
+<span class="comment-date align-middle" title="2022년 3월 22일 화요일 01:26">2022-03-22 10:26</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">더 의미가 있게 만들다</div>
@@ -3092,7 +3221,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
 			 
-				업보팅</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -3123,10 +3252,10 @@
 				쿠수쿠
 			</h5>
 </a>
-<span class="comment-date align-middle" title="토 15 10월 2022 19:35">2022-10-16 04:35</span>
+<span class="comment-date align-middle" title="2022년 10월 15일 토요일 19:35">2022-10-16 04:35</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">당신은 완전히 틀렸습니다. 혼란을 피하기 위해 먼저 읽어보세요. Server3 --&gt; NIC3 ---&gt; VNET2 --&gt; 가상 네트워크 "10.10.0.4"의 DNS 설정</div>
+<div class="comment-content">완전히 틀렸습니다. 혼동을 피하기 위해 먼저 읽어주세요. Server3 --&gt; NIC3 ---&gt; VNET2 --&gt; 가상 네트워크 "10.10.0.4"의 DNS 설정</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -3135,7 +3264,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -3155,13 +3284,13 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				고백
+				샤다드
 			</h5>
 </a>
-<span class="comment-date align-middle" title="일 26 2월 2023 15:43">2023-02-27 00:43</span>
+<span class="comment-date align-middle" title="2023년 2월 26일 일요일 15:43">2023-02-27 00:43</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">마침내 누군가 쉽고 간단하게 깨는군요! 고맙습니다 :)</div>
+<div class="comment-content">드디어 누군가 쉽고 간단하게 해결해줬네요! 감사합니다 :)</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -3170,7 +3299,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
 			 
-				업보팅</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -3217,10 +3346,10 @@
 				산위엔
 			</h5>
 </a>
-<span class="comment-date align-middle" title="목 09 12월 2021 09:11">2021-12-09 18:11</span>
+<span class="comment-date align-middle" title="2021년 12월 9일 목요일 오전 9시 11분">2021-12-09 18:11</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">아니요(server2에는 내부 DNS를 사용하여 해결하는 NIC2가 있음) 예(server2에는 내부 DNS를 사용하여 해결하는 NIC2가 있음) 아니요(server3에는 VNET2에 연결되는 NIC3가 있으며 VNET2에 사용자 정의 DNS가 적용되어 server3은 내부 DNS를 사용하여 해결함)</div>
+<div class="comment-content">아니요(server2에는 내부 DNS를 사용하여 확인하는 NIC2가 있음) 예(server2에는 내부 DNS를 사용하여 확인하는 NIC2가 있음) 아니요(server3에는 VNET2에 연결하는 NIC3가 있고 VNET2에 사용자 정의 DNS가 적용되어 server3은 내부 DNS를 사용하여 확인함)</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -3229,7 +3358,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -3252,10 +3381,10 @@
 				모즈비우스_
 			</h5>
 </a>
-<span class="comment-date align-middle" title="월 21 2월 2022 07:35">2022-02-21 16:35</span>
+<span class="comment-date align-middle" title="2022년 2월 21일 월요일 오전 7시 35분">2022-02-21 16:35</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">server1 사용자 지정 DNS가 VNET2에 적용된다고 하는 부분은 어디인가요? 원래 질문이 바뀌었나요?</div>
+<div class="comment-content">server1 사용자 지정 DNS가 VNET2에 적용된다는 내용은 어디에 있나요? 원래 질문이 변경되었나요?</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -3264,7 +3393,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -3303,7 +3432,7 @@
 				알리크79
 			</h5>
 </a>
-<span class="comment-date align-middle" title="일 05 12월 2021 00:05">2021-12-05 09:05</span>
+<span class="comment-date align-middle" title="2021년 12월 5일 일요일 00:05">2021-12-05 09:05</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">N/Y/N 테스트됨</div>
@@ -3315,7 +3444,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">5</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -3346,10 +3475,10 @@
 				요엘라란14
 			</h5>
 </a>
-<span class="comment-date align-middle" title="목 02 12월 2021 03:09">2021-12-02 12:09</span>
+<span class="comment-date align-middle" title="2021년 12월 2일 목요일 03:09">2021-12-02 12:09</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">상자 1: 아니요. Server2는 DNS에 Server 1을 사용합니다. Server1은 host2가 아니라 host1로 확인됩니다. 상자 2: 예. Server2는 DNS에 Server1을 사용합니다. Server1은 host1로 확인됩니다. 상자 3: 아니요. Server3은 DNS로 10.10.0.4(Server1)를 사용합니다. Server1에는 host2.contoso.com에 대한 레코드가 없습니다.</div>
+<div class="comment-content">상자 1: 아니요. 서버 2는 DNS로 서버 1을 사용합니다. 서버 1은 호스트 2가 아닌 호스트 1로 확인됩니다. 상자 2: 예. 서버 2는 DNS로 서버 1을 사용합니다. 서버 1은 호스트 1로 확인됩니다. 상자 3: 아니요. 서버 3은 DNS로 10.10.0.4(서버 1)를 사용합니다. 서버 1에는 host2.contoso.com에 대한 레코드가 없습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -3358,7 +3487,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">8</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -3389,10 +3518,10 @@
 				다니토
 			</h5>
 </a>
-<span class="comment-date align-middle" title="금 19 11월 2021 18:50">2021-11-20 03:50</span>
+<span class="comment-date align-middle" title="2021년 11월 19일 금요일 오후 6시 50분">2021-11-20 03:50</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">YNY server2는 NiC2가 그렇게 말했기 때문에 10.10.0.4의 레코드를 사용합니다. Server3는 10.10.0.4의 레코드를 상속받았기 때문에 VNET2에 연결된 레코드를 사용합니다. 그래서 제 생각에는 마지막 테이블(host1과 host2)을 사용하여 문제가 해결됩니다....</div>
+<div class="comment-content">YNY 서버 2는 NiC2가 그렇게 했기 때문에 10.10.0.4의 레코드를 사용합니다. 서버 3은 10.10.0.4의 레코드를 상속받았기 때문에 VNET2에 연결된 레코드를 사용합니다. 제 생각에는 마지막 테이블(host1과 host2)을 사용하면 문제가 해결될 것 같습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -3401,7 +3530,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
 			 
-				업보팅</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -3424,10 +3553,10 @@
 				다니토
 			</h5>
 </a>
-<span class="comment-date align-middle" title="월 22 11월 2021 12:52">2021-11-22 21:52</span>
+<span class="comment-date align-middle" title="2021년 11월 22일 월요일 12:52">2021-11-22 21:52</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">제 코멘트를 고려하지 마세요. 저는 표를 이해하지 못했기 때문에 답은 NYN입니다.</div>
+<div class="comment-content">제 코멘트는 고려하지 마세요. 저는 표를 이해하지 못했기 때문에 답은 NYN입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -3436,7 +3565,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -3475,7 +3604,7 @@
 				애쉬3250
 			</h5>
 </a>
-<span class="comment-date align-middle" title="토 23 10월 2021 01:06">2021-10-23 10:06</span>
+<span class="comment-date align-middle" title="2021년 10월 23일 토요일 01:06">2021-10-23 10:06</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">Fabylande,, 당신의 답변은 무엇이었나요?</div>
@@ -3487,7 +3616,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -3518,7 +3647,7 @@
 				파빌란데
 			</h5>
 </a>
-<span class="comment-date align-middle" title="토 16 10월 2021 16:05">2021-10-17 01:05</span>
+<span class="comment-date align-middle" title="2021년 10월 16일 토요일 16:05">2021-10-17 01:05</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">오늘 시험이에요! 2021년 10월 16일</div>
@@ -3530,7 +3659,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -3558,13 +3687,13 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				데브오포짓
+				데브오포사이트
 			</h5>
 </a>
-<span class="comment-date align-middle" title="목 14 10월 2021 07:09 AM">2021-10-14 16:09</span>
+<span class="comment-date align-middle" title="2021년 10월 14일 목요일 오전 7시 9분">2021-10-14 16:09</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">하하하..아무도 모르죠</div>
+<div class="comment-content">하하하..아무도 몰라요</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -3573,7 +3702,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">7</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -3604,7 +3733,7 @@
 				브레이커보이즈09
 			</h5>
 </a>
-<span class="comment-date align-middle" title="금 01 10월 2021 10:43">2021-10-01 19:43</span>
+<span class="comment-date align-middle" title="2021년 10월 1일 금요일 오전 10시 43분">2021-10-01 19:43</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">아니요 아니요 예 첫 번째 2개 답변: NIC DNS가 우선합니다. 세 번째 답변: 서버 3은 VNET DNS를 상속하고 NIC DNS가 설정되지 않았습니다.</div>
@@ -3616,7 +3745,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -3639,10 +3768,10 @@
 				믹비씨
 			</h5>
 </a>
-<span class="comment-date align-middle" title="토 30 4월 2022 19:36">2022-05-01 04:36</span>
+<span class="comment-date align-middle" title="2022년 4월 30일 토요일 19:36">2022-05-01 04:36</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">서버 3은 VNET DNS를 상속받지만 VNET DNS는 host2에 대한 레코드가 없는 10.10.0.4로 설정되어 있습니다.</div>
+<div class="comment-content">서버 3은 VNET DNS를 상속하지만 VNET DNS는 host2에 대한 레코드가 없는 10.10.0.4로 설정되어 있습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -3651,7 +3780,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
 			 
-				업보팅</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -3690,10 +3819,10 @@
 				콴티고
 			</h5>
 </a>
-<span class="comment-date align-middle" title="목 30 9월 2021 22:03">2021-10-01 07:03</span>
+<span class="comment-date align-middle" title="2021년 9월 30일 목요일 22:03">2021-10-01 07:03</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">영어: 답은 YYY VNET1이 VNET2와 피어링하고 그 반대도 마찬가지라고 생각합니다. 기본적으로 모든 리소스가 서로를 볼 수 있어야 합니다. 이 참조 자료에 따르면: https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview Server2는 DNS 확인을 위해 먼저 server1에 쿼리를 보내고, Server1이 쿼리를 확인할 수 없으면 다음 홉은 게이트웨이가 되고, 게이트웨이는 Azure에서 제공한 DNS를 사용하여 거기에서 답을 가져오는데, host2의 경우 131.107.50.50입니다. server1에는 host1에 대한 A 레코드가 있으므로 host1의 IP 131.107.10.15를 확인합니다. Server3은 host2의 Azure에서 제공한 DNS 서버에서 DNS 확인을 받아야 하며, 이는 131.107.50.50으로 확인됩니다. 제가 이해한 바는 이렇습니다. 아마 더 나은 설명이 있을 겁니다.</div>
+<div class="comment-content">영어: 답은 YYY VNET1이 VNET2와 피어링하고 그 반대도 기본적으로 모든 리소스가 서로를 볼 수 있어야 한다는 것입니다. 이 참조에 따르면: https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview Server2는 DNS 확인을 위해 먼저 server1에 쿼리를 보내고, Server1이 쿼리를 확인할 수 없으면 다음 홉은 게이트웨이가 되고, 게이트웨이는 Azure에서 제공한 DNS를 사용하여 거기에서 host2의 131.107.50.50이라는 답을 얻습니다. server1은 host1에 대한 A 레코드가 있으므로 host1의 IP 131.107.10.15를 확인합니다. Server3은 host2의 Azure에서 제공한 DNS 서버에서 DNS 확인을 받아야 하며, 그 결과는 131.107.50.50으로 확인됩니다. 제가 이해한 바는 그렇습니다. 어쩌면 더 나은 설명이 있을 수도 있습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -3702,7 +3831,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">6</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -3722,10 +3851,10 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				이지엠엘
+				이제이엠엘
 			</h5>
 </a>
-<span class="comment-date align-middle" title="금 08 10월 2021 09:14">2021-10-08 18:14</span>
+<span class="comment-date align-middle" title="2021년 10월 8일 금요일 오전 9시 14분">2021-10-08 18:14</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">그렇게 생각해요</div>
@@ -3737,7 +3866,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
 			 
-				업보팅</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -3768,10 +3897,10 @@
 				임란스
 			</h5>
 </a>
-<span class="comment-date align-middle" title="월 29 11월 2021 17:46">2021-11-30 02:46</span>
+<span class="comment-date align-middle" title="2021년 11월 29일 월요일 17:46">2021-11-30 02:46</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">NYN이어야 한다고 생각합니다. 아래 링크는 피어링이 개인 DNS 영역에 대해 인식되지 않는다고 말합니다. DNS 개인 영역은 VNET 피어링에서 지원되지 않습니다. 그러나 DNS 개인 영역은 여러 가상 네트워크에 연결될 수 있으므로 여러 가상 네트워크에서 동일한 DNS 레코드를 제공할 수 있습니다. 이제 개인 DNS 영역은 가상 네트워크 내에서만 사용할 수 있으므로 모든 유형의 DNS 영역을 정의하고 가상 네트워크에 연결할 수 있습니다. 예를 들어 Microsoft.com을 DNS 개인 영역으로 사용할 수 있습니다. https://msandbu.org/architecture-of-azure-private-dns-and-name-lookup-in-azure/ 도움이 되길 바라거나 틀렸다면 제안해 주세요.</div>
+<div class="comment-content">NYN이어야 한다고 생각합니다. 아래 링크는 "프라이빗 DNS 영역에 대한 피어링이 인식되지 않습니다."라고 표시되어 있습니다. DNS 프라이빗 영역은 VNET 피어링에서 지원되지 않습니다. 하지만 DNS 프라이빗 영역은 여러 가상 네트워크에 연결될 수 있으므로 여러 가상 네트워크에서 동일한 DNS 레코드를 제공할 수 있습니다. 이제 프라이빗 DNS 영역은 가상 네트워크 내에서만 사용할 수 있으므로 모든 유형의 DNS 영역을 정의하고 가상 네트워크에 연결할 수 있습니다. 예를 들어 Microsoft.com을 DNS 프라이빗 영역으로 사용할 수 있습니다. https://msandbu.org/architecture-of-azure-private-dns-and-name-lookup-in-azure/ 도움이 되셨으면 좋겠고, 잘못된 정보가 있으면 알려주세요.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -3780,7 +3909,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -3803,10 +3932,10 @@
 				모즈비우스_
 			</h5>
 </a>
-<span class="comment-date align-middle" title="목 07 4월 2022 02:53">2022-04-07 11:53</span>
+<span class="comment-date align-middle" title="2022년 4월 7일 목요일 02:53">2022-04-07 11:53</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">해당 URL을 제공해 주셔서 감사합니다! 피어링을 통해 DNS가 적용되지 않는다는 것이 확립되었고 NIC 카드 DNS 설정이 Vnet DNS 설정보다 우선하므로(https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface) 이 질문의 DNS 확인은 다음과 같습니다.Server1: Vnet1 Azure 기본 DNS는 Nic1 DNS(상속된 Azure)에 의해 재정의되지 않습니다.Server2: Vnet1 Azure 기본 DNS는 Nic2 DNS(10.10.0.4/server1)에 의해 재정의됩니다.Server3: Vnet2 10.10.0.4 DNS는 Nic3 DNS(상속된 server1)에 의해 재정의되지 않습니다.따라서 답은 NO YES NO입니다.Server2에서 Server1까지는 host2를 전혀 확인하지 않습니다.Server2에서 Server1까지는 설명한 대로 host1을 확인합니다.Server3에서 Server1까지는 host2를 전혀 확인하지 않습니다.</div>
+<div class="comment-content">해당 URL을 제공해 주셔서 감사합니다! 피어링을 통해 DNS가 적용되지 않고 NIC 카드 DNS 설정이 Vnet DNS 설정보다 우선하므로(https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface) 이 질문의 DNS 확인은 다음과 같습니다. Server1: Vnet1 Azure 기본 DNS가 Nic1 DNS(상속된 Azure)에 의해 재정의되지 않음 Server2: Vnet1 Azure 기본 DNS가 Nic2 DNS(10.10.0.4/server1)에 의해 재정의됨 Server3: Vnet2 10.10.0.4 DNS가 Nic3 DNS(상속된 server1)에 의해 재정의되지 않음 따라서 답은 NO YES NO입니다. Server2에서 Server1까지는 host2를 전혀 확인하지 않습니다. Server2에서 Server1까지는 설명한 대로 host1을 확인합니다. Server3에서 Server1까지는 host2를 전혀 확인하지 않습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -3815,7 +3944,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -3862,7 +3991,7 @@
 				찰리2019
 			</h5>
 </a>
-<span class="comment-date align-middle" title="화 28 9월 2021 19:37">2021-09-29 04:37</span>
+<span class="comment-date align-middle" title="2021년 9월 28일 화요일 오후 7시 37분">2021-09-29 04:37</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">이어야 합니다: 예, 아니오, 아니오</div>
@@ -3874,7 +4003,7 @@
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				업보팅됨</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -3943,7 +4072,7 @@ No: Server3 uses 10.10.0.4 as DNS (inherited from VNET2). 10.10.0.4 (Server1) ha
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">126</span> times
+				upvoted <span class="upvote-count">128</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -3951,6 +4080,49 @@ No: Server3 uses 10.10.0.4 as DNS (inherited from VNET2). 10.10.0.4 (Server1) ha
 </div>
 <div class="comment-replies">
 <!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1569633" id="comment-1569633">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				DancingKirby
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Sat 17 May 2025 14:05">2025-05-17 23:05</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">I found this question very confusing at first. I had to really take apart the answers given and understand. Thank you everyone for the help with this one. I agree, no/yes/no.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
 <!-- single_comment.html -->
 <div class="media comment-container" data-comment-id="1188400" id="comment-1188400">
 <a class="minimize-comment comment-toggle" href="#">
@@ -4058,7 +4230,7 @@ N-Y-Y</div>
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">35</span> times
+				upvoted <span class="upvote-count">36</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -4136,7 +4308,7 @@ N-Y-Y</div>
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">5</span> times
+				upvoted <span class="upvote-count">6</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -4205,7 +4377,7 @@ N-Y-Y</div>
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">4</span> times
+				upvoted <span class="upvote-count">5</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -4777,7 +4949,7 @@ hope this helps :)</div>
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">64</span> times
+				upvoted <span class="upvote-count">66</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -4812,7 +4984,7 @@ hope this helps :)</div>
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">57</span> times
+				upvoted <span class="upvote-count">59</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -4966,6 +5138,97 @@ hope this helps :)</div>
 </div>
 </div>
 <!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1413835" id="comment-1413835">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				8ac3742
+			</h5>
+</a>
+<span class="badge badge-primary">
+				Most Recent <i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="Mon 31 Mar 2025 00:01">2025-03-31 09:01</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">1. N 2. Y 3.N
+The DNS server of Server 2(NIC2) and Server3(NIC1) is Server1.The DNS server of NIC takes precedence of that of vNet so the private DNS zone contso.com is not the DNS server of server 3.
+only host1.contoso.com has A record in server1</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1401747" id="comment-1401747">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				GreenTick
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Sat 22 Mar 2025 04:14">2025-03-22 13:14</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">this question would like to test whether you can sort out this entangled mixed up facts,</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
 <div class="media comment-container" data-comment-id="1343492" id="comment-1343492">
 <a class="minimize-comment comment-toggle" href="#">
 <i class="fa fa-minus-square-o mr-2 mt-1"></i>
@@ -4981,9 +5244,6 @@ hope this helps :)</div>
 				AhmedSaeed19872025
 			</h5>
 </a>
-<span class="badge badge-primary">
-				Most Recent <i class="fa fa-clock-o"></i>
-</span>
 <span class="comment-date align-middle" title="Mon 20 Jan 2025 11:55">2025-01-20 20:55</span>
 </div>
 <div class="comment-body comment-toggled">
@@ -4997,7 +5257,7 @@ N  Y  N</div>
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -5098,7 +5358,7 @@ Yes: Server3 is in VNET2, which has a virtual network link to the private DNS zo
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -5514,7 +5774,7 @@ So resolved</div>
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">3</span> times
+				upvoted <span class="upvote-count">4</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -5600,7 +5860,7 @@ So resolved</div>
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">6</span> times
+				upvoted <span class="upvote-count">7</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
