@@ -25,6 +25,7 @@ var questionDetails = {
 
     'AZ104-Q': { qLength: 606, qDirectory: 'microsoft/AZ104' },
     'AZ305-Q': { qLength: 286, qDirectory: 'microsoft/AZ305' },
+    'AZ900-Q': { qLength: 474, qDirectory: 'microsoft/AZ900' },
 };
 
 function getQuestionLength(questionName) {

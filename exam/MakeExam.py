@@ -643,6 +643,18 @@ def make_filename(qtitle, qid, dataid, tid=0):
             else:
                 return fname
             fname = 'ms/AZ305/AZ305-Q' + format(int(idx+1), '04') + '.html'
+        elif qtitle.startswith("Exam AZ-900"):
+            az900_df = read_AZ_Exam_list('AZ900_Exam.csv')
+            #az900_df = az900_df.sort_values(by=['DataNo'], ascending=[True])
+            if (dataid > 0):
+                idx = az900_df.index.get_loc(az900_df[(az900_df['DataNo'] == dataid) & 
+                                                    (az900_df['ExamNo'] == qid)].index[0])
+            elif (tid > 0):
+                idx = az900_df.index.get_loc(az900_df[(az900_df['Topic'] == tid) & 
+                                                    (az900_df['ExamNo'] == qid)].index[0])
+            else:
+                return fname
+            fname = 'ms/AZ900/AZ900-Q' + format(int(idx+1), '04') + '.html'
         
         # elif qtitle == 'Exam AWS Certified Developer Associate topic 1':
         #     fname = 'aws/DVA/DVA-Q' + format(int(qid), '04') + '.html'
@@ -1022,7 +1034,7 @@ def refresh_AZ_exam(exam_list_file, qtitle):
     driver = set_chrome_driver()
     # driver.set_window_position(1800,10)
 
-    for i in range(len(df))[10:]:
+    for i in range(len(df))[:]:
         tid = int(df.at[i, 'Topic'])
         qid = int(df.at[i, 'ExamNo'])
         did = int(df.at[i, 'DiscussNo'])
@@ -1201,12 +1213,15 @@ if __name__ == "__main__":
     # FORUM_NAME = 'isaca'
     # refresh_from_forum(DISCUSS, FORUM_NAME, 1)    
 
-    DISCUSS = 'AzureDiscuss.txt'
-    FORUM_NAME = 'microsoft'
-    refresh_from_forum(DISCUSS, FORUM_NAME, 1)
+    # DISCUSS = 'AzureDiscuss.txt'
+    # FORUM_NAME = 'microsoft'
+    # refresh_from_forum(DISCUSS, FORUM_NAME, 1)
 
     # AZ305 = 'Exam AZ-305'
     # refresh_AZ_exam('AZ305_Exam.csv', AZ305)
 
     # AZ104 = 'Exam AZ-104'
     # refresh_AZ_exam('AZ104_Exam.csv', AZ104)
+
+    AZ900 = 'Exam AZ-900'
+    refresh_AZ_exam('AZ900_Exam.csv', AZ900)
