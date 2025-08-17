@@ -571,15 +571,15 @@ def make_filename(qtitle, qid, dataid, tid=0):
         {
             "qtitle": "Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1",
             "prefname": "aws/DOP_C02/DOP2-Q",
-            "qlength": 353,
+            "qlength": 382,
             "first_id": 879465,
         },
-        {
-            "qtitle": "Exam AWS Certified Solutions Architect - Associate SAA-C03 topic 1",
-            "prefname": "aws/SAA_C03/SAA3-Q",
-            "qlength": 1019,
-            "first_id": 839758,
-        },
+        # {
+        #     "qtitle": "Exam AWS Certified Solutions Architect - Associate SAA-C03 topic 1",
+        #     "prefname": "aws/SAA_C03/SAA3-Q",
+        #     "qlength": 1019,
+        #     "first_id": 839758,
+        # },
         # {
         #     "qtitle": "Exam AWS Certified Machine Learning - Specialty topic 1",
         #     "prefname": "aws/MLS_C01/MLS-Q",
@@ -1205,9 +1205,9 @@ if __name__ == "__main__":
     # FORUM_NAME = 'cncf'
     # refresh_from_forum(DISCUSS, FORUM_NAME, 1)    
 
-    # DISCUSS = 'AmazonDiscuss.txt'
-    # FORUM_NAME = 'amazon'
-    # refresh_from_forum(DISCUSS, FORUM_NAME, 1)
+    DISCUSS = 'AmazonDiscuss.txt'
+    FORUM_NAME = 'amazon'
+    refresh_from_forum(DISCUSS, FORUM_NAME, 1)
     
     # DISCUSS = 'IsacaDiscuss.txt'
     # FORUM_NAME = 'isaca'
@@ -1223,5 +1223,5 @@ if __name__ == "__main__":
     # AZ104 = 'Exam AZ-104'
     # refresh_AZ_exam('AZ104_Exam.csv', AZ104)
 
-    AZ900 = 'Exam AZ-900'
-    refresh_AZ_exam('AZ900_Exam.csv', AZ900)
+    # AZ900 = 'Exam AZ-900'
+    # refresh_AZ_exam('AZ900_Exam.csv', AZ900)
