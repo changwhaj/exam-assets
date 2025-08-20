@@ -101,7 +101,7 @@
 													B.
 												</span> 
 											
-											연합 사용자 또는 연합 그룹의 신뢰 정책을 위해 생성된 IAM 역할은 SAML 공급자를 주체로 설정했습니다. <br/>B. 테스트 사용자는 회사 IdP의 AWSFederatedUsers 그룹에 속하지 않습니다.
+											연합 사용자 또는 연합 그룹의 신뢰 정책을 위해 생성된 IAM 역할은 SAML 공급자를 주체로 설정했습니다.
 										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
                 최다 투표
             </span></li>
@@ -110,7 +110,7 @@
 													C.
 												</span> 
 											
-											웹 포털은 SAML 공급자의 ARN, IAM 역할의 ARN 및 IdP의 SAML 어설션을 사용하여 AWS STS AssumeRoleWithSAML API를 호출합니다.
+											테스트 사용자는 회사 IdP의 AWSFederatedUsers 그룹에 속하지 않습니다.
 										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
                 최다 투표
             </span></li>
@@ -119,11 +119,20 @@
 													D.
 												</span> 
 											
-											온프레미스 IdP의 DNS 호스트 이름은 AWS 환경 VPC에서 연결할 수 있습니다.
-										</li>
+											웹 포털은 SAML 공급자의 ARN, IAM 역할의 ARN 및 IdP의 SAML 어설션을 사용하여 AWS STS AssumeRoleWithSAML API를 호출합니다.
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                최다 투표
+            </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="E">
 													E.
+												</span> 
+											
+											온프레미스 IdP의 DNS 호스트 이름은 AWS 환경 VPC에서 연결할 수 있습니다.
+										</li>
+<li class="multi-choice-item correct-hidden">
+<span class="multi-choice-letter" data-choice-letter="F">
+													F.
 												</span> 
 											
 											회사의 IdP는 사용자 또는 그룹을 적절하게 매핑하는 SAML 어설션을 정의합니다. 회사에서 적절한 권한이 있는 IAM 역할.
@@ -141,7 +150,7 @@
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="9 votes." data-toggle="tooltip" role="progressbar" style="width: 69%; display: flex;" title="">BCE (69%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="2 votes." data-toggle="tooltip" role="progressbar" style="width: 15%; display: flex;" title="">B (15%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="2 votes." data-toggle="tooltip" role="progressbar" style="width: 15%; display: flex;" title="">BD (15%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="9 votes." data-toggle="tooltip" role="progressbar" style="width: 69%; display: flex;" title="">BDF (69%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="2 votes." data-toggle="tooltip" role="progressbar" style="width: 15%; display: flex;" title="">B (15%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="2 votes." data-toggle="tooltip" role="progressbar" style="width: 15%; display: flex;" title="">BD (15%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
 <!-- / Question  -->
@@ -182,7 +191,7 @@
 													B.
 												</span>
 											
-											The IAM roles created for the federated users' or federated groups' trust policy have set the SAML provider as the principal.<br/>B. Test users are not in the AWSFederatedUsers group in the company's IdP.
+											The IAM roles created for the federated users' or federated groups' trust policy have set the SAML provider as the principal.
 										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
                 Most Voted
             </span></li>
@@ -191,7 +200,7 @@
 													C.
 												</span>
 											
-											The web portal calls the AWS STS AssumeRoleWithSAML API with the ARN of the SAML provider, the ARN of the IAM role, and the SAML assertion from IdP.
+											Test users are not in the AWSFederatedUsers group in the company's IdP.
 										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
                 Most Voted
             </span></li>
@@ -200,11 +209,20 @@
 													D.
 												</span>
 											
-											The on-premises IdP's DNS hostname is reachable from the AWS environment VPCs.
-										</li>
+											The web portal calls the AWS STS AssumeRoleWithSAML API with the ARN of the SAML provider, the ARN of the IAM role, and the SAML assertion from IdP.
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                Most Voted
+            </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="E">
 													E.
+												</span>
+											
+											The on-premises IdP's DNS hostname is reachable from the AWS environment VPCs.
+										</li>
+<li class="multi-choice-item correct-hidden">
+<span class="multi-choice-letter" data-choice-letter="F">
+													F.
 												</span>
 											
 											The company's IdP defines SAML assertions that properly map users or groups. In the company to IAM roles with appropriate permissions.

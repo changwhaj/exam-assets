@@ -83,15 +83,15 @@
 <div class="question-body mt-3 pt-3 border-top" data-id="888643">
 <p class="card-text">
 							
-								솔루션 아키텍트에는 Auto Scaling 그룹의 Amazon EC2 인스턴스에 배포된 운영 워크로드가 있습니다. VPC 아키텍처는 Auto Scaling 그룹이 대상으로 삼는 각각의 서브넷이 있는 두 개의 가용 영역(AZ)에 걸쳐 있습니다. VPC는 온프레미스 환경에 연결되어 있으며 연결이 중단될 수 없습니다. Auto Scaling 그룹의 최대 크기는 서비스 중인 인스턴스 20개입니다. VPC IPv4 주소 지정은 다음과 같습니다.<br/><br/><br/>VPC CIDR: 10.0.0.0/23 -<br/><br/>AZ1 서브넷 CIDR: 10.0.0.0/24 -&lt; a i=3&gt;AZ2 서브넷 CIDR: 10.0.1.0/24 -배포 이후 세 번째 AZ를 해당 지역에서 사용할 수 있게 되었습니다. 솔루션 설계자는 추가 IPv4 주소 공간을 추가하지 않고 서비스 가동 중지 시간 없이 새 AZ를 채택하기를 원합니다. 어떤 솔루션이 이러한 요구 사항을 충족합니까?
+								솔루션 아키텍트에는 Auto Scaling 그룹의 Amazon EC2 인스턴스에 배포된 운영 워크로드가 있습니다. VPC 아키텍처는 Auto Scaling 그룹이 대상으로 삼는 각각의 서브넷이 있는 두 개의 가용 영역(AZ)에 걸쳐 있습니다. VPC는 온프레미스 환경에 연결되어 있으며 연결이 중단될 수 없습니다. Auto Scaling 그룹의 최대 크기는 서비스 중인 인스턴스 20개입니다. VPC IPv4 주소 지정은 다음과 같습니다.<br/><br/><br/>VPC CIDR: 10.0.0.0/23 -<br/><br/>AZ1 subnet CIDR: 10.0.0.0/24 -<br/><br/>AZ2 subnet CIDR: 10.0.1.0/24 -<br/><br/>배포 이후 세 번째 AZ를 해당 지역에서 사용할 수 있게 되었습니다. 솔루션 설계자는 추가 IPv4 주소 공간을 추가하지 않고 서비스 가동 중지 시간 없이 새 AZ를 채택하기를 원합니다. 어떤 솔루션이 이러한 요구 사항을 충족합니까?
 							
-						<br/><br/><br/><br/></p>
+						</p>
 <div class="voted-answers-tally d-none">
 <script id="888643" type="application/json">[{"voted_answers": "A", "vote_count": 17, "is_most_voted": true}, {"voted_answers": "D", "vote_count": 3, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
-<li class="multi-choice-item">
+<li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="A">
 													A.
 												</span>
@@ -114,7 +114,7 @@
 											
 											동일한 IPv4 주소 공간으로 새 VPC를 생성하고 각 AZ마다 하나씩 3개의 서브넷을 정의합니다. 새 VPC의 새 서브넷을 대상으로 지정하도록 기존 Auto Scaling 그룹을 업데이트합니다.
 										</li>
-<li class="multi-choice-item correct-hidden">
+<li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span>
@@ -127,7 +127,7 @@
 <a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
 <div class="card-text question-answer bg-light white-text" style="display: none;">
 <span class="correct-answer-box"><strong>제안 답변:</strong>
-<span class="correct-answer">D</span>
+<span class="correct-answer">A</span>
 <br/>
 </span>
 <span class="answer-description">
@@ -162,7 +162,7 @@
 </div>
 <div class="question-choices-container">
 <ul>
-<li class="multi-choice-item">
+<li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="A">
 													A.
 												</span>
@@ -185,7 +185,7 @@
 											
 											Create a new VPC with the same IPv4 address space and define three subnets, with one for each AZ. Update the existing Auto Scaling group to target the new subnets in the new VPC.
 										</li>
-<li class="multi-choice-item correct-hidden">
+<li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span>
@@ -198,7 +198,7 @@
 <a class="btn btn-primary hide-solution d-none" href="#">Hide Answer</a>
 <div class="card-text question-answer bg-light white-text">
 <span class="correct-answer-box"><strong>Suggested Answer:</strong>
-<span class="correct-answer">D</span>
+<span class="correct-answer">A</span>
 <br/>
 </span>
 <span class="answer-description">
