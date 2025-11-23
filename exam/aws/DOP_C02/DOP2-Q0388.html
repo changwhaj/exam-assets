@@ -56,10 +56,10 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 문제 362 토론</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS 인증 DevOps 엔지니어 - 전문가 DOP-C02 주제 1 문제 388 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
-<h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 362 discussion</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 388 discussion</h1>
 </div>
 </div>
 </div>
@@ -74,14 +74,14 @@
 							Amazon
 						 <a class="discussion-link">AWS Certified DevOps Engineer - Professional DOP-C02 의 시험 문제</a>
 <div>
-							질문 번호: 362 <br/>
+							질문 번호: 388 <br/>
 							주제 번호: 1
 						</div>
 </div>
-<div class="question-body mt-3 pt-3 border-top" data-id="940817">
+<div class="question-body mt-3 pt-3 border-top" data-id="962865">
 <p class="card-text">
 							
-								한 회사에 웹 인터페이스가 있는 검색 애플리케이션이 있습니다. 이 회사는 Amazon CloudFront, 애플리케이션 로드 밸런서(ALB), 그리고 Amazon EC2 인스턴스를 Auto Scaling 그룹에서 사용하며, 용량은 3입니다. 또한 사전 제작된 AMI를 사용합니다. 애플리케이션은 1분 안에 시작됩니다. 이 애플리케이션은 Amazon OpenSearch 서비스 클러스터를 쿼리하며, <br/><br/>여러 가용 영역에 배포됩니다. 규정 준수 요구 사항으로 인해 애플리케이션은 별도의 AWS 리전에 재해 복구(DR) 환경을 구축해야 합니다. 이 회사는 DR 환경의 지속적인 비용을 최소화하기 위해 30분 미만의 RTO(복구 시간 목표)와 RPO(복구 지점 목표)를 요구합니다. 회사는 DR 리전에 ALB를 구축했습니다. <br/><br/>이러한 요구 사항을 충족하는 솔루션은 무엇일까요?
+								한 회사가 Amazon EC2 인스턴스에 호스팅되는 웹 애플리케이션을 운영하고 있습니다. 이 회사는 여러 AWS 리전에 애플리케이션을 배포하고 있습니다. <br/><br/>이 애플리케이션은 WebSocket 기반 실시간 제품 업데이트와 같은 동적 콘텐츠로 구성되어 있습니다. 이 회사는 Amazon Route 53을 사용하여 모든 DNS 레코드를 관리합니다. <br/><br/>지연 시간을 최소화하면서 여러 리전에서 애플리케이션에 액세스할 수 있는 솔루션은 무엇일까요?
 							
 						</p>
 <div class="voted-answers-tally d-none">
@@ -93,29 +93,31 @@
 													A.
 												</span> 
 											
-											CloudFront 배포에 새 ALB를 오리진으로 추가합니다. 오리진 장애 조치 기능을 구성합니다. AMI를 DR 리전에 복사합니다. DR 리전에 시작 템플릿과 원하는 용량이 0인 Auto Scaling 그룹을 생성합니다. DR 리전에 새 OpenSearch 서비스 클러스터를 생성합니다. 클러스터에 대한 클러스터 간 복제를 설정합니다.
+											각 리전의 EC2 인스턴스 앞에 애플리케이션 로드 밸런서(ALB)를 배포합니다. 지연 시간 기반 라우팅 정책을 적용한 Route 53 A 레코드를 생성합니다. ALB의 IP 주소를 레코드 값으로 추가합니다.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
 												</span> 
 											
-											DR 리전에 새 CloudFront 배포를 생성하고 새 ALB를 오리진으로 추가합니다. 리전 장애 조치(failover)에는 Amazon Route 53 DNS를 사용합니다. AMI를 DR 리전에 복사합니다. DR 리전에 시작 템플릿과 원하는 용량(0)을 가진 Auto Scaling 그룹을 생성합니다. OpenSearch 서비스 클러스터를 다중 AZ(Standby 배포 포함)로 재구성합니다. 대기 노드가 DR 리전에 있는지 확인합니다.
+											각 리전의 EC2 인스턴스 앞에 애플리케이션 로드 밸런서(ALB)를 배포합니다. ALB를 오리진으로 포함하는 오리진 그룹을 사용하여 Amazon CloudFront 배포를 배포합니다. CloudFront 배포의 DNS 주소를 가리키는 Route 53 별칭 레코드를 생성합니다.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span> 
 											
-											DR 리전에 새 CloudFront 배포를 생성하고 새 ALB를 오리진으로 추가합니다. 리전 장애 조치(failover)에는 Amazon Route 53 DNS를 사용합니다. AMI를 DR 리전에 복사합니다. DR 리전에 시작 템플릿과 원하는 용량(3)을 가진 Auto Scaling 그룹을 생성합니다. OpenSearch 서비스 클러스터를 다중 AZ(Standby 배포 포함)로 재구성합니다. 대기 노드가 DR 리전에 있는지 확인합니다.
+											각 리전의 EC2 인스턴스 앞에 네트워크 로드 밸런서(NLB)를 배포합니다. 다중값 응답 라우팅 정책을 사용하여 Route 53 A 레코드를 생성합니다. NLB의 IP 주소를 레코드 값으로 추가합니다.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span> 
 											
-											CloudFront 배포에 새 ALB를 오리진으로 추가합니다. 오리진 장애 조치 기능을 구성합니다. AMI를 DR 리전에 복사합니다. DR 리전에 시작 템플릿과 원하는 용량이 3인 Auto Scaling 그룹을 생성합니다. DR 리전에 새 OpenSearch 서비스 클러스터를 생성합니다. 클러스터에 대한 클러스터 간 복제를 설정합니다.
-										</li>
+											각 리전의 EC2 인스턴스 앞에 네트워크 로드 밸런서(NLB)를 배포합니다. 각 NLB에 대한 엔드포인트 그룹이 있는 AWS Global Accelerator 표준 가속기를 배포합니다. 가속기의 DNS 주소를 가리키는 Route 53 별칭 레코드를 생성합니다.
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                가장 많이 투표된
+            </span></li>
 </ul>
 </div>
 <a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
@@ -127,7 +129,7 @@
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분포</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="4 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">A (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분포</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="2 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">D (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
@@ -143,14 +145,14 @@
 						Amazon's
 						<a class="discussion-link">AWS Certified DevOps Engineer - Professional DOP-C02</a>
 <div>
-							Question #: 362<br/>
+							Question #: 388<br/>
 							Topic #: 1
 						</div>
 </div>
-<div class="question-body mt-3 pt-3 border-top" data-id="940817">
+<div class="question-body mt-3 pt-3 border-top" data-id="962865">
 <p class="card-text">
 							
-								A company has a search application that has a web interface. The company uses Amazon CloudFront, Application Load Balancers (ALBs), and Amazon EC2 instances in an Auto Scaling group with a desired capacity of 3. The company uses prebaked AMIs. The application starts in 1 minute. The application queries an Amazon OpenSearch Service cluster.<br/><br/>The application is deployed to multiple Availability Zones. Because of compliance requirements, the application needs to have a disaster recovery (DR) environment in a separate AWS Region. The company wants to minimize the ongoing cost of the DR environment and requires an RTO and an RPO of under 30 minutes. The company has created an ALB in the DR Region.<br/><br/>Which solution will meet these requirements?
+								A company has a web application that is hosted on Amazon EC2 instances. The company is deploying the application into multiple AWS Regions.<br/><br/>The application consists of dynamic content such as WebSocket-based real-time product updates. The company uses Amazon Route 53 to manage all DNS records.<br/><br/>Which solution will provide multi-Region access to the application with the LEAST latency?
 							
 						</p>
 <div class="voted-answers-tally d-none">
@@ -162,29 +164,31 @@
 													A.
 												</span>
 											
-											Add the new ALB as an origin in the CloudFront distribution. Configure origin failover functionality. Copy the AMI to the DR Region. Create a launch template and an Auto Scaling group with a desired capacity of 0 in the DR Region. Create a new OpenSearch Service cluster in the DR Region. Set up cross-cluster replication for the cluster.
+											Deploy an Application Load Balancer (ALB) in front of the EC2 instances in each Region. Create a Route 53 A record with a latency-based routing policy. Add IP addresses of the ALBs as the value of the record.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
 												</span>
 											
-											Create a new CloudFront distribution in the DR Region and add the new ALB as an origin. Use Amazon Route 53 DNS for Regional failover. Copy the AMI to the DR Region. Create a launch template and an Auto Scaling group with a desired capacity of 0 in the DR Region. Reconfigure the OpenSearch Service cluster as a Multi-AZ with Standby deployment. Ensure that the standby nodes are in the DR Region.
+											Deploy an Application Load Balancer (ALB) in front of the EC2 instances in each Region. Deploy an Amazon CloudFront distribution with an origin group that contains the ALBs as origins. Create a Route 53 alias record that points to the CloudFront distribution's DNS address.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span>
 											
-											Create a new CloudFront distribution in the DR Region and add the new ALB as an origin. Use Amazon Route 53 DNS for Regional failover. Copy the AMI to the DR Region. Create a launch template and an Auto Scaling group with a desired capacity of 3 in the DR Region. Reconfigure the OpenSearch Service cluster as a Multi-AZ with Standby deployment. Ensure that the standby nodes are in the DR Region.
+											Deploy a Network Load Balancer (NLB) in front of the EC2 instances in each Region. Create a Route 53 A record with a multivalue answer routing policy. Add IP addresses of the NLBs as the value of the record.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span>
 											
-											Add the new ALB as an origin in the CloudFront distribution. Configure origin failover functionality. Copy the AMI to the DR Region. Create a launch template and an Auto Scaling group with a desired capacity of 3 in the DR Region. Create a new OpenSearch Service cluster in the DR Region. Set up cross-cluster replication for the cluster.
-										</li>
+											Deploy a Network Load Balancer (NLB) in front of the EC2 instances in each Region. Deploy an AWS Global Accelerator standard accelerator with an endpoint group for each NLB. Create a Route 53 alias record that points to the accelerator's DNS address.
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                Most Voted
+            </span></li>
 </ul>
 </div>
 <a class="btn btn-primary reveal-solution" href="#">Show Suggested Answer</a>
@@ -196,7 +200,7 @@
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="4 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">A (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="2 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">D (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
@@ -206,7 +210,7 @@
 <div class="comments-wrapper">
 <a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
 <a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
-<div class="discussion-page-comments-section" data-discussion-question-id="302873" style="display: none">
+<div class="discussion-page-comments-section" data-discussion-question-id="312850" style="display: none">
 <div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
@@ -217,7 +221,7 @@
 <!-- New comment end -->
 <div class="discussion-container">
 <!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="1626132" id="comment-1626132">
+<div class="media comment-container" data-comment-id="1611172" id="comment-1611172">
 <a class="minimize-comment comment-toggle" href="#">
 <i class="fa fa-minus-square-o mr-2 mt-1"></i>
 </a>
@@ -229,14 +233,14 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				0ac7838
+				텀엠엠
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2025년 11월 16일 일요일 14:10">2025-11-16 23:10</span>
+<span class="comment-date align-middle" title="2025년 9월 21일 일요일 14:05">2025-09-21 23:05</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">A Cloudfront는 글로벌이므로 B에서 언급한 것처럼 지역적 Cloudfront가 필요하지 않습니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>D</strong></span></div>
+<div class="comment-content">Global Accelerator는 트래픽의 네트워크 경로를 최적화하여 실시간 애플리케이션의 지연 시간을 줄여줍니다. NLB(WebSocket과 같은 TCP 트래픽에 적합)와 원활하게 작동합니다. Route 53 별칭 레코드는 Accelerator의 DNS를 가리켜 안정적인 엔드포인트를 제공합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
@@ -261,7 +265,7 @@
 </div>
 </div>
 <!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="1562956" id="comment-1562956">
+<div class="media comment-container" data-comment-id="1610679" id="comment-1610679">
 <a class="minimize-comment comment-toggle" href="#">
 <i class="fa fa-minus-square-o mr-2 mt-1"></i>
 </a>
@@ -273,21 +277,21 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				그립자
+				무화과
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2025년 4월 23일 수요일 오전 7시 18분">2025-04-23 16:18</span>
+<span class="comment-date align-middle" title="2025년 9월 19일 금요일 오전 8시 37분">2025-09-19 17:37</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">원하는 용량을 0.1분으로 설정한 액티브-패시브 전략은 DR 리전으로 장애 조치할 때 원하는 개수를 늘리기에 충분한 시간을 제공합니다. OpenSearch는 DR 시나리오를 위한 클러스터 간 복제를 지원합니다. "Amazon OpenSearch Service의 클러스터 간 복제를 사용하면 사용자 인덱스, 매핑 및 메타데이터를 한 OpenSearch Service 도메인에서 다른 도메인으로 복제할 수 있습니다. 클러스터 간 복제를 사용하면 장애 발생 시 재해 복구를 보장하고 지리적으로 멀리 떨어진 데이터 센터에 데이터를 복제하여 지연 시간을 줄일 수 있습니다." https://docs.aws.amazon.com/opensearch-service/latest/developerguide/replication.html DR 환경이 별도의 리전에 있으므로 B 또는 C는 사용할 수 없습니다. OpenSearch 다중 AZ는 도움이 되지 않습니다. D는 3개의 인스턴스를 실행하고 관련 런타임 비용이 발생하므로 사용할 수 없습니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>D</strong></span></div>
+<div class="comment-content">AWS 글로벌 액셀러레이터</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="추천하기"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
 			 
 				추천됨</span>
 <span class="comment-control-error ml-2"></span>
@@ -314,7 +318,7 @@
 <div class="comments-wrapper-en" style="display: none;">
 <a class="badge reveal-comment" href="javascript:void(0)">Show Comments</a>
 <a class="badge hide-comment d-none" href="javascript:void(0)">Hide Comments</a>
-<div class="discussion-page-comments-section-en" data-discussion-question-id="302873" style="display: none">
+<div class="discussion-page-comments-section-en" data-discussion-question-id="312850" style="display: none">
 <div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">Comments</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
@@ -325,7 +329,7 @@
 <!-- New comment end -->
 <div class="discussion-container">
 <!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="1626132" id="comment-1626132">
+<div class="media comment-container" data-comment-id="1611172" id="comment-1611172">
 <a class="minimize-comment comment-toggle" href="#">
 <i class="fa fa-minus-square-o mr-2 mt-1"></i>
 </a>
@@ -337,14 +341,18 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				0ac7838
+				TuMMM
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sun 16 Nov 2025 14:10">2025-11-16 23:10</span>
+<span class="comment-date align-middle" title="Sun 21 Sep 2025 14:05">2025-09-21 23:05</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
-<div class="comment-content">A Cloudfront is global so no need for regional one as mentioned in B</div>
+<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>D</strong></span></div>
+<div class="comment-content">Global Accelerator optimizes the network path for traffic, reducing latency for real-time applications.
+
+It works seamlessly with NLBs (which are suitable for TCP traffic like WebSockets).
+
+Route 53 alias record points to the accelerator's DNS, providing a stable endpoint.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
@@ -369,7 +377,7 @@
 </div>
 </div>
 <!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="1562956" id="comment-1562956">
+<div class="media comment-container" data-comment-id="1610679" id="comment-1610679">
 <a class="minimize-comment comment-toggle" href="#">
 <i class="fa fa-minus-square-o mr-2 mt-1"></i>
 </a>
@@ -381,22 +389,14 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				GripZA
+				figub
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Wed 23 Apr 2025 07:18">2025-04-23 16:18</span>
+<span class="comment-date align-middle" title="Fri 19 Sep 2025 08:37">2025-09-19 17:37</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
-<div class="comment-content">active-passive strategy with desired capacity of 0. 1min application start time gives enough time to increase desired count when you failover to DR region. 
-
-OpenSearch supports cross-cluster replication for DR scenarios. "With cross-cluster replication in Amazon OpenSearch Service, you can replicate user indexes, mappings, and metadata from one OpenSearch Service domain to another. Using cross-cluster replication helps to ensure disaster recovery if there is an outage, and allows you to replicate data across geographically distant data centers to reduce latency."
-
-https://docs.aws.amazon.com/opensearch-service/latest/developerguide/replication.html
-
-not B or C since DR env is in a separate region. OpenSearch multi-AZ won't help.
-
-not D since it will have running 3 instances with associated runtime costs.</div>
+<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>D</strong></span></div>
+<div class="comment-content">AWS Global Accelerator</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
@@ -404,7 +404,7 @@ not D since it will have running 3 instances with associated runtime costs.</div
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">3</span> times
+				upvoted <span class="upvote-count">1</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
