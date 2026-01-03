@@ -3,13 +3,14 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="2023-07-29 5:46" name="refresh_date"/>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
 <meta charset="utf-8"/>
 <title>Exam AWS Certified SysOps Administrator</title>
 <!-- responsive tag -->
-<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- bootstrap v4 css -->
 <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -24,23 +25,29 @@
 <!-- responsive css -->
 <link href="../../../css/responsive.css" rel="stylesheet" type="text/css"/>
 <link href="../../../css/forum.css" rel="stylesheet" type="text/css"/>
-<style>
-</style>
 <div class="sec-spacer pt-20">
 <div class="container">
 <div class="container action-row-container border-0 p-0 mb-2">
 <div class="container action-row clearfix d-flex">
 <i class="fa fm fa-language fa-2x mr-2"></i>
-<a class="btn show-english" href="#">English</a>
-<a class="btn show-korean d-none" href="#">한국어</a>
+<a class="btn show-english" href="javascript:void(0)">English</a>
+<a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
 <span class="pagination-container ml-auto">
 <span id="page-indicator"><strong></strong></span>
-<!--p id="page-indicator"></p-->
 <span class="pagination-nav ml-4">
-<a class="btn btn-sm" href="#" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
-<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect">
-</select>
-<a class="btn btn-sm" href="#" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
+<a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
+<a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
 </span>
 </span>
 </div>
@@ -50,7 +57,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS Certified SysOps Administrator – Associate 주제 1 문제 374 토론</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified SysOps Administrator - Associate 시험 주제 1 문제 374 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified SysOps Administrator - Associate topic 1 question 374 discussion</h1>
@@ -65,67 +72,65 @@
 <!-- Question -->
 <div class="question-discussion-header">
 						
-							Amazon
-						 <a class="discussion-link">AWS 공인 SysOps 관리자 – 어소시에이트 의 시험 문제</a>
+							아마존
+						 <a class="discussion-link">AWS 공인 시스템 운영 관리자 - 어소시에이트 시험 문제</a>
 <div>
-							질문 #: 374 <br/>
-							주제 #: 1
+							문제 번호: 374 <br/>
+							주제 번호: 1
 						</div>
 </div>
 <div class="question-body mt-3 pt-3 border-top" data-id="891977">
 <p class="card-text">
 							
-								회사에는 필요한 것보다 더 많은 디스크 성능 용량을 갖춘 Amazon EC2 인스턴스를 배포하는 사용자가 있습니다. SysOps 관리자는 인스턴스와 연결된 모든 Amazon Elastic Block Store(Amazon EBS) 볼륨을 검토하고 IOPS 및 처리량을 기반으로 비용 최적화 권장 사항을 생성해야 합니다. <br/><br/>SysOps 관리자는 가장 운영 효율적인 방식으로 이러한 요구 사항을 충족하기 위해 무엇을 해야 합니까?
+								한 회사에서 일부 사용자는 필요 이상으로 디스크 성능 용량이 큰 Amazon EC2 인스턴스를 배포합니다. 시스템 운영 관리자는 이러한 인스턴스와 연결된 모든 Amazon EBS(Equal Elastic Block Store) 볼륨을 검토하고 IOPS 및 처리량을 기반으로 비용 최적화 권장 사항을 제시해야 합니다. <br/><br/>시스템 운영 관리자는 운영 효율성을 극대화하면서 이러한 요구 사항을 충족하기 위해 어떤 조치를 취해야 할까요?
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="891977" type="application/json">[{"voted_answers": "C", "vote_count": 5, "is_most_voted": true}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
-<li class="multi-choice-item correct-hidden">
+<li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="A">
 													A.
 												</span> 
 											
-											EC2 콘솔의 모니터링 그래프를 사용하여 EBS 볼륨에 대한 지표를 확인하세요. 각 볼륨의 프로비저닝된 공간과 비교하여 소비된 공간을 검토합니다. 활용도가 낮은 볼륨을 식별합니다.
+											EC2 콘솔의 모니터링 그래프를 사용하여 EBS 볼륨의 메트릭을 확인하십시오. 각 볼륨의 할당된 공간 대비 사용된 공간을 검토하고 사용률이 낮은 볼륨을 파악하십시오.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
 												</span> 
 											
-											EC2 콘솔에서 EC2 인스턴스를 중지합니다. Amazon EBS 최적화에 대한 EC2 인스턴스 유형을 변경합니다. EC2 인스턴스를 시작합니다.
+											EC2 콘솔에서 EC2 인스턴스를 중지합니다. EC2 인스턴스 유형을 Amazon EBS 최적화로 변경합니다. EC2 인스턴스를 시작합니다.
 										</li>
-<li class="multi-choice-item">
+<li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span> 
 											
-											AWS Compute Optimizer를 선택합니다. 측정항목이 수집될 때까지 충분한 시간을 허용합니다. EBS 볼륨에 대한 Compute Optimizer 결과를 검토합니다.
+											AWS Compute Optimizer를 활성화합니다. 메트릭이 수집될 때까지 충분한 시간을 기다립니다. EBS 볼륨에 대한 Compute Optimizer 결과를 검토합니다.
 										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
-                최다 투표
+                가장 많은 표를 받은
             </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span> 
 											
-											EC2 인스턴스에 fio 도구를 설치하고 .cfg 파일을 생성하여 필요한 워크로드를 대략적으로 계산합니다. 벤치마크 결과를 사용하여 프로비저닝된 EBS 볼륨이 가장 적절한 유형인지 여부를 측정합니다.
+											EC2 인스턴스에 fio 도구를 설치하고 필요한 워크로드를 대략적으로 설정하는 .cfg 파일을 생성합니다. 벤치마크 결과를 사용하여 프로비저닝된 EBS 볼륨이 가장 적절한 유형인지 평가합니다.
 										</li>
 </ul>
 </div>
-<a class="btn btn-primary reveal-solution" href="#">제안된 답변 표시</a>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
 <a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
 <div class="card-text question-answer bg-light white-text" style="display: none;">
-<span class="correct-answer-box"><strong>추천 답변: </strong>
-<span class="correct-answer">A </span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
+<span class="correct-answer-box"><strong>정답: </strong>
+<span class="correct-answer">C</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="5 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">C (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>지역사회 투표 배분</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="8 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">C (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
@@ -152,11 +157,10 @@
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="891977" type="application/json">[{"voted_answers": "C", "vote_count": 5, "is_most_voted": true}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
-<li class="multi-choice-item correct-hidden">
+<li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="A">
 													A.
 												</span>
@@ -170,7 +174,7 @@
 											
 											Stop the EC2 instances from the EC2 console. Change the EC2 instance type for Amazon EBS-optimized. Start the EC2 instances.
 										</li>
-<li class="multi-choice-item">
+<li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span>
@@ -192,13 +196,12 @@
 <a class="btn btn-primary hide-solution d-none" href="#">Hide Answer</a>
 <div class="card-text question-answer bg-light white-text">
 <span class="correct-answer-box"><strong>Suggested Answer:</strong>
-<span class="correct-answer">A</span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
+<span class="correct-answer">C</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="5 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">C (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="8 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">C (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
@@ -206,10 +209,10 @@
 <!-- / Question  -->
 </div>
 <div class="comments-wrapper">
-<a class="badge reveal-comment" href="#">댓글 표시</a>
-<a class="badge hide-comment d-none" href="#">댓글 숨기기</a>
+<a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
 <div class="discussion-page-comments-section" data-discussion-question-id="115990" style="display: none">
-<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">코멘트</h4></div>
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
 <div class="container outer-discussion-container">
@@ -218,6 +221,53 @@
 <!-- New comment start -->
 <!-- New comment end -->
 <div class="discussion-container">
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="958552" id="comment-958552">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				jas26says
+			</h5>
+</a>
+<span class="badge badge-primary">
+				가장 많은 표를 받은<i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="2024년 7월 21일 일요일 15시 31분">2024년 7월 22일 00시 31분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
+<div class="comment-content">답은 꽤 명확합니다. 컴퓨트 옵티마이저가 최고입니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">5</span> 번
+			 
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
 <!-- single_comment.html -->
 <div class="media comment-container" data-comment-id="966041" id="comment-966041">
 <a class="minimize-comment comment-toggle" href="#">
@@ -234,22 +284,23 @@
 				크리스티나666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 29일 토요일 05:46">
-			4주, 1일 전
-		</span>
+<span class="badge badge-primary">
+				최신<i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="2024년 7월 29일 월요일 오전 5시 46분">2024년 7월 29일 14시 46분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>C</strong></span></div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
 <div class="comment-content">https://aws.amazon.com/blogs/storage/cost-optimizing-amazon-ebs-volumes-using-aws-compute-optimizer/</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -272,21 +323,19 @@
 				크리스티나666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 29일 토요일 05:46">
-			4주, 1일 전
-		</span>
+<span class="comment-date align-middle" title="2024년 7월 29일 월요일 오전 5시 46분">2024년 7월 29일 14시 46분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">EBS 볼륨의 크기를 적절하게 조정하는 데 도움이 되도록 AWS Compute Optimizer는 지난 14일 동안 Amazon CloudWatch에서 수집한 AWS 리소스 사용률 데이터(최대 3개월의 데이터까지 유료 옵션 사용 가능)를 분석하여 최적의 리소스 구성을 식별합니다. 이러한 권장 사항은 Amazon Elastic Compute Cloud(EC2) 인스턴스, EBS 볼륨, AWS Auto Scaling 그룹, AWS Lambda 함수 및 AWS Fargate에 사용할 수 있습니다.</div>
+<div class="comment-content">AWS Compute Optimizer는 EBS 볼륨 크기를 최적화할 수 있도록 Amazon CloudWatch에서 수집한 지난 14일간의 AWS 리소스 사용률 데이터(유료 옵션 사용 시 최대 3개월 데이터 제공)를 분석하여 최적의 리소스 구성을 제시합니다. 이러한 권장 사항은 Amazon Elastic Compute Cloud(EC2) 인스턴스, EBS 볼륨, AWS Auto Scaling 그룹, AWS Lambda 함수 및 AWS Fargate에 적용됩니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">5</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -325,21 +374,19 @@
 				조타릭스
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 22일 토요일 22:41">
-			1 개월 전
-		</span>
+<span class="comment-date align-middle" title="2024년 7월 22일 월요일 22시 41분">2024년 7월 23일 오전 7시 41분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">A와 D는 관리자가 시간을 전환해야 하기 때문에 운영상 효율적이지 않습니다. B는 문제를 해결하기 위한 단계입니다. 따라서 C가 정답입니다.</div>
+<div class="comment-content">A와 D는 관리자가 시간을 투입해야 하므로 운영상 효율적이지 않습니다. B는 문제를 해결하기 위한 단계입니다. 따라서 C가 정답입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -367,70 +414,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				트브트린
+				트르브트린
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 22일 토요일 14:55">
-			1 개월 전
-		</span>
+<span class="comment-date align-middle" title="2024년 7월 22일 월요일 14시 55분">2024년 7월 22일 23시 55분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">C가 맞아요</div>
+<div class="comment-content">C가 정답입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
-</span>
-<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
-			 
-				찬성함</span>
-<span class="comment-control-error ml-2"></span>
-</div>
-<div class="new-comment-box-container mt-2">
-</div>
-<div class="comment-replies">
-<!-- Nesting start -->
-<!-- Nesting end -->
-</div>
-</div>
-<div class="comment-ellipsis comment-toggled">
-		...
-	</div>
-</div>
-</div>
-<!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="958552" id="comment-958552">
-<a class="minimize-comment comment-toggle" href="#">
-<i class="fa fa-minus-square-o mr-2 mt-1"></i>
-</a>
-<a class="maximize-comment comment-toggle" href="#">
-<i class="fa fa-plus-square-o mr-2 mt-1"></i>
-</a>
-<div class="media-body">
-<div class="comment-head">
-<i class="fa fa-user mr-1 mt-1"></i>
-<a>
-<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				jas26말씀
-			</h5>
-</a>
-<span class="comment-date align-middle" title="2023년 7월 21일 금 15:31">
-			1 개월 전
-		</span>
-</div>
-<div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>C</strong></span></div>
-<div class="comment-content">대답은 분명합니다. Compute Optimizer가 전부입니다.</div>
-<div class="comment-control">
-<span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -453,8 +452,8 @@
 </div>
 </div>
 <div class="comments-wrapper-en" style="display: none;">
-<a class="badge reveal-comment" href="#">Show Comments</a>
-<a class="badge hide-comment d-none" href="#">Hide Comments</a>
+<a class="badge reveal-comment" href="javascript:void(0)">Show Comments</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">Hide Comments</a>
 <div class="discussion-page-comments-section-en" data-discussion-question-id="115990" style="display: none">
 <div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">Comments</h4></div>
 <!-- discussion.html -->
@@ -465,6 +464,53 @@
 <!-- New comment start -->
 <!-- New comment end -->
 <div class="discussion-container">
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="958552" id="comment-958552">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				jas26says
+			</h5>
+</a>
+<span class="badge badge-primary">
+				Highly Voted <i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="Sun 21 Jul 2024 15:31">2024-07-22 00:31</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
+<div class="comment-content">The answer heres it´s kind of obvious. Compute Optimizer all the way.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">5</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
 <!-- single_comment.html -->
 <div class="media comment-container" data-comment-id="966041" id="comment-966041">
 <a class="minimize-comment comment-toggle" href="#">
@@ -481,9 +527,10 @@
 				Christina666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sat 29 Jul 2023 05:46">
-			4 weeks, 1 day ago
-		</span>
+<span class="badge badge-primary">
+				Most Recent <i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="Mon 29 Jul 2024 05:46">2024-07-29 14:46</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
@@ -495,7 +542,7 @@
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">3</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -519,9 +566,7 @@
 				Christina666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sat 29 Jul 2023 05:46">
-			4 weeks, 1 day ago
-		</span>
+<span class="comment-date align-middle" title="Mon 29 Jul 2024 05:46">2024-07-29 14:46</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">To help you right-size your EBS volumes, AWS Compute Optimizer analyzes your AWS resource utilization data collected by Amazon CloudWatch from the past 14 days (paid option available for up to three months of data) to identify the optimal resource configuration. These recommendations are available for your Amazon Elastic Compute Cloud (EC2) instances, EBS volumes, AWS Auto Scaling groups, AWS Lambda functions, and AWS Fargate.</div>
@@ -532,7 +577,7 @@
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">5</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -572,9 +617,7 @@
 				Zotarix
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sat 22 Jul 2023 22:41">
-			1 month ago
-		</span>
+<span class="comment-date align-middle" title="Mon 22 Jul 2024 22:41">2024-07-23 07:41</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">A and D are no operationally efficient because the admin needs to invert time on it. B are the steps to get the issue resolved. Hence, C is the correct answer.</div>
@@ -585,7 +628,7 @@
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">2</span> times
+				upvoted <span class="upvote-count">3</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -617,58 +660,10 @@
 				trvtrinh
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sat 22 Jul 2023 14:55">
-			1 month ago
-		</span>
+<span class="comment-date align-middle" title="Mon 22 Jul 2024 14:55">2024-07-22 23:55</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">C is correct</div>
-<div class="comment-control">
-<span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
-</span>
-<span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">3</span> times
-			</span>
-<span class="comment-control-error ml-2"></span>
-</div>
-<div class="new-comment-box-container mt-2">
-</div>
-<div class="comment-replies">
-<!-- Nesting start -->
-<!-- Nesting end -->
-</div>
-</div>
-<div class="comment-ellipsis comment-toggled">
-		...
-	</div>
-</div>
-</div>
-<!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="958552" id="comment-958552">
-<a class="minimize-comment comment-toggle" href="#">
-<i class="fa fa-minus-square-o mr-2 mt-1"></i>
-</a>
-<a class="maximize-comment comment-toggle" href="#">
-<i class="fa fa-plus-square-o mr-2 mt-1"></i>
-</a>
-<div class="media-body">
-<div class="comment-head">
-<i class="fa fa-user mr-1 mt-1"></i>
-<a>
-<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				jas26says
-			</h5>
-</a>
-<span class="comment-date align-middle" title="Fri 21 Jul 2023 15:31">
-			1 month ago
-		</span>
-</div>
-<div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
-<div class="comment-content">The answer heres it´s kind of obvious. Compute Optimizer all the way.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
@@ -709,7 +704,7 @@
 <i class="fa fa-angle-up"></i>
 </div>
 <!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="../../../js/popper.min.js"></script>
 <!-- jquery latest version -->
 <script src="../../../js/jquery.min.js"></script>
 <!-- bootstrap js -->
@@ -720,8 +715,6 @@
 <script src="../../../js/wow.min.js"></script>
 <!-- main js -->
 <script src="../../../js/main.js"></script>
-<script async="" defer="" src="../../../js/bootstrap3-typeahead.min.js">
-</script>
 <script type="text/javascript">
     // Activate tooltips
     $(function () {
@@ -748,39 +741,6 @@
         $('img[defsrc]').each(function() {
             $(this).attr('src',$(this).attr('defsrc'));
         });
-
-
-        function delayedStart() {
-            // Typeahead start
-
-            // Register typeahead element:
-            $('#header-keyword-search, #modal-keyword-search').typeahead({
-                source: autoCompleteQuery,
-                autoSelect: true,
-                delay: 150,
-                selectOnBlur: false,
-                afterSelect: function(param) {$(this.$element).closest('form').submit()}
-            });
-
-            // Query ajax function:
-            function autoCompleteQuery(query, callback) {
-                return $.get("/ajax/autocomplete/suggestions/?query=" + query).done(callback);
-            }
-            // Typeahead end
-        }
-        setTimeout(delayedStart, 1500);
-
-        // Don't submit empty search query
-        $('#modal-keyword-search-form').submit(function() {
-            if (!$('#modal-keyword-search').val()) {
-                return false;
-            }
-        });
-
-        // Auto focus on search box when search-modal is opened
-        $('.search-modal').on('shown.bs.modal', function (e) {
-            $(this).find('input[type=text]').focus();
-        });
     });
 </script>
 <script type="text/javascript">
@@ -790,6 +750,6 @@
 </script>
 <script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
 <script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
-</div>
+</meta></div>
 </body>
 </html>

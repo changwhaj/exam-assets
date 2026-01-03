@@ -3,13 +3,14 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="2025-07-12 20:35" name="refresh_date"/>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
 <meta charset="utf-8"/>
 <title>Exam AWS Certified SysOps Administrator</title>
 <!-- responsive tag -->
-<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- bootstrap v4 css -->
 <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -31,13 +32,21 @@
 <i class="fa fm fa-language fa-2x mr-2"></i>
 <a class="btn show-english" href="javascript:void(0)">English</a>
 <a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
 <span class="pagination-container ml-auto">
 <span id="page-indicator"><strong></strong></span>
-<!--p id="page-indicator"></p-->
 <span class="pagination-nav ml-4">
 <a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
-<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect">
-</select>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
 <a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
 </span>
 </span>
@@ -48,7 +57,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS Certified SysOps Administrator - Associate 주제 1 문제 206 토론</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified SysOps Administrator - Associate 시험 주제 1, 206번 문제 해설</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified SysOps Administrator - Associate topic 1 question 206 discussion</h1>
@@ -63,66 +72,65 @@
 <!-- Question -->
 <div class="question-discussion-header">
 						
-							Amazon
-						 <a class="discussion-link">AWS 공인 SysOps 관리자 – 어소시에이트 의 시험 문제</a>
+							아마존
+						 <a class="discussion-link">AWS 공인 시스템 운영 관리자 - 어소시에이트 시험 문제</a>
 <div>
-							질문 #: 206 <br/>
-							주제 #: 1
+							문제 번호: 206 <br/>
+							주제 번호: 1
 						</div>
 </div>
 <div class="question-body mt-3 pt-3 border-top" data-id="854677">
 <p class="card-text">
 							
-								회사는 애플리케이션과 함께 Amazon Simple Queue Service(Amazon SQS) 표준 대기열을 사용합니다. 애플리케이션은 고유한 메시지 본문을 사용하여 메시지를 큐에 보냅니다. 회사는 SQS FIFO 대기열로 전환하기로 결정했습니다. <br/><br/>SQS FIFO 대기열로 마이그레이션하려면 회사에서 무엇을 해야 합니까?
+								한 회사가 자사 애플리케이션에서 Amazon Simple Queue Service(Amazon SQS) 표준 큐를 사용하고 있습니다. 애플리케이션은 고유한 메시지 본문을 가진 메시지를 큐로 전송합니다. 이 회사는 SQS FIFO 큐로 전환하기로 결정했습니다. <br/><br/>SQS FIFO 큐로 마이그레이션하려면 어떤 작업을 수행해야 합니까?
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="854677" type="application/json">[{"voted_answers": "A", "vote_count": 11, "is_most_voted": true}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
-<li class="multi-choice-item">
+<li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="A">
 													A.
 												</span> 
 											
-											새로운 SQS FIFO 대기열을 생성합니다. 새 FIFO 대기열에서 콘텐츠 기반 중복 제거를 활성화합니다. 메시지에 메시지 그룹 ID를 포함하도록 애플리케이션을 업데이트합니다.
+											새 SQS FIFO 큐를 생성합니다. 새 FIFO 큐에서 콘텐츠 기반 중복 제거를 활성화합니다. 메시지에 메시지 그룹 ID를 포함하도록 애플리케이션을 업데이트합니다.
 										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
-                최다 투표
+                가장 많은 표를 받은
             </span></li>
-<li class="multi-choice-item correct-hidden">
+<li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
 												</span> 
 											
-											새로운 SQS FIFO 대기열을 생성합니다. 메시지에 DelaySeconds 매개변수를 포함하도록 애플리케이션을 업데이트합니다.
+											새로운 SQS FIFO 큐를 생성합니다. 메시지에 DelaySeconds 매개변수를 포함하도록 애플리케이션을 업데이트합니다.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span> 
 											
-											대기열 유형을 SQS 표준에서 SQS FIFO로 수정합니다. 대기열에서 콘텐츠 기반 중복 제거를 끕니다. 메시지에 메시지 그룹 ID를 포함하도록 애플리케이션을 업데이트합니다.
+											큐 유형을 SQS 표준에서 SQS FIFO로 변경합니다. 큐에서 콘텐츠 기반 중복 제거를 비활성화합니다. 메시지에 메시지 그룹 ID를 포함하도록 애플리케이션을 업데이트합니다.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span> 
 											
-											대기열 유형을 SQS 표준에서 SQS FIFO로 수정합니다. 동일한 메시지 본문이 포함된 메시지를 보내고 메시지에 DelaySeconds 매개변수를 포함하도록 애플리케이션을 업데이트합니다.
+											큐 유형을 SQS 표준에서 SQS FIFO로 변경합니다. 동일한 메시지 본문을 사용하여 메시지를 전송하고 메시지에 DelaySeconds 매개변수를 포함하도록 애플리케이션을 업데이트합니다.
 										</li>
 </ul>
 </div>
-<a class="btn btn-primary reveal-solution" href="#">제안된 답변 표시</a>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
 <a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
 <div class="card-text question-answer bg-light white-text" style="display: none;">
 <span class="correct-answer-box"><strong>제안된 답변: </strong>
-<span class="correct-answer">B</span>
+<span class="correct-answer">A</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="11 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">A (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>지역사회 투표 배분</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="21 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">A (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
@@ -149,11 +157,10 @@
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="854677" type="application/json">[{"voted_answers": "A", "vote_count": 11, "is_most_voted": true}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
-<li class="multi-choice-item">
+<li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="A">
 													A.
 												</span>
@@ -162,7 +169,7 @@
 										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
                 Most Voted
             </span></li>
-<li class="multi-choice-item correct-hidden">
+<li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
 												</span>
@@ -189,12 +196,12 @@
 <a class="btn btn-primary hide-solution d-none" href="#">Hide Answer</a>
 <div class="card-text question-answer bg-light white-text">
 <span class="correct-answer-box"><strong>Suggested Answer:</strong>
-<span class="correct-answer">B</span>
+<span class="correct-answer">A</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="11 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">A (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="21 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">A (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
@@ -205,7 +212,7 @@
 <a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
 <a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
 <div class="discussion-page-comments-section" data-discussion-question-id="91037" style="display: none">
-<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">코멘트</h4></div>
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
 <div class="container outer-discussion-container">
@@ -227,25 +234,72 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				베즈니카
+				노숙자
 			</h5>
 </a>
 <span class="badge badge-primary">
-				높은 투표율<i class="fa fa-thumbs-up"></i>
+				가장 많은 표를 받은<i class="fa fa-thumbs-up"></i>
 </span>
-<span class="comment-date align-middle" title="2022년 12월 11일 일요일 17:09">2022-12-12 02:09</span>
+<span class="comment-date align-middle" title="2023년 12월 11일 월요일 17시 9분">2023년 12월 12일 02시 09분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">A인 것 같아요. https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues-moving.html</div>
+<div class="comment-content">제 생각엔 A인 것 같습니다. https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues-moving.html</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">7</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">9</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1585886" id="comment-1585886">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				카카321
+			</h5>
+</a>
+<span class="badge badge-primary">
+				최신<i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="2025년 7월 12일 토요일 20시 35분">2025년 7월 13일 오전 5시 35분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">100% 맞습니다</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
+			 
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -273,26 +327,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				콜스페이스
+				호출 공간
 			</h5>
 </a>
-<span class="badge badge-primary">
-				가장 최근<i class="fa fa-clock-o"></i>
-</span>
-<span class="comment-date align-middle" title="2023년 10월 5일 (목) 07:31">2023-10-05 16:31</span>
+<span class="comment-date align-middle" title="2024년 10월 5일 토요일 오전 7시 31분">2024년 10월 5일 16시 31분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">A 그렇습니다. 우선 - Amazon SQS 표준 대기열에서 FIFO 대기열로 이동... 기존 표준 대기열을 FIFO 대기열로 변환할 수 없습니다. 두 번째 - 대기열에 대한 콘텐츠 기반 중복 제거(각 메시지에는 고유한 본문이 있음)</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">네, 맞습니다. 우선, 아마존 SQS 표준 큐에서 FIFO 큐로 이동하는 것은 불가능합니다. 기존 표준 큐를 FIFO 큐로 변환할 수는 없습니다. 둘째, 큐의 내용 기반 중복 제거(각 메시지의 본문이 고유해야 함) 때문입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -323,20 +374,20 @@
 				지파크
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 8월 16일 수요일 13:45">2023-08-16 22:45</span>
+<span class="comment-date align-middle" title="2024년 8월 16일 금요일 13시 45분">2024년 8월 16일 22시 45분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">CD가 안되는 이유: 대기열 유형을 수정할 수 없는 이유 B: DelaySeconds 매개변수는 FIFO와 관계가 없습니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">CD가 안 되는 이유: 큐 유형은 수정할 수 없습니다. B가 안 되는 이유: DelaySeconds 매개변수는 FIFO와 관련이 없습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -367,20 +418,20 @@
 				크리스티나666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 24일 (월) 22:42">2023-07-25 07:42</span>
+<span class="comment-date align-middle" title="2024년 7월 24일 수요일 22시 42분">2024년 7월 25일 오전 7시 42분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">A. 새 SQS FIFO 대기열 생성: SQS FIFO 대기열은 SQS 표준 대기열과 비교하여 구조와 순서 지정 메커니즘이 다르므로 FIFO 구성을 사용하여 새 대기열을 생성해야 합니다. 새 FIFO 대기열에서 콘텐츠 기반 중복 제거 활성화: SQS FIFO 대기열은 콘텐츠 기반 중복 제거를 지원합니다. 이 기능을 활성화하면 동일한 메시지(동일한 메시지 본문을 가진 메시지)가 대기열에서 중복되지 않게 됩니다. 이는 FIFO 대기열의 필수 기능입니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">A. 새 SQS FIFO 큐 생성: SQS FIFO 큐는 표준 SQS 큐와 구조 및 순서 지정 방식이 다르므로 FIFO 구성으로 새 큐를 생성해야 합니다. 새 FIFO 큐에서 콘텐츠 기반 중복 제거 활성화: SQS FIFO 큐는 콘텐츠 기반 중복 제거를 지원합니다. 이 기능을 활성화하면 동일한 메시지(메시지 본문이 같은 메시지)가 큐에 중복되지 않도록 할 수 있으며, 이는 FIFO 큐의 핵심 기능입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -403,19 +454,19 @@
 				크리스티나666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 24일 (월) 22:42">2023-07-25 07:42</span>
+<span class="comment-date align-middle" title="2024년 7월 24일 수요일 22시 42분">2024년 7월 25일 오전 7시 42분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">메시지에 메시지 그룹 ID를 포함하도록 애플리케이션을 업데이트합니다. FIFO 대기열에서 메시지는 메시지 그룹을 기준으로 정렬됩니다. 각 메시지에는 메시지 그룹 ID가 포함되어야 하며, 동일한 그룹 내의 메시지는 순서대로 처리됩니다. 애플리케이션이 이미 고유한 메시지 본문을 보내는 경우 큐 내에서 순서를 유지하려면 메시지 그룹 ID를 포함하도록 업데이트해야 할 수도 있습니다. DelaySeconds 매개변수가 표준 대기열에서 FIFO 대기열로의 마이그레이션 프로세스와 관련이 없기 때문에 옵션 B는 올바르지 않습니다. DelaySeconds는 표준 및 FIFO 대기열 모두에서 사용할 수 있는 매개변수이지만 마이그레이션 프로세스에는 영향을 미치지 않습니다.</div>
+<div class="comment-content">메시지에 메시지 그룹 ID를 포함하도록 애플리케이션을 업데이트하십시오. FIFO 큐에서는 메시지가 메시지 그룹을 기준으로 정렬됩니다. 각 메시지에는 메시지 그룹 ID가 포함되어야 하며, 동일한 그룹에 속한 메시지는 순서대로 처리됩니다. 애플리케이션에서 이미 고유한 메시지 본문을 전송하고 있는 경우, 큐 내 순서 유지를 위해 메시지 그룹 ID를 포함하도록 업데이트해야 할 수 있습니다. 옵션 B는 DelaySeconds 매개변수가 표준 큐에서 FIFO 큐로의 마이그레이션 프로세스와 관련이 없으므로 올바르지 않습니다. DelaySeconds는 표준 큐와 FIFO 큐 모두에서 사용할 수 있는 매개변수이지만 마이그레이션 프로세스에는 영향을 미치지 않습니다. 옵션 C와 옵션 D는 큐 유형을 표준에서 FIFO로 변경하거나 동일한 메시지 본문을 전송하고 DelaySeconds 매개변수를 사용하도록 애플리케이션을 업데이트하는 것은 SQS FIFO 큐로 마이그레이션하는 데 적합한 단계가 아니므로 올바르지 않습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -454,20 +505,20 @@
 				csG13
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 3월 6일 (월) 오후 2:35">2023-03-06 23:35</span>
+<span class="comment-date align-middle" title="2024년 3월 6일 수요일 14시 35분">2024년 3월 6일 23시 35분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">정답은 A입니다. 기존 대기열을 FIFO 대기열로 변환할 수 없으므로 C나 D는 없습니다. 또한 FIFO 대기열은 메시지별 지연이 아닌 대기열별 지연만 지원합니다. 그러니까 B도 될 수 없어.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">정답은 A입니다. 기존 큐를 FIFO 큐로 변환할 수 없으므로 C와 D는 답이 아닙니다. 또한 FIFO 큐는 메시지 단위가 아닌 큐 단위의 지연만 지원하므로 B도 답이 아닙니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -498,19 +549,19 @@
 				브레이브하트22
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 3월 2일 목요일 18:30">2023-03-03 03:30</span>
+<span class="comment-date align-middle" title="2024년 3월 2일 토요일 18시 30분">2024년 3월 3일 오전 3시 30분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">A가 정답입니다. FIFO 대기열로 전송되는 모든 메시지에는 메시지 그룹 ID가 필요합니다. 순서가 지정된 여러 메시지 그룹이 필요하지 않은 경우 모든 메시지에 동일한 메시지 그룹 ID를 지정하세요. https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues-moving.html</div>
+<div class="comment-content">A가 정답입니다. FIFO 큐로 전송되는 모든 메시지에는 메시지 그룹 ID가 필요합니다. 순서가 지정된 여러 메시지 그룹이 필요하지 않은 경우 모든 메시지에 동일한 메시지 그룹 ID를 지정하십시오. https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues-moving.html</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -538,23 +589,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				닐
+				nlw
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 1월 4일 수요일 11:07">2023-01-04 20:07</span>
+<span class="comment-date align-middle" title="2024년 1월 4일 목요일 오전 11시 7분">2024년 1월 4일 20시 7분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">FIFO 대기열은 메시지별 지연을 지원하지 않고 대기열별 지연만 지원합니다. 애플리케이션이 각 메시지에 동일한 DelaySeconds 매개변수 값을 설정하는 경우 애플리케이션을 수정하여 메시지별 지연을 제거하고 대신 전체 대기열에 DelaySeconds를 설정해야 합니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">FIFO 큐는 메시지별 지연이 아닌 큐 전체에 대한 지연만 지원합니다. 애플리케이션에서 각 메시지에 동일한 DelaySeconds 매개변수 값을 설정하는 경우, 메시지별 지연을 제거하고 큐 전체에 DelaySeconds를 설정하도록 애플리케이션을 수정해야 합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -585,20 +636,20 @@
 				미칼다비드
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 12월 13일 (화) 12:53">2022-12-13 21:53</span>
+<span class="comment-date align-middle" title="2023년 12월 13일 수요일 12시 53분">2023년 12월 13일 21시 53분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">내 생각엔 A도 마찬가지야</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">저도 A라고 생각해요</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -652,7 +703,7 @@
 <span class="badge badge-primary">
 				Highly Voted <i class="fa fa-thumbs-up"></i>
 </span>
-<span class="comment-date align-middle" title="Sun 11 Dec 2022 17:09">2022-12-12 02:09</span>
+<span class="comment-date align-middle" title="Mon 11 Dec 2023 17:09">2023-12-12 02:09</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">I think it's A. https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues-moving.html</div>
@@ -663,7 +714,54 @@
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">7</span> times
+				upvoted <span class="upvote-count">9</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1585886" id="comment-1585886">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				kaka321
+			</h5>
+</a>
+<span class="badge badge-primary">
+				Most Recent <i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="Sat 12 Jul 2025 20:35">2025-07-13 05:35</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
+<div class="comment-content">100% right</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -695,10 +793,7 @@
 				callspace
 			</h5>
 </a>
-<span class="badge badge-primary">
-				Most Recent <i class="fa fa-clock-o"></i>
-</span>
-<span class="comment-date align-middle" title="Thu 05 Oct 2023 07:31">2023-10-05 16:31</span>
+<span class="comment-date align-middle" title="Sat 05 Oct 2024 07:31">2024-10-05 16:31</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -712,7 +807,7 @@ Second - content-based deduplication for the queue (each of your messages has a 
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">4</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -744,7 +839,7 @@ Second - content-based deduplication for the queue (each of your messages has a 
 				jipark
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Wed 16 Aug 2023 13:45">2023-08-16 22:45</span>
+<span class="comment-date align-middle" title="Fri 16 Aug 2024 13:45">2024-08-16 22:45</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -757,7 +852,7 @@ why not B : DelaySeconds parameter has no relationship with FIFO.</div>
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">3</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -789,7 +884,7 @@ why not B : DelaySeconds parameter has no relationship with FIFO.</div>
 				Christina666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Mon 24 Jul 2023 22:42">2023-07-25 07:42</span>
+<span class="comment-date align-middle" title="Wed 24 Jul 2024 22:42">2024-07-25 07:42</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -804,7 +899,7 @@ Turn on content-based deduplication on the new FIFO queue: SQS FIFO queues suppo
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">2</span> times
+				upvoted <span class="upvote-count">3</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -828,7 +923,7 @@ Turn on content-based deduplication on the new FIFO queue: SQS FIFO queues suppo
 				Christina666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Mon 24 Jul 2023 22:42">2023-07-25 07:42</span>
+<span class="comment-date align-middle" title="Wed 24 Jul 2024 22:42">2024-07-25 07:42</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">Update the application to include a message group ID in the messages: In FIFO queues, messages are ordered based on message groups. Each message should include a message group ID, and messages within the same group will be processed in order. If the application is already sending unique message bodies, it might need to be updated to include a message group ID to maintain ordering within the queue.
@@ -843,7 +938,7 @@ Option C and Option D are incorrect because modifying the queue type from standa
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -883,7 +978,7 @@ Option C and Option D are incorrect because modifying the queue type from standa
 				csG13
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Mon 06 Mar 2023 14:35">2023-03-06 23:35</span>
+<span class="comment-date align-middle" title="Wed 06 Mar 2024 14:35">2024-03-06 23:35</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -897,7 +992,7 @@ Can't convert an existing queue to a fifo queue, so no C or D. Also FIFO queues 
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">2</span> times
+				upvoted <span class="upvote-count">3</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -929,7 +1024,7 @@ Can't convert an existing queue to a fifo queue, so no C or D. Also FIFO queues 
 				braveheart22
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Thu 02 Mar 2023 18:30">2023-03-03 03:30</span>
+<span class="comment-date align-middle" title="Sat 02 Mar 2024 18:30">2024-03-03 03:30</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">A is the correct answer
@@ -974,7 +1069,7 @@ https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-
 				nlw
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Wed 04 Jan 2023 11:07">2023-01-04 20:07</span>
+<span class="comment-date align-middle" title="Thu 04 Jan 2024 11:07">2024-01-04 20:07</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -986,7 +1081,7 @@ https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">2</span> times
+				upvoted <span class="upvote-count">3</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -1018,7 +1113,7 @@ https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-
 				michaldavid
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Tue 13 Dec 2022 12:53">2022-12-13 21:53</span>
+<span class="comment-date align-middle" title="Wed 13 Dec 2023 12:53">2023-12-13 21:53</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -1030,7 +1125,7 @@ https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">3</span> times
+				upvoted <span class="upvote-count">4</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -1063,7 +1158,7 @@ https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-
 <i class="fa fa-angle-up"></i>
 </div>
 <!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="../../../js/popper.min.js"></script>
 <!-- jquery latest version -->
 <script src="../../../js/jquery.min.js"></script>
 <!-- bootstrap js -->
@@ -1074,8 +1169,6 @@ https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-
 <script src="../../../js/wow.min.js"></script>
 <!-- main js -->
 <script src="../../../js/main.js"></script>
-<script async="" defer="" src="../../../js/bootstrap3-typeahead.min.js">
-</script>
 <script type="text/javascript">
     // Activate tooltips
     $(function () {
@@ -1102,39 +1195,6 @@ https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-
         $('img[defsrc]').each(function() {
             $(this).attr('src',$(this).attr('defsrc'));
         });
-
-
-        function delayedStart() {
-            // Typeahead start
-
-            // Register typeahead element:
-            $('#header-keyword-search, #modal-keyword-search').typeahead({
-                source: autoCompleteQuery,
-                autoSelect: true,
-                delay: 150,
-                selectOnBlur: false,
-                afterSelect: function(param) {$(this.$element).closest('form').submit()}
-            });
-
-            // Query ajax function:
-            function autoCompleteQuery(query, callback) {
-                return $.get("/ajax/autocomplete/suggestions/?query=" + query).done(callback);
-            }
-            // Typeahead end
-        }
-        setTimeout(delayedStart, 1500);
-
-        // Don't submit empty search query
-        $('#modal-keyword-search-form').submit(function() {
-            if (!$('#modal-keyword-search').val()) {
-                return false;
-            }
-        });
-
-        // Auto focus on search box when search-modal is opened
-        $('.search-modal').on('shown.bs.modal', function (e) {
-            $(this).find('input[type=text]').focus();
-        });
     });
 </script>
 <script type="text/javascript">
@@ -1144,6 +1204,6 @@ https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-
 </script>
 <script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
 <script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
-</div>
+</meta></div>
 </body>
 </html>

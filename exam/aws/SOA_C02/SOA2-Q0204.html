@@ -3,13 +3,14 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="2023-07-03 5:17" name="refresh_date"/>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
 <meta charset="utf-8"/>
 <title>Exam AWS Certified SysOps Administrator</title>
 <!-- responsive tag -->
-<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- bootstrap v4 css -->
 <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -24,23 +25,29 @@
 <!-- responsive css -->
 <link href="../../../css/responsive.css" rel="stylesheet" type="text/css"/>
 <link href="../../../css/forum.css" rel="stylesheet" type="text/css"/>
-<style>
-</style>
 <div class="sec-spacer pt-20">
 <div class="container">
 <div class="container action-row-container border-0 p-0 mb-2">
 <div class="container action-row clearfix d-flex">
 <i class="fa fm fa-language fa-2x mr-2"></i>
-<a class="btn show-english" href="#">English</a>
-<a class="btn show-korean d-none" href="#">한국어</a>
+<a class="btn show-english" href="javascript:void(0)">English</a>
+<a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
 <span class="pagination-container ml-auto">
 <span id="page-indicator"><strong></strong></span>
-<!--p id="page-indicator"></p-->
 <span class="pagination-nav ml-4">
-<a class="btn btn-sm" href="#" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
-<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect">
-</select>
-<a class="btn btn-sm" href="#" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
+<a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
+<a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
 </span>
 </span>
 </div>
@@ -50,7 +57,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS Certified SysOps Administrator – Associate 주제 1 문제 204 토론</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified SysOps Administrator - Associate 시험 주제 1, 질문 204 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified SysOps Administrator - Associate topic 1 question 204 discussion</h1>
@@ -65,21 +72,20 @@
 <!-- Question -->
 <div class="question-discussion-header">
 						
-							Amazon
-						 <a class="discussion-link">AWS 공인 SysOps 관리자 – 어소시에이트 의 시험 문제</a>
+							아마존
+						 <a class="discussion-link">AWS 공인 시스템 운영 관리자 - 어소시에이트 시험 문제</a>
 <div>
-							질문 #: 204 <br/>
-							주제 #: 1
+							문제 번호: 204 <br/>
+							주제 번호: 1
 						</div>
 </div>
 <div class="question-body mt-3 pt-3 border-top" data-id="854675">
 <p class="card-text">
 							
-								한 회사가 Amazon EC2 인스턴스에서 애플리케이션을 호스팅하고 있습니다. 이 회사는 PostgreSQL DB 인스턴스용 Amazon RDS에서 데이터베이스를 호스팅하고 있습니다. 회사에서는 DB 인스턴스에 대한 모든 연결을 암호화하도록 요구합니다. <br/><br/>이 요구 사항을 충족하려면 SysOps 관리자가 무엇을 해야 합니까?
+								한 회사가 아마존 EC2 인스턴스에 애플리케이션을 호스팅하고 있습니다. 또한 아마존 RDS for PostgreSQL DB 인스턴스에 데이터베이스를 호스팅하고 있습니다. 이 회사는 데이터베이스 인스턴스에 대한 모든 연결을 암호화해야 합니다. <br/><br/>시스템 운영 관리자는 이 요구 사항을 충족하기 위해 무엇을 해야 할까요?
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="854675" type="application/json">[{"voted_answers": "C", "vote_count": 3, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -95,37 +101,38 @@
 													B.
 												</span> 
 											
-											AWS Key Management Service(AWS KMS) 암호화 키를 사용하여 데이터베이스를 암호화합니다.
+											AWS 키 관리 서비스(AWS KMS) 암호화 키를 사용하여 데이터베이스를 암호화합니다.
 										</li>
 <li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span> 
 											
-											사용자 지정 매개변수 그룹을 사용하여 데이터베이스에 대한 SSL 연결을 적용합니다.
-										</li>
+											사용자 지정 파라미터 그룹을 사용하여 데이터베이스에 대한 SSL 연결을 강제합니다.
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                가장 많은 표를 받은
+            </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span> 
 											
-											사용자 정의 PostgreSQL 확장을 사용하여 SSL/TLS로 데이터베이스를 패치합니다.
+											사용자 지정 PostgreSQL 확장 프로그램을 사용하여 데이터베이스에 SSL/TLS 패치를 적용합니다.
 										</li>
 </ul>
 </div>
-<a class="btn btn-primary reveal-solution" href="#">제안된 답변 표시</a>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
 <a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
 <div class="card-text question-answer bg-light white-text" style="display: none;">
-<span class="correct-answer-box"><strong>추천 답변: </strong>
-<span class="correct-answer">C </span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
+<span class="correct-answer-box"><strong>정답: </strong>
+<span class="correct-answer">C</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="3 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">C (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>지역사회 투표 배분</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="8 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">C (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
-                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">다른
+                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
 <!-- / Question  -->
@@ -150,7 +157,6 @@
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="854675" type="application/json">[{"voted_answers": "C", "vote_count": 3, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -174,7 +180,9 @@
 												</span>
 											
 											Enforce SSL connections to the database by using a custom parameter group.
-										</li>
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                Most Voted
+            </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
@@ -189,12 +197,11 @@
 <div class="card-text question-answer bg-light white-text">
 <span class="correct-answer-box"><strong>Suggested Answer:</strong>
 <span class="correct-answer">C</span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="3 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">C (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="8 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">C (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
@@ -202,10 +209,10 @@
 <!-- / Question  -->
 </div>
 <div class="comments-wrapper">
-<a class="badge reveal-comment" href="#">댓글 표시</a>
-<a class="badge hide-comment d-none" href="#">댓글 숨기기</a>
+<a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
 <div class="discussion-page-comments-section" data-discussion-question-id="90804" style="display: none">
-<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">코멘트</h4></div>
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
 <div class="container outer-discussion-container">
@@ -230,22 +237,23 @@
 				크리스티나666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 24일 (월) 22:37">
-			1 개월 전
-		</span>
+<span class="badge badge-primary">
+				가장 많은 표를 받은<i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="2024년 7월 24일 수요일 22시 37분">2024년 7월 25일 오전 7시 37분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>C</strong></span></div>
-<div class="comment-content">C. 사용자 지정 매개변수 그룹을 사용하여 데이터베이스에 대한 SSL 연결을 적용합니다. 설명: 데이터베이스에 SSL 연결을 적용하는 것은 애플리케이션과 PostgreSQL용 Amazon RDS DB 인스턴스 간의 모든 연결을 암호화하는 적절한 방법입니다. 이는 특정 데이터베이스 설정을 구성할 수 있는 사용자 지정 매개변수 그룹을 사용하여 달성할 수 있습니다. SSL 연결을 적용하면 PostgreSQL 서버는 클라이언트가 연결할 때 SSL을 사용하도록 요구합니다. 이를 통해 애플리케이션과 데이터베이스 간에 전송되는 모든 데이터가 암호화되어 중요한 정보에 대한 추가 보안 계층이 제공됩니다. 옵션 A, B 및 D는 데이터베이스에 대한 SSL 연결 적용과 직접적인 관련이 없습니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
+<div class="comment-content">C. 사용자 지정 파라미터 그룹을 사용하여 데이터베이스에 대한 SSL 연결을 강제합니다. 설명: 데이터베이스에 대한 SSL 연결을 강제하는 것은 애플리케이션과 Amazon RDS for PostgreSQL DB 인스턴스 간의 모든 연결이 암호화되도록 보장하는 적절한 방법입니다. 사용자 지정 파라미터 그룹을 사용하면 특정 데이터베이스 설정을 구성할 수 있습니다. SSL 연결을 강제하면 PostgreSQL 서버는 클라이언트가 연결할 때 SSL을 사용하도록 요구합니다. 이렇게 하면 애플리케이션과 데이터베이스 간에 전송되는 모든 데이터가 암호화되어 중요한 정보에 대한 추가 보안 계층이 제공됩니다. 옵션 A, B 및 D는 데이터베이스에 대한 SSL 연결 강제와 직접적인 관련이 없습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">5</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -268,21 +276,19 @@
 				크리스티나666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 24일 (월) 22:37">
-			1 개월 전
-		</span>
+<span class="comment-date align-middle" title="2024년 7월 24일 수요일 22시 37분">2024년 7월 25일 오전 7시 37분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">A. 인바운드 보안 그룹 규칙을 통해 데이터베이스에 대한 SSL 연결을 허용하면 데이터베이스에 대한 네트워크 액세스만 제어됩니다. 액세스를 제한하는 것이 좋지만 이 옵션만으로는 연결에 암호화를 적용하지 않습니다. B. AWS KMS(AWS Key Management Service) 암호화 키를 사용하여 데이터베이스를 암호화하는 것은 미사용 데이터 암호화에 좋은 방법이지만, 애플리케이션과 데이터베이스 간의 네트워크 통신을 위해 SSL 연결을 특별히 강제하지는 않습니다. D. 사용자 정의 PostgreSQL 확장을 사용하여 SSL/TLS로 데이터베이스를 패치하는 것은 올바른 접근 방식이 아닙니다. SSL/TLS 지원은 일반적으로 PostgreSQL 데이터베이스에 내장되어 있으므로 이 목적을 위해 사용자 정의 확장으로 패치할 필요가 없습니다. 대신 사용자 지정 파라미터 그룹을 통해 SSL 연결을 적용할 수 있습니다.</div>
+<div class="comment-content">A. 인바운드 보안 그룹 규칙을 통해 데이터베이스에 대한 SSL 연결을 허용하는 것은 데이터베이스에 대한 네트워크 액세스만 제어합니다. 액세스를 제한하는 것은 좋은 방법이지만, 이 옵션만으로는 연결에 대한 암호화를 강제할 수 없습니다. B. AWS KMS(AWS Key Management Service) 암호화 키를 사용하여 데이터베이스를 암호화하는 것은 저장 데이터 암호화에 좋은 방법이지만, 애플리케이션과 데이터베이스 간의 네트워크 통신에 대한 SSL 연결을 구체적으로 강제하지는 않습니다. D. 사용자 지정 PostgreSQL 확장 프로그램을 사용하여 데이터베이스에 SSL/TLS 패치를 적용하는 것은 올바른 접근 방식이 아닙니다. SSL/TLS 지원은 일반적으로 PostgreSQL 데이터베이스에 내장되어 있으므로 이를 위해 사용자 지정 확장 프로그램으로 패치할 필요가 없습니다. 대신 사용자 지정 파라미터 그룹을 통해 SSL 연결을 강제할 수 있습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">6</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -318,24 +324,25 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				구아우
+				우와
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 3일 (월) 05:17">
-			1개월, 3주 전
-		</span>
+<span class="badge badge-primary">
+				최신<i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="2024년 7월 3일 수요일 오전 5시 17분">2024년 7월 3일 14시 17분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">C, 다시 시작해야 하는지 확실하지 않지만 c입니다.</div>
+<div class="comment-content">C, 재시작이 필요한지는 확실하지 않지만 C입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -363,25 +370,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				zolthar_z
+				졸타르_z
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 12월 21일 수요일 16:39">
-			8개월, 1주 전
-		</span>
+<span class="comment-date align-middle" title="2023년 12월 21일 목요일 16시 39분">2023년 12월 22일 01시 39분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>C</strong></span></div>
-<div class="comment-content">네, C가 답입니다: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
+<div class="comment-content">네, 정답은 C입니다: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -409,24 +414,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				베즈니카
+				노숙자
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 12월 9일 금요일 13:57">
-			8개월, 2주 전
-		</span>
+<span class="comment-date align-middle" title="2023년 12월 9일 토요일 13시 57분">2023년 12월 9일 22시 57분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">C는 괜찮아 보입니다 https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/PostgreSQL.Concepts.General.SSL.html</div>
+<div class="comment-content">C는 괜찮아 보입니다. https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/PostgreSQL.Concepts.General.SSL.html</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -449,8 +452,8 @@
 </div>
 </div>
 <div class="comments-wrapper-en" style="display: none;">
-<a class="badge reveal-comment" href="#">Show Comments</a>
-<a class="badge hide-comment d-none" href="#">Hide Comments</a>
+<a class="badge reveal-comment" href="javascript:void(0)">Show Comments</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">Hide Comments</a>
 <div class="discussion-page-comments-section-en" data-discussion-question-id="90804" style="display: none">
 <div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">Comments</h4></div>
 <!-- discussion.html -->
@@ -477,9 +480,10 @@
 				Christina666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Mon 24 Jul 2023 22:37">
-			1 month ago
-		</span>
+<span class="badge badge-primary">
+				Highly Voted <i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="Wed 24 Jul 2024 22:37">2024-07-25 07:37</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
@@ -498,7 +502,7 @@ Options A, B, and D are not directly related to enforcing SSL connections for th
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">5</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -522,9 +526,7 @@ Options A, B, and D are not directly related to enforcing SSL connections for th
 				Christina666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Mon 24 Jul 2023 22:37">
-			1 month ago
-		</span>
+<span class="comment-date align-middle" title="Wed 24 Jul 2024 22:37">2024-07-25 07:37</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">A. Allowing SSL connections to the database through an inbound security group rule would only control network access to the database. While it's a good practice to restrict access, this option alone does not enforce encryption on the connections.
@@ -539,7 +541,7 @@ D. Patching the database with SSL/TLS by using a custom PostgreSQL extension is 
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">6</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -579,9 +581,10 @@ D. Patching the database with SSL/TLS by using a custom PostgreSQL extension is 
 				guau
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Mon 03 Jul 2023 05:17">
-			1 month, 3 weeks ago
-		</span>
+<span class="badge badge-primary">
+				Most Recent <i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="Wed 03 Jul 2024 05:17">2024-07-03 14:17</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">C, not sure if restart is required but is c</div>
@@ -592,7 +595,7 @@ D. Patching the database with SSL/TLS by using a custom PostgreSQL extension is 
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -624,9 +627,7 @@ D. Patching the database with SSL/TLS by using a custom PostgreSQL extension is 
 				zolthar_z
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Wed 21 Dec 2022 16:39">
-			8 months, 1 week ago
-		</span>
+<span class="comment-date align-middle" title="Thu 21 Dec 2023 16:39">2023-12-22 01:39</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
@@ -638,7 +639,7 @@ D. Patching the database with SSL/TLS by using a custom PostgreSQL extension is 
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">2</span> times
+				upvoted <span class="upvote-count">3</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -670,9 +671,7 @@ D. Patching the database with SSL/TLS by using a custom PostgreSQL extension is 
 				beznika
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Fri 09 Dec 2022 13:57">
-			8 months, 2 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Sat 09 Dec 2023 13:57">2023-12-09 22:57</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">C looks ok https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/PostgreSQL.Concepts.General.SSL.html</div>
@@ -683,7 +682,7 @@ D. Patching the database with SSL/TLS by using a custom PostgreSQL extension is 
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">2</span> times
+				upvoted <span class="upvote-count">3</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -716,7 +715,7 @@ D. Patching the database with SSL/TLS by using a custom PostgreSQL extension is 
 <i class="fa fa-angle-up"></i>
 </div>
 <!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="../../../js/popper.min.js"></script>
 <!-- jquery latest version -->
 <script src="../../../js/jquery.min.js"></script>
 <!-- bootstrap js -->
@@ -727,8 +726,6 @@ D. Patching the database with SSL/TLS by using a custom PostgreSQL extension is 
 <script src="../../../js/wow.min.js"></script>
 <!-- main js -->
 <script src="../../../js/main.js"></script>
-<script async="" defer="" src="../../../js/bootstrap3-typeahead.min.js">
-</script>
 <script type="text/javascript">
     // Activate tooltips
     $(function () {
@@ -755,39 +752,6 @@ D. Patching the database with SSL/TLS by using a custom PostgreSQL extension is 
         $('img[defsrc]').each(function() {
             $(this).attr('src',$(this).attr('defsrc'));
         });
-
-
-        function delayedStart() {
-            // Typeahead start
-
-            // Register typeahead element:
-            $('#header-keyword-search, #modal-keyword-search').typeahead({
-                source: autoCompleteQuery,
-                autoSelect: true,
-                delay: 150,
-                selectOnBlur: false,
-                afterSelect: function(param) {$(this.$element).closest('form').submit()}
-            });
-
-            // Query ajax function:
-            function autoCompleteQuery(query, callback) {
-                return $.get("/ajax/autocomplete/suggestions/?query=" + query).done(callback);
-            }
-            // Typeahead end
-        }
-        setTimeout(delayedStart, 1500);
-
-        // Don't submit empty search query
-        $('#modal-keyword-search-form').submit(function() {
-            if (!$('#modal-keyword-search').val()) {
-                return false;
-            }
-        });
-
-        // Auto focus on search box when search-modal is opened
-        $('.search-modal').on('shown.bs.modal', function (e) {
-            $(this).find('input[type=text]').focus();
-        });
     });
 </script>
 <script type="text/javascript">
@@ -797,6 +761,6 @@ D. Patching the database with SSL/TLS by using a custom PostgreSQL extension is 
 </script>
 <script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
 <script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
-</div>
+</meta></div>
 </body>
 </html>

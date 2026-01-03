@@ -3,13 +3,14 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="2023-08-18 23:40" name="refresh_date"/>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
 <meta charset="utf-8"/>
 <title>Exam AWS Certified SysOps Administrator</title>
 <!-- responsive tag -->
-<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- bootstrap v4 css -->
 <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -24,23 +25,29 @@
 <!-- responsive css -->
 <link href="../../../css/responsive.css" rel="stylesheet" type="text/css"/>
 <link href="../../../css/forum.css" rel="stylesheet" type="text/css"/>
-<style>
-</style>
 <div class="sec-spacer pt-20">
 <div class="container">
 <div class="container action-row-container border-0 p-0 mb-2">
 <div class="container action-row clearfix d-flex">
 <i class="fa fm fa-language fa-2x mr-2"></i>
-<a class="btn show-english" href="#">English</a>
-<a class="btn show-korean d-none" href="#">한국어</a>
+<a class="btn show-english" href="javascript:void(0)">English</a>
+<a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
 <span class="pagination-container ml-auto">
 <span id="page-indicator"><strong></strong></span>
-<!--p id="page-indicator"></p-->
 <span class="pagination-nav ml-4">
-<a class="btn btn-sm" href="#" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
-<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect">
-</select>
-<a class="btn btn-sm" href="#" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
+<a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
+<a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
 </span>
 </span>
 </div>
@@ -50,7 +57,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS Certified SysOps Administrator - Associate 주제 1 문제 263 토론</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified SysOps Administrator - Associate 시험 주제 1, 질문 263, 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified SysOps Administrator - Associate topic 1 question 263 discussion</h1>
@@ -65,21 +72,20 @@
 <!-- Question -->
 <div class="question-discussion-header">
 						
-							Amazon
-						 <a class="discussion-link">AWS 공인 SysOps 관리자 – 어소시에이트 의 시험 문제</a>
+							아마존
+						 <a class="discussion-link">AWS 공인 시스템 운영 관리자 - 어소시에이트 시험 문제</a>
 <div>
-							질문 #: 263 <br/>
-							주제 #: 1
+							문제 번호: 263 <br/>
+							주제 번호: 1
 						</div>
 </div>
 <div class="question-body mt-3 pt-3 border-top" data-id="868451">
 <p class="card-text">
 							
-								한 회사는 최근 서버 인프라를 Amazon EC2 인스턴스로 이전했습니다. 회사는 Amazon CloudWatch 지표를 사용하여 인스턴스 메모리 활용도와 사용 가능한 디스크 공간을 추적하려고 합니다. <br/><br/>SysOps 관리자는 이러한 요구 사항을 충족하기 위해 무엇을 해야 합니까?
+								최근 한 회사가 서버 인프라를 Amazon EC2 인스턴스로 이전했습니다. 이 회사는 Amazon CloudWatch 지표를 사용하여 인스턴스 메모리 사용률과 사용 가능한 디스크 공간을 추적하려고 합니다. <br/><br/>시스템 운영 관리자는 이러한 요구 사항을 충족하기 위해 무엇을 해야 할까요?
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="868451" type="application/json">[{"voted_answers": "B", "vote_count": 3, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -88,44 +94,45 @@
 													A.
 												</span> 
 											
-											CloudWatch로 모니터링해야 하는 모든 인스턴스에 대해 AWS Management Console에서 CloudWatch를 구성합니다. AWS는 지정된 인스턴스에 대한 에이전트를 자동으로 설치하고 구성합니다.
+											CloudWatch 모니터링이 필요한 모든 인스턴스에 대해 AWS 관리 콘솔에서 CloudWatch를 구성하십시오. AWS는 지정된 인스턴스에 에이전트를 자동으로 설치하고 구성합니다.
 										</li>
 <li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
 												</span> 
 											
-											모든 인스턴스에 CloudWatch 에이전트를 설치하고 구성합니다. 인스턴스가 CloudWatch에 로그를 쓸 수 있도록 IAM 역할을 연결합니다.
-										</li>
+											모든 인스턴스에 CloudWatch 에이전트를 설치하고 구성합니다. 인스턴스가 CloudWatch에 로그를 기록할 수 있도록 IAM 역할을 연결합니다.
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                가장 많은 표를 받은
+            </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span> 
 											
-											모든 인스턴스에 CloudWatch 에이전트를 설치하고 구성합니다. 인스턴스가 CloudWatch에 로그를 쓸 수 있도록 IAM 사용자를 연결합니다.
+											모든 인스턴스에 CloudWatch 에이전트를 설치하고 구성합니다. 인스턴스가 CloudWatch에 로그를 기록할 수 있도록 IAM 사용자를 연결합니다.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span> 
 											
-											모든 인스턴스에 CloudWatch 에이전트를 설치하고 구성합니다. 인스턴스가 CloudWatch에 로그를 쓸 수 있도록 필요한 보안 그룹을 연결합니다.
+											모든 인스턴스에 CloudWatch 에이전트를 설치하고 구성합니다. 인스턴스가 CloudWatch에 로그를 기록할 수 있도록 필요한 보안 그룹을 연결합니다.
 										</li>
 </ul>
 </div>
-<a class="btn btn-primary reveal-solution" href="#">제안된 답변 표시</a>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
 <a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
 <div class="card-text question-answer bg-light white-text" style="display: none;">
-<span class="correct-answer-box"><strong>추천 답변: </strong>
-<span class="correct-answer">B </span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
+<span class="correct-answer-box"><strong>정답: </strong>
+<span class="correct-answer">B</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="3 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">B (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>지역사회 투표 배분</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="6 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">B (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
-                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">다른
+                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
 <!-- / Question  -->
@@ -150,7 +157,6 @@
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="868451" type="application/json">[{"voted_answers": "B", "vote_count": 3, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -167,7 +173,9 @@
 												</span>
 											
 											Install and configure the CloudWatch agent on all the instances. Attach an IAM role to allow the instances to write logs to CloudWatch.
-										</li>
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                Most Voted
+            </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
@@ -189,12 +197,11 @@
 <div class="card-text question-answer bg-light white-text">
 <span class="correct-answer-box"><strong>Suggested Answer:</strong>
 <span class="correct-answer">B</span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="3 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">B (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="6 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">B (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
@@ -202,10 +209,10 @@
 <!-- / Question  -->
 </div>
 <div class="comments-wrapper">
-<a class="badge reveal-comment" href="#">댓글 표시</a>
-<a class="badge hide-comment d-none" href="#">댓글 숨기기</a>
+<a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
 <div class="discussion-page-comments-section" data-discussion-question-id="101991" style="display: none">
-<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">코멘트</h4></div>
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
 <div class="container outer-discussion-container">
@@ -230,22 +237,20 @@
 				지파크
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 8월 18일 금요일 23:40">
-			1주, 1일 전
-		</span>
+<span class="comment-date align-middle" title="2024년 8월 18일 일요일 23시 40분">2024년 8월 19일 8시 40분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
-<div class="comment-content">이제 일반적으로 '에이전트 설치'가 필요한 이유를 알았습니다. AWS는 자동으로 CloudWatch 에이전트를 설치합니다. (On-Premise 설치의 경우) 단, CPU/Disk(사용 가능/사용)/RAM(사용/캐시), Netstat(포트), Swap Space는 "Unified Agent"를 통해 수집할 수 있으므로 수동으로 설치해야 합니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
+<div class="comment-content">이제 왜 답변에 '에이전트 설치'가 필요한지 알겠습니다. 일반적으로 AWS는 CloudWatch 에이전트를 자동으로 설치합니다(온프레미스 설치의 경우). 하지만 CPU/디스크(사용 가능/사용 중)/RAM(사용/캐시됨), Netstat(포트), 스왑 공간은 "통합 에이전트"를 통해 수집할 수 있으며, 이 에이전트는 수동으로 설치해야 합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -276,21 +281,19 @@
 				브리노
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 8월 11일 금요일 03:34">
-			2주, 2일 전
-		</span>
+<span class="comment-date align-middle" title="2024년 8월 11일 일요일 오전 3시 34분">2024년 8월 11일 12시 34분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">특정 사용자가 아닌 인스턴스에 역할을 연결합니다.</div>
+<div class="comment-content">역할은 특정 사용자가 아닌 인스턴스에 연결됩니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -321,22 +324,20 @@
 				비벡
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 3월 9일 목요일 16:13">
-			5개월, 2주 전
-		</span>
+<span class="comment-date align-middle" title="2024년 3월 9일 토요일 16시 13분">2024년 3월 10일 오전 1시 13분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
-<div class="comment-content">Amazon CloudWatch 지표를 사용하여 Amazon EC2 인스턴스의 메모리 사용률과 사용 가능한 디스크 공간을 모니터링하려면 SysOps 관리자가 모든 인스턴스에 CloudWatch 에이전트를 설치 및 구성하고 인스턴스가 CloudWatch에 로그를 쓸 수 있도록 IAM 역할을 연결해야 합니다. 이를 통해 CloudWatch 에이전트는 메모리 사용량 및 사용 가능한 디스크 공간과 같은 지표를 수집하여 CloudWatch에 게시할 수 있습니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
+<div class="comment-content">Amazon CloudWatch 메트릭을 사용하여 Amazon EC2 인스턴스의 메모리 사용률과 사용 가능한 디스크 공간을 모니터링하려면 시스템 운영 관리자는 모든 인스턴스에 CloudWatch 에이전트를 설치 및 구성하고 인스턴스가 CloudWatch에 로그를 기록할 수 있도록 IAM 역할을 연결해야 합니다. 이렇게 하면 CloudWatch 에이전트가 메모리 사용량 및 사용 가능한 디스크 공간과 같은 메트릭을 수집하여 CloudWatch에 게시할 수 있습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -367,22 +368,20 @@
 				csG13
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 3월 9일 목요일 11:55">
-			5개월, 3주 전
-		</span>
+<span class="comment-date align-middle" title="2024년 3월 9일 토요일 오전 11시 55분">2024년 3월 9일 20시 55분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
-<div class="comment-content">B - 인스턴스 메모리를 추적하려면 Cloudwatch 에이전트를 설치하고 인스턴스 프로필에 올바른 권한을 연결해야 합니다(CloudWatchAgentServerPolicy 정책이 연결되어야 함).</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
+<div class="comment-content">B - 인스턴스 메모리를 추적하려면 CloudWatch 에이전트를 설치하고 인스턴스 프로필에 올바른 권한(CloudWatchAgentServerPolicy 정책이 연결되어야 함)을 연결해야 합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -405,8 +404,8 @@
 </div>
 </div>
 <div class="comments-wrapper-en" style="display: none;">
-<a class="badge reveal-comment" href="#">Show Comments</a>
-<a class="badge hide-comment d-none" href="#">Hide Comments</a>
+<a class="badge reveal-comment" href="javascript:void(0)">Show Comments</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">Hide Comments</a>
 <div class="discussion-page-comments-section-en" data-discussion-question-id="101991" style="display: none">
 <div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">Comments</h4></div>
 <!-- discussion.html -->
@@ -433,9 +432,7 @@
 				jipark
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Fri 18 Aug 2023 23:40">
-			1 week, 1 day ago
-		</span>
+<span class="comment-date align-middle" title="Sun 18 Aug 2024 23:40">2024-08-19 08:40</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
@@ -449,7 +446,7 @@ however, CPU/Disk(free/used)/RAM(used/cached), Netstat(port), Swap Space can be 
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -481,9 +478,7 @@ however, CPU/Disk(free/used)/RAM(used/cached), Netstat(port), Swap Space can be 
 				Bhrino
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Fri 11 Aug 2023 03:34">
-			2 weeks, 2 days ago
-		</span>
+<span class="comment-date align-middle" title="Sun 11 Aug 2024 03:34">2024-08-11 12:34</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">you attach roles to instances not specific users</div>
@@ -526,9 +521,7 @@ however, CPU/Disk(free/used)/RAM(used/cached), Netstat(port), Swap Space can be 
 				Vivec
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Thu 09 Mar 2023 16:13">
-			5 months, 2 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Sat 09 Mar 2024 16:13">2024-03-10 01:13</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
@@ -540,7 +533,7 @@ however, CPU/Disk(free/used)/RAM(used/cached), Netstat(port), Swap Space can be 
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -572,9 +565,7 @@ however, CPU/Disk(free/used)/RAM(used/cached), Netstat(port), Swap Space can be 
 				csG13
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Thu 09 Mar 2023 11:55">
-			5 months, 3 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Sat 09 Mar 2024 11:55">2024-03-09 20:55</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
@@ -586,7 +577,7 @@ however, CPU/Disk(free/used)/RAM(used/cached), Netstat(port), Swap Space can be 
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -619,7 +610,7 @@ however, CPU/Disk(free/used)/RAM(used/cached), Netstat(port), Swap Space can be 
 <i class="fa fa-angle-up"></i>
 </div>
 <!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="../../../js/popper.min.js"></script>
 <!-- jquery latest version -->
 <script src="../../../js/jquery.min.js"></script>
 <!-- bootstrap js -->
@@ -630,8 +621,6 @@ however, CPU/Disk(free/used)/RAM(used/cached), Netstat(port), Swap Space can be 
 <script src="../../../js/wow.min.js"></script>
 <!-- main js -->
 <script src="../../../js/main.js"></script>
-<script async="" defer="" src="../../../js/bootstrap3-typeahead.min.js">
-</script>
 <script type="text/javascript">
     // Activate tooltips
     $(function () {
@@ -658,39 +647,6 @@ however, CPU/Disk(free/used)/RAM(used/cached), Netstat(port), Swap Space can be 
         $('img[defsrc]').each(function() {
             $(this).attr('src',$(this).attr('defsrc'));
         });
-
-
-        function delayedStart() {
-            // Typeahead start
-
-            // Register typeahead element:
-            $('#header-keyword-search, #modal-keyword-search').typeahead({
-                source: autoCompleteQuery,
-                autoSelect: true,
-                delay: 150,
-                selectOnBlur: false,
-                afterSelect: function(param) {$(this.$element).closest('form').submit()}
-            });
-
-            // Query ajax function:
-            function autoCompleteQuery(query, callback) {
-                return $.get("/ajax/autocomplete/suggestions/?query=" + query).done(callback);
-            }
-            // Typeahead end
-        }
-        setTimeout(delayedStart, 1500);
-
-        // Don't submit empty search query
-        $('#modal-keyword-search-form').submit(function() {
-            if (!$('#modal-keyword-search').val()) {
-                return false;
-            }
-        });
-
-        // Auto focus on search box when search-modal is opened
-        $('.search-modal').on('shown.bs.modal', function (e) {
-            $(this).find('input[type=text]').focus();
-        });
     });
 </script>
 <script type="text/javascript">
@@ -700,6 +656,6 @@ however, CPU/Disk(free/used)/RAM(used/cached), Netstat(port), Swap Space can be 
 </script>
 <script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
 <script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
-</div>
+</meta></div>
 </body>
 </html>

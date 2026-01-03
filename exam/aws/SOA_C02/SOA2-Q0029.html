@@ -3,13 +3,14 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="2022-12-14 1:37" name="refresh_date"/>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
 <meta charset="utf-8"/>
 <title>Exam AWS Certified SysOps Administrator</title>
 <!-- responsive tag -->
-<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- bootstrap v4 css -->
 <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -24,23 +25,29 @@
 <!-- responsive css -->
 <link href="../../../css/responsive.css" rel="stylesheet" type="text/css"/>
 <link href="../../../css/forum.css" rel="stylesheet" type="text/css"/>
-<style>
-</style>
 <div class="sec-spacer pt-20">
 <div class="container">
 <div class="container action-row-container border-0 p-0 mb-2">
 <div class="container action-row clearfix d-flex">
 <i class="fa fm fa-language fa-2x mr-2"></i>
-<a class="btn show-english" href="#">English</a>
-<a class="btn show-korean d-none" href="#">한국어</a>
+<a class="btn show-english" href="javascript:void(0)">English</a>
+<a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
 <span class="pagination-container ml-auto">
 <span id="page-indicator"><strong></strong></span>
-<!--p id="page-indicator"></p-->
 <span class="pagination-nav ml-4">
-<a class="btn btn-sm" href="#" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
-<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect">
-</select>
-<a class="btn btn-sm" href="#" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
+<a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
+<a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
 </span>
 </span>
 </div>
@@ -50,7 +57,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS 공인 SysOps 관리자 – 어소시에이트 주제 1 문제 29 토론</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified SysOps Administrator - Associate 시험 주제 1, 질문 29 해설</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified SysOps Administrator - Associate topic 1 question 29 discussion</h1>
@@ -65,20 +72,19 @@
 <!-- Question -->
 <div class="question-discussion-header">
 						
-							Amazon
-						 <a class="discussion-link">AWS 공인 SysOps 관리자 – 어소시에이트 의 시험 문제</a>
+							아마존
+						 <a class="discussion-link">AWS 공인 시스템 운영 관리자 - 어소시에이트 시험 문제</a>
 <div>
-							질문 #: 29 <br/>
-							주제 #: 1
+							문제 번호: 29 <br/>
+							주제 번호: 1
 						</div>
 </div>
 <div class="question-body mt-3 pt-3 border-top" data-id="809770">
 <p class="card-text">
 							
-								한 회사는 특정 시점 복구, 역추적 및 자동 백업이 활성화된 Amazon Aurora MySQL DB 클러스터를 사용하고 있습니다. SysOps 관리자는 이전 72시간 이내에 DB 클러스터를 특정 복구 지점으로 롤백할 수 있어야 합니다. 복원은 동일한 프로덕션 DB 클러스터에서 완료되어야 합니다. <br/>어떤 솔루션이 이러한 요구 사항을 충족합니까?<br/>
+								한 회사가 특정 시점 복구, 백트래킹 및 자동 백업이 활성화된 Amazon Aurora MySQL DB 클러스터를 사용하고 있습니다. 시스템 운영 관리자는 이전 72시간 이내의 특정 복구 시점으로 DB 클러스터를 롤백할 수 있어야 합니다. 복원은 동일한 프로덕션 DB 클러스터에서 수행되어야 합니다. <br/>이러한 요구 사항을 충족하는 솔루션은 무엇일까요?<br/>
 </p>
 <div class="voted-answers-tally d-none">
-<script id="809770" type="application/json">[{"voted_answers": "C", "vote_count": 10, "is_most_voted": true}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -87,7 +93,7 @@
 													A.
 												</span> 
 											
-											Aurora 복제본을 생성하십시오. 복제본을 승격하여 기본 DB 인스턴스를 교체합니다.
+											Aurora 복제본을 생성합니다. 생성된 복제본을 기본 DB 인스턴스로 승격시킵니다.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="B">
@@ -101,33 +107,31 @@
 													C.
 												</span> 
 											
-											역추적을 사용하여 기존 DB 클러스터를 원하는 복구 지점으로 되돌립니다.
+											백트래킹을 사용하여 기존 DB 클러스터를 원하는 복구 지점으로 되돌립니다.
 										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
-                최다 투표
+                가장 많은 표를 받은
             </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span> 
 											
-											특정 시점 복구를 사용하여 기존 DB 클러스터를 원하는 복구 지점으로 복원합니다.
+											특정 시점 복구를 사용하여 기존 DB 클러스터를 원하는 복구 시점으로 복원합니다.
 										</li>
 </ul>
 </div>
-<a class="btn btn-primary reveal-solution" href="#">제안된 답변 표시</a>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
 <a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
 <div class="card-text question-answer bg-light white-text" style="display: none;">
-<span class="correct-answer-box"><strong>추천 답변: </strong>
-<span class="correct-answer">C </span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
+<span class="correct-answer-box"><strong>정답: </strong>
+<span class="correct-answer">C</span>
 <br/>
 </span>
-<span class="answer-description"> 
-								참조: <br/>https://aws.amazon.com/premiumsupport/knowledge-center/aurora-mysql-slow-snapshot-restore/<br/><img class="in-exam-image" src="../../../media/exam-media/04242/0002000001.jpg"/>
+<span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="10 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">C (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>지역사회 투표 배분</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="20 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">C (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
-                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">다른
+                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
 <!-- / Question  -->
@@ -151,7 +155,6 @@
 								A company is using an Amazon Aurora MySQL DB cluster that has point-in-time recovery, backtracking, and automatic backup enabled. A SysOps administrator needs to be able to roll back the DB cluster to a specific recovery point within the previous 72 hours. Restores must be completed in the same production DB cluster.<br/>Which solution will meet these requirements?<br/>
 </p>
 <div class="voted-answers-tally d-none">
-<script id="809770" type="application/json">[{"voted_answers": "C", "vote_count": 10, "is_most_voted": true}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -192,13 +195,11 @@
 <div class="card-text question-answer bg-light white-text">
 <span class="correct-answer-box"><strong>Suggested Answer:</strong>
 <span class="correct-answer">C</span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
 <br/>
 </span>
 <span class="answer-description">
-								Reference:<br/>https://aws.amazon.com/premiumsupport/knowledge-center/aurora-mysql-slow-snapshot-restore/<br/><img class="in-exam-image" src="../../../media/exam-media/04242/0002000001.jpg"/>
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="10 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">C (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="20 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">C (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
@@ -206,10 +207,10 @@
 <!-- / Question  -->
 </div>
 <div class="comments-wrapper">
-<a class="badge reveal-comment" href="#">댓글 표시</a>
-<a class="badge hide-comment d-none" href="#">댓글 숨기기</a>
+<a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
 <div class="discussion-page-comments-section" data-discussion-question-id="74102" style="display: none">
-<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">코멘트</h4></div>
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
 <div class="container outer-discussion-container">
@@ -235,72 +236,22 @@
 			</h5>
 </a>
 <span class="badge badge-primary">
-				높은 투표율<i class="fa fa-thumbs-up"></i>
+				가장 많은 표를 받은<i class="fa fa-thumbs-up"></i>
 </span>
-<span class="comment-date align-middle" title="2022년 6월 16일 목요일 04:19">
-			1년, 2개월 전
-		</span>
+<span class="comment-date align-middle" title="2023년 12월 16일 토요일 오전 5시 19분">2023년 12월 16일 14시 19분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>C</strong></span></div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
 <div class="comment-content">C - https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Managing.Backtrack.html</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">5</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">9</span> 번
 			 
-				찬성함</span>
-<span class="comment-control-error ml-2"></span>
-</div>
-<div class="new-comment-box-container mt-2">
-</div>
-<div class="comment-replies">
-<!-- Nesting start -->
-<!-- Nesting end -->
-</div>
-</div>
-<div class="comment-ellipsis comment-toggled">
-		...
-	</div>
-</div>
-</div>
-<!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="744590" id="comment-744590">
-<a class="minimize-comment comment-toggle" href="#">
-<i class="fa fa-minus-square-o mr-2 mt-1"></i>
-</a>
-<a class="maximize-comment comment-toggle" href="#">
-<i class="fa fa-plus-square-o mr-2 mt-1"></i>
-</a>
-<div class="media-body">
-<div class="comment-head">
-<i class="fa fa-user mr-1 mt-1"></i>
-<a>
-<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				MrMLB
-			</h5>
-</a>
-<span class="badge badge-primary">
-				가장 최근<i class="fa fa-clock-o"></i>
-</span>
-<span class="comment-date align-middle" title="2022년 12월 14일 수 01:37">
-			8개월, 2주 전
-		</span>
-</div>
-<div class="comment-body comment-toggled">
-<div class="comment-content">C는 승리를 위해</div>
-<div class="comment-control">
-<span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
-</span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
-			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -331,22 +282,69 @@
 				핑거41
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 5월 24일 (화) 05:08">
-			1년, 3개월 전
-		</span>
+<span class="badge badge-primary">
+				가장 많은 표를 받은<i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="2023년 11월 24일 금요일 오전 6시 8분">2023년 11월 24일 15시 08분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>C</strong></span></div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
 <div class="comment-content">C - https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Managing.Backtrack.html</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">6</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="744590" id="comment-744590">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				미스터MLB
+			</h5>
+</a>
+<span class="badge badge-primary">
+				최신<i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="2024년 6월 14일 금요일 00시 37분">2024년 6월 14일 오전 9시 37분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">C가 승리합니다</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
+			 
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -374,24 +372,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				vjt
+				일곱
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 5월 20일 금요일 20:57">
-			1년, 3개월 전
-		</span>
+<span class="comment-date align-middle" title="2023년 11월 20일 월요일 21시 57분">2023년 11월 21일 오전 6시 57분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">D입니다. PITR이고 역추적이 아닙니다. 또한 복원된 DB 클러스터는 기본 DB 클러스터 및 DB 파라미터 그룹과 자동으로 연결됩니다. 여기 사람들이 C를 제안한 이유를 명확히 해주세요.</div>
+<div class="comment-content">정답은 D입니다. 이는 PITR(파일 기반 복구) 방식이며 백트래킹이 아닙니다. 또한 복원된 DB 클러스터는 기본 DB 클러스터 및 DB 파라미터 그룹과 자동으로 연결됩니다. 그런데 왜 여기서 C를 제안하는 사람들이 있는지 설명해 주시겠습니까?</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -411,24 +407,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				vjt
+				일곱
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 5월 20일 금요일 21:04">
-			1년, 3개월 전
-		</span>
+<span class="comment-date align-middle" title="2023년 11월 20일 월요일 22시 04분">2023년 11월 21일 07시 04분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">C입니다. PITR은 새 DB 클러스터를 생성합니다. 그러나 나는 여전히 아래 AWS 정보와 혼동됩니다. "DB 클러스터를 특정 시점으로 복원하여 새로운 DB 클러스터를 생성할 수 있습니다. DB 클러스터를 특정 시점으로 복원할 때 기본 Virtual Private Cloud(VPC) 보안 그룹을 선택하거나 신청할 수 있습니다. 사용자 지정 VPC 보안 그룹을 DB 클러스터에 추가합니다. 복원된 DB 클러스터는 기본 DB 클러스터 및 DB 파라미터 그룹과 자동으로 연결됩니다.</div>
+<div class="comment-content">C. PITR은 새로운 DB 클러스터를 생성합니다. 하지만 아래 AWS 정보가 여전히 이해가 안 됩니다. "DB 클러스터를 특정 시점으로 복원하여 새로운 DB 클러스터를 생성할 수 있습니다. DB 클러스터를 특정 시점으로 복원할 때 기본 VPC(가상 사설 클라우드) 보안 그룹을 선택하거나 사용자 지정 VPC 보안 그룹을 DB 클러스터에 적용할 수 있습니다. 복원된 DB 클러스터는 기본 DB 클러스터 및 DB 파라미터 그룹과 자동으로 연결됩니다."</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -464,24 +458,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				Shriraj32
+				슈리라지32
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 4월 25일 (월) 05:51">
-			1년, 4개월 전
-		</span>
+<span class="comment-date align-middle" title="2023년 10월 25일 수요일 오전 5시 51분">2023년 10월 25일 14시 51분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">C가 답인 것 같아요.</div>
+<div class="comment-content">제 생각엔 C가 정답인 것 같아요.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -509,25 +501,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				멕드록스
+				메크드록스
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 4월 24일 일요일 14:13">
-			1년, 4개월 전
-		</span>
+<span class="comment-date align-middle" title="2023년 10월 24일 화요일 14시 13분">2023년 10월 24일 23시 13분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>C</strong></span></div>
-<div class="comment-content">C. 72시간 이내에 역추적이 활성화됩니다. 새로운 DB로 복원하면 안 됩니다. C는 모든 요구 사항을 충족하는 유일한 솔루션입니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
+<div class="comment-content">C. 72시간 이내에 되돌리기 기능이 활성화됩니다. 새 데이터베이스로 복원해서는 안 됩니다. C가 모든 요구 사항을 충족하는 유일한 해결책입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">5</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -558,21 +548,19 @@
 				불평하지 마세요
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 4월 22일 금 10:19">
-			1년, 4개월 전
-		</span>
+<span class="comment-date align-middle" title="2023년 10월 22일 일요일 오전 10시 19분">2023년 10월 22일 19시 19분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">답변을 C로 업데이트하세요.</div>
+<div class="comment-content">정답은 C입니다. 수정해 주세요.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -595,10 +583,10 @@
 </div>
 </div>
 <div class="comments-wrapper-en" style="display: none;">
-<a class="badge reveal-comment" href="#">Show Comments</a>
-<a class="badge hide-comment d-none" href="#">Hide Comments</a>
+<a class="badge reveal-comment" href="javascript:void(0)">Show Comments</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">Hide Comments</a>
 <div class="discussion-page-comments-section-en" data-discussion-question-id="74102" style="display: none">
-<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">코멘트</h4></div>
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">Comments</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
 <div class="container outer-discussion-container">
@@ -624,24 +612,69 @@
 			</h5>
 </a>
 <span class="badge badge-primary">
-				높은 투표율<i class="fa fa-thumbs-up"></i>
+				Highly Voted <i class="fa fa-thumbs-up"></i>
 </span>
-<span class="comment-date align-middle" title="2022년 6월 16일 목요일 04:19">
-			1년, 2개월 전
-		</span>
+<span class="comment-date align-middle" title="Sat 16 Dec 2023 05:19">2023-12-16 14:19</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>C</strong></span></div>
+<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
 <div class="comment-content">C - https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Managing.Backtrack.html</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">5</span> 번
-			 
-				찬성함</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">9</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="606453" id="comment-606453">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Finger41
+			</h5>
+</a>
+<span class="badge badge-primary">
+				Highly Voted <i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="Fri 24 Nov 2023 06:08">2023-11-24 15:08</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
+<div class="comment-content">C - https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Managing.Backtrack.html</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">6</span> times
+			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -673,69 +706,21 @@
 			</h5>
 </a>
 <span class="badge badge-primary">
-				가장 최근<i class="fa fa-clock-o"></i>
+				Most Recent <i class="fa fa-clock-o"></i>
 </span>
-<span class="comment-date align-middle" title="2022년 12월 14일 수 01:37">
-			8개월, 2주 전
-		</span>
+<span class="comment-date align-middle" title="Fri 14 Jun 2024 00:37">2024-06-14 09:37</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">C는 승리를 위해</div>
+<div class="comment-content">C for the win</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
-			 
-				찬성함</span>
-<span class="comment-control-error ml-2"></span>
-</div>
-<div class="new-comment-box-container mt-2">
-</div>
-<div class="comment-replies">
-<!-- Nesting start -->
-<!-- Nesting end -->
-</div>
-</div>
-<div class="comment-ellipsis comment-toggled">
-		...
-	</div>
-</div>
-</div>
-<!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="606453" id="comment-606453">
-<a class="minimize-comment comment-toggle" href="#">
-<i class="fa fa-minus-square-o mr-2 mt-1"></i>
-</a>
-<a class="maximize-comment comment-toggle" href="#">
-<i class="fa fa-plus-square-o mr-2 mt-1"></i>
-</a>
-<div class="media-body">
-<div class="comment-head">
-<i class="fa fa-user mr-1 mt-1"></i>
-<a>
-<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				핑거41
-			</h5>
-</a>
-<span class="comment-date align-middle" title="2022년 5월 24일 (화) 05:08">
-			1년, 3개월 전
-		</span>
-</div>
-<div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>C</strong></span></div>
-<div class="comment-content">C - https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Managing.Backtrack.html</div>
-<div class="comment-control">
-<span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
-</span>
-<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
-			 
-				찬성함</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -766,21 +751,20 @@
 				vjt
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 5월 20일 금요일 20:57">
-			1년, 3개월 전
-		</span>
+<span class="comment-date align-middle" title="Mon 20 Nov 2023 21:57">2023-11-21 06:57</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">D입니다. PITR이고 역추적이 아닙니다. 또한 복원된 DB 클러스터는 기본 DB 클러스터 및 DB 파라미터 그룹과 자동으로 연결됩니다. 여기 사람들이 C를 제안한 이유를 명확히 해주세요.</div>
+<div class="comment-content">it is D. it is PITR and not backtracking. also Restored DB clusters are automatically associated with the default DB cluster and DB parameter groups.  
+Please clarify why C is suggested by people here?</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
-			 
-				찬성함</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -803,21 +787,25 @@
 				vjt
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 5월 20일 금요일 21:04">
-			1년, 3개월 전
-		</span>
+<span class="comment-date align-middle" title="Mon 20 Nov 2023 22:04">2023-11-21 07:04</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">C입니다. PITR은 새 DB 클러스터를 생성합니다. 그러나 나는 여전히 아래 AWS 정보와 혼동됩니다. "DB 클러스터를 특정 시점으로 복원하여 새로운 DB 클러스터를 생성할 수 있습니다. DB 클러스터를 특정 시점으로 복원할 때 기본 Virtual Private Cloud(VPC) 보안 그룹을 선택하거나 신청할 수 있습니다. 사용자 지정 VPC 보안 그룹을 DB 클러스터에 추가합니다. 복원된 DB 클러스터는 기본 DB 클러스터 및 DB 파라미터 그룹과 자동으로 연결됩니다.</div>
+<div class="comment-content">it is C. PITR will create a new DB cluster. however i am still confused with below aws info.
+
+"You can restore a DB cluster to a specific point in time, creating a new DB cluster.
+
+When you restore a DB cluster to a point in time, you can choose the default virtual private cloud (VPC) security group. Or you can apply a custom VPC security group to your DB cluster.
+
+Restored DB clusters are automatically associated with the default DB cluster and DB parameter groups."</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
-			 
-				찬성함</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">4</span> times
+			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -856,21 +844,19 @@
 				Shriraj32
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 4월 25일 (월) 05:51">
-			1년, 4개월 전
-		</span>
+<span class="comment-date align-middle" title="Wed 25 Oct 2023 05:51">2023-10-25 14:51</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">C가 답인 것 같아요.</div>
+<div class="comment-content">I think C is the answer.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
-			 
-				찬성함</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">2</span> times
+			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -898,25 +884,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				멕드록스
+				Mecdrox
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 4월 24일 일요일 14:13">
-			1년, 4개월 전
-		</span>
+<span class="comment-date align-middle" title="Tue 24 Oct 2023 14:13">2023-10-24 23:13</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>C</strong></span></div>
-<div class="comment-content">C. 72시간 이내에 역추적이 활성화됩니다. 새로운 DB로 복원하면 안 됩니다. C는 모든 요구 사항을 충족하는 유일한 솔루션입니다.</div>
+<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
+<div class="comment-content">C. within 72 hours, backtracking is enabled. Must not restore to a new DB. C is the only solution that meets all requirements.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
-			 
-				찬성함</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">5</span> times
+			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -944,24 +928,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				불평하지 마세요
+				dontcomplain
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 4월 22일 금 10:19">
-			1년, 4개월 전
-		</span>
+<span class="comment-date align-middle" title="Sun 22 Oct 2023 10:19">2023-10-22 19:19</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">답변을 C로 업데이트하세요.</div>
+<div class="comment-content">Please update answer should be C</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
-			 
-				찬성함</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">3</span> times
+			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -993,7 +975,7 @@
 <i class="fa fa-angle-up"></i>
 </div>
 <!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="../../../js/popper.min.js"></script>
 <!-- jquery latest version -->
 <script src="../../../js/jquery.min.js"></script>
 <!-- bootstrap js -->
@@ -1004,8 +986,6 @@
 <script src="../../../js/wow.min.js"></script>
 <!-- main js -->
 <script src="../../../js/main.js"></script>
-<script async="" defer="" src="../../../js/bootstrap3-typeahead.min.js">
-</script>
 <script type="text/javascript">
     // Activate tooltips
     $(function () {
@@ -1032,39 +1012,6 @@
         $('img[defsrc]').each(function() {
             $(this).attr('src',$(this).attr('defsrc'));
         });
-
-
-        function delayedStart() {
-            // Typeahead start
-
-            // Register typeahead element:
-            $('#header-keyword-search, #modal-keyword-search').typeahead({
-                source: autoCompleteQuery,
-                autoSelect: true,
-                delay: 150,
-                selectOnBlur: false,
-                afterSelect: function(param) {$(this.$element).closest('form').submit()}
-            });
-
-            // Query ajax function:
-            function autoCompleteQuery(query, callback) {
-                return $.get("/ajax/autocomplete/suggestions/?query=" + query).done(callback);
-            }
-            // Typeahead end
-        }
-        setTimeout(delayedStart, 1500);
-
-        // Don't submit empty search query
-        $('#modal-keyword-search-form').submit(function() {
-            if (!$('#modal-keyword-search').val()) {
-                return false;
-            }
-        });
-
-        // Auto focus on search box when search-modal is opened
-        $('.search-modal').on('shown.bs.modal', function (e) {
-            $(this).find('input[type=text]').focus();
-        });
     });
 </script>
 <script type="text/javascript">
@@ -1074,6 +1021,6 @@
 </script>
 <script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
 <script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
-</div>
+</meta></div>
 </body>
 </html>

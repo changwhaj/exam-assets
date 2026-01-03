@@ -3,13 +3,14 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="2024-07-05 4:06" name="refresh_date"/>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
 <meta charset="utf-8"/>
 <title>Exam AWS Certified SysOps Administrator</title>
 <!-- responsive tag -->
-<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- bootstrap v4 css -->
 <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -24,23 +25,29 @@
 <!-- responsive css -->
 <link href="../../../css/responsive.css" rel="stylesheet" type="text/css"/>
 <link href="../../../css/forum.css" rel="stylesheet" type="text/css"/>
-<style>
-</style>
 <div class="sec-spacer pt-20">
 <div class="container">
 <div class="container action-row-container border-0 p-0 mb-2">
 <div class="container action-row clearfix d-flex">
 <i class="fa fm fa-language fa-2x mr-2"></i>
-<a class="btn show-english" href="#">English</a>
-<a class="btn show-korean d-none" href="#">한국어</a>
+<a class="btn show-english" href="javascript:void(0)">English</a>
+<a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
 <span class="pagination-container ml-auto">
 <span id="page-indicator"><strong></strong></span>
-<!--p id="page-indicator"></p-->
 <span class="pagination-nav ml-4">
-<a class="btn btn-sm" href="#" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
-<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect">
-</select>
-<a class="btn btn-sm" href="#" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
+<a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
+<a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
 </span>
 </span>
 </div>
@@ -50,7 +57,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS Certified SysOps Administrator - Associate 주제 1 문제 353 토론</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified SysOps Administrator - Associate 시험 주제 1 문제 353 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified SysOps Administrator - Associate topic 1 question 353 discussion</h1>
@@ -65,21 +72,20 @@
 <!-- Question -->
 <div class="question-discussion-header">
 						
-							Amazon
-						 <a class="discussion-link">AWS 공인 SysOps 관리자 – 어소시에이트 의 시험 문제</a>
+							아마존
+						 <a class="discussion-link">AWS 공인 시스템 운영 관리자 - 어소시에이트 시험 문제</a>
 <div>
-							질문 #: 353 <br/>
-							주제 #: 1
+							문제 번호: 353 <br/>
+							주제 번호: 1
 						</div>
 </div>
 <div class="question-body mt-3 pt-3 border-top" data-id="888966">
 <p class="card-text">
 							
-								회사는 Amazon EC2 Auto Scaling 그룹에 속한 Amazon EC2 인스턴스에서 애플리케이션을 실행합니다. 장시간 실행되는 부팅 스크립트로 인해 확장 작업을 완료하는 데 오랜 시간이 걸립니다. SysOps 관리자는 Auto Scaling 그룹을 과도하게 프로비저닝하지 않고 확장 작업에 필요한 시간을 줄이는 솔루션을 구현해야 합니다. <br/><br/>어떤 솔루션이 이러한 요구 사항을 충족합니까?
+								한 회사가 Amazon EC2 Auto Scaling 그룹에 속한 Amazon EC2 인스턴스에서 애플리케이션을 실행하고 있습니다. 스케일 아웃 작업은 부팅 스크립트 실행 시간이 길어 완료하는 데 오랜 시간이 걸립니다. 시스템 운영 관리자는 Auto Scaling 그룹을 과도하게 프로비저닝하지 않고 스케일 아웃 작업에 필요한 시간을 단축하는 솔루션을 구현해야 합니다. <br/><br/>이러한 요구 사항을 충족하는 솔루션은 무엇일까요?
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="888966" type="application/json">[{"voted_answers": "D", "vote_count": 9, "is_most_voted": true}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -88,46 +94,45 @@
 													A.
 												</span> 
 											
-											더 큰 인스턴스 크기를 사용하도록 시작 구성을 변경하십시오.
+											시작 구성을 변경하여 더 큰 인스턴스 크기를 사용하도록 하십시오.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
 												</span> 
 											
-											Auto Scaling 그룹의 최소 인스턴스 수를 늘립니다.
+											자동 스케일링 그룹의 최소 인스턴스 수를 늘립니다.
 										</li>
-<li class="multi-choice-item correct-hidden">
+<li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span> 
 											
-											Auto Scaling 그룹에 예측 조정 정책을 추가합니다.
+											자동 스케일링 그룹에 예측 스케일링 정책을 추가합니다.
 										</li>
-<li class="multi-choice-item">
+<li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span> 
 											
-											Auto Scaling 그룹에 웜 풀을 추가합니다.
+											자동 스케일링 그룹에 온수 풀을 추가합니다.
 										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
-                최다 투표
+                가장 많은 표를 받은
             </span></li>
 </ul>
 </div>
-<a class="btn btn-primary reveal-solution" href="#">제안된 답변 표시</a>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
 <a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
 <div class="card-text question-answer bg-light white-text" style="display: none;">
-<span class="correct-answer-box"><strong>추천 답변: </strong>
-<span class="correct-answer">C </span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
+<span class="correct-answer-box"><strong>정답: </strong>
+<span class="correct-answer">D</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="9 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">D (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>지역사회 투표 배분</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="17 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">D (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
-                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">다른
+                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
 <!-- / Question  -->
@@ -152,7 +157,6 @@
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="888966" type="application/json">[{"voted_answers": "D", "vote_count": 9, "is_most_voted": true}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -170,14 +174,14 @@
 											
 											Increase the minimum number of instances in the Auto Scaling group.
 										</li>
-<li class="multi-choice-item correct-hidden">
+<li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span>
 											
 											Add a predictive scaling policy to the Auto Scaling group.
 										</li>
-<li class="multi-choice-item">
+<li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span>
@@ -192,13 +196,12 @@
 <a class="btn btn-primary hide-solution d-none" href="#">Hide Answer</a>
 <div class="card-text question-answer bg-light white-text">
 <span class="correct-answer-box"><strong>Suggested Answer:</strong>
-<span class="correct-answer">C</span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
+<span class="correct-answer">D</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="9 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">D (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="17 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">D (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
@@ -206,10 +209,10 @@
 <!-- / Question  -->
 </div>
 <div class="comments-wrapper">
-<a class="badge reveal-comment" href="#">댓글 표시</a>
-<a class="badge hide-comment d-none" href="#">댓글 숨기기</a>
+<a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
 <div class="discussion-page-comments-section" data-discussion-question-id="113119" style="display: none">
-<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">코멘트</h4></div>
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
 <div class="container outer-discussion-container">
@@ -218,6 +221,100 @@
 <!-- New comment start -->
 <!-- New comment end -->
 <div class="discussion-container">
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="931785" id="comment-931785">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				jas26says
+			</h5>
+</a>
+<span class="badge badge-primary">
+				가장 많은 표를 받은<i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="2023년 6월 23일 금요일 18시 39분">2023년 6월 24일 03시 39분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>D</strong></span></div>
+<div class="comment-content">정답은 D입니다. 웜 풀은 초기 스크립트 실행 지연을 방지하기 위해 이미 부팅된 인스턴스 그룹을 대기 상태로 유지하는 데 사용됩니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">7</span> 번
+			 
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1242420" id="comment-1242420">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				james2033
+			</h5>
+</a>
+<span class="badge badge-primary">
+				최신<i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="2024년 7월 5일 금요일 오전 4시 6분">2024년 7월 5일 13시 06분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>D</strong></span></div>
+<div class="comment-content">A - 장시간 실행되는 부팅 스크립트 문제를 직접적으로 해결하지 못하며, 이는 스케일 아웃 작업 속도 저하의 주요 원인입니다. B - 요구 사항에서 명시적으로 피하고자 하는 과잉 프로비저닝으로 이어질 수 있습니다. C - 인스턴스가 시작된 후 운영 가능 상태가 되기까지 걸리는 시간을 직접적으로 단축하지 못합니다. D: 웜 풀을 사용하면 초기화가 완료된 인스턴스를 미리 유지 관리하여 신속하게 온라인 상태로 전환할 수 있습니다. 이러한 인스턴스는 부팅 스크립트 실행 및 초기화가 이미 완료되었으므로 스케일 아웃 작업이 트리거되면 훨씬 빠르게 온라인 상태로 전환될 수 있습니다. 이 솔루션은 장시간 실행되는 부팅 스크립트 문제를 직접적으로 해결하고 Auto Scaling 그룹을 과잉 프로비저닝하지 않고도 스케일 아웃 작업에 필요한 시간을 단축합니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
+			 
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
 <!-- single_comment.html -->
 <div class="media comment-container" data-comment-id="959037" id="comment-959037">
 <a class="minimize-comment comment-toggle" href="#">
@@ -231,24 +328,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				트브트린
+				트르브트린
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 22일 토요일 02:32">
-			1 개월 전
-		</span>
+<span class="comment-date align-middle" title="2023년 7월 22일 토요일 오전 2시 32분">2023년 7월 22일 11시 32분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">웜 풀은 장기 실행 부팅 스크립트로 인해 확장 작업에 필요한 시간을 줄이는 문제를 직접적으로 해결하지 않습니다. 웜 풀은 사전 초기화된 인스턴스를 통해 더 빠른 크기 조정에 도움이 될 수 있지만 크기 조정 프로세스를 최적화하거나 확장 중에 부팅 스크립트의 영향을 줄이지는 않습니다. 장기 실행 부팅 스크립트 문제를 해결하고 확장 작업 시간을 줄이는 올바른 접근 방식은 옵션 C를 통해 달성되는 예측 확장을 사용하는 것입니다.</div>
+<div class="comment-content">웜 풀은 장시간 실행되는 부팅 스크립트로 인해 발생하는 스케일 아웃 작업 소요 시간 단축 문제를 직접적으로 해결하지 못합니다. 웜 풀은 미리 초기화된 인스턴스를 제공하여 스케일링 속도를 높일 수 있지만, 스케일링 프로세스를 최적화하거나 스케일 아웃 중 부팅 스크립트의 영향을 줄이지는 않습니다. 장시간 실행되는 부팅 스크립트 문제를 해결하고 스케일 아웃 작업 소요 시간을 단축하는 올바른 접근 방식은 옵션 C를 통해 구현되는 예측 스케일링을 사용하는 것입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -271,21 +366,19 @@
 				조타릭스
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 23일 일요일 01:54">
-			1 개월 전
-		</span>
+<span class="comment-date align-middle" title="2023년 7월 23일 일요일 오전 1시 54분">2023년 7월 23일 10시 54분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">웜 풀은 예를 들어 인스턴스가 디스크에 막대한 양의 데이터를 써야 하기 때문에 부팅 시간이 매우 긴 애플리케이션의 지연 시간을 줄이는 기능을 제공합니다. 웜 풀을 사용하면 더 이상 애플리케이션 성능을 향상하기 위해 지연 시간을 관리하기 위해 Auto Scaling 그룹을 과도하게 프로비저닝할 필요가 없습니다. 따라서 정답은 D입니다. 출처: https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html</div>
+<div class="comment-content">웜 풀을 사용하면 인스턴스가 디스크에 대량의 데이터를 기록해야 하는 등 부팅 시간이 매우 긴 애플리케이션의 지연 시간을 줄일 수 있습니다. 웜 풀을 사용하면 애플리케이션 성능 향상을 위해 지연 시간을 관리하려고 Auto Scaling 그룹을 과도하게 프로비저닝할 필요가 없습니다. 따라서 정답은 D입니다. 출처: https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">5</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -305,24 +398,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				트브트린
+				트르브트린
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 26일 수 16:22">
-			1 개월 전
-		</span>
+<span class="comment-date align-middle" title="2023년 7월 26일 수요일 16시 22분">2023년 7월 27일 오전 1시 22분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">응, D가 맞아</div>
+<div class="comment-content">네, D가 정답입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -366,24 +457,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				닉네임20202324
+				[제거됨]
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 10일 (월) 02:55">
-			1개월, 2주 전
-		</span>
+<span class="comment-date align-middle" title="2023년 7월 10일 월요일 오전 2시 55분">2023년 7월 10일 11시 55분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">D. Auto Scaling 그룹에 웜 풀을 추가합니다.</div>
+<div class="comment-content">D. 자동 스케일링 그룹에 온수 풀을 추가합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -414,22 +503,20 @@
 				TQM__9MD
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 2일 일요일 06:34">
-			1개월, 3주 전
-		</span>
+<span class="comment-date align-middle" title="2023년 7월 2일 일요일 오전 6시 34분">2023년 7월 2일 15시 34분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>D</strong></span></div>
-<div class="comment-content">D가 답이다</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>D</strong></span></div>
+<div class="comment-content">D가 정답입니다</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -460,22 +547,20 @@
 				피트987
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 6월 30일 금요일 18:36">
-			1개월, 3주 전
-		</span>
+<span class="comment-date align-middle" title="2023년 6월 30일 금요일 18시 36분">2023년 7월 1일 오전 3시 36분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>D</strong></span></div>
-<div class="comment-content">ㄷ 그렇군요</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>D</strong></span></div>
+<div class="comment-content">D입니다</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -506,22 +591,20 @@
 				케비노81
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 6월 29일 목요일 03:41">
-			1개월, 4주 전
-		</span>
+<span class="comment-date align-middle" title="2023년 6월 29일 목요일 오전 3시 41분">2023년 6월 29일 12시 41분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>D</strong></span></div>
-<div class="comment-content">빠른 확장을 위해서는 따뜻한 풀이 필요합니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>D</strong></span></div>
+<div class="comment-content">빠른 스케일 제거를 위해서는 따뜻한 수영장이 필요합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -549,71 +632,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				바르자
+				와르자
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 6월 26일 월요일 18:47">
-			2 달전
-		</span>
+<span class="comment-date align-middle" title="2023년 6월 26일 월요일 18시 47분">2023년 6월 27일 03시 47분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>D</strong></span></div>
-<div class="comment-content">웜 풀에는 이미 부팅 스크립트를 통과하고 OS가 완전히 로드된 인스턴스가 포함되어 있습니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>D</strong></span></div>
+<div class="comment-content">웜 풀에는 부팅 스크립트 실행이 완료되고 운영 체제가 완전히 로드된 인스턴스가 포함되어 있습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
-<span class="comment-control-error ml-2"></span>
-</div>
-<div class="new-comment-box-container mt-2">
-</div>
-<div class="comment-replies">
-<!-- Nesting start -->
-<!-- Nesting end -->
-</div>
-</div>
-<div class="comment-ellipsis comment-toggled">
-		...
-	</div>
-</div>
-</div>
-<!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="931785" id="comment-931785">
-<a class="minimize-comment comment-toggle" href="#">
-<i class="fa fa-minus-square-o mr-2 mt-1"></i>
-</a>
-<a class="maximize-comment comment-toggle" href="#">
-<i class="fa fa-plus-square-o mr-2 mt-1"></i>
-</a>
-<div class="media-body">
-<div class="comment-head">
-<i class="fa fa-user mr-1 mt-1"></i>
-<a>
-<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				jas26말씀
-			</h5>
-</a>
-<span class="comment-date align-middle" title="2023년 6월 23일 금요일 18:39">
-			2 달전
-		</span>
-</div>
-<div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>D</strong></span></div>
-<div class="comment-content">D입니다. 웜 풀은 초기 스크립트 지연을 피하기 위해 이미 대기 모드로 부팅된 인스턴스 그룹을 갖는 데 사용됩니다.</div>
-<div class="comment-control">
-<span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
-</span>
-<span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
-			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -636,8 +671,8 @@
 </div>
 </div>
 <div class="comments-wrapper-en" style="display: none;">
-<a class="badge reveal-comment" href="#">Show Comments</a>
-<a class="badge hide-comment d-none" href="#">Hide Comments</a>
+<a class="badge reveal-comment" href="javascript:void(0)">Show Comments</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">Hide Comments</a>
 <div class="discussion-page-comments-section-en" data-discussion-question-id="113119" style="display: none">
 <div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">Comments</h4></div>
 <!-- discussion.html -->
@@ -648,6 +683,106 @@
 <!-- New comment start -->
 <!-- New comment end -->
 <div class="discussion-container">
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="931785" id="comment-931785">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				jas26says
+			</h5>
+</a>
+<span class="badge badge-primary">
+				Highly Voted <i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="Fri 23 Jun 2023 18:39">2023-06-24 03:39</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>D</strong></span></div>
+<div class="comment-content">It's D. Warm pools are used to have a group of instances already booted in stand-by to avoid initial scripts delay.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">7</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1242420" id="comment-1242420">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				james2033
+			</h5>
+</a>
+<span class="badge badge-primary">
+				Most Recent <i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="Fri 05 Jul 2024 04:06">2024-07-05 13:06</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>D</strong></span></div>
+<div class="comment-content">A - does not directly address the issue of long-running boot scripts, which is the primary cause of the slow scale-out actions.
+
+B - lead to overprovisioning, which the requirement explicitly wants to avoid.
+
+C - does not directly reduce the time required for the instances to become operational once they are launched.
+
+D: Warm pools allow you to maintain a pool of pre-initialized instances that are ready to go online quickly. These instances have already completed their boot scripts and initialization, so when a scale-out action is triggered, the instances can be brought online much faster. This solution directly addresses the issue of long-running boot scripts and reduces the time required for scale-out actions without overprovisioning the Auto Scaling group.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
 <!-- single_comment.html -->
 <div class="media comment-container" data-comment-id="959037" id="comment-959037">
 <a class="minimize-comment comment-toggle" href="#">
@@ -664,9 +799,7 @@
 				trvtrinh
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sat 22 Jul 2023 02:32">
-			1 month ago
-		</span>
+<span class="comment-date align-middle" title="Sat 22 Jul 2023 02:32">2023-07-22 11:32</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">warm pools do not directly address the issue of reducing the required time for scale-out actions caused by long-running boot scripts. Warm pools can help with quicker scaling by having pre-initialized instances, but they do not optimize the scaling process or reduce the impact of boot scripts during scale-out.
@@ -679,7 +812,7 @@ The correct approach to address the issue of long-running boot scripts and reduc
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">2</span> times
+				upvoted <span class="upvote-count">3</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -703,9 +836,7 @@ The correct approach to address the issue of long-running boot scripts and reduc
 				Zotarix
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sun 23 Jul 2023 01:54">
-			1 month ago
-		</span>
+<span class="comment-date align-middle" title="Sun 23 Jul 2023 01:54">2023-07-23 10:54</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">A warm pool gives you the ability to decrease latency for your applications that have exceptionally long boot times, for example, because instances need to write massive amounts of data to disk. With warm pools, you no longer have to over-provision your Auto Scaling groups to manage latency in order to improve application performance. Hence the correct answer is D.
@@ -717,7 +848,7 @@ Source: https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-w
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">2</span> times
+				upvoted <span class="upvote-count">5</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -741,9 +872,7 @@ Source: https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-w
 				trvtrinh
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Wed 26 Jul 2023 16:22">
-			1 month ago
-		</span>
+<span class="comment-date align-middle" title="Wed 26 Jul 2023 16:22">2023-07-27 01:22</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">yes, D is correct</div>
@@ -754,7 +883,7 @@ Source: https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-w
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -799,12 +928,10 @@ Source: https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-w
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				nickname20202324
+				[Removed]
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Mon 10 Jul 2023 02:55">
-			1 month, 2 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Mon 10 Jul 2023 02:55">2023-07-10 11:55</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">D. Add a warm pool to the Auto Scaling group.</div>
@@ -815,7 +942,7 @@ Source: https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-w
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">3</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -847,9 +974,7 @@ Source: https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-w
 				TQM__9MD
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sun 02 Jul 2023 06:34">
-			1 month, 3 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Sun 02 Jul 2023 06:34">2023-07-02 15:34</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>D</strong></span></div>
@@ -861,7 +986,7 @@ Source: https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-w
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">2</span> times
+				upvoted <span class="upvote-count">3</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -893,9 +1018,7 @@ Source: https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-w
 				Pete987
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Fri 30 Jun 2023 18:36">
-			1 month, 3 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Fri 30 Jun 2023 18:36">2023-07-01 03:36</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>D</strong></span></div>
@@ -907,7 +1030,7 @@ Source: https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-w
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -939,9 +1062,7 @@ Source: https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-w
 				kevino81
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Thu 29 Jun 2023 03:41">
-			1 month, 4 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Thu 29 Jun 2023 03:41">2023-06-29 12:41</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>D</strong></span></div>
@@ -953,7 +1074,7 @@ Source: https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-w
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -985,9 +1106,7 @@ Source: https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-w
 				Warza
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Mon 26 Jun 2023 18:47">
-			2 months ago
-		</span>
+<span class="comment-date align-middle" title="Mon 26 Jun 2023 18:47">2023-06-27 03:47</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>D</strong></span></div>
@@ -999,53 +1118,7 @@ Source: https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-w
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
-			</span>
-<span class="comment-control-error ml-2"></span>
-</div>
-<div class="new-comment-box-container mt-2">
-</div>
-<div class="comment-replies">
-<!-- Nesting start -->
-<!-- Nesting end -->
-</div>
-</div>
-<div class="comment-ellipsis comment-toggled">
-		...
-	</div>
-</div>
-</div>
-<!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="931785" id="comment-931785">
-<a class="minimize-comment comment-toggle" href="#">
-<i class="fa fa-minus-square-o mr-2 mt-1"></i>
-</a>
-<a class="maximize-comment comment-toggle" href="#">
-<i class="fa fa-plus-square-o mr-2 mt-1"></i>
-</a>
-<div class="media-body">
-<div class="comment-head">
-<i class="fa fa-user mr-1 mt-1"></i>
-<a>
-<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				jas26says
-			</h5>
-</a>
-<span class="comment-date align-middle" title="Fri 23 Jun 2023 18:39">
-			2 months ago
-		</span>
-</div>
-<div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>D</strong></span></div>
-<div class="comment-content">It's D. Warm pools are used to have a group of instances already booted in stand-by to avoid initial scripts delay.</div>
-<div class="comment-control">
-<span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
-</span>
-<span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">4</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -1078,7 +1151,7 @@ Source: https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-w
 <i class="fa fa-angle-up"></i>
 </div>
 <!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="../../../js/popper.min.js"></script>
 <!-- jquery latest version -->
 <script src="../../../js/jquery.min.js"></script>
 <!-- bootstrap js -->
@@ -1089,8 +1162,6 @@ Source: https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-w
 <script src="../../../js/wow.min.js"></script>
 <!-- main js -->
 <script src="../../../js/main.js"></script>
-<script async="" defer="" src="../../../js/bootstrap3-typeahead.min.js">
-</script>
 <script type="text/javascript">
     // Activate tooltips
     $(function () {
@@ -1117,39 +1188,6 @@ Source: https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-w
         $('img[defsrc]').each(function() {
             $(this).attr('src',$(this).attr('defsrc'));
         });
-
-
-        function delayedStart() {
-            // Typeahead start
-
-            // Register typeahead element:
-            $('#header-keyword-search, #modal-keyword-search').typeahead({
-                source: autoCompleteQuery,
-                autoSelect: true,
-                delay: 150,
-                selectOnBlur: false,
-                afterSelect: function(param) {$(this.$element).closest('form').submit()}
-            });
-
-            // Query ajax function:
-            function autoCompleteQuery(query, callback) {
-                return $.get("/ajax/autocomplete/suggestions/?query=" + query).done(callback);
-            }
-            // Typeahead end
-        }
-        setTimeout(delayedStart, 1500);
-
-        // Don't submit empty search query
-        $('#modal-keyword-search-form').submit(function() {
-            if (!$('#modal-keyword-search').val()) {
-                return false;
-            }
-        });
-
-        // Auto focus on search box when search-modal is opened
-        $('.search-modal').on('shown.bs.modal', function (e) {
-            $(this).find('input[type=text]').focus();
-        });
     });
 </script>
 <script type="text/javascript">
@@ -1159,6 +1197,6 @@ Source: https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-w
 </script>
 <script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
 <script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
-</div>
+</meta></div>
 </body>
 </html>

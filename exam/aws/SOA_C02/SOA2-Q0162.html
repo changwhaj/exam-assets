@@ -3,13 +3,14 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="2023-08-13 16:26" name="refresh_date"/>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
 <meta charset="utf-8"/>
 <title>Exam AWS Certified SysOps Administrator</title>
 <!-- responsive tag -->
-<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- bootstrap v4 css -->
 <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -24,23 +25,29 @@
 <!-- responsive css -->
 <link href="../../../css/responsive.css" rel="stylesheet" type="text/css"/>
 <link href="../../../css/forum.css" rel="stylesheet" type="text/css"/>
-<style>
-</style>
 <div class="sec-spacer pt-20">
 <div class="container">
 <div class="container action-row-container border-0 p-0 mb-2">
 <div class="container action-row clearfix d-flex">
 <i class="fa fm fa-language fa-2x mr-2"></i>
-<a class="btn show-english" href="#">English</a>
-<a class="btn show-korean d-none" href="#">한국어</a>
+<a class="btn show-english" href="javascript:void(0)">English</a>
+<a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
 <span class="pagination-container ml-auto">
 <span id="page-indicator"><strong></strong></span>
-<!--p id="page-indicator"></p-->
 <span class="pagination-nav ml-4">
-<a class="btn btn-sm" href="#" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
-<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect">
-</select>
-<a class="btn btn-sm" href="#" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
+<a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
+<a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
 </span>
 </span>
 </div>
@@ -50,7 +57,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS Certified SysOps Administrator - Associate 주제 1 문제 162 토론</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified SysOps Administrator - Associate 시험 주제 1, 질문 162, 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified SysOps Administrator - Associate topic 1 question 162 discussion</h1>
@@ -65,21 +72,20 @@
 <!-- Question -->
 <div class="question-discussion-header">
 						
-							Amazon
-						 <a class="discussion-link">AWS 공인 SysOps 관리자 – 어소시에이트 의 시험 문제</a>
+							아마존
+						 <a class="discussion-link">AWS 공인 시스템 운영 관리자 - 어소시에이트 시험 문제</a>
 <div>
-							질문 #: 162 <br/>
-							주제 #: 1
+							문제 번호: 162 <br/>
+							주제 번호: 1
 						</div>
 </div>
 <div class="question-body mt-3 pt-3 border-top" data-id="847169">
 <p class="card-text">
 							
-								한 회사에서 Oracle DB 인스턴스용으로 암호화된 Amazon RDS를 실행합니다. 회사는 다른 AWS 리전에서 정기적인 백업을 제공하려고 합니다. <br/><br/>이러한 요구 사항을 충족하는 가장 운영 효율적인 솔루션은 무엇입니까?
+								한 회사가 암호화된 Amazon RDS for Oracle DB 인스턴스를 운영하고 있습니다. 이 회사는 정기적인 백업 데이터를 다른 AWS 리전에서 이용하고자 합니다. <br/><br/>이러한 요구 사항을 충족하면서 운영 효율성이 가장 높은 솔루션은 무엇일까요?
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="847169" type="application/json">[{"voted_answers": "A", "vote_count": 4, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -89,43 +95,44 @@
 												</span> 
 											
 											DB 인스턴스를 수정합니다. 지역 간 자동 백업을 활성화합니다.
-										</li>
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                가장 많은 표를 받은
+            </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
 												</span> 
 											
-											다른 리전에 RDS 읽기 전용 복제본을 생성합니다. 읽기 전용 복제본의 스냅샷을 생성합니다.
+											다른 리전에 RDS 읽기 복제본을 생성합니다. 해당 읽기 복제본의 스냅샷을 생성합니다.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span> 
 											
-											AWS Database Migration Service(AWS DMS)를 사용하여 데이터를 다른 지역의 DB 인스턴스에 복사합니다.
+											AWS 데이터베이스 마이그레이션 서비스(AWS DMS)를 사용하여 데이터를 다른 리전의 DB 인스턴스로 복사합니다.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span> 
 											
-											DB 인스턴스의 암호화를 일시적으로 해제합니다. 스냅샷을 찍으세요. 스냅샷을 다른 리전에 복사합니다.
+											데이터베이스 인스턴스의 암호화를 일시적으로 해제합니다. 스냅샷을 생성합니다. 생성된 스냅샷을 다른 리전으로 복사합니다.
 										</li>
 </ul>
 </div>
-<a class="btn btn-primary reveal-solution" href="#">제안된 답변 표시</a>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
 <a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
 <div class="card-text question-answer bg-light white-text" style="display: none;">
-<span class="correct-answer-box"><strong>추천 답변: </strong>
-<span class="correct-answer">A </span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
+<span class="correct-answer-box"><strong>제안된 답변: </strong>
+<span class="correct-answer">A</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="4 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">A (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>지역사회 투표 배분</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="7 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">A (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
-                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">다른
+                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
 <!-- / Question  -->
@@ -150,7 +157,6 @@
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="847169" type="application/json">[{"voted_answers": "A", "vote_count": 4, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -160,7 +166,9 @@
 												</span>
 											
 											Modify the DB instance. Enable cross-Region automated backups.
-										</li>
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                Most Voted
+            </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
@@ -189,12 +197,11 @@
 <div class="card-text question-answer bg-light white-text">
 <span class="correct-answer-box"><strong>Suggested Answer:</strong>
 <span class="correct-answer">A</span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="4 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">A (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="7 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">A (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
@@ -202,10 +209,10 @@
 <!-- / Question  -->
 </div>
 <div class="comments-wrapper">
-<a class="badge reveal-comment" href="#">댓글 표시</a>
-<a class="badge hide-comment d-none" href="#">댓글 숨기기</a>
+<a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
 <div class="discussion-page-comments-section" data-discussion-question-id="87678" style="display: none">
-<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">코멘트</h4></div>
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
 <div class="container outer-discussion-container">
@@ -214,6 +221,52 @@
 <!-- New comment start -->
 <!-- New comment end -->
 <div class="discussion-container">
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="719971" id="comment-719971">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				라이온기크
+			</h5>
+</a>
+<span class="badge badge-primary">
+				가장 많은 표를 받은<i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="2023년 11월 16일 목요일 20시 51분">2023년 11월 17일 오전 5시 51분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">답: A 참조: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReplicateBackups.html "리전 간 자동 백업 활성화 Amazon RDS 콘솔을 사용하여 새 DB 인스턴스 또는 기존 DB 인스턴스에서 백업 복제를 활성화할 수 있습니다. 또한 start-db-instance-automated-backups-replication AWS CLI 명령 또는 StartDBInstanceAutomatedBackupsReplication RDS API 작업을 사용할 수도 있습니다. 각 AWS 계정당 최대 20개의 백업을 대상 AWS 리전으로 복제할 수 있습니다."</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">11</span> 번
+			 
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
 <!-- single_comment.html -->
 <div class="media comment-container" data-comment-id="980086" id="comment-980086">
 <a class="minimize-comment comment-toggle" href="#">
@@ -230,22 +283,23 @@
 				제임스F92
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 8월 13일 일요일 16:26">
-			1주, 6일 전
-		</span>
+<span class="badge badge-primary">
+				최신<i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="2024년 8월 13일 화요일 16시 26분">2024년 8월 14일 01시 26분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">문제는 ... 다른 지역에 "백업"을 요청하는 것입니다. 읽기 전용 복제본은 DB 클라이언트의 실시간 읽기 작업에 적극적으로 사용됩니다. 우리는 그것을 원하지 않습니다. 단지 백업을 원할 뿐입니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">문제는 질문이 다른 지역의 "백업"을 묻는다는 것입니다. 읽기 복제본은 데이터베이스 클라이언트의 실시간 읽기 작업에 사용되는 것입니다. 우리는 그런 것을 원하는 것이 아니라, 단순히 백업만 필요한 것입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -276,22 +330,20 @@
 				크리스티나666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 30일 일 22:47">
-			3주, 6일 전
-		</span>
+<span class="comment-date align-middle" title="2024년 7월 30일 화요일 22시 47분">2024년 7월 31일 오전 7시 47분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
 <div class="comment-content">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReplicateBackups.html#AutomatedBackups.Replicating.Enable</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -322,21 +374,19 @@
 				awsguru1998
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 2월 14일 (화) 21:11">
-			6개월, 1주 전
-		</span>
+<span class="comment-date align-middle" title="2024년 2월 14일 수요일 21시 11분">2024년 2월 15일 오전 6시 11분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">운영 효율성 측면에서 옵션 A는 옵션 B에 비해 더 나은 솔루션일 수 있습니다. 그러나 지역 간 백업으로 인해 추가 지연 시간이 발생할 수 있으며 지역 간 대역폭이 제한된 경우 백업을 완료하는 데 시간이 더 오래 걸릴 수 있다는 점에 유의하는 것이 중요합니다. . 회사는 요구 사항에 가장 적합한 솔루션을 선택할 때 특정 요구 사항을 평가하고 자동화와 대기 시간 간의 균형을 고려해야 합니다.</div>
+<div class="comment-content">운영 효율성 측면에서 옵션 A가 옵션 B보다 더 나은 솔루션일 수 있습니다. 그러나 지역 간 백업은 추가적인 지연 시간을 발생시킬 수 있으며, 지역 간 대역폭이 제한적일 경우 백업 완료 시간이 더 오래 걸릴 수 있다는 점에 유의해야 합니다. 기업은 특정 요구 사항을 평가하고 자동화와 지연 시간 간의 장단점을 고려하여 최적의 솔루션을 선택해야 합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -359,21 +409,19 @@
 				아할람리
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 4월 3일 월요일 07:30">
-			4개월, 3주 전
-		</span>
+<span class="comment-date align-middle" title="2024년 4월 3일 수요일 오전 7시 30분">2024년 4월 3일 16시 30분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">복제본은 지역 간에 작동합니까? 비싸고 비용 효율적이지 않다고 생각합니다</div>
+<div class="comment-content">복제본은 지역 간에 호환되나요? 제 생각에는 비용이 많이 들고 비용 효율적이지 않을 것 같습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -393,24 +441,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				jas26말씀
+				jas26says
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 6월 15일 목요일 13:52">
-			2개월, 1주 전
-		</span>
+<span class="comment-date align-middle" title="2024년 6월 15일 토요일 13시 52분">2024년 6월 15일 22시 52분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">제가 질문에서 이해한 바에 따르면 이 경우 비용은 결코 고려할 사항이 아닙니다.</div>
+<div class="comment-content">제가 질문을 이해한 바로는, 이 경우 비용은 고려 대상이 아니었던 것 같습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -457,67 +503,20 @@
 				미칼다비드
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 12월 13일 (화) 05:56">
-			8개월, 2주 전
-		</span>
+<span class="comment-date align-middle" title="2023년 12월 13일 수요일 오전 5시 56분">2023년 12월 13일 14시 56분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">아아아아아아</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">아아아아아</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
-<span class="comment-control-error ml-2"></span>
-</div>
-<div class="new-comment-box-container mt-2">
-</div>
-<div class="comment-replies">
-<!-- Nesting start -->
-<!-- Nesting end -->
-</div>
-</div>
-<div class="comment-ellipsis comment-toggled">
-		...
-	</div>
-</div>
-</div>
-<!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="719971" id="comment-719971">
-<a class="minimize-comment comment-toggle" href="#">
-<i class="fa fa-minus-square-o mr-2 mt-1"></i>
-</a>
-<a class="maximize-comment comment-toggle" href="#">
-<i class="fa fa-plus-square-o mr-2 mt-1"></i>
-</a>
-<div class="media-body">
-<div class="comment-head">
-<i class="fa fa-user mr-1 mt-1"></i>
-<a>
-<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				라이온긱
-			</h5>
-</a>
-<span class="comment-date align-middle" title="2022년 11월 16일 수 20:51">
-			9개월, 1주 전
-		</span>
-</div>
-<div class="comment-body comment-toggled">
-<div class="comment-content">답변: 참고: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReplicateBackups.html "교차 리전 자동 백업 활성화 Amazon RDS 콘솔을 사용하여 신규 또는 기존 DB 인스턴스에서 백업 복제를 활성화할 수 있습니다. start-db-instance-automated-backups-replication AWS CLI 명령 또는 StartDBInstanceAutomatedBackupsReplication RDS API 작업을 사용할 수도 있습니다. 각 AWS 계정의 각 대상 AWS 리전에 최대 20개의 백업을 복제할 수 있습니다.</div>
-<div class="comment-control">
-<span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
-</span>
-<span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
-			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -540,8 +539,8 @@
 </div>
 </div>
 <div class="comments-wrapper-en" style="display: none;">
-<a class="badge reveal-comment" href="#">Show Comments</a>
-<a class="badge hide-comment d-none" href="#">Hide Comments</a>
+<a class="badge reveal-comment" href="javascript:void(0)">Show Comments</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">Hide Comments</a>
 <div class="discussion-page-comments-section-en" data-discussion-question-id="87678" style="display: none">
 <div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">Comments</h4></div>
 <!-- discussion.html -->
@@ -552,6 +551,55 @@
 <!-- New comment start -->
 <!-- New comment end -->
 <div class="discussion-container">
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="719971" id="comment-719971">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Liongeek
+			</h5>
+</a>
+<span class="badge badge-primary">
+				Highly Voted <i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="Thu 16 Nov 2023 20:51">2023-11-17 05:51</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Ans: A
+REF: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReplicateBackups.html
+"Enabling cross-Region automated backups
+You can enable backup replication on new or existing DB instances using the Amazon RDS console. You can also use the start-db-instance-automated-backups-replication AWS CLI command or the StartDBInstanceAutomatedBackupsReplication RDS API operation. You can replicate up to 20 backups to each destination AWS Region for each AWS account"</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">11</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
 <!-- single_comment.html -->
 <div class="media comment-container" data-comment-id="980086" id="comment-980086">
 <a class="minimize-comment comment-toggle" href="#">
@@ -568,9 +616,10 @@
 				JamesF92
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sun 13 Aug 2023 16:26">
-			1 week, 6 days ago
-		</span>
+<span class="badge badge-primary">
+				Most Recent <i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="Tue 13 Aug 2024 16:26">2024-08-14 01:26</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -582,7 +631,7 @@
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">4</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -614,9 +663,7 @@
 				Christina666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sun 30 Jul 2023 22:47">
-			3 weeks, 6 days ago
-		</span>
+<span class="comment-date align-middle" title="Tue 30 Jul 2024 22:47">2024-07-31 07:47</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -660,9 +707,7 @@
 				awsguru1998
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Tue 14 Feb 2023 21:11">
-			6 months, 1 week ago
-		</span>
+<span class="comment-date align-middle" title="Wed 14 Feb 2024 21:11">2024-02-15 06:11</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">In terms of operational efficiency, Option A may be a better solution compared to Option B. However, it's important to note that cross-Region backups may cause additional latency, and the backups may take longer to complete if there is limited bandwidth between the Regions. The company should assess its specific needs and consider the trade-offs between automation and latency when selecting the best solution for its requirements.</div>
@@ -697,9 +742,7 @@
 				ahalamri
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Mon 03 Apr 2023 07:30">
-			4 months, 3 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Wed 03 Apr 2024 07:30">2024-04-03 16:30</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">Do replicas work cross-region ? I believe its expensive not cost effective</div>
@@ -734,9 +777,7 @@
 				jas26says
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Thu 15 Jun 2023 13:52">
-			2 months, 1 week ago
-		</span>
+<span class="comment-date align-middle" title="Sat 15 Jun 2024 13:52">2024-06-15 22:52</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">For what I understood in the question, cost was never something to consider in this case.</div>
@@ -747,7 +788,7 @@
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -795,9 +836,7 @@
 				michaldavid
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Tue 13 Dec 2022 05:56">
-			8 months, 2 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Wed 13 Dec 2023 05:56">2023-12-13 14:56</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -810,54 +849,6 @@
 </span>
 <span class="ml-2 upvote-text">
 				upvoted <span class="upvote-count">2</span> times
-			</span>
-<span class="comment-control-error ml-2"></span>
-</div>
-<div class="new-comment-box-container mt-2">
-</div>
-<div class="comment-replies">
-<!-- Nesting start -->
-<!-- Nesting end -->
-</div>
-</div>
-<div class="comment-ellipsis comment-toggled">
-		...
-	</div>
-</div>
-</div>
-<!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="719971" id="comment-719971">
-<a class="minimize-comment comment-toggle" href="#">
-<i class="fa fa-minus-square-o mr-2 mt-1"></i>
-</a>
-<a class="maximize-comment comment-toggle" href="#">
-<i class="fa fa-plus-square-o mr-2 mt-1"></i>
-</a>
-<div class="media-body">
-<div class="comment-head">
-<i class="fa fa-user mr-1 mt-1"></i>
-<a>
-<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				Liongeek
-			</h5>
-</a>
-<span class="comment-date align-middle" title="Wed 16 Nov 2022 20:51">
-			9 months, 1 week ago
-		</span>
-</div>
-<div class="comment-body comment-toggled">
-<div class="comment-content">Ans: A
-REF: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReplicateBackups.html
-"Enabling cross-Region automated backups
-You can enable backup replication on new or existing DB instances using the Amazon RDS console. You can also use the start-db-instance-automated-backups-replication AWS CLI command or the StartDBInstanceAutomatedBackupsReplication RDS API operation. You can replicate up to 20 backups to each destination AWS Region for each AWS account"</div>
-<div class="comment-control">
-<span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
-</span>
-<span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">4</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -890,7 +881,7 @@ You can enable backup replication on new or existing DB instances using the Amaz
 <i class="fa fa-angle-up"></i>
 </div>
 <!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="../../../js/popper.min.js"></script>
 <!-- jquery latest version -->
 <script src="../../../js/jquery.min.js"></script>
 <!-- bootstrap js -->
@@ -901,8 +892,6 @@ You can enable backup replication on new or existing DB instances using the Amaz
 <script src="../../../js/wow.min.js"></script>
 <!-- main js -->
 <script src="../../../js/main.js"></script>
-<script async="" defer="" src="../../../js/bootstrap3-typeahead.min.js">
-</script>
 <script type="text/javascript">
     // Activate tooltips
     $(function () {
@@ -929,39 +918,6 @@ You can enable backup replication on new or existing DB instances using the Amaz
         $('img[defsrc]').each(function() {
             $(this).attr('src',$(this).attr('defsrc'));
         });
-
-
-        function delayedStart() {
-            // Typeahead start
-
-            // Register typeahead element:
-            $('#header-keyword-search, #modal-keyword-search').typeahead({
-                source: autoCompleteQuery,
-                autoSelect: true,
-                delay: 150,
-                selectOnBlur: false,
-                afterSelect: function(param) {$(this.$element).closest('form').submit()}
-            });
-
-            // Query ajax function:
-            function autoCompleteQuery(query, callback) {
-                return $.get("/ajax/autocomplete/suggestions/?query=" + query).done(callback);
-            }
-            // Typeahead end
-        }
-        setTimeout(delayedStart, 1500);
-
-        // Don't submit empty search query
-        $('#modal-keyword-search-form').submit(function() {
-            if (!$('#modal-keyword-search').val()) {
-                return false;
-            }
-        });
-
-        // Auto focus on search box when search-modal is opened
-        $('.search-modal').on('shown.bs.modal', function (e) {
-            $(this).find('input[type=text]').focus();
-        });
     });
 </script>
 <script type="text/javascript">
@@ -971,6 +927,6 @@ You can enable backup replication on new or existing DB instances using the Amaz
 </script>
 <script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
 <script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
-</div>
+</meta></div>
 </body>
 </html>

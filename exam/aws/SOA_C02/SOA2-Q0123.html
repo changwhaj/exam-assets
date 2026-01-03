@@ -3,13 +3,14 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="2023-08-14 10:16" name="refresh_date"/>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
 <meta charset="utf-8"/>
 <title>Exam AWS Certified SysOps Administrator</title>
 <!-- responsive tag -->
-<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- bootstrap v4 css -->
 <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -24,23 +25,29 @@
 <!-- responsive css -->
 <link href="../../../css/responsive.css" rel="stylesheet" type="text/css"/>
 <link href="../../../css/forum.css" rel="stylesheet" type="text/css"/>
-<style>
-</style>
 <div class="sec-spacer pt-20">
 <div class="container">
 <div class="container action-row-container border-0 p-0 mb-2">
 <div class="container action-row clearfix d-flex">
 <i class="fa fm fa-language fa-2x mr-2"></i>
-<a class="btn show-english" href="#">English</a>
-<a class="btn show-korean d-none" href="#">한국어</a>
+<a class="btn show-english" href="javascript:void(0)">English</a>
+<a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
 <span class="pagination-container ml-auto">
 <span id="page-indicator"><strong></strong></span>
-<!--p id="page-indicator"></p-->
 <span class="pagination-nav ml-4">
-<a class="btn btn-sm" href="#" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
-<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect">
-</select>
-<a class="btn btn-sm" href="#" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
+<a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
+<a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
 </span>
 </span>
 </div>
@@ -50,7 +57,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS Certified SysOps Administrator - Associate 주제 1 문제 123 토론</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified SysOps Administrator - Associate 시험 주제 1, 질문 123, 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified SysOps Administrator - Associate topic 1 question 123 discussion</h1>
@@ -65,21 +72,20 @@
 <!-- Question -->
 <div class="question-discussion-header">
 						
-							Amazon
-						 <a class="discussion-link">AWS 공인 SysOps 관리자 – 어소시에이트 의 시험 문제</a>
+							아마존
+						 <a class="discussion-link">AWS 공인 시스템 운영 관리자 - 어소시에이트 시험 문제</a>
 <div>
-							질문 #: 123 <br/>
-							주제 #: 1
+							문제 번호: 123 <br/>
+							주제 번호: 1
 						</div>
 </div>
 <div class="question-body mt-3 pt-3 border-top" data-id="847130">
 <p class="card-text">
 							
-								한 회사의 고객이 Amazon S3에서 정적 웹 콘텐츠에 액세스하는 동안 지연 시간이 증가했다고 보고했습니다. SysOps 관리자는 특정 S3 버킷에서 매우 높은 읽기 작업 속도를 관찰했습니다. <br/><br/>S3 버킷의 로드를 줄여 지연 시간을 최소화하는 방법은 무엇입니까?
+								한 회사의 고객들이 Amazon S3의 정적 웹 콘텐츠에 접근할 때 지연 시간이 증가했다고 보고하고 있습니다. 시스템 운영 관리자는 특정 S3 버킷에서 읽기 작업량이 매우 높은 것을 확인했습니다. <br/><br/>S3 버킷의 부하를 줄여 지연 시간을 최소화하려면 어떻게 해야 할까요?
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="847130" type="application/json">[{"voted_answers": "C", "vote_count": 4, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -88,44 +94,45 @@
 													A.
 												</span> 
 											
-											S3 버킷을 최종 사용자의 지리적 위치에 더 가까운 지역으로 마이그레이션하십시오.
+											S3 버킷을 최종 사용자의 지리적 위치와 더 가까운 지역으로 마이그레이션합니다.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
 												</span> 
 											
-											교차 지역 복제를 사용하여 모든 데이터를 다른 지역으로 복제하십시오.
+											지역 간 복제를 사용하여 모든 데이터를 다른 지역으로 복제합니다.
 										</li>
 <li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span> 
 											
-											S3 버킷을 원본으로 사용하여 Amazon CloudFront 배포를 생성합니다.
-										</li>
+											S3 버킷을 오리진으로 사용하여 Amazon CloudFront 배포를 생성합니다.
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                가장 많은 표를 받은
+            </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span> 
 											
-											Amazon ElastiCache를 사용하여 Amazon S3에서 제공되는 데이터를 캐시합니다.
+											Amazon S3에서 제공되는 데이터를 캐싱하기 위해 Amazon ElastiCache를 사용합니다.
 										</li>
 </ul>
 </div>
-<a class="btn btn-primary reveal-solution" href="#">제안된 답변 표시</a>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
 <a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
 <div class="card-text question-answer bg-light white-text" style="display: none;">
-<span class="correct-answer-box"><strong>추천 답변: </strong>
-<span class="correct-answer">C </span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
+<span class="correct-answer-box"><strong>정답: </strong>
+<span class="correct-answer">C</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="4 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">C (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>지역사회 투표 배분</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="13 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">C (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
-                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">다른
+                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
 <!-- / Question  -->
@@ -150,7 +157,6 @@
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="847130" type="application/json">[{"voted_answers": "C", "vote_count": 4, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -174,7 +180,9 @@
 												</span>
 											
 											Create an Amazon CloudFront distribution with the S3 bucket as the origin.
-										</li>
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                Most Voted
+            </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
@@ -189,12 +197,11 @@
 <div class="card-text question-answer bg-light white-text">
 <span class="correct-answer-box"><strong>Suggested Answer:</strong>
 <span class="correct-answer">C</span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="4 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">C (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="13 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">C (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
@@ -202,10 +209,10 @@
 <!-- / Question  -->
 </div>
 <div class="comments-wrapper">
-<a class="badge reveal-comment" href="#">댓글 표시</a>
-<a class="badge hide-comment d-none" href="#">댓글 숨기기</a>
+<a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
 <div class="discussion-page-comments-section" data-discussion-question-id="88004" style="display: none">
-<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">코멘트</h4></div>
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
 <div class="container outer-discussion-container">
@@ -214,6 +221,53 @@
 <!-- New comment start -->
 <!-- New comment end -->
 <div class="discussion-container">
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="864334" id="comment-864334">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				고머
+			</h5>
+</a>
+<span class="badge badge-primary">
+				가장 많은 표를 받은<i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="2024년 4월 8일 월요일 오전 3시 13분">2024년 4월 8일 12시 13분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
+<div class="comment-content">정답은 C입니다. 근거: A. 모든 사용자가 항상 인접한 "지역"에서 접속하는 경우 도움이 될 수 있습니다(노력/분석 필요). B. 복제 중에 부하가 증가하지만 나중에 도움이 될 수 있습니다(이전 질문과 동일한 주의 사항). C. CF가 실제 사용자 요청에 따라 모든 엣지에 전역적으로 캐싱을 시작하고 버킷은 변경되지 않으며 분석이 필요하지 않으므로 가장 간단하고 최적입니다. D. ElastiCache는 데이터베이스용이지 S3용이 아닙니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">7</span> 번
+			 
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
 <!-- single_comment.html -->
 <div class="media comment-container" data-comment-id="980603" id="comment-980603">
 <a class="minimize-comment comment-toggle" href="#">
@@ -230,68 +284,23 @@
 				지파크
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 8월 14일 월요일 10:16">
-			1주, 6일 전
-		</span>
+<span class="badge badge-primary">
+				최신<i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="2024년 8월 14일 수요일 오전 10시 16분">2024년 8월 14일 19시 16분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>C</strong></span></div>
-<div class="comment-content">A/B가 아닌 이유: 질문에 "지역" 관련 트래픽이 언급되지 않았습니다. A. S3 버킷을 지역으로 마이그레이션 B. 지역 간 복제 사용</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
+<div class="comment-content">A/B가 아닌 이유: 질문에서 "지역" 관련 트래픽에 대해 언급하지 않았습니다. A. S3 버킷을 특정 지역으로 마이그레이션합니다. B. 지역 간 복제를 사용합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				찬성함</span>
-<span class="comment-control-error ml-2"></span>
-</div>
-<div class="new-comment-box-container mt-2">
-</div>
-<div class="comment-replies">
-<!-- Nesting start -->
-<!-- Nesting end -->
-</div>
-</div>
-<div class="comment-ellipsis comment-toggled">
-		...
-	</div>
-</div>
-</div>
-<!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="864334" id="comment-864334">
-<a class="minimize-comment comment-toggle" href="#">
-<i class="fa fa-minus-square-o mr-2 mt-1"></i>
-</a>
-<a class="maximize-comment comment-toggle" href="#">
-<i class="fa fa-plus-square-o mr-2 mt-1"></i>
-</a>
-<div class="media-body">
-<div class="comment-head">
-<i class="fa fa-user mr-1 mt-1"></i>
-<a>
-<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				고멜
-			</h5>
-</a>
-<span class="comment-date align-middle" title="2023년 4월 8일 토요일 03:13">
-			4개월, 3주 전
-		</span>
-</div>
-<div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>C</strong></span></div>
-<div class="comment-content">분명히 C 근거: A. 모든 사람이 항상 인접한 "지역"에서 오는 경우 도움이 될 수 있습니다(노력/분석 필요) B. 복제 중에 로드가 증가하지만 나중에 도움이 될 수 있습니다(이전 질문과 동일한 주의 사항) C. 가장 간단하고 가장 좋습니다. CF는 실제 사용자 요청만을 기반으로 모든 에지에 대해 전역적으로 캐싱을 시작하며 버킷은 변경되지 않고 유지되며 분석이 필요하지 않습니다. D. ElastiCache는 S3가 아닌 DB용입니다.</div>
-<div class="comment-control">
-<span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
-</span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
-			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -322,22 +331,20 @@
 				미칼다비드
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 12월 11일 일요일 07:55">
-			8개월, 2주 전
-		</span>
+<span class="comment-date align-middle" title="2023년 12월 11일 월요일 오전 7시 55분">2023년 12월 11일 16시 55분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>C</strong></span></div>
-<div class="comment-content">ㅋㅋㅋㅋㅋㅋ</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
+<div class="comment-content">ccccccccc</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -365,24 +372,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				페페펩
+				아기
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 12월 7일 수요일 14:58">
-			8개월, 3주 전
-		</span>
+<span class="comment-date align-middle" title="2023년 12월 7일 목요일 14:58">2023년 12월 7일 23시 58분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">이 링크에 대한 토론. https://www.examtopics.com/discussions/amazon/view/7004-exam-aws-sysops-topic-1-question-611-discussion/</div>
+<div class="comment-content">다음 링크에서 토론을 확인하세요. https://www.examtopics.com/discussions/amazon/view/7004-exam-aws-sysops-topic-1-question-611-discussion/</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -410,24 +415,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				grka25
+				그르카25
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 12월 7일 수요일 08:39">
-			8개월, 3주 전
-		</span>
+<span class="comment-date align-middle" title="2023년 12월 7일 목요일 오전 8시 39분">2023년 12월 7일 17시 39분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">대답은 C입니다. 이 질문은 이전 덤프에서 찾을 수 있습니다. 대부분의 사람들은 그곳에서 C에 투표했습니다. Cloudfront는 정적 콘텐츠를 캐시하여 S3 버킷의 로드를 줄입니다.</div>
+<div class="comment-content">정답은 C입니다. 이 문제는 이전 문제에서도 찾아볼 수 있으며, 대부분의 사람들이 C를 선택했습니다. Cloudfront는 정적 콘텐츠를 캐싱하여 S3 버킷의 부하를 줄여줍니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -447,24 +450,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				베즈니카
+				노숙자
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 12월 7일 수요일 18:52">
-			8개월, 3주 전
-		</span>
+<span class="comment-date align-middle" title="2023년 12월 7일 목요일 18시 52분">2023년 12월 8일 03시 52분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">C 확실히요. D는 정적 웹사이트에서는 전혀 의미가 없습니다. Elasticache는 데이터베이스와 함께 작동합니다.</div>
+<div class="comment-content">C가 확실히 맞습니다. D는 정적 웹사이트에는 전혀 어울리지 않습니다. Elasticache는 데이터베이스와 함께 작동합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -503,21 +504,19 @@
 				클라우드핸즈온
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 12월 3일 토요일 18:35">
-			8개월, 3주 전
-		</span>
+<span class="comment-date align-middle" title="2023년 12월 3일 일요일 18시 35분">2023년 12월 4일 오전 3시 35분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">대답은 D입니다. 높은 읽기를 위해 S3와 함께 사용되는 Elasticache는 이러한 종류의 문제를 해결하는 데 이상적입니다.</div>
+<div class="comment-content">정답은 D입니다. 읽기 속도가 빠른 경우 Elasticache를 S3와 함께 사용하면 이러한 문제를 해결하는 데 이상적입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -548,21 +547,19 @@
 				파토치
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 11월 19일 토요일 21:55">
-			9개월, 1주 전
-		</span>
+<span class="comment-date align-middle" title="2023년 11월 19일 일요일 21시 55분">2023년 11월 20일 오전 6시 55분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">그 질문은 새로운 것입니다. 토론은 어디에 있습니까? 120 이후에는 토론이 없습니다. 기본 답변이 옳다고 어떻게 믿나요? 최근에 인증서를 얻으려고 노력하는 사람</div>
+<div class="comment-content">저 질문들은 새로 나온 질문들입니다. 토론은 어디에 있나요? 120건이 넘도록 아무런 토론도 없네요. 기본 답변이 맞다고 어떻게 믿을 수 있죠? 최근에 자격증을 따려고 했던 사람 있나요?</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -582,24 +579,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				더 큰 직원
+				BiggerStaff
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 11월 23일 수 14:22">
-			9개월 전
-		</span>
+<span class="comment-date align-middle" title="2023년 11월 23일 목요일 14시 22분">2023년 11월 23일 23시 22분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">동의합니다. 왜 토론이 없습니까? 정답은 어떻게 선택되나요?</div>
+<div class="comment-content">저도 동의합니다. 왜 토론이 없나요? 정답은 어떻게 선정되는 건가요?</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -630,8 +625,8 @@
 </div>
 </div>
 <div class="comments-wrapper-en" style="display: none;">
-<a class="badge reveal-comment" href="#">Show Comments</a>
-<a class="badge hide-comment d-none" href="#">Hide Comments</a>
+<a class="badge reveal-comment" href="javascript:void(0)">Show Comments</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">Hide Comments</a>
 <div class="discussion-page-comments-section-en" data-discussion-question-id="88004" style="display: none">
 <div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">Comments</h4></div>
 <!-- discussion.html -->
@@ -642,54 +637,6 @@
 <!-- New comment start -->
 <!-- New comment end -->
 <div class="discussion-container">
-<!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="980603" id="comment-980603">
-<a class="minimize-comment comment-toggle" href="#">
-<i class="fa fa-minus-square-o mr-2 mt-1"></i>
-</a>
-<a class="maximize-comment comment-toggle" href="#">
-<i class="fa fa-plus-square-o mr-2 mt-1"></i>
-</a>
-<div class="media-body">
-<div class="comment-head">
-<i class="fa fa-user mr-1 mt-1"></i>
-<a>
-<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				jipark
-			</h5>
-</a>
-<span class="comment-date align-middle" title="Mon 14 Aug 2023 10:16">
-			1 week, 6 days ago
-		</span>
-</div>
-<div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
-<div class="comment-content">why not A / B : question did not say "region" related traffic
-A. Migrate the S3 bucket to a region 
-B. Use cross-region replication</div>
-<div class="comment-control">
-<span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
-</span>
-<span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
-			</span>
-<span class="comment-control-error ml-2"></span>
-</div>
-<div class="new-comment-box-container mt-2">
-</div>
-<div class="comment-replies">
-<!-- Nesting start -->
-<!-- Nesting end -->
-</div>
-</div>
-<div class="comment-ellipsis comment-toggled">
-		...
-	</div>
-</div>
-</div>
 <!-- single_comment.html -->
 <div class="media comment-container" data-comment-id="864334" id="comment-864334">
 <a class="minimize-comment comment-toggle" href="#">
@@ -706,9 +653,10 @@ B. Use cross-region replication</div>
 				Gomer
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sat 08 Apr 2023 03:13">
-			4 months, 3 weeks ago
-		</span>
+<span class="badge badge-primary">
+				Highly Voted <i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="Mon 08 Apr 2024 03:13">2024-04-08 12:13</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
@@ -725,7 +673,56 @@ D. ElastiCache is for DBs, not S3</div>
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">2</span> times
+				upvoted <span class="upvote-count">7</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="980603" id="comment-980603">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				jipark
+			</h5>
+</a>
+<span class="badge badge-primary">
+				Most Recent <i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="Wed 14 Aug 2024 10:16">2024-08-14 19:16</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
+<div class="comment-content">why not A / B : question did not say "region" related traffic
+A. Migrate the S3 bucket to a region 
+B. Use cross-region replication</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">4</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -757,9 +754,7 @@ D. ElastiCache is for DBs, not S3</div>
 				michaldavid
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sun 11 Dec 2022 07:55">
-			8 months, 2 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Mon 11 Dec 2023 07:55">2023-12-11 16:55</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
@@ -771,7 +766,7 @@ D. ElastiCache is for DBs, not S3</div>
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -803,9 +798,7 @@ D. ElastiCache is for DBs, not S3</div>
 				Pepepep
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Wed 07 Dec 2022 14:58">
-			8 months, 3 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Thu 07 Dec 2023 14:58">2023-12-07 23:58</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">Discussion on this link.
@@ -849,9 +842,7 @@ https://www.examtopics.com/discussions/amazon/view/7004-exam-aws-sysops-topic-1-
 				grka25
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Wed 07 Dec 2022 08:39">
-			8 months, 3 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Thu 07 Dec 2023 08:39">2023-12-07 17:39</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">The answer is C. You can find this question in the old dump. Most people voted C there.
@@ -888,9 +879,7 @@ Cloudfront will cache the static content reducing the load on the S3 bucket</div
 				beznika
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Wed 07 Dec 2022 18:52">
-			8 months, 3 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Thu 07 Dec 2023 18:52">2023-12-08 03:52</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">C definitely. D doesn't even make any sense with static website. Elasticache works together with a DataBase.</div>
@@ -941,9 +930,7 @@ Cloudfront will cache the static content reducing the load on the S3 bucket</div
 				CloudHandsOn
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sat 03 Dec 2022 18:35">
-			8 months, 3 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Sun 03 Dec 2023 18:35">2023-12-04 03:35</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">The answer should be D.
@@ -987,9 +974,7 @@ Elasticache used with S3 for high reads is ideal to help with this kind of issue
 				Fatoch
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sat 19 Nov 2022 21:55">
-			9 months, 1 week ago
-		</span>
+<span class="comment-date align-middle" title="Sun 19 Nov 2023 21:55">2023-11-20 06:55</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">Those questions are new .Where is the discussion ? after 120 no discussion. how do I believe default answer is correct. Anyone recently trying to get certificates</div>
@@ -1024,9 +1009,7 @@ Elasticache used with S3 for high reads is ideal to help with this kind of issue
 				BiggerStaff
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Wed 23 Nov 2022 14:22">
-			9 months ago
-		</span>
+<span class="comment-date align-middle" title="Thu 23 Nov 2023 14:22">2023-11-23 23:22</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">I agree, why no discussion. How are the correct answers picked?</div>
@@ -1078,7 +1061,7 @@ Elasticache used with S3 for high reads is ideal to help with this kind of issue
 <i class="fa fa-angle-up"></i>
 </div>
 <!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="../../../js/popper.min.js"></script>
 <!-- jquery latest version -->
 <script src="../../../js/jquery.min.js"></script>
 <!-- bootstrap js -->
@@ -1089,8 +1072,6 @@ Elasticache used with S3 for high reads is ideal to help with this kind of issue
 <script src="../../../js/wow.min.js"></script>
 <!-- main js -->
 <script src="../../../js/main.js"></script>
-<script async="" defer="" src="../../../js/bootstrap3-typeahead.min.js">
-</script>
 <script type="text/javascript">
     // Activate tooltips
     $(function () {
@@ -1117,39 +1098,6 @@ Elasticache used with S3 for high reads is ideal to help with this kind of issue
         $('img[defsrc]').each(function() {
             $(this).attr('src',$(this).attr('defsrc'));
         });
-
-
-        function delayedStart() {
-            // Typeahead start
-
-            // Register typeahead element:
-            $('#header-keyword-search, #modal-keyword-search').typeahead({
-                source: autoCompleteQuery,
-                autoSelect: true,
-                delay: 150,
-                selectOnBlur: false,
-                afterSelect: function(param) {$(this.$element).closest('form').submit()}
-            });
-
-            // Query ajax function:
-            function autoCompleteQuery(query, callback) {
-                return $.get("/ajax/autocomplete/suggestions/?query=" + query).done(callback);
-            }
-            // Typeahead end
-        }
-        setTimeout(delayedStart, 1500);
-
-        // Don't submit empty search query
-        $('#modal-keyword-search-form').submit(function() {
-            if (!$('#modal-keyword-search').val()) {
-                return false;
-            }
-        });
-
-        // Auto focus on search box when search-modal is opened
-        $('.search-modal').on('shown.bs.modal', function (e) {
-            $(this).find('input[type=text]').focus();
-        });
     });
 </script>
 <script type="text/javascript">
@@ -1159,6 +1107,6 @@ Elasticache used with S3 for high reads is ideal to help with this kind of issue
 </script>
 <script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
 <script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
-</div>
+</meta></div>
 </body>
 </html>

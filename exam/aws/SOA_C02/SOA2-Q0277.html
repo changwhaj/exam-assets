@@ -3,13 +3,14 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="2024-04-17 13:16" name="refresh_date"/>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
 <meta charset="utf-8"/>
 <title>Exam AWS Certified SysOps Administrator</title>
 <!-- responsive tag -->
-<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- bootstrap v4 css -->
 <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -56,7 +57,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS Certified SysOps Administrator - Associate 주제 1 문제 277 토론</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified SysOps Administrator - Associate 시험 주제 1, 문제 277, 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified SysOps Administrator - Associate topic 1 question 277 discussion</h1>
@@ -71,21 +72,20 @@
 <!-- Question -->
 <div class="question-discussion-header">
 						
-							Amazon
-						 <a class="discussion-link">AWS 공인 SysOps 관리자 – 어소시에이트 의 시험 문제</a>
+							아마존
+						 <a class="discussion-link">AWS 공인 시스템 운영 관리자 - 어소시에이트 시험 문제</a>
 <div>
-							질문 #: 277 <br/>
-							주제 #: 1
+							문제 번호: 277 <br/>
+							주제 번호: 1
 						</div>
 </div>
 <div class="question-body mt-3 pt-3 border-top" data-id="882262">
 <p class="card-text">
 							
-								SysOps 관리자는 여러 개의 보안 웹사이트를 단일 서버로 통합할 수 있었고 각 사이트는 서로 다른 포트에서 실행되었습니다. 이제 관리자는 두 번째 가용 영역에서 중복 서버를 시작하고 고가용성을 위해 로드 밸런서 뒤에 두 서버를 배치하려고 합니다. <br/><br/>사이트의 인증서 중 하나를 로드 밸런서에 배포하는 데 필요한 명령줄은 무엇입니까?
+								시스템 운영 관리자가 여러 개의 보안 웹사이트를 단일 서버로 통합했으며, 각 사이트는 서로 다른 포트에서 실행되고 있습니다. 이제 관리자는 고가용성을 위해 두 번째 가용 영역에 동일한 서버를 하나 더 구축하고 두 서버 모두를 로드 밸런서 뒤에 배치하려고 합니다. <br/><br/>웹사이트 중 하나의 인증서를 로드 밸런서에 배포하는 데 필요한 명령줄은 무엇일까요?
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="882262" type="application/json">[{"voted_answers": "B", "vote_count": 4, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -94,43 +94,45 @@
 													A.
 												</span> 
 											
-											aws kms 수정 수신기 –-로드 밸런서-이름 my-load-balancer <br/>–인증서 CertificateArn=arn:aws:iam::123456789012:server-certifiate/my-new-server-cert
+											aws kms modify-listener –-load-balancer-name my-load-balancer <br/>–certificates CertificateArn=arn:aws:iam::123456789012:server-certifiate/my-new-server-cert
 										</li>
 <li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
 												</span> 
 											
-											aws elb set-load-balancer-listener-ssl-certificate --load-balancer-name my-load-balancer –-load-balancer-port 443 –-ssl-certificate-id arn:aws:iam::123456789012 :서버-인증서/새-서버-인증서
-										</li>
+											aws elb set-load-balancer-listener-ssl-certificate --load-balancer-name my-load-balancer –-load-balancer-port 443 –-ssl-certificate-id arn:aws:iam::123456789012:server-certificate/new-server-cert
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                가장 많은 표를 받은
+            </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span> 
 											
-											aws ec2 put-ssl-certificate –-load-balancer-name my-load-balancer –-load-balancer-port 443 –-ssl-certificate-id arn:aws:iam::123456789012:server-certificate/new -서버 인증서
+											aws ec2 put-ssl-certificate –-load-balancer-name my-load-balancer –-load-balancer-port 443 –-ssl-certificate-id arn:aws:iam::123456789012:server-certificate/new-server-cert
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span> 
 											
-											aws acm put-ssl-certificate –-load-balancer-name my-load-balancer –-load-balancer-port 443 –-ssl-certificate-id arn:aws:iam::123456789012:server-certificate/new -서버 인증서
+											aws acm put-ssl-certificate –-load-balancer-name my-load-balancer –-load-balancer-port 443 –-ssl-certificate-id arn:aws:iam::123456789012:server-certificate/new-server-cert
 										</li>
 </ul>
 </div>
-<a class="btn btn-primary reveal-solution" href="#">제안된 답변 표시</a>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
 <a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
 <div class="card-text question-answer bg-light white-text" style="display: none;">
-<span class="correct-answer-box"><strong>제안된 답변: </strong>
+<span class="correct-answer-box"><strong>정답: </strong>
 <span class="correct-answer">B</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="4 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">B (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>지역사회 투표 배분</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="7 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">B (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
-                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">다른
+                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
 <!-- / Question  -->
@@ -155,7 +157,6 @@
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="882262" type="application/json">[{"voted_answers": "B", "vote_count": 4, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -172,7 +173,9 @@
 												</span>
 											
 											aws elb set-load-balancer-listener-ssl-certificate --load-balancer-name my-load-balancer –-load-balancer-port 443 –-ssl-certificate-id arn:aws:iam::123456789012:server-certificate/new-server-cert
-										</li>
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                Most Voted
+            </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
@@ -198,7 +201,7 @@
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="4 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">B (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="7 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">B (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
@@ -209,7 +212,7 @@
 <a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
 <a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
 <div class="discussion-page-comments-section" data-discussion-question-id="112504" style="display: none">
-<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">코멘트</h4></div>
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
 <div class="container outer-discussion-container">
@@ -234,20 +237,20 @@
 				tgv
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 4월 17일 수요일 13:16">2024-04-17 22:16</span>
+<span class="comment-date align-middle" title="2024년 10월 17일 목요일 오후 1시 16분">2024년 10월 17일 22시 16분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
-<div class="comment-content">지정된 리스너의 SSL 연결을 종료하는 인증서를 설정합니다. 지정된 인증서는 동일한 로드 밸런서 및 포트에 사용된 이전 인증서를 대체합니다. https://awscli.amazonaws.com/v2/documentation/api/latest/reference/elb/set-load-balancer-listener-ssl-certificate.html</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
+<div class="comment-content">지정된 리스너의 SSL 연결을 종료하는 데 사용할 인증서를 설정합니다. 지정된 인증서는 동일한 로드 밸런서 및 포트에서 이전에 사용되었던 인증서를 대체합니다. https://awscli.amazonaws.com/v2/documentation/api/latest/reference/elb/set-load-balancer-listener-ssl-certificate.html</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -278,20 +281,20 @@
 				지파크
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 8월 19일 토요일 07:50">2023-08-19 16:50</span>
+<span class="comment-date align-middle" title="2024년 2월 19일 월요일 오전 8시 50분">2024년 2월 19일 17시 50분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
-<div class="comment-content">"LoadBalancer" -&gt; aws "elb"에 인증서 배포 ...</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
+<div class="comment-content">"로드 밸런서"에 인증서 배포 -&gt; AWS "ELB" ...</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -322,20 +325,20 @@
 				르디아즈
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 6월 18일 일요일 09:59">2023-06-18 18:59</span>
+<span class="comment-date align-middle" title="2023년 12월 18일 월요일 오전 10시 59분">2023년 12월 18일 19시 59분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
 <div class="comment-content">https://docs.aws.amazon.com/cli/latest/reference/elb/set-load-balancer-listener-ssl-certificate.html</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -386,7 +389,7 @@
 				tgv
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Wed 17 Apr 2024 13:16">2024-04-17 22:16</span>
+<span class="comment-date align-middle" title="Thu 17 Oct 2024 13:16">2024-10-17 22:16</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
@@ -400,7 +403,7 @@ https://awscli.amazonaws.com/v2/documentation/api/latest/reference/elb/set-load-
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -432,7 +435,7 @@ https://awscli.amazonaws.com/v2/documentation/api/latest/reference/elb/set-load-
 				jipark
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sat 19 Aug 2023 07:50">2023-08-19 16:50</span>
+<span class="comment-date align-middle" title="Mon 19 Feb 2024 08:50">2024-02-19 17:50</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
@@ -444,7 +447,7 @@ https://awscli.amazonaws.com/v2/documentation/api/latest/reference/elb/set-load-
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -476,7 +479,7 @@ https://awscli.amazonaws.com/v2/documentation/api/latest/reference/elb/set-load-
 				rdiaz
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sun 18 Jun 2023 09:59">2023-06-18 18:59</span>
+<span class="comment-date align-middle" title="Mon 18 Dec 2023 10:59">2023-12-18 19:59</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
@@ -488,7 +491,7 @@ https://awscli.amazonaws.com/v2/documentation/api/latest/reference/elb/set-load-
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">2</span> times
+				upvoted <span class="upvote-count">3</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -567,6 +570,6 @@ https://awscli.amazonaws.com/v2/documentation/api/latest/reference/elb/set-load-
 </script>
 <script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
 <script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
-</div>
+</meta></div>
 </body>
 </html>

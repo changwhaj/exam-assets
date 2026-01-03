@@ -3,13 +3,14 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="2023-09-26 20:53" name="refresh_date"/>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
 <meta charset="utf-8"/>
 <title>Exam AWS Certified SysOps Administrator</title>
 <!-- responsive tag -->
-<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- bootstrap v4 css -->
 <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -31,13 +32,21 @@
 <i class="fa fm fa-language fa-2x mr-2"></i>
 <a class="btn show-english" href="javascript:void(0)">English</a>
 <a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
 <span class="pagination-container ml-auto">
 <span id="page-indicator"><strong></strong></span>
-<!--p id="page-indicator"></p-->
 <span class="pagination-nav ml-4">
 <a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
-<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect">
-</select>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
 <a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
 </span>
 </span>
@@ -48,7 +57,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS Certified SysOps Administrator - Associate 주제 1 문제 281 토론</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified SysOps Administrator - Associate 시험 주제 1, 질문 281, 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified SysOps Administrator - Associate topic 1 question 281 discussion</h1>
@@ -63,21 +72,20 @@
 <!-- Question -->
 <div class="question-discussion-header">
 						
-							Amazon
-						 <a class="discussion-link">AWS 공인 SysOps 관리자 – 어소시에이트 의 시험 문제</a>
+							아마존
+						 <a class="discussion-link">AWS 공인 시스템 운영 관리자 - 어소시에이트 시험 문제</a>
 <div>
-							질문 #: 281 <br/>
-							주제 #: 1
+							문제 번호: 281 <br/>
+							주제 번호: 1
 						</div>
 </div>
 <div class="question-body mt-3 pt-3 border-top" data-id="882266">
 <p class="card-text">
 							
-								SysOps 관리자는 Amazon EC2 Auto Scaling 그룹에서 새로운 Amazon EC2 스팟 인스턴스 플릿을 프로비저닝해야 합니다. Auto Scaling 그룹은 다양한 인스턴스 유형을 사용합니다. 구성된 플릿은 시작되는 인스턴스 수에 대해 가용성이 가장 높은 풀에서 가져와야 합니다. <br/><br/>어떤 솔루션이 이러한 요구 사항을 충족합니까?
+								시스템 운영 관리자는 Amazon EC2 Auto Scaling 그룹에 새로운 Amazon EC2 스팟 인스턴스를 프로비저닝해야 합니다. 이 Auto Scaling 그룹은 다양한 인스턴스 유형을 사용하며, 구성될 인스턴스 풀은 시작되는 인스턴스 수에 대해 가용성이 가장 높은 풀에서 가져와야 합니다. <br/><br/>이러한 요구 사항을 충족하는 솔루션은 무엇일까요?
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="882266" type="application/json">[{"voted_answers": "C", "vote_count": 11, "is_most_voted": true}, {"voted_answers": "D", "vote_count": 4, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -86,7 +94,7 @@
 													A.
 												</span> 
 											
-											Auto Scaling 그룹의 최대 용량까지 스팟 인스턴스를 시작합니다.
+											스팟 인스턴스를 자동 스케일링 그룹의 최대 용량까지 시작합니다.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="B">
@@ -102,28 +110,28 @@
 											
 											용량 최적화 전략을 사용하여 스팟 인스턴스를 시작합니다.
 										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
-                최다 투표
+                가장 많은 표를 받은
             </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span> 
 											
-											스팟 인스턴스 어드바이저를 사용하면 최상의 스팟 할당 전략을 결정하는 데 도움이 됩니다.
+											스팟 인스턴스 어드바이저를 사용하여 최적의 스팟 할당 전략을 결정하십시오.
 										</li>
 </ul>
 </div>
-<a class="btn btn-primary reveal-solution" href="#">제안된 답변 표시</a>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
 <a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
 <div class="card-text question-answer bg-light white-text" style="display: none;">
-<span class="correct-answer-box"><strong>제안된 답변: </strong>
+<span class="correct-answer-box"><strong>정답: </strong>
 <span class="correct-answer">C</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="11 votes." data-toggle="tooltip" role="progressbar" style="width: 73%; display: flex;" title="">C (73%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="4 votes." data-toggle="tooltip" role="progressbar" style="width: 27%; display: flex;" title="">D (27%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
-                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">다른
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>지역사회 투표 배분</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="15 votes." data-toggle="tooltip" role="progressbar" style="width: 79%; display: flex;" title="">C (79%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="4 votes." data-toggle="tooltip" role="progressbar" style="width: 21%; display: flex;" title="">D (21%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
+                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
 <!-- / Question  -->
@@ -148,7 +156,6 @@
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="882266" type="application/json">[{"voted_answers": "C", "vote_count": 11, "is_most_voted": true}, {"voted_answers": "D", "vote_count": 4, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -193,7 +200,7 @@
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="11 votes." data-toggle="tooltip" role="progressbar" style="width: 73%; display: flex;" title="">C (73%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="4 votes." data-toggle="tooltip" role="progressbar" style="width: 27%; display: flex;" title="">D (27%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="15 votes." data-toggle="tooltip" role="progressbar" style="width: 79%; display: flex;" title="">C (79%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="4 votes." data-toggle="tooltip" role="progressbar" style="width: 21%; display: flex;" title="">D (21%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
@@ -203,7 +210,7 @@
 <a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
 <a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
 <div class="discussion-page-comments-section" data-discussion-question-id="108311" style="display: none">
-<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">코멘트</h4></div>
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
 <div class="container outer-discussion-container">
@@ -212,6 +219,53 @@
 <!-- New comment start -->
 <!-- New comment end -->
 <div class="discussion-container">
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="907578" id="comment-907578">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				rev2211
+			</h5>
+</a>
+<span class="badge badge-primary">
+				가장 많은 표를 받은<i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="2024년 5월 26일 일요일 21시 55분">2024년 5월 27일 오전 6시 55분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
+<div class="comment-content">용량 최적화 전략은 사용 가능한 스팟 용량 풀을 자동으로 분석하여 원하는 인스턴스 수를 시작할 가능성이 가장 높은 풀을 선택합니다. 스팟 인스턴스 어드바이저는 스팟 인스턴스 가격 및 중단 이력에 대한 정보를 제공할 수 있지만, 가용성이 가장 높은 풀을 선택하는 목표를 구체적으로 다루지는 않습니다. (https://aws.amazon.com/about-aws/whats-new/2019/08/new-capacity-optimized-allocation-strategy-for-provisioning-amazon-ec2-spot-instances/)</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">7</span> 번
+			 
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
 <!-- single_comment.html -->
 <div class="media comment-container" data-comment-id="1018124" id="comment-1018124">
 <a class="minimize-comment comment-toggle" href="#">
@@ -228,20 +282,23 @@
 				트윈스파크
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 9월 26일 (화) 20:53">2023-09-27 05:53</span>
+<span class="badge badge-primary">
+				최신<i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="2024년 9월 26일 목요일 20시 53분">2024년 9월 27일 오전 5시 53분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>C</strong></span></div>
-<div class="comment-content">스팟 인스턴스 어드바이저는 어드바이저입니다: https://www.cloudzero.com/blog/spot-instance-advisor 용량 최적화는 전략이므로 ASG https://docs.aws.amazon에서 인스턴스를 시작하기 위한 전략을 사용해야 합니다. com/AWSEC2/latest/UserGuide/spot-fleet-allocation-strategy.html</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
+<div class="comment-content">스팟 인스턴스 어드바이저는 어드바이저입니다. 자세한 내용은 https://www.cloudzero.com/blog/spot-instance-advisor를 참조하세요. 용량 최적화는 전략이며, ASG에서 인스턴스를 시작하려면 전략을 사용해야 합니다. 자세한 내용은 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-allocation-strategy.html을 참조하세요.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -272,64 +329,20 @@
 				노아의 방주
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 6월 21일 수요일 06:52">2023-06-21 15:52</span>
+<span class="comment-date align-middle" title="2024년 6월 21일 금요일 오전 6시 52분">2024년 6월 21일 15시 52분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>C</strong></span></div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
 <div class="comment-content">https://aws.amazon.com/blogs/compute/introducing-price-capacity-optimized-allocation-strategy-for-ec2-spot-instances/</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
-</span>
-<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
-			 
-				찬성함</span>
-<span class="comment-control-error ml-2"></span>
-</div>
-<div class="new-comment-box-container mt-2">
-</div>
-<div class="comment-replies">
-<!-- Nesting start -->
-<!-- Nesting end -->
-</div>
-</div>
-<div class="comment-ellipsis comment-toggled">
-		...
-	</div>
-</div>
-</div>
-<!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="907578" id="comment-907578">
-<a class="minimize-comment comment-toggle" href="#">
-<i class="fa fa-minus-square-o mr-2 mt-1"></i>
-</a>
-<a class="maximize-comment comment-toggle" href="#">
-<i class="fa fa-plus-square-o mr-2 mt-1"></i>
-</a>
-<div class="media-body">
-<div class="comment-head">
-<i class="fa fa-user mr-1 mt-1"></i>
-<a>
-<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				개정2211
-			</h5>
-</a>
-<span class="comment-date align-middle" title="2023년 5월 26일 금요일 21:55">2023-05-27 06:55</span>
-</div>
-<div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>C</strong></span></div>
-<div class="comment-content">용량 최적화 전략은 사용 가능한 스팟 용량 풀을 자동으로 분석하고 원하는 수의 인스턴스를 시작할 가능성이 가장 높은 풀을 선택합니다. 스팟 인스턴스 관리자는 스팟 인스턴스 가격 및 중단 내역에 대한 지침을 제공할 수 있지만 가장 가용성이 높은 풀을 선택한다는 목표를 구체적으로 다루지는 않습니다 https://aws.amazon.com/about-aws/whats-new/2019/08 /new-capacity-optimized-allocation-strategy-for-provisioning-amazon-ec2-spot-instances/</div>
-<div class="comment-control">
-<span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -357,23 +370,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				콘드라티예프민
+				콘드라티예브먼
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 5월 11일 목요일 19:33">2023-05-12 04:33</span>
+<span class="comment-date align-middle" title="2024년 5월 11일 토요일 19시 33분">2024년 5월 12일 오전 4시 33분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>C</strong></span></div>
-<div class="comment-content">https://docs.aws.amazon.com/whitepapers/latest/cost-optimization-leveraging-ec2-spot-instances/spot-best-practices.html 가격 및 용량 최적화 할당 전략을 사용하십시오. EC2 Auto Scaling 그룹의 할당 전략은 여유 용량이 있는 스팟 인스턴스 풀을 수동으로 찾을 필요 없이 목표 용량을 프로비저닝하는 데 도움이 됩니다. 가격-용량 최적화 전략은 가격이 가장 낮고 가용성이 가장 높은 스팟 인스턴스 풀에서 인스턴스를 자동으로 프로비저닝하므로 가격-용량 최적화 전략을 사용하는 것이 좋습니다. 스팟 인스턴스 용량은 최적의 용량을 갖춘 풀에서 공급되므로 스팟 인스턴스가 중단될 가능성이 줄어듭니다. 할당 전략에 대한 자세한 내용은 Amazon EC2 Auto Scaling 사용 설명서의 스팟 인스턴스를 참조하십시오.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
+<div class="comment-content">https://docs.aws.amazon.com/whitepapers/latest/cost-optimization-leveraging-ec2-spot-instances/spot-best-practices.html 가격 및 용량 최적화 할당 전략을 사용하세요. EC2 Auto Scaling 그룹의 할당 전략을 사용하면 여유 용량이 있는 스팟 인스턴스 풀을 수동으로 찾을 필요 없이 목표 용량을 프로비저닝할 수 있습니다. 가격-용량 최적화 전략을 사용하는 것이 좋습니다. 이 전략은 가용성이 가장 높고 가격이 가장 낮은 스팟 인스턴스 풀에서 인스턴스를 자동으로 프로비저닝합니다. 스팟 인스턴스 용량이 최적의 용량을 가진 풀에서 제공되므로 스팟 인스턴스 중단 가능성이 줄어듭니다. 할당 전략에 대한 자세한 내용은 Amazon EC2 Auto Scaling 사용 설명서의 스팟 인스턴스를 참조하세요.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -401,23 +414,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				우워아빠
+				우유어대디
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 5월 11일 목요일 17:22">2023-05-12 02:22</span>
+<span class="comment-date align-middle" title="2024년 5월 11일 토요일 17시 22분">2024년 5월 12일 오전 2시 22분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>D</strong></span></div>
-<div class="comment-content">팁: 다양한 인스턴스 유형에 애플리케이션을 배포하면 가용성이 더욱 향상됩니다. 여러 인스턴스 유형과 가용 영역을 더욱 쉽게 다양화할 수 있는 EC2 Auto Scaling 사용을 고려해 보세요. 중단 빈도가 낮은 인스턴스 유형으로 시작하고 애플리케이션의 유연성과 내결함성을 향상시키면 더 많은 인스턴스 유형을 추가하는 것이 좋습니다. 더 많은 팁과 요령을 보려면 모범 사례 섹션을 참조하세요. 모든 리전 및 인스턴스 유형의 평균 중단 빈도는 5% 미만입니다. 참조 링크: https://aws.amazon.com/ec2/spot/instance-advisor/</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>D</strong></span></div>
+<div class="comment-content">팁: 여러 인스턴스 유형에 애플리케이션을 배포하면 가용성이 더욱 향상됩니다. EC2 자동 스케일링을 활용하면 여러 인스턴스 유형과 가용 영역에 걸쳐 분산 배포가 더욱 쉬워집니다. 중단 빈도가 낮은 인스턴스 유형부터 시작하여 애플리케이션의 유연성과 내결함성을 개선함에 따라 인스턴스 유형을 추가하는 것이 좋습니다. 더 자세한 팁과 요령은 모범 사례 섹션을 참조하세요. 모든 리전과 인스턴스 유형을 포함한 평균 중단 빈도는 5% 미만입니다. 참고 링크: https://aws.amazon.com/ec2/spot/instance-advisor/</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -448,19 +461,19 @@
 				tts1234
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 5월 2일 화요일 21:06">2023-05-03 06:06</span>
+<span class="comment-date align-middle" title="2024년 5월 2일 목요일 21시 06분">2024년 5월 3일 오전 6시 6분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">C가 정확합니다 https://aws.amazon.com/about-aws/whats-new/2019/08/new-capacity-optimized-allocation-strategy-for-provisioning-amazon-ec2-spot-instances/</div>
+<div class="comment-content">C가 정답입니다. https://aws.amazon.com/about-aws/whats-new/2019/08/new-capacity-optimized-allocation-strategy-for-provisioning-amazon-ec2-spot-instances/</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -488,23 +501,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				고멜
+				고머
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 5월 2일 화요일 19:53">2023-05-03 04:53</span>
+<span class="comment-date align-middle" title="2024년 5월 2일 목요일 오후 7시 53분">2024년 5월 3일 오전 4시 53분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>D</strong></span></div>
-<div class="comment-content">"스팟 인스턴스 어드바이저는 중단 가능성이 가장 적은 풀을 결정하는 데 도움을 주며 온디맨드 요금에 비해 비용 절감 효과를 제공합니다." https://aws.amazon.com/ec2/spot/instance-advisor/</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>D</strong></span></div>
+<div class="comment-content">"스팟 인스턴스 어드바이저는 중단 가능성이 가장 낮은 풀을 파악하고 온디맨드 요금 대비 비용 절감 효과를 제공합니다." https://aws.amazon.com/ec2/spot/instance-advisor/</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -524,22 +537,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				고멜
+				고머
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 5월 23일 (화) 20:42">2023-05-24 05:42</span>
+<span class="comment-date align-middle" title="2024년 5월 23일 목요일 오후 8시 42분">2024년 5월 24일 오전 5시 42분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">내 대답을 명확히하고 싶습니다. 이것을 다시 살펴본 후 "C"와 "D"가 모두 정확할 수 있다는 결론을 내려야 하며 유일한 기준은 가용성이 가장 높은 풀을 사용하는 것이기 때문에 "C"쪽으로 기울고 있습니다. 비용이 더 많이 듭니다). 용량 최적화: "엄격하게 가장 깊은 풀을 선택하지만 때로는 용량이 약간 적은 저렴한 풀이 있는 경우에도 고가의 풀을 선택할 수 있습니다." https://aws.amazon.com/blogs/compute/introducing- 가격-용량-최적화-할당-전략-ec2-스팟-인스턴스/</div>
+<div class="comment-content">제 답변을 좀 더 명확히 설명드리겠습니다. 다시 살펴보니 "C"와 "D" 모두 정답일 수 있다고 생각하며, "C"에 더 무게를 두고 있습니다. 왜냐하면 유일한 기준이 가용성이 가장 높은 풀을 사용하는 것이기 때문입니다(비용이 더 많이 들더라도). 용량 최적화(Capacity-Optimized)는 "가장 용량이 큰 풀을 엄격하게 선택하지만, 용량이 약간 더 적은 저렴한 풀이 있는 경우에도 가격이 높은 풀을 선택할 수 있습니다." (https://aws.amazon.com/blogs/compute/introducing-price-capacity-optimized-allocation-strategy-for-ec2-spot-instances/)</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -583,6 +596,56 @@
 <!-- New comment end -->
 <div class="discussion-container">
 <!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="907578" id="comment-907578">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				rev2211
+			</h5>
+</a>
+<span class="badge badge-primary">
+				Highly Voted <i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="Sun 26 May 2024 21:55">2024-05-27 06:55</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
+<div class="comment-content">capacity-optimized strategy automatically analyzes the available Spot capacity pools and selects the pool that provides the highest chance of launching the desired number of instances.
+Spot Instance Advisor can provide guidance on Spot instance pricing and interruption history, but it does not specifically address the goal of selecting pools with the most availabilit
+
+https://aws.amazon.com/about-aws/whats-new/2019/08/new-capacity-optimized-allocation-strategy-for-provisioning-amazon-ec2-spot-instances/</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">7</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
 <div class="media comment-container" data-comment-id="1018124" id="comment-1018124">
 <a class="minimize-comment comment-toggle" href="#">
 <i class="fa fa-minus-square-o mr-2 mt-1"></i>
@@ -598,7 +661,10 @@
 				TwinSpark
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Tue 26 Sep 2023 20:53">2023-09-27 05:53</span>
+<span class="badge badge-primary">
+				Most Recent <i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="Thu 26 Sep 2024 20:53">2024-09-27 05:53</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
@@ -645,58 +711,11 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-allocation-strate
 				noahsark
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Wed 21 Jun 2023 06:52">2023-06-21 15:52</span>
+<span class="comment-date align-middle" title="Fri 21 Jun 2024 06:52">2024-06-21 15:52</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
 <div class="comment-content">https://aws.amazon.com/blogs/compute/introducing-price-capacity-optimized-allocation-strategy-for-ec2-spot-instances/</div>
-<div class="comment-control">
-<span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
-</span>
-<span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">3</span> times
-			</span>
-<span class="comment-control-error ml-2"></span>
-</div>
-<div class="new-comment-box-container mt-2">
-</div>
-<div class="comment-replies">
-<!-- Nesting start -->
-<!-- Nesting end -->
-</div>
-</div>
-<div class="comment-ellipsis comment-toggled">
-		...
-	</div>
-</div>
-</div>
-<!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="907578" id="comment-907578">
-<a class="minimize-comment comment-toggle" href="#">
-<i class="fa fa-minus-square-o mr-2 mt-1"></i>
-</a>
-<a class="maximize-comment comment-toggle" href="#">
-<i class="fa fa-plus-square-o mr-2 mt-1"></i>
-</a>
-<div class="media-body">
-<div class="comment-head">
-<i class="fa fa-user mr-1 mt-1"></i>
-<a>
-<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				rev2211
-			</h5>
-</a>
-<span class="comment-date align-middle" title="Fri 26 May 2023 21:55">2023-05-27 06:55</span>
-</div>
-<div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
-<div class="comment-content">capacity-optimized strategy automatically analyzes the available Spot capacity pools and selects the pool that provides the highest chance of launching the desired number of instances.
-Spot Instance Advisor can provide guidance on Spot instance pricing and interruption history, but it does not specifically address the goal of selecting pools with the most availabilit
-
-https://aws.amazon.com/about-aws/whats-new/2019/08/new-capacity-optimized-allocation-strategy-for-provisioning-amazon-ec2-spot-instances/</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
@@ -736,7 +755,7 @@ https://aws.amazon.com/about-aws/whats-new/2019/08/new-capacity-optimized-alloca
 				kondratyevmn
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Thu 11 May 2023 19:33">2023-05-12 04:33</span>
+<span class="comment-date align-middle" title="Sat 11 May 2024 19:33">2024-05-12 04:33</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
@@ -782,7 +801,7 @@ Use the price and capacity optimized allocation strategy. Allocation strategies 
 				wooyourdaddy
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Thu 11 May 2023 17:22">2023-05-12 02:22</span>
+<span class="comment-date align-middle" title="Sat 11 May 2024 17:22">2024-05-12 02:22</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>D</strong></span></div>
@@ -832,7 +851,7 @@ Ref link: https://aws.amazon.com/ec2/spot/instance-advisor/</div>
 				tts1234
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Tue 02 May 2023 21:06">2023-05-03 06:06</span>
+<span class="comment-date align-middle" title="Thu 02 May 2024 21:06">2024-05-03 06:06</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">C is correct
@@ -876,7 +895,7 @@ Ref link: https://aws.amazon.com/ec2/spot/instance-advisor/</div>
 				Gomer
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Tue 02 May 2023 19:53">2023-05-03 04:53</span>
+<span class="comment-date align-middle" title="Thu 02 May 2024 19:53">2024-05-03 04:53</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>D</strong></span></div>
@@ -913,7 +932,7 @@ https://aws.amazon.com/ec2/spot/instance-advisor/</div>
 				Gomer
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Tue 23 May 2023 20:42">2023-05-24 05:42</span>
+<span class="comment-date align-middle" title="Thu 23 May 2024 20:42">2024-05-24 05:42</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">I'd like to clarify my answer.  After looking at this again, I'd have to conclude that both "C" and "D" could be correct, and I'm leaning towards "C" just because the ONLY criteria is to use pools with the most availability (even if they cost more).
@@ -926,7 +945,7 @@ https://aws.amazon.com/blogs/compute/introducing-price-capacity-optimized-alloca
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">2</span> times
+				upvoted <span class="upvote-count">3</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -967,7 +986,7 @@ https://aws.amazon.com/blogs/compute/introducing-price-capacity-optimized-alloca
 <i class="fa fa-angle-up"></i>
 </div>
 <!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="../../../js/popper.min.js"></script>
 <!-- jquery latest version -->
 <script src="../../../js/jquery.min.js"></script>
 <!-- bootstrap js -->
@@ -978,8 +997,6 @@ https://aws.amazon.com/blogs/compute/introducing-price-capacity-optimized-alloca
 <script src="../../../js/wow.min.js"></script>
 <!-- main js -->
 <script src="../../../js/main.js"></script>
-<script async="" defer="" src="../../../js/bootstrap3-typeahead.min.js">
-</script>
 <script type="text/javascript">
     // Activate tooltips
     $(function () {
@@ -1006,39 +1023,6 @@ https://aws.amazon.com/blogs/compute/introducing-price-capacity-optimized-alloca
         $('img[defsrc]').each(function() {
             $(this).attr('src',$(this).attr('defsrc'));
         });
-
-
-        function delayedStart() {
-            // Typeahead start
-
-            // Register typeahead element:
-            $('#header-keyword-search, #modal-keyword-search').typeahead({
-                source: autoCompleteQuery,
-                autoSelect: true,
-                delay: 150,
-                selectOnBlur: false,
-                afterSelect: function(param) {$(this.$element).closest('form').submit()}
-            });
-
-            // Query ajax function:
-            function autoCompleteQuery(query, callback) {
-                return $.get("/ajax/autocomplete/suggestions/?query=" + query).done(callback);
-            }
-            // Typeahead end
-        }
-        setTimeout(delayedStart, 1500);
-
-        // Don't submit empty search query
-        $('#modal-keyword-search-form').submit(function() {
-            if (!$('#modal-keyword-search').val()) {
-                return false;
-            }
-        });
-
-        // Auto focus on search box when search-modal is opened
-        $('.search-modal').on('shown.bs.modal', function (e) {
-            $(this).find('input[type=text]').focus();
-        });
     });
 </script>
 <script type="text/javascript">
@@ -1048,6 +1032,6 @@ https://aws.amazon.com/blogs/compute/introducing-price-capacity-optimized-alloca
 </script>
 <script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
 <script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
-</div>
+</meta></div>
 </body>
 </html>

@@ -7,21 +7,29 @@ var questionDetails = {
     'CISM-Q': { qLength: 1152, qDirectory: 'isaca/CISM' },
     'CISA-Q': { qLength: 1511, qDirectory: 'isaca/CISA' },
 
-    'ANS-Q': { qLength: 272, qDirectory: 'aws/ANS_C01' },
+    // Foundational 자격증
+    'AIF-Q': { qLength: 334, qDirectory: 'aws/AIF' },
     'CLF2-Q': { qLength: 719, qDirectory: 'aws/CLF_C02' },
-    'DAS-Q': { qLength: 164, qDirectory: 'aws/DAS_C01' },
-    'DBS-Q': { qLength: 359, qDirectory: 'aws/DBS' },
+
+    // Associate 자격증
+    // 'SAA2-Q': { qLength: 822, qDirectory: 'aws/SAA_C02' },
+    'SAA3-Q': { qLength: 1019, qDirectory: 'aws/SAA_C03' },
+    'MLA-Q': { qLength: 145, qDirectory: 'aws/MLA_C01' },
+    // 'DVA-Q': { qLength: 443, qDirectory: 'aws/DVA' },
     'DVA2-Q': { qLength: 557, qDirectory: 'aws/DVA_C02' },
+    'DEA-Q': { qLength: 261, qDirectory: 'aws/DEA_C01' },
+    'SOA2-Q': { qLength: 478, qDirectory: 'aws/SOA_C02' },
+    'SOA3-Q': { qLength: 65, qDirectory: 'aws/SOA_C03' },
+
+    // Professional 자격증
     'DOP2-Q': { qLength: 390, qDirectory: 'aws/DOP_C02' },
+    // 'SAP-Q': { qLength: 1019, qDirectory: 'aws/SAP' },
+    'SAP2-Q': { qLength: 529, qDirectory: 'aws/SAP_C02' },
+
+    // Specialty 자격증
     'MLS-Q': { qLength: 369, qDirectory: 'aws/MLS_C01' },
     'SCS2-Q': { qLength: 307, qDirectory: 'aws/SCS_C02' },
-    'SAA3-Q': { qLength: 1019, qDirectory: 'aws/SAA_C03' },
-    'SAP2-Q': { qLength: 529, qDirectory: 'aws/SAP_C02' },
-    'SOA2-Q': { qLength: 478, qDirectory: 'aws/SOA_C02' },
-
-    'DVA-Q': { qLength: 443, qDirectory: 'aws/DVA' },
-    'SAA2-Q': { qLength: 822, qDirectory: 'aws/SAA_C02' },
-    'SAP-Q': { qLength: 1019, qDirectory: 'aws/SAP' },
+    'ANS-Q': { qLength: 272, qDirectory: 'aws/ANS_C01' },
 
     'AZ104-Q': { qLength: 606, qDirectory: 'microsoft/AZ104' },
     'AZ305-Q': { qLength: 286, qDirectory: 'microsoft/AZ305' },

@@ -3,13 +3,14 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="2023-08-31 15:18" name="refresh_date"/>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
 <meta charset="utf-8"/>
 <title>Exam AWS Certified SysOps Administrator</title>
 <!-- responsive tag -->
-<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- bootstrap v4 css -->
 <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -24,23 +25,29 @@
 <!-- responsive css -->
 <link href="../../../css/responsive.css" rel="stylesheet" type="text/css"/>
 <link href="../../../css/forum.css" rel="stylesheet" type="text/css"/>
-<style>
-</style>
 <div class="sec-spacer pt-20">
 <div class="container">
 <div class="container action-row-container border-0 p-0 mb-2">
 <div class="container action-row clearfix d-flex">
 <i class="fa fm fa-language fa-2x mr-2"></i>
-<a class="btn show-english" href="#">English</a>
-<a class="btn show-korean d-none" href="#">한국어</a>
+<a class="btn show-english" href="javascript:void(0)">English</a>
+<a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
 <span class="pagination-container ml-auto">
 <span id="page-indicator"><strong></strong></span>
-<!--p id="page-indicator"></p-->
 <span class="pagination-nav ml-4">
-<a class="btn btn-sm" href="#" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
-<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect">
-</select>
-<a class="btn btn-sm" href="#" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
+<a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
+<a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
 </span>
 </span>
 </div>
@@ -50,7 +57,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS Certified SysOps Administrator - Associate 주제 1 문제 327 토론</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified SysOps Administrator - Associate 시험 주제 1 문제 327 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified SysOps Administrator - Associate topic 1 question 327 discussion</h1>
@@ -65,21 +72,20 @@
 <!-- Question -->
 <div class="question-discussion-header">
 						
-							Amazon
-						 <a class="discussion-link">AWS 공인 SysOps 관리자 – 어소시에이트 의 시험 문제</a>
+							아마존
+						 <a class="discussion-link">AWS 공인 시스템 운영 관리자 - 어소시에이트 시험 문제</a>
 <div>
-							질문 #: 327 <br/>
-							주제 #: 1
+							문제 번호: 327 <br/>
+							주제 번호: 1
 						</div>
 </div>
 <div class="question-body mt-3 pt-3 border-top" data-id="884340">
 <p class="card-text">
 							
-								회사에는 예약된 AWS Lambda 함수를 사용하여 인터넷을 통해 외부 소스에서 데이터 세트를 검색하는 애플리케이션이 있습니다. 함수는 VPC와 연결되어 있지 않습니다. 회사는 Lambda 함수가 프라이빗 서브넷의 Amazon RDS DB 인스턴스에서 검색하는 정보를 저장하도록 애플리케이션을 수정하고 있습니다. VPC에는 퍼블릭 서브넷 2개와 프라이빗 서브넷 2개가 있습니다. <br/><br/>SysOps 관리자는 Lambda 함수가 새 데이터베이스에 액세스하고 인터넷에 계속 액세스할 수 있도록 하는 솔루션을 배포해야 합니다. <br/><br/>이러한 요구 사항을 충족하는 솔루션은 무엇입니까?
+								한 회사가 AWS Lambda 함수를 예약 실행하여 인터넷을 통해 외부 소스에서 데이터 세트를 가져오는 애플리케이션을 운영하고 있습니다. 이 함수는 VPC에 연결되어 있지 않습니다. 회사는 Lambda 함수가 가져온 정보를 프라이빗 서브넷에 있는 Amazon RDS DB 인스턴스에 저장하도록 애플리케이션을 수정하고 있습니다. 해당 VPC에는 두 개의 퍼블릭 서브넷과 두 개의 프라이빗 서브넷이 있습니다. <br/><br/>시스템 운영 관리자는 Lambda 함수가 새 데이터베이스에 액세스하면서도 인터넷에 계속 액세스할 수 있도록 하는 솔루션을 배포해야 합니다. <br/><br/>이러한 요구 사항을 충족하는 솔루션은 무엇일까요?
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="884340" type="application/json">[{"voted_answers": "C", "vote_count": 3, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -88,44 +94,45 @@
 													A.
 												</span> 
 											
-											VPC 액세스 및 탄력적 IP 주소를 사용하여 새로운 Lambda 함수를 생성합니다. 2개의 가용 영역에 있는 퍼블릭 서브넷에 기능을 연결합니다. 보안 그룹을 탄력적 IP 주소와 연결합니다. Lambda가 필요한 리소스에 액세스할 수 있도록 보안 그룹 아웃바운드 규칙을 구성합니다.
+											VPC 액세스 권한과 탄력적 IP 주소를 사용하여 새 Lambda 함수를 생성합니다. 해당 함수를 두 개의 가용 영역에 있는 공용 서브넷에 연결합니다. 탄력적 IP 주소에 보안 그룹을 연결합니다. Lambda 함수가 필요한 리소스에 액세스할 수 있도록 보안 그룹의 아웃바운드 규칙을 구성합니다.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
 												</span> 
 											
-											VPC 액세스와 두 개의 퍼블릭 IP 주소를 사용하여 새로운 Lambda 함수를 생성합니다. 데이터베이스가 사용하는 것과 동일한 가용 영역의 퍼블릭 서브넷에 함수를 연결합니다. 보안 그룹을 기능과 연결합니다. Lambda가 필요한 리소스에 액세스할 수 있도록 보안 그룹 인바운드 규칙을 구성합니다.
+											VPC 액세스 권한과 두 개의 공용 IP 주소를 가진 새 Lambda 함수를 생성합니다. 데이터베이스에서 사용하는 것과 동일한 가용 영역의 공용 서브넷에 함수를 연결합니다. 함수에 보안 그룹을 연결합니다. Lambda가 필요한 리소스에 액세스할 수 있도록 보안 그룹의 인바운드 규칙을 구성합니다.
 										</li>
 <li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span> 
 											
-											VPC 액세스를 위해 Lambda 함수를 재구성합니다. NAT 게이트웨이를 통해 인터넷으로 라우팅하려면 프라이빗 서브넷의 VPAdd 라우팅 테이블 항목에서 퍼블릭 서브넷에 NAT 게이트웨이를 추가합니다. 데이터베이스를 지원하는 프라이빗 서브넷에 함수를 연결합니다. 보안 그룹을 기능과 연결합니다. Lambda가 인터넷에 액세스할 수 있도록 보안 그룹 아웃바운드 규칙을 구성합니다.
-										</li>
+											VPC 액세스를 위해 Lambda 함수를 재구성합니다. VPC의 공용 서브넷에 NAT 게이트웨이를 추가하고, 프라이빗 서브넷의 라우팅 테이블에 NAT 게이트웨이를 통해 인터넷으로 라우팅하는 항목을 추가합니다. 데이터베이스를 지원하는 프라이빗 서브넷에 함수를 연결하고, 함수에 보안 그룹을 연결합니다. Lambda가 인터넷에 액세스할 수 있도록 보안 그룹의 아웃바운드 규칙을 구성합니다.
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                가장 많은 표를 받은
+            </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span> 
 											
-											VPC 액세스를 위해 Lambda 함수를 재구성합니다. 프라이빗 서브넷에 함수를 연결합니다. 인터넷 게이트웨이를 통해 인터넷으로 라우팅하려면 프라이빗 서브넷에 라우팅 테이블 항목을 추가합니다. 보안 그룹을 서브넷과 연결합니다. Lambda가 인터넷 게이트웨이를 통해 필요한 리소스에 액세스할 수 있도록 보안 그룹 인바운드 규칙을 구성합니다.
+											Lambda 함수가 VPC에 액세스할 수 있도록 재구성합니다. 함수를 프라이빗 서브넷에 연결합니다. 프라이빗 서브넷의 라우팅 테이블에 인터넷 게이트웨이를 통해 인터넷으로 라우팅하는 항목을 추가합니다. 서브넷에 보안 그룹을 연결합니다. Lambda가 인터넷 게이트웨이를 통해 필요한 리소스에 액세스할 수 있도록 보안 그룹의 인바운드 규칙을 구성합니다.
 										</li>
 </ul>
 </div>
-<a class="btn btn-primary reveal-solution" href="#">제안된 답변 표시</a>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
 <a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
 <div class="card-text question-answer bg-light white-text" style="display: none;">
-<span class="correct-answer-box"><strong>추천 답변: </strong>
-<span class="correct-answer">C </span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
+<span class="correct-answer-box"><strong>정답: </strong>
+<span class="correct-answer">C</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="3 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">C (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>지역사회 투표 배분</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="8 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">C (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
-                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">다른
+                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
 <!-- / Question  -->
@@ -150,7 +157,6 @@
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="884340" type="application/json">[{"voted_answers": "C", "vote_count": 3, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -174,7 +180,9 @@
 												</span>
 											
 											Reconfigure the Lambda function for VPC access. Add NAT gateways to the public subnets in the VPAdd route table entries in the private subnets to route through the NAT gateways to the internet. Attach the function to the private subnets that support the database. Associate a security group with the function. Configure the security group outbound rules to allow Lambda to access the internet.
-										</li>
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                Most Voted
+            </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
@@ -189,12 +197,11 @@
 <div class="card-text question-answer bg-light white-text">
 <span class="correct-answer-box"><strong>Suggested Answer:</strong>
 <span class="correct-answer">C</span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="3 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">C (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="8 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">C (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
@@ -202,10 +209,10 @@
 <!-- / Question  -->
 </div>
 <div class="comments-wrapper">
-<a class="badge reveal-comment" href="#">댓글 표시</a>
-<a class="badge hide-comment d-none" href="#">댓글 숨기기</a>
+<a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
 <div class="discussion-page-comments-section" data-discussion-question-id="114096" style="display: none">
-<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">코멘트</h4></div>
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
 <div class="container outer-discussion-container">
@@ -230,22 +237,20 @@
 				하브로스
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 8월 31일 목요일 15:18">
-			1일 13시간 전
-		</span>
+<span class="comment-date align-middle" title="2024년 8월 31일 토요일 15시 18분">2024년 9월 1일 00시 18분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>C</strong></span></div>
-<div class="comment-content">유일한 올바른 대답은 C입니다. 예. VPC를 연결할 때마다 Lambda 함수를 재구성할 필요가 없습니다. 따라서 A와 B는 아웃이다. 이미 제한된 공용 IPv4 주소가 있으므로 비용 효율적인 방법은 NAT 게이트웨이/인스턴스를 사용하는 것입니다(사실 이것이 유일한 옵션입니다). 따라서 D도 아웃이다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
+<div class="comment-content">유일하게 합리적인 답은 C입니다. 네, VPC에 연결할 때마다 Lambda 함수를 재구성할 필요는 없습니다. 따라서 A와 B는 답이 아닙니다. 공용 IPv4 주소는 이미 제한적이기 때문에 비용 효율적인 방법은 NAT 게이트웨이/인스턴스를 사용하는 것이며, 사실상 유일한 선택지입니다. 따라서 D도 답이 아닙니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -276,67 +281,20 @@
 				브리노
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 8월 24일 (목) 21:33">
-			1주, 1일 전
-		</span>
+<span class="comment-date align-middle" title="2024년 8월 24일 토요일 21시 33분">2024년 8월 25일 오전 6시 33분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>C</strong></span></div>
-<div class="comment-content">C가 맞습니다. 질문에서 인터넷에 액세스해야 하는 프라이빗 서브넷에 대해 언급하는 경우 대부분의 경우 대답은 Nat 게이트웨이/인스턴스가 됩니다(게이트웨이가 옵션이 아닌 경우 NAT 인스턴스가 작동함).</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
+<div class="comment-content">C가 정답입니다. 힌트를 드리자면, 문제에서 사설 서브넷이 인터넷에 접속해야 한다는 내용이 나오면 대부분 NAT 게이트웨이/인스턴스가 답입니다(게이트웨이가 선택 사항이 아니면 NAT 인스턴스를 사용하면 됩니다).</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
-<span class="comment-control-error ml-2"></span>
-</div>
-<div class="new-comment-box-container mt-2">
-</div>
-<div class="comment-replies">
-<!-- Nesting start -->
-<!-- Nesting end -->
-</div>
-</div>
-<div class="comment-ellipsis comment-toggled">
-		...
-	</div>
-</div>
-</div>
-<!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="947612" id="comment-947612">
-<a class="minimize-comment comment-toggle" href="#">
-<i class="fa fa-minus-square-o mr-2 mt-1"></i>
-</a>
-<a class="maximize-comment comment-toggle" href="#">
-<i class="fa fa-plus-square-o mr-2 mt-1"></i>
-</a>
-<div class="media-body">
-<div class="comment-head">
-<i class="fa fa-user mr-1 mt-1"></i>
-<a>
-<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				닉네임20202324
-			</h5>
-</a>
-<span class="comment-date align-middle" title="2023년 7월 10일 (월) 02:13">
-			1개월, 3주 전
-		</span>
-</div>
-<div class="comment-body comment-toggled">
-<div class="comment-content">C가 맞아요</div>
-<div class="comment-control">
-<span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
-</span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
-			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -367,22 +325,20 @@
 				jlmadvig
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 4일 화요일 17:16">
-			1개월, 4주 전
-		</span>
+<span class="comment-date align-middle" title="2024년 7월 4일 목요일 오후 5시 16분">2024년 7월 5일 오전 2시 16분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>C</strong></span></div>
-<div class="comment-content">정답은 C입니다. Lambda 함수는 인터넷에 액세스하면서 프라이빗 서브넷의 Amazon RDS DB 인스턴스에 액세스해야 하므로 VPC 내에서 실행되도록 구성해야 합니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
+<div class="comment-content">정답은 C입니다. Lambda 함수는 인터넷에 접속하면서도 프라이빗 서브넷에 있는 Amazon RDS DB 인스턴스에 접근해야 하므로 VPC 내에서 실행되도록 구성해야 합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -405,8 +361,8 @@
 </div>
 </div>
 <div class="comments-wrapper-en" style="display: none;">
-<a class="badge reveal-comment" href="#">Show Comments</a>
-<a class="badge hide-comment d-none" href="#">Hide Comments</a>
+<a class="badge reveal-comment" href="javascript:void(0)">Show Comments</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">Hide Comments</a>
 <div class="discussion-page-comments-section-en" data-discussion-question-id="114096" style="display: none">
 <div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">Comments</h4></div>
 <!-- discussion.html -->
@@ -433,9 +389,7 @@
 				habros
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Thu 31 Aug 2023 15:18">
-			1 day, 13 hours ago
-		</span>
+<span class="comment-date align-middle" title="Sat 31 Aug 2024 15:18">2024-09-01 00:18</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
@@ -449,7 +403,7 @@ There are already limited Public IPv4 addresses out there, hence the cost effect
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">3</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -481,9 +435,7 @@ There are already limited Public IPv4 addresses out there, hence the cost effect
 				Bhrino
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Thu 24 Aug 2023 21:33">
-			1 week, 1 day ago
-		</span>
+<span class="comment-date align-middle" title="Sat 24 Aug 2024 21:33">2024-08-25 06:33</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
@@ -495,52 +447,7 @@ There are already limited Public IPv4 addresses out there, hence the cost effect
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
-			</span>
-<span class="comment-control-error ml-2"></span>
-</div>
-<div class="new-comment-box-container mt-2">
-</div>
-<div class="comment-replies">
-<!-- Nesting start -->
-<!-- Nesting end -->
-</div>
-</div>
-<div class="comment-ellipsis comment-toggled">
-		...
-	</div>
-</div>
-</div>
-<!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="947612" id="comment-947612">
-<a class="minimize-comment comment-toggle" href="#">
-<i class="fa fa-minus-square-o mr-2 mt-1"></i>
-</a>
-<a class="maximize-comment comment-toggle" href="#">
-<i class="fa fa-plus-square-o mr-2 mt-1"></i>
-</a>
-<div class="media-body">
-<div class="comment-head">
-<i class="fa fa-user mr-1 mt-1"></i>
-<a>
-<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				nickname20202324
-			</h5>
-</a>
-<span class="comment-date align-middle" title="Mon 10 Jul 2023 02:13">
-			1 month, 3 weeks ago
-		</span>
-</div>
-<div class="comment-body comment-toggled">
-<div class="comment-content">C is correct</div>
-<div class="comment-control">
-<span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
-</span>
-<span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">3</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -572,9 +479,7 @@ There are already limited Public IPv4 addresses out there, hence the cost effect
 				jlmadvig
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Tue 04 Jul 2023 17:16">
-			1 month, 4 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Thu 04 Jul 2024 17:16">2024-07-05 02:16</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
@@ -587,7 +492,7 @@ Since the Lambda function needs to access the Amazon RDS DB instance in a privat
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -620,7 +525,7 @@ Since the Lambda function needs to access the Amazon RDS DB instance in a privat
 <i class="fa fa-angle-up"></i>
 </div>
 <!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="../../../js/popper.min.js"></script>
 <!-- jquery latest version -->
 <script src="../../../js/jquery.min.js"></script>
 <!-- bootstrap js -->
@@ -631,8 +536,6 @@ Since the Lambda function needs to access the Amazon RDS DB instance in a privat
 <script src="../../../js/wow.min.js"></script>
 <!-- main js -->
 <script src="../../../js/main.js"></script>
-<script async="" defer="" src="../../../js/bootstrap3-typeahead.min.js">
-</script>
 <script type="text/javascript">
     // Activate tooltips
     $(function () {
@@ -659,39 +562,6 @@ Since the Lambda function needs to access the Amazon RDS DB instance in a privat
         $('img[defsrc]').each(function() {
             $(this).attr('src',$(this).attr('defsrc'));
         });
-
-
-        function delayedStart() {
-            // Typeahead start
-
-            // Register typeahead element:
-            $('#header-keyword-search, #modal-keyword-search').typeahead({
-                source: autoCompleteQuery,
-                autoSelect: true,
-                delay: 150,
-                selectOnBlur: false,
-                afterSelect: function(param) {$(this.$element).closest('form').submit()}
-            });
-
-            // Query ajax function:
-            function autoCompleteQuery(query, callback) {
-                return $.get("/ajax/autocomplete/suggestions/?query=" + query).done(callback);
-            }
-            // Typeahead end
-        }
-        setTimeout(delayedStart, 1500);
-
-        // Don't submit empty search query
-        $('#modal-keyword-search-form').submit(function() {
-            if (!$('#modal-keyword-search').val()) {
-                return false;
-            }
-        });
-
-        // Auto focus on search box when search-modal is opened
-        $('.search-modal').on('shown.bs.modal', function (e) {
-            $(this).find('input[type=text]').focus();
-        });
     });
 </script>
 <script type="text/javascript">
@@ -701,6 +571,6 @@ Since the Lambda function needs to access the Amazon RDS DB instance in a privat
 </script>
 <script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
 <script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
-</div>
+</meta></div>
 </body>
 </html>

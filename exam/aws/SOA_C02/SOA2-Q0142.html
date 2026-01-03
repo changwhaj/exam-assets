@@ -3,13 +3,14 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="2023-08-08 16:43" name="refresh_date"/>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
 <meta charset="utf-8"/>
 <title>Exam AWS Certified SysOps Administrator</title>
 <!-- responsive tag -->
-<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- bootstrap v4 css -->
 <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -24,23 +25,29 @@
 <!-- responsive css -->
 <link href="../../../css/responsive.css" rel="stylesheet" type="text/css"/>
 <link href="../../../css/forum.css" rel="stylesheet" type="text/css"/>
-<style>
-</style>
 <div class="sec-spacer pt-20">
 <div class="container">
 <div class="container action-row-container border-0 p-0 mb-2">
 <div class="container action-row clearfix d-flex">
 <i class="fa fm fa-language fa-2x mr-2"></i>
-<a class="btn show-english" href="#">English</a>
-<a class="btn show-korean d-none" href="#">한국어</a>
+<a class="btn show-english" href="javascript:void(0)">English</a>
+<a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
 <span class="pagination-container ml-auto">
 <span id="page-indicator"><strong></strong></span>
-<!--p id="page-indicator"></p-->
 <span class="pagination-nav ml-4">
-<a class="btn btn-sm" href="#" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
-<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect">
-</select>
-<a class="btn btn-sm" href="#" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
+<a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
+<a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
 </span>
 </span>
 </div>
@@ -50,7 +57,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS 공인 SysOps 관리자 - 어소시에이트 주제 1 문제 142 토론</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified SysOps Administrator - Associate 시험 주제 1, 질문 142, 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified SysOps Administrator - Associate topic 1 question 142 discussion</h1>
@@ -65,21 +72,20 @@
 <!-- Question -->
 <div class="question-discussion-header">
 						
-							Amazon
-						 <a class="discussion-link">AWS 공인 SysOps 관리자 – 어소시에이트 의 시험 문제</a>
+							아마존
+						 <a class="discussion-link">AWS 공인 시스템 운영 관리자 - 어소시에이트 시험 문제</a>
 <div>
-							질문 #: 142 <br/>
-							주제 #: 1
+							문제 번호: 142 <br/>
+							주제 번호: 1
 						</div>
 </div>
 <div class="question-body mt-3 pt-3 border-top" data-id="847149">
 <p class="card-text">
 							
-								SysOps 관리자는 Amazon RDS 데이터베이스 자격 증명에 대한 자동 교체를 구성해야 합니다. 자격 증명은 30일마다 교체되어야 합니다. 솔루션은 Amazon RDS와 통합되어야 합니다. <br/><br/>최소한의 운영 오버헤드로 이러한 요구 사항을 충족하는 솔루션은 무엇입니까?
+								시스템 운영 관리자는 Amazon RDS 데이터베이스 자격 증명에 대한 자동 갱신을 구성해야 합니다. 자격 증명은 30일마다 갱신되어야 하며, Amazon RDS와 통합되어야 합니다. <br/><br/>이러한 요구 사항을 충족하면서 운영 오버헤드를 최소화하는 솔루션은 무엇일까요?
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="847149" type="application/json">[{"voted_answers": "B", "vote_count": 7, "is_most_voted": true}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -88,46 +94,45 @@
 													A.
 												</span> 
 											
-											AWS Systems Manager Parameter Store에 자격 증명을 보안 문자열로 저장합니다. 30일의 교체 간격으로 자동 교체를 구성합니다.
+											자격 증명을 AWS Systems Manager 파라미터 스토어에 보안 문자열로 저장합니다. 30일 간격으로 자동 자격 증명 순환을 구성합니다.
 										</li>
 <li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
 												</span> 
 											
-											AWS Secrets Manager에 자격 증명을 저장합니다. 30일의 교체 간격으로 자동 교체를 구성합니다.
+											자격 증명을 AWS Secrets Manager에 저장합니다. 30일 간격으로 자동 자격 증명 순환을 구성합니다.
 										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
-                최다 투표
+                가장 많은 표를 받은
             </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span> 
 											
-											Amazon S3 버킷의 파일에 자격 증명을 저장합니다. 30일마다 자격 증명을 자동으로 교체하는 AWS Lambda 함수를 배포합니다.
+											자격 증명을 Amazon S3 버킷의 파일에 저장합니다. AWS Lambda 함수를 배포하여 30일마다 자격 증명을 자동으로 갱신합니다.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span> 
 											
-											AWS Secrets Manager에 자격 증명을 저장합니다. 30일마다 자격 증명을 자동으로 교체하는 AWS Lambda 함수를 배포합니다.
+											자격 증명을 AWS Secrets Manager에 저장합니다. AWS Lambda 함수를 배포하여 30일마다 자격 증명을 자동으로 갱신합니다.
 										</li>
 </ul>
 </div>
-<a class="btn btn-primary reveal-solution" href="#">제안된 답변 표시</a>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
 <a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
 <div class="card-text question-answer bg-light white-text" style="display: none;">
-<span class="correct-answer-box"><strong>추천 답변: </strong>
-<span class="correct-answer">B </span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
+<span class="correct-answer-box"><strong>정답: </strong>
+<span class="correct-answer">B</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="7 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">B (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>지역사회 투표 배분</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="11 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">B (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
-                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">다른
+                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
 <!-- / Question  -->
@@ -152,7 +157,6 @@
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="847149" type="application/json">[{"voted_answers": "B", "vote_count": 7, "is_most_voted": true}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -193,12 +197,11 @@
 <div class="card-text question-answer bg-light white-text">
 <span class="correct-answer-box"><strong>Suggested Answer:</strong>
 <span class="correct-answer">B</span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="7 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">B (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="11 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">B (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
@@ -206,10 +209,10 @@
 <!-- / Question  -->
 </div>
 <div class="comments-wrapper">
-<a class="badge reveal-comment" href="#">댓글 표시</a>
-<a class="badge hide-comment d-none" href="#">댓글 숨기기</a>
+<a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
 <div class="discussion-page-comments-section" data-discussion-question-id="88960" style="display: none">
-<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">코멘트</h4></div>
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
 <div class="container outer-discussion-container">
@@ -234,22 +237,20 @@
 				tttfakil
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 8월 8일 화요일 16:43">
-			2주, 4일 전
-		</span>
+<span class="comment-date align-middle" title="2024년 8월 8일 목요일 16시 43분">2024년 8월 9일 01시 43분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
 <div class="comment-content">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -280,22 +281,20 @@
 				크리스티나666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 24일 (월) 02:34">
-			1 개월 전
-		</span>
+<span class="comment-date align-middle" title="2024년 7월 24일 수요일 오전 2시 34분">2024년 7월 24일 11시 34분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
-<div class="comment-content">Secret Manager에는 자동으로 비밀번호를 교체하는 기능이 내장되어 있습니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
+<div class="comment-content">시크릿 매니저에는 비밀번호를 자동으로 변경하는 기능이 내장되어 있습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -326,21 +325,19 @@
 				CVDON
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 5월 21일 일요일 18:07">
-			3개월, 1주 전
-		</span>
+<span class="comment-date align-middle" title="2024년 5월 21일 화요일 18시 07분">2024년 5월 22일 03시 07분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">D rds는 Secret Manager에서만 작동하기 때문입니다.</div>
+<div class="comment-content">D는 RDS가 Secret Manager에서만 작동하기 때문입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -371,21 +368,19 @@
 				CVDON
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 5월 21일 일요일 18:06">
-			3개월, 1주 전
-		</span>
+<span class="comment-date align-middle" title="2024년 5월 21일 화요일 18시 06분">2024년 5월 22일 03시 06분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">Secret Manager에서만 작동합니다.</div>
+<div class="comment-content">비밀 관리자와 함께 사용해야만 작동합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -416,22 +411,20 @@
 				킹_AWS_202
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 5월 18일 목요일 10:20">
-			3개월, 1주 전
-		</span>
+<span class="comment-date align-middle" title="2024년 5월 18일 토요일 오전 10시 20분">2024년 5월 18일 19시 20분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
-<div class="comment-content">답은 당연히 B</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
+<div class="comment-content">정답은 확실히 B입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -459,24 +452,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				고멜
+				고머
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 5월 15일 월요일 18:44">
-			3개월, 1주 전
-		</span>
+<span class="comment-date align-middle" title="2024년 5월 15일 수요일 18시 44분">2024년 5월 16일 03시 44분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">그만한 가치가 있기 때문에 Lambda는 비밀 교체(옵션 "D" 제안)와 관련되어 있지만 키 교체를 활성화하면 Lambda가 백그라운드에서 투명하게 구성되므로 "B"라고 가정합니다. 더 직접적인 대답인 것 같습니다. "Secrets Manager 교체는 AWS Lambda 함수를 사용하여 비밀과 데이터베이스를 업데이트합니다." "비밀을 교체하기 위해 Secrets Manager는 설정된 일정에 따라 Lambda 함수를 호출합니다." https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html</div>
+<div class="comment-content">참고로, Lambda는 시크릿 순환과 관련이 있으므로 ("D" 옵션을 암시하는 것 같지만) 시크릿 순환을 활성화하면 Lambda가 백그라운드에서 투명하게 구성된다고 가정하면 "B"가 더 직관적인 답인 것 같습니다. "Secrets Manager 순환은 AWS Lambda 함수를 사용하여 시크릿과 데이터베이스를 업데이트합니다." "시크릿을 순환하려면 Secrets Manager가 설정한 일정에 따라 Lambda 함수를 호출합니다." https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -507,21 +498,19 @@
 				메릴린
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 4월 23일 일요일 07:02">
-			4 개월 전에
-		</span>
+<span class="comment-date align-middle" title="2024년 4월 23일 화요일 오전 7시 2분">2024년 4월 23일 16시 02분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">답은 D입니다 https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html</div>
+<div class="comment-content">정답은 D입니다. https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -552,22 +541,20 @@
 				미칼다비드
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 12월 12일 월요일 07:47">
-			8개월, 2주 전
-		</span>
+<span class="comment-date align-middle" title="2023년 12월 12일 화요일 오전 7시 47분">2023년 12월 12일 16시 47분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
-<div class="comment-content">bbbbbbbb</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
+<div class="comment-content">bbbbbbb</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -595,25 +582,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				마르셀로드바
+				마르셀로_도바
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 11월 27일 일요일 16:43">
-			9개월 전
-		</span>
+<span class="comment-date align-middle" title="2023년 11월 27일 월요일 16시 43분">2023년 11월 28일 01시 43분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
-<div class="comment-content">답변. 비</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
+<div class="comment-content">정답: B</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -636,8 +621,8 @@
 </div>
 </div>
 <div class="comments-wrapper-en" style="display: none;">
-<a class="badge reveal-comment" href="#">Show Comments</a>
-<a class="badge hide-comment d-none" href="#">Hide Comments</a>
+<a class="badge reveal-comment" href="javascript:void(0)">Show Comments</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">Hide Comments</a>
 <div class="discussion-page-comments-section-en" data-discussion-question-id="88960" style="display: none">
 <div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">Comments</h4></div>
 <!-- discussion.html -->
@@ -664,9 +649,7 @@
 				tttfakil
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Tue 08 Aug 2023 16:43">
-			2 weeks, 4 days ago
-		</span>
+<span class="comment-date align-middle" title="Thu 08 Aug 2024 16:43">2024-08-09 01:43</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
@@ -678,7 +661,7 @@
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -710,9 +693,7 @@
 				Christina666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Mon 24 Jul 2023 02:34">
-			1 month ago
-		</span>
+<span class="comment-date align-middle" title="Wed 24 Jul 2024 02:34">2024-07-24 11:34</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
@@ -724,7 +705,7 @@
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">4</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -756,9 +737,7 @@
 				CVDON
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sun 21 May 2023 18:07">
-			3 months, 1 week ago
-		</span>
+<span class="comment-date align-middle" title="Tue 21 May 2024 18:07">2024-05-22 03:07</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">D because rds only works with Secret Manager</div>
@@ -801,9 +780,7 @@
 				CVDON
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sun 21 May 2023 18:06">
-			3 months, 1 week ago
-		</span>
+<span class="comment-date align-middle" title="Tue 21 May 2024 18:06">2024-05-22 03:06</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">Only Works With secret manager</div>
@@ -846,9 +823,7 @@
 				King_AWS_202
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Thu 18 May 2023 10:20">
-			3 months, 1 week ago
-		</span>
+<span class="comment-date align-middle" title="Sat 18 May 2024 10:20">2024-05-18 19:20</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
@@ -892,9 +867,7 @@
 				Gomer
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Mon 15 May 2023 18:44">
-			3 months, 1 week ago
-		</span>
+<span class="comment-date align-middle" title="Wed 15 May 2024 18:44">2024-05-16 03:44</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">For what it's worth, Lambda is involved with rotation of secrets (suggesting option "D."), but I'm presuming Lambda is configured transparently in the background when you enable key rotation, therefore "B." seems to be a more straightforward answer.
@@ -940,9 +913,7 @@ https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.htm
 				marylynne
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sun 23 Apr 2023 07:02">
-			4 months ago
-		</span>
+<span class="comment-date align-middle" title="Tue 23 Apr 2024 07:02">2024-04-23 16:02</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">Ans is D
@@ -986,9 +957,7 @@ https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.htm
 				michaldavid
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Mon 12 Dec 2022 07:47">
-			8 months, 2 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Tue 12 Dec 2023 07:47">2023-12-12 16:47</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
@@ -1032,9 +1001,7 @@ https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.htm
 				marcelodba
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sun 27 Nov 2022 16:43">
-			9 months ago
-		</span>
+<span class="comment-date align-middle" title="Mon 27 Nov 2023 16:43">2023-11-28 01:43</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
@@ -1079,7 +1046,7 @@ https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.htm
 <i class="fa fa-angle-up"></i>
 </div>
 <!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="../../../js/popper.min.js"></script>
 <!-- jquery latest version -->
 <script src="../../../js/jquery.min.js"></script>
 <!-- bootstrap js -->
@@ -1090,8 +1057,6 @@ https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.htm
 <script src="../../../js/wow.min.js"></script>
 <!-- main js -->
 <script src="../../../js/main.js"></script>
-<script async="" defer="" src="../../../js/bootstrap3-typeahead.min.js">
-</script>
 <script type="text/javascript">
     // Activate tooltips
     $(function () {
@@ -1118,39 +1083,6 @@ https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.htm
         $('img[defsrc]').each(function() {
             $(this).attr('src',$(this).attr('defsrc'));
         });
-
-
-        function delayedStart() {
-            // Typeahead start
-
-            // Register typeahead element:
-            $('#header-keyword-search, #modal-keyword-search').typeahead({
-                source: autoCompleteQuery,
-                autoSelect: true,
-                delay: 150,
-                selectOnBlur: false,
-                afterSelect: function(param) {$(this.$element).closest('form').submit()}
-            });
-
-            // Query ajax function:
-            function autoCompleteQuery(query, callback) {
-                return $.get("/ajax/autocomplete/suggestions/?query=" + query).done(callback);
-            }
-            // Typeahead end
-        }
-        setTimeout(delayedStart, 1500);
-
-        // Don't submit empty search query
-        $('#modal-keyword-search-form').submit(function() {
-            if (!$('#modal-keyword-search').val()) {
-                return false;
-            }
-        });
-
-        // Auto focus on search box when search-modal is opened
-        $('.search-modal').on('shown.bs.modal', function (e) {
-            $(this).find('input[type=text]').focus();
-        });
     });
 </script>
 <script type="text/javascript">
@@ -1160,6 +1092,6 @@ https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.htm
 </script>
 <script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
 <script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
-</div>
+</meta></div>
 </body>
 </html>

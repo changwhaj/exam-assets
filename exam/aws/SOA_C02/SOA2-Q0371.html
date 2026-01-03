@@ -3,13 +3,14 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="2023-08-15 3:18" name="refresh_date"/>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
 <meta charset="utf-8"/>
 <title>Exam AWS Certified SysOps Administrator</title>
 <!-- responsive tag -->
-<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- bootstrap v4 css -->
 <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -24,23 +25,29 @@
 <!-- responsive css -->
 <link href="../../../css/responsive.css" rel="stylesheet" type="text/css"/>
 <link href="../../../css/forum.css" rel="stylesheet" type="text/css"/>
-<style>
-</style>
 <div class="sec-spacer pt-20">
 <div class="container">
 <div class="container action-row-container border-0 p-0 mb-2">
 <div class="container action-row clearfix d-flex">
 <i class="fa fm fa-language fa-2x mr-2"></i>
-<a class="btn show-english" href="#">English</a>
-<a class="btn show-korean d-none" href="#">한국어</a>
+<a class="btn show-english" href="javascript:void(0)">English</a>
+<a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
 <span class="pagination-container ml-auto">
 <span id="page-indicator"><strong></strong></span>
-<!--p id="page-indicator"></p-->
 <span class="pagination-nav ml-4">
-<a class="btn btn-sm" href="#" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
-<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect">
-</select>
-<a class="btn btn-sm" href="#" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
+<a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
+<a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
 </span>
 </span>
 </div>
@@ -50,7 +57,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS Certified SysOps Administrator - Associate 주제 1 문제 371 토론</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified SysOps Administrator - Associate 시험 주제 1 문제 371 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified SysOps Administrator - Associate topic 1 question 371 discussion</h1>
@@ -65,41 +72,40 @@
 <!-- Question -->
 <div class="question-discussion-header">
 						
-							Amazon
-						 <a class="discussion-link">AWS 공인 SysOps 관리자 – 어소시에이트 의 시험 문제</a>
+							아마존
+						 <a class="discussion-link">AWS 공인 시스템 운영 관리자 - 어소시에이트 시험 문제</a>
 <div>
-							질문 #: 371 <br/>
-							주제 #: 1
+							문제 번호: 371 <br/>
+							주제 번호: 1
 						</div>
 </div>
 <div class="question-body mt-3 pt-3 border-top" data-id="891974">
 <p class="card-text">
 							
-								SysOps 관리자는 회사의 Amazon S3 버킷을 관리합니다. SysOps 관리자는 회사 AWS 계정의 S3 버킷에서 5GB의 불완전한 멀티파트 업로드를 식별했습니다. SysOps 관리자는 S3 버킷에서 불완전한 멀티파트 업로드 객체 수를 줄여야 합니다. <br/><br/>이 요구 사항을 충족하는 솔루션은 무엇입니까?
+								시스템 운영 관리자는 회사의 Amazon S3 버킷을 관리합니다. 이 관리자는 회사 AWS 계정의 S3 버킷에서 5GB에 달하는 미완료 멀티파트 업로드 데이터를 발견했습니다. 시스템 운영 관리자는 해당 S3 버킷에 있는 미완료 멀티파트 업로드 데이터의 양을 줄여야 합니다. <br/><br/>이 요구 사항을 충족하는 솔루션은 무엇일까요?
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="891974" type="application/json">[{"voted_answers": "A", "vote_count": 5, "is_most_voted": true}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
-<li class="multi-choice-item">
+<li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="A">
 													A.
 												</span> 
 											
-											만료된 마커 또는 불완전한 멀티파트 업로드를 삭제하려면 S3 버킷에 S3 수명 주기 규칙을 생성하십시오.
+											S3 버킷에 S3 수명 주기 규칙을 생성하여 만료된 마커 또는 불완전한 멀티파트 업로드를 삭제합니다.
 										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
-                최다 투표
+                가장 많은 표를 받은
             </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
 												</span> 
 											
-											Amazon S3에 파일을 업로드하는 사용자는 S3 TransferUtility를 사용해야 합니다.
+											Amazon S3에 파일을 업로드하는 사용자는 S3 TransferUtility를 사용하도록 요구합니다.
 										</li>
-<li class="multi-choice-item correct-hidden">
+<li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span> 
@@ -111,21 +117,20 @@
 													D.
 												</span> 
 											
-											S3 객체 Lambda 액세스 포인트를 생성하여 불완전한 멀티파트 업로드를 삭제합니다.
+											불완전한 멀티파트 업로드를 삭제하는 S3 객체 람다 액세스 포인트를 생성합니다.
 										</li>
 </ul>
 </div>
-<a class="btn btn-primary reveal-solution" href="#">제안된 답변 표시</a>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
 <a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
 <div class="card-text question-answer bg-light white-text" style="display: none;">
-<span class="correct-answer-box"><strong>추천 답변: </strong>
-<span class="correct-answer">C </span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
+<span class="correct-answer-box"><strong>제안된 답변: </strong>
+<span class="correct-answer">A</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="5 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">A (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>지역사회 투표 배분</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="15 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">A (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
@@ -152,11 +157,10 @@
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="891974" type="application/json">[{"voted_answers": "A", "vote_count": 5, "is_most_voted": true}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
-<li class="multi-choice-item">
+<li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="A">
 													A.
 												</span>
@@ -172,7 +176,7 @@
 											
 											Require users that perform uploads of files into Amazon S3 to use the S3 TransferUtility.
 										</li>
-<li class="multi-choice-item correct-hidden">
+<li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span>
@@ -192,13 +196,12 @@
 <a class="btn btn-primary hide-solution d-none" href="#">Hide Answer</a>
 <div class="card-text question-answer bg-light white-text">
 <span class="correct-answer-box"><strong>Suggested Answer:</strong>
-<span class="correct-answer">C</span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
+<span class="correct-answer">A</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="5 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">A (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="15 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">A (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
@@ -206,10 +209,10 @@
 <!-- / Question  -->
 </div>
 <div class="comments-wrapper">
-<a class="badge reveal-comment" href="#">댓글 표시</a>
-<a class="badge hide-comment d-none" href="#">댓글 숨기기</a>
+<a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
 <div class="discussion-page-comments-section" data-discussion-question-id="115983" style="display: none">
-<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">코멘트</h4></div>
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
 <div class="container outer-discussion-container">
@@ -219,7 +222,7 @@
 <!-- New comment end -->
 <div class="discussion-container">
 <!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="981202" id="comment-981202">
+<div class="media comment-container" data-comment-id="964231" id="comment-964231">
 <a class="minimize-comment comment-toggle" href="#">
 <i class="fa fa-minus-square-o mr-2 mt-1"></i>
 </a>
@@ -231,25 +234,26 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				nizammusasoac02
+				마나25
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 8월 15일 화 03:18">
-			1주, 5일 전
-		</span>
+<span class="badge badge-primary">
+				가장 많은 표를 받은<i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="2024년 7월 27일 토요일 오전 1시 53분">2024년 7월 27일 10시 53분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">만료된 마커 삭제</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">https://aws.amazon.com/blogs/aws-cloud-financial-management/discovering-and-deleting-incomplete-multipart-uploads-to-lower-amazon-s3-costs/ 수명 주기 규칙 작업 섹션에서 만료된 삭제 마커 또는 불완전한 멀티파트 업로드를 삭제하세요.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">5</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -280,22 +284,23 @@
 				크리스티나666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 29일 토요일 05:39">
-			4주, 1일 전
-		</span>
+<span class="badge badge-primary">
+				가장 많은 표를 받은<i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="2024년 7월 29일 월요일 오전 5시 39분">2024년 7월 29일 14시 39분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">A. 만료된 마커 또는 불완전한 멀티파트 업로드를 삭제하려면 S3 버킷에 S3 수명 주기 규칙을 생성하십시오. 설명: S3 수명 주기 규칙을 사용하면 Amazon S3가 시간 경과에 따라 버킷의 객체에 대해 수행해야 하는 작업을 정의할 수 있습니다. 여기에는 스토리지 클래스 간 객체 전환과 특정 기준을 충족하는 객체 삭제가 포함됩니다. S3 버킷의 불완전한 멀티파트 업로드 객체 수를 줄이려면 불완전한 멀티파트 업로드를 대상으로 하고 이에 대한 삭제 작업을 지정하는 S3 수명 주기 규칙을 생성할 수 있습니다. 이는 일정 기간이 지난 후 불완전한 멀티파트 업로드를 자동으로 정리하는 데 도움이 됩니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">A. S3 버킷에 만료된 마커 또는 불완전한 멀티파트 업로드를 삭제하는 S3 수명 주기 규칙을 생성합니다. 설명: S3 수명 주기 규칙을 사용하면 Amazon S3가 버킷의 객체에 대해 시간이 지남에 따라 수행할 작업을 정의할 수 있습니다. 여기에는 스토리지 클래스 간 객체 전환 및 특정 기준을 충족하는 객체 삭제가 포함됩니다. S3 버킷에서 불완전한 멀티파트 업로드 객체의 수를 줄이려면 불완전한 멀티파트 업로드를 대상으로 하고 삭제 작업을 지정하는 S3 수명 주기 규칙을 생성할 수 있습니다. 이렇게 하면 일정 기간이 지난 후 불완전한 멀티파트 업로드가 자동으로 정리됩니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">5</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -318,21 +323,19 @@
 				크리스티나666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 29일 토요일 05:39">
-			4주, 1일 전
-		</span>
+<span class="comment-date align-middle" title="2024년 7월 29일 월요일 오전 5시 39분">2024년 7월 29일 14시 39분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">사용자가 업로드를 수행할 때 S3 TransferUtility를 사용해야 하는 옵션 B는 기존의 불완전한 멀티파트 업로드를 직접적으로 해결하지 않습니다. 새로운 불완전한 업로드를 방지하는 데 도움이 될 수 있지만 기존 업로드를 정리하지는 않습니다. S3 버전 관리를 활성화하는 옵션 C는 불완전한 멀티파트 업로드를 자동으로 삭제하지 않습니다. 버전 관리는 S3에서 객체의 여러 버전을 유지하는 데 도움이 되지만 불완전한 업로드 정리는 처리하지 않습니다. 불완전한 멀티파트 업로드를 삭제하기 위해 S3 객체 Lambda 액세스 포인트를 생성하는 옵션 D는 유효한 솔루션이 아닙니다. S3 객체 Lambda 액세스 포인트는 S3 버킷에서 데이터를 검색할 때 데이터를 수정하거나 변환하는 방법을 제공하지만 객체 삭제용으로 설계되지 않았습니다.</div>
+<div class="comment-content">옵션 B는 사용자가 업로드 시 S3 TransferUtility를 사용하도록 요구하는 것으로, 기존의 불완전한 멀티파트 업로드 문제를 직접적으로 해결하지 못합니다. 이는 새로운 불완전 업로드를 방지하는 데 도움이 될 수 있지만, 기존의 불완전한 업로드를 정리하지는 못합니다. 옵션 C는 S3 버전 관리를 활성화하는 것으로, 불완전한 멀티파트 업로드를 자동으로 삭제하지는 않습니다. 버전 관리는 S3에 객체의 여러 버전을 유지하는 데 도움이 되지만, 불완전한 업로드를 정리하는 기능은 제공하지 않습니다. 옵션 D는 불완전한 멀티파트 업로드를 삭제하기 위해 S3 객체 람다 액세스 포인트를 생성하는 것으로, 적절한 해결책이 아닙니다. S3 객체 람다 액세스 포인트는 S3 버킷에서 데이터를 가져오는 동안 데이터를 수정하거나 변환하는 방법을 제공하지만, 객체를 삭제하도록 설계된 것은 아닙니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">5</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -356,7 +359,7 @@
 </div>
 </div>
 <!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="964231" id="comment-964231">
+<div class="media comment-container" data-comment-id="981202" id="comment-981202">
 <a class="minimize-comment comment-toggle" href="#">
 <i class="fa fa-minus-square-o mr-2 mt-1"></i>
 </a>
@@ -368,25 +371,26 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				마나25
+				니자무사소악02
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 27일 목요일 01:53">
-			1 개월 전
-		</span>
+<span class="badge badge-primary">
+				최신<i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="2024년 8월 15일 목요일 오전 3시 18분">2024년 8월 15일 12시 18분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">https://aws.amazon.com/blogs/aws-cloud-financial-management/discovering-and-deleting-incomplete-multipart-uploads-to-lower-amazon-s3-costs/ 만료된 삭제 마커 또는 불완전한 멀티파트 업로드 삭제 수명 주기 규칙 작업 섹션 아래</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">만료된 마커를 삭제합니다</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -414,24 +418,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				트브트린
+				트르브트린
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 22일 토요일 14:11">
-			1 개월 전
-		</span>
+<span class="comment-date align-middle" title="2024년 7월 22일 월요일 14시 11분">2024년 7월 22일 23시 11분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">A는 사실이다</div>
+<div class="comment-content">A는 참입니다</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -459,25 +461,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				jas26말씀
+				jas26says
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 21일 금 15:20">
-			1 개월 전
-		</span>
+<span class="comment-date align-middle" title="2024년 7월 21일 일요일 15시 20분">2024년 7월 22일 00시 20분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">수명 주기 규칙은 불완전한 멀티파트 업로드 파일을 삭제할 수 있습니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">수명주기 규칙을 통해 불완전한 멀티파트 업로드 파일을 삭제할 수 있습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -500,8 +500,8 @@
 </div>
 </div>
 <div class="comments-wrapper-en" style="display: none;">
-<a class="badge reveal-comment" href="#">Show Comments</a>
-<a class="badge hide-comment d-none" href="#">Hide Comments</a>
+<a class="badge reveal-comment" href="javascript:void(0)">Show Comments</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">Hide Comments</a>
 <div class="discussion-page-comments-section-en" data-discussion-question-id="115983" style="display: none">
 <div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">Comments</h4></div>
 <!-- discussion.html -->
@@ -513,7 +513,7 @@
 <!-- New comment end -->
 <div class="discussion-container">
 <!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="981202" id="comment-981202">
+<div class="media comment-container" data-comment-id="964231" id="comment-964231">
 <a class="minimize-comment comment-toggle" href="#">
 <i class="fa fa-minus-square-o mr-2 mt-1"></i>
 </a>
@@ -525,16 +525,19 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				nizammusasoac02
+				mana25
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Tue 15 Aug 2023 03:18">
-			1 week, 5 days ago
-		</span>
+<span class="badge badge-primary">
+				Highly Voted <i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="Sat 27 Jul 2024 01:53">2024-07-27 10:53</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
-<div class="comment-content">delete expired markers</div>
+<div class="comment-content">https://aws.amazon.com/blogs/aws-cloud-financial-management/discovering-and-deleting-incomplete-multipart-uploads-to-lower-amazon-s3-costs/
+
+Delete expired delete markers or incomplete multipart uploads under the Lifecycle rule actions section</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
@@ -542,7 +545,7 @@
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">5</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -574,9 +577,10 @@
 				Christina666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sat 29 Jul 2023 05:39">
-			4 weeks, 1 day ago
-		</span>
+<span class="badge badge-primary">
+				Highly Voted <i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="Mon 29 Jul 2024 05:39">2024-07-29 14:39</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -593,7 +597,7 @@ To reduce the number of incomplete multipart upload objects in the S3 bucket, yo
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">5</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -617,9 +621,7 @@ To reduce the number of incomplete multipart upload objects in the S3 bucket, yo
 				Christina666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sat 29 Jul 2023 05:39">
-			4 weeks, 1 day ago
-		</span>
+<span class="comment-date align-middle" title="Mon 29 Jul 2024 05:39">2024-07-29 14:39</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">Option B, requiring users to use the S3 TransferUtility when performing uploads, does not directly address the existing incomplete multipart uploads. It may help in preventing new incomplete uploads, but it won't clean up the existing ones.
@@ -634,7 +636,7 @@ Option D, creating an S3 Object Lambda Access Point to delete incomplete multipa
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">5</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -659,7 +661,7 @@ Option D, creating an S3 Object Lambda Access Point to delete incomplete multipa
 </div>
 </div>
 <!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="964231" id="comment-964231">
+<div class="media comment-container" data-comment-id="981202" id="comment-981202">
 <a class="minimize-comment comment-toggle" href="#">
 <i class="fa fa-minus-square-o mr-2 mt-1"></i>
 </a>
@@ -671,18 +673,17 @@ Option D, creating an S3 Object Lambda Access Point to delete incomplete multipa
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				mana25
+				nizammusasoac02
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Thu 27 Jul 2023 01:53">
-			1 month ago
-		</span>
+<span class="badge badge-primary">
+				Most Recent <i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="Thu 15 Aug 2024 03:18">2024-08-15 12:18</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
-<div class="comment-content">https://aws.amazon.com/blogs/aws-cloud-financial-management/discovering-and-deleting-incomplete-multipart-uploads-to-lower-amazon-s3-costs/
-
-Delete expired delete markers or incomplete multipart uploads under the Lifecycle rule actions section</div>
+<div class="comment-content">delete expired markers</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
@@ -690,7 +691,7 @@ Delete expired delete markers or incomplete multipart uploads under the Lifecycl
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -722,9 +723,7 @@ Delete expired delete markers or incomplete multipart uploads under the Lifecycl
 				trvtrinh
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sat 22 Jul 2023 14:11">
-			1 month ago
-		</span>
+<span class="comment-date align-middle" title="Mon 22 Jul 2024 14:11">2024-07-22 23:11</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">A is true</div>
@@ -735,7 +734,7 @@ Delete expired delete markers or incomplete multipart uploads under the Lifecycl
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -767,9 +766,7 @@ Delete expired delete markers or incomplete multipart uploads under the Lifecycl
 				jas26says
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Fri 21 Jul 2023 15:20">
-			1 month ago
-		</span>
+<span class="comment-date align-middle" title="Sun 21 Jul 2024 15:20">2024-07-22 00:20</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -781,7 +778,7 @@ Delete expired delete markers or incomplete multipart uploads under the Lifecycl
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">2</span> times
+				upvoted <span class="upvote-count">3</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -814,7 +811,7 @@ Delete expired delete markers or incomplete multipart uploads under the Lifecycl
 <i class="fa fa-angle-up"></i>
 </div>
 <!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="../../../js/popper.min.js"></script>
 <!-- jquery latest version -->
 <script src="../../../js/jquery.min.js"></script>
 <!-- bootstrap js -->
@@ -825,8 +822,6 @@ Delete expired delete markers or incomplete multipart uploads under the Lifecycl
 <script src="../../../js/wow.min.js"></script>
 <!-- main js -->
 <script src="../../../js/main.js"></script>
-<script async="" defer="" src="../../../js/bootstrap3-typeahead.min.js">
-</script>
 <script type="text/javascript">
     // Activate tooltips
     $(function () {
@@ -853,39 +848,6 @@ Delete expired delete markers or incomplete multipart uploads under the Lifecycl
         $('img[defsrc]').each(function() {
             $(this).attr('src',$(this).attr('defsrc'));
         });
-
-
-        function delayedStart() {
-            // Typeahead start
-
-            // Register typeahead element:
-            $('#header-keyword-search, #modal-keyword-search').typeahead({
-                source: autoCompleteQuery,
-                autoSelect: true,
-                delay: 150,
-                selectOnBlur: false,
-                afterSelect: function(param) {$(this.$element).closest('form').submit()}
-            });
-
-            // Query ajax function:
-            function autoCompleteQuery(query, callback) {
-                return $.get("/ajax/autocomplete/suggestions/?query=" + query).done(callback);
-            }
-            // Typeahead end
-        }
-        setTimeout(delayedStart, 1500);
-
-        // Don't submit empty search query
-        $('#modal-keyword-search-form').submit(function() {
-            if (!$('#modal-keyword-search').val()) {
-                return false;
-            }
-        });
-
-        // Auto focus on search box when search-modal is opened
-        $('.search-modal').on('shown.bs.modal', function (e) {
-            $(this).find('input[type=text]').focus();
-        });
     });
 </script>
 <script type="text/javascript">
@@ -895,6 +857,6 @@ Delete expired delete markers or incomplete multipart uploads under the Lifecycl
 </script>
 <script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
 <script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
-</div>
+</meta></div>
 </body>
 </html>

@@ -3,13 +3,14 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="2023-10-06 4:30" name="refresh_date"/>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
 <meta charset="utf-8"/>
 <title>Exam AWS Certified SysOps Administrator</title>
 <!-- responsive tag -->
-<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- bootstrap v4 css -->
 <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -31,13 +32,21 @@
 <i class="fa fm fa-language fa-2x mr-2"></i>
 <a class="btn show-english" href="javascript:void(0)">English</a>
 <a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
 <span class="pagination-container ml-auto">
 <span id="page-indicator"><strong></strong></span>
-<!--p id="page-indicator"></p-->
 <span class="pagination-nav ml-4">
 <a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
-<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect">
-</select>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
 <a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
 </span>
 </span>
@@ -48,7 +57,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS Certified SysOps Administrator – Associate 주제 1 문제 273 토론</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified SysOps Administrator - Associate 시험 주제 1, 문제 273, 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified SysOps Administrator - Associate topic 1 question 273 discussion</h1>
@@ -63,21 +72,20 @@
 <!-- Question -->
 <div class="question-discussion-header">
 						
-							Amazon
-						 <a class="discussion-link">AWS 공인 SysOps 관리자 – 어소시에이트 의 시험 문제</a>
+							아마존
+						 <a class="discussion-link">AWS 공인 시스템 운영 관리자 - 어소시에이트 시험 문제</a>
 <div>
-							질문 #: 273 <br/>
-							주제 #: 1
+							문제 번호: 273 <br/>
+							주제 번호: 1
 						</div>
 </div>
 <div class="question-body mt-3 pt-3 border-top" data-id="882258">
 <p class="card-text">
 							
-								회사에 Amazon Elastic File System(Amazon EFS) 파일 시스템을 사용하는 애플리케이션이 있습니다. 애플리케이션 논리 오류와 관련된 최근 사건으로 인해 여러 파일이 손상되었습니다. 회사는 EFS 파일 시스템의 백업 및 복구 기능을 개선하려고 합니다. 회사는 개별 파일을 신속하게 복구할 수 있어야 합니다. <br/><br/>이러한 요구 사항을 가장 비용 효율적으로 충족하는 솔루션은 무엇입니까?
+								한 회사가 Amazon Elastic File System(Amazon EFS) 파일 시스템을 사용하는 애플리케이션을 운영하고 있습니다. 최근 애플리케이션 로직 오류로 인해 여러 파일이 손상되는 사고가 발생했습니다. 회사는 EFS 파일 시스템의 백업 및 복구 기능을 개선하고자 하며, 개별 파일을 신속하게 복구할 수 있어야 합니다. <br/><br/>이러한 요구 사항을 가장 비용 효율적으로 충족하는 솔루션은 무엇일까요?
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="882258" type="application/json">[{"voted_answers": "D", "vote_count": 7, "is_most_voted": true}, {"voted_answers": "C", "vote_count": 1, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -86,44 +94,44 @@
 													A.
 												</span> 
 											
-											Amazon S3 Glacier 저장소에 데이터 복사본을 보관하도록 Amazon Data Lifecycle Manager(Amazon DLM)를 구성합니다. S3 Glacier 검색 요청을 사용하여 개별 파일을 검색합니다.
+											Amazon Data Lifecycle Manager(Amazon DLM)를 구성하여 데이터 사본을 Amazon S3 Glacier 볼트에 보관합니다. S3 Glacier 검색 요청을 사용하여 개별 파일을 검색합니다.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
 												</span> 
 											
-											다른 AWS 지역에 두 번째 EFS 파일 시스템을 생성합니다. 데이터를 백업 파일 시스템에 복사하도록 AWS DataSync를 구성합니다. 백업 EFS 파일 시스템에서 파일을 복사하여 복구합니다.
+											다른 AWS 리전에 두 번째 EFS 파일 시스템을 생성합니다. AWS DataSync를 구성하여 데이터를 백업 파일 시스템으로 복사합니다. 백업 EFS 파일 시스템에서 파일을 복사하여 복구합니다.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span> 
 											
-											Amazon EFS에서 AWS Backup을 활성화하여 파일 시스템을 Amazon S3 Glacier 저장소에 백업합니다. S3 Glacier 검색 요청을 사용하여 개별 파일을 검색합니다.
+											파일 시스템을 Amazon S3 Glacier 볼트에 백업하려면 Amazon EFS에서 AWS Backup을 활성화하십시오. 개별 파일을 검색하려면 S3 Glacier 검색 요청을 사용하십시오.
 										</li>
 <li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span> 
 											
-											Amazon EFS에서 AWS Backup을 활성화하여 파일 시스템을 백업 볼트에 백업합니다. 개별 파일을 검색하려면 부분 복원 작업을 사용합니다.
+											파일 시스템을 백업 볼트에 백업하려면 Amazon EFS에서 AWS Backup을 활성화하십시오. 부분 복원 작업을 사용하여 개별 파일을 검색하십시오.
 										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
-                최다 투표
+                가장 많은 표를 받은
             </span></li>
 </ul>
 </div>
-<a class="btn btn-primary reveal-solution" href="#">제안된 답변 표시</a>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
 <a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
 <div class="card-text question-answer bg-light white-text" style="display: none;">
-<span class="correct-answer-box"><strong>제안된 답변: </strong>
+<span class="correct-answer-box"><strong>정답: </strong>
 <span class="correct-answer">D</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="7 votes." data-toggle="tooltip" role="progressbar" style="width: 88%; display: flex;" title="">D (88%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="1 votes." data-toggle="tooltip" role="progressbar" style="width: 13%; display: flex;" title="">13%</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
-                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">다른
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>지역사회 투표 배분</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="14 votes." data-toggle="tooltip" role="progressbar" style="width: 93%; display: flex;" title="">D (93%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="1 votes." data-toggle="tooltip" role="progressbar" style="width: 7%; display: flex;" title="">7%</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
+                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
 <!-- / Question  -->
@@ -148,7 +156,6 @@
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="882258" type="application/json">[{"voted_answers": "D", "vote_count": 7, "is_most_voted": true}, {"voted_answers": "C", "vote_count": 1, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -193,7 +200,7 @@
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="7 votes." data-toggle="tooltip" role="progressbar" style="width: 88%; display: flex;" title="">D (88%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="1 votes." data-toggle="tooltip" role="progressbar" style="width: 13%; display: flex;" title="">13%</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="14 votes." data-toggle="tooltip" role="progressbar" style="width: 93%; display: flex;" title="">D (93%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="1 votes." data-toggle="tooltip" role="progressbar" style="width: 7%; display: flex;" title="">7%</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
@@ -203,7 +210,7 @@
 <a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
 <a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
 <div class="discussion-page-comments-section" data-discussion-question-id="109880" style="display: none">
-<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">코멘트</h4></div>
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
 <div class="container outer-discussion-container">
@@ -212,50 +219,6 @@
 <!-- New comment start -->
 <!-- New comment end -->
 <div class="discussion-container">
-<!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="1026161" id="comment-1026161">
-<a class="minimize-comment comment-toggle" href="#">
-<i class="fa fa-minus-square-o mr-2 mt-1"></i>
-</a>
-<a class="maximize-comment comment-toggle" href="#">
-<i class="fa fa-plus-square-o mr-2 mt-1"></i>
-</a>
-<div class="media-body">
-<div class="comment-head">
-<i class="fa fa-user mr-1 mt-1"></i>
-<a>
-<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				xile1021
-			</h5>
-</a>
-<span class="comment-date align-middle" title="2023년 10월 6일 금요일 04:30">2023-10-06 13:30</span>
-</div>
-<div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>C</strong></span></div>
-<div class="comment-content">C S3 Glacier Retrieval은 거의 액세스하지 않는 데이터를 밀리초 단위로 검색하는 가장 저렴한 아카이브 스토리지입니다. 분기당 1~2회 액세스하고 즉각적인 액세스가 필요한 데이터에 이상적입니다. https://aws.amazon.com/s3/storage-classes/glacier/instant-retrieval/</div>
-<div class="comment-control">
-<span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
-</span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
-			 
-				찬성함</span>
-<span class="comment-control-error ml-2"></span>
-</div>
-<div class="new-comment-box-container mt-2">
-</div>
-<div class="comment-replies">
-<!-- Nesting start -->
-<!-- Nesting end -->
-</div>
-</div>
-<div class="comment-ellipsis comment-toggled">
-		...
-	</div>
-</div>
-</div>
 <!-- single_comment.html -->
 <div class="media comment-container" data-comment-id="984995" id="comment-984995">
 <a class="minimize-comment comment-toggle" href="#">
@@ -272,20 +235,70 @@
 				지파크
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 8월 19일 토요일 07:32">2023-08-19 16:32</span>
+<span class="badge badge-primary">
+				가장 많은 표를 받은<i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="2024년 8월 19일 월요일 오전 7시 32분">2024년 8월 19일 16시 32분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>D</strong></span></div>
-<div class="comment-content">왜 안되나요 A, C: 빙하는 '신속하게' 이행할 수 없습니다. 왜 안되나요 B: 비용 효율적이지 않습니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>D</strong></span></div>
+<div class="comment-content">A, C가 아닌 이유: 빙하는 '신속하게' 조건을 충족할 수 없습니다. B가 아닌 이유: 비용 효율적이지 않습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">6</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1026161" id="comment-1026161">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				xile1021
+			</h5>
+</a>
+<span class="badge badge-primary">
+				최신<i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="2024년 10월 6일 일요일 오전 4시 30분">2024년 10월 6일 13시 30분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
+<div class="comment-content">AWS S3 Glacier Retrieval은 접근 빈도가 낮은 데이터를 밀리초 단위로 검색할 수 있는 가장 저렴한 아카이브 스토리지입니다. 분기당 한두 번 정도 접근하며 즉각적인 액세스가 필요한 데이터에 이상적입니다. https://aws.amazon.com/s3/storage-classes/glacier/instant-retrieval/</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
+			 
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -316,20 +329,20 @@
 				크리스티나666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 26일 수 04:30">2023-07-26 13:30</span>
+<span class="comment-date align-middle" title="2024년 7월 26일 금요일 오전 4시 30분">2024년 7월 26일 13시 30분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>D</strong></span></div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>D</strong></span></div>
 <div class="comment-content">dddddd</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -360,20 +373,20 @@
 				마나25
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 24일 (월) 오후 4시 47분">2023-07-25 01:47</span>
+<span class="comment-date align-middle" title="2024년 7월 24일 수요일 16시 47분">2024년 7월 25일 01시 47분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>D</strong></span></div>
-<div class="comment-content">아카이브가 GLACIER에 들어가면 신속하게 검색할 수 있는 방법이 없으므로 대답은 A 또는 C가 아니며 AWS 백업이 좋은 옵션입니다. 나에게 옵션 D</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>D</strong></span></div>
+<div class="comment-content">GLACIER에 아카이브가 저장되면 신속하게 복구할 방법이 없으므로 A나 C는 답이 아닙니다. AWS 백업이 좋은 선택입니다. 제 경우에는 D번이 답입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -404,19 +417,19 @@
 				쿨크러쉬85
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 23일 일요일 15:45">2023-07-24 00:45</span>
+<span class="comment-date align-middle" title="2024년 7월 23일 화요일 15시 45분">2024년 7월 24일 00시 45분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">선택된 답변: A Amazon S3 Glacier의 데이터가 가장 비용 효율적이기 때문입니다. 스냅샷에는 마지막 스냅샷 이후 변경된 데이터만 포함되므로 빠르게 복원할 수도 있습니다. https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html</div>
+<div class="comment-content">선택된 답변: A Amazon S3 Glacier에 데이터를 저장하는 것이 가장 비용 효율적이기 때문입니다. 스냅샷에는 마지막 스냅샷 이후 변경된 데이터만 포함되므로 빠르게 복원할 수 있습니다. https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -439,19 +452,19 @@
 				마나25
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 24일 (월) 오후 4시 47분">2023-07-25 01:47</span>
+<span class="comment-date align-middle" title="2024년 7월 24일 수요일 16시 47분">2024년 7월 25일 01시 47분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">아카이브가 GLACIER에 들어가면 신속하게 검색할 수 있는 방법이 없으므로 대답은 A 또는 C가 아니며 AWS 백업이 좋은 옵션입니다. 나에게 옵션 D</div>
+<div class="comment-content">GLACIER에 아카이브가 저장되면 신속하게 복구할 방법이 없으므로 A나 C는 답이 아닙니다. AWS 백업이 좋은 선택입니다. 제 경우에는 D번이 답입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -490,20 +503,20 @@
 				rrshah83
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 5월 22일 월요일 10:42">2023-05-22 19:42</span>
+<span class="comment-date align-middle" title="2024년 5월 22일 수요일 오전 10시 42분">2024년 5월 22일 19시 42분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>D</strong></span></div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>D</strong></span></div>
 <div class="comment-content">지원</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -539,7 +552,7 @@
 <!-- New comment end -->
 <div class="discussion-container">
 <!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="1026161" id="comment-1026161">
+<div class="media comment-container" data-comment-id="984995" id="comment-984995">
 <a class="minimize-comment comment-toggle" href="#">
 <i class="fa fa-minus-square-o mr-2 mt-1"></i>
 </a>
@@ -551,16 +564,18 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				xile1021
+				jipark
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Fri 06 Oct 2023 04:30">2023-10-06 13:30</span>
+<span class="badge badge-primary">
+				Highly Voted <i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="Mon 19 Aug 2024 07:32">2024-08-19 16:32</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
-<div class="comment-content">C
-S3 Glacier Retrieval is the lowest cost archive storage with milliseconds retrieval for rarely accessed data. It is ideal for data that is accessed once or twice per quarter, and that requires immediate access.
-https://aws.amazon.com/s3/storage-classes/glacier/instant-retrieval/</div>
+<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>D</strong></span></div>
+<div class="comment-content">why not A, C : glacier cannot fulfill 'repidly'
+why not B : not cost effective</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
@@ -568,7 +583,7 @@ https://aws.amazon.com/s3/storage-classes/glacier/instant-retrieval/</div>
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">6</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -585,7 +600,7 @@ https://aws.amazon.com/s3/storage-classes/glacier/instant-retrieval/</div>
 </div>
 </div>
 <!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="984995" id="comment-984995">
+<div class="media comment-container" data-comment-id="1026161" id="comment-1026161">
 <a class="minimize-comment comment-toggle" href="#">
 <i class="fa fa-minus-square-o mr-2 mt-1"></i>
 </a>
@@ -597,15 +612,19 @@ https://aws.amazon.com/s3/storage-classes/glacier/instant-retrieval/</div>
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				jipark
+				xile1021
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sat 19 Aug 2023 07:32">2023-08-19 16:32</span>
+<span class="badge badge-primary">
+				Most Recent <i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="Sun 06 Oct 2024 04:30">2024-10-06 13:30</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>D</strong></span></div>
-<div class="comment-content">why not A, C : glacier cannot fulfill 'repidly'
-why not B : not cost effective</div>
+<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
+<div class="comment-content">C
+S3 Glacier Retrieval is the lowest cost archive storage with milliseconds retrieval for rarely accessed data. It is ideal for data that is accessed once or twice per quarter, and that requires immediate access.
+https://aws.amazon.com/s3/storage-classes/glacier/instant-retrieval/</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
@@ -613,7 +632,7 @@ why not B : not cost effective</div>
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">3</span> times
+				upvoted <span class="upvote-count">1</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -645,7 +664,7 @@ why not B : not cost effective</div>
 				Christina666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Wed 26 Jul 2023 04:30">2023-07-26 13:30</span>
+<span class="comment-date align-middle" title="Fri 26 Jul 2024 04:30">2024-07-26 13:30</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>D</strong></span></div>
@@ -657,7 +676,7 @@ why not B : not cost effective</div>
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -689,7 +708,7 @@ why not B : not cost effective</div>
 				mana25
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Mon 24 Jul 2023 16:47">2023-07-25 01:47</span>
+<span class="comment-date align-middle" title="Wed 24 Jul 2024 16:47">2024-07-25 01:47</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>D</strong></span></div>
@@ -701,7 +720,7 @@ why not B : not cost effective</div>
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">2</span> times
+				upvoted <span class="upvote-count">4</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -733,7 +752,7 @@ why not B : not cost effective</div>
 				CoolCrush85
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sun 23 Jul 2023 15:45">2023-07-24 00:45</span>
+<span class="comment-date align-middle" title="Tue 23 Jul 2024 15:45">2024-07-24 00:45</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">Selected Answer: A
@@ -771,7 +790,7 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html</div
 				mana25
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Mon 24 Jul 2023 16:47">2023-07-25 01:47</span>
+<span class="comment-date align-middle" title="Wed 24 Jul 2024 16:47">2024-07-25 01:47</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">When an archive gets into GLACIER there is not way to retrieve it RAPIDLY, so answer is not A or C, AWS backup is  a good option . Option D for me</div>
@@ -782,7 +801,7 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html</div
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -822,7 +841,7 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html</div
 				rrshah83
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Mon 22 May 2023 10:42">2023-05-22 19:42</span>
+<span class="comment-date align-middle" title="Wed 22 May 2024 10:42">2024-05-22 19:42</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>D</strong></span></div>
@@ -834,7 +853,7 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html</div
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -867,7 +886,7 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html</div
 <i class="fa fa-angle-up"></i>
 </div>
 <!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="../../../js/popper.min.js"></script>
 <!-- jquery latest version -->
 <script src="../../../js/jquery.min.js"></script>
 <!-- bootstrap js -->
@@ -878,8 +897,6 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html</div
 <script src="../../../js/wow.min.js"></script>
 <!-- main js -->
 <script src="../../../js/main.js"></script>
-<script async="" defer="" src="../../../js/bootstrap3-typeahead.min.js">
-</script>
 <script type="text/javascript">
     // Activate tooltips
     $(function () {
@@ -906,39 +923,6 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html</div
         $('img[defsrc]').each(function() {
             $(this).attr('src',$(this).attr('defsrc'));
         });
-
-
-        function delayedStart() {
-            // Typeahead start
-
-            // Register typeahead element:
-            $('#header-keyword-search, #modal-keyword-search').typeahead({
-                source: autoCompleteQuery,
-                autoSelect: true,
-                delay: 150,
-                selectOnBlur: false,
-                afterSelect: function(param) {$(this.$element).closest('form').submit()}
-            });
-
-            // Query ajax function:
-            function autoCompleteQuery(query, callback) {
-                return $.get("/ajax/autocomplete/suggestions/?query=" + query).done(callback);
-            }
-            // Typeahead end
-        }
-        setTimeout(delayedStart, 1500);
-
-        // Don't submit empty search query
-        $('#modal-keyword-search-form').submit(function() {
-            if (!$('#modal-keyword-search').val()) {
-                return false;
-            }
-        });
-
-        // Auto focus on search box when search-modal is opened
-        $('.search-modal').on('shown.bs.modal', function (e) {
-            $(this).find('input[type=text]').focus();
-        });
     });
 </script>
 <script type="text/javascript">
@@ -948,6 +932,6 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html</div
 </script>
 <script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
 <script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
-</div>
+</meta></div>
 </body>
 </html>

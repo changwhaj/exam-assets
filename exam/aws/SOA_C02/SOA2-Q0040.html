@@ -3,13 +3,14 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="2023-09-11 11:26" name="refresh_date"/>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
 <meta charset="utf-8"/>
 <title>Exam AWS Certified SysOps Administrator</title>
 <!-- responsive tag -->
-<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- bootstrap v4 css -->
 <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -24,8 +25,6 @@
 <!-- responsive css -->
 <link href="../../../css/responsive.css" rel="stylesheet" type="text/css"/>
 <link href="../../../css/forum.css" rel="stylesheet" type="text/css"/>
-<style>
-</style>
 <div class="sec-spacer pt-20">
 <div class="container">
 <div class="container action-row-container border-0 p-0 mb-2">
@@ -33,13 +32,21 @@
 <i class="fa fm fa-language fa-2x mr-2"></i>
 <a class="btn show-english" href="javascript:void(0)">English</a>
 <a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
 <span class="pagination-container ml-auto">
 <span id="page-indicator"><strong></strong></span>
-<!--p id="page-indicator"></p-->
 <span class="pagination-nav ml-4">
 <a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
-<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect">
-</select>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
 <a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
 </span>
 </span>
@@ -50,7 +57,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS Certified SysOps Administrator - Associate 주제 1 문제 40 토론</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified SysOps Administrator - Associate 시험 주제 1, 문제 40, 해설</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified SysOps Administrator - Associate topic 1 question 40 discussion</h1>
@@ -65,20 +72,19 @@
 <!-- Question -->
 <div class="question-discussion-header">
 						
-							Amazon
-						 <a class="discussion-link">AWS 공인 SysOps 관리자 – 어소시에이트 의 시험 문제</a>
+							아마존
+						 <a class="discussion-link">AWS 공인 시스템 운영 관리자 - 어소시에이트 시험 문제</a>
 <div>
-							질문 #: 40 <br/>
-							주제 #: 1
+							문제 번호: 40 <br/>
+							주제 번호: 1
 						</div>
 </div>
 <div class="question-body mt-3 pt-3 border-top" data-id="809781">
 <p class="card-text">
 							
-								회사는 Amazon EC2 인스턴스에서 애플리케이션을 실행합니다. SysOps 관리자는 수요 증가를 처리하기 위해 Auto Scaling 그룹과 ALB(Application Load Balancer)를 생성합니다. 그러나 EC2 인스턴스는 상태 확인에 실패합니다. <br/>이 문제를 해결하려면 SysOps 관리자가 무엇을 해야 합니까?<br/>
+								한 회사가 Amazon EC2 인스턴스에서 애플리케이션을 실행하고 있습니다. 시스템 운영 관리자는 수요 증가에 대비하여 Auto Scaling 그룹과 Application Load Balancer(ALB)를 생성했습니다. 그러나 EC2 인스턴스가 상태 검사에 실패하고 있습니다. <br/>시스템 운영 관리자는 이 문제를 해결하기 위해 무엇을 해야 할까요?<br/>
 </p>
 <div class="voted-answers-tally d-none">
-<script id="809781" type="application/json">[{"voted_answers": "B", "vote_count": 20, "is_most_voted": true}, {"voted_answers": "D", "vote_count": 1, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -87,44 +93,44 @@
 													A.
 												</span> 
 											
-											Auto Scaling 그룹이 모든 AWS 리전을 사용하도록 구성되었는지 확인하십시오.
+											Auto Scaling 그룹이 모든 AWS 리전을 사용하도록 구성되어 있는지 확인하십시오.
 										</li>
-<li class="multi-choice-item">
+<li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
 												</span> 
 											
-											애플리케이션이 리스너가 기대하는 프로토콜과 포트에서 실행되고 있는지 확인합니다.
+											애플리케이션이 리스너가 예상하는 프로토콜과 포트에서 실행 중인지 확인하십시오.
 										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
-                최다 투표
+                가장 많은 표를 받은
             </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span> 
 											
-											ALB에서 리스너 우선순위를 확인하십시오. 필요한 경우 우선순위를 변경하십시오.
+											ALB에서 리스너 우선순위를 확인합니다. 필요한 경우 우선순위를 변경합니다.
 										</li>
-<li class="multi-choice-item correct-hidden">
+<li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span> 
 											
-											Auto Scaling 그룹의 최대 인스턴스 수를 확인합니다. 필요한 경우 번호를 변경하십시오.
+											자동 스케일링 그룹의 최대 인스턴스 수를 확인합니다. 필요한 경우 수를 변경합니다.
 										</li>
 </ul>
 </div>
-<a class="btn btn-primary reveal-solution" href="#">제안된 답변 표시</a>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
 <a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
 <div class="card-text question-answer bg-light white-text" style="display: none;">
-<span class="correct-answer-box"><strong>제안된 답변: </strong>
-<span class="correct-answer">D</span>
+<span class="correct-answer-box"><strong>정답: </strong>
+<span class="correct-answer">B</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="20 votes." data-toggle="tooltip" role="progressbar" style="width: 95%; display: flex;" title="">B (95%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="1 votes." data-toggle="tooltip" role="progressbar" style="width: 5%; display: flex;" title="">5%</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
-                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">다른
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>지역사회 투표 배분</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="23 votes." data-toggle="tooltip" role="progressbar" style="width: 96%; display: flex;" title="">B (96%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="1 votes." data-toggle="tooltip" role="progressbar" style="width: 4%; display: flex;" title="">4%</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
+                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
 <!-- / Question  -->
@@ -148,7 +154,6 @@
 								A company runs an application on an Amazon EC2 instance. A SysOps administrator creates an Auto Scaling group and an Application Load Balancer (ALB) to handle an increase in demand. However, the EC2 instances are failing the health check.<br/>What should the SysOps administrator do to troubleshoot this issue?<br/>
 </p>
 <div class="voted-answers-tally d-none">
-<script id="809781" type="application/json">[{"voted_answers": "B", "vote_count": 20, "is_most_voted": true}, {"voted_answers": "D", "vote_count": 1, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -159,7 +164,7 @@
 											
 											Verify that the Auto Scaling group is configured to use all AWS Regions.
 										</li>
-<li class="multi-choice-item">
+<li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
 												</span>
@@ -175,7 +180,7 @@
 											
 											Verify the listener priority in the ALB. Change the priority if necessary.
 										</li>
-<li class="multi-choice-item correct-hidden">
+<li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span>
@@ -188,12 +193,12 @@
 <a class="btn btn-primary hide-solution d-none" href="#">Hide Answer</a>
 <div class="card-text question-answer bg-light white-text">
 <span class="correct-answer-box"><strong>Suggested Answer:</strong>
-<span class="correct-answer">D</span>
+<span class="correct-answer">B</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="20 votes." data-toggle="tooltip" role="progressbar" style="width: 95%; display: flex;" title="">B (95%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="1 votes." data-toggle="tooltip" role="progressbar" style="width: 5%; display: flex;" title="">5%</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="23 votes." data-toggle="tooltip" role="progressbar" style="width: 96%; display: flex;" title="">B (96%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="1 votes." data-toggle="tooltip" role="progressbar" style="width: 4%; display: flex;" title="">4%</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
@@ -203,7 +208,7 @@
 <a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
 <a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
 <div class="discussion-page-comments-section" data-discussion-question-id="78754" style="display: none">
-<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">코멘트</h4></div>
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
 <div class="container outer-discussion-container">
@@ -225,73 +230,26 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				공주
+				왕자 다운
 			</h5>
 </a>
 <span class="badge badge-primary">
-				높은 투표율<i class="fa fa-thumbs-up"></i>
+				가장 많은 표를 받은<i class="fa fa-thumbs-up"></i>
 </span>
-<span class="comment-date align-middle" title="2022년 9월 1일 목요일 20:3">2022-09-02 05:30</span>
+<span class="comment-date align-middle" title="2023년 9월 1일 금요일 20시 30분">2023년 9월 2일 오전 5시 30분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
-<div class="comment-content">B에게 투표하세요! Target.FailedHealthChecks 대상이 상태 확인 포트에서 트래픽을 수신하고 있는지 확인합니다. Linux 대상에서 ss 명령을 사용하여 서버가 수신 대기 중인 포트를 확인할 수 있습니다. Windows 대상의 경우 netstat 명령을 사용할 수 있습니다. https://aws.amazon.com/premiumsupport/knowledge-center/elb-fix-failing-health-checks-alb/</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
+<div class="comment-content">B에 투표하세요! Target.FailedHealthChecks 오류가 발생했습니다. 대상이 상태 확인 포트에서 트래픽을 수신 대기 중인지 확인하십시오. Linux 대상에서는 ss 명령을 사용하여 서버가 수신 대기 중인 포트를 확인할 수 있습니다. Windows 대상에서는 netstat 명령을 사용할 수 있습니다. https://aws.amazon.com/premiumsupport/knowledge-center/elb-fix-failing-health-checks-alb/</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">9</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">14</span> 번
 			 
-				찬성함</span>
-<span class="comment-control-error ml-2"></span>
-</div>
-<div class="new-comment-box-container mt-2">
-</div>
-<div class="comment-replies">
-<!-- Nesting start -->
-<!-- Nesting end -->
-</div>
-</div>
-<div class="comment-ellipsis comment-toggled">
-		...
-	</div>
-</div>
-</div>
-<!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="1004582" id="comment-1004582">
-<a class="minimize-comment comment-toggle" href="#">
-<i class="fa fa-minus-square-o mr-2 mt-1"></i>
-</a>
-<a class="maximize-comment comment-toggle" href="#">
-<i class="fa fa-plus-square-o mr-2 mt-1"></i>
-</a>
-<div class="media-body">
-<div class="comment-head">
-<i class="fa fa-user mr-1 mt-1"></i>
-<a>
-<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				전단지
-			</h5>
-</a>
-<span class="badge badge-primary">
-				가장 최근<i class="fa fa-clock-o"></i>
-</span>
-<span class="comment-date align-middle" title="2023년 9월 11일 월요일 11:26">2023-09-11 20:26</span>
-</div>
-<div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
-<div class="comment-content">나는 B에게 투표하겠다</div>
-<div class="comment-control">
-<span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
-</span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
-			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -322,19 +280,22 @@
 				로니카포
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 6월 2일 금요일 04:56">2023-06-02 13:56</span>
+<span class="badge badge-primary">
+				최신<i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="2024년 6월 2일 일요일 오전 4시 56분">2024년 6월 2일 13시 56분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">B가 맞아요</div>
+<div class="comment-content">B가 정답입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -365,20 +326,20 @@
 				자유
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 6월 2일 금요일 01:09">2023-06-02 10:09</span>
+<span class="comment-date align-middle" title="2024년 6월 2일 일요일 오전 1시 9분">2024년 6월 2일 10시 9분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
-<div class="comment-content">시작에 실패합니다. 상태 확인은 다음 단계입니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
+<div class="comment-content">시동이 걸리지 않을 것 같으니, 다음 단계는 차량 상태 점검입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -406,23 +367,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				카푸문디666
+				카푸트문디666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 3월 30일 목요일 10:51">2023-03-30 19:51</span>
+<span class="comment-date align-middle" title="2024년 3월 30일 토요일 오전 11시 51분">2024년 3월 30일 20시 51분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
-<div class="comment-content">B에 대한 답변 수정</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
+<div class="comment-content">B번 문제의 답을 수정하세요</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -453,20 +414,20 @@
 				FKZ
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 3월 1일 수요일 19:28">2023-03-02 04:28</span>
+<span class="comment-date align-middle" title="2024년 3월 1일 금요일 19시 28분">2024년 3월 2일 오전 4시 28분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
-<div class="comment-content">B 물론이죠.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
+<div class="comment-content">B가 확실해.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -497,19 +458,19 @@
 				브레이브하트22
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 2월 22일 수요일 22:45">2023-02-23 07:45</span>
+<span class="comment-date align-middle" title="2024년 2월 22일 목요일 오후 10시 45분">2024년 2월 23일 오전 7시 45분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">B가 길이다.</div>
+<div class="comment-content">B가 바로 그 길입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -540,20 +501,20 @@
 				이드리스10
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 1월 14일 토요일 21:37">2023-01-15 06:37</span>
+<span class="comment-date align-middle" title="2024년 1월 14일 일요일 21시 37분">2024년 1월 15일 오전 6시 37분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>D</strong></span></div>
-<div class="comment-content">질문에서 언급했듯이 ALB와 ASG는 EC2 인스턴스를 하나만 사용하기 때문에 D에 투표합니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>D</strong></span></div>
+<div class="comment-content">질문에서 언급된 것처럼 ALB와 ASG는 EC2 인스턴스를 하나만 사용하기 때문에 저는 D에 투표합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -576,19 +537,19 @@
 				브리노
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 3월 8일 수요일 04:30">2023-03-08 13:30</span>
+<span class="comment-date align-middle" title="2024년 3월 8일 금요일 오전 4시 30분">2024년 3월 8일 13시 30분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">최대 인스턴스 수가 문제인 경우 상태 확인은 실패하지 않고 시작도 하지 않으므로 실패할 인스턴스가 없습니다.</div>
+<div class="comment-content">만약 최대 인스턴스 수가 문제였다면, 상태 점검이 실패하는 대신 아예 시작조차 되지 않았을 것이므로 실패할 인스턴스가 없었을 것입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -624,23 +585,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				비엣투옷
+				비트프라우츠
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 12월 14일 수요일 13:46">2022-12-14 22:46</span>
+<span class="comment-date align-middle" title="2023년 12월 14일 목요일 13시 46분">2023년 12월 14일 22시 46분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
-<div class="comment-content">답은 B이다</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
+<div class="comment-content">정답은 B입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -671,20 +632,20 @@
 				미칼다비드
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 12월 8일 목요일 06:58">2022-12-08 15:58</span>
+<span class="comment-date align-middle" title="2023년 12월 8일 금요일 오전 6시 58분">2023년 12월 8일 15시 58분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
-<div class="comment-content">bbbbbbbb</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
+<div class="comment-content">bbbbbbb</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -712,66 +673,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				라이온긱
+				라이온기크
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 11월 18일 금요일 20:23">2022-11-19 05:23</span>
+<span class="comment-date align-middle" title="2023년 11월 18일 토요일 20시 23분">2023년 11월 19일 오전 5시 23분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">답: B</div>
+<div class="comment-content">정답: B</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
-<span class="comment-control-error ml-2"></span>
-</div>
-<div class="new-comment-box-container mt-2">
-</div>
-<div class="comment-replies">
-<!-- Nesting start -->
-<!-- Nesting end -->
-</div>
-</div>
-<div class="comment-ellipsis comment-toggled">
-		...
-	</div>
-</div>
-</div>
-<!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="705664" id="comment-705664">
-<a class="minimize-comment comment-toggle" href="#">
-<i class="fa fa-minus-square-o mr-2 mt-1"></i>
-</a>
-<a class="maximize-comment comment-toggle" href="#">
-<i class="fa fa-plus-square-o mr-2 mt-1"></i>
-</a>
-<div class="media-body">
-<div class="comment-head">
-<i class="fa fa-user mr-1 mt-1"></i>
-<a>
-<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				레버
-			</h5>
-</a>
-<span class="comment-date align-middle" title="2022년 10월 27일 목요일 16:40">2022-10-28 01:40</span>
-</div>
-<div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
-<div class="comment-content">B입니다.</div>
-<div class="comment-control">
-<span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
-</span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
-			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -799,22 +716,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				그는 89세가 아니다
+				hanguyen89
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 9월 8일 (목) 16:3">2022-09-09 01:33</span>
+<span class="comment-date align-middle" title="2023년 9월 8일 금요일 16시 33분">2023년 9월 9일 01시 33분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">에게! hangvv6</div>
+<div class="comment-content">안녕, 내 사랑! hungvv6</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -842,23 +759,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				haxaffee
+				하크사피
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 8월 31일 수 19:50">2022-09-01 04:50</span>
+<span class="comment-date align-middle" title="2023년 8월 31일 목요일 오후 7시 50분">2023년 9월 1일 오전 4시 50분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
-<div class="comment-content">B에 투표하세요. D가 상태 확인 실패와 어떤 관련이 있는지 모르겠습니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
+<div class="comment-content">B에 투표하세요. D가 건강 검진 불합격과 무슨 관련이 있는지는 전혀 모르겠습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -912,7 +829,7 @@
 <span class="badge badge-primary">
 				Highly Voted <i class="fa fa-thumbs-up"></i>
 </span>
-<span class="comment-date align-middle" title="Thu 01 Sep 2022 20:30">2022-09-02 05:30</span>
+<span class="comment-date align-middle" title="Fri 01 Sep 2023 20:30">2023-09-02 05:30</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
@@ -928,54 +845,7 @@ https://aws.amazon.com/premiumsupport/knowledge-center/elb-fix-failing-health-ch
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">9</span> times
-			</span>
-<span class="comment-control-error ml-2"></span>
-</div>
-<div class="new-comment-box-container mt-2">
-</div>
-<div class="comment-replies">
-<!-- Nesting start -->
-<!-- Nesting end -->
-</div>
-</div>
-<div class="comment-ellipsis comment-toggled">
-		...
-	</div>
-</div>
-</div>
-<!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="1004582" id="comment-1004582">
-<a class="minimize-comment comment-toggle" href="#">
-<i class="fa fa-minus-square-o mr-2 mt-1"></i>
-</a>
-<a class="maximize-comment comment-toggle" href="#">
-<i class="fa fa-plus-square-o mr-2 mt-1"></i>
-</a>
-<div class="media-body">
-<div class="comment-head">
-<i class="fa fa-user mr-1 mt-1"></i>
-<a>
-<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				letakeda
-			</h5>
-</a>
-<span class="badge badge-primary">
-				Most Recent <i class="fa fa-clock-o"></i>
-</span>
-<span class="comment-date align-middle" title="Mon 11 Sep 2023 11:26">2023-09-11 20:26</span>
-</div>
-<div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
-<div class="comment-content">I would vote for B</div>
-<div class="comment-control">
-<span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
-</span>
-<span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">14</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -1007,7 +877,10 @@ https://aws.amazon.com/premiumsupport/knowledge-center/elb-fix-failing-health-ch
 				ronnykapo
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Fri 02 Jun 2023 04:56">2023-06-02 13:56</span>
+<span class="badge badge-primary">
+				Most Recent <i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="Sun 02 Jun 2024 04:56">2024-06-02 13:56</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">B is correct</div>
@@ -1050,7 +923,7 @@ https://aws.amazon.com/premiumsupport/knowledge-center/elb-fix-failing-health-ch
 				Olelukoe
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Fri 02 Jun 2023 01:09">2023-06-02 10:09</span>
+<span class="comment-date align-middle" title="Sun 02 Jun 2024 01:09">2024-06-02 10:09</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
@@ -1094,7 +967,7 @@ https://aws.amazon.com/premiumsupport/knowledge-center/elb-fix-failing-health-ch
 				caputmundi666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Thu 30 Mar 2023 10:51">2023-03-30 19:51</span>
+<span class="comment-date align-middle" title="Sat 30 Mar 2024 11:51">2024-03-30 20:51</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
@@ -1138,7 +1011,7 @@ https://aws.amazon.com/premiumsupport/knowledge-center/elb-fix-failing-health-ch
 				FKZ
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Wed 01 Mar 2023 19:28">2023-03-02 04:28</span>
+<span class="comment-date align-middle" title="Fri 01 Mar 2024 19:28">2024-03-02 04:28</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
@@ -1182,7 +1055,7 @@ https://aws.amazon.com/premiumsupport/knowledge-center/elb-fix-failing-health-ch
 				braveheart22
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Wed 22 Feb 2023 22:45">2023-02-23 07:45</span>
+<span class="comment-date align-middle" title="Thu 22 Feb 2024 22:45">2024-02-23 07:45</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">B is the way.</div>
@@ -1225,7 +1098,7 @@ https://aws.amazon.com/premiumsupport/knowledge-center/elb-fix-failing-health-ch
 				Idriss10
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sat 14 Jan 2023 21:37">2023-01-15 06:37</span>
+<span class="comment-date align-middle" title="Sun 14 Jan 2024 21:37">2024-01-15 06:37</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>D</strong></span></div>
@@ -1261,7 +1134,7 @@ https://aws.amazon.com/premiumsupport/knowledge-center/elb-fix-failing-health-ch
 				Bhrino
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Wed 08 Mar 2023 04:30">2023-03-08 13:30</span>
+<span class="comment-date align-middle" title="Fri 08 Mar 2024 04:30">2024-03-08 13:30</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">if the maximum number of instances was the issue then the health checks wouldn't fail rather they wouldn't even start so there would be not instances to fail</div>
@@ -1272,7 +1145,7 @@ https://aws.amazon.com/premiumsupport/knowledge-center/elb-fix-failing-health-ch
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">2</span> times
+				upvoted <span class="upvote-count">3</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -1312,7 +1185,7 @@ https://aws.amazon.com/premiumsupport/knowledge-center/elb-fix-failing-health-ch
 				BietTuot
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Wed 14 Dec 2022 13:46">2022-12-14 22:46</span>
+<span class="comment-date align-middle" title="Thu 14 Dec 2023 13:46">2023-12-14 22:46</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
@@ -1356,7 +1229,7 @@ https://aws.amazon.com/premiumsupport/knowledge-center/elb-fix-failing-health-ch
 				michaldavid
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Thu 08 Dec 2022 06:58">2022-12-08 15:58</span>
+<span class="comment-date align-middle" title="Fri 08 Dec 2023 06:58">2023-12-08 15:58</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
@@ -1400,7 +1273,7 @@ https://aws.amazon.com/premiumsupport/knowledge-center/elb-fix-failing-health-ch
 				Liongeek
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Fri 18 Nov 2022 20:23">2022-11-19 05:23</span>
+<span class="comment-date align-middle" title="Sat 18 Nov 2023 20:23">2023-11-19 05:23</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">Ans: B</div>
@@ -1412,50 +1285,6 @@ https://aws.amazon.com/premiumsupport/knowledge-center/elb-fix-failing-health-ch
 </span>
 <span class="ml-2 upvote-text">
 				upvoted <span class="upvote-count">2</span> times
-			</span>
-<span class="comment-control-error ml-2"></span>
-</div>
-<div class="new-comment-box-container mt-2">
-</div>
-<div class="comment-replies">
-<!-- Nesting start -->
-<!-- Nesting end -->
-</div>
-</div>
-<div class="comment-ellipsis comment-toggled">
-		...
-	</div>
-</div>
-</div>
-<!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="705664" id="comment-705664">
-<a class="minimize-comment comment-toggle" href="#">
-<i class="fa fa-minus-square-o mr-2 mt-1"></i>
-</a>
-<a class="maximize-comment comment-toggle" href="#">
-<i class="fa fa-plus-square-o mr-2 mt-1"></i>
-</a>
-<div class="media-body">
-<div class="comment-head">
-<i class="fa fa-user mr-1 mt-1"></i>
-<a>
-<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				spaget
-			</h5>
-</a>
-<span class="comment-date align-middle" title="Thu 27 Oct 2022 16:40">2022-10-28 01:40</span>
-</div>
-<div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
-<div class="comment-content">It's B.</div>
-<div class="comment-control">
-<span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
-</span>
-<span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -1487,7 +1316,7 @@ https://aws.amazon.com/premiumsupport/knowledge-center/elb-fix-failing-health-ch
 				hanguyen89
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Thu 08 Sep 2022 16:33">2022-09-09 01:33</span>
+<span class="comment-date align-middle" title="Fri 08 Sep 2023 16:33">2023-09-09 01:33</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">D em ơi ! hungvv6</div>
@@ -1530,7 +1359,7 @@ https://aws.amazon.com/premiumsupport/knowledge-center/elb-fix-failing-health-ch
 				haxaffee
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Wed 31 Aug 2022 19:50">2022-09-01 04:50</span>
+<span class="comment-date align-middle" title="Thu 31 Aug 2023 19:50">2023-09-01 04:50</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
@@ -1575,7 +1404,7 @@ https://aws.amazon.com/premiumsupport/knowledge-center/elb-fix-failing-health-ch
 <i class="fa fa-angle-up"></i>
 </div>
 <!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="../../../js/popper.min.js"></script>
 <!-- jquery latest version -->
 <script src="../../../js/jquery.min.js"></script>
 <!-- bootstrap js -->
@@ -1586,8 +1415,6 @@ https://aws.amazon.com/premiumsupport/knowledge-center/elb-fix-failing-health-ch
 <script src="../../../js/wow.min.js"></script>
 <!-- main js -->
 <script src="../../../js/main.js"></script>
-<script async="" defer="" src="../../../js/bootstrap3-typeahead.min.js">
-</script>
 <script type="text/javascript">
     // Activate tooltips
     $(function () {
@@ -1614,39 +1441,6 @@ https://aws.amazon.com/premiumsupport/knowledge-center/elb-fix-failing-health-ch
         $('img[defsrc]').each(function() {
             $(this).attr('src',$(this).attr('defsrc'));
         });
-
-
-        function delayedStart() {
-            // Typeahead start
-
-            // Register typeahead element:
-            $('#header-keyword-search, #modal-keyword-search').typeahead({
-                source: autoCompleteQuery,
-                autoSelect: true,
-                delay: 150,
-                selectOnBlur: false,
-                afterSelect: function(param) {$(this.$element).closest('form').submit()}
-            });
-
-            // Query ajax function:
-            function autoCompleteQuery(query, callback) {
-                return $.get("/ajax/autocomplete/suggestions/?query=" + query).done(callback);
-            }
-            // Typeahead end
-        }
-        setTimeout(delayedStart, 1500);
-
-        // Don't submit empty search query
-        $('#modal-keyword-search-form').submit(function() {
-            if (!$('#modal-keyword-search').val()) {
-                return false;
-            }
-        });
-
-        // Auto focus on search box when search-modal is opened
-        $('.search-modal').on('shown.bs.modal', function (e) {
-            $(this).find('input[type=text]').focus();
-        });
     });
 </script>
 <script type="text/javascript">
@@ -1656,6 +1450,6 @@ https://aws.amazon.com/premiumsupport/knowledge-center/elb-fix-failing-health-ch
 </script>
 <script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
 <script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
-</div>
+</meta></div>
 </body>
 </html>

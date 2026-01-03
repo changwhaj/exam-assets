@@ -3,13 +3,14 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="2024-10-29 11:11" name="refresh_date"/>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
 <meta charset="utf-8"/>
 <title>Exam AWS Certified SysOps Administrator</title>
 <!-- responsive tag -->
-<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- bootstrap v4 css -->
 <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -24,23 +25,29 @@
 <!-- responsive css -->
 <link href="../../../css/responsive.css" rel="stylesheet" type="text/css"/>
 <link href="../../../css/forum.css" rel="stylesheet" type="text/css"/>
-<style>
-</style>
 <div class="sec-spacer pt-20">
 <div class="container">
 <div class="container action-row-container border-0 p-0 mb-2">
 <div class="container action-row clearfix d-flex">
 <i class="fa fm fa-language fa-2x mr-2"></i>
-<a class="btn show-english" href="#">English</a>
-<a class="btn show-korean d-none" href="#">한국어</a>
+<a class="btn show-english" href="javascript:void(0)">English</a>
+<a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
 <span class="pagination-container ml-auto">
 <span id="page-indicator"><strong></strong></span>
-<!--p id="page-indicator"></p-->
 <span class="pagination-nav ml-4">
-<a class="btn btn-sm" href="#" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
-<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect">
-</select>
-<a class="btn btn-sm" href="#" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
+<a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
+<a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
 </span>
 </span>
 </div>
@@ -50,7 +57,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS Certified SysOps Administrator - Associate 주제 1 문제 64 토론</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified SysOps Administrator - Associate 시험 주제 1, 질문 64 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified SysOps Administrator - Associate topic 1 question 64 discussion</h1>
@@ -65,20 +72,19 @@
 <!-- Question -->
 <div class="question-discussion-header">
 						
-							Amazon
-						 <a class="discussion-link">AWS 공인 SysOps 관리자 – 어소시에이트 의 시험 문제</a>
+							아마존
+						 <a class="discussion-link">AWS 공인 시스템 운영 관리자 - 어소시에이트 시험 문제</a>
 <div>
-							질문 #: 64 <br/>
-							주제 #: 1
+							문제 번호: 64 <br/>
+							주제 번호: 1
 						</div>
 </div>
 <div class="question-body mt-3 pt-3 border-top" data-id="809805">
 <p class="card-text">
 							
-								회사는 가져온 키 구성 요소와 함께 AWS KMS 고객 마스터 키(CMK)를 사용하고 있습니다. 회사는 데이터를 암호화하기 위해 Java 애플리케이션의 별칭으로 CMK를 참조합니다. CMK는 6개월마다 교체되어야 합니다. <br/>키를 순환하는 프로세스는 무엇입니까?<br/>
+								한 회사가 가져온 키 자료를 사용하는 AWS KMS 고객 마스터 키(CMK)를 사용하고 있습니다. 이 회사는 Java 애플리케이션에서 CMK의 별칭을 사용하여 데이터를 암호화합니다. CMK는 6개월마다 교체해야 합니다. <br/>키를 교체하는 절차는 무엇입니까?<br/>
 </p>
 <div class="voted-answers-tally d-none">
-<script id="809805" type="application/json">[{"voted_answers": "B", "vote_count": 12, "is_most_voted": true}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -87,47 +93,45 @@
 													A.
 												</span> 
 											
-											CMK에 대한 자동 키 교체를 활성화하고 6개월의 기간을 지정합니다.
+											CMK에 대해 자동 키 순환 기능을 활성화하고, 순환 기간을 6개월로 지정합니다.
 										</li>
 <li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
 												</span> 
 											
-											새로 가져온 자료로 새 CMK를 생성하고 새 CMK를 가리키도록 키 별칭을 업데이트합니다.
+											새로 가져온 자료로 새 CMK를 생성하고, 키 별칭이 새 CMK를 가리키도록 업데이트합니다.
 										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
-                최다 투표
+                가장 많은 표를 받은
             </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span> 
 											
-											현재 키 구성 요소를 삭제하고 새 구성 요소를 기존 CMK로 가져옵니다.
+											현재 키 자료를 삭제하고 새 자료를 기존 CMK에 가져옵니다.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span> 
 											
-											기존 키 구성 요소의 복사본을 백업으로 새 CMK로 가져오고 6개월 동안 교체 일정을 설정합니다.
+											기존 키 자료의 사본을 새 CMK에 백업으로 가져오고, 순환 일정을 6개월로 설정합니다.
 										</li>
 </ul>
 </div>
-<a class="btn btn-primary reveal-solution" href="#">제안된 답변 표시</a>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
 <a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
 <div class="card-text question-answer bg-light white-text" style="display: none;">
-<span class="correct-answer-box"><strong>추천 답변: </strong>
-<span class="correct-answer">B </span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
+<span class="correct-answer-box"><strong>정답: </strong>
+<span class="correct-answer">B</span>
 <br/>
 </span>
-<span class="answer-description"> 
-								참조: <br/>https://aws.amazon.com/kms/faqs/
-							</span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="12 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">B (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<span class="answer-description">
+</span>
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>지역사회 투표 배분</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="23 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">B (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
-                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">다른
+                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
 <!-- / Question  -->
@@ -151,7 +155,6 @@
 								A company is using an AWS KMS customer master key (CMK) with imported key material. The company references the CMK by its alias in the Java application to encrypt data. The CMK must be rotated every 6 months.<br/>What is the process to rotate the key?<br/>
 </p>
 <div class="voted-answers-tally d-none">
-<script id="809805" type="application/json">[{"voted_answers": "B", "vote_count": 12, "is_most_voted": true}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -192,13 +195,11 @@
 <div class="card-text question-answer bg-light white-text">
 <span class="correct-answer-box"><strong>Suggested Answer:</strong>
 <span class="correct-answer">B</span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
 <br/>
 </span>
 <span class="answer-description">
-								Reference:<br/>https://aws.amazon.com/kms/faqs/
-							</span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="12 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">B (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+</span>
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="23 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">B (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
@@ -206,10 +207,10 @@
 <!-- / Question  -->
 </div>
 <div class="comments-wrapper">
-<a class="badge reveal-comment" href="#">댓글 표시</a>
-<a class="badge hide-comment d-none" href="#">댓글 숨기기</a>
+<a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
 <div class="discussion-page-comments-section" data-discussion-question-id="79225" style="display: none">
-<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">코멘트</h4></div>
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
 <div class="container outer-discussion-container">
@@ -231,28 +232,26 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				프린카옌
+				왕자 다운
 			</h5>
 </a>
 <span class="badge badge-primary">
-				높은 투표율<i class="fa fa-thumbs-up"></i>
+				가장 많은 표를 받은<i class="fa fa-thumbs-up"></i>
 </span>
-<span class="comment-date align-middle" title="2022년 9월 2일 금요일 03:41">
-			11개월, 4주 전
-		</span>
+<span class="comment-date align-middle" title="2022년 9월 2일 금요일 오전 3시 41분">2022년 9월 2일 12시 41분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
-<div class="comment-content">키를 AWS KMS 또는 비대칭 키로 가져오거나 사용자 지정 키 스토어를 사용하도록 선택하는 경우 새 KMS 키를 생성하고 기존 KMS 키의 기존 키 별칭을 새 KMS 키에 매핑하여 수동으로 교체할 수 있습니다. https://aws.amazon.com/kms/faqs/</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
+<div class="comment-content">AWS KMS 또는 비대칭 키로 키를 가져오거나 사용자 지정 키 저장소를 사용하는 경우, 새 KMS 키를 생성하고 기존 KMS 키의 키 별칭을 새 KMS 키에 매핑하여 수동으로 키를 순환할 수 있습니다. https://aws.amazon.com/kms/faqs/</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">9</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">14</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -284,24 +283,68 @@
 			</h5>
 </a>
 <span class="badge badge-primary">
-				가장 최근<i class="fa fa-clock-o"></i>
+				가장 많은 표를 받은<i class="fa fa-thumbs-up"></i>
 </span>
-<span class="comment-date align-middle" title="2023년 8월 11일 금 11:21">
-			2주, 2일 전
-		</span>
+<span class="comment-date align-middle" title="2023년 8월 11일 금요일 오전 11시 21분">2023년 8월 11일 20시 21분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
-<div class="comment-content">A: 자동 키 교체는 가져온 키 자료가 아닌 특정 AWS 관리 키에 사용할 수 있습니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
+<div class="comment-content">A: 자동 키 순환 기능은 특정 AWS 관리형 키에 한해서만 제공되며, 가져온 키 자료에는 제공되지 않습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">7</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1304395" id="comment-1304395">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				가졌다
+			</h5>
+</a>
+<span class="badge badge-primary">
+				최신<i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="2024년 10월 29일 화요일 오전 11시 11분">2024년 10월 29일 20시 11분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">정답: B 가져온 키 자료를 사용하는 CMK: 가져온 키 자료를 사용하는 AWS KMS 고객 마스터 키(CMK)의 경우 자동 키 순환이 지원되지 않습니다. 순환 요구 사항을 충족하려면 업데이트된 가져온 키 자료로 새 CMK를 생성하고 별칭을 새 CMK를 가리키도록 업데이트해야 합니다. 기타 옵션: 옵션 A: 가져온 키 자료를 사용하는 CMK의 경우 자동 키 순환을 사용할 수 없습니다. 옵션 C: 기존 CMK에서 키 자료를 삭제하고 다시 가져오는 것은 새 CMK를 생성하지 않으므로 순환 요구 사항을 충족하지 않습니다. 옵션 D: 동일한 키 자료로 백업 CMK를 생성하는 것은 순환 요구 사항을 해결하지 않으며 정기적인 순환을 설정하지 않습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
+			 
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -332,22 +375,20 @@
 				크리스티나666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 30일 일 00:47">
-			4주 전
-		</span>
+<span class="comment-date align-middle" title="2023년 7월 30일 일요일 00시 47분">2023년 7월 30일 오전 9시 47분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
-<div class="comment-content">교체 날짜 AWS KMS는 교체가 활성화된 후 1년(약 365일) 후 키 구성 요소를 교체하고 그 이후에는 매년(약 365일) 마다 교체합니다. 고객 관리 키 자동 키 교체는 고객 관리 키에서 선택 사항이고 언제든지 활성화 및 비활성화할 수 있으므로 교체 날짜는 가장 최근에 교체가 활성화된 날짜에 따라 달라집니다. 해당 날짜는 키 수명 동안 여러 번 변경될 수 있습니다. 예를 들어, 2022년 1월 1일에 고객 관리형 키를 생성하고 2022년 3월 15일에 자동 키 교체를 활성화하는 경우 AWS KMS는 2023년 3월 15일, 2024년 3월 15일 및 그 이후 365일마다 키 구성 요소를 교체합니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
+<div class="comment-content">AWS KMS는 키 순환을 활성화한 후 1년(약 365일) 후에 키 자료를 순환하고, 그 이후에는 매년(약 365일)마다 순환합니다. 고객 관리형 키의 경우 자동 키 순환은 선택 사항이며 언제든지 활성화 또는 비활성화할 수 있으므로 순환 날짜는 순환이 가장 최근에 활성화된 날짜에 따라 결정됩니다. 이 날짜는 키 수명 동안 여러 번 변경될 수 있습니다. 예를 들어 2022년 1월 1일에 고객 관리형 키를 생성하고 2022년 3월 15일에 자동 키 순환을 활성화하면 AWS KMS는 2023년 3월 15일, 2024년 3월 15일, 그리고 그 이후 매 365일마다 키 자료를 순환합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -370,21 +411,19 @@
 				크리스티나666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 30일 일 00:49">
-			4주 전
-		</span>
+<span class="comment-date align-middle" title="2023년 7월 30일 일요일 00시 49분">2023년 7월 30일 오전 9시 49분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">KMS 키를 수동으로 교체하는 경우 애플리케이션에서 KMS 키 ID 또는 키 ARN에 대한 참조도 업데이트해야 합니다. 친숙한 이름을 KMS 키와 연결하는 별칭을 사용하면 이 프로세스를 더 쉽게 만들 수 있습니다. 별칭을 사용하여 애플리케이션에서 KMS 키를 참조하세요. 그런 다음 애플리케이션에서 사용하는 KMS 키를 변경하려면 애플리케이션 코드를 편집하는 대신 별칭의 대상 KMS 키를 변경하세요.</div>
+<div class="comment-content">KMS 키를 수동으로 교체할 때는 애플리케이션에서 KMS 키 ID 또는 키 ARN에 대한 참조도 업데이트해야 합니다. KMS 키에 친숙한 이름을 연결하는 별칭을 사용하면 이 과정을 간소화할 수 있습니다. 애플리케이션에서 KMS 키를 참조할 때 별칭을 사용하세요. 그런 다음 애플리케이션에서 사용하는 KMS 키를 변경하려면 애플리케이션 코드를 수정하는 대신 별칭의 대상 KMS 키를 변경하면 됩니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -420,25 +459,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				Arnaud92
+				아르노92
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 12월 28일 수요일 13:06">
-			8개월 전
-		</span>
+<span class="comment-date align-middle" title="2022년 12월 28일 수요일 13시 06분">2022년 12월 28일 22시 06분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
-<div class="comment-content">고객 관리 키에 대한 새 암호화 자료를 생성하려면 새 KMS 키를 생성한 다음 새 KMS 키를 사용하도록 애플리케이션이나 별칭을 변경하면 됩니다. https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
+<div class="comment-content">고객 관리 키에 대한 새 암호화 자료를 생성하려면 새 KMS 키를 생성한 다음 애플리케이션이나 별칭이 새 KMS 키를 사용하도록 변경하면 됩니다. https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -461,8 +498,8 @@
 </div>
 </div>
 <div class="comments-wrapper-en" style="display: none;">
-<a class="badge reveal-comment" href="#">Show Comments</a>
-<a class="badge hide-comment d-none" href="#">Hide Comments</a>
+<a class="badge reveal-comment" href="javascript:void(0)">Show Comments</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">Hide Comments</a>
 <div class="discussion-page-comments-section-en" data-discussion-question-id="79225" style="display: none">
 <div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">Comments</h4></div>
 <!-- discussion.html -->
@@ -492,9 +529,7 @@
 <span class="badge badge-primary">
 				Highly Voted <i class="fa fa-thumbs-up"></i>
 </span>
-<span class="comment-date align-middle" title="Fri 02 Sep 2022 03:41">
-			11 months, 4 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Fri 02 Sep 2022 03:41">2022-09-02 12:41</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
@@ -508,7 +543,7 @@ https://aws.amazon.com/kms/faqs/</div>
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">9</span> times
+				upvoted <span class="upvote-count">14</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -541,11 +576,9 @@ https://aws.amazon.com/kms/faqs/</div>
 			</h5>
 </a>
 <span class="badge badge-primary">
-				Most Recent <i class="fa fa-clock-o"></i>
+				Highly Voted <i class="fa fa-thumbs-up"></i>
 </span>
-<span class="comment-date align-middle" title="Fri 11 Aug 2023 11:21">
-			2 weeks, 2 days ago
-		</span>
+<span class="comment-date align-middle" title="Fri 11 Aug 2023 11:21">2023-08-11 20:21</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
@@ -557,7 +590,60 @@ https://aws.amazon.com/kms/faqs/</div>
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">7</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1304395" id="comment-1304395">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				gehadg
+			</h5>
+</a>
+<span class="badge badge-primary">
+				Most Recent <i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="Tue 29 Oct 2024 11:11">2024-10-29 20:11</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Correct Answer: B
+CMKs with Imported Key Material: For AWS KMS customer master keys (CMKs) with imported key material, automatic key rotation is not supported. To meet rotation requirements, a new CMK must be created with the updated imported key material, and the alias should be updated to point to the new CMK.
+
+Other Options:
+
+Option A: Automatic key rotation is not available for CMKs with imported key material.
+Option C: Deleting and re-importing key material into the existing CMK does not satisfy rotation requirements, as it does not create a new CMK.
+Option D: Creating a backup CMK with the same key material does not address rotation requirements and does not set up regular rotation.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -589,9 +675,7 @@ https://aws.amazon.com/kms/faqs/</div>
 				Christina666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sun 30 Jul 2023 00:47">
-			4 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Sun 30 Jul 2023 00:47">2023-07-30 09:47</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
@@ -633,9 +717,7 @@ For example, if you create a customer managed key on January 1, 2022, and enable
 				Christina666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sun 30 Jul 2023 00:49">
-			4 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Sun 30 Jul 2023 00:49">2023-07-30 09:49</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">When you rotate KMS keys manually, you also need to update references to the KMS key ID or key ARN in your applications. Aliases, which associate a friendly name with a KMS key, can make this process easier. Use an alias to refer to a KMS key in your applications. Then, when you want to change the KMS key that the application uses, instead of editing your application code, change the target KMS key of the alias.</div>
@@ -686,9 +768,7 @@ For example, if you create a customer managed key on January 1, 2022, and enable
 				Arnaud92
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Wed 28 Dec 2022 13:06">
-			8 months ago
-		</span>
+<span class="comment-date align-middle" title="Wed 28 Dec 2022 13:06">2022-12-28 22:06</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
@@ -733,7 +813,7 @@ For example, if you create a customer managed key on January 1, 2022, and enable
 <i class="fa fa-angle-up"></i>
 </div>
 <!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="../../../js/popper.min.js"></script>
 <!-- jquery latest version -->
 <script src="../../../js/jquery.min.js"></script>
 <!-- bootstrap js -->
@@ -744,8 +824,6 @@ For example, if you create a customer managed key on January 1, 2022, and enable
 <script src="../../../js/wow.min.js"></script>
 <!-- main js -->
 <script src="../../../js/main.js"></script>
-<script async="" defer="" src="../../../js/bootstrap3-typeahead.min.js">
-</script>
 <script type="text/javascript">
     // Activate tooltips
     $(function () {
@@ -772,39 +850,6 @@ For example, if you create a customer managed key on January 1, 2022, and enable
         $('img[defsrc]').each(function() {
             $(this).attr('src',$(this).attr('defsrc'));
         });
-
-
-        function delayedStart() {
-            // Typeahead start
-
-            // Register typeahead element:
-            $('#header-keyword-search, #modal-keyword-search').typeahead({
-                source: autoCompleteQuery,
-                autoSelect: true,
-                delay: 150,
-                selectOnBlur: false,
-                afterSelect: function(param) {$(this.$element).closest('form').submit()}
-            });
-
-            // Query ajax function:
-            function autoCompleteQuery(query, callback) {
-                return $.get("/ajax/autocomplete/suggestions/?query=" + query).done(callback);
-            }
-            // Typeahead end
-        }
-        setTimeout(delayedStart, 1500);
-
-        // Don't submit empty search query
-        $('#modal-keyword-search-form').submit(function() {
-            if (!$('#modal-keyword-search').val()) {
-                return false;
-            }
-        });
-
-        // Auto focus on search box when search-modal is opened
-        $('.search-modal').on('shown.bs.modal', function (e) {
-            $(this).find('input[type=text]').focus();
-        });
     });
 </script>
 <script type="text/javascript">
@@ -814,6 +859,6 @@ For example, if you create a customer managed key on January 1, 2022, and enable
 </script>
 <script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
 <script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
-</div>
+</meta></div>
 </body>
 </html>

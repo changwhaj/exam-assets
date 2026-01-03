@@ -3,13 +3,14 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="2025-05-01 9:26" name="refresh_date"/>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
 <meta charset="utf-8"/>
 <title>Exam AWS Certified SysOps Administrator</title>
 <!-- responsive tag -->
-<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- bootstrap v4 css -->
 <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -56,7 +57,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS Certified SysOps Administrator – Associate 주제 1 문제 376 토론</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified SysOps Administrator - Associate 시험 주제 1, 질문 376 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified SysOps Administrator - Associate topic 1 question 376 discussion</h1>
@@ -71,21 +72,20 @@
 <!-- Question -->
 <div class="question-discussion-header">
 						
-							Amazon
-						 <a class="discussion-link">AWS 공인 SysOps 관리자 – 어소시에이트 의 시험 문제</a>
+							아마존
+						 <a class="discussion-link">AWS 공인 시스템 운영 관리자 - 어소시에이트 시험 문제</a>
 <div>
-							질문 #: 376 <br/>
-							주제 #: 1
+							문제 번호: 376 <br/>
+							주제 번호: 1
 						</div>
 </div>
 <div class="question-body mt-3 pt-3 border-top" data-id="893257">
 <p class="card-text">
 							
-								회사에는 다중 계정 환경이 있습니다. 계정 A에는 Amazon EC2 인스턴스에서 호스팅되는 프로덕션 애플리케이션이 있습니다. 애플리케이션은 계정 B에서 호스팅되는 Amazon DynamoDB 테이블의 데이터를 쿼리해야 합니다. <br/><br/>SysOps 관리자는 계정 A의 EC2 인스턴스에 계정 B의 DynamoDB 테이블에 대한 액세스 권한을 제공해야 합니다. <br/><br/>이를 충족하는 가장 안전한 솔루션은 무엇입니까? 요구 사항?
+								한 회사가 여러 계정으로 구성된 환경을 운영하고 있습니다. 계정 A에는 Amazon EC2 인스턴스에서 호스팅되는 프로덕션 애플리케이션이 있습니다. 이 애플리케이션은 계정 B에 호스팅된 Amazon DynamoDB 테이블의 데이터를 조회해야 합니다. <br/><br/>시스템 운영 관리자는 계정 A의 EC2 인스턴스가 계정 B의 DynamoDB 테이블에 접근할 수 있도록 권한을 부여해야 합니다. <br/><br/>이러한 요구 사항을 충족하는 가장 안전한 솔루션은 무엇일까요?
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="893257" type="application/json">[{"voted_answers": "B", "vote_count": 3, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -94,43 +94,44 @@
 													A.
 												</span> 
 											
-											EC2 인스턴스의 IAM 역할에 연결된 IAM 정책을 업데이트하여 계정 B의 DynamoDB 테이블에 대한 dynamodb:Query 권한을 허용합니다. 계정 A에 정책을 추가하여 DynamoDB 서비스 주체가 PassRole 작업을 사용하여 계정 B에 대한 역할입니다.
+											EC2 인스턴스의 IAM 역할에 연결된 IAM 정책을 업데이트하여 계정 B의 DynamoDB 테이블에 대한 dynamodb:Query 권한을 허용합니다. 계정 A에 정책을 추가하여 DynamoDB 서비스 주체가 PassRole 작업을 사용하여 계정 B에 역할을 전달할 수 있도록 합니다.
 										</li>
 <li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
 												</span> 
 											
-											계정 B에서 DynamoDB 테이블을 쿼리할 수 있는 권한이 있는 IAM 역할을 생성합니다. 계정 B에서 새로 생성된 IAM 역할에 대한 신뢰 정책에 EC2 인스턴스의 IAM 역할을 추가합니다. EC2 인스턴스의 IAM 역할에 연결된 IAM 정책을 업데이트하여 계정 B에서 새로 생성된 IAM 역할에 대한 sts:AssumeRole 권한을 허용합니다.
-										</li>
+											계정 B에서 DynamoDB 테이블을 쿼리할 수 있는 권한이 있는 IAM 역할을 생성합니다. EC2 인스턴스의 IAM 역할을 계정 B에 새로 생성된 IAM 역할의 신뢰 정책에 추가합니다. EC2 인스턴스의 IAM 역할에 연결된 IAM 정책을 업데이트하여 계정 B에 새로 생성된 IAM 역할에 sts:AssumeRole 권한을 허용합니다.
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                가장 많은 표를 받은
+            </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span> 
 											
-											계정 B의 DynamoDB 테이블에 대한 dynamodb:Query 권한을 허용하도록 EC2 인스턴스의 IAM 역할에 연결된 IAM 정책을 업데이트합니다. EC2 인스턴스의 IAM 역할에서 쿼리 작업을 허용하도록 DynamoDB 테이블의 리소스 정책을 업데이트합니다.
+											EC2 인스턴스의 IAM 역할에 연결된 IAM 정책을 업데이트하여 계정 B의 DynamoDB 테이블에 대한 dynamodb:Query 권한을 허용합니다. DynamoDB 테이블의 리소스 정책을 업데이트하여 EC2 인스턴스의 IAM 역할에서 쿼리 작업을 허용합니다.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span> 
 											
-											계정 B에서 DynamoDB 테이블을 쿼리할 수 있는 적절한 권한이 있는 정적 IAM 키를 생성합니다. 이러한 자격 증명을 EC2 인스턴스의 자격 증명 파일에 포함합니다. 애플리케이션이 테이블을 쿼리해야 할 때마다 자격 증명을 참조하세요.
+											계정 B에서 DynamoDB 테이블을 쿼리하는 데 필요한 권한을 가진 정적 IAM 키를 생성합니다. 이 자격 증명을 EC2 인스턴스의 자격 증명 파일에 포함시킵니다. 애플리케이션이 테이블을 쿼리해야 할 때마다 이 자격 증명을 참조합니다.
 										</li>
 </ul>
 </div>
-<a class="btn btn-primary reveal-solution" href="#">제안된 답변 표시</a>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
 <a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
 <div class="card-text question-answer bg-light white-text" style="display: none;">
-<span class="correct-answer-box"><strong>제안된 답변: </strong>
+<span class="correct-answer-box"><strong>정답: </strong>
 <span class="correct-answer">B</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="3 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">B (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
-                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
-                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">다른
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>지역사회 투표 배분</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="8 votes." data-toggle="tooltip" role="progressbar" style="width: 73%; display: flex;" title="">B (73%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="3 votes." data-toggle="tooltip" role="progressbar" style="width: 27%; display: flex;" title="">C (27%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
+                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
 <!-- / Question  -->
@@ -155,7 +156,6 @@
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="893257" type="application/json">[{"voted_answers": "B", "vote_count": 3, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -172,7 +172,9 @@
 												</span>
 											
 											In Account B, create an IAM role that has permission to query the DynamoDB table. Add the EC2 instance's IAM role to the trust policy on the newly created IAM role in Account Update the IAM policy that is attached to the EC2 instance's IAM role to allow the sts:AssumeRole permission on the newly created IAM role in Account B.
-										</li>
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                Most Voted
+            </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
@@ -198,8 +200,7 @@
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="3 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">B (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
-                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="8 votes." data-toggle="tooltip" role="progressbar" style="width: 73%; display: flex;" title="">B (73%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="3 votes." data-toggle="tooltip" role="progressbar" style="width: 27%; display: flex;" title="">C (27%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
@@ -209,7 +210,7 @@
 <a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
 <a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
 <div class="discussion-page-comments-section" data-discussion-question-id="119001" style="display: none">
-<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">코멘트</h4></div>
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
 <div class="container outer-discussion-container">
@@ -218,6 +219,94 @@
 <!-- New comment start -->
 <!-- New comment end -->
 <div class="discussion-container">
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1565386" id="comment-1565386">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				헤샤마하마드
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2025년 5월 1일 목요일 오전 9시 26분">2025년 5월 1일 18시 26분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
+<div class="comment-content">일부 AWS 서비스의 경우 IAM을 사용하여 계정 간 리소스 액세스 권한을 부여할 수 있습니다. 이를 위해 공유하려는 리소스에 리소스 정책을 직접 연결하거나 역할을 프록시로 사용할 수 있습니다. 리소스 기반 정책을 지원하지 않는 다른 계정의 리소스에 액세스하려는 경우 역할을 프록시로 사용하세요. AWS는 이제 DynamoDB 리소스 기반 정책을 지원합니다. 다음 두 문서를 순서대로 확인하세요. https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-cross-account-resource-access.html https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
+			 
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1343245" id="comment-1343245">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				살라94
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2025년 1월 20일 월요일 00시 15분">2025년 1월 20일 오전 9시 15분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
+<div class="comment-content">이제 DynamoDB는 리소스 기반 정책을 지원하므로 C가 정답입니다. https://aws.amazon.com/blogs/database/simplify-cross-account-access-control-with-amazon-dynamodb-using-resource-based-policies/</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
+			 
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
 <!-- single_comment.html -->
 <div class="media comment-container" data-comment-id="1108601" id="comment-1108601">
 <a class="minimize-comment comment-toggle" href="#">
@@ -234,20 +323,20 @@
 				r2c3po
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 12월 29일 금 11:46">2023-12-29 20:46</span>
+<span class="comment-date align-middle" title="2024년 6월 29일 토요일 오전 10시 46분">2024년 6월 29일 19시 46분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
-<div class="comment-content">이 옵션은 AWS 계정 간 보안 액세스를 위해 IAM 역할 및 교차 계정 역할을 사용하는 모범 사례를 따릅니다. DynamoDB 테이블을 쿼리하는 데 필요한 권한이 있는 계정 B에 IAM 역할을 생성하고 새로 생성된 역할의 신뢰 정책에 EC2 인스턴스의 IAM 역할을 추가하면 안전한 교차 계정 액세스 메커니즘이 설정됩니다. 그러면 EC2 인스턴스가 계정 B의 역할을 맡아 DynamoDB 테이블에 안전하게 액세스할 수 있습니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
+<div class="comment-content">이 옵션은 AWS 계정 간의 안전한 액세스를 위해 IAM 역할과 교차 계정 역할을 사용하는 모범 사례를 따릅니다. 계정 B에서 DynamoDB 테이블을 쿼리하는 데 필요한 권한을 가진 IAM 역할을 생성하고, 새로 생성된 역할의 신뢰 정책에 EC2 인스턴스의 IAM 역할을 추가하면 안전한 교차 계정 액세스 메커니즘이 구축됩니다. 그러면 EC2 인스턴스는 계정 B의 역할을 수임하여 DynamoDB 테이블에 안전하게 액세스할 수 있습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -275,23 +364,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				AWSdeveloper08
+				AWS 개발자08
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 8월 25일 금 18:31">2023-08-26 03:31</span>
+<span class="comment-date align-middle" title="2024년 2월 25일 일요일 19시 31분">2024년 2월 26일 오전 4시 31분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
-<div class="comment-content">옵션 B는 계정 A의 EC2 인스턴스에 계정 B의 DynamoDB 테이블에 대한 액세스 권한을 부여하는 가장 안전한 솔루션을 설명합니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
+<div class="comment-content">옵션 B는 계정 A의 EC2 인스턴스가 계정 B의 DynamoDB 테이블에 액세스할 수 있도록 하는 가장 안전한 솔루션을 설명합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -319,23 +408,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				엑스소혹스
+				x소혹스
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 8월 25일 금 15:14">2023-08-26 00:14</span>
+<span class="comment-date align-middle" title="2024년 2월 25일 일요일 16시 14분">2024년 2월 26일 오전 1시 14분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
-<div class="comment-content">정답은 B인 것 같습니다. 다음은 람다를 사용한 예입니다. https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/configure-cross-account-access-to-amazon-dynamodb.html 그리고 dynamoDB에서 리소스 정책을 찾을 수 없습니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
+<div class="comment-content">정답은 B인 것 같습니다. Lambda를 사용한 예시는 다음 링크를 참조하세요: https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/configure-cross-account-access-to-amazon-dynamodb.html 그리고 DynamoDB에서 리소스 정책을 찾을 수 없었습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -363,22 +452,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				탭 카트
+				탭카
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 8월 25일 금 08:21">2023-08-25 17:21</span>
+<span class="comment-date align-middle" title="2024년 2월 25일 일요일 오전 9시 21분">2024년 2월 25일 18시 21분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">대답은 B입니다. https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/configure-cross-account-access-to-amazon-dynamodb.html에 따르면 계정 B에서 다음과 같은 역할을 생성해야 합니다. DynamoDB 테이블을 쿼리할 권한이 있습니다. 신뢰할 수 있는 엔터티 선택에서 계정 A를 선택합니다. 그런 다음 계정 A에 정책을 생성하여 계정 B에 액세스합니다.</div>
+<div class="comment-content">정답은 B입니다. https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/configure-cross-account-access-to-amazon-dynamodb.html에 따르면, 계정 B에 DynamoDB 테이블을 쿼리할 수 있는 권한이 있는 역할을 생성해야 합니다. '신뢰할 수 있는 엔티티 선택'에서 계정 A를 선택합니다. 그런 다음 계정 A에서 계정 B에 접근할 수 있는 정책을 생성합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -414,6 +503,96 @@
 <!-- New comment end -->
 <div class="discussion-container">
 <!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1565386" id="comment-1565386">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				heshamahammad
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Thu 01 May 2025 09:26">2025-05-01 18:26</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
+<div class="comment-content">For some AWS services, you can grant cross-account access to your resources using IAM. To do this, you can attach a resource policy directly to the resource that you want to share, or use a role as a proxy. Use a role as a proxy when you want to access resources in another account that do not support resource-based policies. AWS now supoorts dynamodb resource based policies. Check both references in order.
+https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-cross-account-resource-access.html
+https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1343245" id="comment-1343245">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Salah94
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Mon 20 Jan 2025 00:15">2025-01-20 09:15</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
+<div class="comment-content">Now DyanmoDB supports resource based policy and hence C is the correct answer https://aws.amazon.com/blogs/database/simplify-cross-account-access-control-with-amazon-dynamodb-using-resource-based-policies/</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">2</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
 <div class="media comment-container" data-comment-id="1108601" id="comment-1108601">
 <a class="minimize-comment comment-toggle" href="#">
 <i class="fa fa-minus-square-o mr-2 mt-1"></i>
@@ -429,7 +608,7 @@
 				r2c3po
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Fri 29 Dec 2023 11:46">2023-12-29 20:46</span>
+<span class="comment-date align-middle" title="Sat 29 Jun 2024 10:46">2024-06-29 19:46</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
@@ -443,7 +622,7 @@ The EC2 instance can then assume the role in Account B and access the DynamoDB t
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">4</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -475,7 +654,7 @@ The EC2 instance can then assume the role in Account B and access the DynamoDB t
 				AWSdeveloper08
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Fri 25 Aug 2023 18:31">2023-08-26 03:31</span>
+<span class="comment-date align-middle" title="Sun 25 Feb 2024 19:31">2024-02-26 04:31</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
@@ -487,7 +666,7 @@ The EC2 instance can then assume the role in Account B and access the DynamoDB t
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -519,7 +698,7 @@ The EC2 instance can then assume the role in Account B and access the DynamoDB t
 				xSohox
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Fri 25 Aug 2023 15:14">2023-08-26 00:14</span>
+<span class="comment-date align-middle" title="Sun 25 Feb 2024 16:14">2024-02-26 01:14</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>B</strong></span></div>
@@ -536,7 +715,7 @@ And I couldn't find resource policy on dynamoDB.</div>
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -568,7 +747,7 @@ And I couldn't find resource policy on dynamoDB.</div>
 				Tapkar
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Fri 25 Aug 2023 08:21">2023-08-25 17:21</span>
+<span class="comment-date align-middle" title="Sun 25 Feb 2024 09:21">2024-02-25 18:21</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">Answer is B.
@@ -582,7 +761,7 @@ You should create a role in account B that has permission to query the DynamoDB 
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -661,6 +840,6 @@ You should create a role in account B that has permission to query the DynamoDB 
 </script>
 <script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
 <script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
-</div>
+</meta></div>
 </body>
 </html>

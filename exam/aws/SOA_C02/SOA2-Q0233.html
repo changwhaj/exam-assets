@@ -3,13 +3,14 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="2023-10-07 14:29" name="refresh_date"/>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
 <meta charset="utf-8"/>
 <title>Exam AWS Certified SysOps Administrator</title>
 <!-- responsive tag -->
-<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- bootstrap v4 css -->
 <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -31,13 +32,21 @@
 <i class="fa fm fa-language fa-2x mr-2"></i>
 <a class="btn show-english" href="javascript:void(0)">English</a>
 <a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
 <span class="pagination-container ml-auto">
 <span id="page-indicator"><strong></strong></span>
-<!--p id="page-indicator"></p-->
 <span class="pagination-nav ml-4">
 <a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
-<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect">
-</select>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
 <a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
 </span>
 </span>
@@ -48,7 +57,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS Certified SysOps Administrator - Associate 주제 1 문제 233 토론</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified SysOps Administrator - Associate 시험 주제 1, 질문 233, 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified SysOps Administrator - Associate topic 1 question 233 discussion</h1>
@@ -63,67 +72,66 @@
 <!-- Question -->
 <div class="question-discussion-header">
 						
-							Amazon
-						 <a class="discussion-link">AWS 공인 SysOps 관리자 – 어소시에이트 의 시험 문제</a>
+							아마존
+						 <a class="discussion-link">AWS 공인 시스템 운영 관리자 - 어소시에이트 시험 문제</a>
 <div>
-							질문 #: 233 <br/>
-							주제 #: 1
+							문제 번호: 233 <br/>
+							주제 번호: 1
 						</div>
 </div>
 <div class="question-body mt-3 pt-3 border-top" data-id="867365">
 <p class="card-text">
 							
-								SysOps 관리자는 회사의 Amazon EC2 인스턴스가 예상대로 자동 확장되는지 확인해야 합니다. SysOps 관리자는 Amazon EC2 Auto Scaling 수명 주기 후크를 구성하여 Amazon EventBridge(Amazon CloudWatch Events)에 이벤트를 보낸 다음 AWS Lambda 함수를 호출하여 EC2 인스턴스를 구성합니다. 구성이 완료되면 Lambda 함수는 Complete-lifecycle-action 이벤트를 호출하여 EC2 인스턴스를 서비스에 넣습니다. 테스트에서 SysOps 관리자는 EC2 인스턴스가 자동 크기 조정될 때 Lambda 함수가 호출되지 않는다는 것을 발견했습니다. <br/><br/>이 문제를 해결하려면 SysOps 관리자가 무엇을 해야 합니까?
+								시스템 운영 관리자는 회사의 Amazon EC2 인스턴스가 예상대로 자동 확장되도록 해야 합니다. 시스템 운영 관리자는 Amazon EC2 자동 확장 라이프사이클 후크를 구성하여 Amazon EventBridge(Amazon CloudWatch Events)로 이벤트를 전송하고, 이 이벤트는 AWS Lambda 함수를 호출하여 EC2 인스턴스를 구성합니다. 구성이 완료되면 Lambda 함수는 complete-lifecycle-action 이벤트를 호출하여 EC2 인스턴스를 서비스에 투입합니다. 테스트 과정에서 시스템 운영 관리자는 EC2 인스턴스가 자동 확장될 때 Lambda 함수가 호출되지 않는 것을 발견했습니다. <br/><br/>이 문제를 해결하기 위해 시스템 운영 관리자는 어떻게 해야 할까요?
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="867365" type="application/json">[{"voted_answers": "A", "vote_count": 17, "is_most_voted": true}, {"voted_answers": "D", "vote_count": 4, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
-<li class="multi-choice-item">
+<li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="A">
 													A.
 												</span> 
 											
-											EventBridge(CloudWatch 이벤트) 규칙에 의해 호출될 수 있도록 Lambda 함수에 권한을 추가합니다.
+											EventBridge(CloudWatch Events) 규칙에서 Lambda 함수를 호출할 수 있도록 해당 함수에 권한을 추가합니다.
 										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
-                최다 투표
+                가장 많은 표를 받은
             </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
 												</span> 
 											
-											수명 주기 후크에 오류가 발생하거나 시간 초과가 발생하는 경우 수명 주기 후크 작업을 CONTINUE로 변경합니다.
+											라이프사이클 후크에서 오류나 시간 초과가 발생할 경우, 라이프사이클 후크의 동작을 "계속"으로 변경하십시오.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span> 
 											
-											실패 시 Lambda 함수 호출을 재시도하도록 EventBridge(CloudWatch 이벤트) 규칙에서 재시도 정책을 구성합니다.
+											이벤트브리지(CloudWatch Events) 규칙에 재시도 정책을 구성하여 Lambda 함수 호출이 실패할 경우 재시도하도록 합니다.
 										</li>
-<li class="multi-choice-item correct-hidden">
+<li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span> 
 											
-											완전한 수명 주기 작업 이벤트를 호출할 수 있는 권한을 갖도록 Lambda 함수 실행 역할을 업데이트합니다.
+											Lambda 함수 실행 역할을 업데이트하여 complete-lifecycle-action 이벤트를 호출할 수 있는 권한을 부여합니다.
 										</li>
 </ul>
 </div>
-<a class="btn btn-primary reveal-solution" href="#">제안된 답변 표시</a>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
 <a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
 <div class="card-text question-answer bg-light white-text" style="display: none;">
 <span class="correct-answer-box"><strong>제안된 답변: </strong>
-<span class="correct-answer">D</span>
+<span class="correct-answer">A</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="17 votes." data-toggle="tooltip" role="progressbar" style="width: 81%; display: flex;" title="">A (81%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="4 votes." data-toggle="tooltip" role="progressbar" style="width: 19%; display: flex;" title="">D (19%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
-                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">다른
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>지역사회 투표 배분</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="26 votes." data-toggle="tooltip" role="progressbar" style="width: 87%; display: flex;" title="">A (87%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="4 votes." data-toggle="tooltip" role="progressbar" style="width: 13%; display: flex;" title="">13%</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
+                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
 <!-- / Question  -->
@@ -148,11 +156,10 @@
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="867365" type="application/json">[{"voted_answers": "A", "vote_count": 17, "is_most_voted": true}, {"voted_answers": "D", "vote_count": 4, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
-<li class="multi-choice-item">
+<li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="A">
 													A.
 												</span>
@@ -175,7 +182,7 @@
 											
 											Configure a retry policy in the EventBridge (CloudWatch Events) rule to retry the Lambda function invocation upon failure.
 										</li>
-<li class="multi-choice-item correct-hidden">
+<li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span>
@@ -188,12 +195,12 @@
 <a class="btn btn-primary hide-solution d-none" href="#">Hide Answer</a>
 <div class="card-text question-answer bg-light white-text">
 <span class="correct-answer-box"><strong>Suggested Answer:</strong>
-<span class="correct-answer">D</span>
+<span class="correct-answer">A</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="17 votes." data-toggle="tooltip" role="progressbar" style="width: 81%; display: flex;" title="">A (81%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="4 votes." data-toggle="tooltip" role="progressbar" style="width: 19%; display: flex;" title="">D (19%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="26 votes." data-toggle="tooltip" role="progressbar" style="width: 87%; display: flex;" title="">A (87%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="4 votes." data-toggle="tooltip" role="progressbar" style="width: 13%; display: flex;" title="">13%</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
@@ -203,7 +210,7 @@
 <a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
 <a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
 <div class="discussion-page-comments-section" data-discussion-question-id="99056" style="display: none">
-<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">코멘트</h4></div>
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
 <div class="container outer-discussion-container">
@@ -229,22 +236,22 @@
 			</h5>
 </a>
 <span class="badge badge-primary">
-				높은 투표율<i class="fa fa-thumbs-up"></i>
+				가장 많은 표를 받은<i class="fa fa-thumbs-up"></i>
 </span>
-<span class="comment-date align-middle" title="2023년 7월 25일 (화) 05:10">2023-07-25 14:10</span>
+<span class="comment-date align-middle" title="2024년 7월 25일 목요일 오전 5시 10분">2024년 7월 25일 14시 10분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">Lambda 함수가 EventBridge(CloudWatch 이벤트) 규칙의 대상으로 사용되는 경우 규칙에서 호출하려면 권한이 필요합니다. 기본적으로 Lambda 함수에는 EventBridge 규칙에 의해 호출될 권한이 없습니다. EventBridge 규칙에 의해 Lambda 함수가 트리거되도록 하려면 SysOps 관리자가 Lambda 함수의 실행 역할에 적절한 권한을 추가해야 합니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">Lambda 함수를 EventBridge(CloudWatch Events) 규칙의 대상으로 사용하려면 해당 규칙에 의해 호출될 수 있는 권한이 필요합니다. 기본적으로 Lambda 함수는 EventBridge 규칙에 의해 호출될 수 있는 권한이 없습니다. Lambda 함수가 EventBridge 규칙에 의해 트리거되도록 하려면 시스템 운영 관리자가 Lambda 함수의 실행 역할에 적절한 권한을 추가해야 합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">5</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">8</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -267,19 +274,19 @@
 				크리스티나666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 25일 (화) 05:10">2023-07-25 14:10</span>
+<span class="comment-date align-middle" title="2024년 7월 25일 목요일 오전 5시 10분">2024년 7월 25일 14시 10분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">옵션 B(수명 주기 후크에 오류가 발생하거나 시간 초과가 발생하는 경우 수명 주기 후크 작업을 CONTINUE로 변경)는 올바른 옵션이 아닙니다. 수명 주기 후크 작업을 CONTINUE로 변경해도 Lambda 함수가 호출되지 않는 문제는 해결되지 않습니다. 옵션 C(실패 시 Lambda 함수 호출을 재시도하도록 EventBridge(CloudWatch 이벤트) 규칙에서 재시도 정책 구성)도 올바른 옵션이 아닙니다. 재시도 정책을 구성하면 일시적인 오류를 처리하는 데 유용할 수 있지만, Lambda 함수에 EventBridge 규칙에 의해 호출할 권한이 없다는 것이 근본적인 문제인 경우에는 도움이 되지 않습니다. 옵션 D(완전한 수명 주기 작업 이벤트를 호출할 수 있는 권한을 갖도록 Lambda 함수 실행 역할 업데이트)는 올바른 옵션이 아닙니다. "complete-lifecycle-action" 이벤트는 Lambda 함수 실행 역할과 관련이 없습니다. 주요 문제는 Lambda 함수가 EventBridge 규칙에 의해 트리거되지 않으므로 실행 역할을 업데이트해도 문제가 해결되지 않는다는 것입니다.</div>
+<div class="comment-content">옵션 B(라이프사이클 후크에서 실패 또는 시간 초과가 발생할 경우 라이프사이클 후크 액션을 CONTINUE로 변경)는 올바른 옵션이 아닙니다. 라이프사이클 후크 액션을 CONTINUE로 변경해도 Lambda 함수가 호출되지 않는 문제는 해결되지 않습니다. 옵션 C(EventBridge(CloudWatch Events) 규칙에 재시도 정책을 구성하여 실패 시 Lambda 함수 호출을 재시도) 또한 올바른 옵션이 아닙니다. 재시도 정책을 구성하는 것은 일시적인 오류를 처리하는 데 유용할 수 있지만, Lambda 함수가 EventBridge 규칙에 의해 호출될 권한이 없는 것이 근본적인 문제인 경우에는 도움이 되지 않습니다. 옵션 D(Lambda 함수 실행 역할을 업데이트하여 complete-lifecycle-action 이벤트를 호출할 권한을 부여)도 올바른 옵션이 아닙니다. "complete-lifecycle-action" 이벤트는 Lambda 함수 실행 역할과 관련이 없습니다. 주요 문제는 Lambda 함수가 EventBridge 규칙에 의해 트리거되지 않는 것이므로 실행 역할을 업데이트해도 문제가 해결되지 않습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -319,22 +326,22 @@
 			</h5>
 </a>
 <span class="badge badge-primary">
-				가장 최근<i class="fa fa-clock-o"></i>
+				최신<i class="fa fa-clock-o"></i>
 </span>
-<span class="comment-date align-middle" title="2023년 7월 26일 수 22:27">2023-07-27 07:27</span>
+<span class="comment-date align-middle" title="2024년 7월 26일 금요일 22시 27분">2024년 7월 27일 오전 7시 27분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>D</strong></span></div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>D</strong></span></div>
 <div class="comment-content">https://docs.aws.amazon.com/autoscaling/ec2/userguide/tutorial-lifecycle-hook-lambda.html 옵션 D</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -354,22 +361,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				세레픽스
+				세레프스
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 10월 7일 토요일 14:29">2023-10-07 23:29</span>
+<span class="comment-date align-middle" title="2024년 10월 7일 월요일 14시 29분">2024년 10월 7일 23시 29분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">옵션 D는 올바르지 않습니다. EventBridge에서 Lambda를 성공적으로 호출한 경우에만 정확합니다. 그러나 설명에 따르면 "테스트에서 SysOps 관리자는 EC2 인스턴스가 자동 확장될 때 Lambda 함수가 호출되지 않는다는 것을 발견했습니다." 따라서 보기 A가 정답입니다.</div>
+<div class="comment-content">옵션 D는 EventBridge에서 Lambda 함수가 성공적으로 호출된 경우에만 정답입니다. 그러나 "테스트 과정에서 시스템 운영 관리자는 EC2 인스턴스가 자동 확장될 때 Lambda 함수가 호출되지 않는다는 것을 발견했습니다."라는 설명에 따라 옵션 A가 정답입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -405,22 +412,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				트브트린
+				트르브트린
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 23일 일요일 07:39">2023-07-23 16:39</span>
+<span class="comment-date align-middle" title="2024년 7월 23일 화요일 오전 7시 39분">2024년 7월 23일 16시 39분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">A는 사실이다</div>
+<div class="comment-content">A는 참입니다</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -448,23 +455,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				jas26말씀
+				jas26says
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 10일 월요일 19:18">2023-07-11 04:18</span>
+<span class="comment-date align-middle" title="2024년 7월 10일 수요일 19시 18분">2024년 7월 11일 오전 4시 18분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">함수를 호출할 수 없기 때문에 A입니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">A인 이유는 해당 함수를 호출할 수 없기 때문입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -495,20 +502,20 @@
 				ctd983
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 5일 수 03:20">2023-07-05 12:20</span>
+<span class="comment-date align-middle" title="2024년 7월 5일 금요일 오전 3시 20분">2024년 7월 5일 12시 20분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">A가 맞습니다</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">A가 정답입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -536,22 +543,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				A샤히네21
+				아샤힌21
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 2일 일 18:23">2023-07-03 03:23</span>
+<span class="comment-date align-middle" title="2024년 7월 2일 화요일 18시 23분">2024년 7월 3일 03시 23분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">EventBridge에서 람다를 실행할 수 있도록 권한을 부여해야 합니까? D예요</div>
+<div class="comment-content">EventBridge에서 Lambda 함수를 실행하려면 권한을 부여해야 하나요? D입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -582,20 +589,20 @@
 				비벡
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 3월 9일 목요일 10:34">2023-03-09 19:34</span>
+<span class="comment-date align-middle" title="2024년 3월 9일 토요일 오전 10시 34분">2024년 3월 9일 19시 34분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">EventBridge(CloudWatch 이벤트) 규칙이 Lambda 함수를 호출하도록 허용하려면 함수의 실행 역할에 규칙에 의해 호출되는 데 필요한 권한이 있어야 합니다. 특히 실행 역할에는 규칙과 일치하는 이벤트 패턴과 Lambda 함수를 실행하는 데 필요한 권한을 부여하는 IAM 정책이 있어야 합니다. SysOps 관리자는 Lambda 함수에 필요한 권한을 추가하여 EC2 인스턴스가 자동 확장될 때 함수가 호출되도록 할 수 있습니다. 전체 수명 주기 작업 이벤트를 호출할 수 있는 권한을 갖도록 Lambda 함수 실행 역할을 업데이트해도 EventBridge(CloudWatch 이벤트) 규칙에 의해 호출되지 않는 Lambda 함수 문제가 해결되지 않기 때문에 옵션 D는 올바르지 않습니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">EventBridge(CloudWatch Events) 규칙이 Lambda 함수를 호출하도록 하려면 함수의 실행 역할에 규칙에 의해 호출될 수 있는 필요한 권한이 있어야 합니다. 구체적으로, 실행 역할에는 규칙과 일치하는 이벤트 패턴과 Lambda 함수 실행에 필요한 권한을 부여하는 IAM 정책이 있어야 합니다. Lambda 함수에 필요한 권한을 추가하면 시스템 운영 관리자는 EC2 인스턴스가 자동 확장될 때 함수가 호출되도록 할 수 있습니다. 옵션 D는 Lambda 함수 실행 역할에 complete-lifecycle-action 이벤트를 호출할 수 있는 권한을 부여하는 것으로는 EventBridge(CloudWatch Events) 규칙에 의해 Lambda 함수가 호출되지 않는 문제를 해결할 수 없으므로 올바르지 않습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -615,22 +622,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				세레픽스
+				세레프스
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 10월 7일 토요일 14:29">2023-10-07 23:29</span>
+<span class="comment-date align-middle" title="2024년 10월 7일 월요일 14시 29분">2024년 10월 7일 23시 29분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">옵션 D는 올바르지 않습니다. EventBridge에서 Lambda를 성공적으로 호출한 경우에만 정확합니다. 그러나 설명에 따르면 "테스트에서 SysOps 관리자는 EC2 인스턴스가 자동 확장될 때 Lambda 함수가 호출되지 않는다는 것을 발견했습니다." 따라서 보기 A가 정답입니다.</div>
+<div class="comment-content">옵션 D는 EventBridge에서 Lambda 함수가 성공적으로 호출된 경우에만 정답입니다. 그러나 "테스트 과정에서 시스템 운영 관리자는 EC2 인스턴스가 자동 확장될 때 Lambda 함수가 호출되지 않는다는 것을 발견했습니다."라는 설명에 따라 옵션 A가 정답입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -669,20 +676,20 @@
 				csG13
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 3월 6일 월요일 20:53">2023-03-07 05:53</span>
+<span class="comment-date align-middle" title="2024년 3월 6일 수요일 20시 53분">2024년 3월 7일 오전 5시 53분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">설명에서 A를 선택합니다. CloudWatch가 람다를 호출할 수 없는 것 같지만 람다가 수명 주기 작업을 완료할 권한이 없다는 것은 아닙니다. 따라서 문제는 람다의 실행 역할에 있어야 합니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">저는 A를 선택했습니다. 설명으로 미루어 보아 CloudWatch가 Lambda를 호출할 수 없는 문제이지, Lambda가 라이프사이클 작업을 완료할 권한이 없는 문제는 아닌 것 같습니다. 따라서 문제는 Lambda의 실행 역할에 있는 것으로 보입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -713,19 +720,19 @@
 				브레이브하트22
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 3월 4일 토요일 13:19">2023-03-04 22:19</span>
+<span class="comment-date align-middle" title="2024년 3월 4일 월요일 13시 19분">2024년 3월 4일 22시 19분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">D가 정답입니다. 수명 주기 작업이 완료될 때 Lambda가 Amazon EC2 Auto Scaling에 신호를 보내도록 하려면 함수 코드에 CompleteLifecycleAction API 호출을 추가해야 합니다. 또한 수명 주기 작업을 완료할 수 있는 Lambda 권한을 부여하는 IAM 정책을 함수의 실행 역할에 연결해야 합니다. https://docs.aws.amazon.com/autoscaling/ec2/userguide/prepare-for-lifecycle-notifications.html</div>
+<div class="comment-content">D가 정답입니다. Lambda가 라이프사이클 작업 완료 시 Amazon EC2 Auto Scaling에 신호를 보내도록 하려면 함수 코드에 CompleteLifecycleAction API 호출을 추가해야 합니다. 또한 Lambda가 라이프사이클 작업을 완료할 수 있도록 함수 실행 역할에 IAM 정책을 연결해야 합니다. 자세한 내용은 https://docs.aws.amazon.com/autoscaling/ec2/userguide/prepare-for-lifecycle-notifications.html을 참조하십시오.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -753,23 +760,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				솜분CH
+				솜분치
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 3월 3일 금요일 17:32">2023-03-04 02:32</span>
+<span class="comment-date align-middle" title="2024년 3월 3일 일요일 17시 32분">2024년 3월 4일 오전 2시 32분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>D</strong></span></div>
-<div class="comment-content">D가 맞습니다. Lambda 함수를 생성하기 전에 먼저 Lambda가 수명 주기 후크를 완료할 수 있도록 실행 역할과 권한 정책을 생성해야 합니다. https://docs.aws.amazon.com/autoscaling/ec2/userguide/tutorial-lifecycle-hook-lambda.html</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>D</strong></span></div>
+<div class="comment-content">D가 정답입니다. Lambda 함수를 생성하기 전에 먼저 실행 역할과 권한 정책을 생성하여 Lambda가 라이프사이클 후크를 완료할 수 있도록 해야 합니다. https://docs.aws.amazon.com/autoscaling/ec2/userguide/tutorial-lifecycle-hook-lambda.html</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -800,20 +807,20 @@
 				bbfd465
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 2월 26일 일요일 17:10">2023-02-27 02:10</span>
+<span class="comment-date align-middle" title="2024년 2월 26일 월요일 17시 10분">2024년 2월 27일 오전 2시 10분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">A가 답이다</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">A가 정답입니다</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -841,23 +848,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				Agil09
+				아길09
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 2월 18일 토요일 02:05">2023-02-18 11:05</span>
+<span class="comment-date align-middle" title="2024년 2월 18일 일요일 오전 2시 5분">2024년 2월 18일 11시 05분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">A의 의견에 동의함</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">A의 의견에 동의합니다</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -885,23 +892,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				길80
+				클레이80
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 2월 13일 월요일 12:49">2023-02-13 21:49</span>
+<span class="comment-date align-middle" title="2024년 2월 13일 화요일 12시 49분">2024년 2월 13일 21시 49분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">A를 확인하는 첫 번째 단계인 것 같습니다. "Lambda 함수를 대상으로 하는 EventBridge 규칙을 생성할 때 다음 사항에 유의하십시오. EventBridge 콘솔을 사용하여 규칙을 생성하면 적절한 권한이 함수의 리소스 정책에 자동으로 추가됩니다. AWS CLI, SDK를 사용할 때, 또는 AWS CloudFormation을 사용하여 동일한 규칙을 생성하려면 리소스 정책에서 권한을 수동으로 적용해야 합니다. 권한은 Amazon EventBridge 서비스에 Lambda 함수를 호출할 수 있는 액세스 권한을 부여합니다." 출처: https://aws.amazon.com/premiumsupport/knowledge-center/eventbridge-lambda-not-triggered/ 그러나 100% 확실하지는 않습니다. 아직 더 많은 검증이 필요합니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">A부터 확인해 보는 게 좋을 것 같습니다. "Lambda 함수를 대상으로 EventBridge 규칙을 생성할 때 다음 사항에 유의하세요. EventBridge 콘솔을 사용하여 규칙을 생성하면 함수 리소스 정책에 적절한 권한이 자동으로 추가됩니다. AWS CLI, SDK 또는 AWS CloudFormation을 사용하여 동일한 규칙을 생성하는 경우에는 리소스 정책에 권한을 수동으로 적용해야 합니다. 이러한 권한은 Amazon EventBridge 서비스가 Lambda 함수를 호출할 수 있도록 허용합니다." 출처: https://aws.amazon.com/premiumsupport/knowledge-center/eventbridge-lambda-not-triggered/ 하지만 100% 확신할 수는 없습니다. 추가적인 검증이 필요합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -955,7 +962,7 @@
 <span class="badge badge-primary">
 				Highly Voted <i class="fa fa-thumbs-up"></i>
 </span>
-<span class="comment-date align-middle" title="Tue 25 Jul 2023 05:10">2023-07-25 14:10</span>
+<span class="comment-date align-middle" title="Thu 25 Jul 2024 05:10">2024-07-25 14:10</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -967,7 +974,7 @@
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">5</span> times
+				upvoted <span class="upvote-count">8</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -991,7 +998,7 @@
 				Christina666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Tue 25 Jul 2023 05:10">2023-07-25 14:10</span>
+<span class="comment-date align-middle" title="Thu 25 Jul 2024 05:10">2024-07-25 14:10</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">Option B (Change the lifecycle hook action to CONTINUE if the lifecycle hook experiences a failure or timeout) is not the correct option. Changing the lifecycle hook action to CONTINUE will not address the issue of the Lambda function not being invoked.
@@ -1049,7 +1056,7 @@ Option D (Update the Lambda function execution role so that it has permission to
 <span class="badge badge-primary">
 				Most Recent <i class="fa fa-clock-o"></i>
 </span>
-<span class="comment-date align-middle" title="Wed 26 Jul 2023 22:27">2023-07-27 07:27</span>
+<span class="comment-date align-middle" title="Fri 26 Jul 2024 22:27">2024-07-27 07:27</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>D</strong></span></div>
@@ -1086,7 +1093,7 @@ Option D</div>
 				cerepx
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sat 07 Oct 2023 14:29">2023-10-07 23:29</span>
+<span class="comment-date align-middle" title="Mon 07 Oct 2024 14:29">2024-10-07 23:29</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">Option D is incorrect, it would be correct only if Lambda would have been invoked successfully by EventBridge. However, according to the statement: "In testing, the SysOps administrator discovers that the Lambda function is not invoked when the EC2 instances auto scale." Hence, Option A is the correct answer.</div>
@@ -1097,7 +1104,7 @@ Option D</div>
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">4</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -1137,7 +1144,7 @@ Option D</div>
 				trvtrinh
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sun 23 Jul 2023 07:39">2023-07-23 16:39</span>
+<span class="comment-date align-middle" title="Tue 23 Jul 2024 07:39">2024-07-23 16:39</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">A is true</div>
@@ -1180,7 +1187,7 @@ Option D</div>
 				jas26says
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Mon 10 Jul 2023 19:18">2023-07-11 04:18</span>
+<span class="comment-date align-middle" title="Wed 10 Jul 2024 19:18">2024-07-11 04:18</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -1192,7 +1199,7 @@ Option D</div>
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -1224,7 +1231,7 @@ Option D</div>
 				ctd983
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Wed 05 Jul 2023 03:20">2023-07-05 12:20</span>
+<span class="comment-date align-middle" title="Fri 05 Jul 2024 03:20">2024-07-05 12:20</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -1236,7 +1243,7 @@ Option D</div>
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -1268,7 +1275,7 @@ Option D</div>
 				AShahine21
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sun 02 Jul 2023 18:23">2023-07-03 03:23</span>
+<span class="comment-date align-middle" title="Tue 02 Jul 2024 18:23">2024-07-03 03:23</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">I have to give permission to lambda to be executed by EventBridge ?
@@ -1312,7 +1319,7 @@ It's D</div>
 				Vivec
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Thu 09 Mar 2023 10:34">2023-03-09 19:34</span>
+<span class="comment-date align-middle" title="Sat 09 Mar 2024 10:34">2024-03-09 19:34</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -1350,7 +1357,7 @@ Option D is incorrect because updating the Lambda function execution role so tha
 				cerepx
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sat 07 Oct 2023 14:29">2023-10-07 23:29</span>
+<span class="comment-date align-middle" title="Mon 07 Oct 2024 14:29">2024-10-07 23:29</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">Option D is incorrect, it would be correct only if Lambda would have been invoked successfully by EventBridge. However, according to the statement: "In testing, the SysOps administrator discovers that the Lambda function is not invoked when the EC2 instances auto scale." Hence, Option A is the correct answer.</div>
@@ -1401,7 +1408,7 @@ Option D is incorrect because updating the Lambda function execution role so tha
 				csG13
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Mon 06 Mar 2023 20:53">2023-03-07 05:53</span>
+<span class="comment-date align-middle" title="Wed 06 Mar 2024 20:53">2024-03-07 05:53</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -1445,7 +1452,7 @@ Option D is incorrect because updating the Lambda function execution role so tha
 				braveheart22
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sat 04 Mar 2023 13:19">2023-03-04 22:19</span>
+<span class="comment-date align-middle" title="Mon 04 Mar 2024 13:19">2024-03-04 22:19</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">D is the right answer.
@@ -1490,7 +1497,7 @@ https://docs.aws.amazon.com/autoscaling/ec2/userguide/prepare-for-lifecycle-noti
 				SomboonCH
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Fri 03 Mar 2023 17:32">2023-03-04 02:32</span>
+<span class="comment-date align-middle" title="Sun 03 Mar 2024 17:32">2024-03-04 02:32</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>D</strong></span></div>
@@ -1535,7 +1542,7 @@ https://docs.aws.amazon.com/autoscaling/ec2/userguide/tutorial-lifecycle-hook-la
 				bbfd465
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sun 26 Feb 2023 17:10">2023-02-27 02:10</span>
+<span class="comment-date align-middle" title="Mon 26 Feb 2024 17:10">2024-02-27 02:10</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -1547,7 +1554,7 @@ https://docs.aws.amazon.com/autoscaling/ec2/userguide/tutorial-lifecycle-hook-la
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -1579,7 +1586,7 @@ https://docs.aws.amazon.com/autoscaling/ec2/userguide/tutorial-lifecycle-hook-la
 				Agil09
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sat 18 Feb 2023 02:05">2023-02-18 11:05</span>
+<span class="comment-date align-middle" title="Sun 18 Feb 2024 02:05">2024-02-18 11:05</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -1591,7 +1598,7 @@ https://docs.aws.amazon.com/autoscaling/ec2/userguide/tutorial-lifecycle-hook-la
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -1623,7 +1630,7 @@ https://docs.aws.amazon.com/autoscaling/ec2/userguide/tutorial-lifecycle-hook-la
 				Gil80
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Mon 13 Feb 2023 12:49">2023-02-13 21:49</span>
+<span class="comment-date align-middle" title="Tue 13 Feb 2024 12:49">2024-02-13 21:49</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -1644,7 +1651,7 @@ However, I'm not 100% sure. This still needs more validation.</div>
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">2</span> times
+				upvoted <span class="upvote-count">4</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -1677,7 +1684,7 @@ However, I'm not 100% sure. This still needs more validation.</div>
 <i class="fa fa-angle-up"></i>
 </div>
 <!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="../../../js/popper.min.js"></script>
 <!-- jquery latest version -->
 <script src="../../../js/jquery.min.js"></script>
 <!-- bootstrap js -->
@@ -1688,8 +1695,6 @@ However, I'm not 100% sure. This still needs more validation.</div>
 <script src="../../../js/wow.min.js"></script>
 <!-- main js -->
 <script src="../../../js/main.js"></script>
-<script async="" defer="" src="../../../js/bootstrap3-typeahead.min.js">
-</script>
 <script type="text/javascript">
     // Activate tooltips
     $(function () {
@@ -1716,39 +1721,6 @@ However, I'm not 100% sure. This still needs more validation.</div>
         $('img[defsrc]').each(function() {
             $(this).attr('src',$(this).attr('defsrc'));
         });
-
-
-        function delayedStart() {
-            // Typeahead start
-
-            // Register typeahead element:
-            $('#header-keyword-search, #modal-keyword-search').typeahead({
-                source: autoCompleteQuery,
-                autoSelect: true,
-                delay: 150,
-                selectOnBlur: false,
-                afterSelect: function(param) {$(this.$element).closest('form').submit()}
-            });
-
-            // Query ajax function:
-            function autoCompleteQuery(query, callback) {
-                return $.get("/ajax/autocomplete/suggestions/?query=" + query).done(callback);
-            }
-            // Typeahead end
-        }
-        setTimeout(delayedStart, 1500);
-
-        // Don't submit empty search query
-        $('#modal-keyword-search-form').submit(function() {
-            if (!$('#modal-keyword-search').val()) {
-                return false;
-            }
-        });
-
-        // Auto focus on search box when search-modal is opened
-        $('.search-modal').on('shown.bs.modal', function (e) {
-            $(this).find('input[type=text]').focus();
-        });
     });
 </script>
 <script type="text/javascript">
@@ -1758,6 +1730,6 @@ However, I'm not 100% sure. This still needs more validation.</div>
 </script>
 <script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
 <script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
-</div>
+</meta></div>
 </body>
 </html>

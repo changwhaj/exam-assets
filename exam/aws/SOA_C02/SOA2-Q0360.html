@@ -3,13 +3,14 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="2024-04-05 3:35" name="refresh_date"/>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
 <meta charset="utf-8"/>
 <title>Exam AWS Certified SysOps Administrator</title>
 <!-- responsive tag -->
-<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- bootstrap v4 css -->
 <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -56,7 +57,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS Certified SysOps Administrator - Associate 주제 1 문제 360 토론</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified SysOps Administrator - Associate 시험 주제 1 문제 360도 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified SysOps Administrator - Associate topic 1 question 360 discussion</h1>
@@ -71,21 +72,20 @@
 <!-- Question -->
 <div class="question-discussion-header">
 						
-							Amazon
-						 <a class="discussion-link">AWS 공인 SysOps 관리자 – 어소시에이트 의 시험 문제</a>
+							아마존
+						 <a class="discussion-link">AWS 공인 시스템 운영 관리자 - 어소시에이트 시험 문제</a>
 <div>
-							질문 #: 360 <br/>
-							주제 #: 1
+							질문 번호: 360 <br/>
+							주제 번호: 1
 						</div>
 </div>
 <div class="question-body mt-3 pt-3 border-top" data-id="888973">
 <p class="card-text">
 							
-								제조 회사는 Amazon RDS DB 인스턴스를 사용하여 모든 재고 품목의 재고를 저장합니다. 회사는 항목을 추가, 업데이트 및 삭제하기 위해 데이터베이스와 상호 작용하는 여러 AWS Lambda 기능을 유지 관리합니다. Lambda 함수는 하드코딩된 자격 증명을 사용하여 데이터베이스에 연결합니다. <br/><br/>SysOps 관리자는 데이터베이스 자격 증명이 일반 텍스트로 저장되지 않고 비밀번호가 30일마다 교체되는지 확인해야 합니다. <br/><br/>가장 운영 효율적인 방식으로 이러한 요구 사항을 충족하는 솔루션은 무엇입니까?
+								제조 회사는 모든 재고 품목의 재고 정보를 저장하기 위해 Amazon RDS DB 인스턴스를 사용합니다. 이 회사는 데이터베이스와 상호 작용하여 품목을 추가, 업데이트 및 삭제하는 여러 AWS Lambda 함수를 운영합니다. Lambda 함수는 데이터베이스에 연결하기 위해 하드코딩된 자격 증명을 사용합니다. <br/><br/>시스템 운영 관리자는 데이터베이스 자격 증명이 평문으로 저장되지 않도록 하고, 암호를 30일마다 변경해야 합니다. <br/><br/>이러한 요구 사항을 가장 운영 효율적인 방식으로 충족하는 솔루션은 무엇일까요?
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="888973" type="application/json">[{"voted_answers": "C", "vote_count": 6, "is_most_voted": true}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -94,45 +94,45 @@
 													A.
 												</span> 
 											
-											데이터베이스 비밀번호를 각 Lambda 함수의 환경 변수로 저장하십시오. PasswordRotate라는 새 Lambda 함수를 생성합니다. Amazon EventBridge를 사용하여 30일마다 PasswordRotate 함수를 예약하여 데이터베이스 암호를 변경하고 각 Lambda 함수에 대한 환경 변수를 업데이트합니다.
+											각 Lambda 함수에 대해 데이터베이스 암호를 환경 변수로 저장합니다. PasswordRotate라는 이름의 새 Lambda 함수를 생성합니다. Amazon EventBridge를 사용하여 PasswordRotate 함수를 30일마다 실행하도록 예약하고, 각 Lambda 함수의 데이터베이스 암호를 변경하고 환경 변수를 업데이트합니다.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
 												</span> 
 											
-											AWS KMS(AWS Key Management Service)를 사용하여 데이터베이스 비밀번호를 암호화하고 암호화된 비밀번호를 각 Lambda 함수의 환경 변수로 저장합니다. 필요할 때 데이터베이스 암호를 해독할 수 있도록 각 Lambda 함수에 KMS 키에 대한 액세스 권한을 부여합니다. 30일마다 암호를 변경하려면 PasswordRotate라는 새 Lambda 함수를 생성합니다.
+											AWS 키 관리 서비스(AWS KMS)를 사용하여 데이터베이스 암호를 암호화하고, 암호화된 암호를 각 Lambda 함수의 환경 변수로 저장합니다. 각 Lambda 함수에 KMS 키에 대한 액세스 권한을 부여하여 필요할 때 데이터베이스 암호를 복호화할 수 있도록 합니다. 30일마다 암호를 변경하는 PasswordRotate라는 이름의 새로운 Lambda 함수를 생성합니다.
 										</li>
 <li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span> 
 											
-											AWS Secrets Manager를 사용하여 데이터베이스에 대한 자격 증명을 저장합니다. Secrets Manager 비밀을 생성하고 Secrets Manager가 Lambda 함수를 사용하여 데이터베이스 암호를 자동으로 업데이트하도록 데이터베이스를 선택합니다. 30일의 자동 순환 일정을 지정합니다. Secrets Manager에서 데이터베이스 비밀번호에 액세스하려면 각 Lambda 함수를 업데이트하세요.
+											AWS Secrets Manager를 사용하여 데이터베이스 자격 증명을 저장합니다. Secrets Manager 시크릿을 생성하고, Secrets Manager가 Lambda 함수를 사용하여 데이터베이스 암호를 자동으로 업데이트하도록 데이터베이스를 선택합니다. 자동 암호 갱신 일정을 30일로 지정합니다. 각 Lambda 함수가 Secrets Manager에서 데이터베이스 암호에 접근하도록 업데이트합니다.
 										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
-                최다 투표
+                가장 많은 표를 받은
             </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span> 
 											
-											AWS Systems Manager Parameter Store를 사용하여 데이터베이스에 대한 자격 증명을 저장할 보안 문자열을 생성합니다. PasswordRotate라는 새로운 Lambda 함수를 생성합니다. Amazon EventBridge를 사용하여 30일마다 PasswordRotate 함수를 예약하여 데이터베이스 암호를 변경하고 Parameter Store 내에서 암호를 업데이트하십시오. Parameter Store에서 데이터베이스 암호에 액세스하려면 각 Lambda 함수를 업데이트하세요.
+											AWS Systems Manager 파라미터 스토어를 사용하여 데이터베이스 자격 증명을 저장할 보안 문자열을 생성합니다. PasswordRotate라는 이름의 새로운 Lambda 함수를 생성합니다. Amazon EventBridge를 사용하여 PasswordRotate 함수를 30일마다 실행하도록 예약하고, 데이터베이스 암호를 변경하고 파라미터 스토어의 암호를 업데이트합니다. 각 Lambda 함수가 파라미터 스토어에서 데이터베이스 암호에 접근할 수 있도록 수정합니다.
 										</li>
 </ul>
 </div>
-<a class="btn btn-primary reveal-solution" href="#">제안된 답변 표시</a>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
 <a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
 <div class="card-text question-answer bg-light white-text" style="display: none;">
-<span class="correct-answer-box"><strong>제안된 답변: </strong>
+<span class="correct-answer-box"><strong>정답: </strong>
 <span class="correct-answer">C</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="6 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">C (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>지역사회 투표 배분</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="6 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">C (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
-                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">다른
+                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
 <!-- / Question  -->
@@ -157,7 +157,6 @@
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="888973" type="application/json">[{"voted_answers": "C", "vote_count": 6, "is_most_voted": true}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -213,7 +212,7 @@
 <a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
 <a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
 <div class="discussion-page-comments-section" data-discussion-question-id="113595" style="display: none">
-<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">코멘트</h4></div>
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
 <div class="container outer-discussion-container">
@@ -235,26 +234,26 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				오래된81
+				케비노81
 			</h5>
 </a>
 <span class="badge badge-primary">
-				높은 투표율<i class="fa fa-thumbs-up"></i>
+				가장 많은 표를 받은<i class="fa fa-thumbs-up"></i>
 </span>
-<span class="comment-date align-middle" title="2023년 6월 29일 목요일 03:45">2023-06-29 12:45</span>
+<span class="comment-date align-middle" title="2023년 12월 29일 금요일 오전 4시 45분">2023년 12월 29일 13시 45분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>C</strong></span></div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
 <div class="comment-content">C 비밀 관리자 = 비밀번호</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">5</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -282,26 +281,26 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				조쉬노트
+				조슈노트
 			</h5>
 </a>
 <span class="badge badge-primary">
-				가장 최근<i class="fa fa-clock-o"></i>
+				최신<i class="fa fa-clock-o"></i>
 </span>
-<span class="comment-date align-middle" title="2024년 4월 5일 금 03:35">2024-04-05 12:35</span>
+<span class="comment-date align-middle" title="2024년 10월 5일 토요일 오전 3시 35분">2024년 10월 5일 12시 35분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>C</strong></span></div>
-<div class="comment-content">AWS Secrets Manager는 데이터베이스 자격 증명과 같은 비밀을 저장하고 교체할 수 있는 안전한 중앙 집중식 위치를 제공하여 바로 이러한 사용 사례에 맞게 설계되었습니다. 자동으로 비밀번호를 교체할 수 있으며 Lambda 함수는 Secrets Manager에서 비밀번호를 쉽게 검색할 수 있습니다. https://docs.aws.amazon.com/secretsmanager/latest/userguide/managing-secrets.html</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
+<div class="comment-content">AWS Secrets Manager는 바로 이러한 사용 사례를 위해 설계되었으며, 데이터베이스 자격 증명과 같은 비밀 정보를 안전하고 중앙 집중식으로 저장하고 주기적으로 변경할 수 있는 위치를 제공합니다. Secrets Manager는 암호를 자동으로 변경할 수 있으며, Lambda 함수는 Secrets Manager에서 암호를 쉽게 가져올 수 있습니다. https://docs.aws.amazon.com/secretsmanager/latest/userguide/managing-secrets.html</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -329,22 +328,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				트브트린
+				트르브트린
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 22일 토요일 03:59">2023-07-22 12:59</span>
+<span class="comment-date align-middle" title="2024년 1월 22일 월요일 오전 4시 59분">2024년 1월 22일 13시 59분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">이 솔루션을 사용하면 AWS Secrets Manager는 30일마다 자동으로 데이터베이스 암호 교체를 처리하여 자격 증명이 일반 텍스트로 저장되지 않고 정기적으로 업데이트되도록 합니다. Lambda 함수는 Secrets Manager에서 데이터베이스 비밀번호에 안전하게 액세스할 수 있으므로 코드에 하드코딩된 자격 증명이 필요하지 않습니다. Secrets Manager를 사용하여 자격 증명 및 데이터베이스 암호 교체를 관리하는 것은 AWS 환경에서 민감한 정보를 안전하게 처리하기 위한 모범 사례입니다.</div>
+<div class="comment-content">이 솔루션을 사용하면 AWS Secrets Manager가 30일마다 데이터베이스 암호를 자동으로 갱신하여 자격 증명이 평문으로 저장되지 않고 정기적으로 업데이트되도록 합니다. Lambda 함수는 Secrets Manager에서 데이터베이스 암호에 안전하게 접근할 수 있으므로 코드에 자격 증명을 하드코딩할 필요가 없습니다. Secrets Manager를 사용하여 자격 증명을 관리하고 데이터베이스 암호를 갱신하는 것은 AWS 환경에서 민감한 정보를 안전하게 처리하기 위한 모범 사례입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -364,22 +363,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				트브트린
+				트르브트린
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 25일 (화) 15:58">2023-07-26 00:58</span>
+<span class="comment-date align-middle" title="2024년 1월 25일 목요일 오후 4시 58분">2024년 1월 26일 오전 1시 58분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">C가 맞아요</div>
+<div class="comment-content">C가 정답입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -394,49 +393,6 @@
 	</div>
 </div>
 </div>
-<!-- Nesting end -->
-</div>
-</div>
-<div class="comment-ellipsis comment-toggled">
-		...
-	</div>
-</div>
-</div>
-<!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="947654" id="comment-947654">
-<a class="minimize-comment comment-toggle" href="#">
-<i class="fa fa-minus-square-o mr-2 mt-1"></i>
-</a>
-<a class="maximize-comment comment-toggle" href="#">
-<i class="fa fa-plus-square-o mr-2 mt-1"></i>
-</a>
-<div class="media-body">
-<div class="comment-head">
-<i class="fa fa-user mr-1 mt-1"></i>
-<a>
-<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				[제거됨]
-			</h5>
-</a>
-<span class="comment-date align-middle" title="2023년 7월 10일 (월) 03:15">2023-07-10 12:15</span>
-</div>
-<div class="comment-body comment-toggled">
-<div class="comment-content">C. AWS Secrets Manager를 사용하여 데이터베이스에 대한 자격 증명을 저장합니다. Secrets Manager 비밀을 생성하고 Secrets Manager가 Lambda 함수를 사용하여 데이터베이스 암호를 자동으로 업데이트하도록 데이터베이스를 선택합니다. 30일의 자동 순환 일정을 지정합니다. Secrets Manager에서 데이터베이스 비밀번호에 액세스하려면 각 Lambda 함수를 업데이트하세요.</div>
-<div class="comment-control">
-<span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
-</span>
-<span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
-			 
-				찬성함</span>
-<span class="comment-control-error ml-2"></span>
-</div>
-<div class="new-comment-box-container mt-2">
-</div>
-<div class="comment-replies">
-<!-- Nesting start -->
 <!-- Nesting end -->
 </div>
 </div>
@@ -484,7 +440,7 @@
 <span class="badge badge-primary">
 				Highly Voted <i class="fa fa-thumbs-up"></i>
 </span>
-<span class="comment-date align-middle" title="Thu 29 Jun 2023 03:45">2023-06-29 12:45</span>
+<span class="comment-date align-middle" title="Fri 29 Dec 2023 04:45">2023-12-29 13:45</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
@@ -532,7 +488,7 @@ Secret manager = password</div>
 <span class="badge badge-primary">
 				Most Recent <i class="fa fa-clock-o"></i>
 </span>
-<span class="comment-date align-middle" title="Fri 05 Apr 2024 03:35">2024-04-05 12:35</span>
+<span class="comment-date align-middle" title="Sat 05 Oct 2024 03:35">2024-10-05 12:35</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
@@ -578,7 +534,7 @@ https://docs.aws.amazon.com/secretsmanager/latest/userguide/managing-secrets.htm
 				trvtrinh
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sat 22 Jul 2023 03:59">2023-07-22 12:59</span>
+<span class="comment-date align-middle" title="Mon 22 Jan 2024 04:59">2024-01-22 13:59</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">With this solution, AWS Secrets Manager will handle the rotation of the database password automatically every 30 days, ensuring that the credentials are never stored in plaintext and are regularly updated. The Lambda functions can securely access the database password from Secrets Manager, eliminating the need for hardcoded credentials in the code.
@@ -615,7 +571,7 @@ Using Secrets Manager to manage the credentials and rotation of the database pas
 				trvtrinh
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Tue 25 Jul 2023 15:58">2023-07-26 00:58</span>
+<span class="comment-date align-middle" title="Thu 25 Jan 2024 16:58">2024-01-26 01:58</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">C is correct</div>
@@ -642,49 +598,6 @@ Using Secrets Manager to manage the credentials and rotation of the database pas
 	</div>
 </div>
 </div>
-<!-- Nesting end -->
-</div>
-</div>
-<div class="comment-ellipsis comment-toggled">
-		...
-	</div>
-</div>
-</div>
-<!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="947654" id="comment-947654">
-<a class="minimize-comment comment-toggle" href="#">
-<i class="fa fa-minus-square-o mr-2 mt-1"></i>
-</a>
-<a class="maximize-comment comment-toggle" href="#">
-<i class="fa fa-plus-square-o mr-2 mt-1"></i>
-</a>
-<div class="media-body">
-<div class="comment-head">
-<i class="fa fa-user mr-1 mt-1"></i>
-<a>
-<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				[Removed]
-			</h5>
-</a>
-<span class="comment-date align-middle" title="Mon 10 Jul 2023 03:15">2023-07-10 12:15</span>
-</div>
-<div class="comment-body comment-toggled">
-<div class="comment-content">C. Use AWS Secrets Manager to store credentials for the database. Create a Secrets Manager secret, and select the database so that Secrets Manager will use a Lambda function to update the database password automatically. Specify an automatic rotation schedule of 30 days. Update each Lambda function to access the database password from Secrets Manager.</div>
-<div class="comment-control">
-<span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
-</span>
-<span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">4</span> times
-			</span>
-<span class="comment-control-error ml-2"></span>
-</div>
-<div class="new-comment-box-container mt-2">
-</div>
-<div class="comment-replies">
-<!-- Nesting start -->
 <!-- Nesting end -->
 </div>
 </div>
@@ -756,6 +669,6 @@ Using Secrets Manager to manage the credentials and rotation of the database pas
 </script>
 <script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
 <script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
-</div>
+</meta></div>
 </body>
 </html>

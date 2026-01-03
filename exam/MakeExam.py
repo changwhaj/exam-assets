@@ -224,12 +224,21 @@ def open_exam(driver, discuss_url):
     
     return
 
-def open_template_exam():
+def open_template_exam(postdate):
     template = "./TEMPLATE.html"
     with open(template, 'r', encoding='utf-8') as file:
         html_content = file.read()
         
     bs = BeautifulSoup(html_content, 'html.parser')
+    # meta 태그 찾기
+    meta = bs.find("meta", attrs={"name": "refresh_date"})
+    if meta:
+        meta["content"] = postdate
+    else:
+        # 없을 경우 새로 추가
+        new_meta = bs.new_tag("meta", name="refresh_date", content=postdate)
+        bs.head.append(new_meta)
+
     return bs
 
 def remove_exam_element(driver):
@@ -418,6 +427,21 @@ def open_new_discussion(driver, discuss_id):
 
     return (discussion_en, discussion_kr)
 
+def get_question_postdate(fname):
+    my_file = Path(fname)
+
+    # file does not exists. Okay to overwrite
+    if not my_file.is_file(): return None
+    
+    with open(fname, "r", encoding="utf-8") as file:
+        bs = BeautifulSoup(file, "html.parser")
+
+        meta = bs.find("meta", attrs={"name": "refresh_date"})
+        refresh_date = meta["content"] if meta else None
+        return(refresh_date)
+    
+    return None
+
 def get_question_data_id(fname):
     pattern = r'<div class="question-body mt-3 pt-3 border-top" data-id="([0-9]+)">'
 
@@ -452,7 +476,7 @@ def check_for_overwrite(fname, data_id):
 
     return found
         
-def save_html(driver, did, fname):
+def save_html(driver, did, postdate, fname):
     bs = replace_duscuss(driver, did)
 
     page_title = driver.title.split(' - ')[0]
@@ -480,7 +504,7 @@ def save_html(driver, did, fname):
         script.extract()
     discussion_contents = discussion.decode_contents()
 
-    bs = open_template_exam()
+    bs = open_template_exam(postdate)
 
     title = bs.find("title")
     title.contents = [BeautifulSoup(page_title, 'html.parser')]
@@ -598,12 +622,18 @@ def make_filename(qtitle, qid, dataid, tid=0):
         #     "qlength": 529,
         #     "first_id": 856116,
         # },
-        # {
-        #     "qtitle": "Exam AWS Certified SysOps Administrator - Associate topic 1",
-        #     "prefname": "aws/SOA_C02/SOA2-Q",
-        #     "qlength": 444,
-        #     "first_id": 809742,
-        # },
+        {
+            "qtitle": "Exam AWS Certified SysOps Administrator - Associate topic 1",
+            "prefname": "aws/SOA_C02/SOA2-Q",
+            "qlength": 478,
+            "first_id": 809742,
+        },
+        {
+            "qtitle": "Exam AWS Certified CloudOps Engineer - Associate SOA-C03 topic 1",
+            "prefname": "aws/SOA_C03/SOA3-Q",
+            "qlength": 65,
+            "first_id": 975094,
+        },
         # aws/SES/SES-Q	Exam AWS Certified Security - Specialty topic 1
         # aws/DOP_C01/DOP-Q	Exam AWS DevOps Engineer Professional topic 1
     ]
@@ -673,7 +703,7 @@ def make_filename(qtitle, qid, dataid, tid=0):
         
     return fname
 
-def make_question_file(driver, fname, url, did):
+def make_question_file(driver, fname, url, did, postdate):
     open_exam(driver, url)
 
     driver.switch_to.window(driver.window_handles[0])
@@ -683,7 +713,7 @@ def make_question_file(driver, fname, url, did):
 
     remove_exam_element(driver)
 
-    data_id = save_html(driver, did, fname)
+    data_id = save_html(driver, did, postdate, fname)
 
     return data_id
 
@@ -721,9 +751,18 @@ def translate_discuss_to_kr(driver, fname, discuss_id):
         print(f"*** Error translate_discuss_to_kr !!!")
         pass
 
-def save_new_discuss(driver, fname, did, progress):
+def save_new_discuss(driver, fname, did, postdate, progress):
 
     bs = BeautifulSoup(driver.page_source, 'html.parser')
+    # meta 태그 찾기
+    meta = bs.find("meta", attrs={"name": "refresh_date"})
+    if meta:
+        meta["content"] = postdate
+    else:
+        # 없을 경우 새로 추가
+        new_meta = bs.new_tag("meta", name="refresh_date", content=postdate)
+        bs.head.append(new_meta)
+
     pattern = r'</*font[^<]*>'
     header_contents = bs.find("div", {"class": "discussion-list-header"}).decode_contents()
     header_contents = re.sub(pattern, '', header_contents)
@@ -920,7 +959,7 @@ def refresh_from_forum(discuss_list, forum_name, last_page):
         else:
             file_data_id = get_question_data_id(fname)
             if file_data_id == 0:   # New Exam
-                new_data_id = make_question_file(driver, fname, url, did)
+                new_data_id = make_question_file(driver, fname, url, did, newpost)
                 # print(f'data_id={data_id}, new_data_id={new_data_id}, fname={fname}')
                 if (data_id > 0 ) & (data_id != new_data_id):
                     break
@@ -960,7 +999,7 @@ def refresh_from_forum(discuss_list, forum_name, last_page):
 
 def read_Exam_list(fname):
     df = pd.read_csv(fname, delimiter='\t', encoding='utf-8', header=None,
-                    names=['ExamNo', 'DiscussNo', 'DataNo', 'DiscussURL'],
+                    names=['ExamNo', 'DiscussNo', 'DataNo', 'PostDate', 'DiscussURL'],
                     index_col=False)
 
     return df
@@ -992,6 +1031,7 @@ def refresh_all_exam(exam_list_file, qtitle):
         dataid = int(df.at[i, 'DataNo'])
         if did == 0:
             continue
+        postdate = str(df.at[i, 'PostDate'])
         url = str(df.at[i, 'DiscussURL'])
         print(qtitle+"\t"+str(qid)+"\t"+url, flush=True)
         try:
@@ -999,7 +1039,9 @@ def refresh_all_exam(exam_list_file, qtitle):
             if (len(fname) <= 0): 
                 new_data_id = 0
             else:
-                new_data_id = make_question_file(driver, fname, url, did)
+                if get_question_postdate(fname) == postdate:
+                    continue
+                new_data_id = make_question_file(driver, fname, url, did, postdate)
                 translate_page_to_kr(driver, fname)
                 save_kr(driver, fname)
 
@@ -1187,8 +1229,11 @@ if __name__ == "__main__":
     # CLF2 = "Exam AWS Certified Cloud Practitioner CLF-C02 topic 1"
     # refresh_all_exam('CLF2_Exam.csv', CLF2)
     
-    # SOA2 = "Exam AWS Certified SysOps Administrator - Associate topic 1"
-    # refresh_all_exam('SOA2_Exam.csv', SOA2)       # NOK 377 -340, -341
+    SOA2 = "Exam AWS Certified SysOps Administrator - Associate topic 1"
+    refresh_all_exam('SOA2_Exam.csv', SOA2)       # OK 478
+
+    SOA3 = "Exam AWS Certified CloudOps Engineer - Associate SOA-C03 topic 1"
+    refresh_all_exam('SOA3_Exam.csv', SOA3)       # OK 65
 
     # DVA2 = 'Exam AWS Certified Developer - Associate DVA-C02 topic 1'
     # refresh_all_exam('DVA2_Exam.csv', DVA2)       # OK 142
@@ -1205,9 +1250,9 @@ if __name__ == "__main__":
     # FORUM_NAME = 'cncf'
     # refresh_from_forum(DISCUSS, FORUM_NAME, 1)    
 
-    DISCUSS = 'AmazonDiscuss.txt'
-    FORUM_NAME = 'amazon'
-    refresh_from_forum(DISCUSS, FORUM_NAME, 1)
+    # DISCUSS = 'AmazonDiscuss.txt'
+    # FORUM_NAME = 'amazon'
+    # refresh_from_forum(DISCUSS, FORUM_NAME, 1)
     
     # DISCUSS = 'IsacaDiscuss.txt'
     # FORUM_NAME = 'isaca'

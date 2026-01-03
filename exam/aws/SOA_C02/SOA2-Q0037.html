@@ -3,13 +3,14 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="2024-05-02 7:25" name="refresh_date"/>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
 <meta charset="utf-8"/>
 <title>Exam AWS Certified SysOps Administrator</title>
 <!-- responsive tag -->
-<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- bootstrap v4 css -->
 <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -24,23 +25,29 @@
 <!-- responsive css -->
 <link href="../../../css/responsive.css" rel="stylesheet" type="text/css"/>
 <link href="../../../css/forum.css" rel="stylesheet" type="text/css"/>
-<style>
-</style>
 <div class="sec-spacer pt-20">
 <div class="container">
 <div class="container action-row-container border-0 p-0 mb-2">
 <div class="container action-row clearfix d-flex">
 <i class="fa fm fa-language fa-2x mr-2"></i>
-<a class="btn show-english" href="#">English</a>
-<a class="btn show-korean d-none" href="#">한국어</a>
+<a class="btn show-english" href="javascript:void(0)">English</a>
+<a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
 <span class="pagination-container ml-auto">
 <span id="page-indicator"><strong></strong></span>
-<!--p id="page-indicator"></p-->
 <span class="pagination-nav ml-4">
-<a class="btn btn-sm" href="#" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
-<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect">
-</select>
-<a class="btn btn-sm" href="#" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
+<a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
+<a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
 </span>
 </span>
 </div>
@@ -50,7 +57,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS 공인 SysOps 관리자 - 어소시에이트 주제 1 문제 37 토론</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified SysOps Administrator - Associate 시험 주제 1 문제 37 해설</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified SysOps Administrator - Associate topic 1 question 37 discussion</h1>
@@ -65,20 +72,19 @@
 <!-- Question -->
 <div class="question-discussion-header">
 						
-							Amazon
-						 <a class="discussion-link">AWS 공인 SysOps 관리자 – 어소시에이트 의 시험 문제</a>
+							아마존
+						 <a class="discussion-link">AWS 공인 시스템 운영 관리자 - 어소시에이트 시험 문제</a>
 <div>
-							질문 #: 37 <br/>
-							주제 #: 1
+							문제 번호: 37 <br/>
+							주제 번호: 1
 						</div>
 </div>
 <div class="question-body mt-3 pt-3 border-top" data-id="809778">
 <p class="card-text">
 							
-								SysOps 관리자는 AWS Lambda 함수에 오류가 발생할 경우 소프트웨어 개발자에게 즉시 알리는 솔루션을 생성해야 합니다. <br/>이 요구 사항을 충족하는 솔루션은 무엇입니까?<br/>
+								시스템 운영 관리자는 AWS Lambda 함수에서 오류가 발생할 경우 소프트웨어 개발자에게 즉시 알림을 보내는 솔루션을 구축해야 합니다. <br/>이 요구 사항을 충족하는 솔루션은 무엇일까요?<br/>
 </p>
 <div class="voted-answers-tally d-none">
-<script id="809778" type="application/json">[{"voted_answers": "A", "vote_count": 12, "is_most_voted": true}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -87,46 +93,45 @@
 													A.
 												</span> 
 											
-											각 개발자에 대한 이메일 구독이 포함된 Amazon Simple 알림 서비스(Amazon SNS) 주제를 생성합니다. 오류 지표와 Lambda 함수 이름을 차원으로 사용하여 Amazon CloudWatch 경보를 생성합니다. 경보 상태가 ALARM에 도달하면 SNS 주제에 알림을 보내도록 경보를 구성합니다.
+											각 개발자별로 이메일 구독을 설정하여 Amazon Simple Notification Service(Amazon SNS) 토픽을 생성합니다. 오류 메트릭과 Lambda 함수 이름을 차원으로 사용하여 Amazon CloudWatch 알람을 생성합니다. 알람 상태가 ALARM에 도달하면 SNS 토픽으로 알림을 보내도록 알람을 구성합니다.
 										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
-                최다 투표
+                가장 많은 표를 받은
             </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
 												</span> 
 											
-											각 개발자에 대한 모바일 구독이 포함된 Amazon Simple 알림 서비스(Amazon SNS) 주제를 생성합니다. LambdaError를 이벤트 패턴으로 사용하고 SNS 주제 이름을 리소스로 사용하여 Amazon EventBridge(Amazon CloudWatch Events) 경보를 생성합니다. 경보 상태가 ALARM에 도달하면 SNS 주제에 알림을 보내도록 경보를 구성합니다.
+											각 개발자별로 모바일 구독이 있는 Amazon Simple Notification Service(Amazon SNS) 토픽을 생성합니다. LambdaError를 이벤트 패턴으로, SNS 토픽 이름을 리소스로 사용하여 Amazon EventBridge(Amazon CloudWatch Events) 알람을 생성합니다. 알람 상태가 ALARM에 도달하면 SNS 토픽으로 알림을 보내도록 알람을 구성합니다.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span> 
 											
-											Amazon Simple Email Service(Amazon SES)에서 각 개발자 이메일 주소를 확인합니다. LambdaError 지표와 개발자 이메일 주소를 차원으로 사용하여 Amazon CloudWatch 규칙을 생성합니다. 규칙 상태가 ALARM에 도달하면 Amazon SES를 통해 이메일을 보내도록 규칙을 구성합니다.
+											Amazon Simple Email Service(Amazon SES)에서 각 개발자의 이메일 주소를 확인합니다. LambdaError 메트릭과 개발자 이메일 주소를 차원으로 사용하여 Amazon CloudWatch 규칙을 생성합니다. 규칙 상태가 ALARM에 도달하면 Amazon SES를 통해 이메일을 보내도록 규칙을 구성합니다.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span> 
 											
-											Amazon Simple Email Service(Amazon SES)에서 각 개발자 휴대폰을 확인합니다. Error를 이벤트 패턴으로 사용하고 Lambda 함수 이름을 리소스로 사용하여 Amazon EventBridge(Amazon CloudWatch Events) 규칙을 생성합니다. 규칙 상태가 ALARM에 도달하면 Amazon SES를 통해 푸시 알림을 보내도록 규칙을 구성합니다.
+											각 개발자의 휴대폰이 Amazon Simple Email Service(Amazon SES)에 등록되어 있는지 확인합니다. 이벤트 패턴으로 'Error'를, 리소스로 Lambda 함수 이름을 사용하여 Amazon EventBridge(Amazon CloudWatch Events) 규칙을 생성합니다. 규칙 상태가 'ALARM'에 도달하면 Amazon SES를 통해 푸시 알림을 보내도록 규칙을 구성합니다.
 										</li>
 </ul>
 </div>
-<a class="btn btn-primary reveal-solution" href="#">제안된 답변 표시</a>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
 <a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
 <div class="card-text question-answer bg-light white-text" style="display: none;">
-<span class="correct-answer-box"><strong>추천 답변: </strong>
-<span class="correct-answer">A </span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
+<span class="correct-answer-box"><strong>제안된 답변: </strong>
+<span class="correct-answer">A</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="12 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">A (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>지역사회 투표 배분</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="13 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">A (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
-                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">다른
+                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
 <!-- / Question  -->
@@ -150,7 +155,6 @@
 								A SysOps administrator must create a solution that immediately notifies software developers if an AWS Lambda function experiences an error.<br/>Which solution will meet this requirement?<br/>
 </p>
 <div class="voted-answers-tally d-none">
-<script id="809778" type="application/json">[{"voted_answers": "A", "vote_count": 12, "is_most_voted": true}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -191,12 +195,11 @@
 <div class="card-text question-answer bg-light white-text">
 <span class="correct-answer-box"><strong>Suggested Answer:</strong>
 <span class="correct-answer">A</span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="12 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">A (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="13 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">A (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
@@ -204,10 +207,10 @@
 <!-- / Question  -->
 </div>
 <div class="comments-wrapper">
-<a class="badge reveal-comment" href="#">댓글 표시</a>
-<a class="badge hide-comment d-none" href="#">댓글 숨기기</a>
+<a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
 <div class="discussion-page-comments-section" data-discussion-question-id="74132" style="display: none">
-<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">코멘트</h4></div>
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
 <div class="container outer-discussion-container">
@@ -229,27 +232,25 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				난소
+				문 앞에서
 			</h5>
 </a>
 <span class="badge badge-primary">
-				높은 투표율<i class="fa fa-thumbs-up"></i>
+				가장 많은 표를 받은<i class="fa fa-thumbs-up"></i>
 </span>
-<span class="comment-date align-middle" title="2022년 4월 22일 금요일 14:38">
-			1년, 4개월 전
-		</span>
+<span class="comment-date align-middle" title="2022년 10월 22일 토요일 14시 38분">2022년 10월 22일 23시 38분</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">그것은 A입니다</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">7</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">9</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -277,27 +278,114 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				작성자116549
+				116549에 의해
 			</h5>
 </a>
 <span class="badge badge-primary">
-				높은 투표율<i class="fa fa-thumbs-up"></i>
+				가장 많은 표를 받은<i class="fa fa-thumbs-up"></i>
 </span>
-<span class="comment-date align-middle" title="2022년 8월 9일 화요일 15:38">
-			1 년 전
-		</span>
+<span class="comment-date align-middle" title="2023년 2월 9일 목요일 오후 4시 38분">2023년 2월 10일 오전 1시 38분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">SES는 마케팅 이메일에 사용되므로 C 또는 D가 아닙니다. A 또는 B를 남겨둡니다. B AWS 구성을 사용하면 Cloudtrail 또는 Cloudwatch가 SNS 주제가 아닌 소스가 될 수 있습니다. A가 가장 합리적인 해결책인 것 같습니다.</div>
+<div class="comment-content">C나 D는 SES가 마케팅 이메일에 사용되므로 선택지가 아닙니다. 따라서 A 또는 B가 남습니다. B의 경우 AWS 구성에서 Cloudtrail 또는 Cloudwatch를 SNS 주제가 아닌 소스로 사용할 수 있습니다. A가 가장 합리적인 해결책으로 보입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">5</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">8</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1205312" id="comment-1205312">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				버드나무
+			</h5>
+</a>
+<span class="badge badge-primary">
+				최신<i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="2024년 11월 2일 토요일 오전 8시 25분">2024년 11월 2일 17시 25분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">A. https://aws.amazon.com/blogs/mt/get-notified-specific-lambda-function-error-patterns-using-cloudwatch/</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
+			 
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1109258" id="comment-1109258">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				탐앙
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2024년 6월 29일 토요일 23시 43분">2024년 6월 30일 오전 8시 43분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">A가 정답입니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
+			 
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -328,25 +416,20 @@
 				지파크
 			</h5>
 </a>
-<span class="badge badge-primary">
-				가장 최근<i class="fa fa-clock-o"></i>
-</span>
-<span class="comment-date align-middle" title="2023년 8월 10일 목요일 11:09">
-			2주, 3일 전
-		</span>
+<span class="comment-date align-middle" title="2024년 2월 10일 토요일 12시 09분">2024년 2월 10일 21시 09분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">B가 아닌 이유 : "SNS 주제 이름을 리소스로"(X) vs "Lambda 함수 이름을 차원으로"(O) -&gt; Cloud Watch는 Lambda 이름을 차원으로 설정합니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">B가 아닌 이유: "리소스로서의 SNS 토픽 이름"(X) 대 "차원으로서의 Lambda 함수 이름"(O) -&gt; CloudWatch에서 Lambda 이름을 차원으로 설정합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -374,24 +457,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				고멜
+				고머
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 3월 28일 화 01:08">
-			5 개월 전
-		</span>
+<span class="comment-date align-middle" title="2023년 9월 28일 목요일 오전 1시 8분">2023년 9월 28일 10시 8분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">모두가 고민 없이 A를 선택하는 것 같고, Lambda 호출 오류에 대한 기본 지표가 있습니다. 그러나 이는 실행 중에 Lambda가 생성할 수 있는 경보를 처리하지 않습니다. 이 문제를 처리하려면 CloudWatch 로그에서 ?ERROR와 같은 패턴을 사용하여 로그 파일을 구문 분석하고 경고를 생성해야 합니다. 질문이 그다지 이국적이거나 구체적이지는 않은 것 같으니 "A." 아마도 올바른 선택일 것입니다. 그러나 이것은 까다로운 질문입니다. 그렇지 않다고 생각되면 https://aws.amazon.com/blogs/mt/get-notified-special-lambda-function-error-patterns-using-cloudwatch/를 읽어보세요.</div>
+<div class="comment-content">모두가 별다른 생각 없이 A를 선택하는 것 같지만, 람다 호출 오류에 대한 기본 메트릭이 존재합니다. 그러나 이는 람다 실행 중에 발생할 수 있는 알람을 처리하지 못합니다. 이를 처리하려면 CloudWatch 로그에서 ?ERROR와 같은 패턴을 사용하여 로그 파일을 분석하고 알림을 생성해야 합니다. 질문이 그다지 특별하거나 구체적이지 않기 때문에 "A"가 정답일 가능성이 높지만, 이는 까다로운 질문입니다. 만약 그렇지 않다고 생각하신다면 다음 링크를 참조하세요. https://aws.amazon.com/blogs/mt/get-notified-specific-lambda-function-error-patterns-using-cloudwatch/</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -414,21 +495,19 @@
 				에보엠
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 13일 목요일 00:03">
-			1개월, 2주 전
-		</span>
+<span class="comment-date align-middle" title="2024년 1월 13일 토요일 오전 1시 3분">2024년 1월 13일 10시 03분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">질문은 오류/경보를 처리하는 방법을 묻지 않습니다. 오류가 발생하면 누군가에게 알려야 한다고 언급했습니다. 알림을 받으면 로그를 보고 오류를 해결할 수 있습니다. 이상적으로는 오류의 원인에 대한 세부 정보를 알리고 보내는 로그 구독이어야 하지만 질문에서는 이에 대해 묻지 않았습니다.</div>
+<div class="comment-content">질문은 오류/경보를 어떻게 처리해야 하는지 묻는 것이 아닙니다. 단지 오류 발생 시 누군가에게 알림이 가야 한다고 언급했을 뿐입니다. 알림을 받은 사람은 로그를 확인하고 오류를 해결할 수 있습니다. 이상적으로는 오류 발생 원인에 대한 세부 정보를 전송하는 로그 구독 기능이 있으면 좋겠지만, 질문의 요지는 그것이 아닙니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -467,22 +546,20 @@
 				미칼다비드
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 12월 8일 목요일 06:45">
-			8개월, 3주 전
-		</span>
+<span class="comment-date align-middle" title="2023년 6월 8일 목요일 오전 5시 45분">2023년 6월 8일 14시 45분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">아아아아아아</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">아아아아아</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -510,25 +587,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				라이온긱
+				라이온기크
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 11월 18일 금요일 19:29">
-			9개월, 1주 전
-		</span>
+<span class="comment-date align-middle" title="2023년 5월 18일 목요일 오후 6시 29분">2023년 5월 19일 03시 29분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">답: A</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">연도: A</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -559,22 +634,20 @@
 				핑거41
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 5월 24일 (화) 04:07">
-			1년, 3개월 전
-		</span>
+<span class="comment-date align-middle" title="2022년 11월 24일 목요일 오전 5시 7분">2022년 11월 24일 14시 07분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">A - https://aws.amazon.com/blogs/mt/get-notified-특이적-lambda-function-error-patterns-using-cloudwatch/</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">A - https://aws.amazon.com/blogs/mt/get-notified-specific-lambda-function-error-patterns-using-cloudwatch/</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">5</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -605,22 +678,20 @@
 				psou7
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 5월 1일 일요일 11:35">
-			1년, 3개월 전
-		</span>
+<span class="comment-date align-middle" title="2022년 11월 1일 화요일 12시 35분">2022년 11월 1일 21시 35분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">A가 맞습니다</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">A가 정답입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -643,8 +714,8 @@
 </div>
 </div>
 <div class="comments-wrapper-en" style="display: none;">
-<a class="badge reveal-comment" href="#">Show Comments</a>
-<a class="badge hide-comment d-none" href="#">Hide Comments</a>
+<a class="badge reveal-comment" href="javascript:void(0)">Show Comments</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">Hide Comments</a>
 <div class="discussion-page-comments-section-en" data-discussion-question-id="74132" style="display: none">
 <div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">Comments</h4></div>
 <!-- discussion.html -->
@@ -674,9 +745,7 @@
 <span class="badge badge-primary">
 				Highly Voted <i class="fa fa-thumbs-up"></i>
 </span>
-<span class="comment-date align-middle" title="Fri 22 Apr 2022 14:38">
-			1 year, 4 months ago
-		</span>
+<span class="comment-date align-middle" title="Sat 22 Oct 2022 14:38">2022-10-22 23:38</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">It's A</div>
@@ -687,7 +756,7 @@
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">7</span> times
+				upvoted <span class="upvote-count">9</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -722,9 +791,7 @@
 <span class="badge badge-primary">
 				Highly Voted <i class="fa fa-thumbs-up"></i>
 </span>
-<span class="comment-date align-middle" title="Tue 09 Aug 2022 15:38">
-			1 year ago
-		</span>
+<span class="comment-date align-middle" title="Thu 09 Feb 2023 16:38">2023-02-10 01:38</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">Not C or D as SES is used for marketing emails.
@@ -741,7 +808,98 @@ A seems the best reasonable solution</div>
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">5</span> times
+				upvoted <span class="upvote-count">8</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1205312" id="comment-1205312">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				willows
+			</h5>
+</a>
+<span class="badge badge-primary">
+				Most Recent <i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="Sat 02 Nov 2024 08:25">2024-11-02 17:25</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">A. 
+
+https://aws.amazon.com/blogs/mt/get-notified-specific-lambda-function-error-patterns-using-cloudwatch/</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1109258" id="comment-1109258">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				tamng
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Sat 29 Jun 2024 23:43">2024-06-30 08:43</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">A is Correct</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -773,12 +931,7 @@ A seems the best reasonable solution</div>
 				jipark
 			</h5>
 </a>
-<span class="badge badge-primary">
-				Most Recent <i class="fa fa-clock-o"></i>
-</span>
-<span class="comment-date align-middle" title="Thu 10 Aug 2023 11:09">
-			2 weeks, 3 days ago
-		</span>
+<span class="comment-date align-middle" title="Sat 10 Feb 2024 12:09">2024-02-10 21:09</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -792,7 +945,7 @@ A seems the best reasonable solution</div>
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -824,9 +977,7 @@ A seems the best reasonable solution</div>
 				Gomer
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Tue 28 Mar 2023 01:08">
-			5 months ago
-		</span>
+<span class="comment-date align-middle" title="Thu 28 Sep 2023 01:08">2023-09-28 10:08</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">Everyone seems to choose A. without a second thought, and there is a default metric for Lambda invocation errors.  However, this doesn't deal with the alarms that Lambda may generate while running.  Dealing with this requires CloudWatch logs to use patterns such as ?ERROR to parse the log files and generate an alert.  Since the question doesn't seem that exotic or specific, "A." is probably the right choice, but this is a tricky question.  If you think it isn't, read: https://aws.amazon.com/blogs/mt/get-notified-specific-lambda-function-error-patterns-using-cloudwatch/</div>
@@ -837,7 +988,7 @@ A seems the best reasonable solution</div>
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -861,9 +1012,7 @@ A seems the best reasonable solution</div>
 				eboehm
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Thu 13 Jul 2023 00:03">
-			1 month, 2 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Sat 13 Jan 2024 01:03">2024-01-13 10:03</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">the question doesnt ask how to deal with the error/alarm.  It just mentioned that someone needs notified when an error occurs.  Once notified they can view the logs and resolve the error.  Now ideally, yes, it should be a log subscription which would notify and send details about what caused the error, but the question did not ask for this</div>
@@ -914,9 +1063,7 @@ A seems the best reasonable solution</div>
 				michaldavid
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Thu 08 Dec 2022 06:45">
-			8 months, 3 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Thu 08 Jun 2023 05:45">2023-06-08 14:45</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -960,9 +1107,7 @@ A seems the best reasonable solution</div>
 				Liongeek
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Fri 18 Nov 2022 19:29">
-			9 months, 1 week ago
-		</span>
+<span class="comment-date align-middle" title="Thu 18 May 2023 18:29">2023-05-19 03:29</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -1006,9 +1151,7 @@ A seems the best reasonable solution</div>
 				Finger41
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Tue 24 May 2022 04:07">
-			1 year, 3 months ago
-		</span>
+<span class="comment-date align-middle" title="Thu 24 Nov 2022 05:07">2022-11-24 14:07</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -1052,9 +1195,7 @@ A seems the best reasonable solution</div>
 				psou7
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sun 01 May 2022 11:35">
-			1 year, 3 months ago
-		</span>
+<span class="comment-date align-middle" title="Tue 01 Nov 2022 12:35">2022-11-01 21:35</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -1099,7 +1240,7 @@ A seems the best reasonable solution</div>
 <i class="fa fa-angle-up"></i>
 </div>
 <!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="../../../js/popper.min.js"></script>
 <!-- jquery latest version -->
 <script src="../../../js/jquery.min.js"></script>
 <!-- bootstrap js -->
@@ -1110,8 +1251,6 @@ A seems the best reasonable solution</div>
 <script src="../../../js/wow.min.js"></script>
 <!-- main js -->
 <script src="../../../js/main.js"></script>
-<script async="" defer="" src="../../../js/bootstrap3-typeahead.min.js">
-</script>
 <script type="text/javascript">
     // Activate tooltips
     $(function () {
@@ -1138,39 +1277,6 @@ A seems the best reasonable solution</div>
         $('img[defsrc]').each(function() {
             $(this).attr('src',$(this).attr('defsrc'));
         });
-
-
-        function delayedStart() {
-            // Typeahead start
-
-            // Register typeahead element:
-            $('#header-keyword-search, #modal-keyword-search').typeahead({
-                source: autoCompleteQuery,
-                autoSelect: true,
-                delay: 150,
-                selectOnBlur: false,
-                afterSelect: function(param) {$(this.$element).closest('form').submit()}
-            });
-
-            // Query ajax function:
-            function autoCompleteQuery(query, callback) {
-                return $.get("/ajax/autocomplete/suggestions/?query=" + query).done(callback);
-            }
-            // Typeahead end
-        }
-        setTimeout(delayedStart, 1500);
-
-        // Don't submit empty search query
-        $('#modal-keyword-search-form').submit(function() {
-            if (!$('#modal-keyword-search').val()) {
-                return false;
-            }
-        });
-
-        // Auto focus on search box when search-modal is opened
-        $('.search-modal').on('shown.bs.modal', function (e) {
-            $(this).find('input[type=text]').focus();
-        });
     });
 </script>
 <script type="text/javascript">
@@ -1180,6 +1286,6 @@ A seems the best reasonable solution</div>
 </script>
 <script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
 <script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
-</div>
+</meta></div>
 </body>
 </html>

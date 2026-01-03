@@ -3,13 +3,14 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="2024-10-26 19:08" name="refresh_date"/>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
 <meta charset="utf-8"/>
 <title>Exam AWS Certified SysOps Administrator</title>
 <!-- responsive tag -->
-<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- bootstrap v4 css -->
 <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -56,7 +57,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS Certified SysOps Administrator – Associate 주제 1 문제 441 토론</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified SysOps Administrator - Associate 시험 주제 1 문제 441 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified SysOps Administrator - Associate topic 1 question 441 discussion</h1>
@@ -71,21 +72,20 @@
 <!-- Question -->
 <div class="question-discussion-header">
 						
-							Amazon
-						 <a class="discussion-link">AWS 공인 SysOps 관리자 – 어소시에이트 의 시험 문제</a>
+							아마존
+						 <a class="discussion-link">AWS 공인 시스템 운영 관리자 - 어소시에이트 시험 문제</a>
 <div>
-							질문 #: 441 <br/>
-							주제 #: 1
+							문제 번호: 441 <br/>
+							주제 번호: 1
 						</div>
 </div>
 <div class="question-body mt-3 pt-3 border-top" data-id="917396">
 <p class="card-text">
 							
-								회사에서는 AWS Certificate Manager(ACM)를 사용하여 공개 SSL/TLS 인증서를 관리하고 있습니다. SysOps 관리자는 인증서 만료까지 14일 미만 남았을 때 이메일 알림을 보내야 합니다. <br/><br/>최소한의 운영 오버헤드로 이 요구 사항을 충족하는 솔루션은 무엇입니까?
+								한 회사가 AWS Certificate Manager(ACM)를 사용하여 공개 SSL/TLS 인증서를 관리하고 있습니다. 시스템 운영 관리자는 인증서 만료일이 14일 미만으로 남았을 때 이메일 알림을 보내야 합니다. <br/><br/>운영 오버헤드를 최소화하면서 이 요구 사항을 충족하는 솔루션은 무엇일까요?
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="917396" type="application/json">[{"voted_answers": "B", "vote_count": 2, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -94,43 +94,45 @@
 													A.
 												</span> 
 											
-											모든 ACM 인증서에 대한 인증서 만료를 모니터링하기 위해 Amazon CloudWatch 사용자 지정 지표를 생성합니다. aws.cloudwatch라는 이벤트 소스가 있는 Amazon EventBridge 규칙을 생성합니다. DaysToExpiry 지표가 14보다 작은 경우 대상 Amazon Simple Notification Service(Amazon SNS) 주제로 이벤트를 보내도록 규칙을 구성하십시오. SNS 주제에 대한 적절한 이메일 주소를 구독하십시오.
+											모든 ACM 인증서의 만료일을 모니터링하는 Amazon CloudWatch 사용자 지정 메트릭을 생성합니다. aws.cloudwatch를 이벤트 소스로 하는 Amazon EventBridge 규칙을 생성합니다. DaysToExpiry 메트릭이 14 미만인 경우 대상 Amazon Simple Notification Service(Amazon SNS) 토픽으로 이벤트를 전송하도록 규칙을 구성합니다. 적절한 이메일 주소를 SNS 토픽에 구독합니다.
 										</li>
 <li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
 												</span> 
 											
-											aws.acm의 이벤트 소스가 있는 Amazon EventBridge 규칙을 생성합니다. 모든 ACM 인증서에 대한 DaysToExpiry 지표를 평가하도록 규칙을 구성합니다. DaysToExpiry가 14보다 작은 경우 대상 Amazon Simple Notification Service(Amazon SNS) 주제로 이벤트를 보내도록 규칙을 구성합니다. SNS 주제에 적절한 이메일 주소를 구독합니다.
-										</li>
+											aws.acm을 이벤트 소스로 하는 Amazon EventBridge 규칙을 생성합니다. 모든 ACM 인증서의 DaysToExpiry 메트릭을 평가하도록 규칙을 구성합니다. DaysToExpiry가 14 미만인 경우 대상 Amazon Simple Notification Service(Amazon SNS) 토픽으로 이벤트를 전송하도록 규칙을 구성합니다. 적절한 이메일 주소를 SNS 토픽에 구독합니다.
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                가장 많은 표를 받은
+            </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span> 
 											
-											모든 ACM 인증서에 대한 DaysToExpiry 지표를 표시하는 Amazon CloudWatch 대시보드를 생성합니다. DaysToExpiry가 14보다 작으면 적절한 이메일 주소로 이메일 메시지를 보냅니다. Amazon Simple 알림 서비스(Amazon SNS) 주제에 게시하기 위해 사전 정의된 CLI 명령을 실행하여 이메일 메시지를 보냅니다.
+											모든 ACM 인증서의 만료일(DaysToExpiry) 지표를 표시하는 Amazon CloudWatch 대시보드를 생성합니다. 만료일이 14일 미만인 경우, 해당 이메일 주소로 알림 메시지를 보냅니다. 미리 정의된 CLI 명령어를 실행하여 Amazon Simple Notification Service(Amazon SNS) 토픽에 메시지를 게시합니다.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span> 
 											
-											aws.acm의 이벤트 소스가 있는 Amazon EventBridge 규칙을 생성합니다. 모든 ACM 인증서에 대한 DaysToExpiry 지표를 평가하도록 규칙을 구성합니다. 사전 정의된 이메일 템플릿을 사용하는 대상 SMS ID를 구성합니다. DaysToExpiry가 14보다 작은 경우 대상 SMS ID로 이벤트를 보내도록 규칙을 구성합니다.
+											aws.acm을 이벤트 소스로 하는 Amazon EventBridge 규칙을 생성합니다. 모든 ACM 인증서의 DaysToExpiry 메트릭을 평가하도록 규칙을 구성합니다. 미리 정의된 이메일 템플릿을 사용하는 대상 SMS ID를 구성합니다. DaysToExpiry가 14 미만인 경우 대상 SMS ID로 이벤트를 전송하도록 규칙을 구성합니다.
 										</li>
 </ul>
 </div>
-<a class="btn btn-primary reveal-solution" href="#">제안된 답변 표시</a>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
 <a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
 <div class="card-text question-answer bg-light white-text" style="display: none;">
-<span class="correct-answer-box"><strong>제안된 답변: </strong>
+<span class="correct-answer-box"><strong>정답: </strong>
 <span class="correct-answer">B</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="2 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">B (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>지역사회 투표 배분</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="4 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">B (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
-                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">다른
+                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
 <!-- / Question  -->
@@ -155,7 +157,6 @@
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="917396" type="application/json">[{"voted_answers": "B", "vote_count": 2, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -172,7 +173,9 @@
 												</span>
 											
 											Create an Amazon EventBridge rule that has an event source of aws.acm. Configure the rule to evaluate the DaysToExpiry metric for all ACM certificates. Configure the rule to send an event to a target Amazon Simple Notification Service (Amazon SNS) topic if DaysToExpiry is less than 14. Subscribe the appropriate email addresses to the SNS topic.
-										</li>
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                Most Voted
+            </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
@@ -198,7 +201,7 @@
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="2 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">B (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="4 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">B (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
@@ -209,7 +212,7 @@
 <a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
 <a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
 <div class="discussion-page-comments-section" data-discussion-question-id="138807" style="display: none">
-<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">코멘트</h4></div>
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
 <div class="container outer-discussion-container">
@@ -234,26 +237,69 @@
 				tgv
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 4월 16일 (화) 08:45">2024-04-16 17:45</span>
+<span class="comment-date align-middle" title="2024년 4월 16일 화요일 오전 8시 45분">2024년 4월 16일 17시 45분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>B</strong></span></div>
-<div class="comment-content">CloudWatch 경보는 필요하지 않습니다. EventBridge에 ApproachingExpiration ACM 샘플 이벤트가 있습니다: { "version": "0", "id": "9c95e8e4-96a4-ef3f-b739-b6aa5b193afb", "detail-type": "ACM Certificate Approaching Expiration", "source ": "aws.acm", "계정": "123456789012", "시간": "2020-09-30T06:51:08Z", "지역": "us-east-1", "리소스": [" arn:aws:acm:us-east-1:123456789012:certificate/61f50cd4-45b9-4259-b049-d0a53682fa4b"], "detail": { "DaysToExpiry": 31, "CommonName": "example.com" } }</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>B</strong></span></div>
+<div class="comment-content">CloudWatch 알람은 필요하지 않습니다. EventBridge에 ApproachingExpiration ACM 샘플 이벤트가 있습니다. 이벤트 내용은 다음과 같습니다. { "version": "0", "id": "9c95e8e4-96a4-ef3f-b739-b6aa5b193afb", "detail-type": "ACM Certificate Approaching Expiration", "source": "aws.acm", "account": "123456789012", "time": "2020-09-30T06:51:08Z", "region": "us-east-1", "resources": ["arn:aws:acm:us-east-1:123456789012:certificate/61f50cd4-45b9-4259-b049-d0a53682fa4b"], "detail": { "DaysToExpiry": 31, "CommonName": "example.com" } }</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
 </div>
 <div class="comment-replies">
 <!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1303348" id="comment-1303348">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				아멘
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2024년 10월 26일 토요일 19시 8분">2024년 10월 27일 04시 08분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">동의합니다... CW는 여기서 관련이 없습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
+			 
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
 <!-- Nesting end -->
 </div>
 </div>
@@ -325,7 +371,7 @@
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">2</span> times
+				upvoted <span class="upvote-count">4</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -333,6 +379,49 @@
 </div>
 <div class="comment-replies">
 <!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1303348" id="comment-1303348">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Aamee
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Sat 26 Oct 2024 19:08">2024-10-27 04:08</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">Agree... CW is not relevant here</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
 <!-- Nesting end -->
 </div>
 </div>
@@ -404,6 +493,6 @@
 </script>
 <script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
 <script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
-</div>
+</meta></div>
 </body>
 </html>

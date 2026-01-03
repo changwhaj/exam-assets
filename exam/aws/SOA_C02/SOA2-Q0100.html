@@ -3,13 +3,14 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="2024-03-29 2:42" name="refresh_date"/>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
 <meta charset="utf-8"/>
 <title>Exam AWS Certified SysOps Administrator</title>
 <!-- responsive tag -->
-<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- bootstrap v4 css -->
 <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -56,7 +57,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS Certified SysOps Administrator – Associate 주제 1 문제 100 토론</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified SysOps Administrator - Associate 시험 주제 1, 100번 문제 해설</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified SysOps Administrator - Associate topic 1 question 100 discussion</h1>
@@ -71,20 +72,19 @@
 <!-- Question -->
 <div class="question-discussion-header">
 						
-							Amazon
-						 <a class="discussion-link">AWS 공인 SysOps 관리자 – 어소시에이트 의 시험 문제</a>
+							아마존
+						 <a class="discussion-link">AWS 공인 시스템 운영 관리자 - 어소시에이트 시험 문제</a>
 <div>
-							질문 #: 100 <br/>
-							주제 #: 1
+							문제 번호: 100 <br/>
+							주제 번호: 1
 						</div>
 </div>
 <div class="question-body mt-3 pt-3 border-top" data-id="809841">
 <p class="card-text">
 							
-								회사에는 모든 Amazon EC2 인스턴스에 특정 태그 세트가 있어야 한다는 정책이 있습니다. EC2 인스턴스에 필수 태그가 없으면 비준수 인스턴스를 종료해야 합니다. <br/>이러한 요구 사항을 충족하는 가장 운영 효율적인 솔루션은 무엇입니까?<br/>
+								한 회사는 모든 Amazon EC2 인스턴스에 특정 태그 세트를 지정해야 하는 정책을 시행하고 있습니다. EC2 인스턴스에 필요한 태그가 없는 경우, 해당 인스턴스는 종료되어야 합니다. <br/>이러한 요구 사항을 충족하면서 운영 효율성이 가장 높은 솔루션은 무엇일까요?<br/>
 </p>
 <div class="voted-answers-tally d-none">
-<script id="809841" type="application/json">[{"voted_answers": "D", "vote_count": 4, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -93,43 +93,45 @@
 													A.
 												</span> 
 											
-											모든 EC2 인스턴스 상태 변경 사항을 AWS Lambda 함수로 전송하여 각 인스턴스가 규정을 준수하는지 확인하는 Amazon EventBridge(Amazon CloudWatch Events) 규칙을 생성합니다. 비준수 인스턴스를 종료합니다.
+											모든 EC2 인스턴스의 상태 변경 사항을 AWS Lambda 함수로 전송하여 각 인스턴스가 규정을 준수하는지 확인하는 Amazon EventBridge(Amazon CloudWatch Events) 규칙을 생성합니다. 규정을 준수하지 않는 인스턴스는 종료합니다.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
 												</span> 
 											
-											모든 EC2 인스턴스 태그 요구 사항을 적용하는 IAM 정책을 생성합니다. 인스턴스에 필요한 태그가 없으면 정책은 비준수 인스턴스를 종료합니다.
+											모든 EC2 인스턴스 태그 요구 사항을 적용하는 IAM 정책을 생성합니다. 인스턴스에 필수 태그가 설정되어 있지 않으면 정책에 따라 해당 인스턴스가 종료됩니다.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span> 
 											
-											AWS Lambda 함수를 생성하여 각 EC2 인스턴스가 규정을 준수하는지 확인하고, 규정을 준수하지 않는 경우 인스턴스를 종료합니다. 5분마다 호출되도록 Lambda 함수를 예약합니다.
+											각 EC2 인스턴스가 규정을 준수하는지 확인하고 규정을 준수하지 않는 경우 인스턴스를 종료하는 AWS Lambda 함수를 생성합니다. 해당 Lambda 함수가 5분마다 실행되도록 예약합니다.
 										</li>
 <li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span> 
 											
-											AWS Config 규칙을 생성하여 필요한 태그가 있는지 확인합니다. EC2 인스턴스가 규정을 준수하지 않는 경우 AWS 시스템 관리자 자동화 문서를 호출하여 인스턴스를 종료합니다.
-										</li>
+											필수 태그가 있는지 확인하는 AWS Config 규칙을 생성합니다. EC2 인스턴스가 규정을 준수하지 않는 경우 AWS Systems Manager 자동화 문서를 호출하여 인스턴스를 종료합니다.
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                가장 많은 표를 받은
+            </span></li>
 </ul>
 </div>
-<a class="btn btn-primary reveal-solution" href="#">제안된 답변 표시</a>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
 <a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
 <div class="card-text question-answer bg-light white-text" style="display: none;">
-<span class="correct-answer-box"><strong>제안된 답변: </strong>
+<span class="correct-answer-box"><strong>정답: </strong>
 <span class="correct-answer">D</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="4 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">D (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>지역사회 투표 배분</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="4 votes." data-toggle="tooltip" role="progressbar" style="width: 100%; display: flex;" title="">D (100%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">C (25%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
-                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">다른
+                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
 <!-- / Question  -->
@@ -153,7 +155,6 @@
 								A company has a policy that requires all Amazon EC2 instances to have a specific set of tags. If an EC2 instance does not have the required tags, the noncompliant instance should be terminated.<br/>What is the MOST operationally efficient solution that meets these requirement?<br/>
 </p>
 <div class="voted-answers-tally d-none">
-<script id="809841" type="application/json">[{"voted_answers": "D", "vote_count": 4, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -184,7 +185,9 @@
 												</span>
 											
 											Create an AWS Config rule to check if the required tags are present. If an EC2 instance is noncompliant, invoke an AWS Systems Manager Automation document to terminate the instance.
-										</li>
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                Most Voted
+            </span></li>
 </ul>
 </div>
 <a class="btn btn-primary reveal-solution" href="#">Show Suggested Answer</a>
@@ -207,7 +210,7 @@
 <a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
 <a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
 <div class="discussion-page-comments-section" data-discussion-question-id="80939" style="display: none">
-<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">코멘트</h4></div>
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
 <div class="container outer-discussion-container">
@@ -232,20 +235,20 @@
 				존슨_차오
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 3월 29일 금 02:42">2024-03-29 11:42</span>
+<span class="comment-date align-middle" title="2024년 9월 29일 일요일 오전 1시 42분">2024년 9월 29일 10시 42분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>D</strong></span></div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>D</strong></span></div>
 <div class="comment-content">DDDDDD</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -276,19 +279,19 @@
 				로니카포
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 6월 25일 일요일 03:20">2023-06-25 12:20</span>
+<span class="comment-date align-middle" title="2023년 12월 25일 월요일 오전 4시 20분">2023년 12월 25일 13시 20분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">DDDDDD</div>
+<div class="comment-content">DDDDDDD</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -319,20 +322,20 @@
 				미칼다비드
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 12월 10일 토요일 07:53">2022-12-10 16:53</span>
+<span class="comment-date align-middle" title="2023년 6월 10일 토요일 오전 6시 53분">2023년 6월 10일 15시 53분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>D</strong></span></div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>D</strong></span></div>
 <div class="comment-content">dddddd</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -360,22 +363,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				라이온긱
+				라이온기크
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 11월 17일 목요일 20:56">2022-11-18 05:56</span>
+<span class="comment-date align-middle" title="2023년 5월 17일 수요일 19시 56분">2023년 5월 18일 오전 4시 56분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">답: D</div>
+<div class="comment-content">연도: D</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -403,23 +406,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				서퍼 볼트
+				서퍼볼트
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 10월 17일 (월) 06:52">2022-10-17 15:52</span>
+<span class="comment-date align-middle" title="2023년 4월 17일 월요일 오전 6시 52분">2023년 4월 17일 15시 52분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>D</strong></span></div>
-<div class="comment-content">D. 구성을 사용하십시오.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>D</strong></span></div>
+<div class="comment-content">D. 설정을 사용하세요.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -450,19 +453,19 @@
 				kati2k22cz
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 9월 7일 수요일 16:43">2022-09-08 01:43</span>
+<span class="comment-date align-middle" title="2023년 3월 7일 화요일 17시 43분">2023년 3월 8일 02시 43분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">D. https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html https://docs.aws.amazon.com/systems-manager/latest/userguide/ 시스템 관리자-automation.html</div>
+<div class="comment-content">D입니다. https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-automation.html</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -485,19 +488,19 @@
 				지파크
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 8월 12일 토요일 15:41">2023-08-13 00:41</span>
+<span class="comment-date align-middle" title="2024년 2월 12일 월요일 16시 41분">2024년 2월 13일 오전 1시 41분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">구성 규칙은 많은 규칙을 종료하거나 제한합니다.</div>
+<div class="comment-content">설정 규칙으로 여러 규칙을 종료하거나 제한할 수 있습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -556,7 +559,7 @@
 				johnson_chao
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Fri 29 Mar 2024 02:42">2024-03-29 11:42</span>
+<span class="comment-date align-middle" title="Sun 29 Sep 2024 01:42">2024-09-29 10:42</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>D</strong></span></div>
@@ -600,7 +603,7 @@
 				ronnykapo
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sun 25 Jun 2023 03:20">2023-06-25 12:20</span>
+<span class="comment-date align-middle" title="Mon 25 Dec 2023 04:20">2023-12-25 13:20</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">DDDDDDD</div>
@@ -643,7 +646,7 @@
 				michaldavid
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sat 10 Dec 2022 07:53">2022-12-10 16:53</span>
+<span class="comment-date align-middle" title="Sat 10 Jun 2023 06:53">2023-06-10 15:53</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>D</strong></span></div>
@@ -687,7 +690,7 @@
 				Liongeek
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Thu 17 Nov 2022 20:56">2022-11-18 05:56</span>
+<span class="comment-date align-middle" title="Wed 17 May 2023 19:56">2023-05-18 04:56</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">Ans: D</div>
@@ -730,7 +733,7 @@
 				Surferbolt
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Mon 17 Oct 2022 06:52">2022-10-17 15:52</span>
+<span class="comment-date align-middle" title="Mon 17 Apr 2023 06:52">2023-04-17 15:52</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>D</strong></span></div>
@@ -774,7 +777,7 @@
 				kati2k22cz
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Wed 07 Sep 2022 16:43">2022-09-08 01:43</span>
+<span class="comment-date align-middle" title="Tue 07 Mar 2023 17:43">2023-03-08 02:43</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">its D.
@@ -811,7 +814,7 @@ https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-aut
 				jipark
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sat 12 Aug 2023 15:41">2023-08-13 00:41</span>
+<span class="comment-date align-middle" title="Mon 12 Feb 2024 16:41">2024-02-13 01:41</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">Config Rule terminate or restrict many rules.</div>
@@ -909,6 +912,6 @@ https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-aut
 </script>
 <script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
 <script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
-</div>
+</meta></div>
 </body>
 </html>

@@ -3,13 +3,14 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="2024-10-21 19:19" name="refresh_date"/>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
 <meta charset="utf-8"/>
 <title>Exam AWS Certified SysOps Administrator</title>
 <!-- responsive tag -->
-<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- bootstrap v4 css -->
 <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -56,7 +57,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS Certified SysOps Administrator - Associate 주제 1 문제 385 토론</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified SysOps Administrator - Associate 시험 주제 1 문제 385 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified SysOps Administrator - Associate topic 1 question 385 discussion</h1>
@@ -71,65 +72,66 @@
 <!-- Question -->
 <div class="question-discussion-header">
 						
-							Amazon
-						 <a class="discussion-link">AWS 공인 SysOps 관리자 – 어소시에이트 의 시험 문제</a>
+							아마존
+						 <a class="discussion-link">AWS 공인 시스템 운영 관리자 - 어소시에이트 시험 문제</a>
 <div>
-							질문 #: 385 <br/>
-							주제 #: 1
+							문제 번호: 385 <br/>
+							주제 번호: 1
 						</div>
 </div>
 <div class="question-body mt-3 pt-3 border-top" data-id="907690">
 <p class="card-text">
 							
-								회사는 내부 데이터를 Amazon S3 버킷에 저장합니다. S3 버킷 내의 모든 기존 데이터는 Amazon S3 관리형 암호화 키(SSE-S3)와 함께 서버 측 암호화를 사용하여 보호됩니다. S3 버전 관리가 활성화되었습니다. SysOps 관리자는 재해 복구를 위해 내부 데이터를 다른 AWS 계정의 다른 S3 버킷에 복제해야 합니다. 모든 기존 데이터는 소스 S3 버킷에서 대상 S3 버킷으로 복사됩니다. <br/><br/>운영상 가장 효율적인 복제 솔루션은 무엇입니까?
+								한 회사가 내부 데이터를 Amazon S3 버킷에 저장합니다. S3 버킷에 있는 모든 기존 데이터는 Amazon S3 관리형 암호화 키(SSE-S3)를 사용한 서버 측 암호화로 보호됩니다. S3 버전 관리가 활성화되어 있습니다. 시스템 운영 관리자는 재해 복구를 위해 내부 데이터를 다른 AWS 계정의 다른 S3 버킷으로 복제해야 합니다. 기존 데이터는 모두 원본 S3 버킷에서 대상 S3 버킷으로 복사됩니다. <br/><br/>어떤 복제 솔루션이 운영 효율성이 가장 높을까요?
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="907690" type="application/json">[{"voted_answers": "A", "vote_count": 2, "is_most_voted": false}, {"voted_answers": "C", "vote_count": 2, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
-<li class="multi-choice-item">
+<li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="A">
 													A.
 												</span> 
 											
-											원본 버킷에 복제 규칙을 추가하고 대상 버킷을 지정합니다. 원본 버킷의 소유자가 객체를 복제할 수 있도록 대상 버킷에 대한 버킷 정책을 생성합니다.
-										</li>
+											소스 버킷에 복제 규칙을 추가하고 대상 버킷을 지정합니다. 대상 버킷에 대한 버킷 정책을 생성하여 소스 버킷 소유자가 객체를 복제할 수 있도록 허용합니다.
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                가장 많은 표를 받은
+            </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
 												</span> 
 											
-											Amazon EventBridge를 사용하여 AWS Batch 작업을 예약하여 소스 버킷에서 대상 버킷으로 새 객체를 복사합니다. 대상 계정에 배치 작업 IAM 역할을 생성합니다.
+											Amazon EventBridge를 사용하여 AWS 배치 작업을 예약하고 소스 버킷에서 대상 버킷으로 새 객체를 복사합니다. 대상 계정에 배치 작업 IAM 역할을 생성합니다.
 										</li>
-<li class="multi-choice-item correct-hidden">
+<li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span> 
 											
-											소스 버킷에 대한 Amazon S3 이벤트 알림을 구성하여 AWS Lambda 함수를 호출하여 새 객체를 대상 버킷에 복사합니다. Lambda 함수에 교차 계정 액세스 권한이 있는지 확인하십시오.
+											소스 버킷에 대한 Amazon S3 이벤트 알림을 구성하여 AWS Lambda 함수를 호출하여 새 객체를 대상 버킷으로 복사하도록 합니다. Lambda 함수에 계정 간 액세스 권한이 있는지 확인하십시오.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span> 
 											
-											Amazon EC2 인스턴스에서 예약된 스크립트를 실행하여 원본 버킷에서 대상 버킷으로 새 객체를 복사합니다. EC2 인스턴스의 역할에 교차 계정 액세스 권한을 할당합니다.
+											Amazon EC2 인스턴스에서 예약된 스크립트를 실행하여 소스 버킷에서 대상 버킷으로 새 객체를 복사합니다. EC2 인스턴스의 역할에 계정 간 액세스 권한을 할당합니다.
 										</li>
 </ul>
 </div>
-<a class="btn btn-primary reveal-solution" href="#">제안된 답변 표시</a>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
 <a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
 <div class="card-text question-answer bg-light white-text" style="display: none;">
 <span class="correct-answer-box"><strong>제안된 답변: </strong>
-<span class="correct-answer">C</span>
+<span class="correct-answer">A</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="2 votes." data-toggle="tooltip" role="progressbar" style="width: 50%; display: flex;" title="">A (50%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="2 votes." data-toggle="tooltip" role="progressbar" style="width: 50%; display: flex;" title="">C (50%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
-                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">다른
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>지역사회 투표 배분</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="11 votes." data-toggle="tooltip" role="progressbar" style="width: 73%; display: flex;" title="">A (73%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="4 votes." data-toggle="tooltip" role="progressbar" style="width: 27%; display: flex;" title="">C (27%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
+                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
 <!-- / Question  -->
@@ -154,17 +156,18 @@
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="907690" type="application/json">[{"voted_answers": "A", "vote_count": 2, "is_most_voted": false}, {"voted_answers": "C", "vote_count": 2, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
-<li class="multi-choice-item">
+<li class="multi-choice-item correct-hidden">
 <span class="multi-choice-letter" data-choice-letter="A">
 													A.
 												</span>
 											
 											Add a replication rule to the source bucket and specify the destination bucket. Create a bucket policy for the destination bucket to allow the owner of the source bucket to replicate objects.
-										</li>
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                Most Voted
+            </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
@@ -172,7 +175,7 @@
 											
 											Schedule an AWS Batch job with Amazon EventBridge to copy new objects from the source bucket to the destination bucket. Create a Batch Operations IAM role in the destination account.
 										</li>
-<li class="multi-choice-item correct-hidden">
+<li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span>
@@ -192,12 +195,12 @@
 <a class="btn btn-primary hide-solution d-none" href="#">Hide Answer</a>
 <div class="card-text question-answer bg-light white-text">
 <span class="correct-answer-box"><strong>Suggested Answer:</strong>
-<span class="correct-answer">C</span>
+<span class="correct-answer">A</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="2 votes." data-toggle="tooltip" role="progressbar" style="width: 50%; display: flex;" title="">A (50%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="2 votes." data-toggle="tooltip" role="progressbar" style="width: 50%; display: flex;" title="">C (50%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="11 votes." data-toggle="tooltip" role="progressbar" style="width: 73%; display: flex;" title="">A (73%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="4 votes." data-toggle="tooltip" role="progressbar" style="width: 27%; display: flex;" title="">C (27%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
@@ -207,7 +210,7 @@
 <a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
 <a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
 <div class="discussion-page-comments-section" data-discussion-question-id="130051" style="display: none">
-<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">코멘트</h4></div>
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
 <div class="container outer-discussion-container">
@@ -232,20 +235,69 @@
 				코프코코프
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 1월 6일 토요일 09:34">2024-01-06 18:34</span>
+<span class="badge badge-primary">
+				가장 많은 표를 받은<i class="fa fa-thumbs-up"></i>
+</span>
+<span class="comment-date align-middle" title="2024년 1월 6일 토요일 오전 9시 34분">2024년 1월 6일 18시 34분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication-walkthrough-2.html 원본 및 대상 버킷을 다른 AWS 계정이 소유한 경우 복제를 설정하는 것은 두 버킷을 모두 소유한 경우 복제를 설정하는 것과 유사합니다. 같은 계정. 유일한 차이점은 대상 버킷 소유자가 버킷 정책을 추가하여 객체를 복제할 수 있는 원본 버킷 소유자 권한을 부여해야 한다는 것입니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication-walkthrough-2.html 소스 버킷과 대상 버킷의 소유가 서로 다른 AWS 계정인 경우 복제 설정은 두 버킷의 소유가 동일한 계정인 경우와 유사합니다. 유일한 차이점은 대상 버킷 소유자가 버킷 정책을 추가하여 소스 버킷 소유자에게 객체 복제 권한을 부여해야 한다는 것입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">8</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1239429" id="comment-1239429">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				이사
+			</h5>
+</a>
+<span class="badge badge-primary">
+				최신<i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="2024년 6월 30일 일요일 00시 53분">2024년 6월 30일 오전 9시 53분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">옵션 A는 AWS 계정 간에 소스 S3 버킷의 기존 데이터를 대상 S3 버킷으로 복제하는 데 있어 운영 효율성이 가장 높은 솔루션입니다. 옵션 B, C, D는 AWS 배치, Lambda, EC2 인스턴스와 같은 추가 구성 요소를 포함하므로 관리 오버헤드가 더 크고 예약, 모니터링, 계정 간 권한 관리와 같은 복잡성이 발생할 수 있습니다. 이러한 옵션은 옵션 A처럼 S3의 복제 기능을 직관적으로 활용하지 못하고 있습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
+			 
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -276,26 +328,69 @@
 				레몬그렘린
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 1월 2일 화요일 20:15">2024-01-03 05:15</span>
+<span class="comment-date align-middle" title="2024년 1월 2일 화요일 20시 15분">2024년 1월 3일 오전 5시 15분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>C</strong></span></div>
-<div class="comment-content">옵션 C는 효율적이고 확장 가능하며 Lambda 기능이 실행될 때만 비용이 발생하는 서버리스 이벤트 기반 아키텍처를 제공하므로 이와 같은 복제 작업에 적합한 선택입니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
+<div class="comment-content">옵션 C는 효율적이고 확장 가능하며 Lambda 함수가 실행될 때만 비용이 발생하는 서버리스 이벤트 기반 아키텍처를 제공하므로 이와 같은 복제 작업에 적합합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
 </div>
 <div class="comment-replies">
 <!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1301194" id="comment-1301194">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				아멘
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2024년 10월 21일 월요일 19시 19분">2024년 10월 22일 04시 19분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">질문은 서버리스 솔루션의 효율성, 확장성, 비용 효율성에 대해 구체적으로 묻는 것이 아니라, 운영 효율성에 대해 묻는 것 같습니다. 즉, 서비스 개입 오버헤드를 줄이면서 어떻게 "운영" 효율성을 높일 수 있는지 묻는 것일 수 있습니다. 도움이 되었으면 좋겠습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
+			 
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
 <!-- Nesting end -->
 </div>
 </div>
@@ -320,19 +415,19 @@
 				키팔롬
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 1월 1일 월요일 21:38">2024-01-02 06:38</span>
+<span class="comment-date align-middle" title="2024년 1월 1일 월요일 21시 38분">2024년 1월 2일 오전 6시 38분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">답변 A가 훨씬 더 효율적인 것 같습니다.</div>
+<div class="comment-content">A번 답변이 훨씬 더 효율적인 것 같습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -360,23 +455,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				나라즈
+				나하라즈
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 1월 1일 (월) 오후 2:45">2024-01-01 23:45</span>
+<span class="comment-date align-middle" title="2024년 1월 1일 월요일 14시 45분">2024년 1월 1일 23시 45분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">A - 소스 버킷의 복제 규칙과 대상 버킷의 버킷 정책과 함께 S3 교차 계정 복제를 사용하는 것은 서로 다른 AWS 계정의 S3 버킷 간에 데이터를 복제하기 위한 운영상 가장 효율적인 솔루션입니다. S3 이벤트 알림 및 Lambda 기능은 강력할 수 있습니다. , 복잡성이 추가되고 Lambda 함수에 대한 교차 계정 액세스 권한을 설정하려면 추가 구성이 필요할 수 있습니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">A - 소스 버킷에 복제 규칙을, 대상 버킷에 버킷 정책을 적용하여 S3 계정 간 복제를 사용하는 것이 서로 다른 AWS 계정의 S3 버킷 간 데이터 복제에 있어 운영 효율성이 가장 높은 솔루션입니다. S3 이벤트 알림 및 Lambda 함수는 강력한 기능을 제공하지만 복잡성을 더하며, Lambda 함수에 대한 계정 간 액세스 권한 설정에는 추가 구성이 필요할 수 있습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -407,20 +502,20 @@
 				윈앤윈
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2024년 1월 1일 월요일 11:12">2024-01-01 20:12</span>
+<span class="comment-date align-middle" title="2024년 1월 1일 월요일 오전 11시 12분">2024년 1월 1일 20시 12분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>C</strong></span></div>
-<div class="comment-content">C가 맞습니다. "종료된 모든 데이터가 이미 복사되었습니다"는 새 데이터만 신경 쓴다는 의미입니다. https://docs.aws.amazon.com/lambda/latest/dg/with-s3.html</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
+<div class="comment-content">C가 정답입니다. "기존 데이터는 모두 복사되었습니다"라는 말은 새 데이터만 확인하면 된다는 뜻입니다. https://docs.aws.amazon.com/lambda/latest/dg/with-s3.html</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -471,6 +566,9 @@
 				CofkoCof
 			</h5>
 </a>
+<span class="badge badge-primary">
+				Highly Voted <i class="fa fa-thumbs-up"></i>
+</span>
 <span class="comment-date align-middle" title="Sat 06 Jan 2024 09:34">2024-01-06 18:34</span>
 </div>
 <div class="comment-body comment-toggled">
@@ -478,6 +576,55 @@
 <div class="comment-content">https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication-walkthrough-2.html
 
 Setting up replication when source and destination buckets are owned by different AWS accounts is similar to setting replication when both buckets are owned by the same account. The only difference is that the destination bucket owner must grant the source bucket owner permission to replicate objects by adding a bucket policy.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">8</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1239429" id="comment-1239429">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				eesa
+			</h5>
+</a>
+<span class="badge badge-primary">
+				Most Recent <i class="fa fa-clock-o"></i>
+</span>
+<span class="comment-date align-middle" title="Sun 30 Jun 2024 00:53">2024-06-30 09:53</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">option A is the most operationally efficient solution for replicating the existing data from the source S3 bucket to the destination S3 bucket across AWS accounts.
+
+The other options, B, C, and D, involve additional components (AWS Batch, Lambda, EC2 instance) that would require more management overhead and potentially introduce 
+complexities such as scheduling, monitoring, and ensuring cross-account permissions. These options are not as straightforward or as native to S3's replication functionality as option A.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
 <a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
@@ -537,6 +684,49 @@ Setting up replication when source and destination buckets are owned by differen
 </div>
 <div class="comment-replies">
 <!-- Nesting start -->
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1301194" id="comment-1301194">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Aamee
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Mon 21 Oct 2024 19:19">2024-10-22 04:19</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">The question doesn't ask specifically about serverless efficient, scalable and cost effective solution model but perhaps asked specifically about Operationally efficient. That means with less number of services involvement overhead, how would you make the solution "operationally" efficient. Hope that helps..</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
 <!-- Nesting end -->
 </div>
 </div>
@@ -572,7 +762,7 @@ Setting up replication when source and destination buckets are owned by differen
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">3</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -618,7 +808,7 @@ While S3 event notifications and Lambda functions can be powerful, they add comp
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">3</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -663,7 +853,7 @@ https://docs.aws.amazon.com/lambda/latest/dg/with-s3.html</div>
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">3</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -742,6 +932,6 @@ https://docs.aws.amazon.com/lambda/latest/dg/with-s3.html</div>
 </script>
 <script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
 <script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
-</div>
+</meta></div>
 </body>
 </html>

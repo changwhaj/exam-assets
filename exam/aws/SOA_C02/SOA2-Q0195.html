@@ -3,13 +3,14 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="2025-03-18 10:29" name="refresh_date"/>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
 <meta charset="utf-8"/>
 <title>Exam AWS Certified SysOps Administrator</title>
 <!-- responsive tag -->
-<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- bootstrap v4 css -->
 <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -24,23 +25,29 @@
 <!-- responsive css -->
 <link href="../../../css/responsive.css" rel="stylesheet" type="text/css"/>
 <link href="../../../css/forum.css" rel="stylesheet" type="text/css"/>
-<style>
-</style>
 <div class="sec-spacer pt-20">
 <div class="container">
 <div class="container action-row-container border-0 p-0 mb-2">
 <div class="container action-row clearfix d-flex">
 <i class="fa fm fa-language fa-2x mr-2"></i>
-<a class="btn show-english" href="#">English</a>
-<a class="btn show-korean d-none" href="#">한국어</a>
+<a class="btn show-english" href="javascript:void(0)">English</a>
+<a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
 <span class="pagination-container ml-auto">
 <span id="page-indicator"><strong></strong></span>
-<!--p id="page-indicator"></p-->
 <span class="pagination-nav ml-4">
-<a class="btn btn-sm" href="#" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
-<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect">
-</select>
-<a class="btn btn-sm" href="#" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
+<a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
+<a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
 </span>
 </span>
 </div>
@@ -50,7 +57,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS Certified SysOps Administrator - Associate 주제 1 문제 195 토론</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified SysOps Administrator - Associate 시험 주제 1, 질문 195, 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified SysOps Administrator - Associate topic 1 question 195 discussion</h1>
@@ -65,21 +72,20 @@
 <!-- Question -->
 <div class="question-discussion-header">
 						
-							Amazon
-						 <a class="discussion-link">AWS 공인 SysOps 관리자 – 어소시에이트 의 시험 문제</a>
+							아마존
+						 <a class="discussion-link">AWS 공인 시스템 운영 관리자 - 어소시에이트 시험 문제</a>
 <div>
-							질문 #: 195 <br/>
-							주제 #: 1
+							문제 번호: 195 <br/>
+							주제 번호: 1
 						</div>
 </div>
 <div class="question-body mt-3 pt-3 border-top" data-id="854666">
 <p class="card-text">
 							
-								회사는 민감한 데이터를 Amazon S3 버킷에 저장합니다. 회사는 S3 버킷에 대한 모든 액세스 시도를 기록해야 합니다. 회사의 위험 팀은 삭제 이벤트에 대해 즉시 알림을 받아야 합니다. <br/><br/>어떤 솔루션이 이러한 요구 사항을 충족합니까?
+								한 회사가 민감한 데이터를 아마존 S3 버킷에 저장합니다. 회사는 S3 버킷에 대한 모든 접근 시도를 기록해야 하며, 데이터 삭제 시 회사 위험 관리팀에 즉시 알림이 전송되어야 합니다. <br/><br/>이러한 요구 사항을 충족하는 솔루션은 무엇일까요?
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="854666" type="application/json">[{"voted_answers": "A", "vote_count": 6, "is_most_voted": true}, {"voted_answers": "C", "vote_count": 1, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -88,45 +94,44 @@
 													A.
 												</span> 
 											
-											감사 로그에 대해 S3 서버 액세스 로깅을 활성화합니다. S3 버킷에 대한 Amazon Simple 알림 서비스(Amazon SNS) 알림을 설정합니다. 경고 시스템의 이벤트 유형으로 DeleteObject를 선택합니다.
+											감사 로그를 위해 S3 서버 액세스 로깅을 활성화합니다. S3 버킷에 대한 Amazon Simple Notification Service(Amazon SNS) 알림을 설정합니다. 알림 시스템의 이벤트 유형으로 DeleteObject를 선택합니다.
 										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
-                최다 투표
+                가장 많은 표를 받은
             </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
 												</span> 
 											
-											감사 로그에 대해 S3 서버 액세스 로깅을 활성화합니다. 알림 시스템을 위해 Amazon EC2 인스턴스를 시작합니다. EC2 인스턴스에서 cron 작업을 실행하여 매일 액세스 로그를 다운로드하고 DeleteObject 이벤트를 검색합니다.
+											감사 로그를 위해 S3 서버 액세스 로깅을 활성화합니다. 경고 시스템을 위한 Amazon EC2 인스턴스를 시작합니다. EC2 인스턴스에서 cron 작업을 실행하여 매일 액세스 로그를 다운로드하고 DeleteObject 이벤트를 검색합니다.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span> 
 											
-											감사 로그에는 Amazon CloudWatch Logs를 사용하십시오. 알림 시스템에 대한 Amazon Simple 알림 서비스(Amazon SNS) 알림과 함께 Amazon CloudWatch 경보를 사용합니다.
+											감사 로그에는 Amazon CloudWatch Logs를 사용하고, 알림 시스템에는 Amazon Simple Notification Service(Amazon SNS) 알림 기능을 갖춘 Amazon CloudWatch 알람을 사용하십시오.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span> 
 											
-											감사 로그에는 Amazon CloudWatch Logs를 사용하십시오. 알림 시스템을 위해 Amazon EC2 인스턴스를 시작합니다. 매일 EC2 인스턴스에서 cron 작업을 실행하여 항목 목록을 전날의 목록과 비교합니다. 항목이 누락된 경우 알림을 보내도록 cron 작업을 구성합니다.
+											감사 로그에는 Amazon CloudWatch Logs를 사용합니다. 알림 시스템을 위해 Amazon EC2 인스턴스를 시작합니다. EC2 인스턴스에서 매일 cron 작업을 실행하여 항목 목록을 전날 목록과 비교합니다. 항목이 누락된 경우 알림을 보내도록 cron 작업을 구성합니다.
 										</li>
 </ul>
 </div>
-<a class="btn btn-primary reveal-solution" href="#">제안된 답변 표시</a>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
 <a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
 <div class="card-text question-answer bg-light white-text" style="display: none;">
-<span class="correct-answer-box"><strong>추천 답변: </strong>
-<span class="correct-answer">A </span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
+<span class="correct-answer-box"><strong>제안된 답변: </strong>
+<span class="correct-answer">A</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="6 votes." data-toggle="tooltip" role="progressbar" style="width: 86%; display: flex;" title="">A (86%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="1 votes." data-toggle="tooltip" role="progressbar" style="width: 14%; display: flex;" title="">14%</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
-                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">다른
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>지역사회 투표 배분</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="10 votes." data-toggle="tooltip" role="progressbar" style="width: 77%; display: flex;" title="">A (77%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="3 votes." data-toggle="tooltip" role="progressbar" style="width: 23%; display: flex;" title="">C (23%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
+                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
 <!-- / Question  -->
@@ -151,7 +156,6 @@
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="854666" type="application/json">[{"voted_answers": "A", "vote_count": 6, "is_most_voted": true}, {"voted_answers": "C", "vote_count": 1, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -192,22 +196,21 @@
 <div class="card-text question-answer bg-light white-text">
 <span class="correct-answer-box"><strong>Suggested Answer:</strong>
 <span class="correct-answer">A</span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="6 votes." data-toggle="tooltip" role="progressbar" style="width: 86%; display: flex;" title="">A (86%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="1 votes." data-toggle="tooltip" role="progressbar" style="width: 14%; display: flex;" title="">14%</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="10 votes." data-toggle="tooltip" role="progressbar" style="width: 77%; display: flex;" title="">A (77%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="3 votes." data-toggle="tooltip" role="progressbar" style="width: 23%; display: flex;" title="">C (23%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
 <!-- / Question  -->
 </div>
 <div class="comments-wrapper">
-<a class="badge reveal-comment" href="#">댓글 표시</a>
-<a class="badge hide-comment d-none" href="#">댓글 숨기기</a>
+<a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
 <div class="discussion-page-comments-section" data-discussion-question-id="91073" style="display: none">
-<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">코멘트</h4></div>
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
 <div class="container outer-discussion-container">
@@ -216,6 +219,93 @@
 <!-- New comment start -->
 <!-- New comment end -->
 <div class="discussion-container">
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1400043" id="comment-1400043">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				할아버지
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2025년 3월 18일 화요일 오전 10시 29분">2025년 3월 18일 19시 29분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
+<div class="comment-content">옵션 A에서 언급했듯이 S3 서버 액세스 로깅은 모든 액세스 이벤트를 캡처하지만, 로깅 전송은 최선을 다하는 방식으로 이루어지며 종종 지연되므로 즉각적인 알림에는 적합하지 않습니다. CloudTrail을 사용하여 S3 데이터 이벤트를 CloudWatch Logs에 로깅하고 DeleteObject 이벤트에 대한 메트릭 필터와 알람을 생성하면 위험 관리 팀에 거의 실시간으로 SNS 알림을 보낼 수 있습니다. 이 솔루션은 포괄적인 로깅과 즉각적인 알림이라는 두 가지 요구 사항을 모두 충족합니다. AWS 문서: CloudTrail을 사용한 데이터 이벤트 로깅 및 Amazon CloudWatch 알람 사용</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
+			 
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1312346" id="comment-1312346">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				XXXXXlNN
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2024년 11월 15일 금요일 00시 59분">2024년 11월 15일 오전 9시 59분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">제 생각에 핵심은 '즉시 알림'을 요구하는 것 같습니다. 선택지 목록이 너무 부실해요. A의 경우, SNS는 실시간 트리거 및 알림을 제공하기 위해 S3 이벤트 알림과 연동되어야 합니다. C의 경우, CloudTrail이 로그를 전달하지 않으면 CloudWatch만으로는 아무 소용이 없습니다. 그래서 어떤 게 정답인지 모르겠네요. 제 생각엔 이 문제는 더 이상 시험에 나오지 않을 것 같습니다. 아예 출제 불가 문제인 것 같아요. :)</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
+			 
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
 <!-- single_comment.html -->
 <div class="media comment-container" data-comment-id="995075" id="comment-995075">
 <a class="minimize-comment comment-toggle" href="#">
@@ -229,25 +319,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				알렉슬리리
+				알렉스릴리
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 8월 31일 목요일 13:55">
-			1일 14시간 전
-		</span>
+<span class="comment-date align-middle" title="2023년 8월 31일 목요일 오후 1시 55분">2023년 8월 31일 22시 55분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
 <div class="comment-content">https://docs.aws.amazon.com/AmazonS3/latest/userguide/logging-with-S3.html</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -275,25 +363,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				고메르
+				고머
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 4월 18일 (화) 23:29">
-			4개월, 2주 전
-		</span>
+<span class="comment-date align-middle" title="2023년 4월 18일 화요일 23시 29분">2023년 4월 19일 오전 8시 29분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">대답은 CloudTrail을 사용한 S3 데이터 로깅이어야 합니다. 그러나 이는 옵션으로 나열되지 않습니다. 다음으로 가장 좋은 대답은 A입니다. EC2 답변은 무의미합니다. CloudWatch Logs는 CloudTrail 데이터 로깅이 아닙니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">정답은 CloudTrail을 사용한 S3 데이터 로깅입니다. 하지만 해당 옵션은 목록에 없습니다. 차선책은 A입니다. EC2 관련 답변은 적절하지 않습니다. CloudWatch Logs는 CloudTrail 데이터 로깅이 아닙니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -321,25 +407,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				Michele_scar
+				미셸_스카
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 3월 24일 금요일 11:18">
-			5개월, 1주 전
-		</span>
+<span class="comment-date align-middle" title="2023년 3월 24일 금요일 오전 11시 18분">2023년 3월 24일 20시 18분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">문서에서 설명하는 대로 https://docs.aws.amazon.com/AmazonS3/latest/userguide/notification-how-to-event-types-and-destinations.html#supported-notification-event-types 객체 작업을 트리거해야 합니다. SNS, SQS 및 Lambda로</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">문서(https://docs.aws.amazon.com/AmazonS3/latest/userguide/notification-how-to-event-types-and-destinations.html#supported-notification-event-types)에 설명된 대로 SNS, SQS 및 Lambda에 대한 객체 액션을 트리거해야 합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -370,21 +454,19 @@
 				데프매니아00
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 2월 26일 일요일 16:44">
-			6개월, 1주 전
-		</span>
+<span class="comment-date align-middle" title="2023년 2월 26일 일요일 16시 44분">2023년 2월 27일 01시 44분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">답변이 불완전한 것 같습니다. S3 서버 액세스 로깅을 활성화하면 보안 및 액세스 감사를 수행하는 데 매우 좋습니다. 그러나 이러한 로그는 활성화된 경우 S3 버킷에 저장됩니다. 삭제 이벤트의 경우 이벤트 알림을 사용하는 것이 좋지 않을까요? 개체 제거에 대한 이벤트 알림을 생성하고 SNS 주제를 사용하여 위험 팀에 알림을 보냅니다.</div>
+<div class="comment-content">답변이 불완전해 보입니다. S3 서버 접근 로깅을 활성화하는 것은 보안 및 접근 감사에 매우 유용합니다. 하지만 활성화 시 이러한 로그는 S3 버킷에 저장됩니다. 삭제 이벤트의 경우, 이벤트 알림을 사용하는 것이 더 나은 방법이 아닐까요? 객체 삭제에 대한 이벤트 알림을 생성하고 SNS 토픽을 사용하여 위험 관리팀에 알림을 보낼 수 있습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -412,25 +494,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				길들일 수 없는 것
+				길들일 수 없는 것들
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 2월 13일 월요일 14:54">
-			6개월, 2주 전
-		</span>
+<span class="comment-date align-middle" title="2023년 2월 13일 월요일 14시 54분">2023년 2월 13일 23시 54분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>C</strong></span></div>
-<div class="comment-content">https://docs.aws.amazon.com/AmazonS3/latest/userguide/cloudtrail-logging.html 옵션 A와 B가 잘못되었습니다. 서버 액세스 로깅의 완전성과 적시성은 보장되지 않습니다. https://docs.aws.amazon.com/AmazonS3/latest/userguide/ServerLogs.html#LogDeliveryBestEffort</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
+<div class="comment-content">https://docs.aws.amazon.com/AmazonS3/latest/userguide/cloudtrail-logging.html 옵션 A와 B는 잘못되었습니다. 서버 액세스 로깅의 완전성과 적시성은 보장되지 않습니다. https://docs.aws.amazon.com/AmazonS3/latest/userguide/ServerLogs.html#LogDeliveryBestEffort</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -453,21 +533,19 @@
 				데프매니아00
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 2월 18일 토요일 19:49">
-			6개월, 2주 전
-		</span>
+<span class="comment-date align-middle" title="2023년 2월 18일 토요일 19시 49분">2023년 2월 19일 오전 4시 49분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">C는 CloudTrail이 아니며 C는 CloudWatch 로그에 대해 이야기합니다.</div>
+<div class="comment-content">C는 CloudTrail이 아니라 CloudWatch 로그에 대한 이야기입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -503,25 +581,23 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				MrMLB
+				미스터MLB
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 12월 21일 수 23:23">
-			8개월, 2주 전
-		</span>
+<span class="comment-date align-middle" title="2022년 12월 21일 수요일 23시 23분">2022년 12월 22일 08시 23분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">A S3 버킷에 대한 모든 액세스 시도를 기록하고 삭제 이벤트에 대한 즉각적인 알림을 수신해야 하는 요구 사항을 충족하기 위해 회사는 S3 서버 액세스 로깅을 활성화하고 S3 버킷에 대한 Amazon Simple 알림 서비스(Amazon SNS) 알림을 설정할 수 있습니다. S3 서버 액세스 로그는 삭제 이벤트를 포함하여 버킷에 대한 모든 액세스 시도를 기록하며, DeleteObject 이벤트가 발생할 때 경고를 보내도록 SNS 알림을 구성할 수 있습니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">S3 버킷에 대한 모든 접근 시도를 기록하고 삭제 이벤트 발생 시 즉시 알림을 받으려면, 회사는 S3 서버 접근 로깅을 활성화하고 S3 버킷에 대한 Amazon Simple Notification Service(Amazon SNS) 알림을 설정할 수 있습니다. S3 서버 접근 로그에는 삭제 이벤트를 포함한 모든 버킷 접근 시도가 기록되며, SNS 알림은 DeleteObject 이벤트 발생 시 알림을 보내도록 구성할 수 있습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -549,24 +625,22 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				베즈니카
+				노숙자
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 12월 17일 토요일 21:29">
-			8개월, 2주 전
-		</span>
+<span class="comment-date align-middle" title="2022년 12월 17일 토요일 21시 29분">2022년 12월 18일 06시 29분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">A 괜찮아 보이는데요.</div>
+<div class="comment-content">A가 좋아 보여요.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -597,22 +671,20 @@
 				미칼다비드
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 12월 13일 (화) 07:22">
-			8개월, 3주 전
-		</span>
+<span class="comment-date align-middle" title="2022년 12월 13일 화요일 오전 7시 22분">2022년 12월 13일 16시 22분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
 <div class="comment-content">아아아아아</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -643,21 +715,19 @@
 				파토치
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2022년 12월 11일 일요일 20:45">
-			8개월, 3주 전
-		</span>
+<span class="comment-date align-middle" title="2022년 12월 11일 일요일 20시 45분">2022년 12월 12일 오전 5시 45분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">C 아니야?</div>
+<div class="comment-content">C가 아닌가요?</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -680,8 +750,8 @@
 </div>
 </div>
 <div class="comments-wrapper-en" style="display: none;">
-<a class="badge reveal-comment" href="#">Show Comments</a>
-<a class="badge hide-comment d-none" href="#">Hide Comments</a>
+<a class="badge reveal-comment" href="javascript:void(0)">Show Comments</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">Hide Comments</a>
 <div class="discussion-page-comments-section-en" data-discussion-question-id="91073" style="display: none">
 <div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">Comments</h4></div>
 <!-- discussion.html -->
@@ -692,6 +762,97 @@
 <!-- New comment start -->
 <!-- New comment end -->
 <div class="discussion-container">
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1400043" id="comment-1400043">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Granddude
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Tue 18 Mar 2025 10:29">2025-03-18 19:29</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
+<div class="comment-content">Although S3 server access logging (as mentioned in Option A) captures all access events, its delivery is best-effort and often delayed—making it unsuitable for immediate notifications. By using CloudTrail to log S3 data events to CloudWatch Logs and creating metric filters and alarms for DeleteObject events, you can trigger near real-time SNS notifications to the risk team. This solution meets both the requirement for comprehensive logging and immediate alerts.
+AWS Documentation: Logging Data Events with CloudTrail and Using Amazon CloudWatch Alarms</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1312346" id="comment-1312346">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				XXXXXlNN
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Fri 15 Nov 2024 00:59">2024-11-15 09:59</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">I think the key here is asking for 'Immediate notifications...". 
+
+The list of options suck.  for A, SNS has to worked with S3 Event Notifications in order to provide real time trigger and notifications. For C, CloudWatch alone without CloudTrail deliveries logs to it, then it usesless...
+so I have no idea which one is the offical answer - my bet here is this question will never appear in exam anymore - it's disqualified :)</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">2</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
 <!-- single_comment.html -->
 <div class="media comment-container" data-comment-id="995075" id="comment-995075">
 <a class="minimize-comment comment-toggle" href="#">
@@ -708,9 +869,7 @@
 				alexleely
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Thu 31 Aug 2023 13:55">
-			1 day, 14 hours ago
-		</span>
+<span class="comment-date align-middle" title="Thu 31 Aug 2023 13:55">2023-08-31 22:55</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -722,7 +881,7 @@
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -754,9 +913,7 @@
 				Gomer
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Tue 18 Apr 2023 23:29">
-			4 months, 2 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Tue 18 Apr 2023 23:29">2023-04-19 08:29</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -768,7 +925,7 @@
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -800,9 +957,7 @@
 				michele_scar
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Fri 24 Mar 2023 11:18">
-			5 months, 1 week ago
-		</span>
+<span class="comment-date align-middle" title="Fri 24 Mar 2023 11:18">2023-03-24 20:18</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -849,9 +1004,7 @@ You should trigger object action to SNS, SQS and Lambda</div>
 				defmania00
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sun 26 Feb 2023 16:44">
-			6 months, 1 week ago
-		</span>
+<span class="comment-date align-middle" title="Sun 26 Feb 2023 16:44">2023-02-27 01:44</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">The answers seem incomplete. Enabling S3 server access logging is very good for performing security and access audits. However, these logs are stored in an S3 bucket, when enabled. As for the delete events, wouldn't Event Notifications be the way to go? Create an event notification for object removal and use an SNS topic to send the notifications to your risk team.</div>
@@ -894,9 +1047,7 @@ You should trigger object action to SNS, SQS and Lambda</div>
 				Untamables
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Mon 13 Feb 2023 14:54">
-			6 months, 2 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Mon 13 Feb 2023 14:54">2023-02-13 23:54</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
@@ -910,7 +1061,7 @@ https://docs.aws.amazon.com/AmazonS3/latest/userguide/ServerLogs.html#LogDeliver
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -934,9 +1085,7 @@ https://docs.aws.amazon.com/AmazonS3/latest/userguide/ServerLogs.html#LogDeliver
 				defmania00
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sat 18 Feb 2023 19:49">
-			6 months, 2 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Sat 18 Feb 2023 19:49">2023-02-19 04:49</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">C is not CloudTrail, C is talking about CloudWatch logs.</div>
@@ -987,9 +1136,7 @@ https://docs.aws.amazon.com/AmazonS3/latest/userguide/ServerLogs.html#LogDeliver
 				MrMLB
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Wed 21 Dec 2022 23:23">
-			8 months, 2 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Wed 21 Dec 2022 23:23">2022-12-22 08:23</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -1003,7 +1150,7 @@ To meet the requirements of logging all access attempts to the S3 bucket and rec
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">2</span> times
+				upvoted <span class="upvote-count">3</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -1035,9 +1182,7 @@ To meet the requirements of logging all access attempts to the S3 bucket and rec
 				beznika
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sat 17 Dec 2022 21:29">
-			8 months, 2 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Sat 17 Dec 2022 21:29">2022-12-18 06:29</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">A looks good.</div>
@@ -1080,9 +1225,7 @@ To meet the requirements of logging all access attempts to the S3 bucket and rec
 				michaldavid
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Tue 13 Dec 2022 07:22">
-			8 months, 3 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Tue 13 Dec 2022 07:22">2022-12-13 16:22</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -1094,7 +1237,7 @@ To meet the requirements of logging all access attempts to the S3 bucket and rec
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -1126,9 +1269,7 @@ To meet the requirements of logging all access attempts to the S3 bucket and rec
 				Fatoch
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Sun 11 Dec 2022 20:45">
-			8 months, 3 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Sun 11 Dec 2022 20:45">2022-12-12 05:45</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">is it not C?</div>
@@ -1172,7 +1313,7 @@ To meet the requirements of logging all access attempts to the S3 bucket and rec
 <i class="fa fa-angle-up"></i>
 </div>
 <!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="../../../js/popper.min.js"></script>
 <!-- jquery latest version -->
 <script src="../../../js/jquery.min.js"></script>
 <!-- bootstrap js -->
@@ -1183,8 +1324,6 @@ To meet the requirements of logging all access attempts to the S3 bucket and rec
 <script src="../../../js/wow.min.js"></script>
 <!-- main js -->
 <script src="../../../js/main.js"></script>
-<script async="" defer="" src="../../../js/bootstrap3-typeahead.min.js">
-</script>
 <script type="text/javascript">
     // Activate tooltips
     $(function () {
@@ -1211,39 +1350,6 @@ To meet the requirements of logging all access attempts to the S3 bucket and rec
         $('img[defsrc]').each(function() {
             $(this).attr('src',$(this).attr('defsrc'));
         });
-
-
-        function delayedStart() {
-            // Typeahead start
-
-            // Register typeahead element:
-            $('#header-keyword-search, #modal-keyword-search').typeahead({
-                source: autoCompleteQuery,
-                autoSelect: true,
-                delay: 150,
-                selectOnBlur: false,
-                afterSelect: function(param) {$(this.$element).closest('form').submit()}
-            });
-
-            // Query ajax function:
-            function autoCompleteQuery(query, callback) {
-                return $.get("/ajax/autocomplete/suggestions/?query=" + query).done(callback);
-            }
-            // Typeahead end
-        }
-        setTimeout(delayedStart, 1500);
-
-        // Don't submit empty search query
-        $('#modal-keyword-search-form').submit(function() {
-            if (!$('#modal-keyword-search').val()) {
-                return false;
-            }
-        });
-
-        // Auto focus on search box when search-modal is opened
-        $('.search-modal').on('shown.bs.modal', function (e) {
-            $(this).find('input[type=text]').focus();
-        });
     });
 </script>
 <script type="text/javascript">
@@ -1253,6 +1359,6 @@ To meet the requirements of logging all access attempts to the S3 bucket and rec
 </script>
 <script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
 <script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
-</div>
+</meta></div>
 </body>
 </html>

@@ -3,13 +3,14 @@
 <html lang="ko">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="2023-08-19 6:24" name="refresh_date"/>
 </head>
 <body class="home2"><div style="position:relative;">
 <!-- meta tag -->
 <meta charset="utf-8"/>
 <title>Exam AWS Certified SysOps Administrator</title>
 <!-- responsive tag -->
-<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- bootstrap v4 css -->
 <link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -24,23 +25,29 @@
 <!-- responsive css -->
 <link href="../../../css/responsive.css" rel="stylesheet" type="text/css"/>
 <link href="../../../css/forum.css" rel="stylesheet" type="text/css"/>
-<style>
-</style>
 <div class="sec-spacer pt-20">
 <div class="container">
 <div class="container action-row-container border-0 p-0 mb-2">
 <div class="container action-row clearfix d-flex">
 <i class="fa fm fa-language fa-2x mr-2"></i>
-<a class="btn show-english" href="#">English</a>
-<a class="btn show-korean d-none" href="#">한국어</a>
+<a class="btn show-english" href="javascript:void(0)">English</a>
+<a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
 <span class="pagination-container ml-auto">
 <span id="page-indicator"><strong></strong></span>
-<!--p id="page-indicator"></p-->
 <span class="pagination-nav ml-4">
-<a class="btn btn-sm" href="#" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
-<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect">
-</select>
-<a class="btn btn-sm" href="#" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
+<a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
+<a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
 </span>
 </span>
 </div>
@@ -50,7 +57,7 @@
 <div class="row">
 <div class="col-12">
 <div class="discussion-list-header">
-<h1><i class="fa fa-file-text-o mr-3"></i>시험 AWS Certified SysOps Administrator – Associate 주제 1 문제 272 토론</h1>
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified SysOps Administrator - Associate 시험 주제 1, 질문 272, 토론</h1>
 </div>
 <div class="discussion-list-header-en" style="display: none;">
 <h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified SysOps Administrator - Associate topic 1 question 272 discussion</h1>
@@ -65,21 +72,20 @@
 <!-- Question -->
 <div class="question-discussion-header">
 						
-							Amazon
-						 <a class="discussion-link">AWS 공인 SysOps 관리자 – 어소시에이트 의 시험 문제</a>
+							아마존
+						 <a class="discussion-link">AWS 공인 시스템 운영 관리자 - 어소시에이트 시험 문제</a>
 <div>
-							질문 #: 272 <br/>
-							주제 #: 1
+							문제 번호: 272 <br/>
+							주제 번호: 1
 						</div>
 </div>
 <div class="question-body mt-3 pt-3 border-top" data-id="882257">
 <p class="card-text">
 							
-								SysOps 관리자는 Amazon EC2에서 실행되는 간단한 공개 웹 사이트를 만들고 있습니다. SysOps 관리자는 기존 퍼블릭 서브넷에 EC2 인스턴스를 생성하고 인스턴스에 탄력적 IP 주소를 할당했습니다. 다음으로 SysOps 관리자는 0.0.0.0/0에서 들어오는 HTTP 트래픽을 허용하기 위해 새 보안 그룹을 생성하고 인스턴스에 적용했습니다. 마지막으로 SysOps 관리자는 새 네트워크 ACL을 생성하고 이를 서브넷에 적용하여 0.0.0.0/0에서 들어오는 HTTP 트래픽을 허용했습니다. 그러나 인터넷에서는 해당 웹사이트에 접속할 수 없습니다. <br/><br/>이 문제의 원인은 무엇입니까?
+								시스템 운영 관리자가 Amazon EC2에서 실행되는 간단한 공개 웹사이트를 구축하고 있습니다. 시스템 운영 관리자는 기존 퍼블릭 서브넷에 EC2 인스턴스를 생성하고 해당 인스턴스에 탄력적 IP 주소를 할당했습니다. 다음으로, 0.0.0.0/0에서 들어오는 HTTP 트래픽을 허용하도록 인스턴스에 새로운 보안 그룹을 생성하고 적용했습니다. 마지막으로, 0.0.0.0/0에서 들어오는 HTTP 트래픽을 허용하도록 서브넷에 새로운 네트워크 접근 제어 목록(ACL)을 생성하고 적용했습니다. 그러나 웹사이트에 인터넷에서 접속할 수 없습니다. <br/><br/>이 문제의 원인은 무엇일까요?
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="882257" type="application/json">[{"voted_answers": "A", "vote_count": 9, "is_most_voted": true}, {"voted_answers": "D", "vote_count": 1, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -88,45 +94,44 @@
 													A.
 												</span> 
 											
-											SysOps 관리자는 새 네트워크 ACL에서 임시 포트 반환 트래픽을 허용하는 아웃바운드 규칙을 만들지 않았습니다.
+											시스템 운영 관리자가 새 네트워크 ACL에 임시 포트 반환 트래픽을 허용하는 아웃바운드 규칙을 생성하지 않았습니다.
 										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
-                최다 투표
+                가장 많은 표를 받은
             </span></li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="B">
 													B.
 												</span> 
 											
-											SysOps 관리자는 포트 80에서 HTTP 트래픽을 허용하는 보안 그룹에 아웃바운드 규칙을 만들지 않았습니다.
+											시스템 운영 관리자가 보안 그룹에 80번 포트에서 HTTP 트래픽을 허용하는 아웃바운드 규칙을 생성하지 않았습니다.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="C">
 													C.
 												</span> 
 											
-											EC2 인스턴스에 할당된 탄력적 IP 주소가 변경되었습니다.
+											EC2 인스턴스에 할당된 Elastic IP 주소가 변경되었습니다.
 										</li>
 <li class="multi-choice-item">
 <span class="multi-choice-letter" data-choice-letter="D">
 													D.
 												</span> 
 											
-											포트 80의 인바운드 HTTP 트래픽을 거부하는 규칙을 포함하는 서브넷과 연결된 추가 네트워크 ACL이 있습니다.
+											서브넷과 연결된 추가 네트워크 ACL이 있으며, 이 ACL에는 80번 포트에서 들어오는 HTTP 트래픽을 차단하는 규칙이 포함되어 있습니다.
 										</li>
 </ul>
 </div>
-<a class="btn btn-primary reveal-solution" href="#">제안된 답변 표시</a>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
 <a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
 <div class="card-text question-answer bg-light white-text" style="display: none;">
-<span class="correct-answer-box"><strong>추천 답변: </strong>
-<span class="correct-answer">A </span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
+<span class="correct-answer-box"><strong>제안된 답변: </strong>
+<span class="correct-answer">A</span>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>커뮤니티 투표 분배</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="9 votes." data-toggle="tooltip" role="progressbar" style="width: 90%; display: flex;" title="">A (90%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="1 votes." data-toggle="tooltip" role="progressbar" style="width: 10%; display: flex;" title="">10%</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
-                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">다른
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>지역사회 투표 배분</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="15 votes." data-toggle="tooltip" role="progressbar" style="width: 83%; display: flex;" title="">A (83%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="3 votes." data-toggle="tooltip" role="progressbar" style="width: 17%; display: flex;" title="">D (17%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
+                </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
 <!-- / Question  -->
@@ -151,7 +156,6 @@
 							
 						</p>
 <div class="voted-answers-tally d-none">
-<script id="882257" type="application/json">[{"voted_answers": "A", "vote_count": 9, "is_most_voted": true}, {"voted_answers": "D", "vote_count": 1, "is_most_voted": false}]</script>
 </div>
 <div class="question-choices-container">
 <ul>
@@ -192,22 +196,21 @@
 <div class="card-text question-answer bg-light white-text">
 <span class="correct-answer-box"><strong>Suggested Answer:</strong>
 <span class="correct-answer">A</span>
-<a class="vote-answer-button ml-1 d-print-none" data-original-title="Vote an answer" data-toggle="tooltip" href="#" title="">🗳️</a>
 <br/>
 </span>
 <span class="answer-description">
 </span>
-<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="9 votes." data-toggle="tooltip" role="progressbar" style="width: 90%; display: flex;" title="">A (90%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="1 votes." data-toggle="tooltip" role="progressbar" style="width: 10%; display: flex;" title="">10%</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
+<div class="voting-summary col-12 col-sm-6 col-lg-4 pt-2 pb-2" style="font-size: 0.9em"><i>Community vote distribution</i><!-- Additional optional vote button: <a href="javascript:void(0)" data-toggle="tooltip" class="vote-answer-button" title="Vote an answer">🗳️</a>--><div class="progress vote-distribution-bar"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" class="vote-bar progress-bar bg-primary" data-original-title="15 votes." data-toggle="tooltip" role="progressbar" style="width: 83%; display: flex;" title="">A (83%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-info" data-original-title="3 votes." data-toggle="tooltip" role="progressbar" style="width: 17%; display: flex;" title="">D (17%)</div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="30" class="vote-bar progress-bar bg-success" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 25%; display: none;" title="">B (20%)
                 </div><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" class="vote-bar progress-bar bg-warning" data-original-title="" data-toggle="tooltip" role="progressbar" style="width: 15%; display: none;" title="">Other
                 </div></div></div></div>
 </div>
 <!-- / Question  -->
 </div>
 <div class="comments-wrapper">
-<a class="badge reveal-comment" href="#">댓글 표시</a>
-<a class="badge hide-comment d-none" href="#">댓글 숨기기</a>
+<a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
 <div class="discussion-page-comments-section" data-discussion-question-id="108162" style="display: none">
-<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">코멘트</h4></div>
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
 <!-- discussion.html -->
 <!-- Discussion start -->
 <div class="container outer-discussion-container">
@@ -229,28 +232,26 @@
 <i class="fa fa-user mr-1 mt-1"></i>
 <a>
 <h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				고멜
+				고머
 			</h5>
 </a>
 <span class="badge badge-primary">
-				높은 투표율<i class="fa fa-thumbs-up"></i>
+				가장 많은 표를 받은<i class="fa fa-thumbs-up"></i>
 </span>
-<span class="comment-date align-middle" title="2023년 5월 2일 화요일 02:27">
-			3개월, 3주 전
-		</span>
+<span class="comment-date align-middle" title="2024년 5월 2일 목요일 오전 2시 27분">2024년 5월 2일 11시 27분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">나는 A에 동의합니다. NACL을 이해하는 사람이라면 누구나 0.0.0.0/0 원본에 대한 HTTP 응답을 제공하기 위해 임시 포트를 활성화해야 한다는 것을 알고 있기 때문에 의견이 필요한지 모르겠습니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">A님의 의견에 동의합니다. NACL을 이해하는 사람이라면 누구나 0.0.0.0/0 오리진에 대한 HTTP 응답을 제공하려면 임시 포트를 활성화해야 한다는 것을 알고 있으므로 굳이 설명을 덧붙일 필요는 없을 것 같습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">5</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">9</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -273,21 +274,19 @@
 				크리스티나666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 26일 수 04:26">
-			1 개월 전
-		</span>
+<span class="comment-date align-middle" title="2024년 7월 26일 금요일 오전 4시 26분">2024년 7월 26일 13시 26분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">NACL 아웃바운드 규칙은 기본적으로 모두 허용입니다.</div>
+<div class="comment-content">NACL 아웃바운드 규칙의 기본 설정은 모두 허용입니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -327,24 +326,22 @@
 			</h5>
 </a>
 <span class="badge badge-primary">
-				가장 최근<i class="fa fa-clock-o"></i>
+				최신<i class="fa fa-clock-o"></i>
 </span>
-<span class="comment-date align-middle" title="2023년 8월 19일 토요일 06:24">
-			1주, 1일 전
-		</span>
+<span class="comment-date align-middle" title="2024년 8월 19일 월요일 오전 6시 24분">2024년 8월 19일 15시 24분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">A. Stateless 세션에 대한 "임시 포트 반환 트래픽을 허용하는 아웃바운드 규칙", 아웃바운드 트래픽은 반환 트래픽의 포트를 지정하지 않습니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">A. 상태 비저장 세션의 경우 "임시 포트 반환 트래픽을 허용하는 아웃바운드 규칙"이 적용되며, 아웃바운드 트래픽은 반환 트래픽의 포트를 지정하지 않습니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -375,73 +372,26 @@
 				크리스티나666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 26일 수 04:24">
-			1 개월 전
-		</span>
+<span class="comment-date align-middle" title="2024년 7월 26일 금요일 오전 4시 24분">2024년 7월 26일 13시 24분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>D</strong></span></div>
-<div class="comment-content">새 네트워크 ACL을 생성하여 Amazon VPC(Virtual Private Cloud)의 서브넷에 적용하면 VPC 생성 시 자동으로 생성되는 기본 네트워크 ACL이 대체됩니다. 그러나 다른 사용자 지정 네트워크 ACL이 이전에 서브넷과 연결되었을 가능성이 있으며 여기에는 포트 80에서 인바운드 HTTP 트래픽을 거부하는 규칙이 포함될 수 있습니다. 네트워크 ACL은 서브넷 안팎으로 트래픽을 제어하기 위한 상태 비저장 방화벽 역할을 합니다. 기본적으로 기본 네트워크 ACL은 모든 인바운드 및 아웃바운드 트래픽을 허용하므로 특정 규칙 없이 새 사용자 지정 네트워크 ACL을 생성하는 경우 기본적으로 모든 트래픽을 허용해야 합니다. 그러나 제한적인 규칙이 있는 기존 사용자 지정 네트워크 ACL이 있는 경우 새 규칙을 재정의합니다.</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>D</strong></span></div>
+<div class="comment-content">Amazon VPC(가상 프라이빗 클라우드)에서 새 네트워크 ACL을 생성하고 서브넷에 적용하면 VPC 생성 시 자동으로 생성되는 기본 네트워크 ACL이 대체됩니다. 하지만 이전에 해당 서브넷에 다른 사용자 지정 네트워크 ACL이 연결되어 있었고, 그 ACL에 포트 80으로 들어오는 HTTP 트래픽을 차단하는 규칙이 포함되어 있을 수 있습니다. 네트워크 ACL은 서브넷으로 들어오고 나가는 트래픽을 제어하는 ​​상태 비저장 방화벽 역할을 합니다. 기본적으로 기본 네트워크 ACL은 모든 인바운드 및 아웃바운드 트래픽을 허용하므로, 특정 규칙 없이 새 사용자 지정 네트워크 ACL을 생성하면 기본적으로 모든 트래픽이 허용됩니다. 그러나 제한적인 규칙이 포함된 기존 사용자 지정 네트워크 ACL이 있는 경우 새 ACL을 덮어씁니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
 </div>
 <div class="comment-replies">
 <!-- Nesting start -->
-<!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="969366" id="comment-969366">
-<a class="minimize-comment comment-toggle" href="#">
-<i class="fa fa-minus-square-o mr-2 mt-1"></i>
-</a>
-<a class="maximize-comment comment-toggle" href="#">
-<i class="fa fa-plus-square-o mr-2 mt-1"></i>
-</a>
-<div class="media-body">
-<div class="comment-head">
-<i class="fa fa-user mr-1 mt-1"></i>
-<a>
-<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				크리스티나666
-			</h5>
-</a>
-<span class="comment-date align-middle" title="2023년 8월 1일 화요일 22:08">
-			3주, 4일 전
-		</span>
-</div>
-<div class="comment-body comment-toggled">
-<div class="comment-content">두 번째 검토 후 A에 투표합니다. 안녕하세요 @examtopics 팀, 제 답변을 수정해 주실 수 있나요?</div>
-<div class="comment-control">
-<span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
-</span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
-			 
-				찬성함</span>
-<span class="comment-control-error ml-2"></span>
-</div>
-<div class="new-comment-box-container mt-2">
-</div>
-<div class="comment-replies">
-<!-- Nesting start -->
-<!-- Nesting end -->
-</div>
-</div>
-<div class="comment-ellipsis comment-toggled">
-		...
-	</div>
-</div>
-</div>
 <!-- single_comment.html -->
 <div class="media comment-container" data-comment-id="963256" id="comment-963256">
 <a class="minimize-comment comment-toggle" href="#">
@@ -458,21 +408,62 @@
 				크리스티나666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 7월 26일 수 04:24">
-			1 개월 전
-		</span>
+<span class="comment-date align-middle" title="2024년 7월 26일 금요일 오전 4시 24분">2024년 7월 26일 13시 24분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-content">문제를 해결하려면 SysOps 관리자가 서브넷과 연결된 추가 네트워크 ACL이 있는지 확인해야 합니다. 그렇다면 포트 80에서 들어오는 HTTP 트래픽을 허용하도록 해당 네트워크 ACL의 규칙을 수정해야 합니다.</div>
+<div class="comment-content">이 문제를 해결하려면 시스템 운영 관리자는 해당 서브넷에 연결된 추가 네트워크 ACL이 있는지 확인해야 합니다. 있다면 해당 네트워크 ACL의 규칙을 수정하여 80번 포트로 들어오는 HTTP 트래픽을 허용해야 합니다.</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
 			 
-				찬성함</span>
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="969366" id="comment-969366">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				크리스티나666
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2024년 8월 1일 목요일 22시 08분">2024년 8월 2일 오전 7시 8분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">두 번째 검토 후 A에 투표합니다. 안녕하세요, @examtopics 팀, 제 답변을 수정해 주시겠어요?</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
+			 
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -511,22 +502,20 @@
 				rrshah83
 			</h5>
 </a>
-<span class="comment-date align-middle" title="2023년 5월 22일 월요일 10:43">
-			3개월, 1주 전
-		</span>
+<span class="comment-date align-middle" title="2024년 5월 22일 수요일 오전 10시 43분">2024년 5월 22일 19시 43분</span>
 </div>
 <div class="comment-body comment-toggled">
-<div class="comment-selected-answers badge badge-warning">선택한 답변: <span><strong>A</strong></span></div>
-<div class="comment-content">무국적자</div>
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">nacl 상태 없음</div>
 <div class="comment-control">
 <span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="찬성"><i class="fa fa-thumbs-up"></i></a>
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
 <a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
 <a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
 </span>
-<span class="ml-2 upvote-text"><span class="upvote-count">3</span> 번
+<span class="ml-2 upvote-text"><span class="upvote-count">4</span> 번
 			 
-				찬성함</span>
+				추천됨</span>
 <span class="comment-control-error ml-2"></span>
 </div>
 <div class="new-comment-box-container mt-2">
@@ -549,8 +538,8 @@
 </div>
 </div>
 <div class="comments-wrapper-en" style="display: none;">
-<a class="badge reveal-comment" href="#">Show Comments</a>
-<a class="badge hide-comment d-none" href="#">Hide Comments</a>
+<a class="badge reveal-comment" href="javascript:void(0)">Show Comments</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">Hide Comments</a>
 <div class="discussion-page-comments-section-en" data-discussion-question-id="108162" style="display: none">
 <div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">Comments</h4></div>
 <!-- discussion.html -->
@@ -580,9 +569,7 @@
 <span class="badge badge-primary">
 				Highly Voted <i class="fa fa-thumbs-up"></i>
 </span>
-<span class="comment-date align-middle" title="Tue 02 May 2023 02:27">
-			3 months, 3 weeks ago
-		</span>
+<span class="comment-date align-middle" title="Thu 02 May 2024 02:27">2024-05-02 11:27</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -594,7 +581,7 @@
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">5</span> times
+				upvoted <span class="upvote-count">9</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -618,9 +605,7 @@
 				Christina666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Wed 26 Jul 2023 04:26">
-			1 month ago
-		</span>
+<span class="comment-date align-middle" title="Fri 26 Jul 2024 04:26">2024-07-26 13:26</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">NACL outbound rule by default is allow all</div>
@@ -631,7 +616,7 @@
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">2</span> times
+				upvoted <span class="upvote-count">3</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -674,9 +659,7 @@
 <span class="badge badge-primary">
 				Most Recent <i class="fa fa-clock-o"></i>
 </span>
-<span class="comment-date align-middle" title="Sat 19 Aug 2023 06:24">
-			1 week, 1 day ago
-		</span>
+<span class="comment-date align-middle" title="Mon 19 Aug 2024 06:24">2024-08-19 15:24</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -689,7 +672,7 @@ for stateless session, outbound traffic do not designate return traffic's port.<
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -721,9 +704,7 @@ for stateless session, outbound traffic do not designate return traffic's port.<
 				Christina666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Wed 26 Jul 2023 04:24">
-			1 month ago
-		</span>
+<span class="comment-date align-middle" title="Fri 26 Jul 2024 04:24">2024-07-26 13:24</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>D</strong></span></div>
@@ -737,7 +718,7 @@ The network ACLs act as stateless firewalls for controlling traffic in and out o
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">3</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -745,51 +726,6 @@ The network ACLs act as stateless firewalls for controlling traffic in and out o
 </div>
 <div class="comment-replies">
 <!-- Nesting start -->
-<!-- single_comment.html -->
-<div class="media comment-container" data-comment-id="969366" id="comment-969366">
-<a class="minimize-comment comment-toggle" href="#">
-<i class="fa fa-minus-square-o mr-2 mt-1"></i>
-</a>
-<a class="maximize-comment comment-toggle" href="#">
-<i class="fa fa-plus-square-o mr-2 mt-1"></i>
-</a>
-<div class="media-body">
-<div class="comment-head">
-<i class="fa fa-user mr-1 mt-1"></i>
-<a>
-<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
-				Christina666
-			</h5>
-</a>
-<span class="comment-date align-middle" title="Tue 01 Aug 2023 22:08">
-			3 weeks, 4 days ago
-		</span>
-</div>
-<div class="comment-body comment-toggled">
-<div class="comment-content">I vote for A after second review. Hi @examtopics team, can you modify my answer?</div>
-<div class="comment-control">
-<span class="comment-control-buttons d-print-none">
-<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
-<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
-<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
-</span>
-<span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
-			</span>
-<span class="comment-control-error ml-2"></span>
-</div>
-<div class="new-comment-box-container mt-2">
-</div>
-<div class="comment-replies">
-<!-- Nesting start -->
-<!-- Nesting end -->
-</div>
-</div>
-<div class="comment-ellipsis comment-toggled">
-		...
-	</div>
-</div>
-</div>
 <!-- single_comment.html -->
 <div class="media comment-container" data-comment-id="963256" id="comment-963256">
 <a class="minimize-comment comment-toggle" href="#">
@@ -806,9 +742,7 @@ The network ACLs act as stateless firewalls for controlling traffic in and out o
 				Christina666
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Wed 26 Jul 2023 04:24">
-			1 month ago
-		</span>
+<span class="comment-date align-middle" title="Fri 26 Jul 2024 04:24">2024-07-26 13:24</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-content">To resolve the issue, the SysOps administrator should check if there is an additional network ACL associated with the subnet. If so, they should modify the rules in that network ACL to allow incoming HTTP traffic on port 80.</div>
@@ -819,7 +753,50 @@ The network ACLs act as stateless firewalls for controlling traffic in and out o
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">1</span> times
+				upvoted <span class="upvote-count">2</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="969366" id="comment-969366">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Christina666
+			</h5>
+</a>
+<span class="comment-date align-middle" title="Thu 01 Aug 2024 22:08">2024-08-02 07:08</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-content">I vote for A after second review. Hi @examtopics team, can you modify my answer?</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">2</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -859,9 +836,7 @@ The network ACLs act as stateless firewalls for controlling traffic in and out o
 				rrshah83
 			</h5>
 </a>
-<span class="comment-date align-middle" title="Mon 22 May 2023 10:43">
-			3 months, 1 week ago
-		</span>
+<span class="comment-date align-middle" title="Wed 22 May 2024 10:43">2024-05-22 19:43</span>
 </div>
 <div class="comment-body comment-toggled">
 <div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
@@ -873,7 +848,7 @@ The network ACLs act as stateless firewalls for controlling traffic in and out o
 <a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
 </span>
 <span class="ml-2 upvote-text">
-				upvoted <span class="upvote-count">3</span> times
+				upvoted <span class="upvote-count">4</span> times
 			</span>
 <span class="comment-control-error ml-2"></span>
 </div>
@@ -906,7 +881,7 @@ The network ACLs act as stateless firewalls for controlling traffic in and out o
 <i class="fa fa-angle-up"></i>
 </div>
 <!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="../../../js/popper.min.js"></script>
 <!-- jquery latest version -->
 <script src="../../../js/jquery.min.js"></script>
 <!-- bootstrap js -->
@@ -917,8 +892,6 @@ The network ACLs act as stateless firewalls for controlling traffic in and out o
 <script src="../../../js/wow.min.js"></script>
 <!-- main js -->
 <script src="../../../js/main.js"></script>
-<script async="" defer="" src="../../../js/bootstrap3-typeahead.min.js">
-</script>
 <script type="text/javascript">
     // Activate tooltips
     $(function () {
@@ -945,39 +918,6 @@ The network ACLs act as stateless firewalls for controlling traffic in and out o
         $('img[defsrc]').each(function() {
             $(this).attr('src',$(this).attr('defsrc'));
         });
-
-
-        function delayedStart() {
-            // Typeahead start
-
-            // Register typeahead element:
-            $('#header-keyword-search, #modal-keyword-search').typeahead({
-                source: autoCompleteQuery,
-                autoSelect: true,
-                delay: 150,
-                selectOnBlur: false,
-                afterSelect: function(param) {$(this.$element).closest('form').submit()}
-            });
-
-            // Query ajax function:
-            function autoCompleteQuery(query, callback) {
-                return $.get("/ajax/autocomplete/suggestions/?query=" + query).done(callback);
-            }
-            // Typeahead end
-        }
-        setTimeout(delayedStart, 1500);
-
-        // Don't submit empty search query
-        $('#modal-keyword-search-form').submit(function() {
-            if (!$('#modal-keyword-search').val()) {
-                return false;
-            }
-        });
-
-        // Auto focus on search box when search-modal is opened
-        $('.search-modal').on('shown.bs.modal', function (e) {
-            $(this).find('input[type=text]').focus();
-        });
     });
 </script>
 <script type="text/javascript">
@@ -987,6 +927,6 @@ The network ACLs act as stateless firewalls for controlling traffic in and out o
 </script>
 <script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
 <script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
-</div>
+</meta></div>
 </body>
 </html>
