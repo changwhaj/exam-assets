@@ -161,41 +161,41 @@ def refresh_all_exam(exam_list_file, qtitle, begin=0):
 if __name__ == "__main__":
 
     AIF = 'Exam AWS Certified AI Practitioner AIF-C01 topic 1'
-    refresh_all_exam('AIF_Exam.csv', AIF)         # OK 334
+    refresh_all_exam('ExamList_AIF.csv', AIF)         # OK 334
 
     # CLF2 = "Exam AWS Certified Cloud Practitioner CLF-C02 topic 1"
-    # refresh_all_exam('CLF2_Exam.csv', CLF2)
+    # refresh_all_exam('ExamList_CLF2.csv', CLF2)
     
     # SAA_C03 = 'Exam AWS Certified Solutions Architect - Associate SAA-C03 topic 1'
-    # refresh_all_exam('SAA3_Exam.csv', SAA_C03)    # OK 1019
+    # refresh_all_exam('ExamList_SAA3.csv', SAA_C03)    # OK 1019
 
     MLA = "Exam AWS Certified Machine Learning Engineer - Associate MLA-C01 topic 1"
-    refresh_all_exam('MLA_Exam.csv', MLA)         # OK 145
+    refresh_all_exam('ExamList_MLA.csv', MLA)         # OK 145
      
     # DVA2 = 'Exam AWS Certified Developer - Associate DVA-C02 topic 1'
-    # refresh_all_exam('DVA2_Exam.csv', DVA2)       # OK 557
+    # refresh_all_exam('ExamList_DVA2.csv', DVA2)       # OK 557
 
     # DEA = 'Exam AWS Certified Data Engineer - Associate DEA-C01 topic 1'
-    # refresh_all_exam('DEA_Exam.csv', DEA)       # OK 261
+    # refresh_all_exam('ExamList_DEA.csv', DEA)       # OK 261
 
     # SOA2 = "Exam AWS Certified SysOps Administrator - Associate topic 1"
-    # refresh_all_exam('SOA2_Exam.csv', SOA2)       # OK 478
+    # refresh_all_exam('ExamList_SOA2.csv', SOA2)       # OK 478
 
     # SOA3 = "Exam AWS Certified CloudOps Engineer - Associate SOA-C03 topic 1"
-    # refresh_all_exam('SOA3_Exam.csv', SOA3)       # OK 65
+    # refresh_all_exam('ExamList_SOA3.csv', SOA3)       # OK 65
 
     # DOP2 = "Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1"
-    # refresh_all_exam('DOP2_Exam.csv', DOP2)       # OK 390
+    # refresh_all_exam('ExamList_DOP2.csv', DOP2)       # OK 390
      
     # SAP_C02 = 'Exam AWS Certified Solutions Architect - Professional SAP-C02 topic 1'
-    # refresh_all_exam('SAP2_Exam.csv', SAP_C02)    # OK 529
+    # refresh_all_exam('ExamList_SAP2.csv', SAP_C02)    # OK 529
 
     # MLS = 'Exam AWS Certified Machine Learning - Specialty topic 1'
-    # refresh_all_exam('MLS_Exam.csv', MLS)         # OK 369
+    # refresh_all_exam('ExamList_MLS.csv', MLS)         # OK 369
 
     # SCS2 = "Exam AWS Certified Security - Specialty SCS-C02 topic 1"
-    # refresh_all_exam('SCS2_Exam.csv', SCS2)       # OK 307
+    # refresh_all_exam('ExamList_SCS2.csv', SCS2)       # OK 307
     
     # ANS = "Exam AWS Certified Advanced Networking - Specialty ANS-C01 topic 1"
-    # refresh_all_exam('ANS_Exam.csv', ANS)         # OK 272
+    # refresh_all_exam('ExamList_ANS.csv', ANS)         # OK 272
      
