@@ -8,7 +8,7 @@ var questionDetails = {
     'CISA-Q': { qLength: 1511, qDirectory: 'isaca/CISA' },
 
     // Foundational 자격증
-    'AIF-Q': { qLength: 334, qDirectory: 'aws/AIF' },
+    'AIF-Q': { qLength: 334, qDirectory: 'aws/AIF_C01' },
     'CLF2-Q': { qLength: 719, qDirectory: 'aws/CLF_C02' },
 
     // Associate 자격증

@@ -95,9 +95,10 @@ def set_translate_to_kr(driver):
         actionChains = ActionChains(driver)
         actionChains.context_click().perform()
         
-        time.sleep(1)
+        # time.sleep(1)
         send_key_to_background_window(driver.title, "T")
         # pyautogui.hotkey('T')
+        time.sleep(1)
 
         bs = BeautifulSoup(driver.page_source, 'html.parser')
 
@@ -550,8 +551,8 @@ def make_filename(qtitle, qid, dataid, tid=0):
         #     "first_id": 875171,
         # },
         {
-            "qtitle": "Exam AWS Certified Database - Specialty topic 1",
-            "prefname": "aws/AIF/AIF-Q",
+            "qtitle": "Exam AWS Certified AI Practitioner AIF-C01 topic 1",
+            "prefname": "aws/AIF_C01/AIF-Q",
             "qlength": 334,
             "first_id": 933824,
         },
