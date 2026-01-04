@@ -207,7 +207,6 @@ def refresh_from_forum(discuss_list, forum_name, last_page):
     driver.set_window_position(1600,10)
 
     new_df = get_new_discuss_list(driver, forum_name, df['PostDate'][0])
-    print(new_df)
 
     for index in range(len(new_df)-1, -1, -1):
         row = new_df.iloc[index]
@@ -238,8 +237,13 @@ def refresh_from_forum(discuss_list, forum_name, last_page):
         else:
             print("New question found !!!")
 
-        new_data_id = refresh_exam_file(driver, url, qtitle, qid, did, data_id, newpost, '2025-06-01 0:00')
-        if new_data_id <= 0: break
+        fname = make_filename(qtitle, qid, data_id)
+        if (len(fname) <= 0): 
+            print(f'fname={fname}, qtitle={qtitle}, qid={qid}, data_id={data_id}')
+            continue
+        else:
+            new_data_id = refresh_exam_file(driver, url, fname, did, data_id, newpost, '2024-04-01 0:00')
+            if new_data_id <= 0: break
 
         if (replace == True):    
             data_id = int(df[(df['ExamType'] == qtitle) & (df['ExamNo'] == qid) & (df['DiscussNo'] == did)]['DataID'].iloc[0])

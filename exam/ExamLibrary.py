@@ -95,7 +95,6 @@ def set_translate_to_kr(driver):
         actionChains = ActionChains(driver)
         actionChains.context_click().perform()
         
-        # time.sleep(1)
         send_key_to_background_window(driver.title, "T")
         # pyautogui.hotkey('T')
         time.sleep(1)
@@ -382,14 +381,6 @@ def open_new_discussion(driver, discuss_id):
 
     html = driver.page_source
     bs = BeautifulSoup(html, 'html.parser')
-
-    # comment_spans = bs.find_all('span', class_='comment-date')
-    # for comment_span in comment_spans:
-    #     title = comment_span.get('title')
-    #     if title:
-    #         kst_time = parser.parse(str(title).replace("midnight", "12:00 a.m.").replace("noon", "12:00 p.m.")) + timedelta(hours=9)
-    #         comment_span.string = kst_time.strftime("%Y-%m-%d %H:%M")
-    #         comment_span["title"] = comment_span.string
 
     pattern = r'</*font[^<]*>'
     discussion_kr = bs.find("div", {"class": "container outer-discussion-container"}).decode_contents()
@@ -830,47 +821,42 @@ def save_kr(driver, fname):
     with open(fname, "w", encoding='utf-8') as file:
         file.write(str(bs_en))
 
-def refresh_exam_file(driver, url, qtitle, qid, did, data_id, postdate, basedate):
+def refresh_exam_file(driver, url, fname, did, data_id, postdate, basedate):
     new_data_id = data_id
-    fname = make_filename(qtitle, qid, data_id)
-    if (len(fname) <= 0): 
-        print(f'fname={fname}, qtitle={qtitle}, qid={qid}, data_id={data_id}')
-        return 0
-    else:
-        file_data_id = get_question_data_id(fname)
-        if file_data_id == 0:   # New Exam
-            new_data_id = make_question_file(driver, fname, url, did, postdate)
-            print(f'data_id={data_id}, new_data_id={new_data_id}, fname={fname}')
-            if (data_id > 0 ) & (data_id != new_data_id):
-                return 0
-            translate_page_to_kr(driver, fname)
-            save_kr(driver, fname)
-        else:                   # Refresh Discussion
-            if get_question_postdate(fname) == postdate:
-                return new_data_id
+    file_data_id = get_question_data_id(fname)
+    if file_data_id == 0:   # New Exam
+        new_data_id = make_question_file(driver, fname, url, did, postdate)
+        print(f'data_id={data_id}, new_data_id={new_data_id}, fname={fname}')
+        if (data_id > 0 ) & (data_id != new_data_id):
+            return 0
+        translate_page_to_kr(driver, fname)
+        save_kr(driver, fname)
+    else:                   # Refresh Discussion
+        if get_question_postdate(fname) == postdate:
+            return new_data_id
 
-            if postdate < basedate:
-                set_question_postdate(fname, postdate)
-                return new_data_id
+        if postdate < basedate:
+            set_question_postdate(fname, postdate)
+            return new_data_id
 
-            new_data_id = file_data_id
-            open_exam(driver, url)
-            driver.switch_to.window(driver.window_handles[0])
-            if (driver.title != '404 - Page not found') & (len(driver.title) > 20):
-                remove_exam_element(driver)
+        new_data_id = file_data_id
+        open_exam(driver, url)
+        driver.switch_to.window(driver.window_handles[0])
+        if (driver.title != '404 - Page not found') & (len(driver.title) > 20):
+            remove_exam_element(driver)
 
-                bs = BeautifulSoup(driver.page_source, 'html.parser')
-                container = bs.find("div", {"class": "discussion-header-container"})
-                progress_element = container.find("div", {"class": "progress"})
-                progress = progress_element.decode_contents() if progress_element else None
+            bs = BeautifulSoup(driver.page_source, 'html.parser')
+            container = bs.find("div", {"class": "discussion-header-container"})
+            progress_element = container.find("div", {"class": "progress"})
+            progress = progress_element.decode_contents() if progress_element else None
 
-            save_new_discuss(driver, fname, did, postdate, progress)
+        save_new_discuss(driver, fname, did, postdate, progress)
 
     return new_data_id
 
 def read_Exam_list(fname):
     df = pd.read_csv(fname, delimiter='\t', encoding='utf-8', header=None,
-                    names=['ExamNo', 'DiscussNo', 'DataNo', 'DiscussURL'],
+                    names=['ExamNo', 'DiscussNo', 'DataNo', 'PostDate', 'DiscussURL'],
                     index_col=False)
 
     return df

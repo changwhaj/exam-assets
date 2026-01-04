@@ -235,8 +235,10 @@ def open_template_exam(postdate):
     if meta:
         meta["content"] = postdate
     else:
-        # 없을 경우 새로 추가
-        new_meta = bs.new_tag("meta", name="refresh_date", content=postdate)
+        new_meta = bs.new_tag(
+            "meta",
+            attrs={"name": "refresh_date", "content": postdate}
+        )
         bs.head.append(new_meta)
 
     return bs
@@ -339,6 +341,7 @@ def open_discuss(driver, discuss_id):
         if title:
             kst_time = parser.parse(str(title).replace("midnight", "12:00 a.m.").replace("noon", "12:00 p.m.")) + timedelta(hours=9)
             comment_span.string = kst_time.strftime("%Y-%m-%d %H:%M")
+            comment_span["title"] = comment_span.string
 
     div = bs.find('div', attrs={'class': 'container outer-discussion-container'})
     
@@ -361,6 +364,7 @@ def replace_duscuss(driver, discuss_id):
             if title:
                 kst_time = parser.parse(str(title).replace("midnight", "12:00 a.m.").replace("noon", "12:00 p.m.")) + timedelta(hours=9)
                 comment_span.string = kst_time.strftime("%Y-%m-%d %H:%M")
+                comment_span["title"] = comment_span.string
 
     return bs
 
@@ -379,18 +383,19 @@ def open_new_discussion(driver, discuss_id):
 
     bs = BeautifulSoup(driver.page_source, 'html.parser')
     
-    # 모든 <script> 태그 제거
-    for script in bs.find_all("script"):
-        script.extract()
-
-    div_discuss = bs.find_all("div", {"class": "container outer-discussion-container"})[0]
-
     comment_spans = bs.find_all('span', class_='comment-date')
     for comment_span in comment_spans:
         title = comment_span.get('title')
         if title:
             kst_time = parser.parse(str(title).replace("midnight", "12:00 a.m.").replace("noon", "12:00 p.m.")) + timedelta(hours=9)
             comment_span.string = kst_time.strftime("%Y-%m-%d %H:%M")
+            comment_span["title"] = comment_span.string
+
+    # 모든 <script> 태그 제거
+    for script in bs.find_all("script"):
+        script.extract()
+
+    div_discuss = bs.find_all("div", {"class": "container outer-discussion-container"})[0]
 
     div = bs.find('div', attrs={'class': 'container outer-discussion-container'})
 
@@ -441,6 +446,27 @@ def get_question_postdate(fname):
         return(refresh_date)
     
     return None
+
+def set_question_postdate(fname, postdate):
+    my_file = Path(fname)
+
+    if my_file.is_file():
+        with open(fname, "r", encoding="utf-8") as file:
+            bs = BeautifulSoup(file, "html.parser")
+
+            # meta 태그 찾기
+            meta = bs.find("meta", attrs={"name": "refresh_date"})
+            if meta:
+                meta["content"] = postdate
+            else:
+                new_meta = bs.new_tag(
+                    "meta",
+                    attrs={"name": "refresh_date", "content": postdate}
+                )
+                bs.head.append(new_meta)
+
+        with open(fname, "w", encoding='utf-8') as file:
+            file.write(str(bs))    
 
 def get_question_data_id(fname):
     pattern = r'<div class="question-body mt-3 pt-3 border-top" data-id="([0-9]+)">'
@@ -754,15 +780,6 @@ def translate_discuss_to_kr(driver, fname, discuss_id):
 def save_new_discuss(driver, fname, did, postdate, progress):
 
     bs = BeautifulSoup(driver.page_source, 'html.parser')
-    # meta 태그 찾기
-    meta = bs.find("meta", attrs={"name": "refresh_date"})
-    if meta:
-        meta["content"] = postdate
-    else:
-        # 없을 경우 새로 추가
-        new_meta = bs.new_tag("meta", name="refresh_date", content=postdate)
-        bs.head.append(new_meta)
-
     pattern = r'</*font[^<]*>'
     header_contents = bs.find("div", {"class": "discussion-list-header"}).decode_contents()
     header_contents = re.sub(pattern, '', header_contents)
@@ -781,6 +798,16 @@ def save_new_discuss(driver, fname, did, postdate, progress):
             
     #print(html)
     bs = BeautifulSoup(html, 'html.parser')
+    # meta 태그 찾기
+    meta = bs.find("meta", attrs={"name": "refresh_date"})
+    if meta:
+        meta["content"] = postdate
+    else:
+        new_meta = bs.new_tag(
+            "meta",
+            attrs={"name": "refresh_date", "content": postdate}
+        )
+        bs.head.append(new_meta)
 
     container = bs.find("div", {"class": "discussion-header-container"})
     progress_el = container.find("div", {"class": "progress"})
@@ -877,6 +904,44 @@ def save_kr(driver, fname):
     fname_kr = '/'.join(fname_kr.split('/')[:-1]) + '/kr/' + fname_kr.split('/')[-1]
     with open(fname, "w", encoding='utf-8') as file:
         file.write(str(bs_en))
+
+def refresh_exam_file(driver, url, qtitle, qid, did, data_id, postdate, basedate):
+    new_data_id = data_id
+    fname = make_filename(qtitle, qid, data_id)
+    if (len(fname) <= 0): 
+        print(f'fname={fname}, qtitle={qtitle}, qid={qid}, data_id={data_id}')
+        return 0
+    else:
+        file_data_id = get_question_data_id(fname)
+        if file_data_id == 0:   # New Exam
+            new_data_id = make_question_file(driver, fname, url, did, postdate)
+            # print(f'data_id={data_id}, new_data_id={new_data_id}, fname={fname}')
+            if (data_id > 0 ) & (data_id != new_data_id):
+                return 0
+            translate_page_to_kr(driver, fname)
+            save_kr(driver, fname)
+        else:                   # Refresh Discussion
+            if get_question_postdate(fname) == postdate:
+                return new_data_id
+
+            if postdate < basedate:
+                set_question_postdate(fname, postdate)
+                return new_data_id
+
+            new_data_id = file_data_id
+            open_exam(driver, url)
+            driver.switch_to.window(driver.window_handles[0])
+            if (driver.title != '404 - Page not found') & (len(driver.title) > 20):
+                remove_exam_element(driver)
+
+                bs = BeautifulSoup(driver.page_source, 'html.parser')
+                container = bs.find("div", {"class": "discussion-header-container"})
+                progress_element = container.find("div", {"class": "progress"})
+                progress = progress_element.decode_contents() if progress_element else None
+
+            save_new_discuss(driver, fname, did, postdate, progress)
+
+    return new_data_id
 
 def get_new_discuss_list(driver, forum_name, prev_last_post):
     new_df = pd.DataFrame(columns=['ExamType', 'ExamNo', 'DiscussNo', 'DataID', 'PostDate', 'DiscussURL'])

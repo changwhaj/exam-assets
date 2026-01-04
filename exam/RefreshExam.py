@@ -21,35 +21,17 @@ def make_filename(qtitle, qid, dataid, tid=0):
         #     "qlength": 189,
         #     "first_id": 875171,
         # },
-        # {
-        #     "qtitle": "Exam AWS Certified Cloud Practitioner CLF-C02 topic 1",
-        #     "prefname": "aws/CLF_C02/CLF2-Q",
-        #     "qlength": 501,
-        #     "first_id": 898791,
-        # },
-                # {
-                #     "qtitle": "Exam AWS Certified Data Analytics - Specialty topic 1",
-                #     "prefname": "aws/DAS-C01/DAS-Q",
-                #     "qlength": 164,
-                #     "first_id": 781767,
-                # },
-        # {
-        #     "qtitle": "Exam AWS Certified Database - Specialty topic 1",
-        #     "prefname": "aws/DBS/DBS-Q",
-        #     "qlength": 359,
-        #     "first_id": 807243,
-        # },
-                # {
-                #     "qtitle": "Exam AWS Certified Developer - Associate DVA-C02 topic 1",
-                #     "prefname": "aws/DVA_C02/DVA2-Q",
-                #     "qlength": 357,
-                #     "first_id": 874573,
-                # },
         {
-            "qtitle": "Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1",
-            "prefname": "aws/DOP_C02/DOP2-Q",
-            "qlength": 382,
-            "first_id": 879465,
+            "qtitle": "Exam AWS Certified AI Practitioner AIF-C01 topic 1",
+            "prefname": "aws/AIF_C01/AIF-Q",
+            "qlength": 334,
+            "first_id": 933824,
+        },
+        {
+            "qtitle": "Exam AWS Certified Cloud Practitioner CLF-C02 topic 1",
+            "prefname": "aws/CLF_C02/CLF2-Q",
+            "qlength": 719,
+            "first_id": 898791,
         },
         {
             "qtitle": "Exam AWS Certified Solutions Architect - Associate SAA-C03 topic 1",
@@ -57,24 +39,24 @@ def make_filename(qtitle, qid, dataid, tid=0):
             "qlength": 1019,
             "first_id": 839758,
         },
-        # {
-        #     "qtitle": "Exam AWS Certified Machine Learning - Specialty topic 1",
-        #     "prefname": "aws/MLS_C01/MLS-Q",
-        #     "qlength": 332,
-        #     "first_id": 781931,
-        # },
-        # {
-        #     "qtitle": "Exam AWS Certified Security - Specialty SCS-C02 topic 1",
-        #     "prefname": "aws/SCS_C02/SCS2-Q",
-        #     "qlength": 173,
-        #     "first_id": 897420,
-        # },
-        # {
-        #     "qtitle": "Exam AWS Certified Solutions Architect - Professional SAP-C02 topic 1",
-        #     "prefname": "aws/SAP_C02/SAP2-Q",
-        #     "qlength": 529,
-        #     "first_id": 856116,
-        # },
+        {
+            "qtitle": "Exam AWS Certified Machine Learning Engineer - Associate MLA-C01 topic 1",
+            "prefname": "aws/MLA_C01/MLA-Q",
+            "qlength": 145,
+            "first_id": 839758,
+        },
+        {
+            "qtitle": "Exam AWS Certified Developer - Associate DVA-C02 topic 1",
+            "prefname": "aws/DVA_C02/DVA2-Q",
+            "qlength": 557,
+            "first_id": 874573,
+        },
+        {
+            "qtitle": "Exam AWS Certified Data Engineer - Associate DEA-C01 topic 1",
+            "prefname": "aws/DEA_C01/DEA-Q",
+            "qlength": 261,
+            "first_id": 908898,
+        },
         {
             "qtitle": "Exam AWS Certified SysOps Administrator - Associate topic 1",
             "prefname": "aws/SOA_C02/SOA2-Q",
@@ -87,8 +69,36 @@ def make_filename(qtitle, qid, dataid, tid=0):
             "qlength": 65,
             "first_id": 975094,
         },
-        # aws/SES/SES-Q	Exam AWS Certified Security - Specialty topic 1
-        # aws/DOP_C01/DOP-Q	Exam AWS DevOps Engineer Professional topic 1
+        {
+            "qtitle": "Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1",
+            "prefname": "aws/DOP_C02/DOP2-Q",
+            "qlength": 390,
+            "first_id": 879465,
+        },
+        {
+            "qtitle": "Exam AWS Certified Solutions Architect - Professional SAP-C02 topic 1",
+            "prefname": "aws/SAP_C02/SAP2-Q",
+            "qlength": 529,
+            "first_id": 856116,
+        },
+        {
+            "qtitle": "Exam AWS Certified Machine Learning - Specialty topic 1",
+            "prefname": "aws/MLS_C01/MLS-Q",
+            "qlength": 369,
+            "first_id": 781931,
+        },
+        {
+            "qtitle": "Exam AWS Certified Security - Specialty SCS-C02 topic 1",
+            "prefname": "aws/SCS_C02/SCS2-Q",
+            "qlength": 173,
+            "first_id": 897420,
+        },
+        {
+            "qtitle": "Exam AWS Certified Advanced Networking - Specialty ANS-C01 topic 1",
+            "prefname": "aws/ANS_C01/ANS-Q",
+            "qlength": 272,
+            "first_id": 875171,
+        },
     ]
 
     findexam = next((exam for exam in exams if exam["qtitle"] == qtitle), None)
@@ -138,16 +148,21 @@ def refresh_all_exam(exam_list_file, qtitle, begin=0):
 
         postdate = str(df.at[i, 'PostDate'])
         url = str(df.at[i, 'DiscussURL'])
-        print(qtitle+"\t"+str(qid)+"\t"+url, flush=True)
-        # try:
-        new_data_id = refresh_exam_file(driver, url, qtitle, qid, did, data_id, postdate, '2024-04-01 0:00')
-        if new_data_id <= 0: break
+        print(f"{qtitle}\t{qid:4d} / {len(df)}\t", end=' ', flush=True)
+        try:
+            fname = make_filename(qtitle, qid, data_id)
+            if (len(fname) <= 0): 
+                print(f'fname={fname}, qtitle={qtitle}, qid={qid}, data_id={data_id}')
+                continue
+            else:
+                new_data_id = refresh_exam_file(driver, url, fname, did, data_id, postdate, '2024-04-01 0:00')
+                if new_data_id <= 0: break
     
-        # except Exception as e:
-        #     print("Error:", str(e))
-        #     print(f"*** Make question error !!! {e}")
-        #     break
-        #     # pass
+        except Exception as e:
+            print("Error:", str(e))
+            print(f"*** Make question error !!! {e}")
+            break
+            # pass
         
     end_time = time.time()
     duration = end_time - start_time
@@ -160,29 +175,29 @@ def refresh_all_exam(exam_list_file, qtitle, begin=0):
 
 if __name__ == "__main__":
 
-    AIF = 'Exam AWS Certified AI Practitioner AIF-C01 topic 1'
-    refresh_all_exam('ExamList_AIF.csv', AIF)         # OK 334
+    # AIF = 'Exam AWS Certified AI Practitioner AIF-C01 topic 1'
+    # refresh_all_exam('ExamList_AIF.csv', AIF, 334)         # OK 334
 
     # CLF2 = "Exam AWS Certified Cloud Practitioner CLF-C02 topic 1"
-    # refresh_all_exam('ExamList_CLF2.csv', CLF2)
+    # refresh_all_exam('ExamList_CLF2.csv', CLF2, 719)        # OK 719
     
     # SAA_C03 = 'Exam AWS Certified Solutions Architect - Associate SAA-C03 topic 1'
-    # refresh_all_exam('ExamList_SAA3.csv', SAA_C03)    # OK 1019
+    # refresh_all_exam('ExamList_SAA3.csv', SAA_C03, 1019)    # OK 1019
 
-    MLA = "Exam AWS Certified Machine Learning Engineer - Associate MLA-C01 topic 1"
-    refresh_all_exam('ExamList_MLA.csv', MLA)         # OK 145
+    # MLA = "Exam AWS Certified Machine Learning Engineer - Associate MLA-C01 topic 1"
+    # refresh_all_exam('ExamList_MLA.csv', MLA, 145)          # OK 145
      
-    # DVA2 = 'Exam AWS Certified Developer - Associate DVA-C02 topic 1'
-    # refresh_all_exam('ExamList_DVA2.csv', DVA2)       # OK 557
+    # DVA2 = "Exam AWS Certified Developer - Associate DVA-C02 topic 1"
+    # refresh_all_exam('ExamList_DVA2.csv', DVA2, 557)       # OK 557
 
     # DEA = 'Exam AWS Certified Data Engineer - Associate DEA-C01 topic 1'
-    # refresh_all_exam('ExamList_DEA.csv', DEA)       # OK 261
+    # refresh_all_exam('ExamList_DEA.csv', DEA, 261)       # OK 261
 
     # SOA2 = "Exam AWS Certified SysOps Administrator - Associate topic 1"
-    # refresh_all_exam('ExamList_SOA2.csv', SOA2)       # OK 478
+    # refresh_all_exam('ExamList_SOA2.csv', SOA2, 478)       # OK 478
 
     # SOA3 = "Exam AWS Certified CloudOps Engineer - Associate SOA-C03 topic 1"
-    # refresh_all_exam('ExamList_SOA3.csv', SOA3)       # OK 65
+    # refresh_all_exam('ExamList_SOA3.csv', SOA3, 65)       # OK 65
 
     # DOP2 = "Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1"
     # refresh_all_exam('ExamList_DOP2.csv', DOP2)       # OK 390
@@ -190,12 +205,12 @@ if __name__ == "__main__":
     # SAP_C02 = 'Exam AWS Certified Solutions Architect - Professional SAP-C02 topic 1'
     # refresh_all_exam('ExamList_SAP2.csv', SAP_C02)    # OK 529
 
-    # MLS = 'Exam AWS Certified Machine Learning - Specialty topic 1'
-    # refresh_all_exam('ExamList_MLS.csv', MLS)         # OK 369
+    MLS = 'Exam AWS Certified Machine Learning - Specialty topic 1'
+    refresh_all_exam('ExamList_MLS.csv', MLS, 369)         # OK 369
 
     # SCS2 = "Exam AWS Certified Security - Specialty SCS-C02 topic 1"
     # refresh_all_exam('ExamList_SCS2.csv', SCS2)       # OK 307
     
-    # ANS = "Exam AWS Certified Advanced Networking - Specialty ANS-C01 topic 1"
-    # refresh_all_exam('ExamList_ANS.csv', ANS)         # OK 272
+    ANS = "Exam AWS Certified Advanced Networking - Specialty ANS-C01 topic 1"
+    refresh_all_exam('ExamList_ANS.csv', ANS)         # OK 272
      
