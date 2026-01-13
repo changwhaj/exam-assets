@@ -42,7 +42,7 @@ def make_filename(qtitle, qid, dataid, tid=0):
         {
             "qtitle": "Exam AWS Certified Machine Learning Engineer - Associate MLA-C01 topic 1",
             "prefname": "aws/MLA_C01/MLA-Q",
-            "qlength": 145,
+            "qlength": 216,
             "first_id": 839758,
         },
         {
@@ -125,6 +125,25 @@ def make_filename(qtitle, qid, dataid, tid=0):
         
     return fname
 
+def read_Exam_from_discuss(fname, qtitle):
+    df = pd.read_csv(fname, delimiter='\t', encoding='utf-8', header=None, 
+                    names=['ExamType', 'ExamNo', 'DiscussNo', 'DataNo', 'PostDate', 'DiscussURL'], 
+                    index_col=False)
+    
+    df['ExamType'] = df['ExamType'].str.strip()
+    df['ExamNo'] = df['ExamNo'].astype(int)
+    df['DiscussNo'] = df['DiscussNo'].astype(int)
+    df['DataNo'] = df['DataNo'].astype(int)
+    df['DiscussURL'] = df['DiscussURL'].str.strip()
+
+    exam_df = df.loc[df['ExamType'] == qtitle, ['ExamNo', 'DiscussNo', 'DataNo', 'PostDate', 'DiscussURL']]
+    exam_df.drop_duplicates(inplace=True)
+    df = exam_df.sort_values(by='ExamNo', ascending=True)
+    return df.reset_index(drop=True)
+
+def write_Exam_list(df, fname):
+    df.to_csv(fname, sep='\t', header=False, index=False)
+
 def read_Exam_list(fname):
     df = pd.read_csv(fname, delimiter='\t', encoding='utf-8', header=None,
                     names=['ExamNo', 'DiscussNo', 'DataNo', 'PostDate', 'DiscussURL'],
@@ -132,9 +151,11 @@ def read_Exam_list(fname):
 
     return df
 
-def refresh_all_exam(exam_list_file, qtitle, begin=0):
+def refresh_all_exam(discuss_file, qtitle, begin=0):
     start_time = time.time()
-    df = read_Exam_list(exam_list_file)
+    # df = read_Exam_list(exam_list_file)
+    df = read_Exam_from_discuss(discuss_file, qtitle)
+    write_Exam_list(df, "aaa.csv")
 
     driver = set_chrome_driver()
     driver.set_window_position(1600,10)
@@ -148,7 +169,7 @@ def refresh_all_exam(exam_list_file, qtitle, begin=0):
 
         postdate = str(df.at[i, 'PostDate'])
         url = str(df.at[i, 'DiscussURL'])
-        print(f"{qtitle}\t{qid:4d} / {len(df)}\t", end=' ', flush=True)
+        print(f"{qtitle}\t{qid:4d} / {len(df)}\t {postdate}", end=' ', flush=True)
         try:
             fname = make_filename(qtitle, qid, data_id)
             if (len(fname) <= 0): 
@@ -175,23 +196,25 @@ def refresh_all_exam(exam_list_file, qtitle, begin=0):
 
 if __name__ == "__main__":
 
-    # AIF = 'Exam AWS Certified AI Practitioner AIF-C01 topic 1'
-    # refresh_all_exam('ExamList_AIF.csv', AIF, 334)         # OK 334
+    DISCUSS = 'AmazonDiscuss.txt'
+    AIF = 'Exam AWS Certified AI Practitioner AIF-C01 topic 1'
+    refresh_all_exam(DISCUSS, AIF, 334)         # OK 334
 
-    # CLF2 = "Exam AWS Certified Cloud Practitioner CLF-C02 topic 1"
-    # refresh_all_exam('ExamList_CLF2.csv', CLF2, 719)        # OK 719
+    CLF2 = "Exam AWS Certified Cloud Practitioner CLF-C02 topic 1"
+    refresh_all_exam(DISCUSS, CLF2, 719)        # OK 719
     
     # SAA_C03 = 'Exam AWS Certified Solutions Architect - Associate SAA-C03 topic 1'
     # refresh_all_exam('ExamList_SAA3.csv', SAA_C03, 1019)    # OK 1019
 
-    # MLA = "Exam AWS Certified Machine Learning Engineer - Associate MLA-C01 topic 1"
-    # refresh_all_exam('ExamList_MLA.csv', MLA, 145)          # OK 145
+    MLA = "Exam AWS Certified Machine Learning Engineer - Associate MLA-C01 topic 1"
+    # refresh_all_exam('ExamList_MLA.csv', MLA, 0)          # OK 145
+    refresh_all_exam(DISCUSS, MLA, 216)          # OK 216
      
-    # DVA2 = "Exam AWS Certified Developer - Associate DVA-C02 topic 1"
-    # refresh_all_exam('ExamList_DVA2.csv', DVA2, 557)       # OK 557
+    DVA2 = "Exam AWS Certified Developer - Associate DVA-C02 topic 1"
+    refresh_all_exam(DISCUSS, DVA2, 557)       # OK 557
 
-    # DEA = 'Exam AWS Certified Data Engineer - Associate DEA-C01 topic 1'
-    # refresh_all_exam('ExamList_DEA.csv', DEA, 261)       # OK 261
+    DEA = 'Exam AWS Certified Data Engineer - Associate DEA-C01 topic 1'
+    refresh_all_exam(DISCUSS, DEA, 261)       # OK 261
 
     # SOA2 = "Exam AWS Certified SysOps Administrator - Associate topic 1"
     # refresh_all_exam('ExamList_SOA2.csv', SOA2, 478)       # OK 478
@@ -206,11 +229,11 @@ if __name__ == "__main__":
     # refresh_all_exam('ExamList_SAP2.csv', SAP_C02)    # OK 529
 
     MLS = 'Exam AWS Certified Machine Learning - Specialty topic 1'
-    refresh_all_exam('ExamList_MLS.csv', MLS, 369)         # OK 369
+    refresh_all_exam(DISCUSS, MLS, 369)         # OK 369
 
     # SCS2 = "Exam AWS Certified Security - Specialty SCS-C02 topic 1"
     # refresh_all_exam('ExamList_SCS2.csv', SCS2)       # OK 307
     
     ANS = "Exam AWS Certified Advanced Networking - Specialty ANS-C01 topic 1"
-    refresh_all_exam('ExamList_ANS.csv', ANS)         # OK 272
+    refresh_all_exam(DISCUSS, ANS, 272)         # OK 272
      

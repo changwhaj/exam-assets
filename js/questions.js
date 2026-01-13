@@ -14,7 +14,7 @@ var questionDetails = {
     // Associate 자격증
     // 'SAA2-Q': { qLength: 822, qDirectory: 'aws/SAA_C02' },
     'SAA3-Q': { qLength: 1019, qDirectory: 'aws/SAA_C03' },
-    'MLA-Q': { qLength: 145, qDirectory: 'aws/MLA_C01' },
+    'MLA-Q': { qLength: 216, qDirectory: 'aws/MLA_C01' },
     // 'DVA-Q': { qLength: 443, qDirectory: 'aws/DVA' },
     'DVA2-Q': { qLength: 557, qDirectory: 'aws/DVA_C02' },
     'DEA-Q': { qLength: 261, qDirectory: 'aws/DEA_C01' },

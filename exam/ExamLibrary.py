@@ -95,6 +95,7 @@ def set_translate_to_kr(driver):
         actionChains = ActionChains(driver)
         actionChains.context_click().perform()
         
+        time.sleep(1)
         send_key_to_background_window(driver.title, "T")
         # pyautogui.hotkey('T')
         time.sleep(1)
@@ -826,19 +827,22 @@ def refresh_exam_file(driver, url, fname, did, data_id, postdate, basedate):
     file_data_id = get_question_data_id(fname)
     if file_data_id == 0:   # New Exam
         new_data_id = make_question_file(driver, fname, url, did, postdate)
-        print(f'data_id={data_id}, new_data_id={new_data_id}, fname={fname}')
+        print(f'\tdata_id={data_id}, new_data_id={new_data_id}, fname={fname}')
         if (data_id > 0 ) & (data_id != new_data_id):
             return 0
         translate_page_to_kr(driver, fname)
         save_kr(driver, fname)
     else:                   # Refresh Discussion
         if get_question_postdate(fname) == postdate:
+            print('\tNot changed')
             return new_data_id
 
         if postdate < basedate:
             set_question_postdate(fname, postdate)
+            print('\tExam too old')
             return new_data_id
 
+        print('\tRefresh exam')
         new_data_id = file_data_id
         open_exam(driver, url)
         driver.switch_to.window(driver.window_handles[0])

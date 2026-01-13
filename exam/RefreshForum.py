@@ -162,11 +162,11 @@ def make_filename(qtitle, qid, dataid, tid=0):
         
     return fname
 
-def get_new_discuss_list(driver, forum_name, prev_last_post):
+def get_new_discuss_list(driver, forum_name, prev_last_post, page_from=0):
     new_df = pd.DataFrame(columns=['ExamType', 'ExamNo', 'DiscussNo', 'DataID', 'PostDate', 'DiscussURL'])
     
     found = False
-    for p in range(1000)[:]:
+    for p in range(1000)[page_from:]:
         if found == True: break
         pageno = p + 1
 
@@ -199,14 +199,14 @@ def get_new_discuss_list(driver, forum_name, prev_last_post):
 
     return new_df
 
-def refresh_from_forum(discuss_list, forum_name, last_page):
+def refresh_from_forum(discuss_list, forum_name, page_from):
 
     df = read_discuss_list(discuss_list)
     refresh = False
     driver = set_chrome_driver()
     driver.set_window_position(1600,10)
 
-    new_df = get_new_discuss_list(driver, forum_name, df['PostDate'][0])
+    new_df = get_new_discuss_list(driver, forum_name, df['PostDate'][0], page_from)
 
     for index in range(len(new_df)-1, -1, -1):
         row = new_df.iloc[index]
@@ -238,9 +238,11 @@ def refresh_from_forum(discuss_list, forum_name, last_page):
             print("New question found !!!")
 
         fname = make_filename(qtitle, qid, data_id)
+        fname = ""
         if (len(fname) <= 0): 
             print(f'fname={fname}, qtitle={qtitle}, qid={qid}, data_id={data_id}')
-            continue
+            new_data_id = data_id
+            # continue
         else:
             new_data_id = refresh_exam_file(driver, url, fname, did, data_id, newpost, '2024-04-01 0:00')
             if new_data_id <= 0: break
@@ -269,12 +271,12 @@ if __name__ == "__main__":
 
     DISCUSS = 'AmazonDiscuss.txt'
     FORUM_NAME = 'amazon'
-    refresh_from_forum(DISCUSS, FORUM_NAME, 1)
+    refresh_from_forum(DISCUSS, FORUM_NAME, 0)
     
     # DISCUSS = 'IsacaDiscuss.txt'
     # FORUM_NAME = 'isaca'
     # refresh_from_forum(DISCUSS, FORUM_NAME, 1)    
 
-    # DISCUSS = 'AzureDiscuss.txt'
-    # FORUM_NAME = 'microsoft'
-    # refresh_from_forum(DISCUSS, FORUM_NAME, 1)
+    DISCUSS = 'AzureDiscuss.txt'
+    FORUM_NAME = 'microsoft'
+    refresh_from_forum(DISCUSS, FORUM_NAME, 0)
