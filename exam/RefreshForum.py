@@ -27,6 +27,8 @@ def read_discuss_list(fname):
 
 def write_discuss_list(df, fname):
     df['PostDate'] = df.groupby(['ExamType', 'ExamNo', 'DiscussNo'])['PostDate'].transform('max')
+    df['PostDate'] = df['PostDate'].dt.strftime("%Y-%m-%d %H:%M")
+    df['PostDate'] = df['PostDate'].str.replace(' 0', ' ', regex=False)
     df.drop_duplicates(subset=['ExamType', 'ExamNo', 'DiscussNo'], keep='last', inplace=True)
     df['MaxDataID'] = df.groupby(['ExamType', 'ExamNo'])['DataID'].transform('max')
     df['Chk'] = df.apply(lambda row: 1 if row['DataID'] == row['MaxDataID'] else 0, axis=1)
@@ -204,7 +206,7 @@ def refresh_from_forum(discuss_list, forum_name, page_from):
     df = read_discuss_list(discuss_list)
     refresh = False
     driver = set_chrome_driver()
-    driver.set_window_position(1600,10)
+    # driver.set_window_position(1600,10)
 
     new_df = get_new_discuss_list(driver, forum_name, df['PostDate'][0], page_from)
 
@@ -240,7 +242,7 @@ def refresh_from_forum(discuss_list, forum_name, page_from):
         fname = make_filename(qtitle, qid, data_id)
         fname = ""
         if (len(fname) <= 0): 
-            print(f'fname={fname}, qtitle={qtitle}, qid={qid}, data_id={data_id}')
+            print(f'fname={fname}, qtitle={qtitle}, qid={qid}, data_id={data_id}, oldpost={oldpost}, newpost={newpost}')
             new_data_id = data_id
             # continue
         else:
