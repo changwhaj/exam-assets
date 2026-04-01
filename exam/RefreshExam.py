@@ -24,7 +24,7 @@ def make_filename(qtitle, qid, dataid, tid=0):
         {
             "qtitle": "Exam AWS Certified AI Practitioner AIF-C01 topic 1",
             "prefname": "aws/AIF_C01/AIF-Q",
-            "qlength": 334,
+            "qlength": 422,
             "first_id": 933824,
         },
         {
@@ -42,7 +42,7 @@ def make_filename(qtitle, qid, dataid, tid=0):
         {
             "qtitle": "Exam AWS Certified Machine Learning Engineer - Associate MLA-C01 topic 1",
             "prefname": "aws/MLA_C01/MLA-Q",
-            "qlength": 216,
+            "qlength": 230,
             "first_id": 839758,
         },
         {
@@ -54,7 +54,7 @@ def make_filename(qtitle, qid, dataid, tid=0):
         {
             "qtitle": "Exam AWS Certified Data Engineer - Associate DEA-C01 topic 1",
             "prefname": "aws/DEA_C01/DEA-Q",
-            "qlength": 261,
+            "qlength": 341,
             "first_id": 908898,
         },
         {
@@ -66,7 +66,7 @@ def make_filename(qtitle, qid, dataid, tid=0):
         {
             "qtitle": "Exam AWS Certified CloudOps Engineer - Associate SOA-C03 topic 1",
             "prefname": "aws/SOA_C03/SOA3-Q",
-            "qlength": 65,
+            "qlength": 75,
             "first_id": 975094,
         },
         {
@@ -90,13 +90,19 @@ def make_filename(qtitle, qid, dataid, tid=0):
         {
             "qtitle": "Exam AWS Certified Security - Specialty SCS-C02 topic 1",
             "prefname": "aws/SCS_C02/SCS2-Q",
-            "qlength": 173,
+            "qlength": 307,
             "first_id": 897420,
+        },
+        {
+            "qtitle": "Exam AWS Certified Security - Specialty SCS-C03 topic 1",
+            "prefname": "aws/SCS_C03/SCS3-Q",
+            "qlength": 62,
+            "first_id": 897421,
         },
         {
             "qtitle": "Exam AWS Certified Advanced Networking - Specialty ANS-C01 topic 1",
             "prefname": "aws/ANS_C01/ANS-Q",
-            "qlength": 272,
+            "qlength": 291,
             "first_id": 875171,
         },
     ]
@@ -201,8 +207,8 @@ if __name__ == "__main__":
     refresh_all_exam(DISCUSS, AIF, 334)         # OK 422
 
     DOP2 = "Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1"
-    # refresh_all_exam(DISCUSS, DOP2, 0)       # OK 390
-    refresh_all_exam('ExamList_DOP2.csv', DOP2, 0)       # OK 390
+    # refresh_all_exam(DISCUSS, DOP2, 0)       # OK 429
+    refresh_all_exam('ExamList_DOP2.csv', DOP2, 429)       # OK 429
 
     CLF2 = "Exam AWS Certified Cloud Practitioner CLF-C02 topic 1"
     refresh_all_exam(DISCUSS, CLF2, 719)        # OK 719
@@ -212,20 +218,20 @@ if __name__ == "__main__":
 
     MLA = "Exam AWS Certified Machine Learning Engineer - Associate MLA-C01 topic 1"
     # refresh_all_exam('ExamList_MLA.csv', MLA, 0)          # OK 145
-    refresh_all_exam(DISCUSS, MLA, 216)          # OK 216
+    refresh_all_exam(DISCUSS, MLA, 216)          # OK 230
      
     DVA2 = "Exam AWS Certified Developer - Associate DVA-C02 topic 1"
     refresh_all_exam(DISCUSS, DVA2, 557)       # OK 557
 
     DEA = 'Exam AWS Certified Data Engineer - Associate DEA-C01 topic 1'
-    refresh_all_exam(DISCUSS, DEA, 250)       # OK 261
+    refresh_all_exam(DISCUSS, DEA, 250)       # OK 341
 
      
     # SOA2 = "Exam AWS Certified SysOps Administrator - Associate topic 1"
     # refresh_all_exam('ExamList_SOA2.csv', SOA2, 478)       # OK 478
 
     # SOA3 = "Exam AWS Certified CloudOps Engineer - Associate SOA-C03 topic 1"
-    # refresh_all_exam('ExamList_SOA3.csv', SOA3, 65)       # OK 65
+    # refresh_all_exam('ExamList_SOA3.csv', SOA3, 65)       # OK 75
 
     # SAP_C02 = 'Exam AWS Certified Solutions Architect - Professional SAP-C02 topic 1'
     # refresh_all_exam('ExamList_SAP2.csv', SAP_C02)    # OK 529
@@ -236,6 +242,9 @@ if __name__ == "__main__":
     # SCS2 = "Exam AWS Certified Security - Specialty SCS-C02 topic 1"
     # refresh_all_exam('ExamList_SCS2.csv', SCS2)       # OK 307
     
+    SCS3 = "Exam AWS Certified Security - Specialty SCS-C03 topic 1"
+    refresh_all_exam('ExamList_SCS3.csv', SCS3)       # OK 62
+    
     ANS = "Exam AWS Certified Advanced Networking - Specialty ANS-C01 topic 1"
-    refresh_all_exam(DISCUSS, ANS, 272)         # OK 272
+    refresh_all_exam(DISCUSS, ANS, 272)         # OK 291
      

@@ -8,18 +8,18 @@ var questionDetails = {
     'CISA-Q': { qLength: 1511, qDirectory: 'isaca/CISA' },
 
     // Foundational 자격증
-    'AIF-Q': { qLength: 334, qDirectory: 'aws/AIF_C01' },
+    'AIF-Q': { qLength: 422, qDirectory: 'aws/AIF_C01' },
     'CLF2-Q': { qLength: 719, qDirectory: 'aws/CLF_C02' },
 
     // Associate 자격증
     // 'SAA2-Q': { qLength: 822, qDirectory: 'aws/SAA_C02' },
     'SAA3-Q': { qLength: 1019, qDirectory: 'aws/SAA_C03' },
-    'MLA-Q': { qLength: 216, qDirectory: 'aws/MLA_C01' },
+    'MLA-Q': { qLength: 230, qDirectory: 'aws/MLA_C01' },
     // 'DVA-Q': { qLength: 443, qDirectory: 'aws/DVA' },
     'DVA2-Q': { qLength: 557, qDirectory: 'aws/DVA_C02' },
-    'DEA-Q': { qLength: 261, qDirectory: 'aws/DEA_C01' },
+    'DEA-Q': { qLength: 341, qDirectory: 'aws/DEA_C01' },
     'SOA2-Q': { qLength: 478, qDirectory: 'aws/SOA_C02' },
-    'SOA3-Q': { qLength: 65, qDirectory: 'aws/SOA_C03' },
+    'SOA3-Q': { qLength: 75, qDirectory: 'aws/SOA_C03' },
 
     // Professional 자격증
     'DOP2-Q': { qLength: 390, qDirectory: 'aws/DOP_C02' },
@@ -29,7 +29,8 @@ var questionDetails = {
     // Specialty 자격증
     'MLS-Q': { qLength: 369, qDirectory: 'aws/MLS_C01' },
     'SCS2-Q': { qLength: 307, qDirectory: 'aws/SCS_C02' },
-    'ANS-Q': { qLength: 272, qDirectory: 'aws/ANS_C01' },
+    'SCS3-Q': { qLength: 62, qDirectory: 'aws/SCS_C03' },
+    'ANS-Q': { qLength: 291, qDirectory: 'aws/ANS_C01' },
 
     'AZ104-Q': { qLength: 606, qDirectory: 'microsoft/AZ104' },
     'AZ305-Q': { qLength: 286, qDirectory: 'microsoft/AZ305' },
