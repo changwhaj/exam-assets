@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta charset="utf-8"/>
+<title>Exam AWS Certified DevOps Engineer</title>
+<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="1900-01-00 00:00" name="refresh_date"/>
+</head>
+<body class="home2"><div style="position:relative;">
+<!-- bootstrap v4 css -->
+<link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<!-- font-awesome css -->
+<link defhref="../../../css/font-awesome.min.css" href="../../../css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<!-- slick css -->
+<link defhref="../../../css/slick.css" href="../../../css/slick.css" rel="stylesheet" type="text/css"/>
+<!-- rsmenu transitions CSS -->
+<link defhref="../../../css/rsmenu-transitions.css" href="../../../css/rsmenu-transitions.css" rel="stylesheet" type="text/css"/>
+<link href="../../../css/style.css?ver=1" rel="stylesheet" type="text/css"/>
+<link href="../../../css/color/default.css" rel="stylesheet" type="text/css"/>
+<!-- responsive css -->
+<link href="../../../css/responsive.css" rel="stylesheet" type="text/css"/>
+<link href="../../../css/forum.css" rel="stylesheet" type="text/css"/>
+<div class="sec-spacer pt-20">
+<div class="container">
+<div class="container action-row-container border-0 p-0 mb-2">
+<div class="container action-row clearfix d-flex">
+<i class="fa fm fa-language fa-2x mr-2"></i>
+<a class="btn show-english" href="javascript:void(0)">English</a>
+<a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
+<span class="pagination-container ml-auto">
+<span id="page-indicator"><strong></strong></span>
+<span class="pagination-nav ml-4">
+<a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
+<a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
+</span>
+</span>
+</div>
+</div>
+<script src="../../../js/questions.js"></script>
+<!-- BEGIN Discussions header / title -->
+<div class="row">
+<div class="col-12">
+<div class="discussion-list-header">
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified DevOps Engineer - Professional 시험 DOP-C02 주제 1 문제 407 토론</h1>
+</div>
+<div class="discussion-list-header-en" style="display: none;">
+<h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 407 discussion</h1>
+</div>
+</div>
+</div>
+<!-- END Discussions header / title -->
+<!-- BEGIN Discussion Content -->
+<div class="row">
+<div class="col-12">
+<div class="discussion-header-container">
+<!-- Question -->
+<div class="question-discussion-header">
+						
+							Amazon
+						 <a class="discussion-link">AWS Certified DevOps Engineer - Professional DOP-C02 시험 문제</a>
+<div>
+							문제 번호: 407 <br/>
+							주제 번호: 1
+						</div>
+</div>
+<div class="question-body mt-3 pt-3 border-top" data-id="980412">
+<p class="card-text">
+							
+								한 회사가 AWS Organizations에 조직을 보유하고 있습니다. 해당 조직은 모든 ​​기능이 활성화되어 있으며 관리 계정에 AWS CloudTrail 신뢰 액세스가 구성되어 있습니다. 알림을 위해 Amazon Simple Notification Service(Amazon SNS) 토픽도 설정되어 있습니다. <br/><br/>이 회사는 조직 내 모든 AWS 리전에서 발생하는 모든 AWS 이벤트를 기록하고 감사 계정에 보관해야 합니다. 또한 로그인 시도 실패에 대한 거의 실시간 알림이 필요합니다. <br/><br/>DevOps 엔지니어는 모든 리전의 이벤트를 기록하기 위해 관리 계정에 조직 트레일을 생성했습니다. <br/><br/>이러한 요구 사항을 최소한의 운영 노력으로 충족할 수 있는 솔루션은 무엇일까요?
+							
+						</p>
+<div class="voted-answers-tally d-none">
+</div>
+<div class="question-choices-container">
+<ul>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="A">
+													A.
+												</span> 
+											
+											CloudTrail이 감사 계정의 새 Amazon S3 버킷에 로그를 게시하도록 구성합니다. 감사 계정에서 CloudTrail의 로그인 실패 이벤트에 반응하는 Amazon EventBridge 규칙을 생성합니다. EventBridge 규칙이 SNS 토픽에 알림을 보내도록 구성합니다.
+										</li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="B">
+													B.
+												</span> 
+											
+											트레일이 관리 계정의 새 Amazon S3 버킷에 로그를 게시하도록 구성합니다. 새 S3 버킷에서 데이터를 읽도록 Amazon Athena 테이블을 구성합니다. 로그인 실패 이벤트를 Athena 테이블에서 쿼리하고 결과를 SNS 토픽에 게시하는 AWS Lambda 함수를 생성합니다. 5분마다 Lambda 함수를 실행하도록 Amazon EventBridge 예약 규칙을 생성합니다.
+										</li>
+<li class="multi-choice-item correct-hidden">
+<span class="multi-choice-letter" data-choice-letter="C">
+													C.
+												</span> 
+											
+											감사 계정의 새 Amazon S3 버킷과 관리 계정의 새 Amazon CloudWatch 로그 그룹에 로그를 게시하도록 트레일을 구성합니다. 로그 그룹에 CloudWatch Logs 메트릭 필터를 생성하여 로그인 실패에 대한 사용자 지정 메트릭을 만듭니다. 사용자 지정 메트릭을 사용하고 SNS 토픽에 알림을 보내는 CloudWatch 알람을 구성합니다.
+										</li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="D">
+													D.
+												</span> 
+											
+											감사 계정의 새 Amazon CloudWatch 로그 그룹에 로그를 게시하도록 트레일을 구성합니다. 감사 계정에 Amazon Kinesis 데이터 스트림을 생성합니다. 로그 그룹에 구독 필터를 구성하여 로그를 데이터 스트림으로 전송합니다. Amazon Managed Service for Apache Flink를 사용하여 데이터 스트림에서 로그인 실패를 필터링합니다. 결과를 SNS 토픽에 게시합니다.
+										</li>
+</ul>
+</div>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
+<a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
+<div class="card-text question-answer bg-light white-text" style="display: none;">
+<span class="correct-answer-box"><strong>정답: </strong>
+<span class="correct-answer">C</span>
+<br/>
+</span>
+<span class="answer-description">
+</span>
+</div>
+</div>
+<!-- / Question  -->
+</div>
+<div class="discussion-header-container-en" style="display: none;">
+<!-- Question -->
+<div class="question-discussion-header">
+						
+							Exam question from
+						
+						Amazon's
+						<a class="discussion-link">AWS Certified DevOps Engineer - Professional DOP-C02</a>
+<div>
+							Question #: 407<br/>
+							Topic #: 1
+						</div>
+</div>
+<div class="question-body mt-3 pt-3 border-top" data-id="980412">
+<p class="card-text">
+							
+								A company has an organization in AWS Organizations. The organization has all features enabled and has AWS CloudTrail trusted access configured for the management account. An Amazon Simple Notification Service (Amazon SNS) topic is configured for notifications.<br/><br/>The company needs all AWS events in all AWS Regions in the organization to be recorded and retained in an audit account. The company needs near real-time notifications of any failed login attempts.<br/><br/>A DevOps engineer has created an organization trail in the management account to log events for all Regions.<br/><br/>Which solution will meet these requirements with the LEAST operational effort?
+							
+						</p>
+<div class="voted-answers-tally d-none">
+</div>
+<div class="question-choices-container">
+<ul>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="A">
+													A.
+												</span>
+											
+											Configure the trail to publish logs to a new Amazon S3 bucket in the audit account. In the audit account, create an Amazon EventBridge rule that reacts to failed login events in CloudTrail. Configure the EventBridge rule to notify the SNS topic.
+										</li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="B">
+													B.
+												</span>
+											
+											Configure the trail to publish logs to a new Amazon S3 bucket in the management account. Configure an Amazon Athena table to read from the new S3 bucket. Create an AWS Lambda function that queries the Athena table for failed login events and publishes the findings to the SNS topic. Create an Amazon EventBridge scheduled rule to invoke the Lambda function every 5 minutes.
+										</li>
+<li class="multi-choice-item correct-hidden">
+<span class="multi-choice-letter" data-choice-letter="C">
+													C.
+												</span>
+											
+											Configure the trail to publish logs to a new Amazon S3 bucket in the audit account and a new Amazon CloudWatch log group in the management account. Create a CloudWatch Logs metric filter on the log group to create a custom metric for failed logins. Configure a CloudWatch alarm that uses the custom metric and notifies the SNS topic.
+										</li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="D">
+													D.
+												</span>
+											
+											Configure the trail to publish logs to a new Amazon CloudWatch log group in the audit account. Create an Amazon Kinesis data stream in the audit account. Configure a subscription filter on the log group to send the logs to the data stream. Use Amazon Managed Service for Apache Flink to filter the data stream for failed logins. Publish the results to the SNS topic.
+										</li>
+</ul>
+</div>
+<a class="btn btn-primary reveal-solution" href="#">Show Suggested Answer</a>
+<a class="btn btn-primary hide-solution d-none" href="#">Hide Answer</a>
+<div class="card-text question-answer bg-light white-text">
+<span class="correct-answer-box"><strong>Suggested Answer:</strong>
+<span class="correct-answer">C</span>
+<br/>
+</span>
+<span class="answer-description">
+</span>
+</div>
+</div>
+<!-- / Question  -->
+</div>
+<div class="comments-wrapper">
+<a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
+<div class="discussion-page-comments-section" data-discussion-question-id="382739" style="display: none">
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
+<!-- discussion.html -->
+<!-- Discussion start -->
+<div class="container outer-discussion-container">
+<div class="row">
+<div class="comments-container p-2 w-100">
+<!-- New comment start -->
+<!-- New comment end -->
+<div class="discussion-container">
+		
+		
+			
+				현재 이 토론에는 댓글이 없습니다. 첫 번째 댓글을 남겨주세요!
+			
+		
+		
+
+		
+		
+		
+		</div>
+</div>
+</div>
+</div>
+<!-- Discussion end -->
+</div>
+</div>
+<div class="comments-wrapper-en" style="display: none;">
+<a class="badge reveal-comment" href="javascript:void(0)">Show Comments</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">Hide Comments</a>
+<div class="discussion-page-comments-section-en" data-discussion-question-id="382739" style="display: none">
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">Comments</h4></div>
+<!-- discussion.html -->
+<!-- Discussion start -->
+<div class="container outer-discussion-container">
+<div class="row">
+<div class="comments-container p-2 w-100">
+<!-- New comment start -->
+<!-- New comment end -->
+<div class="discussion-container">
+		
+		
+			
+				Currently there are no comments in this discussion, be the first to comment!
+			
+		
+		
+
+		
+		
+		
+		</div>
+</div>
+</div>
+</div>
+<!-- Discussion end -->
+</div>
+</div>
+</div>
+</div>
+<!-- END Discussion Content -->
+</div>
+</div>
+<!-- start scrollUp  -->
+<div class="d-print-none" id="scrollUp">
+<i class="fa fa-angle-up"></i>
+</div>
+<!-- Popper JS -->
+<script src="../../../js/popper.min.js"></script>
+<!-- jquery latest version -->
+<script src="../../../js/jquery.min.js"></script>
+<!-- bootstrap js -->
+<script src="../../../js/bootstrap.min.js"></script>
+<!-- slick.min js -->
+<script src="../../../js/slick.min.js"></script>
+<!-- wow js -->
+<script src="../../../js/wow.min.js"></script>
+<!-- main js -->
+<script src="../../../js/main.js"></script>
+<script type="text/javascript">
+    // Activate tooltips
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    })
+
+    $(document).ready(function () {
+        // Load stylesheets in a deferred way:
+        $('link[defhref]').each(function() {
+            $(this).attr('href', $(this).attr('defhref'));
+            //var src = $(this).attr('href');
+            //loadStyleSheet(src);
+        });
+
+        // Load mobile images in a deferred way:
+        var isMobile = window.matchMedia("only screen and (max-width: 490px)").matches;
+        if (isMobile) {
+            $('img[mobile-defsrc]').each(function () {
+                $(this).attr('src', $(this).attr('mobile-defsrc')).removeAttr('defsrc');
+            });
+        }
+
+        // Load images in a deferred way:
+        $('img[defsrc]').each(function() {
+            $(this).attr('src',$(this).attr('defsrc'));
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function (){
+        set_voting_configuration_by_question($(".question-body"));
+    });
+</script>
+<script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
+<script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
+</div>
+</body>
+</html>

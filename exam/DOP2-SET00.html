@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AWS DOP-C02 | SET 01 (Q001~Q020)</title>
+<style>
+[data-theme="dark"] {
+  --bg:#0f1117; --surface:#1a1d27; --surface2:#222636; --border:#2e3347;
+  --accent:#4f8ef7; --accent2:#38c9a0; --text:#e2e6f0; --text-muted:#7a83a0;
+  --correct-bg:#112a22; --wrong-bg:#2a1111; --explain-bg:#1e2030;
+  --hover-bg:#1e2236; --sel-bg:#1b2540;
+}
+[data-theme="light"] {
+  --bg:#f0f2f8; --surface:#ffffff; --surface2:#f5f6fa; --border:#d0d5e8;
+  --accent:#2e6fe0; --accent2:#1aaa7e; --text:#1a1d2e; --text-muted:#5a6280;
+  --correct-bg:#e6faf4; --wrong-bg:#fde8e8; --explain-bg:#f0f2fa;
+  --hover-bg:#eaf1ff; --sel-bg:#ddeaff;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text);font-family:'Pretendard','Noto Sans KR','Segoe UI',sans-serif;font-size:15px;line-height:1.75;min-height:100vh;transition:background .25s,color .25s;}
+.wrap{max-width:860px;margin:0 auto;padding:28px 16px 60px;}
+
+/* Topbar */
+.topbar{display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border);flex-wrap:wrap;}
+.badge{background:linear-gradient(135deg,#4f8ef7,#38c9a0);color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;padding:4px 12px;border-radius:20px;white-space:nowrap;}
+.topbar-title{font-size:13px;color:var(--text-muted);flex:1;min-width:120px;}
+.topbar-title strong{color:var(--text);font-size:15px;display:block;}
+.topbar-right{display:flex;align-items:center;gap:8px;margin-left:auto;flex-wrap:wrap;}
+
+/* 문제 선택 콤보박스 */
+.q-select-wrap{display:flex;align-items:center;gap:6px;}
+.q-select-label{font-size:12px;color:var(--text-muted);white-space:nowrap;}
+.q-select{background:var(--surface2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:13px;font-weight:600;padding:5px 10px;cursor:pointer;outline:none;transition:border-color .2s;}
+.q-select:focus,.q-select:hover{border-color:var(--accent);}
+.q-select option.opt-correct{color:#1aaa7e;}
+.q-select option.opt-wrong{color:#e05252;}
+
+/* 상단 네비 버튼 + 문제 콤보 높이 통일 */
+.topbar-right .btn-nav,
+.topbar-right .q-select {
+  height: 24px;
+  padding: 0 14px;
+  font-size: 13px;
+}
+
+/* 테마 버튼 */
+.theme-btn{background:var(--surface2);border:1px solid var(--border);border-radius:20px;cursor:pointer;display:flex;align-items:center;gap:5px;padding:5px 12px;font-size:12px;font-weight:600;color:var(--text-muted);transition:border-color .2s,color .2s;white-space:nowrap;}
+.theme-btn:hover{border-color:var(--accent);color:var(--accent);}
+
+/* Progress */
+.progress-bar{background:var(--surface2);border-radius:4px;height:6px;margin-bottom:20px;overflow:hidden;}
+.progress-fill{background:linear-gradient(90deg,var(--accent),var(--accent2));height:100%;border-radius:4px;transition:width .4s;}
+
+/* Card */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px;margin-bottom:16px;transition:background .25s,border-color .25s;}
+
+/* Lang Tabs */
+.lang-tabs{display:flex;gap:8px;margin-bottom:20px;}
+.lang-tab{background:transparent;border:1px solid var(--border);border-radius:6px;color:var(--text-muted);cursor:pointer;font-size:12px;font-weight:600;letter-spacing:.04em;padding:5px 14px;transition:all .2s;}
+.lang-tab.active{background:var(--accent);border-color:var(--accent);color:#fff;}
+.lang-tab:hover:not(.active){border-color:var(--accent);color:var(--accent);}
+
+/* Q Label */
+.q-label{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;margin-bottom:10px;}
+.q-type-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;padding:2px 8px;border-radius:10px;margin-left:8px;background:var(--surface2);border:1px solid var(--border);color:var(--text-muted);vertical-align:middle;}
+.q-type-badge.multi{background:#ede9ff;color:#6d28d9;border-color:#c4b5fd;}
+[data-theme="dark"] .q-type-badge.multi{background:#2a1f50;color:#a78bfa;border-color:#4c3a8c;}
+
+/* Q Text */
+.q-text{font-size:15px;color:var(--text);line-height:1.85;}
+.q-text.en-text{
+  font-size:14px;color:var(--text-muted);
+  margin-top:14px;padding-top:14px;
+  border-top:1px dashed var(--border);
+}
+.q-text code{background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:1px 6px;font-size:13px;font-family:'JetBrains Mono','Fira Code',monospace;color:var(--accent2);}
+
+/* Choices */
+.choices-section{margin-top:24px;}
+.choices-label{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--text-muted);text-transform:uppercase;margin-bottom:12px;}
+.choice{display:flex;align-items:flex-start;gap:14px;background:var(--surface2);border:2px solid var(--border);border-radius:10px;cursor:pointer;margin-bottom:10px;padding:14px 18px;transition:border-color .2s,background .2s;user-select:none;}
+.choice:hover{border-color:var(--accent);background:var(--hover-bg);}
+.choice.selected{border-color:var(--accent);background:var(--sel-bg);}
+.choice.correct{border-color:#38c9a0!important;background:var(--correct-bg)!important;}
+.choice.wrong{border-color:#f76f6f!important;background:var(--wrong-bg)!important;}
+.choice.disabled{cursor:default;pointer-events:none;}
+.choice-key{background:var(--border);border-radius:6px;color:var(--text);font-size:13px;font-weight:700;min-width:30px;height:30px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;transition:background .2s,color .2s;}
+.choice.selected .choice-key{background:var(--accent);color:#fff;}
+.choice.correct .choice-key{background:#38c9a0;color:#000;}
+.choice.wrong .choice-key{background:#f76f6f;color:#fff;}
+.choice-body{flex:1;}
+.choice-text{font-size:14px;line-height:1.75;}
+.choice-en{font-size:12px;color:var(--text-muted);margin-top:5px;display:none;font-style:italic;}
+.result-icon{margin-left:auto;font-size:18px;flex-shrink:0;display:none;}
+.choice.correct .result-icon,.choice.wrong .result-icon{display:block;}
+
+/* Actions */
+.actions{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap;align-items:center;}
+.btn{border:none;border-radius:8px;cursor:pointer;font-size:14px;font-weight:700;letter-spacing:.03em;padding:11px 24px;transition:opacity .2s,transform .1s;}
+.btn:hover:not(:disabled){opacity:.88;transform:translateY(-1px);}
+.btn:active{transform:translateY(0);}
+.btn-primary{background:var(--accent);color:#fff;}
+.btn-secondary{background:var(--surface2);color:var(--text);border:1px solid var(--border);}
+.btn-nav{background:var(--surface2);color:var(--text);border:1px solid var(--border);padding:11px 18px;}
+.btn:disabled{opacity:.35;cursor:not-allowed;}
+.hint-text{font-size:12px;color:var(--text-muted);margin-top:8px;min-height:18px;}
+
+/* Review Panel */
+.review-panel{display:none;background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--accent2);border-radius:12px;padding:24px 28px;margin-bottom:16px;animation:fadeIn .35s ease;transition:background .25s;}
+.review-panel.show{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.answer-row{display:flex;align-items:center;gap:10px;margin-bottom:20px;flex-wrap:wrap;}
+.answer-label{font-size:13px;color:var(--text-muted);}
+.answer-badge{background:#38c9a0;color:#000;font-size:13px;font-weight:800;padding:4px 14px;border-radius:20px;}
+.vote-badge{background:var(--surface2);border:1px solid var(--border);color:var(--text-muted);font-size:12px;padding:3px 10px;border-radius:20px;}
+.vote-badge span{color:var(--accent);font-weight:700;}
+.section-title{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--accent2);text-transform:uppercase;margin-bottom:10px;}
+.explain-box{background:var(--explain-bg);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:14px;font-size:14px;line-height:1.8;color:var(--text);}
+.explain-box p{margin-bottom:8px;}
+.explain-box p:last-child{margin-bottom:0;}
+.mark-ok{color:#38c9a0;font-weight:700;}
+.mark-no{color:#f76f6f;font-weight:600;}
+
+/* Discussion */
+.disc-toggle{background:transparent;border:1px dashed var(--border);border-radius:8px;color:var(--text-muted);cursor:pointer;font-size:13px;margin-top:8px;padding:9px 16px;width:100%;text-align:left;transition:border-color .2s,color .2s;}
+.disc-toggle:hover{border-color:var(--accent);color:var(--accent);}
+.disc-list{display:none;margin-top:10px;}
+.disc-list.show{display:block;}
+.disc-item{background:var(--surface2);border-left:3px solid var(--border);border-radius:0 6px 6px 0;font-size:13px;margin-bottom:8px;padding:10px 14px;color:var(--text-muted);line-height:1.7;}
+.disc-ans{color:var(--accent);font-weight:700;font-size:12px;margin-bottom:3px;}
+
+/* Bottom Nav */
+.nav-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:16px;gap:10px;}
+.nav-info{font-size:13px;color:var(--text-muted);text-align:center;flex:1;}
+
+@media(max-width:600px){
+  .card{padding:16px;}
+  .btn{padding:10px 16px;font-size:13px;}
+  .topbar{gap:8px;}
+  .topbar-right{gap:6px;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <span class="badge">AWS DOP-C02</span>
+    <div class="topbar-title">
+      <strong>AWS Certified DevOps Engineer – Professional</strong>
+      SET 01 · Q001~Q020 실전 학습
+    </div>
+    <div class="topbar-right">
+      <!-- 상단 네비게이션 -->
+      <button class="btn btn-nav" onclick="goQWithReset(curQ-1)" id="btn-prev-top">←</button>
+
+      <!-- 문제 선택 콤보박스 -->
+      <div class="q-select-wrap">
+        <select class="q-select" id="q-select" onchange="goQWithReset(this.value-1)"></select>
+      </div>
+      <button class="btn btn-nav" onclick="goQWithReset(curQ+1)" id="btn-next-top">→</button>
+
+      <!-- 테마 토글 -->
+      <button class="theme-btn" onclick="toggleTheme()">
+        <span id="theme-icon">🌙</span>
+        <span id="theme-label">다크</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:5%"></div></div>
+
+  <!-- Language Tabs -->
+  <div class="lang-tabs">
+    <button class="lang-tab active" onclick="setLang('ko',this)">한국어</button>
+    <button class="lang-tab" onclick="setLang('both',this)">양국어</button>
+  </div>
+
+  <!-- Question Card -->
+  <div class="card" id="q-card">
+    <div class="q-label">
+      문제 <span id="q-num-badge">001</span>
+      <span id="q-type-badge" class="q-type-badge">단일 선택</span>
+    </div>
+    <!-- 한국어 문제 -->
+    <div class="q-text" id="q-ko-text"></div>
+    <!-- 영어 문제 (양국어 모드) -->
+    <div class="q-text en-text" id="q-en-text"></div>
+
+    <div class="choices-section">
+      <div class="choices-label" id="choices-label">선택지</div>
+      <div id="choices-container"></div>
+    </div>
+    <div class="actions">
+      <button class="btn btn-primary" id="btn-review" onclick="doReview()" disabled>📋 정답 확인</button>
+      <button class="btn btn-secondary" onclick="doReset()">↺ 초기화</button>
+    </div>
+    <div class="hint-text" id="hint-text">선택지를 클릭하면 정답 확인 버튼이 활성화됩니다.</div>
+  </div>
+
+  <!-- Review Panel -->
+  <div class="review-panel" id="review-panel">
+    <div class="answer-row">
+      <span class="answer-label">정답</span>
+      <span class="answer-badge" id="review-answer-badge"></span>
+      <span class="vote-badge" id="review-vote-badge"></span>
+    </div>
+    <div class="section-title">✦ 정답 해설</div>
+    <div class="explain-box" id="review-explain"></div>
+    <div class="section-title" style="margin-top:14px;" id="wrong-section-title">✦ 오답 분석</div>
+    <div class="explain-box" id="review-wrong"></div>
+    <button class="disc-toggle" onclick="document.getElementById('disc-list').classList.toggle('show')">💬 주요 토론 의견 보기 / 숨기기</button>
+    <div class="disc-list" id="disc-list"></div>
+  </div>
+
+  <!-- Bottom Nav -->
+  <div class="nav-bottom">
+    <button class="btn btn-nav" onclick="goQ(curQ-1)" id="btn-prev">← 이전</button>
+    <span class="nav-info" id="nav-info"></span>
+    <button class="btn btn-nav" onclick="goQ(curQ+1)" id="btn-next">다음 →</button>
+  </div>
+
+</div>
+<script>
+const QS = [
+{
+  n:1,
+  ko:`한 회사의 모바일 애플리케이션은 ALB(Application Load Balancer)로 HTTP API를 호출합니다. ALB는 요청을 AWS Lambda 함수로 라우팅합니다. 테스트 중인 버전을 포함하여 언제든지 여러 버전의 애플리케이션이 동시에 사용됩니다. 애플리케이션 버전은 API 요청마다 전송되는 <code>user-agent</code> 헤더에 정의되어 있습니다.<br><br>최근 API에 대한 일련의 변경 이후, 회사는 애플리케이션에서 문제가 발생하고 있음을 확인했습니다. 회사는 현재 사용 중인 <strong>각 애플리케이션 버전별로, 응답 코드와 함께 각 API 작업에 대한 메트릭을 수집</strong>해야 합니다. DevOps 엔지니어는 이미 Lambda 함수를 수정하여 API 작업 이름, <code>user-agent</code> 헤더의 버전 정보, 응답 코드를 추출하도록 했습니다.<br><br><strong>필요한 메트릭을 수집하기 위해 DevOps 엔지니어가 추가로 수행해야 할 작업은 무엇입니까?</strong>`,
+  en:`A company has a mobile application that makes HTTP API calls to an Application Load Balancer (ALB). The ALB routes requests to an AWS Lambda function. Many different versions of the application are in use at any given time, including versions that are in testing by a subset of users. The version of the application is defined in the user-agent header that is sent with all requests to the API.<br><br>After a series of recent changes to the API, the company has observed issues with the application. The company needs to gather a metric for each API operation by response code for each version of the application that is in use. A DevOps engineer has modified the Lambda function to extract the API operation name, version information from the user-agent header and response code.<br><br><strong>Which additional set of actions should the DevOps engineer take to gather the required metrics?</strong>`,
+  type:'single',
+  choices:[
+    {k:'A', ko:`Lambda 함수를 수정하여 API 작업 이름, 응답 코드, 버전 번호를 Amazon CloudWatch Logs 로그 그룹에 로그 라인으로 기록합니다. 각 API 작업 이름마다 메트릭을 증가시키는 <strong>CloudWatch Logs 메트릭 필터</strong>를 구성합니다. 메트릭의 차원(dimension)으로 응답 코드와 애플리케이션 버전을 지정합니다.`, en:`Modify the Lambda function to write the API operation name, response code, and version number as a log line to an Amazon CloudWatch Logs log group. Configure a CloudWatch Logs metric filter that increments a metric for each API operation name. Specify response code and application version as dimensions for the metric.`},
+    {k:'B', ko:`Lambda 함수를 수정하여 API 작업 이름, 응답 코드, 버전 번호를 Amazon CloudWatch Logs 로그 그룹에 로그 라인으로 기록합니다. <strong>CloudWatch Logs Insights 쿼리</strong>를 구성하여 로그 라인으로부터 CloudWatch 메트릭을 채웁니다. 메트릭의 차원으로 응답 코드와 애플리케이션 버전을 지정합니다.`, en:`Modify the Lambda function to write the API operation name, response code, and version number as a log line to an Amazon CloudWatch Logs log group. Configure a CloudWatch Logs Insights query to populate CloudWatch metrics from the log lines. Specify response code and application version as dimensions for the metric.`},
+    {k:'C', ko:`<strong>ALB 액세스 로그</strong>를 Amazon CloudWatch Logs 로그 그룹에 기록하도록 구성합니다. Lambda 함수를 수정하여 API 작업 이름, 응답 코드, 버전 번호를 응답 메타데이터로 포함해 ALB에 반환합니다. 각 API 작업 이름마다 메트릭을 증가시키는 CloudWatch Logs 메트릭 필터를 구성합니다. 메트릭의 차원으로 응답 코드와 애플리케이션 버전을 지정합니다.`, en:`Configure the ALB access logs to write to an Amazon CloudWatch Logs log group. Modify the Lambda function to respond to the ALB with the API operation name, response code, and version number as response metadata. Configure a CloudWatch Logs metric filter. Specify response code and application version as dimensions for the metric.`},
+    {k:'D', ko:`Lambda 함수에 <strong>AWS X-Ray 통합</strong>을 구성합니다. Lambda 함수를 수정하여 API 작업 이름, 응답 코드, 버전 번호로 X-Ray 서브 세그먼트를 생성합니다. X-Ray Insights를 구성하여 각 API 작업 이름에 대한 집계 메트릭을 추출하고 Amazon CloudWatch에 게시합니다.`, en:`Configure AWS X-Ray integration on the Lambda function. Modify the Lambda function to create an X-Ray subsegment with the API operation name, response code, and version number. Configure X-Ray insights to extract an aggregated metric for each API operation name and to publish the metric to Amazon CloudWatch.`},
+  ],
+  answer:['A'],
+  vote:'87% A',
+  explain:`<p><span class="mark-ok">✅ A — CloudWatch Logs 메트릭 필터</span></p><p>Lambda 함수에서 CloudWatch Logs에 로그 라인을 기록하고, <strong>메트릭 필터(Metric Filter)</strong>로 패턴을 자동 파싱해 메트릭을 생성하는 것은 AWS 공식 권장 패턴입니다. API 작업 이름을 메트릭으로, 응답 코드와 애플리케이션 버전을 <strong>차원(Dimension)</strong>으로 지정하면 버전별·코드별 세분화 메트릭을 실시간 자동 수집할 수 있습니다. 추가 인프라 불필요, 구현 간단, 알람·Lambda 트리거·이상 탐지까지 연동 가능합니다.</p>`,
+  wrong:`<p><span class="mark-no">❌ B</span> — Logs Insights는 대화형 임시 분석 도구로, 쿼리 결과를 CloudWatch 메트릭으로 자동 게시하는 기능이 없습니다.</p><p style="margin-top:10px;"><span class="mark-no">❌ C</span> — ALB 액세스 로그는 S3에 기록되며 CloudWatch Logs로 직접 스트리밍되지 않습니다.</p><p style="margin-top:10px;"><span class="mark-no">❌ D</span> — X-Ray는 분산 추적 목적 도구로 커스텀 차원 메트릭을 CloudWatch로 게시하는 직접 경로가 없습니다.</p>`,
+  disc:[{ans:'A (높은 추천)',txt:'메트릭 필터는 Insights 쿼리와 달리 자동으로 시계열 메트릭 데이터를 생성하여 알람, Lambda 실행, 이상 탐지 모델 연동이 가능합니다. — AWS Blog'}]
+},
+{
+  n:2,
+  ko:`한 회사의 모바일 애플리케이션은 Amazon API Gateway REST API를 통해 AWS Lambda 함수를 호출합니다. Lambda 함수는 초기화 시 DynamoDB 테이블에서 대량의 데이터를 로드하여 <strong>8~10초의 콜드 스타트</strong> 시간이 발생합니다. DynamoDB 테이블에는 DAX가 구성되어 있습니다.<br><br>애플리케이션은 하루 종일 수천 개의 요청을 받으며, 정오에는 평소보다 10배 많은 트래픽이 발생하고, 하루 말에는 10%로 감소합니다.<br><br><strong>하루 종일 Lambda 함수의 지연 시간을 줄이기 위한 솔루션은 무엇입니까?</strong>`,
+  en:`A company provides an application that has an Amazon API Gateway REST API invoking an AWS Lambda function. On initialization, the Lambda function loads a large amount of data from DynamoDB causing long cold-start times of 8–10 seconds. The application experiences 10x more requests midday and drops to 10% near end of day.<br><br><strong>Which solution will reduce Lambda latency at all times of the day?</strong>`,
+  type:'single',
+  choices:[
+    {k:'A', ko:`Lambda 함수에서 <strong>프로비저닝된 동시성</strong>을 동시성 값 1로 구성합니다. DynamoDB 테이블의 DAX 클러스터를 삭제합니다.`, en:`Configure provisioned concurrency on the Lambda function with a concurrency value of 1. Delete the DAX cluster for the DynamoDB table.`},
+    {k:'B', ko:`Lambda 함수에서 <strong>예약된 동시성</strong>을 동시성 값 0으로 구성합니다.`, en:`Configure reserved concurrency on the Lambda function with a concurrency value of 0.`},
+    {k:'C', ko:`Lambda 함수에서 <strong>프로비저닝된 동시성</strong>을 구성합니다. Lambda 함수에서 AWS Application Auto Scaling을 프로비저닝된 동시성 <strong>최솟값 1, 최댓값 100</strong>으로 구성합니다.`, en:`Configure provisioned concurrency on the Lambda function. Configure AWS Application Auto Scaling on the Lambda function with provisioned concurrency values set to a minimum of 1 and a maximum of 100.`},
+    {k:'D', ko:`Lambda 함수에서 <strong>예약된 동시성</strong>을 구성합니다. API Gateway API에서 예약된 동시성 최댓값 100으로 AWS Application Auto Scaling을 구성합니다.`, en:`Configure reserved concurrency on the Lambda function. Configure AWS Application Auto Scaling on the API Gateway API with a reserved concurrency maximum value of 100.`},
+  ],
+  answer:['C'],
+  vote:'100% C',
+  explain:`<p><span class="mark-ok">✅ C — 프로비저닝된 동시성 + Application Auto Scaling</span></p><p><strong>프로비저닝된 동시성(Provisioned Concurrency)</strong>은 Lambda 인스턴스를 미리 초기화된 상태로 유지해 콜드 스타트를 제거합니다. 여기에 Application Auto Scaling을 최솟값 1 / 최댓값 100으로 설정하면 정오의 트래픽 급증에는 스케일 아웃, 하루 말 저트래픽 시에는 스케일 인하여 비용을 최적화할 수 있습니다.</p>`,
+  wrong:`<p><span class="mark-no">❌ A</span> — 동시성 1만으로는 트래픽 급증 대응 불가, DAX 삭제는 성능 저하.</p><p style="margin-top:8px;"><span class="mark-no">❌ B</span> — 예약된 동시성 0은 Lambda 실행 자체를 차단합니다.</p><p style="margin-top:8px;"><span class="mark-no">❌ D</span> — API Gateway에는 Auto Scaling이 직접 적용되지 않습니다.</p>`,
+  disc:[{ans:'C (100%)',txt:'프로비저닝된 동시성은 미리 초기화된 인스턴스를 준비 상태로 유지하여 콜드 스타트를 방지합니다. Auto Scaling으로 수요 변화에 동적으로 대응할 수 있습니다.'}]
+}
+];
+
+// ────────────────────────────────────────────────
+// STATE
+// ────────────────────────────────────────────────
+let curQ = 0;
+let state = QS.map(() => ({ sel: [], done: false }));
+let curLang = 'ko';
+
+// ────────────────────────────────────────────────
+// INIT
+// ────────────────────────────────────────────────
+function init() {
+  buildSelect();
+  renderQ(0);
+}
+
+function buildSelect() {
+  const sel = document.getElementById('q-select');
+  sel.innerHTML = '';
+  QS.forEach((q, i) => {
+    const opt = document.createElement('option');
+    opt.value = q.n;
+    opt.textContent = `Q${String(q.n).padStart(3,'0')}`;
+    sel.appendChild(opt);
+  });
+}
+
+function updateSelectStatus() {
+  const sel = document.getElementById('q-select');
+  Array.from(sel.options).forEach((opt, i) => {
+    const s = state[i];
+    const q = QS[i];
+    opt.className = '';
+    if (s.done) {
+      const correct = arraysEqual(s.sel.slice().sort(), q.answer.slice().sort());
+      opt.textContent = `Q${String(q.n).padStart(3,'0')} ${correct ? '✓' : '✗'}`;
+      opt.className = correct ? 'opt-correct' : 'opt-wrong';
+    } else {
+      opt.textContent = `Q${String(q.n).padStart(3,'0')}`;
+    }
+  });
+  sel.value = QS[curQ].n;
+}
+
+// ────────────────────────────────────────────────
+// RENDER
+// ────────────────────────────────────────────────
+function renderQ(idx) {
+  if (idx < 0 || idx >= QS.length) return;
+  curQ = idx;
+  const q = QS[idx];
+  const s = state[idx];
+
+  // counter / progress
+  document.getElementById('progress-fill').style.width = `${((idx+1)/QS.length)*100}%`;
+  document.getElementById('q-num-badge').textContent = String(q.n).padStart(3,'0');
+
+  // type badge
+  const tb = document.getElementById('q-type-badge');
+  if (q.type === 'multi') {
+    tb.textContent = `복수 선택 (${q.multiCount}개)`;
+    tb.className = 'q-type-badge multi';
+  } else {
+    tb.textContent = '단일 선택';
+    tb.className = 'q-type-badge';
+  }
+
+  // question text
+  document.getElementById('q-ko-text').innerHTML = q.ko;
+  document.getElementById('q-en-text').innerHTML = q.en;
+
+  // choices label
+  document.getElementById('choices-label').textContent =
+    q.type === 'multi' ? `선택지 — ${q.multiCount}개 선택` : '선택지 — 단일 선택';
+
+  // choices
+  const cc = document.getElementById('choices-container');
+  cc.innerHTML = '';
+  q.choices.forEach(ch => {
+    const div = document.createElement('div');
+    let cls = 'choice';
+    if (s.done) {
+      cls += ' disabled';
+      if (q.answer.includes(ch.k)) cls += ' correct';
+      else if (s.sel.includes(ch.k)) cls += ' wrong';
+    } else if (s.sel.includes(ch.k)) {
+      cls += ' selected';
+    }
+    div.className = cls;
+    div.id = `choice-${idx}-${ch.k}`;
+
+    let icon = '';
+    if (s.done) {
+      if (q.answer.includes(ch.k)) icon = '✓';
+      else if (s.sel.includes(ch.k)) icon = '✗';
+    }
+
+    div.innerHTML = `
+      <div class="choice-key">${ch.k}</div>
+      <div class="choice-body">
+        <div class="choice-text">${ch.ko}</div>
+        <div class="choice-en">${ch.en}</div>
+      </div>
+      <div class="result-icon">${icon}</div>`;
+
+    if (!s.done) div.onclick = () => doSelect(idx, ch.k);
+    cc.appendChild(div);
+  });
+
+  applyLang(curLang);
+
+  // review button
+  document.getElementById('btn-review').disabled = s.done || s.sel.length === 0;
+
+  // hint
+  const hint = document.getElementById('hint-text');
+  if (s.done) {
+    const correct = arraysEqual(s.sel.slice().sort(), q.answer.slice().sort());
+    hint.textContent = correct ? '🎉 정답입니다!' : `❌ 오답입니다. 정답은 ${q.answer.join(', ')} 입니다.`;
+  } else if (s.sel.length > 0) {
+    const remaining = q.type === 'multi' ? q.multiCount - s.sel.length : 0;
+    if (q.type === 'multi' && remaining > 0) {
+      hint.textContent = `${s.sel.join(', ')}번 선택됨. ${remaining}개 더 선택하세요.`;
+    } else {
+      hint.textContent = `${s.sel.join(', ')}번을 선택했습니다. 정답 확인 버튼을 눌러주세요.`;
+    }
+  } else {
+    hint.textContent = '선택지를 클릭하면 정답 확인 버튼이 활성화됩니다.';
+  }
+
+  // review panel
+  const rp = document.getElementById('review-panel');
+  if (s.done) { renderReview(q); rp.classList.add('show'); }
+  else rp.classList.remove('show');
+
+  // nav buttons
+  document.getElementById('btn-prev').disabled = idx === 0;
+  document.getElementById('btn-next').disabled = idx === QS.length - 1;
+  document.getElementById('nav-info').textContent = `${idx+1} / ${QS.length} 문제`;
+
+  // select 동기화
+  updateSelectStatus();
+}
+
+function renderReview(q) {
+  document.getElementById('review-answer-badge').textContent = '✓ ' + q.answer.join(', ');
+  document.getElementById('review-vote-badge').innerHTML = `커뮤니티 투표 <span>${q.vote}</span>`;
+  document.getElementById('review-explain').innerHTML = q.explain;
+
+  const ws = document.getElementById('review-wrong');
+  const wt = document.getElementById('wrong-section-title');
+  if (q.wrong) { ws.innerHTML = q.wrong; ws.style.display=''; wt.style.display=''; }
+  else { ws.style.display='none'; wt.style.display='none'; }
+
+  const dl = document.getElementById('disc-list');
+  dl.innerHTML = '';
+  dl.classList.remove('show');
+  (q.disc||[]).forEach(d => {
+    dl.innerHTML += `<div class="disc-item"><div class="disc-ans">${d.ans}</div>${d.txt}</div>`;
+  });
+}
+
+// ────────────────────────────────────────────────
+// INTERACTION
+// ────────────────────────────────────────────────
+function doSelect(idx, key) {
+  const q = QS[idx];
+  const s = state[idx];
+  if (s.done) return;
+  if (q.type === 'single') {
+    s.sel = [key];
+  } else {
+    const pos = s.sel.indexOf(key);
+    if (pos >= 0) s.sel.splice(pos, 1);
+    else if (s.sel.length < q.multiCount) s.sel.push(key);
+  }
+  renderQ(idx);
+}
+
+function doReview() {
+  const s = state[curQ];
+  if (s.sel.length === 0 || s.done) return;
+  s.done = true;
+  renderQ(curQ);
+  document.getElementById('review-panel').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function doReset() {
+  state[curQ] = { sel: [], done: false };
+  renderQ(curQ);
+}
+
+function goQ(idx) {
+  idx = parseInt(idx);
+  if (isNaN(idx) || idx < 0 || idx >= QS.length) return;
+  renderQ(idx);
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function goQWithReset(idx) {
+  idx = parseInt(idx);
+  if (isNaN(idx) || idx < 0 || idx >= QS.length) return;
+
+  // 🔥 언어 강제 한국어
+  curLang = 'ko';
+  document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.lang-tab')[0].classList.add('active');
+
+  // 🔥 해당 문제 상태 초기화
+  state[idx] = { sel: [], done: false };
+
+  renderQ(idx);
+  window.scrollTo({top:0, behavior:'smooth'});
+  document.getElementById('btn-prev-top').disabled = idx === 0;
+  document.getElementById('btn-next-top').disabled = idx === QS.length - 1;
+}
+
+// ────────────────────────────────────────────────
+// LANG  (한국어 / 양국어)
+// ────────────────────────────────────────────────
+function setLang(lang, btn) {
+  curLang = lang;
+  document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  applyLang(lang);
+}
+
+function applyLang(lang) {
+  // 문제 영어 텍스트 — 'both'일 때 block으로 명시해야 CSS display:none을 덮어씀
+  const enQ = document.getElementById('q-en-text');
+  enQ.style.display = (lang === 'both') ? 'block' : 'none';
+  // 선택지 영어 텍스트
+  document.querySelectorAll('.choice-en').forEach(e => {
+    e.style.display = (lang === 'both') ? 'block' : 'none';
+  });
+}
+
+// ────────────────────────────────────────────────
+// THEME
+// ────────────────────────────────────────────────
+function toggleTheme() {
+  const html = document.documentElement;
+  const dark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', dark ? 'light' : 'dark');
+  document.getElementById('theme-icon').textContent = dark ? '☀️' : '🌙';
+  document.getElementById('theme-label').textContent = dark ? '라이트' : '다크';
+}
+
+// ────────────────────────────────────────────────
+// UTILS
+// ────────────────────────────────────────────────
+function arraysEqual(a, b) {
+  return a.length === b.length && a.every((v,i) => v === b[i]);
+}
+
+init();
+</script>
+</body>
+</html>

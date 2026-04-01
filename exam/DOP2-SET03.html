@@ -1,0 +1,2646 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AWS DOP-C02 | SET 03 (Q101~Q150)</title>
+<style>
+[data-theme="dark"] {
+  --bg:#0f1117; --surface:#1a1d27; --surface2:#222636; --border:#2e3347;
+  --accent:#4f8ef7; --accent2:#38c9a0; --text:#e2e6f0; --text-muted:#7a83a0;
+  --correct-bg:#112a22; --wrong-bg:#2a1111; --explain-bg:#1e2030;
+  --hover-bg:#1e2236; --sel-bg:#1b2540;
+}
+[data-theme="light"] {
+  --bg:#f0f2f8; --surface:#ffffff; --surface2:#f5f6fa; --border:#d0d5e8;
+  --accent:#2e6fe0; --accent2:#1aaa7e; --text:#1a1d2e; --text-muted:#5a6280;
+  --correct-bg:#e6faf4; --wrong-bg:#fde8e8; --explain-bg:#f0f2fa;
+  --hover-bg:#eaf1ff; --sel-bg:#ddeaff;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text);font-family:'Pretendard','Noto Sans KR','Segoe UI',sans-serif;font-size:15px;line-height:1.75;min-height:100vh;transition:background .25s,color .25s;}
+.wrap{max-width:860px;margin:0 auto;padding:28px 16px 60px;}
+
+/* Topbar */
+.topbar{display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border);flex-wrap:wrap;}
+.badge{background:linear-gradient(135deg,#4f8ef7,#38c9a0);color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;padding:4px 12px;border-radius:20px;white-space:nowrap;}
+.topbar-title{font-size:13px;color:var(--text-muted);flex:1;min-width:120px;}
+.topbar-title strong{color:var(--text);font-size:15px;display:block;}
+.topbar-right{display:flex;align-items:center;gap:8px;margin-left:auto;flex-wrap:wrap;}
+
+/* 문제 선택 콤보박스 */
+.q-select-wrap{display:flex;align-items:center;gap:6px;}
+.q-select-label{font-size:12px;color:var(--text-muted);white-space:nowrap;}
+.q-select{background:var(--surface2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:13px;font-weight:600;padding:5px 10px;cursor:pointer;outline:none;transition:border-color .2s;}
+.q-select:focus,.q-select:hover{border-color:var(--accent);}
+.q-select option.opt-correct{color:#1aaa7e;}
+.q-select option.opt-wrong{color:#e05252;}
+
+/* 상단 네비 버튼 + 문제 콤보 높이 통일 */
+.topbar-right .btn-nav,
+.topbar-right .q-select {
+  height: 24px;
+  padding: 0 14px;
+  font-size: 13px;
+}
+
+/* 테마 버튼 */
+.theme-btn{background:var(--surface2);border:1px solid var(--border);border-radius:20px;cursor:pointer;display:flex;align-items:center;gap:5px;padding:5px 12px;font-size:12px;font-weight:600;color:var(--text-muted);transition:border-color .2s,color .2s;white-space:nowrap;}
+.theme-btn:hover{border-color:var(--accent);color:var(--accent);}
+
+/* Progress */
+.progress-bar{background:var(--surface2);border-radius:4px;height:6px;margin-bottom:20px;overflow:hidden;}
+.progress-fill{background:linear-gradient(90deg,var(--accent),var(--accent2));height:100%;border-radius:4px;transition:width .4s;}
+
+/* Card */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px;margin-bottom:16px;transition:background .25s,border-color .25s;}
+
+/* Lang Tabs */
+.lang-tabs{display:flex;gap:8px;margin-bottom:20px;}
+.lang-tab{background:transparent;border:1px solid var(--border);border-radius:6px;color:var(--text-muted);cursor:pointer;font-size:12px;font-weight:600;letter-spacing:.04em;padding:5px 14px;transition:all .2s;}
+.lang-tab.active{background:var(--accent);border-color:var(--accent);color:#fff;}
+.lang-tab:hover:not(.active){border-color:var(--accent);color:var(--accent);}
+
+/* Q Label */
+.q-label{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;margin-bottom:10px;}
+.q-type-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;padding:2px 8px;border-radius:10px;margin-left:8px;background:var(--surface2);border:1px solid var(--border);color:var(--text-muted);vertical-align:middle;}
+.q-type-badge.multi{background:#ede9ff;color:#6d28d9;border-color:#c4b5fd;}
+[data-theme="dark"] .q-type-badge.multi{background:#2a1f50;color:#a78bfa;border-color:#4c3a8c;}
+
+/* Q Text */
+.q-text{font-size:15px;color:var(--text);line-height:1.85;}
+.q-text.en-text{
+  font-size:14px;color:var(--text-muted);
+  margin-top:14px;padding-top:14px;
+  border-top:1px dashed var(--border);
+}
+.q-text code{background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:1px 6px;font-size:13px;font-family:'JetBrains Mono','Fira Code',monospace;color:var(--accent2);}
+
+/* Choices */
+.choices-section{margin-top:24px;}
+.choices-label{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--text-muted);text-transform:uppercase;margin-bottom:12px;}
+.choice{display:flex;align-items:flex-start;gap:14px;background:var(--surface2);border:2px solid var(--border);border-radius:10px;cursor:pointer;margin-bottom:10px;padding:14px 18px;transition:border-color .2s,background .2s;user-select:none;}
+.choice:hover{border-color:var(--accent);background:var(--hover-bg);}
+.choice.selected{border-color:var(--accent);background:var(--sel-bg);}
+.choice.correct{border-color:#38c9a0!important;background:var(--correct-bg)!important;}
+.choice.wrong{border-color:#f76f6f!important;background:var(--wrong-bg)!important;}
+.choice.disabled{cursor:default;pointer-events:none;}
+.choice-key{background:var(--border);border-radius:6px;color:var(--text);font-size:13px;font-weight:700;min-width:30px;height:30px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;transition:background .2s,color .2s;}
+.choice.selected .choice-key{background:var(--accent);color:#fff;}
+.choice.correct .choice-key{background:#38c9a0;color:#000;}
+.choice.wrong .choice-key{background:#f76f6f;color:#fff;}
+.choice-body{flex:1;}
+.choice-text{font-size:14px;line-height:1.75;}
+.choice-en{font-size:12px;color:var(--text-muted);margin-top:5px;display:none;font-style:italic;}
+.result-icon{margin-left:auto;font-size:18px;flex-shrink:0;display:none;}
+.choice.correct .result-icon,.choice.wrong .result-icon{display:block;}
+
+/* Actions */
+.actions{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap;align-items:center;}
+.btn{border:none;border-radius:8px;cursor:pointer;font-size:14px;font-weight:700;letter-spacing:.03em;padding:11px 24px;transition:opacity .2s,transform .1s;}
+.btn:hover:not(:disabled){opacity:.88;transform:translateY(-1px);}
+.btn:active{transform:translateY(0);}
+.btn-primary{background:var(--accent);color:#fff;}
+.btn-secondary{background:var(--surface2);color:var(--text);border:1px solid var(--border);}
+.btn-nav{background:var(--surface2);color:var(--text);border:1px solid var(--border);padding:11px 18px;}
+.btn:disabled{opacity:.35;cursor:not-allowed;}
+.hint-text{font-size:12px;color:var(--text-muted);margin-top:8px;min-height:18px;}
+
+/* Review Panel */
+.review-panel{display:none;background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--accent2);border-radius:12px;padding:24px 28px;margin-bottom:16px;animation:fadeIn .35s ease;transition:background .25s;}
+.review-panel.show{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.answer-row{display:flex;align-items:center;gap:10px;margin-bottom:20px;flex-wrap:wrap;}
+.answer-label{font-size:13px;color:var(--text-muted);}
+.answer-badge{background:#38c9a0;color:#000;font-size:13px;font-weight:800;padding:4px 14px;border-radius:20px;}
+.vote-badge{background:var(--surface2);border:1px solid var(--border);color:var(--text-muted);font-size:12px;padding:3px 10px;border-radius:20px;}
+.vote-badge span{color:var(--accent);font-weight:700;}
+.section-title{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--accent2);text-transform:uppercase;margin-bottom:10px;}
+.explain-box{background:var(--explain-bg);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:14px;font-size:14px;line-height:1.8;color:var(--text);}
+.explain-box p{margin-bottom:8px;}
+.explain-box p:last-child{margin-bottom:0;}
+.mark-ok{color:#38c9a0;font-weight:700;}
+.mark-no{color:#f76f6f;font-weight:600;}
+
+/* Discussion */
+.disc-toggle{background:transparent;border:1px dashed var(--border);border-radius:8px;color:var(--text-muted);cursor:pointer;font-size:13px;margin-top:8px;padding:9px 16px;width:100%;text-align:left;transition:border-color .2s,color .2s;}
+.disc-toggle:hover{border-color:var(--accent);color:var(--accent);}
+.disc-list{display:none;margin-top:10px;}
+.disc-list.show{display:block;}
+.disc-item{background:var(--surface2);border-left:3px solid var(--border);border-radius:0 6px 6px 0;font-size:13px;margin-bottom:8px;padding:10px 14px;color:var(--text-muted);line-height:1.7;}
+.disc-ans{color:var(--accent);font-weight:700;font-size:12px;margin-bottom:3px;}
+
+/* Bottom Nav */
+.nav-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:16px;gap:10px;}
+.nav-info{font-size:13px;color:var(--text-muted);text-align:center;flex:1;}
+
+@media(max-width:600px){
+  .card{padding:16px;}
+  .btn{padding:10px 16px;font-size:13px;}
+  .topbar{gap:8px;}
+  .topbar-right{gap:6px;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <span class="badge">AWS DOP-C02</span>
+    <div class="topbar-title">
+      <strong>AWS Certified DevOps Engineer – Professional</strong>
+      SET 03 · Q101~Q150 실전 학습
+    </div>
+    <div class="topbar-right">
+      <!-- 상단 네비게이션 -->
+      <button class="btn btn-nav" onclick="goQWithReset(curQ-1)" id="btn-prev-top">←</button>
+
+      <!-- 문제 선택 콤보박스 -->
+      <div class="q-select-wrap">
+        <select class="q-select" id="q-select" onchange="goQWithReset(this.value-101)"></select>
+      </div>
+      <button class="btn btn-nav" onclick="goQWithReset(curQ+1)" id="btn-next-top">→</button>
+
+      <!-- 테마 토글 -->
+      <button class="theme-btn" onclick="toggleTheme()">
+        <span id="theme-icon">☀️</span>
+        <span id="theme-label">라이트</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:5%"></div></div>
+
+  <!-- Language Tabs -->
+  <div class="lang-tabs">
+    <button class="lang-tab active" onclick="setLang('ko',this)">한국어</button>
+    <button class="lang-tab" onclick="setLang('both',this)">양국어</button>
+  </div>
+
+  <!-- Question Card -->
+  <div class="card" id="q-card">
+    <div class="q-label">
+      문제 <span id="q-num-badge">001</span>
+      <span id="q-type-badge" class="q-type-badge">단일 선택</span>
+    </div>
+    <!-- 한국어 문제 -->
+    <div class="q-text" id="q-ko-text"></div>
+    <!-- 영어 문제 (양국어 모드) -->
+    <div class="q-text en-text" id="q-en-text"></div>
+
+    <div class="choices-section">
+      <div class="choices-label" id="choices-label">선택지</div>
+      <div id="choices-container"></div>
+    </div>
+    <div class="actions">
+      <button class="btn btn-primary" id="btn-review" onclick="doReview()" disabled>📋 정답 확인</button>
+      <button class="btn btn-secondary" onclick="doReset()">↺ 초기화</button>
+    </div>
+    <div class="hint-text" id="hint-text">선택지를 클릭하면 정답 확인 버튼이 활성화됩니다.</div>
+  </div>
+
+  <!-- Review Panel -->
+  <div class="review-panel" id="review-panel">
+    <div class="answer-row">
+      <span class="answer-label">정답</span>
+      <span class="answer-badge" id="review-answer-badge"></span>
+      <span class="vote-badge" id="review-vote-badge"></span>
+    </div>
+    <div class="section-title">✦ 정답 해설</div>
+    <div class="explain-box" id="review-explain"></div>
+    <div class="section-title" style="margin-top:14px;" id="wrong-section-title">✦ 오답 분석</div>
+    <div class="explain-box" id="review-wrong"></div>
+    <button class="disc-toggle" onclick="document.getElementById('disc-list').classList.toggle('show')">💬 주요 토론 의견 보기 / 숨기기</button>
+    <div class="disc-list" id="disc-list"></div>
+  </div>
+
+  <!-- Bottom Nav -->
+  <!-- <div class="nav-bottom">
+    <button class="btn btn-nav" onclick="goQ(curQ-1)" id="btn-prev">← 이전</button>
+    <span class="nav-info" id="nav-info"></span>
+    <button class="btn btn-nav" onclick="goQ(curQ+1)" id="btn-next">다음 →</button>
+  </div> -->
+
+</div>
+<script>
+// qs_set03.js — Q0101 ~ Q0150 (SET 03 첫 번째 배치)
+const QS = [
+// ──────────────────────────────────────────────
+// Q101
+// ──────────────────────────────────────────────
+{
+  n: 101,
+  ko: `한 회사가 최근 AWS Organizations의 새 조직에 새 <strong>AWS Control Tower 랜딩 존</strong>을 만들었습니다. 랜딩 존은 AWS Foundations에 대한 <strong>Center for Internet Security(CIS) 벤치마크</strong>를 준수해야 합니다.<br><br>
+회사의 보안 팀은 <strong>AWS Security Hub</strong>를 사용하여 모든 계정의 준수 여부를 확인하려고 합니다. 보안 팀만 집계된 Security Hub 결과를 볼 수 있습니다. 또한 특정 사용자는 조직 내에서 자신의 계정에서 결과를 볼 수 있어야 합니다. 모든 계정은 계정을 만든 후 Security Hub에 등록해야 합니다.<br><br>
+<strong>이러한 요구 사항을 가장 자동화된 방식으로 충족하는 단계 조합은 무엇입니까? (세 가지를 선택하세요.)</strong>`,
+  en: `A company recently created a new <strong>AWS Control Tower landing zone</strong> in a new organization in AWS Organizations. The landing zone must be able to demonstrate compliance with the <strong>Center for Internet Security (CIS) Benchmarks for AWS Foundations</strong>.<br><br>
+The company's security team wants to use <strong>AWS Security Hub</strong> to view compliance across all accounts. Only the security team can be allowed to view aggregated Security Hub findings. In addition, specific users must be able to view findings from their own accounts within the organization. All accounts must be enrolled in Security Hub after the accounts are created.<br><br>
+<strong>Which combination of steps will meet these requirements in the MOST automated way? (Choose three.)</strong>`,
+  type: 'multi',
+  multiCount: 3,
+  choices: [
+    {
+      k: 'A',
+      ko: `조직의 관리 계정에서 Security Hub에 대한 <strong>신뢰할 수 있는 액세스</strong>를 켭니다. AWS Control Tower를 사용하여 새 보안 계정을 만듭니다. 새 보안 계정을 Security Hub의 <strong>위임된 관리자 계정</strong>으로 구성합니다. 새 보안 계정에서 Security Hub에 AWS Foundations 표준에 대한 CIS 벤치마크를 제공합니다.`,
+      en: `Turn on trusted access for Security Hub in the organization's management account. Create a new security account by using AWS Control Tower. Configure the new security account as the <strong>delegated administrator account</strong> for Security Hub. In the new security account, provide Security Hub with the CIS Benchmarks for AWS Foundations standards.`
+    },
+    {
+      k: 'B',
+      ko: `조직의 관리 계정에서 Security Hub에 대한 신뢰할 수 있는 액세스를 켭니다. 관리 계정에서 Security Hub에 AWS Foundations 표준에 대한 CIS 벤치마크를 제공합니다.`,
+      en: `Turn on trusted access for Security Hub in the organization's management account. From the management account, provide Security Hub with the CIS Benchmarks for AWS Foundations standards.`
+    },
+    {
+      k: 'C',
+      ko: `필요한 권한을 포함하는 <strong>AWS IAM Identity Center(AWS Single Sign-On) 권한 집합</strong>을 만듭니다. <code>CreateAccountAssignment</code> API 작업을 사용하여 보안 팀 사용자를 권한 집합 및 위임된 보안 계정과 연결합니다.`,
+      en: `Create an <strong>AWS IAM Identity Center (AWS Single Sign-On) permission set</strong> that includes the required permissions. Use the <code>CreateAccountAssignment</code> API operation to associate the security team users with the permission set and with the delegated security account.`
+    },
+    {
+      k: 'D',
+      ko: `보안 팀에 속하지 않은 사용자가 Security Hub에 액세스하는 것을 명시적으로 거부하는 <strong>SCP</strong>를 만듭니다.`,
+      en: `Create an <strong>SCP</strong> that explicitly denies any user who is not on the security team from accessing Security Hub.`
+    },
+    {
+      k: 'E',
+      ko: `Security Hub에서 <strong>자동 활성화(automatic enablement)</strong>를 켭니다.`,
+      en: `In Security Hub, turn on <strong>automatic enablement</strong>.`
+    },
+    {
+      k: 'F',
+      ko: `조직의 관리 계정에서 <code>CreateManagedAccount</code> 이벤트에 반응하는 <strong>Amazon EventBridge 규칙</strong>을 만듭니다. Security Hub <code>CreateMembers</code> API 작업을 사용하여 Security Hub에 새 계정을 추가하는 <strong>AWS Lambda 함수</strong>를 만듭니다. Lambda 함수를 호출하도록 EventBridge 규칙을 구성합니다.`,
+      en: `In the organization's management account, create an <strong>Amazon EventBridge rule</strong> that reacts to the <code>CreateManagedAccount</code> event. Create an <strong>AWS Lambda function</strong> that uses the Security Hub <code>CreateMembers</code> API operation to add new accounts to Security Hub. Configure the EventBridge rule to invoke the Lambda function.`
+    }
+  ],
+  answer: ['A', 'C', 'E'],
+  vote: '71% ACE / 21% ADE',
+  explain: `<p><span class="mark-ok">✅ A — Security Hub 위임된 관리자 계정 설정</span></p>
+<p>관리 계정에서 신뢰할 수 있는 액세스를 활성화하고 별도의 보안 계정을 <strong>위임된 관리자</strong>로 지정해야 보안 팀만 집계 결과를 볼 수 있습니다. Control Tower 모범 사례에 따라 전용 보안 계정을 사용합니다.</p>
+<p><span class="mark-ok">✅ C — IAM Identity Center 권한 집합으로 보안 팀 액세스 부여</span></p>
+<p>Control Tower에는 기본적으로 <strong>IAM Identity Center</strong>가 포함됩니다. CreateAccountAssignment API로 보안 팀 사용자를 위임된 보안 계정과 연결하여 집계 결과 접근 권한을 부여합니다.</p>
+<p><span class="mark-ok">✅ E — Security Hub 자동 활성화</span></p>
+<p><strong>자동 활성화(Automatic enablement)</strong>를 켜면 조직에 새 계정이 추가될 때마다 Security Hub가 자동으로 활성화되어 "계정 생성 후 즉시 등록" 요구 사항을 가장 자동화된 방법으로 충족합니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ B</span> — 관리 계정을 위임된 관리자로 사용하는 것은 보안 팀만 결과를 볼 수 있도록 하는 격리 요구 사항에 맞지 않습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ D</span> — SCP는 접근을 거부할 수 있지만 특정 사용자(보안 팀)에게만 선택적으로 허용하는 세밀한 제어를 구현하기 어렵습니다. 계정 소유자의 자신의 결과 확인도 방해할 수 있습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ F</span> — EventBridge + Lambda로 신규 계정을 Security Hub에 추가하는 것은 E(자동 활성화)와 동일한 결과이지만 훨씬 복잡합니다. "가장 자동화된 방법" 요구에 맞지 않습니다.</p>`,
+  disc: [
+    {
+      ans: 'ACE (71%) — 정답 유력',
+      txt: 'Control Tower 랜딩 존에는 IAM Identity Center가 기본 포함되므로 C가 자연스럽습니다. E의 자동 활성화는 신규 계정 자동 등록 요건을 한 번에 해결합니다. D(SCP)는 보안 팀 접근을 활성화하는 기능이 없고 자신의 계정 결과를 볼 수 있어야 하는 일반 사용자 접근도 막을 수 있습니다.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q102
+// ──────────────────────────────────────────────
+{
+  n: 102,
+  ko: `한 회사가 AWS Organizations의 조직에 있는 AWS 계정에서 애플리케이션을 실행합니다. 이 애플리케이션은 <strong>Amazon EC2 인스턴스와 Amazon S3</strong>를 사용합니다.<br><br>
+이 회사는 기존 AWS 계정과 회사가 미래에 만드는 모든 AWS 계정에서 <strong>잠재적으로 손상된 EC2 인스턴스, 의심스러운 네트워크 활동, 비정상적인 API 활동</strong>을 감지하려고 합니다. 이 회사가 이러한 이벤트 중 하나를 감지하면 기존 <strong>Amazon SNS 주제</strong>를 사용하여 운영 지원 팀에 알림을 보내려고 합니다.<br><br>
+<strong>AWS 모범 사례에 따라 이러한 요구 사항을 충족하는 솔루션은 무엇입니까?</strong>`,
+  en: `A company runs applications in AWS accounts that are in an organization in AWS Organizations. The applications use <strong>Amazon EC2 instances and Amazon S3</strong>.<br><br>
+The company wants to detect <strong>potentially compromised EC2 instances, suspicious network activity, and unusual API activity</strong> in its existing AWS accounts and in any AWS accounts that the company creates in the future. When the company detects one of these events, the company wants to use an existing <strong>Amazon Simple Notification Service (Amazon SNS) topic</strong> to send a notification to its operational support team for investigation and remediation.<br><br>
+<strong>Which solution will meet these requirements in accordance with AWS best practices?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `조직의 관리 계정에서 AWS 계정을 <strong>Amazon GuardDuty 관리자 계정</strong>으로 구성합니다. GuardDuty 관리자 계정에서 회사의 기존 AWS 계정을 GuardDuty에 멤버로 추가합니다. GuardDuty 관리자 계정에서 GuardDuty 이벤트를 일치시키고 일치하는 이벤트를 SNS 토픽으로 전달하는 이벤트 패턴이 있는 <strong>Amazon EventBridge 규칙</strong>을 만듭니다.`,
+      en: `In the organization's management account, configure an AWS account as the <strong>Amazon GuardDuty administrator account</strong>. In the GuardDuty administrator account, add the company's existing AWS accounts to GuardDuty as members. In the GuardDuty administrator account, create an <strong>Amazon EventBridge rule</strong> with an event pattern to match GuardDuty events and to forward matching events to the SNS topic.`
+    },
+    {
+      k: 'B',
+      ko: `조직의 관리 계정에서 Amazon GuardDuty를 구성하여 <strong>초대를 통해</strong> 새로 생성된 AWS 계정을 추가하고 기존 AWS 계정에 초대를 보냅니다. GuardDuty 초대를 수락하고 Amazon EventBridge 규칙을 만드는 <strong>AWS CloudFormation 스택 세트</strong>를 만듭니다. 조직의 모든 AWS 계정에 배포하도록 구성합니다.`,
+      en: `In the organization's management account, configure Amazon GuardDuty to add newly created AWS accounts <strong>by invitation</strong> and to send invitations to the existing AWS accounts. Create an <strong>AWS CloudFormation stack set</strong> that accepts the GuardDuty invitation and creates an Amazon EventBridge rule. Configure the CloudFormation stack set to deploy into all AWS accounts in the organization.`
+    },
+    {
+      k: 'C',
+      ko: `조직의 관리 계정에서 <strong>AWS CloudTrail 조직 트레일</strong>을 만듭니다. 조직의 각 계정에서 <strong>VPC Flow Logs</strong>를 활성화하는 SCP를 만듭니다. 조직에 <strong>AWS Security Hub</strong>를 구성합니다. Security Hub 이벤트를 일치시키고 SNS 토픽으로 전달하는 EventBridge 규칙을 만듭니다.`,
+      en: `In the organization's management account, create an <strong>AWS CloudTrail organization trail</strong>. Create an SCP that enables <strong>VPC Flow Logs</strong> in each account in the organization. Configure <strong>AWS Security Hub</strong> for the organization. Create an Amazon EventBridge rule to match Security Hub events and forward matching events to the SNS topic.`
+    },
+    {
+      k: 'D',
+      ko: `조직의 관리 계정에서 AWS 계정을 <strong>AWS CloudTrail 관리자 계정</strong>으로 구성합니다. CloudTrail 조직 트레일을 만듭니다. 조직의 각 계정에서 VPC Flow Logs를 활성화하는 SCP를 만듭니다. 조직에 <strong>AWS Security Hub</strong>를 구성하고 Security Hub 이벤트를 SNS 토픽으로 전달하는 EventBridge 규칙을 만듭니다.`,
+      en: `In the organization's management account, configure an AWS account as the <strong>AWS CloudTrail administrator account</strong>. Create a CloudTrail organization trail. Create an SCP that enables VPC Flow Logs in each account. Configure <strong>AWS Security Hub</strong> for the organization and create an EventBridge rule to forward Security Hub events to the SNS topic.`
+    }
+  ],
+  answer: ['A'],
+  vote: '87% A',
+  explain: `<p><span class="mark-ok">✅ A — Amazon GuardDuty + EventBridge + SNS</span></p>
+<p>문제에서 요구하는 감지 대상은 <strong>손상된 EC2 인스턴스, 의심스러운 네트워크 활동, 비정상적인 API 활동</strong>이며, 이는 정확히 <strong>Amazon GuardDuty</strong>가 감지하는 항목입니다. GuardDuty는 CloudTrail, VPC Flow Logs, DNS 로그를 자동으로 분석합니다.</p>
+<p>AWS Organizations에서 GuardDuty 관리자 계정을 지정하면 기존 및 신규 모든 계정에서 GuardDuty를 중앙 관리할 수 있으며, 신규 계정도 자동 포함됩니다. EventBridge 규칙을 GuardDuty 관리자 계정에 생성하면 조직 전체 이벤트를 SNS로 전달할 수 있습니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ B</span> — 조직 내 계정 간에는 초대(invitation) 방식 대신 조직(organization) 기반 방식이 권장됩니다. 초대는 조직 외부 계정에 사용합니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C, D</span> — CloudTrail + Security Hub 조합은 GuardDuty의 역할과 다릅니다. 문제에서 요구하는 세 가지 감지 항목(손상된 EC2, 의심 네트워크, 비정상 API)은 GuardDuty의 전문 영역입니다.</p>`,
+  disc: [
+    {
+      ans: 'A (87%)',
+      txt: '조직(Organizations)을 사용하는 경우 초대 방식이 아닌 위임된 관리자 방식을 사용합니다. GuardDuty 관리자 계정을 올바르게 설정하면 자동으로 조직의 신규 계정도 커버합니다.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q103
+// ──────────────────────────────────────────────
+{
+  n: 103,
+  ko: `한 회사의 DevOps 엔지니어가 다중 계정 환경에서 작업하고 있습니다. 이 회사는 <strong>AWS Transit Gateway</strong>를 사용하여 모든 아웃바운드 트래픽을 네트워크 운영 계정을 통해 라우팅합니다. 네트워크 운영 계정에서 모든 트래픽은 인터넷 게이트웨이로 이동하기 전에 <strong>방화벽 어플라이언스</strong>를 통해 검사됩니다.<br><br>
+방화벽 어플라이언스는 <strong>Amazon CloudWatch Logs</strong>에 로그를 보내며 <code>CRITICAL</code>, <code>HIGH</code>, <code>MEDIUM</code>, <code>LOW</code>, <code>INFO</code>의 이벤트 심각도를 포함합니다. 보안 팀은 <code>CRITICAL</code> 이벤트가 발생하면 알림을 받고 싶어합니다.<br><br>
+<strong>DevOps 엔지니어는 이러한 요구 사항을 충족하기 위해 무엇을 해야 합니까?</strong>`,
+  en: `A company's DevOps engineer is working in a multi-account environment. The company uses <strong>AWS Transit Gateway</strong> to route all outbound traffic through a network operations account. In the network operations account, all account traffic passes through a <strong>firewall appliance</strong> for inspection before the traffic goes to an internet gateway.<br><br>
+The firewall appliance sends logs to <strong>Amazon CloudWatch Logs</strong> and includes event severities of <code>CRITICAL</code>, <code>HIGH</code>, <code>MEDIUM</code>, <code>LOW</code>, and <code>INFO</code>. The security team wants to receive an alert if any <code>CRITICAL</code> events occur.<br><br>
+<strong>What should the DevOps engineer do to meet these requirements?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `방화벽 상태를 모니터링하기 위해 <strong>Amazon CloudWatch Synthetics 카나리아</strong>를 만듭니다. 방화벽이 CRITICAL 상태에 도달하거나 CRITICAL 이벤트를 로깅하는 경우 CloudWatch 알람을 사용하여 Amazon SNS 토픽에 알림을 게시합니다.`,
+      en: `Create an <strong>Amazon CloudWatch Synthetics canary</strong> to monitor the firewall state. If the firewall reaches a CRITICAL state or logs a CRITICAL event, use a CloudWatch alarm to publish a notification to an Amazon SNS topic.`
+    },
+    {
+      k: 'B',
+      ko: `<code>CRITICAL</code> 이벤트에 대한 검색을 사용하여 <strong>Amazon CloudWatch 메트릭 필터</strong>를 만듭니다. 발견 사항에 대한 사용자 지정 메트릭을 게시합니다. 사용자 지정 메트릭을 기반으로 <strong>CloudWatch 알람</strong>을 사용하여 Amazon SNS 주제에 알림을 게시합니다. 보안 팀의 이메일 주소를 주제에 구독합니다.`,
+      en: `Create an <strong>Amazon CloudWatch metric filter</strong> by using a search for <code>CRITICAL</code> events. Publish a custom metric for the finding. Use a <strong>CloudWatch alarm</strong> based on the custom metric to publish a notification to an Amazon SNS topic. Subscribe the security team's email address to the topic.`
+    },
+    {
+      k: 'C',
+      ko: `네트워크 운영 계정에서 <strong>Amazon GuardDuty</strong>를 활성화합니다. GuardDuty를 구성하여 흐름 로그를 모니터링합니다. 중요한 GuardDuty 이벤트에서 호출되는 <strong>Amazon EventBridge 이벤트 규칙</strong>을 만듭니다. Amazon SNS 토픽을 대상으로 정의합니다.`,
+      en: `Enable <strong>Amazon GuardDuty</strong> in the network operations account. Configure GuardDuty to monitor flow logs. Create an <strong>Amazon EventBridge event rule</strong> that is invoked by GuardDuty events that are CRITICAL. Define an Amazon SNS topic as a target.`
+    },
+    {
+      k: 'D',
+      ko: `<strong>AWS Firewall Manager</strong>를 사용하여 모든 계정에 일관된 정책을 적용합니다. 중요한 Firewall Manager 이벤트에 의해 호출되는 <strong>Amazon EventBridge 이벤트 규칙</strong>을 만듭니다. Amazon SNS 토픽을 대상으로 정의합니다.`,
+      en: `Use <strong>AWS Firewall Manager</strong> to apply consistent policies across all accounts. Create an <strong>Amazon EventBridge event rule</strong> that is invoked by Firewall Manager events that are CRITICAL. Define an Amazon SNS topic as a target.`
+    }
+  ],
+  answer: ['B'],
+  vote: '100% B',
+  explain: `<p><span class="mark-ok">✅ B — CloudWatch 메트릭 필터 + 알람 + SNS</span></p>
+<p>방화벽 어플라이언스의 로그가 이미 <strong>Amazon CloudWatch Logs</strong>로 전송되고 있으므로, 가장 직접적인 해결책은 <strong>CloudWatch 메트릭 필터</strong>를 사용하여 <code>CRITICAL</code> 이벤트를 검색하는 것입니다.</p>
+<p>① CloudWatch Logs → 메트릭 필터 (CRITICAL 키워드 검색) → 사용자 지정 메트릭 생성<br>
+② 메트릭 임계값 기반 CloudWatch 알람 생성<br>
+③ 알람 → SNS 토픽 → 보안 팀 이메일 알림</p>
+<p>이 흐름은 추가 서비스 없이 CloudWatch Logs에서 직접 구현 가능한 가장 간단하고 효과적인 방법입니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ A</span> — CloudWatch Synthetics 카나리아는 엔드포인트 가용성 모니터링 용도입니다. 로그 내 이벤트 심각도를 검색하는 데 적합하지 않습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — GuardDuty는 자체 위협 인텔리전스를 기반으로 동작하며, 방화벽 어플라이언스가 CloudWatch Logs에 남긴 로그의 심각도 레벨을 직접 해석하지 않습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ D</span> — AWS Firewall Manager는 방화벽 정책을 중앙 관리하는 서비스이며, 서드파티 방화벽 어플라이언스 로그의 CRITICAL 이벤트를 처리하는 용도가 아닙니다.</p>`,
+  disc: [
+    {
+      ans: 'B (100%)',
+      txt: '로그가 이미 CloudWatch Logs에 있으므로 메트릭 필터가 가장 직접적인 해결책입니다. GuardDuty나 Firewall Manager는 이 시나리오에서 관련이 없습니다.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q104
+// ──────────────────────────────────────────────
+{
+  n: 104,
+  ko: `한 회사가 팀으로 나뉩니다. 각 팀에는 AWS 계정이 있으며, 모든 계정은 <strong>AWS Organizations</strong>의 조직에 있습니다. 각 팀은 AWS 계정에 대한 <strong>전체 관리 권한</strong>을 유지해야 합니다. 또한 각 팀은 회사에서 <strong>사용을 승인한 AWS 서비스에만</strong> 액세스할 수 있어야 합니다. AWS 서비스는 요청 및 승인 프로세스를 통해 승인을 받아야 합니다.<br><br>
+<strong>DevOps 엔지니어는 이러한 요구 사항을 충족하기 위해 어떻게 계정을 구성해야 합니까?</strong>`,
+  en: `A company is divided into teams. Each team has an AWS account, and all the accounts are in an organization in <strong>AWS Organizations</strong>. Each team must retain <strong>full administrative rights</strong> to its AWS account. Each team also must be allowed to access <strong>only AWS services that the company approves for use</strong>. AWS services must gain approval through a request and approval process.<br><br>
+<strong>How should a DevOps engineer configure the accounts to meet these requirements?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `<strong>AWS CloudFormation StackSets</strong>를 사용하여 각 계정에서 IAM 정책을 프로비저닝하여 제한된 AWS 서비스에 대한 액세스를 거부합니다. 각 계정에서 정책이 IAM 주체에 연결되도록 하는 <strong>AWS Config 규칙</strong>을 구성합니다.`,
+      en: `Use <strong>AWS CloudFormation StackSets</strong> to provision IAM policies in each account to deny access to restricted AWS services. In each account, configure <strong>AWS Config rules</strong> that ensure that the policies are attached to IAM principals in the account.`
+    },
+    {
+      k: 'B',
+      ko: `<strong>AWS Control Tower</strong>를 사용하여 조직 내의 OU에 계정을 프로비저닝합니다. <strong>AWS IAM Identity Center</strong>를 활성화합니다. IAM Identity Center를 구성하여 관리 액세스를 제공합니다. 제한된 AWS 서비스에 대한 사용자 역할에 대한 거부 정책을 포함합니다.`,
+      en: `Use <strong>AWS Control Tower</strong> to provision the accounts into OUs within the organization. Configure AWS Control Tower to enable <strong>AWS IAM Identity Center</strong>. Configure IAM Identity Center to provide administrative access. Include deny policies on user roles for restricted AWS services.`
+    },
+    {
+      k: 'C',
+      ko: `조직 내의 모든 계정을 새로운 최상위 OU에 배치합니다. 제한된 AWS 서비스에 대한 액세스를 <strong>거부하는 SCP</strong>를 만듭니다. SCP를 OU에 연결합니다.`,
+      en: `Place all the accounts under a new top-level OU within the organization. Create an <strong>SCP that denies access</strong> to restricted AWS services. Attach the SCP to the OU.`
+    },
+    {
+      k: 'D',
+      ko: `승인된 AWS 서비스에만 액세스할 수 있는 <strong>허용 목록(allow-list) 기반 SCP</strong>를 만듭니다. SCP를 조직의 루트 OU에 연결합니다. 조직의 루트 OU에서 <strong>FullAWSAccess SCP를 제거</strong>합니다.`,
+      en: `Create an <strong>SCP that allows access to only approved AWS services</strong> (allow-list strategy). Attach the SCP to the root OU of the organization. <strong>Remove the FullAWSAccess SCP</strong> from the root OU of the organization.`
+    }
+  ],
+  answer: ['D'],
+  vote: '53% D / 45% C',
+  explain: `<p><span class="mark-ok">✅ D — 허용 목록(allow-list) SCP 전략</span></p>
+<p>요구 사항은 <strong>"승인된 서비스에만 액세스"</strong>입니다. AWS에서 신규 서비스가 계속 출시되는 점을 고려하면, 블랙리스트(거부 목록) 방식은 승인되지 않은 신규 서비스가 자동으로 허용되는 위험이 있습니다.</p>
+<p><strong>허용 목록 SCP 전략</strong>: FullAWSAccess SCP를 제거하고 승인된 서비스만 허용하는 SCP를 연결하면, 명시적으로 허용된 서비스만 사용 가능합니다. SCP는 관리 계정에는 적용되지 않으므로 관리 운영에는 영향이 없습니다.</p>
+<p>또한 팀이 전체 관리 권한을 가진다고 해도, SCP가 상위 레벨에서 허용 범위를 제한하므로 <strong>관리 권한 + 서비스 제한</strong>을 동시에 충족할 수 있습니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ A</span> — 로컬 계정 관리자가 IAM 정책을 변경할 수 있으므로 안전하지 않습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ B</span> — IAM Identity Center의 역할에 거부 정책을 추가하는 방식은 복잡하고, 로컬 관리자가 우회할 수 있습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — 거부 목록(deny-list) 방식은 AWS가 신규 서비스를 출시할 때마다 SCP를 업데이트해야 하며, 명시적으로 거부되지 않은 서비스는 모두 허용되므로 "승인된 서비스만 허용" 요구 사항을 충족하지 못합니다.</p>`,
+  disc: [
+    {
+      ans: 'D (53%) vs C (45%) — 논쟁 있음',
+      txt: 'D가 허용 목록 전략으로 더 엄격하게 요구 사항을 충족합니다. C의 거부 목록은 새 서비스 출시 시 자동으로 허용되는 문제가 있습니다. AWS 공식 문서는 루트 OU에 SCP를 바로 적용하기 전에 충분한 테스트를 권고하지만, 이는 보안 설계의 문제가 아닙니다.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q105
+// ──────────────────────────────────────────────
+{
+  n: 105,
+  ko: `DevOps 엔지니어가 <strong>AWS CloudFormation 사용자 지정 리소스</strong>를 사용하여 AD 커넥터를 설정했습니다. <strong>AWS Lambda 함수</strong>가 실행되어 AD 커넥터를 생성했지만 CloudFormation이 <code>CREATE_IN_PROGRESS</code>에서 <code>CREATE_COMPLETE</code>로 전환되지 않습니다.<br><br>
+<strong>이 문제를 해결하기 위해 엔지니어는 어떤 조치를 취해야 합니까?</strong>`,
+  en: `A DevOps engineer used an <strong>AWS CloudFormation custom resource</strong> to set up AD Connector. The <strong>AWS Lambda function</strong> ran and created AD Connector, but CloudFormation is not transitioning from <code>CREATE_IN_PROGRESS</code> to <code>CREATE_COMPLETE</code>.<br><br>
+<strong>Which action should the engineer take to resolve this issue?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `Lambda 함수 코드가 <strong>성공적으로 종료</strong>되었는지 확인하세요.`,
+      en: `Ensure the Lambda function code has <strong>exited successfully</strong>.`
+    },
+    {
+      k: 'B',
+      ko: `Lambda 함수 코드가 <strong>미리 서명된 URL(pre-signed URL)</strong>에 대한 응답을 반환하는지 확인합니다.`,
+      en: `Ensure the Lambda function code <strong>returns a response to the pre-signed URL</strong>.`
+    },
+    {
+      k: 'C',
+      ko: `Lambda 함수 IAM 역할에 스택 ARN에 대한 <strong><code>cloudformation:UpdateStack</code> 권한</strong>이 있는지 확인하세요.`,
+      en: `Ensure the Lambda function IAM role has <strong><code>cloudformation:UpdateStack</code> permissions</strong> for the stack ARN.`
+    },
+    {
+      k: 'D',
+      ko: `Lambda 함수 IAM 역할에 AWS 계정에 대한 <strong><code>ds:ConnectDirectory</code> 권한</strong>이 있는지 확인하세요.`,
+      en: `Ensure the Lambda function IAM role has <strong><code>ds:ConnectDirectory</code> permissions</strong> for the AWS account.`
+    }
+  ],
+  answer: ['B'],
+  vote: '100% B',
+  explain: `<p><span class="mark-ok">✅ B — Lambda가 미리 서명된 URL에 응답을 반환해야 함</span></p>
+<p>CloudFormation 사용자 지정 리소스에서 Lambda 함수가 실행될 때, <strong>CloudFormation은 미리 서명된 S3 URL을 Lambda에 전달</strong>합니다. Lambda 함수는 리소스 생성/수정/삭제 완료 후 반드시 이 URL로 <strong>SUCCESS 또는 FAILED 응답</strong>을 HTTP PUT 요청으로 보내야 합니다.</p>
+<p>문제 증상(<code>CREATE_IN_PROGRESS</code>에서 전환 안 됨)은 CloudFormation이 Lambda로부터 응답을 받지 못해 상태가 멈춰있는 것이며, 결국 타임아웃 후 실패합니다. Lambda 함수 코드에 <code>cfn-response</code> 모듈 또는 직접 HTTP PUT 응답 로직이 누락된 것이 원인입니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ A</span> — Lambda가 성공적으로 종료되었더라도 응답을 URL로 보내지 않으면 CloudFormation은 상태를 업데이트하지 않습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — <code>cloudformation:UpdateStack</code> 권한은 불필요합니다. 사용자 지정 리소스는 미리 서명된 URL을 통해 응답하며 스택을 직접 업데이트하지 않습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ D</span> — AD 커넥터 생성 자체는 성공했으므로 <code>ds:ConnectDirectory</code> 권한 문제가 아닙니다.</p>`,
+  disc: [
+    {
+      ans: 'B (100%)',
+      txt: 'CloudFormation 사용자 지정 리소스의 핵심: Lambda 함수는 반드시 CloudFormation이 전달한 pre-signed URL로 결과를 PUT해야 합니다. 이를 누락하면 스택이 무기한 CREATE_IN_PROGRESS 상태로 멈춥니다. AWS 공식 cfn-response 모듈 사용 권장.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q106
+// ──────────────────────────────────────────────
+{
+  n: 106,
+  ko: `한 회사에서 소스 코드 제어를 위해 <strong>AWS CodeCommit</strong>을 사용합니다. 개발자는 다양한 기능 브랜치에 변경 사항을 적용하고 변경 사항이 프로덕션에 준비되면 <strong>메인 브랜치로 풀 요청(PR)</strong>을 생성합니다.<br><br>
+개발자는 변경 사항을 메인 브랜치에 <strong>직접 푸시할 수 없습니다</strong>. 이 회사는 개발자의 IAM 역할에 <code>AWSCodeCommitPowerUser</code> <strong>관리형 정책</strong>을 적용했으며 이제 이러한 개발자는 AWS 계정의 모든 리포지토리에서 메인 브랜치에 직접 변경 사항을 푸시할 수 있습니다.<br><br>
+<strong>이 회사는 개발자가 메인 브랜치에 직접 변경 사항을 푸시하는 기능을 제한하기 위해 무엇을 해야 합니까?</strong>`,
+  en: `A company uses <strong>AWS CodeCommit</strong> for source code control. Developers apply their changes to various feature branches and create <strong>pull requests (PRs)</strong> to move those changes to the main branch when the changes are ready for production.<br><br>
+The developers should <strong>not be able to push changes directly to the main branch</strong>. The company applied the <code>AWSCodeCommitPowerUser</code> <strong>managed policy</strong> to the developers' IAM role, and now these developers can push changes to the main branch directly on every repository in the AWS account.<br><br>
+<strong>What should the company do to restrict the developers' ability to push changes to the main branch directly?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `<code>GitPush</code> 및 <code>PutFile</code> 작업에 대한 <strong>Deny 규칙을 포함하는 추가 정책</strong>을 만듭니다. 특정 리포지토리에 대한 제한을 포함하고 <strong>메인 브랜치를 참조하는 조건</strong>을 포함합니다.`,
+      en: `Create an <strong>additional policy to include a Deny rule</strong> for the <code>GitPush</code> and <code>PutFile</code> actions. Include a restriction for the specific repositories in the policy statement with <strong>a condition that references the main branch</strong>.`
+    },
+    {
+      k: 'B',
+      ko: `IAM 정책을 제거하고 <code>AWSCodeCommitReadOnly</code> 관리형 정책을 추가합니다. 정책 문에서 특정 리포지토리에 대한 <code>GitPush</code> 및 <code>PutFile</code> 작업에 대한 <strong>허용 규칙</strong>을 추가하고, 메인 브랜치를 참조하는 조건을 추가합니다.`,
+      en: `Remove the IAM policy, and add an <code>AWSCodeCommitReadOnly</code> managed policy. Add an <strong>Allow rule</strong> for the <code>GitPush</code> and <code>PutFile</code> actions for the specific repositories in the policy statement with a condition that references the main branch.`
+    },
+    {
+      k: 'C',
+      ko: `<strong>IAM 정책을 수정</strong>합니다. <code>GitPush</code> 및 <code>PutFile</code> 작업에 대한 Deny 규칙을 포함시키고, 메인 브랜치를 참조하는 조건을 포함합니다.`,
+      en: `<strong>Modify the IAM policy</strong>. Include a Deny rule for the <code>GitPush</code> and <code>PutFile</code> actions for the specific repositories in the policy statement with a condition that references the main branch.`
+    },
+    {
+      k: 'D',
+      ko: `<code>GitPush</code> 및 <code>PutFile</code> 작업에 대한 <strong>허용 규칙을 포함하는 추가 정책</strong>을 만듭니다. 기능 브랜치를 참조하는 조건과 함께 정책 문에 특정 저장소에 대한 제한을 포함합니다.`,
+      en: `Create an additional policy to include an <strong>Allow rule</strong> for the <code>GitPush</code> and <code>PutFile</code> actions. Include a restriction for the specific repositories in the policy statement with <strong>a condition that references the feature branches</strong>.`
+    }
+  ],
+  answer: ['A'],
+  vote: '94% A',
+  explain: `<p><span class="mark-ok">✅ A — 추가 Deny 정책 생성</span></p>
+<p><code>AWSCodeCommitPowerUser</code>는 <strong>AWS 관리형 정책</strong>이므로 직접 수정할 수 없습니다. 따라서 별도의 <strong>추가 고객 관리형 정책</strong>을 생성하여 <code>GitPush</code>와 <code>PutFile</code> 작업을 <strong>메인 브랜치</strong>에 대해 Deny하는 방식이 올바릅니다.</p>
+<p>IAM 정책 평가 로직: <strong>명시적 Deny > Allow</strong>이므로, 기존 PowerUser의 허용 권한보다 새 정책의 Deny가 우선합니다.</p>
+<p>정책 조건 예시: <code>codecommit:References</code> 조건 키로 <code>refs/heads/main</code>을 지정합니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ B</span> — <code>AWSCodeCommitPowerUser</code> 관리형 정책은 "제거"할 수 없습니다(계정의 모든 리포지토리에 대한 권한이 필요함). ReadOnly로 교체하면 기능 브랜치 작업도 불가능합니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — <code>AWSCodeCommitPowerUser</code>는 <strong>AWS 관리형 정책</strong>이므로 수정이 불가능합니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ D</span> — 기능 브랜치에 대한 허용 규칙을 추가해도 메인 브랜치 직접 푸시 제한에는 도움이 되지 않습니다.</p>`,
+  disc: [
+    {
+      ans: 'A (94%)',
+      txt: 'AWS 관리형 정책은 수정할 수 없으므로, 추가 정책으로 Deny를 덮어씌우는 것이 유일한 방법입니다. IAM에서 명시적 Deny는 항상 Allow를 이깁니다.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q107
+// ──────────────────────────────────────────────
+{
+  n: 107,
+  ko: `한 회사가 <strong>Application Load Balancer(ALB)</strong> 뒤의 Amazon EC2 인스턴스에서 실행되는 웹 애플리케이션을 관리합니다. EC2 인스턴스는 여러 가용성 영역에 걸쳐 <strong>Auto Scaling 그룹</strong>에서 실행됩니다. 이 애플리케이션은 <strong>Amazon RDS for MySQL</strong> DB 인스턴스를 사용하여 데이터를 저장합니다. 이 회사는 ALB를 가리키는 별칭 레코드로 <strong>Amazon Route 53</strong>을 구성했습니다.<br><br>
+새로운 회사 가이드라인은 <strong>RTO 4시간, RPO 15분</strong>인 <strong>지리적으로 고립된 재해 복구(DR) 사이트</strong>를 요구합니다.<br><br>
+<strong>어떤 DR 전략이 애플리케이션 스택을 최소한으로 변경하여 이러한 요구 사항을 충족할까요?</strong>`,
+  en: `A company manages a web application that runs on Amazon EC2 instances behind an <strong>Application Load Balancer (ALB)</strong>. The EC2 instances run in an <strong>Auto Scaling group</strong> across multiple Availability Zones. The application uses an <strong>Amazon RDS for MySQL</strong> DB instance to store the data. The company has configured <strong>Amazon Route 53</strong> with an alias record that points to the ALB.<br><br>
+A new company guideline requires a <strong>geographically isolated disaster recovery (DR) site</strong> with an <strong>RTO of 4 hours and an RPO of 15 minutes</strong>.<br><br>
+<strong>Which DR strategy will meet these requirements with the LEAST change to the application stack?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `다른 <strong>가용성 영역(AZ)</strong>에서 Amazon RDS를 제외한 모든 항목의 복제 환경을 시작합니다. 새 AZ에서 <strong>RDS 읽기 복제본</strong>을 만들고 새 스택이 로컬 RDS DB 인스턴스를 가리키도록 구성합니다. 상태 확인을 사용하여 <strong>장애 조치 라우팅 정책</strong>을 구성합니다.`,
+      en: `Launch a replica environment of everything except Amazon RDS in a different <strong>Availability Zone</strong>. Create an <strong>RDS read replica</strong> in the new Availability Zone, and configure the new stack to point to the local RDS DB instance. Add the new stack to the Route 53 record set by using a health check to configure a <strong>failover routing policy</strong>.`
+    },
+    {
+      k: 'B',
+      ko: `다른 <strong>AWS 리전</strong>에서 Amazon RDS를 제외한 모든 항목의 복제 환경을 시작합니다. 새 리전에서 <strong>RDS 읽기 복제본</strong>을 만들고 새 스택이 로컬 RDS DB 인스턴스를 가리키도록 구성합니다. 상태 확인을 사용하여 <strong>대기 시간(latency) 라우팅 정책</strong>을 구성합니다.`,
+      en: `Launch a replica environment of everything except Amazon RDS in a different <strong>AWS Region</strong>. Create an <strong>RDS read replica</strong> in the new Region, and configure the new stack to point to the local RDS DB instance. Add the new stack to the Route 53 record set by using a health check to configure a <strong>latency routing policy</strong>.`
+    },
+    {
+      k: 'C',
+      ko: `다른 <strong>AWS 리전</strong>에서 Amazon RDS를 제외한 모든 것의 복제 환경을 시작합니다. 중단이 발생하는 경우 기본 리전에서 DR 리전으로 <strong>최신 RDS 스냅샷을 복사하여 복원</strong>합니다. DR 리전의 ALB를 가리키도록 <strong>Route 53 레코드 세트를 수동 조정</strong>합니다.`,
+      en: `Launch a replica environment of everything except Amazon RDS in a different <strong>AWS Region</strong>. In the event of an outage, <strong>copy and restore the latest RDS snapshot</strong> from the primary Region to the DR Region. <strong>Manually adjust the Route 53 record set</strong> to point to the ALB in the DR Region.`
+    },
+    {
+      k: 'D',
+      ko: `다른 <strong>AWS 리전</strong>에서 Amazon RDS를 제외한 모든 항목의 복제본 환경을 시작합니다. 새 리전에서 <strong>RDS 읽기 복제본</strong>을 만들고 새 환경을 구성하여 로컬 RDS DB 인스턴스를 가리킵니다. 상태 확인을 사용하여 <strong>장애 조치(failover) 라우팅 정책</strong>을 구성합니다. 중단이 발생하면 <strong>읽기 복제본을 기본(primary)으로 승격</strong>합니다.`,
+      en: `Launch a replica environment of everything except Amazon RDS in a different <strong>AWS Region</strong>. Create an <strong>RDS read replica</strong> in the new Region, and configure the new environment to point to the local RDS DB instance. Add the new stack to the Route 53 record set by using a health check to configure a <strong>failover routing policy</strong>. In the event of an outage, <strong>promote the read replica to primary</strong>.`
+    }
+  ],
+  answer: ['D'],
+  vote: '90% D',
+  explain: `<p><span class="mark-ok">✅ D — 다른 리전 + RDS 읽기 복제본 + 장애 조치 라우팅 + 복제본 승격</span></p>
+<p><strong>지리적으로 고립(geographically isolated)</strong> = 다른 AWS 리전 필요 (같은 리전의 다른 AZ는 해당 안 됨).</p>
+<p><strong>RPO 15분</strong> = 스냅샷 복원 방식(C)은 복원 시간이 길어 RPO를 보장하기 어렵습니다. RDS 읽기 복제본은 거의 실시간으로 복제되어 RPO를 충족합니다.</p>
+<p><strong>RTO 4시간</strong> = Route 53 장애 조치 라우팅이 자동으로 트래픽을 전환하고, 읽기 복제본을 기본으로 승격하는 작업을 4시간 내에 완료할 수 있습니다.</p>
+<p>기존 Route 53 구성을 활용하므로 <strong>애플리케이션 스택 변경이 최소화</strong>됩니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ A</span> — 다른 가용성 영역(AZ)은 지리적으로 고립된 DR 사이트가 아닙니다. 같은 리전 내에 있습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ B</span> — 대기 시간(latency) 라우팅 정책은 DR 장애 조치용이 아닙니다. 정상 상태에서 지연 시간 기반으로 트래픽을 분산합니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — 스냅샷 복원은 15분 RPO를 보장하기 어렵고, Route 53 레코드를 수동으로 조정하면 RTO 내 복구가 불확실합니다.</p>`,
+  disc: [
+    {
+      ans: 'D (90%)',
+      txt: '"지리적으로 고립"은 반드시 다른 리전을 의미합니다. RDS 읽기 복제본을 다른 리전에 유지하고 장애 시 승격하면 RPO 15분과 RTO 4시간을 충족합니다. Route 53 장애 조치 라우팅으로 자동화까지 달성합니다.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q108
+// ──────────────────────────────────────────────
+{
+  n: 108,
+  ko: `대기업이 AWS에 웹 애플리케이션을 배포하고 있습니다. 애플리케이션은 <strong>Application Load Balancer</strong> 뒤의 Amazon EC2 인스턴스에서 실행됩니다. 인스턴스는 여러 가용성 영역에 걸쳐 Auto Scaling 그룹에서 실행됩니다. 애플리케이션은 <strong>Amazon RDS for Oracle DB 인스턴스와 Amazon DynamoDB</strong>에 데이터를 저장합니다. 개발, 테스트 및 프로덕션을 위한 별도의 환경이 있습니다.<br><br>
+<strong>배포 중에 암호 자격 증명을 얻는 가장 안전하고 유연한 방법은 무엇입니까?</strong>`,
+  en: `A large enterprise is deploying a web application on AWS. The application runs on Amazon EC2 instances behind an <strong>Application Load Balancer</strong>. The instances run in an Auto Scaling group across multiple Availability Zones. The application stores data in an <strong>Amazon RDS for Oracle DB instance and Amazon DynamoDB</strong>. There are separate environments for development, testing, and production.<br><br>
+<strong>What is the MOST secure and flexible way to obtain password credentials during deployment?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `<strong>AWS Systems Manager SecureString 매개변수</strong>에서 액세스 키를 검색하여 AWS 서비스에 액세스합니다. Systems Manager SecureString 매개변수에서 데이터베이스 자격 증명을 검색합니다.`,
+      en: `Retrieve an access key from an <strong>AWS Systems Manager SecureString parameter</strong> to access AWS services. Retrieve the database credentials from a Systems Manager SecureString parameter.`
+    },
+    {
+      k: 'B',
+      ko: `<strong>EC2 IAM 역할</strong>로 EC2 인스턴스를 시작하여 AWS 서비스에 액세스합니다. <strong>AWS Secrets Manager</strong>에서 데이터베이스 자격 증명을 검색합니다.`,
+      en: `Launch the EC2 instances with an <strong>EC2 IAM role</strong> to access AWS services. Retrieve the database credentials from <strong>AWS Secrets Manager</strong>.`
+    },
+    {
+      k: 'C',
+      ko: `<strong>AWS Systems Manager 일반 텍스트(plaintext) 매개변수</strong>에서 액세스 키를 검색하여 AWS 서비스에 액세스합니다. Systems Manager SecureString 매개변수에서 데이터베이스 자격 증명을 검색합니다.`,
+      en: `Retrieve an access key from an <strong>AWS Systems Manager plaintext parameter</strong> to access AWS services. Retrieve the database credentials from a Systems Manager SecureString parameter.`
+    },
+    {
+      k: 'D',
+      ko: `<strong>EC2 IAM 역할</strong>로 EC2 인스턴스를 시작하여 AWS 서비스에 액세스합니다. 애플리케이션 아티팩트와 함께 <strong>암호화된 구성 파일</strong>에 데이터베이스 비밀번호를 저장합니다.`,
+      en: `Launch the EC2 instances with an <strong>EC2 IAM role</strong> to access AWS services. Store the database passwords in an <strong>encrypted config file</strong> with the application artifacts.`
+    }
+  ],
+  answer: ['B'],
+  vote: '96% B',
+  explain: `<p><span class="mark-ok">✅ B — EC2 IAM 역할 + AWS Secrets Manager</span></p>
+<p><strong>EC2 IAM 역할(인스턴스 프로파일)</strong>: 액세스 키를 코드나 파라미터에 저장할 필요 없이 인스턴스가 자동으로 임시 자격 증명을 획득합니다. AWS 서비스 접근에 가장 안전한 방법입니다.</p>
+<p><strong>AWS Secrets Manager</strong>: 데이터베이스 자격 증명을 안전하게 저장하며, <strong>자동 교체(rotation)</strong> 기능을 지원합니다. RDS와 긴밀하게 통합되어 자동으로 DB 암호를 업데이트합니다. 개발/테스트/프로덕션 환경별로 다른 보안 암호를 관리하기에 적합합니다(유연성 충족).</p>`,
+  wrong: `<p><span class="mark-no">❌ A</span> — AWS 서비스 접근을 위해 액세스 키(정적 자격 증명)를 SSM 파라미터에 저장하는 것은 IAM 역할 방식보다 안전하지 않습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — 일반 텍스트 파라미터에 액세스 키를 저장하는 것은 매우 위험합니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ D</span> — 암호화된 구성 파일에 DB 비밀번호를 저장하면 파일이 노출될 위험이 있고, 환경별 관리 및 자동 교체가 어렵습니다.</p>`,
+  disc: [
+    {
+      ans: 'B (96%)',
+      txt: '가장 안전한 방법: IAM 역할로 AWS 서비스 접근(정적 액세스 키 불필요), Secrets Manager로 DB 자격 증명 관리(자동 교체 지원). SSM Parameter Store도 가능하지만 Secrets Manager가 DB 자격 증명에 더 특화되어 있고 자동 교체 기능이 있어 더 안전합니다.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q109
+// ──────────────────────────────────────────────
+{
+  n: 109,
+  ko: `보안팀은 회사의 AWS 계정에서 민감한 보안 문제를 감지하기 위해 <strong>AWS CloudTrail</strong>에 의존합니다. DevOps 엔지니어는 AWS 계정에서 <strong>CloudTrail이 꺼지는 것을 자동으로 수정</strong>하는 솔루션이 필요합니다.<br><br>
+<strong>CloudTrail 로그 전달에 대한 최소 다운타임을 보장하는 솔루션은 무엇입니까?</strong>`,
+  en: `The security team depends on <strong>AWS CloudTrail</strong> to detect sensitive security issues in the company's AWS account. The DevOps engineer needs a solution to <strong>auto-remediate CloudTrail being turned off</strong> in an AWS account.<br><br>
+<strong>What solution ensures the LEAST amount of downtime for the CloudTrail log deliveries?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `<strong>CloudTrail StopLogging 이벤트</strong>에 대한 Amazon EventBridge 규칙을 만듭니다. AWS SDK를 사용하여 <code>StopLogging</code>이 호출된 리소스의 ARN에서 <code>StartLogging</code>을 호출하는 <strong>AWS Lambda 함수</strong>를 만듭니다. Lambda 함수 ARN을 EventBridge 규칙에 대상으로 추가합니다.`,
+      en: `Create an <strong>Amazon EventBridge rule</strong> for the <strong>CloudTrail StopLogging event</strong>. Create an <strong>AWS Lambda function</strong> that uses the AWS SDK to call <code>StartLogging</code> on the ARN of the resource in which <code>StopLogging</code> was called. Add the Lambda function ARN as a target to the EventBridge rule.`
+    },
+    {
+      k: 'B',
+      ko: `AWS 관리형 <strong>CloudTrail-enabled AWS Config 규칙</strong>을 배포하고, 주기적 간격을 <strong>1시간</strong>으로 설정합니다. AWS Config 규칙 준수 변경을 위한 Amazon EventBridge 규칙을 만듭니다. <code>StartLogging</code>을 호출하는 Lambda 함수를 만들어 EventBridge 대상으로 추가합니다.`,
+      en: `Deploy the <strong>AWS-managed CloudTrail-enabled AWS Config rule</strong>, set with a <strong>periodic interval of 1 hour</strong>. Create an Amazon EventBridge rule for AWS Config rules compliance change. Create an AWS Lambda function that uses the AWS SDK to call <code>StartLogging</code> on the ARN of the resource in which <code>StopLogging</code> was called. Add the Lambda function ARN as a target to the EventBridge rule.`
+    },
+    {
+      k: 'C',
+      ko: `<strong>5분마다 예약된 이벤트</strong>에 대한 Amazon EventBridge 규칙을 만듭니다. AWS SDK를 사용하여 AWS 계정의 CloudTrail 트레일에서 <code>StartLogging</code>을 호출하는 AWS Lambda 함수를 만듭니다. Lambda 함수 ARN을 EventBridge 규칙에 대상으로 추가합니다.`,
+      en: `Create an <strong>Amazon EventBridge rule for a scheduled event every 5 minutes</strong>. Create an AWS Lambda function that uses the AWS SDK to call <code>StartLogging</code> on a CloudTrail trail in the AWS account. Add the Lambda function ARN as a target to the EventBridge rule.`
+    },
+    {
+      k: 'D',
+      ko: `AWS SDK를 사용하여 현재 계정에서 CloudTrail을 쿼리하는 <strong>5분마다 실행되는 스크립트</strong>로 <strong>t2.nano 인스턴스</strong>를 시작합니다. CloudTrail 트레일이 비활성화된 경우 스크립트가 트레일을 다시 활성화하도록 합니다.`,
+      en: `Launch a <strong>t2.nano instance</strong> with a <strong>script running every 5 minutes</strong> that uses the AWS SDK to query CloudTrail in the current account. If the CloudTrail trail is disabled, have the script re-enable the trail.`
+    }
+  ],
+  answer: ['A'],
+  vote: '93% A',
+  explain: `<p><span class="mark-ok">✅ A — EventBridge(StopLogging 이벤트) + Lambda(StartLogging 호출)</span></p>
+<p><strong>이벤트 기반 즉각 수정</strong>: CloudTrail이 비활성화되는 순간 <code>StopLogging</code> 이벤트가 발생하며, EventBridge 규칙이 즉시 이를 감지하여 Lambda 함수를 호출합니다. Lambda 함수는 해당 트레일의 ARN에서 <code>StartLogging</code>을 호출하여 즉시 복원합니다.</p>
+<p>이 방식은 <strong>거의 실시간(near real-time)</strong>으로 수정이 이루어지므로 다운타임이 최소화됩니다. 예약 기반 방식(C, D)이나 1시간 주기 Config 규칙(B)에 비해 압도적으로 빠릅니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ B</span> — AWS Config 규칙의 주기적 평가 간격이 1시간이므로, CloudTrail이 꺼진 후 최대 1시간 동안 감지되지 않을 수 있습니다. 다운타임이 최소가 아닙니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — 5분마다 실행되는 예약 이벤트는 최대 5분의 다운타임이 발생합니다. 또한 트리거 이벤트 없이 무조건 StartLogging을 호출하는 것은 비효율적입니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ D</span> — EC2 인스턴스로 폴링하는 방식은 서버리스 모범 사례에 반하며, 인스턴스 자체가 장애가 날 경우 수정 기능도 중단됩니다.</p>`,
+  disc: [
+    {
+      ans: 'A (93%)',
+      txt: '참고: https://aws.amazon.com/blogs/mt/monitor-changes-and-auto-enable-logging-in-aws-cloudtrail/ — EventBridge를 통해 StopLogging 이벤트를 즉시 감지하고 Lambda로 복원하는 것이 공식 모범 사례입니다.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q110
+// ──────────────────────────────────────────────
+{
+  n: 110,
+  ko: `한 회사에서 <strong>AWS CodeArtifact</strong>를 사용하여 Python 패키지를 중앙에서 저장합니다. CodeArtifact 리포지토리는 <code>aws:PrincipalOrgID</code> 조건으로 조직 내 모든 주체에게 접근을 허용하는 리포지토리 정책으로 구성되어 있습니다.<br><br>
+개발팀이 <strong>AWS Organizations의 조직에 있는 계정</strong>에서 새 프로젝트를 빌드하고 있습니다. 개발팀은 이미 저장된 Python 라이브러리를 사용하려고 합니다. 개발팀은 <strong>AWS CodePipeline과 AWS CodeBuild</strong>를 사용하여 새 애플리케이션을 빌드합니다. CodeBuild 작업은 <strong>VPC에서 실행</strong>되도록 구성되어 있습니다. 규정 준수 요구 사항으로 인해 <strong>VPC에 인터넷 연결이 없습니다</strong>.<br><br>
+개발팀은 CodeArtifact에 대한 <strong>VPC 엔드포인트를 만들고</strong> CodeBuild <code>buildspec.yaml</code> 파일을 업데이트합니다. 그러나 개발팀은 리포지토리에서 Python 라이브러리를 <strong>다운로드할 수 없습니다</strong>.<br><br>
+<strong>개발팀이 CodeArtifact를 사용할 수 있도록 DevOps 엔지니어는 어떤 단계 조합을 수행해야 합니까? (두 가지를 선택하세요.)</strong>`,
+  en: `A company uses <strong>AWS CodeArtifact</strong> to centrally store Python packages. The CodeArtifact repository is configured with a repository policy that allows all principals within the organization using the <code>aws:PrincipalOrgID</code> condition.<br><br>
+A development team is building a new project in an account that is in an organization in <strong>AWS Organizations</strong>. The development team wants to use a Python library that has already been stored in the CodeArtifact repository. The development team uses <strong>AWS CodePipeline and AWS CodeBuild</strong> to build the new application. The CodeBuild job is configured to <strong>run in a VPC</strong>. Because of compliance requirements, <strong>the VPC has no internet connectivity</strong>.<br><br>
+The development team <strong>creates the VPC endpoints for CodeArtifact</strong> and updates the CodeBuild <code>buildspec.yaml</code> file. However, the development team <strong>cannot download the Python library</strong> from the repository.<br><br>
+<strong>Which combination of steps should a DevOps engineer take so that the development team can use CodeArtifact? (Choose two.)</strong>`,
+  type: 'multi',
+  multiCount: 2,
+  choices: [
+    {
+      k: 'A',
+      ko: `<strong>Amazon S3 게이트웨이 엔드포인트</strong>를 만듭니다. CodeBuild 작업을 실행 중인 서브넷에 대한 <strong>경로 테이블을 업데이트</strong>합니다.`,
+      en: `Create an <strong>Amazon S3 gateway endpoint</strong>. Update the <strong>route tables</strong> for the subnets that are running the CodeBuild job.`
+    },
+    {
+      k: 'B',
+      ko: `CodeBuild 프로젝트가 사용하는 역할의 ARN을 포함하도록 <strong>저장소 정책의 Principal 명령문을 업데이트</strong>합니다.`,
+      en: `<strong>Update the repository policy's Principal statement</strong> to include the ARN of the role that the CodeBuild project uses.`
+    },
+    {
+      k: 'C',
+      ko: `<strong>AWS Resource Access Manager(AWS RAM)</strong>를 사용하여 CodeArtifact 저장소를 조직과 공유합니다.`,
+      en: `Share the CodeArtifact repository with the organization by using <strong>AWS Resource Access Manager (AWS RAM)</strong>.`
+    },
+    {
+      k: 'D',
+      ko: `CodeBuild 프로젝트가 사용하는 역할을 업데이트하여 해당 역할이 <strong>CodeArtifact 리포지토리를 사용할 수 있는 충분한 IAM 권한</strong>을 갖도록 합니다.`,
+      en: `Update the role that the CodeBuild project uses so that the role has <strong>sufficient IAM permissions to use the CodeArtifact repository</strong>.`
+    },
+    {
+      k: 'E',
+      ko: `조직에서 CodeArtifact에 대한 <strong>위임된 관리자</strong>로 저장소를 호스팅하는 계정을 지정합니다.`,
+      en: `Specify the account that hosts the repository as the <strong>delegated administrator</strong> for CodeArtifact in the organization.`
+    }
+  ],
+  answer: ['A', 'D'],
+  vote: '53% AD / 39% BD',
+  explain: `<p><span class="mark-ok">✅ A — Amazon S3 게이트웨이 엔드포인트 생성</span></p>
+<p>AWS CodeArtifact는 패키지 자산을 <strong>Amazon S3에 저장</strong>합니다. 인터넷 연결이 없는 VPC에서 CodeArtifact를 사용하려면 CodeArtifact VPC 엔드포인트 외에도 <strong>Amazon S3 게이트웨이 엔드포인트</strong>가 필요합니다. 게이트웨이 엔드포인트를 생성할 때 CodeBuild 서브넷의 경로 테이블을 업데이트해야 합니다.</p>
+<p><span class="mark-ok">✅ D — CodeBuild 역할에 CodeArtifact IAM 권한 추가</span></p>
+<p>리포지토리 정책이 조직 내 모든 주체에게 접근을 허용하더라도, CodeBuild 역할에 <strong>CodeArtifact 관련 IAM 권한</strong>(<code>codeartifact:GetRepositoryEndpoint</code>, <code>codeartifact:ReadFromRepository</code> 등)이 필요합니다. IAM 정책이 없으면 리소스 기반 정책만으로는 접근이 불가능합니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ B</span> — 리포지토리 정책의 Principal이 이미 <code>*</code>(조직 내 모든 주체)로 설정되어 있으므로, CodeBuild 역할 ARN을 추가로 명시할 필요가 없습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — AWS RAM은 CodeArtifact와의 공유에 사용되지 않습니다. CodeArtifact는 조직 기반 정책으로 공유합니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ E</span> — 위임된 관리자 설정은 이 문제와 무관합니다.</p>
+<p style="margin-top:8px;"><strong>참고</strong>: Python 패키지 형식의 경우 공식 문서에 "S3 엔드포인트가 필요하지 않음"이라는 메모가 있지만, 이 문제가 작성된 시점에는 해당 예외가 없었으며 시험에서는 AD가 정답으로 간주됩니다.</p>`,
+  disc: [
+    {
+      ans: 'AD (53%) vs BD (39%) — 논쟁 있음',
+      txt: 'CodeArtifact는 Amazon S3를 패키지 저장소로 사용하므로 S3 게이트웨이 엔드포인트가 필요합니다(A). 현재 문서에는 Python/Swift 패키지는 예외라는 노트가 있지만, 시험 문제 작성 당시 기준으로는 AD가 정답입니다. 리포지토리 정책이 이미 전체 조직에 열려 있으므로 B는 불필요합니다.'
+    }
+  ]
+},
+{
+  n: 111,
+  ko: `한 회사는 여러 지역 애플리케이션을 배포하기 위해 일련의 개별 <strong>Amazon CloudFormation 템플릿</strong>을 사용합니다. 이러한 템플릿은 <strong>특정 순서로 배포</strong>해야 합니다. 회사는 이전에 예상했던 것보다 더 많은 템플릿을 변경하고 있으며 새로운 템플릿을 보다 효율적으로 배포하려고 합니다. 또한 <strong>데이터 엔지니어링 팀에 템플릿의 모든 변경 사항을 알려야</strong> 합니다.<br><br>
+<strong>이러한 목표를 달성하기 위해 회사는 무엇을 해야 할까요?</strong>`,
+  en: `A company uses a series of individual <strong>Amazon CloudFormation templates</strong> to deploy its multi-Region applications. These templates must be <strong>deployed in a specific order</strong>. The company is making more changes to the templates than previously expected and wants to deploy new templates more efficiently. Additionally, the <strong>data engineering team must be notified of all changes to the templates</strong>.<br><br>
+<strong>What should the company do to accomplish these goals?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `필요한 순서대로 CloudFormation 템플릿을 배포하기 위한 <strong>AWS Lambda 함수</strong>를 만듭니다. <strong>스택 정책</strong>을 사용하여 데이터 엔지니어링 팀에 경고합니다.`,
+      en: `Create an <strong>AWS Lambda function</strong> to deploy the CloudFormation templates in the required order. Use <strong>stack policies</strong> to alert the data engineering team.`
+    },
+    {
+      k: 'B',
+      ko: `<strong>Amazon S3</strong>에서 CloudFormation 템플릿을 호스팅합니다. <strong>Amazon S3 이벤트</strong>를 사용하여 CloudFormation 업데이트 및 Amazon SNS 알림을 직접 트리거합니다.`,
+      en: `Host the CloudFormation templates in <strong>Amazon S3</strong>. Use <strong>Amazon S3 events</strong> to directly trigger CloudFormation updates and Amazon SNS notifications.`
+    },
+    {
+      k: 'C',
+      ko: `<strong>CloudFormation StackSets</strong>를 구현하고 <strong>드리프트 감지</strong>를 사용하여 데이터 엔지니어링 팀에 업데이트 알림을 트리거합니다.`,
+      en: `Implement <strong>CloudFormation StackSets</strong> and use <strong>drift detection</strong> to trigger update alerts to the data engineering team.`
+    },
+    {
+      k: 'D',
+      ko: `배포를 위해 <strong>CloudFormation 중첩 스택(nested stacks)과 스택 세트(stack sets)</strong>를 활용합니다. <strong>Amazon SNS</strong>를 사용하여 데이터 엔지니어링 팀에 알립니다.`,
+      en: `Leverage <strong>CloudFormation nested stacks and stack sets</strong> for deployments. Use <strong>Amazon SNS</strong> to notify the data engineering team.`
+    }
+  ],
+  answer: ['D'],
+  vote: '94% D',
+  explain: `<p><span class="mark-ok">✅ D — 중첩 스택 + 스택 세트 + SNS 알림</span></p>
+<p><strong>CloudFormation 중첩 스택(Nested Stacks)</strong>: 복잡한 템플릿을 더 작은 단위로 분리하고 루트 스택이 종속성 순서를 관리합니다. "특정 순서로 배포" 요구 사항을 충족합니다.</p>
+<p><strong>CloudFormation 스택 세트(StackSets)</strong>: 단일 작업으로 여러 AWS 리전과 계정에 스택을 배포할 수 있어 "다중 리전 배포를 효율적으로" 요구 사항을 충족합니다.</p>
+<p><strong>Amazon SNS</strong>: CloudFormation 스택에 SNS 알림을 연결하면 스택 상태 변경(생성, 업데이트, 삭제 등) 시 데이터 엔지니어링 팀에 알림을 자동 전송합니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ A</span> — 스택 정책(stack policy)은 스택 리소스 업데이트를 제한하는 정책으로, 알림 기능이 없습니다. Lambda로 순서를 관리하는 것도 불필요한 복잡성을 추가합니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ B</span> — S3 이벤트로 CloudFormation 업데이트를 직접 트리거하는 것은 지원되지 않습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — 드리프트 감지(drift detection)는 배포된 리소스가 템플릿과 다른지 확인하는 것으로, 템플릿 변경 알림과는 다릅니다. 내장된 드리프트 알림 기능도 없습니다.</p>`,
+  disc: [
+    {
+      ans: 'D (94%)',
+      txt: '중첩 스택으로 순서(종속성) 관리, 스택 세트로 다중 리전 배포, SNS로 변경 알림 — 세 요구 사항을 모두 해결합니다. C의 드리프트 감지는 템플릿 변경 알림이 아닌 리소스 구성 변경 감지용입니다.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q112
+// ──────────────────────────────────────────────
+{
+  n: 112,
+  ko: `DevOps 엔지니어가 웹 애플리케이션을 프로비저닝하는 <strong>AWS CloudFormation 템플릿을 배포하기 위한 CI/CD 파이프라인</strong>을 구현했습니다. 웹 애플리케이션은 ALB, 대상 그룹, Amazon Linux 2 AMI를 사용하는 시작 템플릿, EC2 Auto Scaling 그룹, 보안 그룹, Amazon RDS for MySQL로 구성됩니다. 시작 템플릿에는 애플리케이션을 설치하고 시작하는 스크립트를 지정하는 <strong>사용자 데이터(user data)</strong>가 포함됩니다.<br><br>
+초기 배포는 성공적이었습니다. DevOps 엔지니어는 사용자 데이터로 애플리케이션 버전을 업데이트하기 위해 변경했습니다. CI/CD 파이프라인은 새 버전의 템플릿을 배포했습니다. 그러나 <strong>ALB의 상태 검사가 실패하고 있으며 모든 대상이 비정상</strong>으로 표시되었습니다.<br><br>
+조사하는 동안 CloudFormation 스택의 상태가 <code>UPDATE_COMPLETE</code>임을 알아챘습니다. 하지만 EC2 인스턴스에서 <code>/var/log/messages</code>를 확인하면 <strong>구성 오류로 인해 Apache 웹 서버가 시작되지 않았다</strong>는 것을 알게 됩니다.<br><br>
+<strong>DevOps 엔지니어는 사용자 데이터가 성공적으로 실행을 완료하지 못하면 CloudFormation 배포가 실패하도록 어떻게 보장할 수 있을까요?</strong>`,
+  en: `A DevOps engineer has implemented a CI/CD pipeline to deploy an <strong>AWS CloudFormation template</strong> that provisions a web application. The web application consists of an ALB, a target group, a launch template using Amazon Linux 2 AMI, an Auto Scaling group, a security group, and Amazon RDS for MySQL. The launch template includes <strong>user data</strong> that specifies a script to install and start the application.<br><br>
+The initial deployment was successful. The DevOps engineer made changes to update the application version with user data. The CI/CD pipeline deployed a new version of the template. However, <strong>health checks on the ALB are now failing and all targets are marked unhealthy</strong>.<br><br>
+During investigation, the DevOps engineer notices that the CloudFormation stack has a status of <code>UPDATE_COMPLETE</code>. However, checking <code>/var/log/messages</code> on an EC2 instance reveals that <strong>the Apache web server failed to start because of a configuration error</strong>.<br><br>
+<strong>How can the DevOps engineer ensure that the CloudFormation deployment will fail if the user data fails to successfully finish running?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `<strong>cfn-signal 헬퍼 스크립트</strong>를 사용하여 CloudFormation에 성공 또는 실패를 알립니다. CloudFormation 템플릿 내에서 <strong><code>WaitOnResourceSignals</code> 업데이트 정책</strong>을 사용합니다. 업데이트 정책에 대한 적절한 시간 초과를 설정합니다.`,
+      en: `Use the <strong>cfn-signal helper script</strong> to signal success or failure to CloudFormation. Use the <strong><code>WaitOnResourceSignals</code> update policy</strong> within the CloudFormation template. Set an appropriate timeout for the update policy.`
+    },
+    {
+      k: 'B',
+      ko: `<code>UnhealthyHostCount</code> 메트릭에 대한 <strong>Amazon CloudWatch 알람</strong>을 만듭니다. CloudFormation에 성공 또는 실패를 알리는 대상으로 <strong>Amazon SNS 토픽</strong>을 만듭니다.`,
+      en: `Create an <strong>Amazon CloudWatch alarm</strong> for the <code>UnhealthyHostCount</code> metric. Create an <strong>Amazon SNS topic</strong> as the target to signal success or failure to CloudFormation.`
+    },
+    {
+      k: 'C',
+      ko: `<code>AWS::AutoScaling::LifecycleHook</code> 리소스를 사용하여 Auto Scaling 그룹에 <strong>라이프사이클 후크</strong>를 만듭니다. CloudFormation에 성공 또는 실패를 알리는 대상으로 <strong>Amazon SNS 토픽</strong>을 만듭니다. 라이프사이클 후크에 적절한 시간 초과를 설정합니다.`,
+      en: `Create a <strong>lifecycle hook</strong> on the Auto Scaling group using the <code>AWS::AutoScaling::LifecycleHook</code> resource. Create an <strong>Amazon SNS topic</strong> as the target to signal success or failure to CloudFormation. Set an appropriate timeout on the lifecycle hook.`
+    },
+    {
+      k: 'D',
+      ko: `<strong>Amazon CloudWatch 에이전트</strong>를 사용하여 cloud-init 로그를 스트리밍합니다. 적절한 호출 시간 제한이 있는 <strong>AWS Lambda 함수를 포함하는 구독 필터</strong>를 만듭니다. Lambda 함수를 구성하여 <strong>SignalResource API</strong> 작업을 사용하여 CloudFormation에 성공 또는 실패를 알립니다.`,
+      en: `Use the <strong>Amazon CloudWatch agent</strong> to stream the cloud-init logs. Create a <strong>subscription filter that includes an AWS Lambda function</strong> with an appropriate invocation timeout. Configure the Lambda function to use the <strong>SignalResource API</strong> operation to signal success or failure to CloudFormation.`
+    }
+  ],
+  answer: ['A'],
+  vote: '100% A',
+  explain: `<p><span class="mark-ok">✅ A — cfn-signal + WaitOnResourceSignals</span></p>
+<p>CloudFormation은 Auto Scaling 그룹의 인스턴스 교체가 완료되었을 때 사용자 데이터 스크립트의 성공 여부를 알 수 없습니다. 이 문제를 해결하는 공식 방법은:</p>
+<p>① 사용자 데이터 스크립트 끝에 <strong><code>cfn-signal</code></strong> 헬퍼 스크립트 추가 (성공 시 EXIT 0, 실패 시 EXIT 1)<br>
+② CloudFormation 템플릿의 Auto Scaling 그룹 리소스에 <strong><code>UpdatePolicy: WaitOnResourceSignals</code></strong> 설정<br>
+③ 지정된 시간 내에 신호를 받지 못하면 CloudFormation이 배포를 <strong>실패(ROLLBACK)</strong>로 처리</p>
+<p>이를 통해 사용자 데이터 오류 → cfn-signal FAILURE → CloudFormation UPDATE_ROLLBACK 흐름이 구현됩니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ B</span> — CloudWatch 알람은 사후 모니터링입니다. CloudFormation 배포 자체를 실패시킬 수 없습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — 라이프사이클 후크는 인스턴스 시작/종료 시 작업을 추가하는 기능이며, cfn-signal의 역할을 대체할 수 없습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ D</span> — CloudWatch 에이전트 + Lambda + SignalResource API를 사용하는 방법도 기술적으로 가능하지만, cfn-signal 헬퍼 스크립트가 훨씬 간단하고 표준적인 접근법입니다.</p>`,
+  disc: [
+    {
+      ans: 'A (100%)',
+      txt: 'cfn-signal은 CloudFormation 사용자 데이터 오류 감지의 표준 방법입니다. WaitOnResourceSignals와 함께 사용하면 신호가 없거나 실패 신호를 받을 경우 스택 업데이트가 자동 롤백됩니다. 참고: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-signal.html'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q113
+// ──────────────────────────────────────────────
+{
+  n: 113,
+  ko: `한 회사에 여러 AWS 계정에서 실행되는 데이터 수집 애플리케이션이 있습니다. 계정은 AWS Organizations의 조직에 있습니다. 현재 이 회사는 여러 Auto Scaling 그룹의 <strong>Amazon EC2 인스턴스</strong>에서 애플리케이션을 실행하고 있습니다. EC2 인스턴스는 데이터가 민감하기 때문에 <strong>인터넷에 액세스할 수 없습니다</strong>. 엔지니어는 필요한 VPC 엔드포인트를 배포했습니다. EC2 인스턴스는 애플리케이션을 위해 특별히 구축된 <strong>사용자 지정 AMI</strong>를 실행합니다.<br><br>
+시스템 관리자가 EC2 인스턴스에 로그인할 수 있어야 합니다. 이 액세스는 <strong>자동화되어야 하며 중앙에서 제어</strong>되어야 합니다. <strong>인스턴스에 액세스할 때마다 보안 팀은 알림을 받아야</strong> 합니다.<br><br>
+<strong>이러한 요구 사항을 충족하는 솔루션은 무엇입니까?</strong>`,
+  en: `A company has a data ingestion application that runs across multiple AWS accounts in an organization. The company runs the application on <strong>Amazon EC2 instances</strong> in Auto Scaling groups. The EC2 instances <strong>have no access to the internet</strong> because the data is sensitive. Engineers have deployed the necessary VPC endpoints. The EC2 instances run a <strong>custom AMI</strong> built specifically for the application.<br><br>
+System administrators need the ability to <strong>log in to the EC2 instances</strong>. This access must be <strong>automated and controlled centrally</strong>. The company's <strong>security team must receive a notification whenever the instances are accessed</strong>.<br><br>
+<strong>Which solution will meet these requirements?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `사용자가 EC2 인스턴스에 로그인할 때마다 보안 팀에 알림을 보내는 <strong>Amazon EventBridge 규칙</strong>을 만듭니다. <strong>EC2 Instance Connect</strong>를 사용하여 인스턴스에 로그인합니다. <strong>cfn-init 헬퍼 스크립트</strong>를 사용하여 외부 액세스를 위한 VPC 경로를 배포합니다. <strong>AWS Systems Manager Agent</strong>가 포함되도록 사용자 지정 AMI를 다시 빌드합니다.`,
+      en: `Create an <strong>Amazon EventBridge rule</strong> to send notifications to the security team whenever a user logs in to an EC2 instance. Use <strong>EC2 Instance Connect</strong> to log in to the instances. Use the <strong>cfn-init helper script</strong> to deploy VPC routes for external access. Rebuild the custom AMI to include <strong>AWS Systems Manager Agent</strong>.`
+    },
+    {
+      k: 'B',
+      ko: `인터넷에 액세스할 수 있는 <strong>NAT 게이트웨이와 베스천 호스트</strong>를 배포합니다. 베스천 호스트에서 모든 EC2 인스턴스로 들어오는 트래픽을 허용하는 보안 그룹을 만듭니다. 모든 EC2 인스턴스에 <strong>AWS Systems Manager Agent를 설치</strong>합니다. <strong>Systems Manager Session Manager</strong>를 사용하여 인스턴스에 로그인합니다.`,
+      en: `Deploy a <strong>NAT gateway and a bastion host</strong> that has internet access. Create a security group that allows incoming traffic. Install <strong>AWS Systems Manager Agent</strong> on all EC2 instances. Use <strong>Systems Manager Session Manager</strong> to log in to the instances.`
+    },
+    {
+      k: 'C',
+      ko: `<strong>EC2 Image Builder</strong>를 사용하여 사용자 지정 AMI를 다시 빌드합니다. 이미지에 최신 버전의 <strong>AWS Systems Manager Agent</strong>를 포함합니다. Auto Scaling 그룹이 모든 EC2 인스턴스에 <strong>AmazonSSMManagedInstanceCore 역할</strong>을 연결하도록 구성합니다. <strong>Systems Manager Session Manager</strong>를 사용하여 인스턴스에 로그인합니다. <strong>Amazon S3에 세션 세부 정보 로깅을 활성화</strong>합니다. 새 파일 업로드에 대한 <strong>S3 이벤트 알림</strong>을 만들어 <strong>Amazon SNS 주제</strong>를 통해 보안 팀에 메시지를 보냅니다.`,
+      en: `Use <strong>EC2 Image Builder</strong> to rebuild the custom AMI. Include the most recent version of <strong>AWS Systems Manager Agent</strong> in the image. Configure the Auto Scaling group to attach the <strong>AmazonSSMManagedInstanceCore role</strong> to all EC2 instances. Use <strong>Systems Manager Session Manager</strong> to log in. <strong>Enable logging of session details to Amazon S3</strong>. Create an <strong>S3 event notification</strong> for new file uploads to send a message to the security team through an <strong>Amazon SNS topic</strong>.`
+    },
+    {
+      k: 'D',
+      ko: `<strong>AWS Systems Manager Automation</strong>을 사용하여 Systems Manager Agent를 사용자 지정 AMI에 빌드합니다. <strong>AWS Config</strong>를 구성하여 SCP를 루트 조직 계정에 연결하여 EC2 인스턴스가 Systems Manager에 연결할 수 있도록 합니다. <strong>Systems Manager Session Manager</strong>를 사용하여 인스턴스에 로그인합니다.`,
+      en: `Use <strong>AWS Systems Manager Automation</strong> to build Systems Manager Agent into the custom AMI. Configure <strong>AWS Config</strong> to attach an SCP to the root organization account to allow EC2 instances to connect to Systems Manager. Use <strong>Systems Manager Session Manager</strong> to log in.`
+    }
+  ],
+  answer: ['C'],
+  vote: '100% C',
+  explain: `<p><span class="mark-ok">✅ C — EC2 Image Builder + SSM Agent + Session Manager + S3 로깅 + SNS 알림</span></p>
+<p><strong>EC2 Image Builder</strong>: 사용자 지정 AMI를 체계적으로 재빌드하여 최신 SSM Agent를 포함하는 공식 방법입니다.</p>
+<p><strong>AmazonSSMManagedInstanceCore 역할</strong>: Auto Scaling 그룹에서 이 역할을 인스턴스 프로파일로 연결하면, 모든 인스턴스가 자동으로 Systems Manager에 등록됩니다(자동화, 중앙 제어).</p>
+<p><strong>Session Manager</strong>: 인터넷 연결 없이 VPC 엔드포인트를 통해 EC2 인스턴스에 안전하게 로그인. SSH 키나 베스천 호스트 불필요.</p>
+<p><strong>S3 로깅 + SNS</strong>: 세션 로그를 S3에 저장하고 새 파일 업로드 시 S3 이벤트 알림 → SNS → 보안 팀 이메일로 알림.</p>`,
+  wrong: `<p><span class="mark-no">❌ A</span> — EC2 Instance Connect는 인터넷 연결이 필요하며, 인터넷 없는 환경에 적합하지 않습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ B</span> — NAT 게이트웨이와 베스천 호스트는 인터넷 노출을 추가합니다. 민감한 데이터 환경에 부적합하고, SSM Agent를 AMI에 통합하지 않습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ D</span> — AWS Config는 SCP를 연결하는 데 사용되지 않습니다. 또한 SSM Automation으로 AMI를 빌드하는 것은 EC2 Image Builder보다 비표준적입니다.</p>`,
+  disc: [
+    {
+      ans: 'C (100%)',
+      txt: '인터넷 없는 환경에서 SSM Session Manager는 VPC 엔드포인트를 통해 작동합니다(이미 배포됨). EC2 Image Builder로 AMI 재빌드, S3+SNS로 접근 알림 — 모든 요구 사항을 충족합니다.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q114
+// ──────────────────────────────────────────────
+{
+  n: 114,
+  ko: `한 회사가 <strong>Amazon S3</strong>를 사용하여 독점 정보를 저장합니다. 개발팀은 매일 새로운 프로젝트를 위한 버킷을 만듭니다. 보안팀은 <strong>모든 기존 및 미래 버킷에 암호화, 로깅 및 버전 관리가 활성화</strong>되어 있는지 확인하려고 합니다. 또한 어떤 버킷도 <strong>공개적으로 읽거나 쓸 수 있는 권한이 없어야</strong> 합니다.<br><br>
+<strong>DevOps 엔지니어는 이러한 요구 사항을 충족하기 위해 무엇을 해야 합니까?</strong>`,
+  en: `A company uses <strong>Amazon S3</strong> to store proprietary information. The development team creates buckets for new projects on a daily basis. The security team wants to ensure that <strong>all existing and future buckets have encryption, logging, and versioning enabled</strong>. Additionally, <strong>no buckets should ever be publicly read or write accessible</strong>.<br><br>
+<strong>What should a DevOps engineer do to meet these requirements?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `<strong>AWS CloudTrail</strong>을 활성화하고 <strong>AWS Lambda</strong>를 사용하여 자동 수정을 구성합니다.`,
+      en: `Enable <strong>AWS CloudTrail</strong> and configure automatic remediation using <strong>AWS Lambda</strong>.`
+    },
+    {
+      k: 'B',
+      ko: `<strong>AWS Config 규칙</strong>을 활성화하고 <strong>AWS Systems Manager 문서(Automation)</strong>를 사용하여 자동 수정을 구성합니다.`,
+      en: `Enable <strong>AWS Config rules</strong> and configure automatic remediation using <strong>AWS Systems Manager documents</strong>.`
+    },
+    {
+      k: 'C',
+      ko: `<strong>AWS Trusted Advisor</strong>를 활성화하고 <strong>Amazon EventBridge</strong>를 사용하여 자동 수정을 구성합니다.`,
+      en: `Enable <strong>AWS Trusted Advisor</strong> and configure automatic remediation using <strong>Amazon EventBridge</strong>.`
+    },
+    {
+      k: 'D',
+      ko: `<strong>AWS Systems Manager</strong>를 활성화하고 <strong>Systems Manager 문서</strong>를 사용하여 자동 수정을 구성합니다.`,
+      en: `Enable <strong>AWS Systems Manager</strong> and configure automatic remediation using <strong>Systems Manager documents</strong>.`
+    }
+  ],
+  answer: ['B'],
+  vote: '100% B',
+  explain: `<p><span class="mark-ok">✅ B — AWS Config 규칙 + Systems Manager 자동화 문서</span></p>
+<p><strong>AWS Config 규칙</strong>: 다음 관리형 규칙을 사용하여 S3 버킷 설정을 지속적으로 평가합니다.</p>
+<p>- <code>s3-bucket-server-side-encryption-enabled</code> (암호화 확인)<br>
+- <code>s3-bucket-logging-enabled</code> (로깅 확인)<br>
+- <code>s3-bucket-versioning-enabled</code> (버전 관리 확인)<br>
+- <code>s3-bucket-public-read-prohibited</code> / <code>s3-bucket-public-write-prohibited</code> (공개 접근 확인)</p>
+<p>규정 미준수 시 <strong>AWS Systems Manager Automation 문서</strong>를 자동 수정 액션으로 연결하면 비준수 버킷을 자동으로 교정합니다. 기존 및 신규 버킷 모두에 적용됩니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ A</span> — CloudTrail은 API 호출을 기록하는 감사 서비스입니다. S3 버킷 구성을 평가하고 자동 수정하는 기능이 없습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — Trusted Advisor는 권장 사항을 제공하지만, EventBridge와의 자동 수정 연동이 Config보다 제한적입니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ D</span> — Systems Manager만으로는 S3 버킷 규정 준수를 평가할 수 없습니다. Config 규칙이 평가 역할을 담당해야 합니다.</p>`,
+  disc: [
+    {
+      ans: 'B (100%)',
+      txt: 'AWS Config는 S3 버킷 설정의 지속적 평가와 자동 수정의 표준 솔루션입니다. Config 규칙 → 비준수 감지 → SSM Automation 문서로 자동 수정하는 흐름이 AWS 모범 사례입니다.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q115
+// ──────────────────────────────────────────────
+{
+  n: 115,
+  ko: `DevOps 엔지니어가 AWS에서 <strong>이미지 일괄 처리 클러스터</strong>를 구현하는 가장 저렴한 방법을 연구하고 있습니다. 이 애플리케이션은 Docker 컨테이너에서 실행할 수 없으며 <strong>Amazon EC2에서 실행</strong>해야 합니다. 일괄 작업은 <strong>NFS 볼륨에 체크포인트 데이터를 저장</strong>하며 <strong>중단을 허용</strong>할 수 있습니다. 일반 EC2 Linux 이미지에서 클러스터 소프트웨어를 구성하는 데 <strong>30분</strong>이 걸립니다.<br><br>
+<strong>가장 비용 효율적인 솔루션은 무엇입니까?</strong>`,
+  en: `A DevOps engineer is researching the least expensive way to implement an <strong>image batch processing cluster</strong> on AWS. The application cannot run in Docker containers and must run on <strong>Amazon EC2</strong>. The batch job stores checkpoint data on an <strong>NFS volume</strong> and <strong>can tolerate interruptions</strong>. Configuring the cluster software from a generic EC2 Linux image takes <strong>30 minutes</strong>.<br><br>
+<strong>What is the MOST cost-effective solution?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `체크포인트 데이터에 <strong>Amazon EFS</strong>를 사용합니다. <strong>EC2 Auto Scaling 그룹과 On-Demand 가격 책정 모델</strong>을 사용하여 EC2 인스턴스를 일시적으로 프로비저닝합니다.`,
+      en: `Use <strong>Amazon EFS</strong> for checkpoint data. Use an <strong>EC2 Auto Scaling group and On-Demand pricing model</strong> to provision EC2 instances temporarily.`
+    },
+    {
+      k: 'B',
+      ko: `체크포인트 데이터에 대해 EC2 인스턴스에서 <strong>GlusterFS</strong>를 사용합니다. 일괄 작업을 실행하려면 EC2 인스턴스를 <strong>수동으로 구성</strong>합니다.`,
+      en: `Use <strong>GlusterFS on EC2 instances</strong> for checkpoint data. <strong>Manually configure</strong> EC2 instances to run the batch job. When the job completes, shut down the instances manually.`
+    },
+    {
+      k: 'C',
+      ko: `체크포인트 데이터에 <strong>Amazon EFS</strong>를 사용합니다. <strong>EC2 Fleet를 사용하여 EC2 Spot Instances</strong>를 시작하고 <strong>사용자 데이터</strong>를 사용하여 시작 시 EC2 Linux 인스턴스를 구성합니다.`,
+      en: `Use <strong>Amazon EFS</strong> for checkpoint data. Use <strong>EC2 Fleet to launch EC2 Spot Instances</strong>, and utilize <strong>user data</strong> to configure the EC2 Linux instance on startup.`
+    },
+    {
+      k: 'D',
+      ko: `체크포인트 데이터에 <strong>Amazon EFS</strong>를 사용합니다. <strong>EC2 Fleet를 사용하여 EC2 Spot 인스턴스</strong>를 시작합니다. 클러스터에 대한 <strong>사용자 지정 AMI</strong>를 만들고 인스턴스를 만들 때 최신 AMI를 사용합니다.`,
+      en: `Use <strong>Amazon EFS</strong> for checkpoint data. Use <strong>EC2 Fleet to launch EC2 Spot Instances</strong>. <strong>Create a custom AMI</strong> for the cluster and use the latest AMI when creating instances.`
+    }
+  ],
+  answer: ['D'],
+  vote: '81% D',
+  explain: `<p><span class="mark-ok">✅ D — EFS + EC2 Fleet Spot + 사용자 지정 AMI</span></p>
+<p><strong>Amazon EFS</strong>: NFS 프로토콜을 지원하는 관리형 파일 시스템으로, 체크포인트 데이터 저장에 적합합니다.</p>
+<p><strong>EC2 Spot 인스턴스</strong>: 중단을 허용하는 배치 작업에 최적입니다. On-Demand 대비 최대 90% 비용 절감.</p>
+<p><strong>사용자 지정 AMI</strong>: 30분 구성 시간을 AMI에 미리 포함하면, 각 Spot 인스턴스 시작 시 30분의 유휴 시간(비용 낭비)을 제거합니다. 스케일 아웃이 빈번한 배치 클러스터에서 이 차이는 상당한 비용 절감으로 이어집니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ A</span> — On-Demand 인스턴스는 중단을 허용하는 배치 작업에 불필요하게 비쌉니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ B</span> — GlusterFS를 EC2에 수동 구성하는 것은 복잡하고 비용이 많이 듭니다. 수동 작업도 비효율적입니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — Spot 인스턴스를 사용하는 점은 좋지만, 사용자 데이터로 매번 30분 구성을 수행하면 해당 시간 동안 인스턴스 비용이 발생하며 효율적이지 않습니다.</p>`,
+  disc: [
+    {
+      ans: 'D (81%) vs C (논쟁)',
+      txt: '핵심 차이: 사용자 데이터(C)는 매번 30분 구성 시간이 발생하여 비용 낭비. 사용자 지정 AMI(D)는 한 번만 설정하고 이후 모든 인스턴스 시작이 즉시 가능합니다. 스팟 인스턴스 중단 후 재시작 시에도 AMI가 효율적입니다.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q116
+// ──────────────────────────────────────────────
+{
+  n: 116,
+  ko: `한 회사가 최근 온프레미스에서 AWS로 레거시 애플리케이션을 마이그레이션했습니다. 이 애플리케이션은 <strong>Amazon API Gateway 뒤에 있는 Application Load Balancer 뒤의 Amazon EC2 인스턴스</strong>에서 호스팅됩니다. 이 회사는 애플리케이션의 새 버전을 배포하는 동안 <strong>사용자가 최소한의 중단을 경험</strong>하도록 하려고 합니다. 또한 이 회사는 <strong>문제가 있는 경우 업데이트를 신속하게 롤백</strong>할 수 있도록 하려고 합니다.<br><br>
+<strong>어떤 솔루션이 애플리케이션에 최소한의 변경을 가하면서 이러한 요구 사항을 충족할까요?</strong>`,
+  en: `A company recently migrated its legacy application from on-premises to AWS. The application is hosted on <strong>Amazon EC2 instances behind an Application Load Balancer, which is behind Amazon API Gateway</strong>. The company wants to ensure users experience <strong>minimal disruptions</strong> during any deployment of a new version of the application. The company also wants to ensure it can <strong>quickly roll back updates</strong> if there is an issue.<br><br>
+<strong>Which solution will meet these requirements with MINIMAL changes to the application?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `기존 환경과 병행되는 별도의 환경으로 변경 사항을 도입합니다. <strong>API Gateway를 구성하여 카나리(canary) 릴리스 배포</strong>를 사용하여 사용자 트래픽의 작은 하위 집합을 새 환경으로 보냅니다.`,
+      en: `Introduce changes as a separate environment parallel to the existing one. Configure <strong>API Gateway to use a canary release deployment</strong> to send a small subset of user traffic to the new environment.`
+    },
+    {
+      k: 'B',
+      ko: `기존 환경과 평행한 별도의 환경으로 변경 사항을 도입합니다. 애플리케이션의 <strong>DNS 별칭 레코드를 업데이트</strong>하여 새 환경을 가리킵니다.`,
+      en: `Introduce changes as a separate environment parallel to the existing one. <strong>Update the application's DNS alias records</strong> to point to the new environment.`
+    },
+    {
+      k: 'C',
+      ko: `기존 Application Load Balancer 뒤에 <strong>별도의 대상 그룹</strong>으로 변경 사항을 도입합니다. <strong>API Gateway를 구성하여 사용자 트래픽을 새 대상 그룹으로 단계적으로 라우팅</strong>합니다.`,
+      en: `Introduce changes as a <strong>separate target group</strong> behind the existing Application Load Balancer. Configure <strong>API Gateway to route user traffic to the new target group in steps</strong>.`
+    },
+    {
+      k: 'D',
+      ko: `기존 Application Load Balancer 뒤에 별도의 대상 그룹으로 변경 사항을 도입합니다. <strong>모든 트래픽을 애플리케이션 로드 밸런서로 라우팅하도록 API Gateway를 구성</strong>한 다음, 트래픽을 새 대상 그룹으로 보냅니다.`,
+      en: `Introduce changes as a separate target group behind the existing Application Load Balancer. <strong>Configure API Gateway to route all traffic to the Application Load Balancer</strong>, which then sends the traffic to the new target group.`
+    }
+  ],
+  answer: ['A'],
+  vote: '79% A',
+  explain: `<p><span class="mark-ok">✅ A — API Gateway 카나리(Canary) 릴리스 배포</span></p>
+<p><strong>API Gateway 카나리 배포</strong>: 배포 단계에서 트래픽의 일부(예: 10%)만 새 환경으로 전달하고 나머지는 기존 환경으로 유지합니다.</p>
+<p>① 병렬 환경(새 ALB + EC2) 구성<br>
+② API Gateway 배포에 카나리 설정 추가 → 소량 트래픽을 새 환경으로 전달<br>
+③ 문제 없으면 전체 트래픽 전환, 문제 있으면 즉시 롤백</p>
+<p><strong>최소 변경</strong>: 애플리케이션 코드 변경 없이 API Gateway 설정만으로 카나리 배포 구현 가능.</p>
+<p><strong>신속한 롤백</strong>: 카나리 가중치를 0%로 변경하면 즉시 기존 환경으로 100% 복원.</p>`,
+  wrong: `<p><span class="mark-no">❌ B</span> — DNS 별칭 레코드 업데이트는 All-at-once 전환이며, DNS TTL로 인해 즉각적인 롤백이 어렵습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — API Gateway에서 ALB의 특정 대상 그룹으로 단계적으로 라우팅하는 기능은 직접 지원되지 않습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ D</span> — 모든 트래픽을 새 대상 그룹으로 바로 전환하면 중단 최소화 요구 사항을 충족하지 못합니다.</p>`,
+  disc: [
+    {
+      ans: 'A (79%) — 카나리 배포 표준',
+      txt: 'API Gateway는 카나리 릴리스 배포를 네이티브로 지원합니다. 배포 스테이지에서 카나리 퍼센트를 설정하면 트래픽 분할이 이루어집니다. 참고: https://docs.aws.amazon.com/apigateway/latest/developerguide/canary-release.html'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q117
+// ──────────────────────────────────────────────
+{
+  n: 117,
+  ko: `한 회사가 <strong>Amazon S3 버킷에 .csv 형식으로 100GB의 로그 데이터</strong>를 저장하고 있습니다. SQL 개발자는 이 데이터를 <strong>쿼리하고 그래프를 생성하여 시각화</strong>하려고 합니다. SQL 개발자는 또한 <strong>.csv 파일의 메타데이터를 저장하는 효율적이고 자동화된 방법</strong>이 필요합니다.<br><br>
+<strong>어떤 단계 조합이 최소한의 노력으로 이러한 요구 사항을 충족할 수 있을까요? (세 가지를 선택하세요.)</strong>`,
+  en: `A company is storing <strong>100 GB of log data in .csv format in an Amazon S3 bucket</strong>. SQL developers want to <strong>query this data and generate graphs to visualize it</strong>. The SQL developers also need an <strong>efficient, automated way to store metadata from the .csv file</strong>.<br><br>
+<strong>Which combination of steps will meet these requirements with the LEAST amount of effort? (Choose three.)</strong>`,
+  type: 'multi',
+  multiCount: 3,
+  choices: [
+    {
+      k: 'A',
+      ko: `<strong>AWS X-Ray</strong>를 통해 데이터를 필터링하여 데이터를 시각화합니다.`,
+      en: `Filter the data through <strong>AWS X-Ray</strong> to visualize the data.`
+    },
+    {
+      k: 'B',
+      ko: `<strong>Amazon QuickSight</strong>를 통해 데이터를 필터링하여 데이터를 시각화합니다.`,
+      en: `Filter the data through <strong>Amazon QuickSight</strong> to visualize the data.`
+    },
+    {
+      k: 'C',
+      ko: `<strong>Amazon Athena</strong>를 사용하여 데이터를 쿼리합니다.`,
+      en: `Query the data with <strong>Amazon Athena</strong>.`
+    },
+    {
+      k: 'D',
+      ko: `<strong>Amazon Redshift</strong>로 데이터를 쿼리합니다.`,
+      en: `Query the data with <strong>Amazon Redshift</strong>.`
+    },
+    {
+      k: 'E',
+      ko: `<strong>AWS Glue 데이터 카탈로그</strong>를 영구 메타데이터 저장소로 사용합니다.`,
+      en: `Use the <strong>AWS Glue Data Catalog</strong> as the persistent metadata store.`
+    },
+    {
+      k: 'F',
+      ko: `<strong>Amazon DynamoDB</strong>를 영구 메타데이터 저장소로 사용합니다.`,
+      en: `Use <strong>Amazon DynamoDB</strong> as the persistent metadata store.`
+    }
+  ],
+  answer: ['B', 'C', 'E'],
+  vote: '100% BCE',
+  explain: `<p><span class="mark-ok">✅ B — Amazon QuickSight (시각화)</span></p>
+<p>QuickSight는 Athena와 네이티브로 통합되어 SQL 쿼리 결과를 대화형 그래프와 대시보드로 시각화합니다.</p>
+<p><span class="mark-ok">✅ C — Amazon Athena (S3 데이터 SQL 쿼리)</span></p>
+<p>Athena는 S3에 저장된 .csv 데이터를 서버리스 SQL로 직접 쿼리합니다. 별도 데이터 로딩 없이 최소 노력으로 사용 가능합니다.</p>
+<p><span class="mark-ok">✅ E — AWS Glue 데이터 카탈로그 (메타데이터 저장)</span></p>
+<p>Glue 크롤러가 S3 버킷을 자동으로 스캔하여 .csv 파일의 스키마, 파티션 등 메타데이터를 데이터 카탈로그에 자동 저장합니다. Athena는 이 카탈로그를 직접 참조합니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ A</span> — AWS X-Ray는 분산 애플리케이션의 추적/디버깅 서비스로, 데이터 시각화와 관련이 없습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ D</span> — Amazon Redshift는 데이터 웨어하우스 서비스로 데이터 로딩이 필요하며, S3의 .csv 파일을 직접 쿼리하는 Athena보다 훨씬 많은 노력이 필요합니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ F</span> — DynamoDB는 NoSQL 데이터베이스로, .csv 파일 메타데이터를 자동으로 수집하는 기능이 없습니다. Glue 데이터 카탈로그가 이 목적에 특화되어 있습니다.</p>`,
+  disc: [
+    {
+      ans: 'BCE (100%)',
+      txt: 'S3 → Glue 크롤러(메타데이터 자동 수집) → Athena(SQL 쿼리) → QuickSight(시각화)는 AWS 데이터 분석의 표준 서버리스 파이프라인입니다. 최소한의 노력으로 구성 가능합니다.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q118
+// ──────────────────────────────────────────────
+{
+  n: 118,
+  ko: `한 회사가 여러 AWS 리전 및 가용성 영역에 걸쳐 AWS에서 기업 인프라를 배포합니다. 인프라는 <strong>Amazon EC2 인스턴스</strong>에 배포되고 <strong>AWS IoT Greengrass 기기</strong>와 연결됩니다. 이 회사는 본사에 있는 <strong>온프레미스 서버</strong>에 추가 리소스를 배포합니다.<br><br>
+이 회사는 리소스 유지 관리 및 업데이트에 관련된 오버헤드를 줄이고자 합니다. DevOps 팀은 <strong>AWS Systems Manager를 사용하여 패치의 자동화된 관리 및 적용</strong>을 구현할 계획입니다.<br><br>
+<strong>DevOps 팀은 회사의 EC2 인스턴스, IoT 기기 및 온프레미스 인프라에서 자동화된 패치 및 구성 관리를 구현하기 위해 어떤 단계 조합을 취해야 합니까? (세 가지를 선택하세요.)</strong>`,
+  en: `A company deploys its corporate infrastructure on AWS across multiple AWS Regions and Availability Zones. The infrastructure is deployed on <strong>Amazon EC2 instances</strong> and connects with <strong>AWS IoT Greengrass devices</strong>. The company deploys additional resources on <strong>on-premises servers</strong> located at corporate headquarters.<br><br>
+The company wants to reduce the overhead involved in maintaining and updating its resources. The company's DevOps team plans to use <strong>AWS Systems Manager to implement automated management and application of patches</strong>.<br><br>
+<strong>Which combination of steps must the DevOps team take to implement automated patch and configuration management across the company's EC2 instances, IoT devices, and on-premises infrastructure? (Choose three.)</strong>`,
+  type: 'multi',
+  multiCount: 3,
+  choices: [
+    {
+      k: 'A',
+      ko: `모든 EC2 인스턴스, AWS IoT Greengrass 디바이스 및 온프레미스 서버에 <strong>태그</strong>를 적용합니다. <strong>Systems Manager Session Manager</strong>를 사용하여 태그가 지정된 모든 디바이스에 패치를 푸시합니다.`,
+      en: `Apply <strong>tags</strong> to all EC2 instances, AWS IoT Greengrass devices, and on-premises servers. Use <strong>Systems Manager Session Manager</strong> to push patches to all the tagged devices.`
+    },
+    {
+      k: 'B',
+      ko: `<strong>Systems Manager Run Command</strong>를 사용하여 EC2 인스턴스, AWS IoT Greengrass 디바이스 및 온프레미스 서버에 대한 패치를 예약합니다.`,
+      en: `Use <strong>Systems Manager Run Command</strong> to schedule patching for the EC2 instances, AWS IoT Greengrass devices, and on-premises servers.`
+    },
+    {
+      k: 'C',
+      ko: `<strong>Systems Manager Patch Manager</strong>를 사용하여 EC2 인스턴스, AWS IoT Greengrass 디바이스 및 온프레미스 서버에 대한 패치를 <strong>Systems Manager 유지 관리 창 작업</strong>으로 예약합니다.`,
+      en: `Use <strong>Systems Manager Patch Manager</strong> to schedule patching for the EC2 instances, AWS IoT Greengrass devices, and on-premises servers as a <strong>Systems Manager maintenance window task</strong>.`
+    },
+    {
+      k: 'D',
+      ko: `<strong>Amazon EventBridge</strong>를 구성하여 Systems Manager Patch Manager에서 패치 기준선 업데이트를 모니터링합니다. <strong>Systems Manager Run Command</strong>를 이벤트와 연결하여 패치 작업을 시작합니다.`,
+      en: `Configure <strong>Amazon EventBridge</strong> to monitor Systems Manager Patch Manager for updates to patch baselines. Associate <strong>Systems Manager Run Command</strong> with the event to initiate a patch action.`
+    },
+    {
+      k: 'E',
+      ko: `Systems Manager에 대한 <strong>IAM 인스턴스 프로필</strong>을 만듭니다. 인스턴스 프로필을 AWS 계정의 모든 EC2 인스턴스에 연결합니다. AWS IoT Greengrass 디바이스와 온프레미스 서버의 경우 Systems Manager에 대한 <strong>IAM 서비스 역할</strong>을 만듭니다.`,
+      en: `Create an <strong>IAM instance profile</strong> for Systems Manager. Attach the instance profile to all EC2 instances. For AWS IoT Greengrass devices and on-premises servers, create an <strong>IAM service role</strong> for Systems Manager.`
+    },
+    {
+      k: 'F',
+      ko: `<strong>관리형 인스턴스 활성화</strong>를 생성합니다. 활성화 코드와 활성화 ID를 사용하여 온프레미스 환경의 각 서버에 <strong>Systems Manager Agent(SSM Agent)를 설치</strong>합니다. <strong>AWS IoT Greengrass IAM 토큰 교환 역할</strong>을 업데이트합니다. 이 역할을 사용하여 모든 IoT 디바이스에 SSM Agent를 배포합니다.`,
+      en: `<strong>Generate a managed-instance activation</strong>. Use the Activation Code and Activation ID to <strong>install Systems Manager Agent (SSM Agent) on each on-premises server</strong>. <strong>Update the AWS IoT Greengrass IAM token exchange role</strong>. Use the role to deploy SSM Agent on all IoT devices.`
+    }
+  ],
+  answer: ['C', 'E', 'F'],
+  vote: '100% CEF',
+  explain: `<p><span class="mark-ok">✅ C — Patch Manager + 유지 관리 창 (자동화된 패치 예약)</span></p>
+<p>Systems Manager Patch Manager는 패치 기준선 정의 및 예약 패치를 지원합니다. 유지 관리 창(Maintenance Window)과 연동하면 지정된 시간에 자동으로 패치를 적용합니다.</p>
+<p><span class="mark-ok">✅ E — IAM 인스턴스 프로필(EC2) + IAM 서비스 역할(IoT/온프레미스)</span></p>
+<p>EC2에는 인스턴스 프로파일을 연결하고, IoT Greengrass 디바이스 및 온프레미스 서버에는 IAM 서비스 역할을 사용하여 SSM과의 통신 권한을 부여합니다.</p>
+<p><span class="mark-ok">✅ F — 관리형 인스턴스 활성화 (온프레미스/IoT 등록)</span></p>
+<p>온프레미스 서버와 IoT 디바이스를 SSM에 등록하려면 관리형 인스턴스 활성화가 필요합니다. 활성화 코드+ID로 SSM Agent를 설치하고, IoT Greengrass의 토큰 교환 역할을 업데이트하여 IoT 디바이스에도 배포합니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ A</span> — Session Manager는 원격 터미널 접근 도구로, 패치 자동화에 사용하지 않습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ B</span> — Run Command로 패치 예약은 가능하지만, C(Patch Manager + 유지 관리 창)가 더 완전한 자동화 솔루션입니다. C에 Run Command가 내부적으로 포함됩니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ D</span> — EventBridge + Run Command 조합은 복잡하고 Patch Manager를 직접 사용하는 것보다 비효율적입니다.</p>`,
+  disc: [
+    {
+      ans: 'CEF (100%)',
+      txt: '참고: https://aws.amazon.com/blogs/mt/how-to-centrally-manage-aws-iot-greengrass-devices-using-aws-systems-manager/ — IoT Greengrass 디바이스와 온프레미스 서버를 SSM으로 관리하는 공식 방법입니다. F(관리형 인스턴스 활성화)가 비EC2 인스턴스 등록의 핵심입니다.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q119
+// ──────────────────────────────────────────────
+{
+  n: 119,
+  ko: `한 회사가 <strong>Application Load Balancer 뒤의 Amazon EC2 인스턴스</strong>에서 실행되는 웹 애플리케이션을 테스트하고 있습니다. 인스턴스는 여러 가용성 영역에 걸쳐 <strong>자동 확장 그룹</strong>에서 실행됩니다. 이 회사는 새 소프트웨어를 배포할 때 <strong>변경 불가능한 인스턴스가 있는 블루/그린 배포 프로세스</strong>를 사용합니다.<br><br>
+테스트하는 동안 사용자는 <strong>무작위 시간에 애플리케이션에서 자동으로 로그아웃</strong>됩니다. 테스터는 또한 <strong>애플리케이션의 새 버전이 배포될 때 모든 사용자가 로그아웃</strong>된다고 보고합니다. 개발팀은 <strong>확장 이벤트와 애플리케이션 배포에서 사용자가 로그인 상태를 유지</strong>하도록 하는 솔루션이 필요합니다.<br><br>
+<strong>사용자가 로그인 상태를 유지하도록 하는 가장 운영 효율적인 방법은 무엇입니까?</strong>`,
+  en: `A company is testing a web application that runs on <strong>Amazon EC2 instances behind an Application Load Balancer</strong>. The instances run in an <strong>Auto Scaling group</strong> across multiple Availability Zones. The company uses a <strong>blue/green deployment process with immutable instances</strong> when deploying new software.<br><br>
+During testing, users are being <strong>automatically logged out of the application at random times</strong>. Testers also report that, when a new version of the application is deployed, <strong>all users are logged out</strong>. The development team needs a solution to ensure <strong>users remain logged in across scaling events and application deployments</strong>.<br><br>
+<strong>What is the MOST operationally efficient way to ensure users remain logged in?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `로드 밸런서에서 <strong>스마트 세션</strong>을 활성화하고 기존 세션을 확인하도록 애플리케이션을 수정합니다.`,
+      en: `Enable <strong>smart sessions</strong> on the load balancer and modify the application to check for an existing session.`
+    },
+    {
+      k: 'B',
+      ko: `로드 밸런서에서 <strong>세션 공유</strong>를 활성화하고 세션 저장소에서 읽도록 애플리케이션을 수정합니다.`,
+      en: `Enable <strong>session sharing</strong> on the load balancer and modify the application to read from the session store.`
+    },
+    {
+      k: 'C',
+      ko: `<strong>Amazon S3 버킷</strong>에 사용자 세션 정보를 저장하고 버킷에서 세션 정보를 읽도록 애플리케이션을 수정합니다.`,
+      en: `Store user session information in an <strong>Amazon S3 bucket</strong> and modify the application to read session information from the bucket.`
+    },
+    {
+      k: 'D',
+      ko: `<strong>Amazon ElastiCache 클러스터</strong>에 사용자 세션 정보를 저장하도록 애플리케이션을 수정합니다.`,
+      en: `Modify the application to store user session information in an <strong>Amazon ElastiCache cluster</strong>.`
+    }
+  ],
+  answer: ['D'],
+  vote: '100% D',
+  explain: `<p><span class="mark-ok">✅ D — Amazon ElastiCache 클러스터 (외부 세션 저장소)</span></p>
+<p>세션이 EC2 인스턴스 로컬에 저장되면, 다른 인스턴스로 요청이 라우팅되거나(확장 이벤트) 인스턴스가 교체될 때(블루/그린 배포) 세션이 손실됩니다.</p>
+<p>해결책은 세션을 <strong>외부 분산 캐시(ElastiCache Redis 또는 Memcached)</strong>에 저장하는 것입니다.</p>
+<p>- <strong>확장 이벤트</strong>: 어떤 EC2 인스턴스도 ElastiCache에서 세션을 읽을 수 있어 로그아웃 없음<br>
+- <strong>블루/그린 배포</strong>: 새 인스턴스가 시작되어도 ElastiCache의 세션 유지<br>
+- <strong>운영 효율성</strong>: 관리형 서비스, 고성능, 낮은 지연시간</p>`,
+  wrong: `<p><span class="mark-no">❌ A</span> — ALB에는 "스마트 세션"이라는 기능이 없습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ B</span> — ALB에는 "세션 공유" 기능이 없습니다. Sticky Session(고정 세션)은 있지만, 블루/그린 배포 시 인스턴스 교체로 세션이 여전히 손실됩니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — S3는 객체 저장소로 지연시간이 높아 세션 저장소로 비효율적입니다. ElastiCache보다 운영 효율성이 훨씬 낮습니다.</p>`,
+  disc: [
+    {
+      ans: 'D (100%)',
+      txt: '외부 세션 저장소 패턴(ElastiCache)은 Stateless 애플리케이션 설계의 핵심입니다. ALB Sticky Session은 특정 인스턴스에 의존하므로 블루/그린 배포나 Scale-in 시 세션이 끊깁니다. ElastiCache는 모든 인스턴스가 공유하는 중앙 세션 저장소 역할을 합니다.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q120
+// ──────────────────────────────────────────────
+{
+  n: 120,
+  ko: `DevOps 엔지니어는 기존 3계층 애플리케이션에 대한 <strong>블루/그린 배포</strong>를 구성해야 합니다. 애플리케이션은 Amazon EC2 인스턴스에서 실행되고 Amazon RDS 데이터베이스를 사용합니다. EC2 인스턴스는 <strong>ALB(Application Load Balancer)</strong> 뒤에서 실행되고 자동 확장 그룹에 있습니다.<br><br>
+DevOps 엔지니어는 블루 환경과 그린 환경 각각에 대한 <strong>시작 템플릿과 자동 확장 그룹</strong>을 만들었습니다. 각 Auto Scaling 그룹은 일치하는 블루 또는 그린 <strong>대상 그룹</strong>에 배포됩니다. <strong>ALB</strong>는 트래픽을 블루 또는 그린 환경의 대상 그룹으로 보내도록 구성할 수 있습니다. <code>www.example.com</code>의 <strong>Amazon Route 53 레코드는 ALB를 가리킵니다</strong>.<br><br>
+배포는 블루 환경의 소프트웨어와 그린 환경의 새로 배포된 소프트웨어 간에 <strong>트래픽을 한 번에 모두 이동</strong>해야 합니다.<br><br>
+<strong>DevOps 엔지니어는 이러한 요구 사항을 충족하기 위해 무엇을 해야 합니까?</strong>`,
+  en: `A DevOps engineer needs to configure a <strong>blue/green deployment</strong> for an existing three-tier application. The application runs on Amazon EC2 instances and uses an Amazon RDS database. The EC2 instances run behind an <strong>Application Load Balancer (ALB)</strong> in an Auto Scaling group.<br><br>
+The DevOps engineer has created a <strong>launch template and Auto Scaling group</strong> for each of the blue and green environments. Each Auto Scaling group deploys to a matching blue or green <strong>target group</strong>. The <strong>ALB</strong> can be configured to send traffic to the blue or green environment's target group. An <strong>Amazon Route 53 record for <code>www.example.com</code> points to the ALB</strong>.<br><br>
+The deployment must <strong>move traffic all at once</strong> between the software on the blue environment's EC2 instances to the newly deployed software on the green environment's EC2 instances.<br><br>
+<strong>What should the DevOps engineer do to meet these requirements?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `그린 환경의 EC2 인스턴스에 새 소프트웨어를 배포하기 위해 그린 환경에 대한 <strong>Auto Scaling 그룹의 롤링 재시작</strong>을 시작합니다. 롤링 재시작이 완료되면 <strong>AWS CLI 명령을 사용하여 ALB를 업데이트</strong>하여 그린 환경의 대상 그룹으로 트래픽을 보냅니다.`,
+      en: `Start a <strong>rolling restart of the Auto Scaling group</strong> for the green environment to deploy the new software. When the rolling restart is complete, use an <strong>AWS CLI command to update the ALB</strong> to send traffic to the green environment's target group.`
+    },
+    {
+      k: 'B',
+      ko: `<strong>AWS CLI 명령을 사용하여 ALB를 업데이트</strong>하여 트래픽을 그린 환경의 대상 그룹으로 보냅니다. 그런 다음 그린 환경의 <strong>Auto Scaling 그룹의 롤링 재시작</strong>을 시작하여 새 소프트웨어를 배포합니다.`,
+      en: `Use an <strong>AWS CLI command to update the ALB</strong> to send traffic to the green environment's target group. Then start a <strong>rolling restart of the Auto Scaling group</strong> for the green environment to deploy the new software.`
+    },
+    {
+      k: 'C',
+      ko: `시작 템플릿을 업데이트하여 그린 환경의 소프트웨어를 <strong>블루 환경의 EC2 인스턴스에 배포</strong>합니다. 두 환경 모두에서 대상 그룹과 Auto Scaling 그룹을 변경하지 않습니다. <strong>블루 환경의 EC2 인스턴스를 롤링 재시작</strong>합니다.`,
+      en: `Update the launch template to deploy the green environment's software on the <strong>blue environment's EC2 instances</strong>. Keep the target groups and Auto Scaling groups unchanged in both environments. Perform a <strong>rolling restart of the blue environment's EC2 instances</strong>.`
+    },
+    {
+      k: 'D',
+      ko: `그린 환경의 <strong>Auto Scaling 그룹의 롤링 재시작</strong>을 시작하여 그린 환경의 EC2 인스턴스에 새 소프트웨어를 배포합니다. 롤링 재시작이 완료되면 <strong>Route 53 DNS를 업데이트</strong>하여 ALB에서 그린 환경의 엔드포인트를 가리킵니다.`,
+      en: `Start a <strong>rolling restart of the Auto Scaling group</strong> for the green environment to deploy the new software. When the rolling restart is complete, <strong>update the Route 53 DNS</strong> to point to the green environment's endpoint on the ALB.`
+    }
+  ],
+  answer: ['A'],
+  vote: '100% A',
+  explain: `<p><span class="mark-ok">✅ A — 그린 환경 준비 후 ALB 대상 그룹 전환</span></p>
+<p>올바른 블루/그린 배포 순서:</p>
+<p>① <strong>그린 환경 Auto Scaling 그룹 롤링 재시작</strong> → 새 소프트웨어가 모든 그린 EC2 인스턴스에 배포되고 준비 완료<br>
+② <strong>AWS CLI로 ALB 리스너 규칙 업데이트</strong> → 트래픽을 블루 대상 그룹에서 그린 대상 그룹으로 <strong>한 번에</strong> 전환<br>
+③ Route 53은 그대로(이미 단일 ALB를 가리키고 있음)</p>
+<p>이 방법은 "트래픽을 한 번에 모두 이동" 요구 사항을 충족하며, 그린 환경이 준비된 후에 전환하므로 안전합니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ B</span> — ALB를 먼저 그린으로 전환한 후 소프트웨어를 배포하면, 새 소프트웨어가 준비되기 전에 트래픽이 그린으로 이동하여 서비스 장애가 발생합니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — 블루 환경 인스턴스에 그린 소프트웨어를 배포하는 것은 블루/그린 분리를 무너뜨립니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ D</span> — Route 53은 이미 단일 ALB를 가리키고 있습니다. Route 53 DNS를 업데이트할 필요가 없으며, DNS TTL로 인해 즉각적인 전환도 보장되지 않습니다.</p>`,
+  disc: [
+    {
+      ans: 'A (100%)',
+      txt: '단일 ALB에 블루/그린 두 개의 대상 그룹이 있는 구조에서, ALB 리스너 규칙(또는 전달 규칙)을 변경하는 것이 가장 즉각적이고 제어된 전환 방법입니다. Route 53은 이미 ALB를 가리키므로 변경 불필요.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q121
+// ──────────────────────────────────────────────
+{
+  n: 121,
+  ko: `한 회사가 <strong>빌드 계정</strong>에서 AWS CodePipeline과 AWS CodeBuild를 사용하여 새로운 파이프라인을 빌드하고 있습니다. 파이프라인은 두 단계로 구성됩니다. 첫 번째 단계는 AWS Lambda 함수를 빌드하고 패키징하는 CodeBuild 작업입니다. 두 번째 단계는 <strong>개발 환경 계정과 프로덕션 환경 계정</strong>이라는 두 개의 다른 AWS 계정에서 작동하는 배포 작업입니다. 배포 단계에서는 CodePipeline이 호출하는 <strong>AWS CloudFormation 작업</strong>을 사용하여 Lambda 함수에 필요한 인프라를 배포합니다.<br><br>
+DevOps 엔지니어가 CodePipeline 파이프라인을 만들고 <strong>Amazon S3에 대한 AWS KMS AWS 관리 키(aws/s3 키)</strong>를 사용하여 빌드 아티팩트를 암호화하도록 파이프라인을 구성합니다. 파이프라인이 실행되면 <strong>CloudFormation 작업이 액세스 거부 오류와 함께 실패</strong>합니다.<br><br>
+<strong>DevOps 엔지니어가 이 오류를 해결하기 위해 수행해야 하는 작업 조합은 무엇입니까? (두 가지를 선택하세요.)</strong>`,
+  en: `A company is building a new pipeline by using AWS CodePipeline and AWS CodeBuild in a <strong>build account</strong>. The pipeline consists of two stages. The first stage is a CodeBuild job to build and package an AWS Lambda function. The second stage consists of deployment actions that operate on two different AWS accounts: a <strong>development environment account and a production environment account</strong>. The deployment stages use the <strong>AWS CloudFormation action</strong> that CodePipeline invokes to deploy the infrastructure.<br><br>
+A DevOps engineer configures the pipeline to encrypt build artifacts by using the <strong>AWS KMS AWS managed key for Amazon S3 (the aws/s3 key)</strong>. The artifacts are stored in an S3 bucket. When the pipeline runs, <strong>the CloudFormation actions fail with an access denied error</strong>.<br><br>
+<strong>Which combination of actions must the DevOps engineer perform to resolve this error? (Choose two.)</strong>`,
+  type: 'multi',
+  multiCount: 2,
+  choices: [
+    {
+      k: 'A',
+      ko: `아티팩트에 대한 각 AWS 계정에서 S3 버킷을 만듭니다. CodePipeline S3 작업을 만들어 각 AWS 계정의 S3 버킷에 아티팩트를 복사합니다. CloudFormation 작업을 업데이트하여 프로덕션 계정의 아티팩트 S3 버킷을 참조합니다.`,
+      en: `Create an S3 bucket in each AWS account for the artifacts. Create a CodePipeline S3 action to copy the artifacts to the S3 bucket in each AWS account. Update the CloudFormation actions to reference the artifacts S3 bucket in the production account.`
+    },
+    {
+      k: 'B',
+      ko: `<strong>고객 관리 KMS 키(CMK)</strong>를 만듭니다. CloudFormation 작업에서 사용하는 IAM 역할이 <strong>복호화 작업을 수행할 수 있도록 KMS 키 정책</strong>을 구성합니다. 고객 관리 KMS 키를 사용하여 아티팩트를 암호화하도록 파이프라인을 수정합니다.`,
+      en: `Create a <strong>customer managed KMS key (CMK)</strong>. Configure the <strong>KMS key policy</strong> to allow the IAM roles used by the CloudFormation action to perform decrypt operations. Modify the pipeline to use the customer managed KMS key to encrypt artifacts.`
+    },
+    {
+      k: 'C',
+      ko: `<strong>AWS 관리형 KMS 키</strong>를 만듭니다. 개발 계정과 프로덕션 계정이 복호화 작업을 수행할 수 있도록 KMS 키 정책을 구성합니다. 파이프라인을 수정하여 KMS 키를 사용하여 아티팩트를 암호화합니다.`,
+      en: `Create an <strong>AWS managed KMS key</strong>. Configure the KMS key policy to allow the development account and the production account to perform decrypt operations. Modify the pipeline to use the KMS key to encrypt artifacts.`
+    },
+    {
+      k: 'D',
+      ko: `개발 계정과 프로덕션 계정에서 CodePipeline에 대한 <strong>IAM 역할</strong>을 만듭니다. CloudFormation 작업을 수행할 수 있는 권한과 아티팩트 S3 버킷에서 객체를 검색하고 복호화할 수 있는 권한이 있는 역할을 구성합니다. <code>CodePipeline 계정에서 역할을 사용</code>하도록 CodePipeline CloudFormation 작업을 구성합니다.`,
+      en: `In the development account and in the production account, create an <strong>IAM role</strong> for CodePipeline. Configure the roles with permissions to perform CloudFormation operations and to retrieve and decrypt objects from the artifacts S3 bucket. Configure the CodePipeline CloudFormation action to <code>use the roles in the CodePipeline account</code>.`
+    },
+    {
+      k: 'E',
+      ko: `개발 계정과 프로덕션 계정에서 CodePipeline에 대한 <strong>IAM 역할</strong>을 만듭니다. CloudFormation 작업을 수행할 수 있는 권한과 아티팩트 S3 버킷에서 객체를 검색하고 복호화할 수 있는 권한이 있는 역할을 구성합니다. <strong>CodePipeline 계정에서 역할 액세스를 허용하도록 아티팩트 S3 버킷 정책을 수정</strong>합니다. 역할을 사용하도록 CodePipeline CloudFormation 작업을 구성합니다.`,
+      en: `In the development account and in the production account, create an <strong>IAM role</strong> for CodePipeline. Configure the roles with permissions to perform CloudFormation operations and to retrieve and decrypt objects from the artifacts S3 bucket. <strong>Modify the artifacts S3 bucket policy to allow the roles access</strong>. Configure the CodePipeline CloudFormation action to use the roles.`
+    }
+  ],
+  answer: ['B', 'E'],
+  vote: '80% BE',
+  explain: `<p><span class="mark-ok">✅ B — 고객 관리 KMS 키(CMK) 생성 및 키 정책 구성</span></p>
+<p><strong>AWS 관리 키(aws/s3)는 교차 계정 접근이 불가능합니다.</strong> AWS 관리 키의 정책은 읽기 전용으로 수정할 수 없으며, 다른 계정에서 복호화 권한을 부여할 수 없습니다. 따라서 <strong>고객 관리 KMS 키(CMK)</strong>를 생성하고 개발/프로덕션 계정의 CloudFormation 역할에 복호화 권한을 부여해야 합니다.</p>
+<p><span class="mark-ok">✅ E — 교차 계정 IAM 역할 + S3 버킷 정책 수정</span></p>
+<p>교차 계정에서 S3 버킷의 아티팩트에 접근하려면 두 가지가 모두 필요합니다: ① 대상 계정의 IAM 역할에 S3 접근 권한 ② S3 버킷 리소스 기반 정책에서 해당 역할의 접근 허용. 교차 계정 접근은 IAM 정책만으로는 불충분하며 버킷 정책도 업데이트해야 합니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ A</span> — 각 계정에 별도 S3 버킷을 만드는 것은 과도한 복잡성을 추가하며 근본적인 암호화 및 권한 문제를 해결하지 않습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — AWS 관리 KMS 키는 생성하거나 키 정책을 수정할 수 없습니다. 교차 계정 권한 부여가 불가능합니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ D</span> — 교차 계정 S3 접근 시 버킷 정책도 업데이트해야 합니다. D는 버킷 정책 수정이 없어 불완전합니다.</p>`,
+  disc: [
+    {
+      ans: 'BE (80%)',
+      txt: 'AWS 공식 문서: AWS 관리 KMS 키 정책은 읽기 전용이므로 수정 불가. 교차 계정 S3 접근은 IAM 정책 + 버킷 정책이 모두 필요. 참고: https://docs.aws.amazon.com/codepipeline/latest/userguide/pipelines-create-cross-account.html'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q122
+// ──────────────────────────────────────────────
+{
+  n: 122,
+  ko: `한 회사가 AWS Organizations에서 조직을 사용하여 여러 AWS 계정을 관리하고 있습니다. 개발팀은 <strong>VPC에 배포된 AWS Lambda 함수</strong>와 작동하도록 모든 애플리케이션을 다시 작성하고 있습니다. 개발팀은 <strong>계정 A에서 Amazon EFS(Elastic File System)를 공유 스토리지</strong>로 사용하고 있습니다.<br><br>
+회사는 Lambda와 함께 Amazon EFS를 계속 사용하려고 합니다. 회사 정책에 따라 <strong>모든 서버리스 프로젝트는 계정 B에 배포</strong>해야 합니다.<br><br>
+DevOps 엔지니어는 기존 EFS 파일 시스템을 재구성하여 <strong>Lambda 함수가 기존 EFS 액세스 포인트를 통해 데이터에 액세스</strong>할 수 있도록 해야 합니다.<br><br>
+<strong>DevOps 엔지니어는 이러한 요구 사항을 충족하기 위해 어떤 단계 조합을 취해야 합니까? (세 가지를 선택하세요.)</strong>`,
+  en: `A company is using an organization in AWS Organizations to manage multiple AWS accounts. The development team is rewriting all applications to work with <strong>AWS Lambda functions deployed in a VPC</strong>. The development team is using <strong>Amazon EFS as shared storage in Account A</strong>.<br><br>
+The company wants to continue to use Amazon EFS with Lambda. Company policy requires <strong>all serverless projects to be deployed in Account B</strong>.<br><br>
+A DevOps engineer needs to reconfigure an existing EFS file system to allow <strong>Lambda functions to access the data through an existing EFS access point</strong>.<br><br>
+<strong>Which combination of steps should the DevOps engineer take to meet these requirements? (Choose three.)</strong>`,
+  type: 'multi',
+  multiCount: 3,
+  choices: [
+    {
+      k: 'A',
+      ko: `<strong>EFS 파일 시스템 정책을 업데이트</strong>하여 계정 B가 계정 A의 EFS 파일 시스템을 마운트하고 쓸 수 있는 액세스 권한을 부여합니다.`,
+      en: `<strong>Update the EFS file system policy</strong> to provide Account B with access to mount and write to the EFS file system in Account A.`
+    },
+    {
+      k: 'B',
+      ko: `Amazon EFS에 대한 세부적인 제어를 통해 권한 보호 장치를 설정하기 위해 <strong>SCP</strong>를 만듭니다.`,
+      en: `Create <strong>SCPs</strong> to set permission guardrails with fine-grained control for Amazon EFS.`
+    },
+    {
+      k: 'C',
+      ko: `계정 B에 <strong>새 EFS 파일 시스템</strong>을 만듭니다. <strong>AWS DMS</strong>를 사용하여 계정 A와 계정 B의 데이터를 동기화합니다.`,
+      en: `Create a <strong>new EFS file system</strong> in Account B. Use <strong>AWS DMS</strong> to keep data from Account A and Account B synchronized.`
+    },
+    {
+      k: 'D',
+      ko: `<strong>VPC 및 EFS 파일 시스템에 액세스할 수 있는 권한</strong>으로 Lambda 실행 역할을 업데이트합니다.`,
+      en: `Update the <strong>Lambda execution roles with permission to access the VPC and the EFS file system</strong>.`
+    },
+    {
+      k: 'E',
+      ko: `<strong>계정 A를 계정 B에 연결하기 위해 VPC 피어링 연결</strong>을 생성합니다.`,
+      en: `Create a <strong>VPC peering connection</strong> to connect Account A to Account B.`
+    },
+    {
+      k: 'F',
+      ko: `계정 B에서 Lambda 함수를 구성하여 <strong>계정 A의 기존 IAM 역할을 맡습니다(assume)</strong>.`,
+      en: `Configure the Lambda functions in Account B to <strong>assume an existing IAM role in Account A</strong>.`
+    }
+  ],
+  answer: ['A', 'D', 'E'],
+  vote: '75% ADE',
+  explain: `<p><span class="mark-ok">✅ A — EFS 파일 시스템 정책 업데이트</span></p>
+<p>계정 A의 EFS 파일 시스템 정책을 업데이트하여 계정 B의 IAM 주체가 마운트 및 쓰기 작업을 할 수 있도록 교차 계정 권한을 부여합니다.</p>
+<p><span class="mark-ok">✅ D — Lambda 실행 역할에 VPC 및 EFS 권한 추가</span></p>
+<p>계정 B의 Lambda 실행 역할에 VPC 접근 권한(<code>ec2:CreateNetworkInterface</code> 등)과 EFS 접근 권한(<code>elasticfilesystem:ClientMount</code> 등)을 부여합니다.</p>
+<p><span class="mark-ok">✅ E — VPC 피어링 연결</span></p>
+<p>EFS는 네트워크를 통해 접근합니다. 계정 A(EFS)와 계정 B(Lambda VPC) 사이에 VPC 피어링을 설정해야 Lambda가 EFS 마운트 타겟에 네트워크 접근이 가능합니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ B</span> — SCP는 조직 수준의 권한 제한 정책으로, EFS 접근 권한을 부여하는 용도가 아닙니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — 새 EFS를 만들고 DMS로 동기화하면 기존 EFS 액세스 포인트를 재사용하라는 요구 사항에 어긋납니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ F</span> — 계정 A의 IAM 역할을 맡는 것은 불필요합니다. Lambda 실행 역할(D)에 직접 EFS 권한을 부여하는 것으로 충분합니다. AWS Lambda EFS 문서에서도 실행 역할에 권한을 직접 부여하는 방식을 권장합니다.</p>`,
+  disc: [
+    {
+      ans: 'ADE (75%) vs AEF (19%)',
+      txt: '공식 문서: "Lambda 함수의 실행 역할은 VPC 및 EFS에 대한 접근 권한을 제공해야 합니다." D가 F보다 정확합니다. 참고: https://docs.aws.amazon.com/lambda/latest/dg/configuration-filesystem.html#configuration-filesystem-permissions'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q123
+// ──────────────────────────────────────────────
+{
+  n: 123,
+  ko: `미디어 회사가 AWS 계정에 수천 개의 Amazon EC2 인스턴스를 보유하고 있습니다. 이 회사는 <strong>Slack과 공유 이메일 받은 편지함</strong>을 사용하여 팀 커뮤니케이션과 중요한 업데이트를 진행합니다. DevOps 엔지니어는 <strong>모든 AWS 예약 EC2 유지 관리 알림</strong>을 Slack 채널과 공유 받은 편지함으로 보내야 합니다. 솔루션에는 <strong>인스턴스의 Name 태그와 Owner 태그</strong>가 포함되어야 합니다.<br><br>
+<strong>어떤 솔루션이 이러한 요구 사항을 충족할까요?</strong>`,
+  en: `A media company has several thousand Amazon EC2 instances in an AWS account. The company is using <strong>Slack and a shared email inbox</strong> for team communications and important updates. A DevOps engineer needs to send all <strong>AWS-scheduled EC2 maintenance notifications</strong> to the Slack channel and the shared inbox. The solution must include the instances' <strong>Name and Owner tags</strong>.<br><br>
+<strong>Which solution will meet these requirements?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `<strong>AWS Trusted Advisor를 AWS Config와 통합</strong>합니다. AWS Lambda 함수를 호출하여 Amazon SNS 토픽에 알림을 게시하도록 사용자 지정 AWS Config 규칙을 구성합니다.`,
+      en: `<strong>Integrate AWS Trusted Advisor with AWS Config</strong>. Configure a custom AWS Config rule to invoke an AWS Lambda function to publish notifications to an Amazon SNS topic.`
+    },
+    {
+      k: 'B',
+      ko: `<strong>Amazon EventBridge를 사용하여 AWS Health 이벤트를 모니터링</strong>합니다. 유지 관리 이벤트를 구성하여 <strong>Amazon SNS 주제를 대상</strong>으로 합니다. <strong>AWS Lambda 함수를 SNS 주제에 구독</strong>하여 Slack 채널과 공유 받은 편지함에 알림을 보냅니다.`,
+      en: `Use <strong>Amazon EventBridge to monitor for AWS Health events</strong>. Configure the maintenance events to target an <strong>Amazon SNS topic</strong>. Subscribe an <strong>AWS Lambda function to the SNS topic</strong> to send notifications to the Slack channel and the shared inbox.`
+    },
+    {
+      k: 'C',
+      ko: `Slack 채널과 공유된 받은 편지함에 EC2 유지 관리 알림을 보내는 <strong>AWS Lambda 함수</strong>를 만듭니다. <strong>Amazon CloudWatch 메트릭</strong>을 사용하여 EC2 상태 이벤트를 모니터링합니다.`,
+      en: `Create an <strong>AWS Lambda function</strong> that sends EC2 maintenance notifications to the Slack channel and the shared inbox. Monitor EC2 health events by using <strong>Amazon CloudWatch metrics</strong>.`
+    },
+    {
+      k: 'D',
+      ko: `<strong>AWS CloudTrail과 AWS Support 통합</strong>을 구성합니다. CloudTrail 조회 이벤트를 생성하여 AWS Lambda 함수를 호출하여 EC2 유지 관리 알림을 Amazon SNS로 전달합니다.`,
+      en: `Configure <strong>AWS CloudTrail and AWS Support integration</strong>. Create a CloudTrail lookup event to invoke an AWS Lambda function to pass EC2 maintenance notifications to Amazon SNS.`
+    }
+  ],
+  answer: ['B'],
+  vote: '100% B',
+  explain: `<p><span class="mark-ok">✅ B — EventBridge(AWS Health 이벤트) + SNS + Lambda</span></p>
+<p><strong>AWS Health</strong>는 EC2 예약 유지 관리 이벤트를 포함한 AWS 서비스 상태 정보를 제공합니다. <strong>Amazon EventBridge</strong>를 사용하면 AWS Health 이벤트를 실시간으로 감지하고 자동으로 처리할 수 있습니다.</p>
+<p>흐름: AWS Health 유지 관리 이벤트 → EventBridge 규칙 → SNS 토픽 → Lambda 함수 → Lambda가 인스턴스 태그(Name, Owner)를 조회하여 Slack 및 이메일로 알림 전송</p>
+<p>이 방식은 EC2 예약 유지 관리 알림의 표준 AWS 아키텍처 패턴입니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ A</span> — Trusted Advisor는 비용 최적화, 보안 등의 권고 사항을 제공하며 EC2 유지 관리 알림과 관련이 없습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — CloudWatch 메트릭은 EC2 유지 관리 예약 이벤트를 감지하지 않습니다. AWS Health 이벤트가 올바른 소스입니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ D</span> — CloudTrail은 API 호출 감사 서비스이며, AWS Support는 지원 계획 서비스입니다. 이 조합은 EC2 유지 관리 알림 요구 사항에 적합하지 않습니다.</p>`,
+  disc: [
+    {
+      ans: 'B (100%)',
+      txt: 'AWS Health 이벤트 + EventBridge는 EC2 유지 관리 알림의 공식 방법입니다. Lambda로 태그 정보(Name, Owner)를 포함한 맞춤형 알림을 구성할 수 있습니다. 참고: https://docs.aws.amazon.com/health/latest/ug/cloudwatch-events-health.html'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q124
+// ──────────────────────────────────────────────
+{
+  n: 124,
+  ko: `AWS CodePipeline 파이프라인이 코드 릴리스 프로세스를 구현했습니다. 파이프라인은 <strong>AWS CodeDeploy와 통합</strong>되어 각 CodePipeline 단계에 대해 여러 Amazon EC2 인스턴스에 애플리케이션 버전을 배포합니다.<br><br>
+최근 배포 중에 파이프라인이 CodeDeploy 문제로 인해 실패했습니다. DevOps 팀은 <strong>배포 중 모니터링 및 알림을 개선하여 해결 시간을 단축</strong>하고자 합니다.<br><br>
+<strong>DevOps 엔지니어는 문제가 발견될 때 알림을 생성하기 위해 무엇을 해야 합니까?</strong>`,
+  en: `An AWS CodePipeline pipeline has implemented a code release process. The pipeline is integrated with <strong>AWS CodeDeploy</strong> to deploy versions of an application to multiple Amazon EC2 instances for each CodePipeline stage.<br><br>
+During a recent deployment, the pipeline failed due to a CodeDeploy issue. The DevOps team wants to <strong>improve monitoring and notifications during deployment to decrease resolution times</strong>.<br><br>
+<strong>What should the DevOps engineer do to create notifications when issues are discovered?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `CodePipeline 및 CodeDeploy에 대한 <strong>Amazon CloudWatch Logs를 구현</strong>하고, 코드 배포 문제를 평가하기 위한 <strong>AWS Config 규칙</strong>을 생성하고, 배포 문제를 이해 관계자에게 알리기 위한 <strong>Amazon SNS 주제</strong>를 생성합니다.`,
+      en: `Implement <strong>Amazon CloudWatch Logs</strong> for CodePipeline and CodeDeploy, create an <strong>AWS Config rule</strong> to evaluate code deployment issues, and create an <strong>Amazon SNS topic</strong> to notify stakeholders of deployment issues.`
+    },
+    {
+      k: 'B',
+      ko: `CodePipeline 및 CodeDeploy에 대해 <strong>Amazon EventBridge를 구현</strong>하고, 코드 배포 문제를 평가하는 <strong>AWS Lambda 함수</strong>를 생성하고, 배포 문제를 이해 관계자에게 알리는 <strong>Amazon SNS 주제</strong>를 생성합니다.`,
+      en: `Implement <strong>Amazon EventBridge</strong> for CodePipeline and CodeDeploy, create an <strong>AWS Lambda function</strong> to evaluate code deployment issues, and create an <strong>Amazon SNS topic</strong> to notify stakeholders of deployment issues.`
+    },
+    {
+      k: 'C',
+      ko: `CodePipeline 및 CodeDeploy API 호출 정보를 기록하는 <strong>AWS CloudTrail을 구현</strong>하고, 코드 배포 문제를 평가하는 <strong>AWS Lambda 함수</strong>를 생성하고, 배포 문제를 이해 관계자에게 알리는 <strong>Amazon SNS 주제</strong>를 생성합니다.`,
+      en: `Implement <strong>AWS CloudTrail</strong> to record CodePipeline and CodeDeploy API call information, create an <strong>AWS Lambda function</strong> to evaluate code deployment issues, and create an <strong>Amazon SNS topic</strong> to notify stakeholders of deployment issues.`
+    },
+    {
+      k: 'D',
+      ko: `CodePipeline 및 CodeDeploy에 대해 <strong>Amazon EventBridge를 구현</strong>하고, 코드 배포 문제를 평가하기 위한 <strong>Amazon Inspector 평가 대상</strong>을 생성하고, 배포 문제를 이해 관계자에게 알리기 위한 <strong>Amazon SNS 주제</strong>를 생성합니다.`,
+      en: `Implement <strong>Amazon EventBridge</strong> for CodePipeline and CodeDeploy, create an <strong>Amazon Inspector assessment target</strong> to evaluate code deployment issues, and create an <strong>Amazon SNS topic</strong> to notify stakeholders of deployment issues.`
+    }
+  ],
+  answer: ['B'],
+  vote: '100% B',
+  explain: `<p><span class="mark-ok">✅ B — EventBridge + Lambda + SNS</span></p>
+<p><strong>Amazon EventBridge</strong>: CodePipeline과 CodeDeploy는 모두 EventBridge와 네이티브로 통합되어 파이프라인 상태 변경, 배포 실패 등의 이벤트를 실시간으로 감지합니다.</p>
+<p><strong>AWS Lambda</strong>: 이벤트 내용을 분석하여 문제 유형을 평가하고 알림 내용을 맞춤화합니다.</p>
+<p><strong>Amazon SNS</strong>: 이메일, Slack 등 다양한 채널로 이해 관계자에게 즉각 알림을 전송합니다.</p>
+<p>이 조합은 배포 중 실시간 모니터링 및 알림의 표준 패턴입니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ A</span> — CloudWatch Logs는 로그 수집 도구이며, AWS Config 규칙은 리소스 구성 준수 평가용입니다. 배포 중 실시간 이벤트 모니터링에 적합하지 않습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — CloudTrail은 API 호출 감사용으로 약 5분 지연이 있어 배포 중 실시간 알림에 적합하지 않습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ D</span> — Amazon Inspector는 취약점 스캔 서비스로, 배포 문제 평가와 관련이 없습니다.</p>`,
+  disc: [
+    {
+      ans: 'B (100%)',
+      txt: 'EventBridge는 CodePipeline/CodeDeploy 이벤트를 거의 실시간으로 캡처합니다. CloudTrail은 5분 지연이 있어 배포 중 실시간 모니터링에 부적합합니다.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q125
+// ──────────────────────────────────────────────
+{
+  n: 125,
+  ko: `글로벌 회사는 <strong>AWS Control Tower</strong>를 사용하여 여러 AWS 계정을 관리합니다. AWS Control Tower 멤버 계정 중 하나는 <strong>중앙 집중식 DevOps 계정</strong> 역할을 합니다. 중앙 집중식 DevOps 계정에 배포를 위한 IAM 역할이 있습니다.<br><br>
+애플리케이션 팀은 <strong>애플리케이션 AWS 계정의 Amazon EKS 클러스터</strong>에 애플리케이션을 배포하려고 합니다. 애플리케이션 AWS 계정에 배포를 위한 IAM 역할이 있습니다. 배포는 <strong>중앙 집중식 DevOps 계정에 설정된 AWS CodeBuild 프로젝트</strong>를 통해 이루어집니다. CodeBuild에서 교차 계정 EKS 클러스터에 연결하려고 시도하는 동안 <strong>배포가 권한 없음 오류로 실패</strong>합니다.<br><br>
+<strong>어떤 솔루션이 이 오류를 해결할까요?</strong>`,
+  en: `A global company manages multiple AWS accounts by using <strong>AWS Control Tower</strong>. One of the AWS Control Tower member accounts serves as a <strong>centralized DevOps account</strong>. An IAM role for deployment exists in the centralized DevOps account.<br><br>
+An application team is attempting to deploy its application to an <strong>Amazon EKS cluster in an application AWS account</strong>. An IAM role for deployment exists in the application AWS account. The deployment is through an <strong>AWS CodeBuild project set up in the centralized DevOps account</strong>. The deployment is failing with an <strong>Unauthorized error</strong> during attempts to connect to the cross-account EKS cluster from CodeBuild.<br><br>
+<strong>Which solution will resolve this error?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `<strong>애플리케이션 계정의 배포 IAM 역할</strong>을 중앙 DevOps 계정과 신뢰 관계를 갖도록 구성합니다. <code>sts:AssumeRole</code> 작업을 허용하도록 신뢰 관계를 구성합니다. 애플리케이션 계정의 배포 IAM 역할이 <strong>EKS 클러스터에 필요한 액세스 권한</strong>을 갖도록 구성합니다. <strong>EKS 클러스터 <code>aws-auth</code> ConfigMap</strong>을 구성하여 역할을 적절한 시스템 권한에 매핑합니다.`,
+      en: `Configure the <strong>application account's deployment IAM role</strong> to have a trust relationship with the centralized DevOps account. Configure the trust relationship to allow the <code>sts:AssumeRole</code> action. Configure the application account's deployment IAM role to have the <strong>required access to the EKS cluster</strong>. Configure the <strong>EKS cluster <code>aws-auth</code> ConfigMap</strong> to map the role to the appropriate system permissions.`
+    },
+    {
+      k: 'B',
+      ko: `<strong>중앙 DevOps 계정의 배포 IAM 역할</strong>을 애플리케이션 계정과 신뢰 관계를 갖도록 구성합니다. <code>sts:AssumeRole</code> 작업을 허용하도록 신뢰 관계를 구성합니다. 중앙 DevOps 계정의 배포 IAM 역할을 구성하여 CodeBuild에 필요한 액세스를 허용합니다.`,
+      en: `Configure the <strong>centralized DevOps account's deployment IAM role</strong> to have a trust relationship with the application account. Configure the trust relationship to allow the <code>sts:AssumeRole</code> action. Configure the centralized DevOps account's deployment IAM role to allow the required access to CodeBuild.`
+    },
+    {
+      k: 'C',
+      ko: `<strong>중앙 DevOps 계정의 배포 IAM 역할</strong>을 애플리케이션 계정과 신뢰 관계를 갖도록 구성합니다. <code>sts:AssumeRoleWithSAML</code> 작업을 허용하도록 신뢰 관계를 구성합니다.`,
+      en: `Configure the <strong>centralized DevOps account's deployment IAM role</strong> to have a trust relationship with the application account. Configure the trust relationship to allow the <code>sts:AssumeRoleWithSAML</code> action.`
+    },
+    {
+      k: 'D',
+      ko: `<strong>애플리케이션 계정의 배포 IAM 역할</strong>을 <strong>AWS Control Tower 관리 계정</strong>과 신뢰 관계를 갖도록 구성합니다. <code>sts:AssumeRole</code> 작업을 허용하도록 신뢰 관계를 구성합니다. 애플리케이션 계정의 배포 IAM 역할이 EKS 클러스터에 필요한 액세스 권한을 갖도록 구성합니다. EKS 클러스터 <code>aws-auth</code> ConfigMap을 구성하여 역할을 적절한 시스템 권한에 매핑합니다.`,
+      en: `Configure the <strong>application account's deployment IAM role</strong> to have a trust relationship with the <strong>AWS Control Tower management account</strong>. Configure the trust relationship to allow the <code>sts:AssumeRole</code> action. Configure the application account's deployment IAM role to have the required access to the EKS cluster. Configure the EKS cluster <code>aws-auth</code> ConfigMap to map the role to the appropriate system permissions.`
+    }
+  ],
+  answer: ['A'],
+  vote: '100% A',
+  explain: `<p><span class="mark-ok">✅ A — 애플리케이션 계정 역할에 중앙 DevOps 계정 신뢰 + EKS aws-auth 구성</span></p>
+<p>교차 계정 IAM 역할 맡기(assume)의 올바른 방향:</p>
+<p>① <strong>리소스가 있는 계정(애플리케이션 계정)</strong>의 IAM 역할이 <strong>접근하는 계정(중앙 DevOps 계정)</strong>을 신뢰해야 합니다.<br>
+② CodeBuild(중앙 DevOps)가 <code>sts:AssumeRole</code>로 애플리케이션 계정 역할을 맡아 EKS에 접근합니다.<br>
+③ EKS <code>aws-auth</code> ConfigMap에 해당 역할을 매핑해야 Kubernetes 수준의 권한이 부여됩니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ B, C</span> — 신뢰 관계 방향이 반대입니다. 리소스가 있는 애플리케이션 계정 역할이 DevOps 계정을 신뢰해야지, DevOps 계정 역할이 애플리케이션 계정을 신뢰하는 것이 아닙니다. C는 또한 SAML 페더레이션에 사용되는 AssumeRoleWithSAML을 잘못 사용합니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ D</span> — Control Tower 관리 계정과 신뢰 관계를 맺을 필요가 없습니다. 상호 작용은 중앙 DevOps 계정과 애플리케이션 계정 사이에서만 이루어집니다.</p>`,
+  disc: [
+    {
+      ans: 'A (100%)',
+      txt: '교차 계정 접근 시 "리소스가 있는 계정의 역할이 접근하는 계정을 신뢰"가 원칙입니다. EKS는 추가로 aws-auth ConfigMap에서 IAM 역할을 Kubernetes RBAC에 매핑해야 합니다.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q126
+// ──────────────────────────────────────────────
+{
+  n: 126,
+  ko: `엄격하게 규제되는 한 회사에서는 <strong>DevOps 엔지니어가 비상 시를 제외하고는 Amazon EC2 인스턴스에 로그인해서는 안 된다</strong>는 정책을 가지고 있습니다. DevOps 엔지니어가 로그인하는 경우 보안팀은 <strong>발생 후 15분 이내에 알림을 받아야</strong> 합니다.<br><br>
+<strong>어떤 솔루션이 이러한 요구 사항을 충족할까요?</strong>`,
+  en: `A highly regulated company has a policy that <strong>DevOps engineers should not log in to their Amazon EC2 instances except in emergencies</strong>. If a DevOps engineer does log in, the <strong>security team must be notified within 15 minutes</strong> of the occurrence.<br><br>
+<strong>Which solution will meet these requirements?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `각 EC2 인스턴스에 <strong>Amazon Inspector 에이전트를 설치</strong>합니다. Amazon EventBridge 알림을 구독합니다. AWS Lambda 함수를 호출하여 메시지가 사용자 로그인에 대한 것인지 확인합니다. 그렇다면 Amazon SNS를 사용하여 보안 팀에 알림을 보냅니다.`,
+      en: `Install the <strong>Amazon Inspector agent</strong> on each EC2 instance. Subscribe to Amazon EventBridge notifications. Invoke an AWS Lambda function to check if a message is about user logins. If it is, send a notification to the security team using Amazon SNS.`
+    },
+    {
+      k: 'B',
+      ko: `각 EC2 인스턴스에 <strong>Amazon CloudWatch 에이전트를 설치</strong>합니다. 에이전트를 구성하여 <strong>모든 로그를 Amazon CloudWatch Logs에 푸시</strong>하고 <strong>사용자 로그인을 검색하는 CloudWatch 메트릭 필터</strong>를 설정합니다. 로그인이 발견되면 Amazon SNS를 사용하여 보안 팀에 알림을 보냅니다.`,
+      en: `Install the <strong>Amazon CloudWatch agent</strong> on each EC2 instance. Configure the agent to <strong>push all logs to Amazon CloudWatch Logs</strong> and set up a <strong>CloudWatch metric filter that searches for user logins</strong>. If a login is found, send a notification to the security team using Amazon SNS.`
+    },
+    {
+      k: 'C',
+      ko: `<strong>Amazon CloudWatch Logs로 AWS CloudTrail을 설정</strong>합니다. CloudWatch Logs를 <strong>Amazon Kinesis에 구독</strong>합니다. AWS Lambda를 Kinesis에 연결하여 로그에 사용자 로그인이 포함되어 있는지 구문 분석하고 확인합니다. 포함되어 있으면 Amazon SNS를 사용하여 보안 팀에 알림을 보냅니다.`,
+      en: `Set up <strong>AWS CloudTrail with Amazon CloudWatch Logs</strong>. <strong>Subscribe CloudWatch Logs to Amazon Kinesis</strong>. Attach AWS Lambda to Kinesis to parse and determine if a log contains a user login. If it does, send a notification to the security team using Amazon SNS.`
+    },
+    {
+      k: 'D',
+      ko: `각 Amazon EC2 인스턴스에 스크립트를 설정하여 모든 로그를 <strong>Amazon S3에 푸시</strong>합니다. AWS Lambda 함수를 호출하는 S3 이벤트를 설정하여 <strong>Amazon Athena 쿼리</strong>를 호출하여 실행합니다.`,
+      en: `Set up a script on each Amazon EC2 instance to push all logs to <strong>Amazon S3</strong>. Set up an S3 event to invoke an AWS Lambda function, which invokes an <strong>Amazon Athena query</strong> to check for logins and sends the output to the security team using Amazon SNS.`
+    }
+  ],
+  answer: ['B'],
+  vote: '95% B',
+  explain: `<p><span class="mark-ok">✅ B — CloudWatch 에이전트 + 메트릭 필터 + SNS</span></p>
+<p><strong>CloudWatch 에이전트</strong>: EC2 인스턴스의 OS 레벨 로그(예: Linux <code>/var/log/secure</code>, <code>/var/log/auth.log</code>)를 CloudWatch Logs로 전송합니다.</p>
+<p><strong>CloudWatch 메트릭 필터</strong>: "sshd" 또는 "Accepted password/publickey" 등의 로그인 패턴을 실시간으로 검색하여 사용자 지정 메트릭을 발행합니다.</p>
+<p><strong>CloudWatch 알람 → SNS</strong>: 메트릭이 임계값을 초과하면 즉시 알람이 SNS를 통해 보안 팀에 알림을 전송합니다. 실시간에 가까운 처리로 15분 요구 사항을 충족합니다.</p>
+<p><strong>핵심</strong>: CloudTrail은 AWS API 호출만 기록하며 <strong>SSH/RDP 같은 OS 레벨 로그인은 캡처하지 않습니다</strong>. OS 로그인 감지에는 반드시 CloudWatch 에이전트가 필요합니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ A</span> — Amazon Inspector는 취약점 스캐닝 서비스로, EC2 OS 로그인 이벤트를 모니터링하지 않습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — CloudTrail은 AWS API 호출을 기록하며, SSH/RDP 등 OS 레벨 로그인은 캡처하지 않습니다. 따라서 EC2 인스턴스에 직접 로그인하는 이벤트를 감지할 수 없습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ D</span> — 수동 스크립트로 S3에 로그를 푸시하고 Athena로 쿼리하는 방식은 지연이 발생하여 15분 내 알림 요구 사항을 충족하기 어렵습니다.</p>`,
+  disc: [
+    {
+      ans: 'B (95%)',
+      txt: 'CloudTrail은 SSH/OS 로그인을 캡처하지 않습니다. CloudWatch 에이전트가 OS 로그를 CloudWatch Logs로 스트리밍하고, 메트릭 필터로 로그인 이벤트를 실시간 감지하는 것이 올바른 접근입니다. 참고: https://aws.amazon.com/blogs/security/how-to-monitor-and-visualize-failed-ssh-access-attempts-to-amazon-ec2-linux-instances/'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q127
+// ──────────────────────────────────────────────
+{
+  n: 127,
+  ko: `한 회사가 중요한 비즈니스 애플리케이션에 대한 <strong>AWS CloudFormation 템플릿을 업데이트</strong>했습니다. 업데이트된 템플릿의 오류로 인해 스택 업데이트 프로세스가 실패했고, AWS CloudFormation이 자동으로 스택 롤백 프로세스를 시작했습니다. 나중에 DevOps 엔지니어가 애플리케이션을 여전히 사용할 수 없고 스택이 <strong><code>UPDATE_ROLLBACK_FAILED</code> 상태</strong>임을 발견했습니다.<br><br>
+<strong>DevOps 엔지니어가 스택 롤백을 성공적으로 완료하려면 어떤 작업 조합을 수행해야 합니까? (두 가지를 선택하세요.)</strong>`,
+  en: `A company updated the <strong>AWS CloudFormation template</strong> for a critical business application. The stack update process failed due to an error in the updated template, and AWS CloudFormation automatically began the stack rollback process. Later, a DevOps engineer discovered that the application was still unavailable and that the stack was in the <strong><code>UPDATE_ROLLBACK_FAILED</code> state</strong>.<br><br>
+<strong>Which combination of actions should the DevOps engineer perform so that the stack rollback can complete successfully? (Choose two.)</strong>`,
+  type: 'multi',
+  multiCount: 2,
+  choices: [
+    {
+      k: 'A',
+      ko: `<code>AWSCloudFormationFullAccess</code> IAM 정책을 AWS CloudFormation 역할에 연결합니다.`,
+      en: `Attach the <code>AWSCloudFormationFullAccess</code> IAM policy to the AWS CloudFormation role.`
+    },
+    {
+      k: 'B',
+      ko: `<strong>AWS CloudFormation 드리프트 감지</strong>를 사용하여 스택 리소스를 자동으로 복구합니다.`,
+      en: `Automatically recover the stack resources by using <strong>AWS CloudFormation drift detection</strong>.`
+    },
+    {
+      k: 'C',
+      ko: `AWS CloudFormation 콘솔이나 AWS CLI에서 <strong><code>ContinueUpdateRollback</code> 명령을 실행</strong>합니다.`,
+      en: `Issue a <strong><code>ContinueUpdateRollback</code> command</strong> from the AWS CloudFormation console or the AWS CLI.`
+    },
+    {
+      k: 'D',
+      ko: `스택의 기대치에 맞춰 <strong>리소스를 수동으로 조정</strong>합니다.`,
+      en: `<strong>Manually adjust the resources</strong> to match the expectations of the stack.`
+    },
+    {
+      k: 'E',
+      ko: `<strong>원래 템플릿</strong>을 사용하여 기존 AWS CloudFormation 스택을 업데이트합니다.`,
+      en: `Update the existing AWS CloudFormation stack by using the <strong>original template</strong>.`
+    }
+  ],
+  answer: ['C', 'D'],
+  vote: '100% CD',
+  explain: `<p><span class="mark-ok">✅ C — ContinueUpdateRollback 명령 실행</span></p>
+<p><code>UPDATE_ROLLBACK_FAILED</code> 상태는 롤백 프로세스 자체가 실패했음을 의미합니다. <strong>ContinueUpdateRollback</strong> 명령은 실패한 지점에서 롤백을 재개할 수 있게 합니다.</p>
+<p><span class="mark-ok">✅ D — 리소스를 수동으로 조정</span></p>
+<p>롤백이 실패한 근본 원인은 일반적으로 리소스의 현재 상태가 CloudFormation이 기대하는 상태와 다르기 때문입니다(예: 다른 프로세스에 의해 잠긴 리소스). 리소스를 스택이 기대하는 상태로 수동으로 조정한 후 ContinueUpdateRollback을 실행해야 합니다.</p>
+<p>일반적인 순서: D(리소스 수동 수정) → C(ContinueUpdateRollback 실행)</p>`,
+  wrong: `<p><span class="mark-no">❌ A</span> — IAM 정책 추가는 이미 실패한 롤백의 근본 원인과 관련이 없습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ B</span> — 드리프트 감지는 스택 리소스가 예상치 못하게 변경되었는지 확인하는 도구이며, 자동 복구 기능을 제공하지 않습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ E</span> — 원래 템플릿으로 스택을 업데이트하는 것은 UPDATE_ROLLBACK_FAILED 상태에서 작동하지 않습니다. 먼저 롤백을 완료해야 합니다.</p>`,
+  disc: [
+    {
+      ans: 'CD (100%)',
+      txt: '대부분의 경우 UPDATE_ROLLBACK_FAILED 해결 순서: 1) 롤백 실패 원인(리소스 불일치 등) 파악 및 수동 수정(D), 2) ContinueUpdateRollback 실행(C). 참고: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q128
+// ──────────────────────────────────────────────
+{
+  n: 128,
+  ko: `개발팀은 <strong>로컬에서 아티팩트를 수동으로 빌드</strong>한 다음 Amazon S3 버킷에 넣습니다. 애플리케이션에는 배포가 발생할 때 <strong>지워야 하는 로컬 캐시</strong>가 있습니다. 팀은 이를 위해 명령을 실행하고 Amazon S3에서 아티팩트를 다운로드한 다음 아티팩트의 압축을 풀어 배포를 완료합니다.<br><br>
+DevOps팀은 <strong>CI/CD 프로세스로 마이그레이션</strong>하고 오류가 발생할 때 배포를 중지하고 롤백하는 검사를 빌드하려고 합니다. 이를 위해 팀은 <strong>배포 진행 상황을 추적</strong>해야 합니다.<br><br>
+<strong>어떤 작업 조합이 이를 달성할 수 있을까요? (세 가지를 선택하세요.)</strong>`,
+  en: `A development team <strong>manually builds an artifact locally</strong> and then places it in an Amazon S3 bucket. The application has a <strong>local cache that must be cleared</strong> when a deployment occurs. The team runs a command to do this, downloads the artifact from Amazon S3, and unzips the artifact to complete the deployment.<br><br>
+A DevOps team wants to <strong>migrate to a CI/CD process</strong> and build in checks to stop and roll back the deployment when a failure occurs. This requires the team to <strong>track the progression of the deployment</strong>.<br><br>
+<strong>Which combination of actions will accomplish this? (Choose three.)</strong>`,
+  type: 'multi',
+  multiCount: 3,
+  choices: [
+    {
+      k: 'A',
+      ko: `개발자가 코드를 코드 저장소에 체크인할 수 있도록 합니다. <strong>Amazon EventBridge를 사용하여 메인 브랜치로의 모든 풀에서 AWS Lambda 함수를 호출</strong>하여 아티팩트를 빌드하고 Amazon S3에 저장합니다.`,
+      en: `Allow developers to check the code into a code repository. Using <strong>Amazon EventBridge, on every pull into the main branch, invoke an AWS Lambda function</strong> to build the artifact and store it in Amazon S3.`
+    },
+    {
+      k: 'B',
+      ko: `캐시를 지우기 위한 <strong>사용자 지정 스크립트</strong>를 만듭니다. AppSpec 파일의 <strong>BeforeInstall 라이프사이클 후크</strong>에 스크립트를 지정합니다.`,
+      en: `Create a <strong>custom script</strong> to clear the cache. Specify the script in the <strong>BeforeInstall lifecycle hook</strong> in the AppSpec file.`
+    },
+    {
+      k: 'C',
+      ko: `캐시 지우기 스크립트가 포함된 각 Amazon EC2 인스턴스에 대한 <strong>사용자 데이터</strong>를 만듭니다. 배포되면 애플리케이션을 테스트합니다. 성공하지 못하면 다시 배포합니다.`,
+      en: `Create <strong>user data</strong> for each Amazon EC2 instance that contains the clear cache script. Once deployed, test the application. If it is not successful, deploy it again.`
+    },
+    {
+      k: 'D',
+      ko: `<strong>AWS CodePipeline을 설정</strong>하여 애플리케이션을 배포합니다. 개발자가 파이프라인의 <strong>소스로 코드 저장소에 코드를 체크인</strong>할 수 있도록 허용합니다.`,
+      en: `Set up <strong>AWS CodePipeline</strong> to deploy the application. Allow developers to <strong>check the code into a code repository as a source for the pipeline</strong>.`
+    },
+    {
+      k: 'E',
+      ko: `<strong>AWS CodeBuild</strong>를 사용하여 아티팩트를 빌드하고 Amazon S3에 배치합니다. <strong>AWS CodeDeploy</strong>를 사용하여 아티팩트를 Amazon EC2 인스턴스에 배포합니다.`,
+      en: `Use <strong>AWS CodeBuild</strong> to build the artifact and place it in Amazon S3. Use <strong>AWS CodeDeploy</strong> to deploy the artifact to Amazon EC2 instances.`
+    },
+    {
+      k: 'F',
+      ko: `<strong>AWS Systems Manager</strong>를 사용하여 Amazon S3에서 아티팩트를 가져와 모든 인스턴스에 배포합니다.`,
+      en: `Use <strong>AWS Systems Manager</strong> to fetch the artifact from Amazon S3 and deploy it to all the instances.`
+    }
+  ],
+  answer: ['B', 'D', 'E'],
+  vote: '100% BDE',
+  explain: `<p><span class="mark-ok">✅ B — AppSpec BeforeInstall 라이프사이클 후크로 캐시 삭제</span></p>
+<p>AWS CodeDeploy의 AppSpec 파일에서 <code>BeforeInstall</code> 라이프사이클 후크에 캐시 삭제 스크립트를 지정하면 새 버전 설치 전에 캐시가 자동으로 삭제됩니다.</p>
+<p><span class="mark-ok">✅ D — AWS CodePipeline 설정</span></p>
+<p>CodePipeline은 CI/CD 파이프라인 오케스트레이터로, 코드 저장소를 소스로 사용하고 빌드/배포 단계를 자동화하며 배포 진행 상황을 추적하고 오류 시 중단/롤백을 지원합니다.</p>
+<p><span class="mark-ok">✅ E — CodeBuild(빌드) + CodeDeploy(배포)</span></p>
+<p>CodeBuild는 자동화된 빌드 환경을 제공하고 아티팩트를 S3에 저장합니다. CodeDeploy는 배포를 자동화하고 롤백 기능을 제공하며 배포 진행 상황을 추적합니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ A</span> — EventBridge + Lambda로 빌드하는 것은 CodeBuild(E)와 중복되며 CI/CD 표준 도구가 아닙니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — 사용자 데이터는 인스턴스 시작 시 한 번만 실행됩니다. 배포 시마다 캐시를 삭제하는 용도로 적합하지 않습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ F</span> — Systems Manager는 배포 추적, 롤백, 라이프사이클 후크 등 CodeDeploy의 CI/CD 기능을 제공하지 않습니다.</p>`,
+  disc: [
+    {
+      ans: 'BDE (100%)',
+      txt: 'CI/CD 표준: CodePipeline(오케스트레이션) + CodeBuild(빌드) + CodeDeploy(배포). CodeDeploy AppSpec의 BeforeInstall 훅이 캐시 삭제 요구 사항을 해결합니다. 배포 진행 추적과 자동 롤백은 CodeDeploy/CodePipeline이 기본 제공합니다.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q129
+// ──────────────────────────────────────────────
+{
+  n: 129,
+  ko: `DevOps 엔지니어가 <strong>Amazon Linux에서 호스팅되는 프로젝트</strong>를 진행 중이며 보안 검토에 실패했습니다. DevOps 관리자는 AWS CodeBuild 프로젝트에 대한 회사 <strong>buildspec.yaml 파일</strong>을 검토하고 권장 사항을 제공하라는 요청을 받았습니다.<br><br>
+buildspec.yaml 파일에는 다음 보안 문제가 있습니다: 환경 변수에 <strong>AWS 액세스 키/시크릿 키가 하드코딩</strong>되어 있고, <strong>DB 비밀번호가 평문으로 환경 변수에 포함</strong>되어 있으며, <code>scp</code>와 <code>ssh</code> 명령을 사용하여 <strong>EC2 인스턴스에 직접 파일을 복사하고 접속</strong>하고 있습니다.<br><br>
+<strong>AWS 보안 모범 사례를 준수하기 위해 어떤 변경 사항을 권장해야 합니까? (세 가지를 선택하세요.)</strong>`,
+  en: `A DevOps engineer is working on a project hosted on <strong>Amazon Linux</strong> and has failed a security review. The DevOps manager has been asked to review the company <strong>buildspec.yaml file</strong> for an AWS CodeBuild project and provide recommendations.<br><br>
+The buildspec.yaml file has the following security issues: <strong>AWS access key/secret key hardcoded</strong> in environment variables, <strong>DB password stored in plaintext</strong> in environment variables, and using <code>scp</code> and <code>ssh</code> commands to <strong>directly copy files and connect to EC2 instances</strong>.<br><br>
+<strong>What changes should be recommended to comply with AWS security best practices? (Choose three.)</strong>`,
+  type: 'multi',
+  multiCount: 3,
+  choices: [
+    {
+      k: 'A',
+      ko: `다른 CodeBuild 사용자가 해당 파일을 볼 수 없도록 종료 전에 컨테이너에서 <strong>임시 파일을 제거하는 빌드 후 명령</strong>을 추가합니다.`,
+      en: `Add a <strong>post-build command to remove the temporary files</strong> from the container before termination to ensure they cannot be seen by other CodeBuild users.`
+    },
+    {
+      k: 'B',
+      ko: `필요한 권한으로 <strong>CodeBuild 프로젝트 역할을 업데이트</strong>한 다음 <strong>환경 변수에서 AWS 자격 증명을 제거</strong>합니다.`,
+      en: `<strong>Update the CodeBuild project role</strong> with the necessary permissions and then <strong>remove the AWS credentials from the environment variable</strong>.`
+    },
+    {
+      k: 'C',
+      ko: `<strong>AWS Systems Manager Parameter Store에 DB_PASSWORD를 SecureString 값으로 저장</strong>한 다음 환경 변수에서 DB_PASSWORD를 제거합니다.`,
+      en: `<strong>Store the DB_PASSWORD as a SecureString value in AWS Systems Manager Parameter Store</strong> and then remove the DB_PASSWORD from the environment variables.`
+    },
+    {
+      k: 'D',
+      ko: `환경 변수를 <code>db-deploy-bucket</code> Amazon S3 버킷으로 이동하고, 다운로드할 사전 빌드 단계를 추가한 다음 변수를 내보냅니다.`,
+      en: `Move the environment variables to the <code>db-deploy-bucket</code> Amazon S3 bucket, add a prebuild stage to download, then export the variables.`
+    },
+    {
+      k: 'E',
+      ko: `<code>scp</code> 및 <code>ssh</code> 명령 대신 <strong>AWS Systems Manager Run Command를 사용</strong>하여 인스턴스에 직접 명령을 실행합니다.`,
+      en: `Use <strong>AWS Systems Manager Run Command</strong> versus <code>scp</code> and <code>ssh</code> commands directly to the instance.`
+    },
+    {
+      k: 'F',
+      ko: `XOR을 사용한 후 Base64를 사용하여 환경 변수를 섞고 설치할 섹션을 추가한 다음 XOR과 Base64를 빌드 단계에 실행합니다.`,
+      en: `Scramble the environment variables using XOR followed by Base64, add a section to install, and then run XOR and Base64 to the build phase.`
+    }
+  ],
+  answer: ['B', 'C', 'E'],
+  vote: '81% BCE',
+  explain: `<p><span class="mark-ok">✅ B — CodeBuild IAM 역할 사용 + 하드코딩된 AWS 자격 증명 제거</span></p>
+<p>AWS 자격 증명을 환경 변수에 하드코딩하는 것은 심각한 보안 위반입니다. CodeBuild 프로젝트에 적절한 IAM 역할을 연결하면 인스턴스 메타데이터를 통해 임시 자격 증명이 자동으로 제공됩니다.</p>
+<p><span class="mark-ok">✅ C — DB 비밀번호를 SSM Parameter Store SecureString으로 이동</span></p>
+<p>평문 DB 비밀번호를 환경 변수에 저장하는 것은 위험합니다. SSM Parameter Store의 SecureString 타입은 KMS로 암호화하여 안전하게 저장하고 빌드 시 동적으로 참조할 수 있습니다.</p>
+<p><span class="mark-ok">✅ E — scp/ssh 대신 Systems Manager Run Command 사용</span></p>
+<p>SSH 포트(22) 오픈 및 SSH 키 관리는 보안 위험입니다. SSM Run Command는 네트워크 포트를 열지 않고 안전하게 EC2 인스턴스에 명령을 실행할 수 있습니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ A</span> — CodeBuild는 관리형 서비스로, 빌드 완료 후 컨테이너가 자동으로 삭제됩니다. 다른 사용자가 컨테이너 내용을 볼 수 없으므로 이 조치는 불필요합니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ D</span> — S3 버킷에 평문 환경 변수를 저장하는 것도 보안 모범 사례에 부합하지 않습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ F</span> — XOR/Base64는 실제 암호화가 아니며 보안 모범 사례와 거리가 멉니다.</p>`,
+  disc: [
+    {
+      ans: 'BCE (81%) vs ABC (19%)',
+      txt: 'A 옵션(임시 파일 제거)이 보안과 관련 있어 보이지만, CodeBuild 컨테이너는 각 빌드 후 자동 폐기되어 다른 사용자가 접근 불가합니다. E(SSM Run Command)가 scp/ssh 보안 문제를 직접 해결합니다.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q130
+// ──────────────────────────────────────────────
+{
+  n: 130,
+  ko: `회사에 레거시 애플리케이션이 있습니다. DevOps 엔지니어는 <strong>레거시 애플리케이션의 배포 가능한 아티팩트를 빌드하는 프로세스를 자동화</strong>해야 합니다. 솔루션은 향후 배포에서 참조할 수 있도록 <strong>배포 가능한 아티팩트를 기존 Amazon S3 버킷에 저장</strong>해야 합니다.<br><br>
+<strong>어떤 솔루션이 가장 운영적으로 효율적인 방식으로 이러한 요구 사항을 충족할까요?</strong>`,
+  en: `A company has a legacy application. A DevOps engineer needs to <strong>automate the process of building the deployable artifact</strong> for the legacy application. The solution must <strong>store the deployable artifact in an existing Amazon S3 bucket</strong> for future deployments to reference.<br><br>
+<strong>Which solution will meet these requirements in the MOST operationally efficient way?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `레거시 애플리케이션의 모든 종속성을 포함하는 <strong>사용자 지정 Docker 이미지</strong>를 만듭니다. 사용자 지정 Docker 이미지를 새 <strong>Amazon ECR 리포지토리</strong>에 저장합니다. 사용자 지정 Docker 이미지를 사용하여 배포 가능한 아티팩트를 빌드하고 아티팩트를 S3 버킷에 저장하도록 새 <strong>AWS CodeBuild 프로젝트</strong>를 구성합니다.`,
+      en: `Create a <strong>custom Docker image</strong> that contains all the dependencies for the legacy application. Store the custom Docker image in a new <strong>Amazon ECR repository</strong>. Configure a new <strong>AWS CodeBuild project</strong> to use the custom Docker image to build the deployable artifact and to save the artifact to the S3 bucket.`
+    },
+    {
+      k: 'B',
+      ko: `새 <strong>Amazon EC2 인스턴스</strong>를 시작합니다. EC2 인스턴스에 레거시 애플리케이션의 모든 종속성을 설치합니다. EC2 인스턴스를 사용하여 배포 가능한 아티팩트를 빌드하고 아티팩트를 S3 버킷에 저장합니다.`,
+      en: `Launch a new <strong>Amazon EC2 instance</strong>. Install all the dependencies for the legacy application on the EC2 instance. Use the EC2 instance to build the deployable artifact and to save the artifact to the S3 bucket.`
+    },
+    {
+      k: 'C',
+      ko: `사용자 지정 <strong>EC2 Image Builder 이미지</strong>를 만듭니다. 이미지에 레거시 애플리케이션의 모든 종속성을 설치합니다. 이미지에서 새 Amazon EC2 인스턴스를 시작합니다. 새 EC2 인스턴스를 사용하여 배포 가능한 아티팩트를 빌드하고 아티팩트를 S3 버킷에 저장합니다.`,
+      en: `Create a custom <strong>EC2 Image Builder image</strong>. Install all the dependencies for the legacy application on the image. Launch a new Amazon EC2 instance from the image. Use the new EC2 instance to build the deployable artifact and to save the artifact to the S3 bucket.`
+    },
+    {
+      k: 'D',
+      ko: `여러 가용성 영역에서 실행되는 <strong>AWS Fargate 프로필이 있는 Amazon EKS 클러스터</strong>를 만듭니다. 사용자 지정 Docker 이미지를 만들고 새 Amazon ECR 리포지토리에 저장합니다. EKS 클러스터 내부의 사용자 지정 Docker 이미지를 사용하여 배포 가능한 아티팩트를 빌드하고 아티팩트를 S3 버킷에 저장합니다.`,
+      en: `Create an <strong>Amazon EKS cluster with an AWS Fargate profile</strong> that runs in multiple Availability Zones. Create a custom Docker image and store it in a new Amazon ECR repository. Use the custom Docker image inside the EKS cluster to build the deployable artifact and to save the artifact to the S3 bucket.`
+    }
+  ],
+  answer: ['A'],
+  vote: '100% A',
+  explain: `<p><span class="mark-ok">✅ A — 사용자 지정 Docker 이미지(ECR) + AWS CodeBuild</span></p>
+<p><strong>사용자 지정 Docker 이미지</strong>: 레거시 애플리케이션의 특수한 종속성(특정 언어 버전, 라이브러리 등)을 Docker 이미지에 패키징하여 일관된 빌드 환경을 보장합니다.</p>
+<p><strong>Amazon ECR</strong>: Docker 이미지를 안전하게 저장하고 버전 관리합니다.</p>
+<p><strong>AWS CodeBuild</strong>: 완전 관리형 빌드 서비스로, 서버 관리 없이 자동화된 빌드를 실행하고 결과를 S3에 저장합니다. 온디맨드 실행으로 비용 효율적입니다.</p>
+<p>이 조합이 가장 운영 효율적인 이유: EC2 인스턴스를 상시 운영할 필요 없고, 빌드 시에만 컨테이너가 실행됩니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ B</span> — EC2 인스턴스를 수동으로 유지 관리하는 것은 운영 오버헤드가 높습니다. 자동화도 제한적입니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — EC2 Image Builder로 AMI를 만들고 EC2 인스턴스를 시작하는 방식은 불필요한 복잡성을 추가합니다. CodeBuild가 훨씬 간단합니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ D</span> — EKS + Fargate는 빌드 자동화를 위한 과도한 인프라입니다. 운영 효율성이 매우 낮습니다.</p>`,
+  disc: [
+    {
+      ans: 'A (100%)',
+      txt: '레거시 앱의 특수 종속성은 Docker 이미지로 캡슐화하고, CodeBuild로 서버리스 빌드 자동화를 구현합니다. 이것이 AWS에서 권장하는 가장 운영 효율적인 CI/CD 빌드 패턴입니다.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q131
+// ──────────────────────────────────────────────
+{
+  n: 131,
+  ko: `한 회사가 <strong>Docker 명령을 실행하여 AWS CodeBuild 프로젝트에서 컨테이너 이미지를 빌드</strong>합니다. 컨테이너 이미지가 빌드된 후 CodeBuild 프로젝트는 컨테이너 이미지를 <strong>Amazon S3 버킷에 업로드</strong>합니다. CodeBuild 프로젝트에는 S3 버킷에 액세스할 수 있는 권한이 있는 IAM 서비스 역할이 있습니다.<br><br>
+DevOps 엔지니어는 컨테이너 이미지를 저장하기 위해 S3 버킷을 <strong>Amazon ECR 프라이빗 리포지토리로 교체</strong>해야 합니다. DevOps 엔지니어는 ECR 리포지토리를 만들고, IAM 서비스 역할을 조정하고, <code>buildspec.yml</code> 파일에서 사용되는 <code>docker build</code>와 <code>docker push</code> 명령에 새 리포지토리 정보를 넣었습니다.<br><br>
+CodeBuild 프로젝트에서 빌드 작업을 실행하면 <strong>작업이 ECR 리포지토리에 액세스하려고 하면 실패</strong>합니다.<br><br>
+<strong>ECR 리포지토리에 대한 액세스 실패 문제를 해결하는 솔루션은 무엇입니까?</strong>`,
+  en: `A company builds a container image in an AWS CodeBuild project by running Docker commands. After the container image is built, the CodeBuild project uploads the container image to an <strong>Amazon S3 bucket</strong>. The CodeBuild project has an IAM service role with permissions to access the S3 bucket.<br><br>
+A DevOps engineer needs to replace the S3 bucket with an <strong>Amazon ECR private repository</strong> to store the container images. The DevOps engineer creates an ECR repository, adjusts the IAM service role, and places new repository information into the <code>docker build</code> and <code>docker push</code> commands in the <code>buildspec.yml</code> file.<br><br>
+When the CodeBuild project runs a build job, the job <strong>fails when the job tries to access the ECR repository</strong>.<br><br>
+<strong>Which solution will resolve the issue of failed access to the ECR repository?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `<code>buildspec.yml</code> 파일을 업데이트하여 <strong><code>aws ecr get-login-password</code></strong> AWS CLI 명령을 사용하여 ECR 저장소에 로그인하여 인증 토큰을 얻습니다. <strong><code>docker login</code></strong> 명령을 업데이트하여 인증 토큰을 사용하여 ECR 저장소에 액세스합니다.`,
+      en: `Update the <code>buildspec.yml</code> file to log in to the ECR repository by using the <strong><code>aws ecr get-login-password</code></strong> AWS CLI command to obtain an authentication token. Update the <strong><code>docker login</code></strong> command to use the authentication token to access the ECR repository.`
+    },
+    {
+      k: 'B',
+      ko: `CodeBuild 프로젝트에 <code>SECRETS_MANAGER</code> 유형의 환경 변수를 추가합니다. 환경 변수에 CodeBuild 프로젝트의 IAM 서비스 역할의 ARN을 포함합니다. <code>buildspec.yml</code> 파일을 업데이트하여 새 환경 변수를 사용하여 <code>docker login</code> 명령으로 로그인합니다.`,
+      en: `Add an environment variable of type <code>SECRETS_MANAGER</code> to the CodeBuild project. In the environment variable, include the ARN of the CodeBuild project's IAM service role. Update the <code>buildspec.yml</code> file to use the new environment variable to log in with the <code>docker login</code> command.`
+    },
+    {
+      k: 'C',
+      ko: `ECR 저장소를 <strong>공개 이미지 저장소</strong>로 업데이트합니다. IAM 서비스 역할이 액세스할 수 있도록 허용하는 ECR 저장소 정책을 추가합니다.`,
+      en: `Update the ECR repository to be a <strong>public image repository</strong>. Add an ECR repository policy that allows the IAM service role to have access.`
+    },
+    {
+      k: 'D',
+      ko: `<code>buildspec.yml</code> 파일을 업데이트하여 AWS CLI를 사용하여 ECR 작업에 대한 IAM 서비스 역할을 맡습니다. IAM 서비스 역할이 액세스할 수 있도록 허용하는 ECR 저장소 정책을 추가합니다.`,
+      en: `Update the <code>buildspec.yml</code> file to use the AWS CLI to assume the IAM service role for ECR operations. Add an ECR repository policy that allows the IAM service role to have access.`
+    }
+  ],
+  answer: ['A'],
+  vote: '100% A',
+  explain: `<p><span class="mark-ok">✅ A — aws ecr get-login-password + docker login</span></p>
+<p>Amazon ECR은 Docker Hub와 달리 <strong>인증 토큰(authentication token)</strong>이 필요합니다. ECR로 이미지를 푸시하거나 풀하기 전에 반드시 인증 과정을 거쳐야 합니다.</p>
+<p>buildspec.yml pre_build 단계에서의 올바른 순서:</p>
+<p><code>$(aws ecr get-login-password --region region) | docker login --username AWS --password-stdin account-id.dkr.ecr.region.amazonaws.com</code></p>
+<p>IAM 역할에 ECR 권한(<code>ecr:GetAuthorizationToken</code>, <code>ecr:BatchCheckLayerAvailability</code>, <code>ecr:PutImage</code> 등)이 이미 설정되어 있으므로, 누락된 것은 인증 토큰 획득 과정입니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ B</span> — Secrets Manager에 IAM 역할 ARN을 저장하는 것은 ECR 인증 방식이 아닙니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — ECR을 공개 리포지토리로 변경하는 것은 보안 위험이 있으며, 문제의 근본 원인(인증 토큰 부재)을 해결하지 않습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ D</span> — CodeBuild는 이미 IAM 서비스 역할을 사용하고 있습니다. 역할을 다시 맡는 것은 불필요하며, 문제는 Docker가 ECR에 인증하지 않은 것입니다.</p>`,
+  disc: [
+    {
+      ans: 'A (100%)',
+      txt: 'ECR은 S3와 달리 Docker 클라이언트 인증이 필요합니다. aws ecr get-login-password | docker login 명령이 필수입니다. IAM 권한이 있더라도 Docker 인증을 별도로 수행해야 합니다.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q132
+// ──────────────────────────────────────────────
+{
+  n: 132,
+  ko: `회사에서 직원의 <strong>IAM 액세스를 수동으로 프로비저닝</strong>합니다. 회사에서는 수동 프로세스를 <strong>자동화된 프로세스로 대체</strong>하려고 합니다. 회사에는 <strong>외부 SAML 2.0 ID 공급자(IdP)로 구성된 기존 Active Directory</strong> 시스템이 있습니다.<br><br>
+이 회사는 직원이 <strong>기존 회사 자격 증명을 사용하여 AWS에 액세스</strong>하기를 원합니다. <strong>기존 Active Directory 시스템의 그룹은 AWS IAM에서 권한 관리에 사용</strong>할 수 있어야 합니다. DevOps 엔지니어가 회사의 AWS 계정에서 <strong>AWS IAM Identity Center(AWS Single Sign-On)</strong>의 초기 구성을 완료했습니다.<br><br>
+<strong>DevOps 엔지니어는 요구 사항을 충족하기 위해 다음에 무엇을 해야 합니까?</strong>`,
+  en: `A company <strong>manually provisions IAM access</strong> for its employees. The company wants to <strong>replace the manual process with an automated process</strong>. The company has an existing Active Directory system configured with an <strong>external SAML 2.0 identity provider (IdP)</strong>.<br><br>
+The company wants employees to <strong>use their existing corporate credentials to access AWS</strong>. <strong>The groups from the existing Active Directory system must be available for permission management in AWS IAM</strong>. A DevOps engineer has completed the initial configuration of <strong>AWS IAM Identity Center (AWS Single Sign-On)</strong> in the company's AWS account.<br><br>
+<strong>What should the DevOps engineer do next to meet the requirements?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `<strong>외부 IdP를 ID 소스로 구성</strong>합니다. <strong>SCIM 프로토콜</strong>을 사용하여 사용자 및 그룹의 자동 프로비저닝을 구성합니다.`,
+      en: `Configure an <strong>external IdP as an identity source</strong>. Configure automatic provisioning of users and groups by using the <strong>SCIM protocol</strong>.`
+    },
+    {
+      k: 'B',
+      ko: `<strong>AWS Directory Service를 ID 소스로 구성</strong>합니다. SAML 프로토콜을 사용하여 사용자 및 그룹의 자동 프로비저닝을 구성합니다.`,
+      en: `Configure <strong>AWS Directory Service as an identity source</strong>. Configure automatic provisioning of users and groups by using the SAML protocol.`
+    },
+    {
+      k: 'C',
+      ko: `<strong>AD 커넥터를 ID 소스로 구성</strong>합니다. SCIM 프로토콜을 사용하여 사용자 및 그룹의 자동 프로비저닝을 구성합니다.`,
+      en: `Configure an <strong>AD Connector as an identity source</strong>. Configure automatic provisioning of users and groups by using the SCIM protocol.`
+    },
+    {
+      k: 'D',
+      ko: `<strong>외부 IdP를 ID 소스로 구성</strong>합니다. <strong>SAML 프로토콜</strong>을 사용하여 사용자 및 그룹의 자동 프로비저닝을 구성합니다.`,
+      en: `Configure an <strong>external IdP as an identity source</strong>. Configure automatic provisioning of users and groups by using the <strong>SAML protocol</strong>.`
+    }
+  ],
+  answer: ['A'],
+  vote: '92% A',
+  explain: `<p><span class="mark-ok">✅ A — 외부 IdP + SCIM 프로토콜</span></p>
+<p>두 가지 핵심 요소:</p>
+<p><strong>외부 IdP (ID 소스)</strong>: 회사는 이미 SAML 2.0 외부 IdP를 사용하고 있으므로, IAM Identity Center의 ID 소스로 외부 IdP를 구성해야 합니다. 이를 통해 직원이 기존 회사 자격 증명으로 SSO 로그인이 가능합니다.</p>
+<p><strong>SCIM (자동 프로비저닝)</strong>: SAML은 인증(Authentication) 프로토콜이고, <strong>SCIM(System for Cross-domain Identity Management)</strong>은 사용자 및 그룹 프로비저닝 프로토콜입니다. Active Directory의 그룹을 AWS IAM Identity Center에 자동으로 동기화하려면 SCIM이 필요합니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ B</span> — AWS Directory Service를 ID 소스로 사용하는 것은 외부 SAML IdP 기반 인증을 요구하는 이 시나리오와 맞지 않습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — AD 커넥터는 온프레미스 Active Directory와 AWS Active Directory를 연결하는 용도입니다. IAM Identity Center의 외부 IdP 통합과는 다릅니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ D</span> — SAML은 인증 프로토콜이지 사용자/그룹 프로비저닝 프로토콜이 아닙니다. 자동 프로비저닝(그룹 동기화)에는 SCIM이 필요합니다.</p>`,
+  disc: [
+    {
+      ans: 'A (92%)',
+      txt: 'SAML vs SCIM 구분: SAML = 인증(로그인), SCIM = 프로비저닝(계정/그룹 생성 자동화). 두 프로토콜은 보완적으로 함께 사용됩니다. 참고: https://docs.aws.amazon.com/singlesignon/latest/userguide/scim-profile-saml.html'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q133
+// ──────────────────────────────────────────────
+{
+  n: 133,
+  ko: `한 회사가 AWS를 사용하여 디지털 워크로드를 실행하고 있습니다. 회사의 각 애플리케이션 팀은 자체 AWS 계정을 가지고 있습니다. 계정은 <strong>AWS Organizations</strong>의 조직에 통합되어 있습니다.<br><br>
+이 회사는 전체 조직에서 <strong>보안 표준을 시행</strong>하고자 합니다. 보안 오류로 인한 불이행을 방지하기 위해 이 회사는 <strong>AWS CloudFormation 사용을 시행</strong>했습니다. 프로덕션 지원 팀은 AWS Management Console을 사용하여 프로덕션 환경의 리소스를 수정할 수 있습니다.<br><br>
+DevOps 엔지니어는 <strong>불이행으로 이어지는 AWS 서비스 오류 구성을 거의 실시간으로 식별</strong>하는 솔루션을 구현해야 합니다. 이 솔루션은 <strong>식별 후 15분 이내에 문제를 자동으로 해결</strong>해야 합니다. 또한 이 솔루션은 정확한 타임스탬프가 있는 <strong>중앙 대시보드에서 불이행 리소스와 이벤트를 추적</strong>해야 합니다.<br><br>
+<strong>어떤 솔루션이 이러한 요구 사항을 가장 적은 개발 오버헤드로 충족할까요?</strong>`,
+  en: `A company is using AWS to run digital workloads. Each application team has its own AWS account. The accounts are consolidated in an organization in <strong>AWS Organizations</strong>.<br><br>
+The company wants to <strong>enforce security standards</strong> across the entire organization. To avoid noncompliance because of security misconfiguration, the company has <strong>enforced the use of AWS CloudFormation</strong>. A production support team can modify resources in the production environment by using the AWS Management Console.<br><br>
+A DevOps engineer must implement a solution to <strong>identify in near real time any AWS service misconfiguration that results in noncompliance</strong>. The solution must <strong>automatically remediate the issue within 15 minutes</strong> of identification. The solution also must <strong>track noncompliant resources and events in a centralized dashboard</strong> with accurate timestamps.<br><br>
+<strong>Which solution will meet these requirements with the LEAST development overhead?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `<strong>CloudFormation 드리프트 감지</strong>를 사용하여 비준수 리소스를 식별합니다. CloudFormation의 드리프트 감지 이벤트를 사용하여 수정을 위해 <strong>AWS Lambda 함수를 호출</strong>합니다. Lambda 함수를 구성하여 <strong>Amazon CloudWatch Logs</strong> 로그 그룹에 로그를 게시합니다. <strong>Amazon CloudWatch 대시보드</strong>를 구성하여 추적합니다.`,
+      en: `Use <strong>CloudFormation drift detection</strong> to identify noncompliant resources. Use drift detection events from CloudFormation to invoke an <strong>AWS Lambda function</strong> for remediation. Configure the Lambda function to publish logs to an <strong>Amazon CloudWatch Logs</strong> log group. Configure an <strong>Amazon CloudWatch dashboard</strong> to use the log group for tracking.`
+    },
+    {
+      k: 'B',
+      ko: `AWS 계정에서 <strong>AWS CloudTrail</strong>을 켭니다. <strong>Amazon Athena</strong>를 사용하여 CloudTrail 로그를 분석하여 비준수 리소스를 식별합니다. <strong>AWS Step Functions</strong>를 사용하여 Athena에서 드리프트 감지를 위한 쿼리 결과를 추적하고 수정을 위해 Lambda 함수를 호출합니다.`,
+      en: `Turn on <strong>AWS CloudTrail</strong> in the AWS accounts. Analyze CloudTrail logs by using <strong>Amazon Athena</strong> to identify noncompliant resources. Use <strong>AWS Step Functions</strong> to track query results on Athena for drift detection and to invoke an AWS Lambda function for remediation.`
+    },
+    {
+      k: 'C',
+      ko: `모든 AWS 계정에서 <strong>AWS Config의 구성 레코더를 활성화</strong>하여 비준수 리소스를 식별합니다. 모든 AWS 계정에서 <code>--no-enable-default-standards</code> 옵션으로 <strong>AWS Security Hub를 활성화</strong>합니다. <strong>AWS Config 관리 규칙과 사용자 지정 규칙</strong>을 설정합니다. <strong>AWS Config 적합성 팩</strong>을 사용하여 자동 수정을 설정합니다. 추적을 위해 지정된 <strong>Security Hub 관리자 계정에서 Security Hub 대시보드</strong>를 설정합니다.`,
+      en: `Turn on the <strong>configuration recorder in AWS Config</strong> in all the AWS accounts to identify noncompliant resources. Enable <strong>AWS Security Hub</strong> with the <code>--no-enable-default-standards</code> option in all the AWS accounts. Set up <strong>AWS Config managed rules and custom rules</strong>. Set up automatic remediation by using <strong>AWS Config conformance packs</strong>. For tracking, set up a dashboard on <strong>Security Hub in a designated Security Hub administrator account</strong>.`
+    },
+    {
+      k: 'D',
+      ko: `AWS 계정에서 <strong>AWS CloudTrail</strong>을 켭니다. <strong>Amazon CloudWatch Logs</strong>를 사용하여 CloudTrail 로그를 분석하여 규정을 준수하지 않는 리소스를 식별합니다. CloudWatch Logs 필터를 사용하여 드리프트 감지를 합니다. <strong>Amazon EventBridge</strong>를 사용하여 Lambda 함수를 호출하여 수정합니다. 필터링된 CloudWatch 로그를 <strong>Amazon OpenSearch Service</strong>로 스트리밍합니다. OpenSearch 대시보드를 추적에 사용합니다.`,
+      en: `Turn on <strong>AWS CloudTrail</strong> in the AWS accounts. Analyze CloudTrail logs by using <strong>Amazon CloudWatch Logs</strong> to identify noncompliant resources. Use CloudWatch Logs filters for drift detection. Use <strong>Amazon EventBridge</strong> to invoke the Lambda function for remediation. Stream filtered CloudWatch logs to <strong>Amazon OpenSearch Service</strong>. Set up a dashboard on OpenSearch Service for tracking.`
+    }
+  ],
+  answer: ['C'],
+  vote: '89% C',
+  explain: `<p><span class="mark-ok">✅ C — AWS Config + Security Hub + 적합성 팩</span></p>
+<p><strong>AWS Config</strong>: 리소스 구성 변경을 거의 실시간으로 감지하고 규칙(준수/비준수)을 평가합니다. "보안 구성 오류로 인한 불이행" 식별에 최적의 서비스입니다.</p>
+<p><strong>AWS Config 적합성 팩(Conformance Packs)</strong>: 여러 Config 규칙과 수정 작업을 묶어 자동 수정(auto-remediation)을 구성합니다. 15분 내 자동 수정 요구 사항을 충족합니다.</p>
+<p><strong>AWS Security Hub</strong>: 조직 전체 계정의 보안 결과를 <strong>중앙 대시보드</strong>에서 통합 추적합니다. 타임스탬프가 포함된 비준수 리소스 추적이 가능합니다.</p>
+<p>개발 오버헤드 최소: 모두 AWS 관리형 서비스의 내장 기능을 활용하며 Lambda 개발이 불필요합니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ A</span> — CloudFormation 드리프트 감지는 스택 리소스의 드리프트를 감지하지만, 콘솔에서 직접 수정한 일반 리소스 구성 오류를 실시간으로 감지하는 데 제한적입니다. Lambda 개발도 필요합니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ B, D</span> — CloudTrail + Athena/CloudWatch 분석은 거의 실시간이 아닌 지연이 있으며, 개발 오버헤드(Step Functions, Athena 쿼리, OpenSearch)가 매우 높습니다.</p>`,
+  disc: [
+    {
+      ans: 'C (89%)',
+      txt: '규정 준수(compliance) 관련 문제는 AWS Config가 표준 솔루션입니다. Config + Security Hub 조합이 중앙 대시보드와 자동 수정을 최소 개발로 제공합니다.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q134
+// ──────────────────────────────────────────────
+{
+  n: 134,
+  ko: `한 회사에서 <strong>AWS Organizations</strong>를 사용하여 AWS 계정을 관리합니다. 조직 루트에는 <strong>Environments</strong>라는 OU가 있습니다. Environments OU에는 각각 <strong>Development</strong>와 <strong>Production</strong>이라는 두 개의 자식 OU가 있습니다.<br><br>
+Environments OU와 자식 OU에는 <strong>기본 FullAWSAccess 정책</strong>이 있습니다. DevOps 엔지니어는 <strong>Development OU에서 FullAWSAccess 정책을 제거</strong>하고 <strong>Amazon EC2 리소스에서 모든 작업을 허용하는 정책으로 대체</strong>할 계획입니다.<br><br>
+<strong>이 정책 대체의 결과는 무엇일까요?</strong>`,
+  en: `A company uses <strong>AWS Organizations</strong> to manage its AWS accounts. The organization root has an OU named <strong>Environments</strong>. The Environments OU has two child OUs named <strong>Development</strong> and <strong>Production</strong>.<br><br>
+The Environments OU and the child OUs have the <strong>default FullAWSAccess policy</strong>. A DevOps engineer plans to <strong>remove the FullAWSAccess policy from the Development OU</strong> and <strong>replace it with a policy that allows all actions on Amazon EC2 resources</strong>.<br><br>
+<strong>What will be the outcome of this policy replacement?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `개발 OU의 모든 사용자는 모든 리소스에 대한 모든 API 작업이 허용됩니다.`,
+      en: `All users in the Development OU will be allowed all API actions on all resources.`
+    },
+    {
+      k: 'B',
+      ko: `개발 OU의 모든 사용자는 <strong>EC2 리소스에서 모든 API 작업이 허용</strong>됩니다. <strong>다른 모든 API 작업은 거부</strong>됩니다.`,
+      en: `All users in the Development OU will be <strong>allowed all API actions on EC2 resources</strong>. <strong>All other API actions will be denied</strong>.`
+    },
+    {
+      k: 'C',
+      ko: `개발 OU의 모든 사용자는 모든 리소스에 대한 모든 API 작업이 거부됩니다.`,
+      en: `All users in the Development OU will be denied all API actions on all resources.`
+    },
+    {
+      k: 'D',
+      ko: `개발 OU의 모든 사용자는 EC2 리소스에서 모든 API 작업이 거부됩니다. 다른 모든 API 작업은 허용됩니다.`,
+      en: `All users in the Development OU will be denied all API actions on EC2 resources. All other API actions will be allowed.`
+    }
+  ],
+  answer: ['B'],
+  vote: '80% B',
+  explain: `<p><span class="mark-ok">✅ B — EC2만 허용, 나머지 모두 거부</span></p>
+<p>SCP(서비스 제어 정책) 허용 목록(allow-list) 동작 원칙:</p>
+<p>특정 계정/OU에 대한 권한이 허용되려면 <strong>루트에서 해당 계정까지의 직접 경로 모든 레벨</strong>에 명시적 Allow 문이 있어야 합니다.</p>
+<p>Development OU에서 FullAWSAccess를 EC2 전용 허용 정책으로 교체하면:</p>
+<p>- 루트 OU: FullAWSAccess (모든 서비스 허용)<br>
+- Environments OU: FullAWSAccess (모든 서비스 허용)<br>
+- <strong>Development OU: EC2만 허용 정책 (신규)</strong></p>
+<p>→ 교집합: EC2만 허용 = EC2는 허용, 나머지는 암묵적으로 거부</p>`,
+  wrong: `<p><span class="mark-no">❌ A</span> — SCP 허용 정책은 교집합으로 적용됩니다. Development OU에 EC2 전용 허용 정책이 있으면, 상위 OU의 FullAWSAccess와 교집합하여 EC2만 허용됩니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — EC2 허용 정책이 있으므로 전체 거부는 아닙니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ D</span> — 허용 정책에서 명시적으로 허용된 EC2는 허용되고, 허용되지 않은 나머지는 거부됩니다. 반대가 아닙니다.</p>`,
+  disc: [
+    {
+      ans: 'B (80%) vs A (20%)',
+      txt: 'SCP Allow 정책은 각 레벨에서 교집합으로 작동합니다. Development OU에 EC2만 허용하는 정책을 추가하면, 상위의 FullAWSAccess와 교집합하여 결국 EC2만 허용됩니다. 실제 AWS 계정에서 테스트된 결과입니다. 참고: https://aws.amazon.com/blogs/security/get-more-out-of-service-control-policies-in-a-multi-account-environment/'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q135
+// ──────────────────────────────────────────────
+{
+  n: 135,
+  ko: `한 회사가 재해 복구 기능을 검토하고 있으며 일상적인 운영을 <strong>보조 AWS 리전으로 전환</strong>할 수 있는 기능을 원합니다. 이 회사는 기본 리전에서 <strong>AWS CodeCommit을 소스 제어 도구</strong>로 사용합니다.<br><br>
+DevOps 엔지니어는 회사가 <strong>보조 리전에서 코드를 개발</strong>할 수 있는 기능을 제공해야 합니다. 회사가 보조 리전을 사용해야 하는 경우 <strong>개발자는 로컬 Git 구성에 추가 원격 URL을 추가</strong>할 수 있습니다.<br><br>
+<strong>어떤 솔루션이 이러한 요구 사항을 충족할까요?</strong>`,
+  en: `A company is examining its disaster recovery capability and wants the ability to <strong>switch over its daily operations to a secondary AWS Region</strong>. The company uses <strong>AWS CodeCommit as a source control tool</strong> in the primary Region.<br><br>
+A DevOps engineer must provide the capability for the company to <strong>develop code in the secondary Region</strong>. If the company needs to use the secondary Region, <strong>developers can add an additional remote URL</strong> to their local Git configuration.<br><br>
+<strong>Which solution will meet these requirements?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `보조 리전에 <strong>CodeCommit 리포지토리</strong>를 만듭니다. <strong>AWS CodeBuild 프로젝트</strong>를 만들어 기본 리전의 CodeCommit 리포지토리를 보조 리전의 CodeCommit 리포지토리로 <strong>Git 미러링 작업</strong>을 수행합니다. <strong>AWS Lambda 함수</strong>를 만들어 CodeBuild 프로젝트를 호출합니다. 기본 리전의 CodeCommit 리포지토리에서 <strong>병합 이벤트에 반응하는 Amazon EventBridge 규칙</strong>을 만듭니다. Lambda 함수를 호출하도록 EventBridge 규칙을 구성합니다.`,
+      en: `Create a <strong>CodeCommit repository</strong> in the secondary Region. Create an <strong>AWS CodeBuild project</strong> to perform a <strong>Git mirror operation</strong> of the primary Region's CodeCommit repository to the secondary Region's CodeCommit repository. Create an <strong>AWS Lambda function</strong> that invokes the CodeBuild project. Create an <strong>Amazon EventBridge rule</strong> that reacts to merge events in the primary Region's CodeCommit repository. Configure the EventBridge rule to invoke the Lambda function.`
+    },
+    {
+      k: 'B',
+      ko: `보조 리전에 <strong>Amazon S3 버킷</strong>을 만듭니다. <strong>AWS Fargate 작업</strong>을 만들어 기본 리전의 CodeCommit 리포지토리의 Git 미러 작업을 수행하고 결과를 S3 버킷에 복사합니다.`,
+      en: `Create an <strong>Amazon S3 bucket</strong> in the secondary Region. Create an <strong>AWS Fargate task</strong> to perform a Git mirror operation of the primary Region's CodeCommit repository and copy the result to the S3 bucket.`
+    },
+    {
+      k: 'C',
+      ko: `보조 리전에 <strong>AWS CodeArtifact 리포지토리</strong>를 만듭니다. 소스 작업에 기본 리전의 CodeCommit 리포지토리를 사용하는 <strong>AWS CodePipeline 파이프라인</strong>을 만듭니다. 파이프라인에 코드를 패키징하고 CodeArtifact 리포지토리에 저장하는 크로스 리전 단계를 만듭니다.`,
+      en: `Create an <strong>AWS CodeArtifact repository</strong> in the secondary Region. Create an <strong>AWS CodePipeline pipeline</strong> that uses the primary Region's CodeCommit repository for the source action. Create a cross-Region stage that packages the CodeCommit repository contents and stores the contents in the CodeArtifact repository.`
+    },
+    {
+      k: 'D',
+      ko: `보조 리전에 <strong>AWS Cloud9 환경</strong>과 CodeCommit 리포지토리를 만듭니다. <strong>AWS Cloud9 환경에서 기본 리전의 CodeCommit 리포지토리를 원격 리포지토리</strong>로 구성합니다.`,
+      en: `Create an <strong>AWS Cloud9 environment</strong> and a CodeCommit repository in the secondary Region. Configure the primary Region's CodeCommit repository as a <strong>remote repository in the AWS Cloud9 environment</strong>.`
+    }
+  ],
+  answer: ['A'],
+  vote: '87% A',
+  explain: `<p><span class="mark-ok">✅ A — 보조 리전 CodeCommit + Git 미러링(CodeBuild + EventBridge)</span></p>
+<p>개발자가 보조 리전의 CodeCommit 리포지토리를 <strong>유효한 Git 원격 URL로 추가</strong>할 수 있어야 합니다. 이를 위해:</p>
+<p>① <strong>보조 리전에 CodeCommit 리포지토리 생성</strong>: 개발자의 Git 원격 URL이 됩니다.<br>
+② <strong>EventBridge(병합 이벤트) → Lambda → CodeBuild</strong>: 기본 리전에 병합(merge)이 발생할 때마다 자동으로 보조 리전 CodeCommit에 동기화합니다.<br>
+③ <strong>Git mirror 작업</strong>: CodeBuild가 <code>git clone --mirror</code>로 완전한 복제를 수행합니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ B</span> — S3 버킷은 Git 원격 URL로 사용할 수 없습니다. 개발자가 Git remote로 추가할 수 없습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — CodeArtifact는 패키지 저장소이지 소스 코드 Git 리포지토리가 아닙니다. Git 원격으로 사용 불가합니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ D</span> — Cloud9는 IDE로, 자동화된 리포지토리 미러링 솔루션이 아닙니다. 다른 개발자들이 보조 리전에서 독립적으로 개발하는 요구 사항을 충족하지 못합니다.</p>`,
+  disc: [
+    {
+      ans: 'A (87%)',
+      txt: '보조 리전에서 Git 원격 URL이 필요하므로 CodeCommit 리포지토리가 필수입니다. B(S3)와 C(CodeArtifact)는 Git 원격으로 사용 불가합니다. CodeBuild를 통한 Git 미러링은 AWS 공식 블로그에서도 권장하는 방법입니다.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q136
+// ──────────────────────────────────────────────
+{
+  n: 136,
+  ko: `DevOps 팀은 <strong>Amazon RDS Multi-AZ DB 클러스터를 사용하는 애플리케이션</strong>의 코드 개정을 병합하고 있습니다. DevOps 팀은 <strong>지속적인 통합(CI)</strong>을 사용하여 애플리케이션이 작동하는지 주기적으로 확인합니다. DevOps 팀은 <strong>프로덕션 데이터베이스에 변경 사항을 배포하기 전에 변경 사항을 테스트</strong>해야 합니다.<br><br>
+<strong>어떤 솔루션이 이러한 요구 사항을 충족할까요?</strong>`,
+  en: `A DevOps team is merging code revisions for an application that uses an <strong>Amazon RDS Multi-AZ DB cluster</strong>. The DevOps team uses <strong>continuous integration</strong> to periodically verify that the application works. The DevOps team needs to <strong>test the changes before the changes are deployed to the production database</strong>.<br><br>
+<strong>Which solution will meet these requirements?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `<strong>AWS CodeBuild의 buildspec 파일</strong>을 사용하여 프로덕션 데이터베이스의 <strong>스냅샷에서 DB 클러스터를 복원</strong>하고 <strong>통합 테스트를 실행</strong>한 후 확인 후 복원된 데이터베이스를 삭제합니다.`,
+      en: `Use a <strong>buildspec file in AWS CodeBuild</strong> to <strong>restore the DB cluster from a snapshot</strong> of the production database, <strong>run integration tests</strong>, and drop the restored database after verification.`
+    },
+    {
+      k: 'B',
+      ko: `애플리케이션을 프로덕션에 배포합니다. 검증이 실패할 경우 수행할 데이터베이스 활동을 캡처하기 위해 <strong>데이터 제어 언어(DCL) 작업의 감사 로그</strong>를 구성합니다.`,
+      en: `Deploy the application to production. Configure an <strong>audit log of data control language (DCL) operations</strong> to capture database activities to perform if verification fails.`
+    },
+    {
+      k: 'C',
+      ko: `애플리케이션을 배포하기 전에 <strong>DB 클러스터의 스냅샷을 만듭니다</strong>. AWS CloudFormation의 DB 인스턴스에서 <code>Update requires:Replacement</code> 속성을 사용하여 애플리케이션을 배포하고 변경 사항을 적용합니다.`,
+      en: `<strong>Create a snapshot of the DB cluster</strong> before deploying the application. Use the <code>Update requires:Replacement</code> property on the DB instance in AWS CloudFormation to deploy the application and apply the changes.`
+    },
+    {
+      k: 'D',
+      ko: `DB 클러스터가 <strong>Multi-AZ 배포</strong>인지 확인합니다. 업데이트와 함께 애플리케이션을 배포합니다. 검증이 실패하면 <strong>대기 인스턴스로 페일오버</strong>합니다.`,
+      en: `Ensure that the DB cluster is a <strong>Multi-AZ deployment</strong>. Deploy the application with the updates. <strong>Fail over to the standby instance</strong> if verification fails.`
+    }
+  ],
+  answer: ['A'],
+  vote: '100% A',
+  explain: `<p><span class="mark-ok">✅ A — CodeBuild buildspec + 스냅샷에서 DB 복원 + 통합 테스트</span></p>
+<p>프로덕션 데이터베이스에 배포 <strong>전에</strong> 테스트하는 유일한 방법입니다:</p>
+<p>① CodeBuild buildspec에서 프로덕션 DB 스냅샷을 복원하여 임시 테스트 DB 생성<br>
+② 복원된 DB에 코드 변경 사항 적용 및 통합 테스트 실행<br>
+③ 테스트 완료 후 임시 DB 삭제</p>
+<p>이 방식은 AWS 공식 블로그에서도 권장하는 <strong>데이터베이스 CI/CD 모범 사례</strong>입니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ B</span> — 프로덕션에 배포 후 테스트하는 것은 "배포 전 테스트" 요구 사항에 위배됩니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — 스냅샷을 만들고 배포하는 것도 프로덕션에 먼저 배포하는 방식입니다. 테스트가 배포 전에 이루어지지 않습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ D</span> — 프로덕션에 배포한 후 실패 시 페일오버하는 것은 사전 테스트가 아닌 사후 복구 방식입니다.</p>`,
+  disc: [
+    {
+      ans: 'A (100%)',
+      txt: '참고: https://aws.amazon.com/blogs/devops/enhancing-automated-database-continuous-integration-with-aws-codebuild-and-amazon-rds-database-snapshot/ — AWS 공식 블로그에서 CodeBuild와 RDS 스냅샷을 이용한 데이터베이스 CI 자동화 방법을 설명합니다.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q137
+// ──────────────────────────────────────────────
+{
+  n: 137,
+  ko: `한 회사가 <strong>VPC에서 멀티 테넌트 환경</strong>을 관리하고 해당 AWS 계정에 대해 <strong>Amazon GuardDuty</strong>를 구성했습니다. 이 회사는 모든 GuardDuty 결과를 <strong>AWS Security Hub</strong>로 보냅니다.<br><br>
+의심스러운 출처의 트래픽이 많은 수의 결과를 생성합니다. DevOps 엔지니어는 <strong>GuardDuty가 새로운 의심스러운 출처를 발견하면 전체 VPC에서 트래픽을 자동으로 거부</strong>하는 솔루션을 구현해야 합니다.<br><br>
+<strong>어떤 솔루션이 이러한 요구 사항을 충족할까요?</strong>`,
+  en: `A company manages a <strong>multi-tenant environment in its VPC</strong> and has configured <strong>Amazon GuardDuty</strong> for the corresponding AWS account. The company sends all GuardDuty findings to <strong>AWS Security Hub</strong>.<br><br>
+Traffic from suspicious sources is generating a large number of findings. A DevOps engineer needs to implement a solution to <strong>automatically deny traffic across the entire VPC</strong> when GuardDuty discovers a new suspicious source.<br><br>
+<strong>Which solution will meet these requirements?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `<strong>GuardDuty 위협 목록</strong>을 만듭니다. GuardDuty가 목록을 참조하도록 구성합니다. 위협 목록을 업데이트하는 <strong>AWS Lambda 함수</strong>를 만듭니다. GuardDuty에서 나오는 새로운 Security Hub 결과에 응답하여 실행되도록 Lambda 함수를 구성합니다.`,
+      en: `Create a <strong>GuardDuty threat list</strong>. Configure GuardDuty to reference the list. Create an <strong>AWS Lambda function</strong> that will update the threat list. Configure the Lambda function to run in response to new Security Hub findings that come from GuardDuty.`
+    },
+    {
+      k: 'B',
+      ko: `사용자 지정 규칙 그룹을 포함하는 <strong>AWS WAF 웹 ACL</strong>을 구성합니다. 사용자 지정 규칙 그룹에서 <strong>차단 규칙을 만드는 AWS Lambda 함수</strong>를 만듭니다. GuardDuty에서 나오는 새로운 Security Hub 결과에 응답하여 실행되도록 Lambda 함수를 구성합니다.`,
+      en: `Configure an <strong>AWS WAF web ACL</strong> that includes a custom rule group. Create an <strong>AWS Lambda function</strong> that will create a block rule in the custom rule group. Configure the Lambda function to run in response to new Security Hub findings that come from GuardDuty.`
+    },
+    {
+      k: 'C',
+      ko: `<strong>AWS Network Firewall</strong>에서 방화벽을 구성합니다. 방화벽 정책에서 <strong>Drop 작업 규칙을 만드는 AWS Lambda 함수</strong>를 만듭니다. GuardDuty에서 나오는 새로운 Security Hub 결과에 응답하여 실행되도록 Lambda 함수를 구성합니다.`,
+      en: `Configure a firewall in <strong>AWS Network Firewall</strong>. Create an <strong>AWS Lambda function</strong> that will create a <strong>Drop action rule</strong> in the firewall policy. Configure the Lambda function to run in response to new Security Hub findings that come from GuardDuty.`
+    },
+    {
+      k: 'D',
+      ko: `<strong>GuardDuty 억제 규칙을 생성하는 AWS Lambda 함수</strong>를 만듭니다. GuardDuty에서 나오는 새로운 Security Hub 결과에 대한 응답으로 실행되도록 Lambda 함수를 구성합니다.`,
+      en: `Create an <strong>AWS Lambda function</strong> that will create a <strong>GuardDuty suppression rule</strong>. Configure the Lambda function to run in response to new Security Hub findings that come from GuardDuty.`
+    }
+  ],
+  answer: ['C'],
+  vote: '92% C',
+  explain: `<p><span class="mark-ok">✅ C — AWS Network Firewall + Lambda(Drop 규칙)</span></p>
+<p>요구 사항: <strong>전체 VPC에서 트래픽을 자동으로 거부</strong></p>
+<p><strong>AWS Network Firewall</strong>은 VPC 수준에서 모든 네트워크 트래픽을 제어할 수 있는 유일한 서비스입니다. Lambda 함수가 Security Hub(GuardDuty) 결과를 받아 의심 IP/도메인에 대한 <strong>Drop 규칙</strong>을 Network Firewall 정책에 동적으로 추가합니다.</p>
+<p>참고: https://aws.amazon.com/blogs/security/automatically-block-suspicious-traffic-with-aws-network-firewall-and-amazon-guardduty/</p>`,
+  wrong: `<p><span class="mark-no">❌ A</span> — GuardDuty 위협 목록을 업데이트하면 향후 감지에 도움되지만, 현재 트래픽을 차단하지는 않습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ B</span> — AWS WAF는 HTTP/HTTPS 웹 트래픽(Layer 7)을 처리합니다. 전체 VPC의 모든 네트워크 트래픽을 차단할 수 없습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ D</span> — GuardDuty 억제 규칙은 특정 결과를 숨기는 기능입니다. 트래픽을 차단하지 않습니다.</p>`,
+  disc: [
+    {
+      ans: 'C (92%)',
+      txt: 'VPC 전체 트래픽 차단 = Network Firewall. WAF는 웹(HTTP/HTTPS)만, Network Firewall은 모든 네트워크 트래픽을 처리합니다. 참고: https://aws.amazon.com/blogs/security/automatically-block-suspicious-traffic-with-aws-network-firewall-and-amazon-guardduty/'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q138
+// ──────────────────────────────────────────────
+{
+  n: 138,
+  ko: `한 회사에서 <strong>AWS Secrets Manager</strong>를 사용하여 <strong>AWS Lambda 함수가 사용하는 민감한 API 키 세트</strong>를 저장합니다. Lambda 함수가 호출되면 API 키를 검색하고 외부 서비스에 API 호출을 합니다. Secrets Manager 비밀은 <strong>기본 AWS KMS 키(aws/secretsmanager)</strong>로 암호화됩니다.<br><br>
+DevOps 엔지니어는 <strong>Lambda 함수의 실행 역할만 Secrets Manager의 값에 액세스</strong>할 수 있도록 인프라를 업데이트해야 합니다. 솔루션은 <strong>최소 권한의 원칙</strong>을 적용해야 합니다.<br><br>
+<strong>이러한 요구 사항을 충족하는 단계의 조합은 무엇입니까? (두 가지를 선택하세요.)</strong>`,
+  en: `A company uses <strong>AWS Secrets Manager</strong> to store a set of <strong>sensitive API keys that an AWS Lambda function uses</strong>. When the Lambda function is invoked, it retrieves the API keys and makes an API call to an external service. The Secrets Manager secret is encrypted with the <strong>default AWS KMS key (aws/secretsmanager)</strong>.<br><br>
+A DevOps engineer needs to update the infrastructure to ensure that <strong>only the Lambda function's execution role can access the values in Secrets Manager</strong>. The solution must apply the <strong>principle of least privilege</strong>.<br><br>
+<strong>Which combination of steps will meet these requirements? (Choose two.)</strong>`,
+  type: 'multi',
+  multiCount: 2,
+  choices: [
+    {
+      k: 'A',
+      ko: `Secrets Manager의 <strong>기본 KMS 키를 업데이트</strong>하여 Lambda 함수의 실행 역할만 암호를 해독할 수 있도록 합니다.`,
+      en: `<strong>Update the default KMS key</strong> for Secrets Manager to allow only the Lambda function's execution role to decrypt.`
+    },
+    {
+      k: 'B',
+      ko: `Secrets Manager를 신뢰하고 <strong>Lambda 함수의 실행 역할이 암호를 해독할 수 있도록 하는 KMS 고객 관리 키(CMK)</strong>를 만듭니다. <strong>Secrets Manager를 업데이트하여 새 CMK</strong>를 사용합니다.`,
+      en: `Create a <strong>KMS customer managed key (CMK)</strong> that trusts Secrets Manager and <strong>allows the Lambda function's execution role to decrypt</strong>. <strong>Update Secrets Manager to use the new CMK</strong>.`
+    },
+    {
+      k: 'C',
+      ko: `Secrets Manager를 신뢰하고 <strong>계정의 루트 주체가 암호를 해독할 수 있도록 하는 KMS CMK</strong>를 만듭니다. Secrets Manager를 업데이트하여 새 CMK를 사용합니다.`,
+      en: `Create a <strong>KMS CMK</strong> that trusts Secrets Manager and <strong>allows the account's root principal to decrypt</strong>. Update Secrets Manager to use the new CMK.`
+    },
+    {
+      k: 'D',
+      ko: `Lambda 함수의 실행 역할에 <strong>리소스 수준에서 범위가 지정된 KMS 권한</strong>이 있는지 확인합니다. KMS 키가 <strong>Secrets Manager 비밀을 암호화할 수 있도록 권한을 구성</strong>합니다.`,
+      en: `Ensure that the Lambda function's execution role has <strong>KMS permissions scoped at the resource level</strong>. Configure the permissions so that the KMS key can <strong>encrypt the Secrets Manager secret</strong>.`
+    },
+    {
+      k: 'E',
+      ko: `Lambda 함수 실행 역할에서 <strong>모든 KMS 권한을 제거</strong>합니다.`,
+      en: `<strong>Remove all KMS permissions</strong> from the Lambda function execution role.`
+    }
+  ],
+  answer: ['B', 'D'],
+  vote: '95% BD',
+  explain: `<p><span class="mark-ok">✅ B — KMS 고객 관리 키(CMK) 생성 및 Secrets Manager 업데이트</span></p>
+<p>기본 AWS KMS 키(aws/secretsmanager)는 키 정책을 수정할 수 없으므로 특정 역할에만 복호화를 허용할 수 없습니다. <strong>고객 관리 KMS 키(CMK)</strong>를 생성하면 키 정책에서 Lambda 실행 역할만 복호화 권한을 갖도록 세밀하게 제어할 수 있습니다.</p>
+<p><span class="mark-ok">✅ D — Lambda 실행 역할에 리소스 수준 KMS 권한 구성</span></p>
+<p>Lambda 실행 역할의 IAM 정책에서 새로 만든 CMK ARN을 리소스로 지정하여 <strong>최소 권한</strong>으로 KMS 복호화 권한을 부여합니다. 리소스 수준 범위 지정이 최소 권한 원칙을 충족합니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ A</span> — 기본 AWS KMS 키(AWS 관리 키)의 정책은 수정할 수 없습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C</span> — 루트 주체에게 복호화 권한을 부여하는 것은 최소 권한 원칙에 위배됩니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ E</span> — KMS 권한을 모두 제거하면 Lambda가 Secrets Manager의 암호화된 비밀에 접근할 수 없습니다.</p>`,
+  disc: [
+    {
+      ans: 'BD (95%)',
+      txt: 'AWS 관리 KMS 키는 정책 수정 불가 → CMK 필요(B). Lambda 실행 역할에 리소스 수준 KMS 권한 부여(D)로 최소 권한 원칙 충족.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q139
+// ──────────────────────────────────────────────
+{
+  n: 139,
+  ko: `한 회사의 DevOps 엔지니어가 <strong>Amazon SNS 토픽의 알림을 처리하는 AWS Lambda 함수</strong>를 만들고 있습니다. Lambda 함수는 알림 메시지를 처리하고 <strong>Amazon RDS Multi-AZ DB 인스턴스에 씁니다</strong>.<br><br>
+테스트 중에 데이터베이스 관리자가 실수로 DB 인스턴스를 종료했습니다. <strong>데이터베이스가 다운된 동안 여러 SNS 알림 메시지를 잃었습니다</strong>.<br><br>
+DevOps 엔지니어는 <strong>앞으로 알림 메시지가 손실되는 것을 방지</strong>해야 합니다.<br><br>
+<strong>어떤 솔루션이 이 요구 사항을 충족할까요? (두 가지를 선택하세요.)</strong>`,
+  en: `A company's DevOps engineer is creating an <strong>AWS Lambda function to process notifications from an Amazon SNS topic</strong>. The Lambda function processes the notification messages and <strong>writes the contents to an Amazon RDS Multi-AZ DB instance</strong>.<br><br>
+During testing, a database administrator accidentally shut down the DB instance. While the database was down, the company <strong>lost several of the SNS notification messages</strong> that were delivered during that time.<br><br>
+The DevOps engineer needs to <strong>prevent the loss of notification messages in the future</strong>.<br><br>
+<strong>Which solutions will meet this requirement? (Choose two.)</strong>`,
+  type: 'multi',
+  multiCount: 2,
+  choices: [
+    {
+      k: 'A',
+      ko: `<strong>RDS Multi-AZ DB 인스턴스를 Amazon DynamoDB 테이블로 교체</strong>합니다.`,
+      en: `<strong>Replace the RDS Multi-AZ DB instance with an Amazon DynamoDB table</strong>.`
+    },
+    {
+      k: 'B',
+      ko: `<strong>Lambda 함수의 대상으로 Amazon SQS 대기열</strong>을 구성합니다.`,
+      en: `Configure an <strong>Amazon SQS queue as a destination of the Lambda function</strong>.`
+    },
+    {
+      k: 'C',
+      ko: `<strong>SNS 주제에 대한 Amazon SQS 배달 못한 편지 대기열(DLQ)</strong>을 구성합니다.`,
+      en: `Configure an <strong>Amazon SQS dead-letter queue (DLQ) for the SNS topic</strong>.`
+    },
+    {
+      k: 'D',
+      ko: `<strong>Amazon SQS 대기열을 SNS 토픽에 구독</strong>합니다. Lambda 함수를 구성하여 <strong>SQS 대기열의 메시지를 처리</strong>합니다.`,
+      en: `<strong>Subscribe an Amazon SQS queue to the SNS topic</strong>. Configure the Lambda function to <strong>process messages from the SQS queue</strong>.`
+    },
+    {
+      k: 'E',
+      ko: `SNS 토픽을 <strong>Amazon EventBridge 이벤트 버스</strong>로 바꿉니다. 각 이벤트에 대해 Lambda 함수를 호출하도록 <strong>EventBridge 규칙</strong>을 구성합니다.`,
+      en: `Replace the SNS topic with an <strong>Amazon EventBridge event bus</strong>. Configure an <strong>EventBridge rule</strong> to invoke the Lambda function for each event.`
+    }
+  ],
+  answer: ['C', 'D'],
+  vote: '87% CD',
+  explain: `<p><span class="mark-ok">✅ D — SQS 대기열을 SNS 토픽에 구독 + Lambda가 SQS에서 처리</span></p>
+<p>SNS → SQS → Lambda 아키텍처(팬아웃 패턴):</p>
+<p>DB가 다운되어도 메시지는 <strong>SQS 대기열에 보관</strong>됩니다. Lambda는 DB 복구 후 SQS에서 메시지를 처리합니다. SQS의 visibility timeout과 재시도 메커니즘이 메시지 손실을 방지합니다.</p>
+<p><span class="mark-ok">✅ C — SNS 토픽에 SQS 배달 못한 편지 대기열(DLQ) 구성</span></p>
+<p>SNS DLQ는 SNS가 구독자(여기서는 SQS 또는 Lambda)에게 메시지를 전달하지 못할 때 해당 메시지를 보관합니다. D와 함께 사용하면 두 단계에서의 메시지 손실을 방지합니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ A</span> — DynamoDB로 교체하면 DB 종료 문제가 없어지지만, 이는 근본 원인(메시지 손실 방지)을 다른 방법으로 해결하는 것이며 SNS 메시지 손실 자체를 직접 해결하지 않습니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ B</span> — Lambda 함수의 "대상(destination)"은 Lambda 비동기 호출 성공/실패 결과를 보내는 곳입니다. SNS에서 Lambda를 동기 호출하는 경우와는 다릅니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ E</span> — EventBridge로 교체해도 DB가 다운되면 Lambda가 실패하고 메시지가 손실됩니다. SQS 버퍼가 없으면 동일한 문제가 발생합니다.</p>`,
+  disc: [
+    {
+      ans: 'CD (87%) vs BD (논쟁)',
+      txt: '핵심: SNS → SQS → Lambda 패턴(D)으로 DB 다운 시 메시지 버퍼링. SNS DLQ(C)로 SNS 전달 실패 메시지도 보관. 두 메커니즘이 상호 보완적입니다.'
+    }
+  ]
+},
+
+// ──────────────────────────────────────────────
+// Q140
+// ──────────────────────────────────────────────
+{
+  n: 140,
+  ko: `한 회사에 <strong>Amazon EC2 인스턴스에서 실행되는 애플리케이션</strong>이 있습니다. 이 회사는 <strong>AWS CodePipeline 파이프라인을 사용하여 애플리케이션을 여러 AWS 리전에 배포</strong>합니다. 파이프라인은 각 리전에 대한 스테이지로 구성됩니다. 각 스테이지에는 각 리전에 대한 <strong>AWS CloudFormation 작업</strong>이 포함됩니다.<br><br>
+파이프라인이 리전에 애플리케이션을 배포할 때, 이 회사는 <strong>파이프라인이 다음 리전으로 이동하기 전에 애플리케이션이 정상 상태인지 확인</strong>하려고 합니다. Amazon Route 53 레코드 세트는 각 리전의 애플리케이션에 대해 구성됩니다. DevOps 엔지니어는 애플리케이션이 배포된 각 리전에 대한 <strong>Amazon CloudWatch 알람을 기반으로 하는 Route 53 상태 확인</strong>을 만들었습니다.<br><br>
+<strong>DevOps 엔지니어는 요구 사항을 충족하기 위해 다음에 무엇을 해야 합니까?</strong>`,
+  en: `A company has an application that runs on <strong>Amazon EC2 instances</strong>. The company uses an <strong>AWS CodePipeline pipeline to deploy the application into multiple AWS Regions</strong>. The pipeline is configured with a stage for each Region. Each stage contains an <strong>AWS CloudFormation action</strong> for each Region.<br><br>
+When the pipeline deploys the application to a Region, the company wants to <strong>confirm that the application is in a healthy state before the pipeline moves on to the next Region</strong>. Amazon Route 53 record sets are configured for the application in each Region. A DevOps engineer creates a <strong>Route 53 health check based on an Amazon CloudWatch alarm</strong> for each Region where the application is deployed.<br><br>
+<strong>What should the DevOps engineer do next to meet the requirements?</strong>`,
+  type: 'single',
+  choices: [
+    {
+      k: 'A',
+      ko: `<strong>CloudWatch 알람의 상태를 확인하기 위해 AWS Step Functions 워크플로</strong>를 만듭니다. 알람이 ALARM 상태인 경우 오류와 함께 종료되도록 Step Functions 워크플로를 구성합니다. 각 리전 배포 단계 사이의 파이프라인에 <strong>새 단계를 만듭니다</strong>. 각 새 단계에서 <strong>Step Functions 워크플로를 호출하는 작업</strong>을 포함합니다.`,
+      en: `Create an <strong>AWS Step Functions workflow</strong> to check the state of the CloudWatch alarm. Configure the Step Functions workflow to exit with an error if the alarm is in the ALARM state. Create a <strong>new stage in the pipeline</strong> between each Region deployment stage. In each new stage, include an <strong>action to invoke the Step Functions workflow</strong>.`
+    },
+    {
+      k: 'B',
+      ko: `자동 롤백을 사용하여 CloudFormation 템플릿을 배포하도록 <strong>AWS CodeDeploy 애플리케이션</strong>을 구성합니다. CloudWatch 알람을 CodeDeploy 애플리케이션의 인스턴스 상태 검사로 구성합니다. 파이프라인에서 CloudFormation 작업을 제거합니다.`,
+      en: `Configure an <strong>AWS CodeDeploy application</strong> to deploy a CloudFormation template with automatic rollback. Configure the CloudWatch alarm as the instance health check for the CodeDeploy application. Remove the CloudFormation actions from the pipeline.`
+    },
+    {
+      k: 'C',
+      ko: `애플리케이션이 배포된 각 리전에 대해 새 파이프라인 단계를 만듭니다. 새 단계에 대해 <strong>CloudWatch 알람 작업</strong>을 구성하여 CloudWatch 알람 상태를 확인하고 알람이 ALARM 상태인 경우 오류와 함께 종료합니다.`,
+      en: `Create a new pipeline stage for each Region where the application is deployed. Configure a <strong>CloudWatch alarm action</strong> for the new stage to check the state of the CloudWatch alarm and to exit with an error if the alarm is in the ALARM state.`
+    },
+    {
+      k: 'D',
+      ko: `EC2 인스턴스에서 <strong>CloudWatch 에이전트</strong>를 구성하여 Route 53 상태 검사에 애플리케이션 상태를 보고합니다. 애플리케이션이 배포된 각 리전에 대해 새 파이프라인 단계를 만듭니다. <strong>CloudWatch 알람 작업</strong>을 구성하여 알람이 ALARM 상태인 경우 오류와 함께 종료합니다.`,
+      en: `Configure the <strong>CloudWatch agent</strong> on the EC2 instances to report the application status to the Route 53 health check. Create a new pipeline stage for each Region. Configure a <strong>CloudWatch alarm action</strong> to exit with an error if the CloudWatch alarm is in the ALARM state.`
+    }
+  ],
+  answer: ['A'],
+  vote: '94% A',
+  explain: `<p><span class="mark-ok">✅ A — Step Functions 워크플로 + CodePipeline 새 단계</span></p>
+<p>CodePipeline은 <strong>CloudWatch 알람 작업(CloudWatch alarm action)</strong>이라는 작업 유형을 직접 지원하지 않습니다. 대신 <strong>AWS Step Functions 작업</strong>을 통해 상태 확인을 구현합니다.</p>
+<p>① 각 리전 배포 단계 사이에 새 파이프라인 단계 추가<br>
+② 새 단계에서 Step Functions 워크플로를 호출하는 작업 추가<br>
+③ Step Functions 워크플로가 CloudWatch 알람 상태 확인: ALARM이면 FAILED로 종료 → CodePipeline 파이프라인 중단</p>
+<p>Step Functions 실행이 FAILED, TIMED_OUT, ABORTED 상태로 종료되면 CodePipeline 작업도 실패합니다.</p>`,
+  wrong: `<p><span class="mark-no">❌ B</span> — CodeDeploy로 CloudFormation 작업을 대체하는 것은 큰 변경이며, 기존 CloudFormation 기반 배포를 유지해야 합니다.</p>
+<p style="margin-top:8px;"><span class="mark-no">❌ C, D</span> — "CloudWatch 알람 작업(CloudWatch alarm action)"은 CodePipeline에서 지원하는 작업 유형이 아닙니다. CloudWatch 에이전트가 Route 53 상태 검사에 직접 보고하는 기능도 없습니다.</p>`,
+  disc: [
+    {
+      ans: 'A (94%)',
+      txt: 'CodePipeline에는 CloudWatch 알람을 직접 평가하는 작업이 없습니다. Step Functions 워크플로를 중간 단계로 사용하는 것이 공식 방법입니다. 참고: https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference-StepFunctions.html'
+    }
+  ]
+},
+
+];
+// ────────────────────────────────────────────────
+// STATE
+// ────────────────────────────────────────────────
+let curQ = 0;
+let state = QS.map(() => ({ sel: [], done: false }));
+let curLang = 'ko';
+
+// ────────────────────────────────────────────────
+// INIT
+// ────────────────────────────────────────────────
+function init() {
+  buildSelect();
+  renderQ(0);
+}
+
+function buildSelect() {
+  const sel = document.getElementById('q-select');
+  sel.innerHTML = '';
+  QS.forEach((q, i) => {
+    const opt = document.createElement('option');
+    opt.value = q.n;
+    opt.textContent = `Q${String(q.n).padStart(3,'0')}`;
+    sel.appendChild(opt);
+  });
+}
+
+function updateSelectStatus() {
+  const sel = document.getElementById('q-select');
+  Array.from(sel.options).forEach((opt, i) => {
+    const s = state[i];
+    const q = QS[i];
+    opt.className = '';
+    if (s.done) {
+      const correct = arraysEqual(s.sel.slice().sort(), q.answer.slice().sort());
+      opt.textContent = `Q${String(q.n).padStart(3,'0')} ${correct ? '✓' : '✗'}`;
+      opt.className = correct ? 'opt-correct' : 'opt-wrong';
+    } else {
+      opt.textContent = `Q${String(q.n).padStart(3,'0')}`;
+    }
+  });
+  sel.value = QS[curQ].n;
+}
+
+// ────────────────────────────────────────────────
+// RENDER
+// ────────────────────────────────────────────────
+function renderQ(idx) {
+  if (idx < 0 || idx >= QS.length) return;
+  curQ = idx;
+  const q = QS[idx];
+  const s = state[idx];
+
+  // counter / progress
+  document.getElementById('progress-fill').style.width = `${((idx+1)/QS.length)*100}%`;
+  document.getElementById('q-num-badge').textContent = String(q.n).padStart(3,'0');
+
+  // type badge
+  const tb = document.getElementById('q-type-badge');
+  if (q.type === 'multi') {
+    tb.textContent = `복수 선택 (${q.multiCount}개)`;
+    tb.className = 'q-type-badge multi';
+  } else {
+    tb.textContent = '단일 선택';
+    tb.className = 'q-type-badge';
+  }
+
+  // question text
+  document.getElementById('q-ko-text').innerHTML = q.ko;
+  document.getElementById('q-en-text').innerHTML = q.en;
+
+  // choices label
+  document.getElementById('choices-label').textContent =
+    q.type === 'multi' ? `선택지 — ${q.multiCount}개 선택` : '선택지 — 단일 선택';
+
+  // choices
+  const cc = document.getElementById('choices-container');
+  cc.innerHTML = '';
+  q.choices.forEach(ch => {
+    const div = document.createElement('div');
+    let cls = 'choice';
+    if (s.done) {
+      cls += ' disabled';
+      if (q.answer.includes(ch.k)) cls += ' correct';
+      else if (s.sel.includes(ch.k)) cls += ' wrong';
+    } else if (s.sel.includes(ch.k)) {
+      cls += ' selected';
+    }
+    div.className = cls;
+    div.id = `choice-${idx}-${ch.k}`;
+
+    let icon = '';
+    if (s.done) {
+      if (q.answer.includes(ch.k)) icon = '✓';
+      else if (s.sel.includes(ch.k)) icon = '✗';
+    }
+
+    div.innerHTML = `
+      <div class="choice-key">${ch.k}</div>
+      <div class="choice-body">
+        <div class="choice-text">${ch.ko}</div>
+        <div class="choice-en">${ch.en}</div>
+      </div>
+      <div class="result-icon">${icon}</div>`;
+
+    if (!s.done) div.onclick = () => doSelect(idx, ch.k);
+    cc.appendChild(div);
+    document.getElementById('btn-prev-top').disabled = idx === 0;
+    document.getElementById('btn-next-top').disabled = idx === QS.length - 1;
+  });
+
+  applyLang(curLang);
+
+  // review button
+  document.getElementById('btn-review').disabled = s.done || s.sel.length === 0;
+
+  // hint
+  const hint = document.getElementById('hint-text');
+  if (s.done) {
+    const correct = arraysEqual(s.sel.slice().sort(), q.answer.slice().sort());
+    hint.textContent = correct ? '🎉 정답입니다!' : `❌ 오답입니다. 정답은 ${q.answer.join(', ')} 입니다.`;
+  } else if (s.sel.length > 0) {
+    const remaining = q.type === 'multi' ? q.multiCount - s.sel.length : 0;
+    if (q.type === 'multi' && remaining > 0) {
+      hint.textContent = `${s.sel.join(', ')}번 선택됨. ${remaining}개 더 선택하세요.`;
+    } else {
+      hint.textContent = `${s.sel.join(', ')}번을 선택했습니다. 정답 확인 버튼을 눌러주세요.`;
+    }
+  } else {
+    hint.textContent = '선택지를 클릭하면 정답 확인 버튼이 활성화됩니다.';
+  }
+
+  // review panel
+  const rp = document.getElementById('review-panel');
+  if (s.done) { renderReview(q); rp.classList.add('show'); }
+  else rp.classList.remove('show');
+
+  // nav buttons
+  document.getElementById('btn-prev').disabled = idx === 0;
+  document.getElementById('btn-next').disabled = idx === QS.length - 1;
+  document.getElementById('nav-info').textContent = `${idx+1} / ${QS.length} 문제`;
+
+  // select 동기화
+  updateSelectStatus();
+}
+
+function renderReview(q) {
+  document.getElementById('review-answer-badge').textContent = '✓ ' + q.answer.join(', ');
+  document.getElementById('review-vote-badge').innerHTML = `커뮤니티 투표 <span>${q.vote}</span>`;
+  document.getElementById('review-explain').innerHTML = q.explain;
+
+  const ws = document.getElementById('review-wrong');
+  const wt = document.getElementById('wrong-section-title');
+  if (q.wrong) { ws.innerHTML = q.wrong; ws.style.display=''; wt.style.display=''; }
+  else { ws.style.display='none'; wt.style.display='none'; }
+
+  const dl = document.getElementById('disc-list');
+  dl.innerHTML = '';
+  dl.classList.remove('show');
+  (q.disc||[]).forEach(d => {
+    dl.innerHTML += `<div class="disc-item"><div class="disc-ans">${d.ans}</div>${d.txt}</div>`;
+  });
+}
+
+// ────────────────────────────────────────────────
+// INTERACTION
+// ────────────────────────────────────────────────
+function doSelect(idx, key) {
+  const q = QS[idx];
+  const s = state[idx];
+  if (s.done) return;
+  if (q.type === 'single') {
+    s.sel = [key];
+  } else {
+    const pos = s.sel.indexOf(key);
+    if (pos >= 0) s.sel.splice(pos, 1);
+    else if (s.sel.length < q.multiCount) s.sel.push(key);
+  }
+  renderQ(idx);
+}
+
+function doReview() {
+  const s = state[curQ];
+  if (s.sel.length === 0 || s.done) return;
+  s.done = true;
+  renderQ(curQ);
+  document.getElementById('review-panel').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function doReset() {
+  state[curQ] = { sel: [], done: false };
+  renderQ(curQ);
+}
+
+function goQ(idx) {
+  idx = parseInt(idx);
+  if (isNaN(idx) || idx < 0 || idx >= QS.length) return;
+  renderQ(idx);
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function goQWithReset(idx) {
+  idx = parseInt(idx);
+  if (isNaN(idx) || idx < 0 || idx >= QS.length) return;
+
+  // 🔥 언어 강제 한국어
+  curLang = 'ko';
+  document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.lang-tab')[0].classList.add('active');
+
+  // 🔥 해당 문제 상태 초기화
+  state[idx] = { sel: [], done: false };
+
+  renderQ(idx);
+  window.scrollTo({top:0, behavior:'smooth'});
+  document.getElementById('btn-prev-top').disabled = idx === 0;
+  document.getElementById('btn-next-top').disabled = idx === QS.length - 1;
+}
+
+// ────────────────────────────────────────────────
+// LANG  (한국어 / 양국어)
+// ────────────────────────────────────────────────
+function setLang(lang, btn) {
+  curLang = lang;
+  document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  applyLang(lang);
+}
+
+function applyLang(lang) {
+  // 문제 영어 텍스트 — 'both'일 때 block으로 명시해야 CSS display:none을 덮어씀
+  const enQ = document.getElementById('q-en-text');
+  enQ.style.display = (lang === 'both') ? 'block' : 'none';
+  // 선택지 영어 텍스트
+  document.querySelectorAll('.choice-en').forEach(e => {
+    e.style.display = (lang === 'both') ? 'block' : 'none';
+  });
+}
+
+// ────────────────────────────────────────────────
+// THEME
+// ────────────────────────────────────────────────
+function toggleTheme() {
+  const html = document.documentElement;
+  const dark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', dark ? 'light' : 'dark');
+  document.getElementById('theme-icon').textContent = dark ? '☀️' : '🌙';
+  document.getElementById('theme-label').textContent = dark ? '라이트' : '다크';
+}
+
+// ────────────────────────────────────────────────
+// UTILS
+// ────────────────────────────────────────────────
+function arraysEqual(a, b) {
+  return a.length === b.length && a.every((v,i) => v === b[i]);
+}
+
+init();
+</script>
+</body>
+</html>

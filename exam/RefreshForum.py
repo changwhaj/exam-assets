@@ -26,13 +26,15 @@ def read_discuss_list(fname):
     return df.sort_values(by=['PostDate', 'DiscussNo'], ascending=[False, False])
 
 def write_discuss_list(df, fname):
-    df['PostDate'] = df.groupby(['ExamType', 'ExamNo', 'DiscussNo'])['PostDate'].transform('max')
+    # 항상 datetime 보장
+    df['PostDate'] = pd.to_datetime(df['PostDate'], errors='coerce')
+    df['PostDate'] = (df.groupby(['ExamType', 'ExamNo', 'DiscussNo'])['PostDate'].transform('max'))
     df['PostDate'] = df['PostDate'].dt.strftime("%Y-%m-%d %H:%M")
     df['PostDate'] = df['PostDate'].str.replace(' 0', ' ', regex=False)
     df.drop_duplicates(subset=['ExamType', 'ExamNo', 'DiscussNo'], keep='last', inplace=True)
     df['MaxDataID'] = df.groupby(['ExamType', 'ExamNo'])['DataID'].transform('max')
-    df['Chk'] = df.apply(lambda row: 1 if row['DataID'] == row['MaxDataID'] else 0, axis=1)
-    df = df.sort_values(['Chk', 'PostDate', 'DiscussNo'], ascending=[False, False, False]).drop(columns=['MaxDataID', 'Chk'])
+    df['Chk'] = (df['DataID'] == df['MaxDataID']).astype(int)
+    df = (df.sort_values(['Chk', 'PostDate', 'DiscussNo'], ascending=[False, False, False]).drop(columns=['MaxDataID', 'Chk']))
     df.to_csv(fname, sep='\t', header=False, index=False)
 
 def open_forum(driver, forum_name, pageno):
@@ -221,6 +223,7 @@ def refresh_from_forum(discuss_list, forum_name, page_from):
 
         replace = False    
         data_id = 0
+        oldpost = ""
         if ((refresh != True) & len(df[(df['ExamType'] == qtitle) & (df['ExamNo'] == qid) & (df['DiscussNo'] == did)]) > 0):
             print("Same question found !!!")
 

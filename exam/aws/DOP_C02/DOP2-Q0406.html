@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta charset="utf-8"/>
+<title>Exam AWS Certified DevOps Engineer</title>
+<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="1900-01-00 00:00" name="refresh_date"/>
+</head>
+<body class="home2"><div style="position:relative;">
+<!-- bootstrap v4 css -->
+<link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<!-- font-awesome css -->
+<link defhref="../../../css/font-awesome.min.css" href="../../../css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<!-- slick css -->
+<link defhref="../../../css/slick.css" href="../../../css/slick.css" rel="stylesheet" type="text/css"/>
+<!-- rsmenu transitions CSS -->
+<link defhref="../../../css/rsmenu-transitions.css" href="../../../css/rsmenu-transitions.css" rel="stylesheet" type="text/css"/>
+<link href="../../../css/style.css?ver=1" rel="stylesheet" type="text/css"/>
+<link href="../../../css/color/default.css" rel="stylesheet" type="text/css"/>
+<!-- responsive css -->
+<link href="../../../css/responsive.css" rel="stylesheet" type="text/css"/>
+<link href="../../../css/forum.css" rel="stylesheet" type="text/css"/>
+<div class="sec-spacer pt-20">
+<div class="container">
+<div class="container action-row-container border-0 p-0 mb-2">
+<div class="container action-row clearfix d-flex">
+<i class="fa fm fa-language fa-2x mr-2"></i>
+<a class="btn show-english" href="javascript:void(0)">English</a>
+<a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
+<span class="pagination-container ml-auto">
+<span id="page-indicator"><strong></strong></span>
+<span class="pagination-nav ml-4">
+<a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
+<a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
+</span>
+</span>
+</div>
+</div>
+<script src="../../../js/questions.js"></script>
+<!-- BEGIN Discussions header / title -->
+<div class="row">
+<div class="col-12">
+<div class="discussion-list-header">
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified DevOps Engineer - Professional 시험 DOP-C02 주제 1 문제 406 토론</h1>
+</div>
+<div class="discussion-list-header-en" style="display: none;">
+<h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1 question 406 discussion</h1>
+</div>
+</div>
+</div>
+<!-- END Discussions header / title -->
+<!-- BEGIN Discussion Content -->
+<div class="row">
+<div class="col-12">
+<div class="discussion-header-container">
+<!-- Question -->
+<div class="question-discussion-header">
+						
+							Amazon
+						 <a class="discussion-link">AWS Certified DevOps Engineer - Professional DOP-C02 시험 문제</a>
+<div>
+							문제 번호: 406 <br/>
+							주제 번호: 1
+						</div>
+</div>
+<div class="question-body mt-3 pt-3 border-top" data-id="980411">
+<p class="card-text">
+							
+								한 회사의 애플리케이션은 Amazon CloudWatch Logs 로그 그룹으로 로그를 스트리밍합니다. 팀에서 CloudWatch에서 로그를 검색할 수 있도록 최소 30일 동안 로그를 이용할 수 있어야 합니다. 또한 최소 90일 동안은 낮은 지연 시간으로 로그에 접근할 수 있어야 합니다. 180일 이후에는 로그 검색 빈도가 낮아 지연 시간은 중요하지 않습니다. <br/><br/>DevOps 엔지니어는 로그 저장을 위해 Amazon S3 버킷을 생성합니다. 로그 가용성 지표와 데이터 보호는 회사에 매우 중요합니다. <br/><br/>이러한 요구 사항을 가장 비용 효율적으로 충족하는 솔루션은 무엇일까요?
+							
+						</p>
+<div class="voted-answers-tally d-none">
+</div>
+<div class="question-choices-container">
+<ul>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="A">
+													A.
+												</span> 
+											
+											로그 그룹의 보존 기간을 30일로 설정하고, '간헐적 액세스' 로그 클래스를 사용하도록 구성합니다. Amazon Kinesis Data Streams를 사용하여 로그 이벤트를 S3 버킷으로 전송하는 CloudWatch 메트릭 스트림을 생성합니다. 90일 후에는 객체를 Amazon S3 Standard-IA(간헐적 액세스)로, 180일 후에는 Amazon Glacier Flexible Retrieval로 이동하는 S3 수명 주기 정책을 생성합니다.
+										</li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="B">
+													B.
+												</span> 
+											
+											로그 그룹의 보존 기간을 30일로 설정하고, '간헐적 액세스' 로그 클래스를 사용하도록 구성합니다. Amazon Data Firehose를 사용하여 로그 이벤트를 S3 버킷으로 전송하는 CloudWatch 메트릭 스트림을 생성합니다. 90일 후에는 객체를 Amazon S3 One Zone-Infrequent Access(S3 One Zone-IA)로, 180일 후에는 Amazon S3 Glacier Flexible Retrieval로 이동하는 S3 수명 주기 정책을 생성합니다.
+										</li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="C">
+													C.
+												</span> 
+											
+											로그 그룹의 보존 기간을 30일로 구성합니다. Amazon Kinesis Data Streams를 사용하여 로그 이벤트를 파일에 기록하는 CloudWatch 구독 필터를 생성합니다. 90일 후에는 객체를 Amazon S3 Standard-IA(S3 Standard-Infrequent Access)로, 180일 후에는 Amazon S3 Glacier Instant Retrieval로 이동하는 S3 수명 주기 정책을 생성합니다.
+										</li>
+<li class="multi-choice-item correct-hidden">
+<span class="multi-choice-letter" data-choice-letter="D">
+													D.
+												</span> 
+											
+											로그 그룹의 보존 기간을 30일로 구성합니다. Amazon Data Firehose를 사용하여 로그 이벤트를 S3 버킷으로 전송하는 CloudWatch 구독 필터를 생성합니다. 90일 후 객체를 Amazon S3 Standard-IA(S3 Standard-Infrequent Access)로, 180일 후 Amazon S3 Glacier Deep Archive로 이동하는 S3 수명 주기 정책을 생성합니다.
+										</li>
+</ul>
+</div>
+<a class="btn btn-primary reveal-solution" href="#">제안된 답변 보기</a>
+<a class="btn btn-primary hide-solution d-none" href="#">답변 숨기기</a>
+<div class="card-text question-answer bg-light white-text" style="display: none;">
+<span class="correct-answer-box"><strong>정답: </strong>
+<span class="correct-answer">D</span>
+<br/>
+</span>
+<span class="answer-description">
+</span>
+</div>
+</div>
+<!-- / Question  -->
+</div>
+<div class="discussion-header-container-en" style="display: none;">
+<!-- Question -->
+<div class="question-discussion-header">
+						
+							Exam question from
+						
+						Amazon's
+						<a class="discussion-link">AWS Certified DevOps Engineer - Professional DOP-C02</a>
+<div>
+							Question #: 406<br/>
+							Topic #: 1
+						</div>
+</div>
+<div class="question-body mt-3 pt-3 border-top" data-id="980411">
+<p class="card-text">
+							
+								A company has an application that streams logs to an Amazon CloudWatch Logs log group. The logs must be available for the team to search in CloudWatch for at least 30 days. Logs must be accessible with low latency for at least 90 days. After 180 days, log retrieval is rare and latency is not important.<br/><br/>A DevOps engineer creates an Amazon S3 bucket to store the logs. Log availability metrics and data protection are important to the company.<br/><br/>Which solution will meet these requirements in the MOST cost-effective way?
+							
+						</p>
+<div class="voted-answers-tally d-none">
+</div>
+<div class="question-choices-container">
+<ul>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="A">
+													A.
+												</span>
+											
+											Configure the log group to have a retention period of 30 days and to use the infrequent access log class. Create a CloudWatch metric stream that uses Amazon Kinesis Data Streams to send log events to the S3 bucket. Create an S3 Lifecycle policy to move objects to Amazon S3 Standard-Infrequent Access (S3 Standard-IA) after 90 days and to Amazon Glacier Flexible Retrieval after 180 days.
+										</li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="B">
+													B.
+												</span>
+											
+											Configure the log group to have a retention period of 30 days and to use the infrequent access log class. Create a CloudWatch metric stream that uses Amazon Data Firehose to send log events to the S3 bucket. Create an S3 Lifecycle policy to move objects to Amazon S3 One Zone-Infrequent Access (S3 One Zone-IA) after 90 days and to Amazon S3 Glacier Flexible Retrieval after 180 days.
+										</li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="C">
+													C.
+												</span>
+											
+											Configure the log groups to have a retention period of 30 days. Create a CloudWatch subscription filter that uses Amazon Kinesis Data Streams to send log events to the S3 bucket by writing files. Create an S3 Lifecycle policy to move objects to Amazon S3 Standard-Infrequent Access (S3 Standard-IA) after 90 days and to Amazon S3 Glacier Instant Retrieval after 180 days.
+										</li>
+<li class="multi-choice-item correct-hidden">
+<span class="multi-choice-letter" data-choice-letter="D">
+													D.
+												</span>
+											
+											Configure the log groups to have a retention period of 30 days. Create a CloudWatch subscription filter that uses Amazon Data Firehose to send log events to the S3 bucket. Create an S3 Lifecycle policy to move objects to Amazon S3 Standard-Infrequent Access (S3 Standard-IA) after 90 days and to Amazon S3 Glacier Deep Archive after 180 days.
+										</li>
+</ul>
+</div>
+<a class="btn btn-primary reveal-solution" href="#">Show Suggested Answer</a>
+<a class="btn btn-primary hide-solution d-none" href="#">Hide Answer</a>
+<div class="card-text question-answer bg-light white-text">
+<span class="correct-answer-box"><strong>Suggested Answer:</strong>
+<span class="correct-answer">D</span>
+<br/>
+</span>
+<span class="answer-description">
+</span>
+</div>
+</div>
+<!-- / Question  -->
+</div>
+<div class="comments-wrapper">
+<a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
+<div class="discussion-page-comments-section" data-discussion-question-id="382735" style="display: none">
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
+<!-- discussion.html -->
+<!-- Discussion start -->
+<div class="container outer-discussion-container">
+<div class="row">
+<div class="comments-container p-2 w-100">
+<!-- New comment start -->
+<!-- New comment end -->
+<div class="discussion-container">
+		
+		
+			
+				현재 이 토론에는 댓글이 없습니다. 첫 번째 댓글을 남겨주세요!
+			
+		
+		
+
+		
+		
+		
+		</div>
+</div>
+</div>
+</div>
+<!-- Discussion end -->
+</div>
+</div>
+<div class="comments-wrapper-en" style="display: none;">
+<a class="badge reveal-comment" href="javascript:void(0)">Show Comments</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">Hide Comments</a>
+<div class="discussion-page-comments-section-en" data-discussion-question-id="382735" style="display: none">
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">Comments</h4></div>
+<!-- discussion.html -->
+<!-- Discussion start -->
+<div class="container outer-discussion-container">
+<div class="row">
+<div class="comments-container p-2 w-100">
+<!-- New comment start -->
+<!-- New comment end -->
+<div class="discussion-container">
+		
+		
+			
+				Currently there are no comments in this discussion, be the first to comment!
+			
+		
+		
+
+		
+		
+		
+		</div>
+</div>
+</div>
+</div>
+<!-- Discussion end -->
+</div>
+</div>
+</div>
+</div>
+<!-- END Discussion Content -->
+</div>
+</div>
+<!-- start scrollUp  -->
+<div class="d-print-none" id="scrollUp">
+<i class="fa fa-angle-up"></i>
+</div>
+<!-- Popper JS -->
+<script src="../../../js/popper.min.js"></script>
+<!-- jquery latest version -->
+<script src="../../../js/jquery.min.js"></script>
+<!-- bootstrap js -->
+<script src="../../../js/bootstrap.min.js"></script>
+<!-- slick.min js -->
+<script src="../../../js/slick.min.js"></script>
+<!-- wow js -->
+<script src="../../../js/wow.min.js"></script>
+<!-- main js -->
+<script src="../../../js/main.js"></script>
+<script type="text/javascript">
+    // Activate tooltips
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    })
+
+    $(document).ready(function () {
+        // Load stylesheets in a deferred way:
+        $('link[defhref]').each(function() {
+            $(this).attr('href', $(this).attr('defhref'));
+            //var src = $(this).attr('href');
+            //loadStyleSheet(src);
+        });
+
+        // Load mobile images in a deferred way:
+        var isMobile = window.matchMedia("only screen and (max-width: 490px)").matches;
+        if (isMobile) {
+            $('img[mobile-defsrc]').each(function () {
+                $(this).attr('src', $(this).attr('mobile-defsrc')).removeAttr('defsrc');
+            });
+        }
+
+        // Load images in a deferred way:
+        $('img[defsrc]').each(function() {
+            $(this).attr('src',$(this).attr('defsrc'));
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function (){
+        set_voting_configuration_by_question($(".question-body"));
+    });
+</script>
+<script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
+<script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
+</div>
+</body>
+</html>

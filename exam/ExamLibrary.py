@@ -492,25 +492,62 @@ def save_html(driver, did, postdate, fname):
 
     bs = open_template_exam(postdate)
 
+    # title = bs.find("title")
+    # title.contents = [BeautifulSoup(page_title, 'html.parser')]
+
+    # header = bs.find("div", {"class": "discussion-list-header"})
+    # header.contents = [BeautifulSoup(header_contents, 'html.parser')]
+    # header = bs.find("div", {"class": "discussion-list-header-en"})
+    # header.contents = [BeautifulSoup(header_contents, 'html.parser')]
+
+    # container = bs.find("div", {"class": "discussion-header-container"})
+    # container.contents = [BeautifulSoup(container_contents, 'html.parser')]
+    # container = bs.find("div", {"class": "discussion-header-container-en"})
+    # container.contents = [BeautifulSoup(container_contents, 'html.parser')]
+
+    # discussion = bs.find("div", {"class": "discussion-page-comments-section"})
+    # discussion.contents = [BeautifulSoup(discussion_contents, 'html.parser')]
+    # discussion["data-discussion-question-id"] = did
+    # discussion = bs.find("div", {"class": "discussion-page-comments-section-en"})
+    # discussion.contents = [BeautifulSoup(discussion_contents, 'html.parser')]
+    # discussion["data-discussion-question-id"] = did
+
+    # title
     title = bs.find("title")
-    title.contents = [BeautifulSoup(page_title, 'html.parser')]
+    title.clear()
+    title.append(page_title)
 
+    # header KR
     header = bs.find("div", {"class": "discussion-list-header"})
-    header.contents = [BeautifulSoup(header_contents, 'html.parser')]
-    header = bs.find("div", {"class": "discussion-list-header-en"})
-    header.contents = [BeautifulSoup(header_contents, 'html.parser')]
+    header.clear()
+    header.append(BeautifulSoup(header_contents, 'html.parser'))
 
+    # header EN
+    header_en = bs.find("div", {"class": "discussion-list-header-en"})
+    header_en.clear()
+    header_en.append(BeautifulSoup(header_contents, 'html.parser'))
+
+    # container KR
     container = bs.find("div", {"class": "discussion-header-container"})
-    container.contents = [BeautifulSoup(container_contents, 'html.parser')]
-    container = bs.find("div", {"class": "discussion-header-container-en"})
-    container.contents = [BeautifulSoup(container_contents, 'html.parser')]
+    container.clear()
+    container.append(BeautifulSoup(container_contents, 'html.parser'))
 
+    # container EN
+    container_en = bs.find("div", {"class": "discussion-header-container-en"})
+    container_en.clear()
+    container_en.append(BeautifulSoup(container_contents, 'html.parser'))
+
+    # discussion KR
     discussion = bs.find("div", {"class": "discussion-page-comments-section"})
-    discussion.contents = [BeautifulSoup(discussion_contents, 'html.parser')]
+    discussion.clear()
+    discussion.append(BeautifulSoup(discussion_contents, 'html.parser'))
     discussion["data-discussion-question-id"] = did
-    discussion = bs.find("div", {"class": "discussion-page-comments-section-en"})
-    discussion.contents = [BeautifulSoup(discussion_contents, 'html.parser')]
-    discussion["data-discussion-question-id"] = did
+
+    # discussion EN
+    discussion_en = bs.find("div", {"class": "discussion-page-comments-section-en"})
+    discussion_en.clear()
+    discussion_en.append(BeautifulSoup(discussion_contents, 'html.parser'))
+    discussion_en["data-discussion-question-id"] = did
 
     dir = os.path.dirname(fname)
     if not os.path.exists(dir):
@@ -797,25 +834,65 @@ def save_kr(driver, fname):
     #print(html)
     bs_en = BeautifulSoup(html, 'html.parser')
 
-    header = bs_en.find("div", {"class": "discussion-list-header"})
-    header.contents = [BeautifulSoup(header_contents, 'html.parser')]
+    # header = bs_en.find("div", {"class": "discussion-list-header"})
+    # header.contents = [BeautifulSoup(header_contents, 'html.parser')]
 
+    # header KR
+    header = bs_en.find("div", {"class": "discussion-list-header"})
+    header.clear()
+    header.append(BeautifulSoup(header_contents, 'html.parser'))
+
+    # ===== discussion-header-container =====
     container = bs_en.find("div", {"class": "discussion-header-container"})
     progress_element = container.find("div", {"class": "progress"})
     progress_contents = progress_element.decode_contents() if progress_element else None
-    #progress_contents = container.find("div", {"class": "progress"}).decode_contents()
+ 
+    # container_contents (KR 버전) → 새로운 soup 객체
     container_kr = BeautifulSoup(container_contents, 'html.parser')
+
+    # progress 복원
     progress = container_kr.find("div", {"class": "progress"})
     if progress and progress_contents is not None:
-        progress.contents = [BeautifulSoup(progress_contents, 'html.parser')]
-    container.contents = [BeautifulSoup(container_kr.decode_contents(), 'html.parser')]
- 
-    discussion_contents_en = bs_en.find("div", {"class": "discussion-page-comments-section"}).decode_contents()
-    discussion = bs_en.find("div", {"class": "discussion-page-comments-section-en"})
-    discussion.contents = [BeautifulSoup(discussion_contents_en, 'html.parser')]
+        progress.clear()
+        progress.append(BeautifulSoup(progress_contents, 'html.parser'))
+        # progress_fragment = BeautifulSoup(progress_contents, 'html.parser')
+        # for child in progress_fragment.contents:
+        #     progress.append(child)
 
+    # 기존 container 내부 제거 후 새 내용 삽입
+    container.clear()
+    container.append(BeautifulSoup(container_kr.decode_contents(), 'html.parser'))
+    # for child in container_kr.contents:
+    #     container.append(child)
+
+    # progress = container_kr.find("div", {"class": "progress"})
+    # if progress and progress_contents is not None:
+    #     progress.contents = [BeautifulSoup(progress_contents, 'html.parser')]
+    # container.contents = [BeautifulSoup(container_kr.decode_contents(), 'html.parser')]
+
+    # ===== discussion EN 영역 =====
+    discussion_contents_en = bs_en.find("div", {"class": "discussion-page-comments-section"}).decode_contents()
+    discussion_en = bs_en.find("div", {"class": "discussion-page-comments-section-en"})
+    discussion_en.clear()
+    discussion_en.append(BeautifulSoup(discussion_contents_en, 'html.parser'))
+    # discussion_en_fragment = BeautifulSoup(discussion_contents_en, 'html.parser')
+    # for child in discussion_en_fragment.contents:
+    #     discussion_en.append(child)
+
+    # discussion_contents_en = bs_en.find("div", {"class": "discussion-page-comments-section"}).decode_contents()
+    # discussion = bs_en.find("div", {"class": "discussion-page-comments-section-en"})
+    # discussion.contents = [BeautifulSoup(discussion_contents_en, 'html.parser')]
+
+    # ===== discussion KR 영역 =====
     discussion = bs_en.find("div", {"class": "discussion-page-comments-section"})
-    discussion.contents = [BeautifulSoup(discussion_contents, 'html.parser')]
+    discussion.clear()
+    discussion.append(BeautifulSoup(discussion_contents, 'html.parser'))
+    # discussion_fragment = BeautifulSoup(discussion_contents, 'html.parser')
+    # for child in discussion_fragment.contents:
+    #     discussion.append(child)
+
+    # discussion = bs_en.find("div", {"class": "discussion-page-comments-section"})
+    # discussion.contents = [BeautifulSoup(discussion_contents, 'html.parser')]
 
     fname_kr = fname[:-5] + '-KR.html'
     fname_kr = '/'.join(fname_kr.split('/')[:-1]) + '/kr/' + fname_kr.split('/')[-1]

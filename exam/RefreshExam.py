@@ -72,7 +72,7 @@ def make_filename(qtitle, qid, dataid, tid=0):
         {
             "qtitle": "Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1",
             "prefname": "aws/DOP_C02/DOP2-Q",
-            "qlength": 390,
+            "qlength": 429,
             "first_id": 879465,
         },
         {
@@ -198,7 +198,11 @@ if __name__ == "__main__":
 
     DISCUSS = 'AmazonDiscuss.txt'
     AIF = 'Exam AWS Certified AI Practitioner AIF-C01 topic 1'
-    refresh_all_exam(DISCUSS, AIF, 334)         # OK 334
+    refresh_all_exam(DISCUSS, AIF, 334)         # OK 422
+
+    DOP2 = "Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1"
+    # refresh_all_exam(DISCUSS, DOP2, 0)       # OK 390
+    refresh_all_exam('ExamList_DOP2.csv', DOP2, 0)       # OK 390
 
     CLF2 = "Exam AWS Certified Cloud Practitioner CLF-C02 topic 1"
     refresh_all_exam(DISCUSS, CLF2, 719)        # OK 719
@@ -214,17 +218,15 @@ if __name__ == "__main__":
     refresh_all_exam(DISCUSS, DVA2, 557)       # OK 557
 
     DEA = 'Exam AWS Certified Data Engineer - Associate DEA-C01 topic 1'
-    refresh_all_exam(DISCUSS, DEA, 261)       # OK 261
+    refresh_all_exam(DISCUSS, DEA, 250)       # OK 261
 
+     
     # SOA2 = "Exam AWS Certified SysOps Administrator - Associate topic 1"
     # refresh_all_exam('ExamList_SOA2.csv', SOA2, 478)       # OK 478
 
     # SOA3 = "Exam AWS Certified CloudOps Engineer - Associate SOA-C03 topic 1"
     # refresh_all_exam('ExamList_SOA3.csv', SOA3, 65)       # OK 65
 
-    # DOP2 = "Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1"
-    # refresh_all_exam('ExamList_DOP2.csv', DOP2)       # OK 390
-     
     # SAP_C02 = 'Exam AWS Certified Solutions Architect - Professional SAP-C02 topic 1'
     # refresh_all_exam('ExamList_SAP2.csv', SAP_C02)    # OK 529
 
