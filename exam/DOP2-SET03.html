@@ -2521,9 +2521,9 @@ function renderQ(idx) {
   else rp.classList.remove('show');
 
   // nav buttons
-  document.getElementById('btn-prev').disabled = idx === 0;
-  document.getElementById('btn-next').disabled = idx === QS.length - 1;
-  document.getElementById('nav-info').textContent = `${idx+1} / ${QS.length} 문제`;
+  document.getElementById('btn-prev-top').disabled = idx === 0;
+  document.getElementById('btn-next-top').disabled = idx === QS.length - 1;
+  // document.getElementById('nav-info').textContent = `${idx+1} / ${QS.length} 문제`;
 
   // select 동기화
   updateSelectStatus();
