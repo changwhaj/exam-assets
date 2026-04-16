@@ -23,6 +23,29 @@ body{background:var(--bg);color:var(--text);font-family:'Pretendard','Noto Sans 
 
 /* Topbar */
 .topbar{display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border);flex-wrap:wrap;}
+
+/* ── SET 선택 콤보박스 ── */
+.set-select-wrap{position:relative;display:inline-flex;align-items:center;}
+.set-select{
+  appearance:none;-webkit-appearance:none;
+  background:linear-gradient(135deg,#4f8ef7,#38c9a0);
+  border:none;border-radius:20px;
+  color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;
+  padding:4px 28px 4px 12px;
+  cursor:pointer;outline:none;
+  transition:filter .2s,transform .1s;
+  white-space:nowrap;
+}
+.set-select:hover{filter:brightness(1.12);transform:translateY(-1px);}
+.set-select:focus{filter:brightness(1.08);outline:2px solid rgba(255,255,255,.5);outline-offset:2px;}
+.set-select option{background:#1a1d27;color:#e2e6f0;font-size:13px;font-weight:600;}
+/* 화살표 아이콘 */
+.set-select-wrap::after{
+  content:'▾';
+  position:absolute;right:10px;top:50%;transform:translateY(-50%);
+  color:#fff;font-size:10px;pointer-events:none;
+}
+
 .badge{background:linear-gradient(135deg,#4f8ef7,#38c9a0);color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;padding:4px 12px;border-radius:20px;white-space:nowrap;}
 .topbar-title{font-size:13px;color:var(--text-muted);flex:1;min-width:120px;}
 .topbar-title strong{color:var(--text);font-size:15px;display:block;}
@@ -140,14 +163,149 @@ body{background:var(--bg);color:var(--text);font-family:'Pretendard','Noto Sans 
   .topbar{gap:8px;}
   .topbar-right{gap:6px;}
 }
+
+/* ── 패스워드 모달 ── */
+.pw-overlay{
+  position:fixed;inset:0;z-index:9999;
+  display:flex;align-items:center;justify-content:center;
+  /* 배경 블러 */
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  background:rgba(10,12,22,.55);
+  transition:opacity .3s;
+}
+.pw-overlay.hidden{
+  opacity:0;pointer-events:none;
+}
+.pw-modal{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:18px;
+  box-shadow:0 24px 64px rgba(0,0,0,.35);
+  padding:40px 36px 34px;
+  width:min(400px,90vw);
+  display:flex;flex-direction:column;align-items:center;gap:0;
+  animation:pwSlideIn .35s cubic-bezier(.22,.9,.36,1) both;
+}
+@keyframes pwSlideIn{
+  from{opacity:0;transform:translateY(28px) scale(.96);}
+  to{opacity:1;transform:translateY(0) scale(1);}
+}
+.pw-logo{
+  width:54px;height:54px;border-radius:14px;
+  background:linear-gradient(135deg,#4f8ef7,#38c9a0);
+  display:flex;align-items:center;justify-content:center;
+  font-size:24px;margin-bottom:20px;
+  box-shadow:0 8px 24px rgba(79,142,247,.35);
+}
+.pw-title{
+  font-size:18px;font-weight:800;color:var(--text);
+  letter-spacing:-.01em;margin-bottom:6px;text-align:center;
+}
+.pw-sub{
+  font-size:13px;color:var(--text-muted);margin-bottom:28px;text-align:center;line-height:1.6;
+}
+.pw-input-wrap{
+  position:relative;width:100%;margin-bottom:14px;
+}
+.pw-input{
+  width:100%;
+  background:var(--surface2);
+  border:2px solid var(--border);
+  border-radius:10px;
+  color:var(--text);
+  font-size:16px;font-weight:700;
+  letter-spacing:.15em;
+  padding:13px 46px 13px 18px;
+  outline:none;
+  transition:border-color .2s,box-shadow .2s;
+  text-align:center;
+}
+.pw-input::placeholder{letter-spacing:normal;font-weight:400;font-size:14px;}
+.pw-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(79,142,247,.18);}
+.pw-input.shake{animation:pwShake .38s ease;}
+.pw-input.error{border-color:#f76f6f;box-shadow:0 0 0 3px rgba(247,111,111,.18);}
+@keyframes pwShake{
+  0%,100%{transform:translateX(0);}
+  20%{transform:translateX(-8px);}
+  40%{transform:translateX(8px);}
+  60%{transform:translateX(-6px);}
+  80%{transform:translateX(6px);}
+}
+.pw-toggle{
+  position:absolute;right:14px;top:50%;transform:translateY(-50%);
+  background:none;border:none;cursor:pointer;
+  color:var(--text-muted);font-size:18px;padding:2px 4px;
+  transition:color .2s;
+}
+.pw-toggle:hover{color:var(--accent);}
+.pw-error-msg{
+  font-size:12px;color:#f76f6f;font-weight:600;
+  min-height:18px;margin-bottom:18px;text-align:center;
+  transition:opacity .2s;
+}
+.pw-btn{
+  width:100%;background:linear-gradient(135deg,#4f8ef7,#38c9a0);
+  border:none;border-radius:10px;color:#fff;
+  font-size:15px;font-weight:800;letter-spacing:.04em;
+  padding:14px;cursor:pointer;
+  transition:filter .2s,transform .1s,box-shadow .2s;
+  box-shadow:0 6px 20px rgba(79,142,247,.3);
+}
+.pw-btn:hover{filter:brightness(1.1);transform:translateY(-1px);box-shadow:0 8px 28px rgba(79,142,247,.4);}
+.pw-btn:active{transform:translateY(0);}
+.pw-footer{
+  font-size:11px;color:var(--text-muted);margin-top:20px;text-align:center;
+}
 </style>
 </head>
 <body>
+
+<!-- ── 패스워드 모달 ── -->
+<div class="pw-overlay" id="pw-overlay">
+  <div class="pw-modal" role="dialog" aria-modal="true" aria-labelledby="pw-title">
+    <div class="pw-logo">🔐</div>
+    <div class="pw-title" id="pw-title">학습 콘텐츠 잠금</div>
+    <div class="pw-sub">AWS DOP-C02 학습 자료에 접근하려면<br>패스워드를 입력해 주세요.</div>
+
+    <div class="pw-input-wrap">
+      <input
+        class="pw-input" id="pw-input"
+        type="password" placeholder="패스워드 입력"
+        maxlength="20"
+        autocomplete="current-password"
+        onkeydown="if(event.key==='Enter') checkPw()"
+      />
+      <button class="pw-toggle" id="pw-toggle" onclick="togglePwVisible()" tabindex="-1" title="표시/숨김">👁</button>
+    </div>
+
+    <div class="pw-error-msg" id="pw-error"></div>
+
+    <button class="pw-btn" onclick="checkPw()">확인</button>
+
+    <div class="pw-footer">🍪 인증 후 쿠키에 저장되어 다음 방문 시 자동 로그인됩니다.</div>
+  </div>
+</div>
+
 <div class="wrap">
 
   <!-- Topbar -->
   <div class="topbar">
-    <span class="badge">AWS DOP-C02</span>
+
+    <!-- ── SET 선택 콤보박스 (badge 대체) ── -->
+    <div class="set-select-wrap">
+      <select class="set-select" id="set-select" onchange="goSet(this.value)">
+        <option value="01" selected>DOP-C02 · SET 01</option>
+        <option value="02">DOP-C02 · SET 02</option>
+        <option value="03">DOP-C02 · SET 03</option>
+        <option value="04">DOP-C02 · SET 04</option>
+        <option value="05">DOP-C02 · SET 05</option>
+        <option value="06">DOP-C02 · SET 06</option>
+        <option value="07">DOP-C02 · SET 07</option>
+        <option value="08">DOP-C02 · SET 08</option>
+        <option value="09">DOP-C02 · SET 09</option>
+      </select>
+    </div>
+
     <div class="topbar-title">
       <strong>AWS Certified DevOps Engineer – Professional</strong>
       SET 01 · Q001~Q050 실전 학습
@@ -225,6 +383,101 @@ body{background:var(--bg);color:var(--text);font-family:'Pretendard','Noto Sans 
 
 </div>
 <script>
+// ────────────────────────────────────────────────
+// 패스워드 / 쿠키 인증
+// ────────────────────────────────────────────────
+const PW_CORRECT  = 'DOP2';
+const COOKIE_NAME = 'dop2_auth';
+const COOKIE_DAYS = 30; // 쿠키 유효기간 (일)
+
+function getCookie(name) {
+  const cookies = document.cookie.split(';');
+  for (let c of cookies) {
+    const [k, v] = c.trim().split('=');
+    if (k === name) return decodeURIComponent(v || '');
+  }
+  return null;
+}
+
+function setCookie(name, value, days) {
+  const expires = new Date(Date.now() + days * 864e5).toUTCString();
+  document.cookie = `${name}=${encodeURIComponent(value)};expires=${expires};path=/;SameSite=Lax`;
+}
+
+function unlockPage() {
+  const overlay = document.getElementById('pw-overlay');
+  overlay.classList.add('hidden');
+  // 완전히 숨긴 뒤 DOM에서 제거
+  overlay.addEventListener('transitionend', () => overlay.remove(), { once: true });
+}
+
+function checkPw() {
+  const input = document.getElementById('pw-input');
+  const errEl = document.getElementById('pw-error');
+  const val   = input.value.trim();
+
+  if (val === PW_CORRECT) {
+    setCookie(COOKIE_NAME, PW_CORRECT, COOKIE_DAYS);
+    errEl.textContent = '';
+    input.classList.remove('error');
+    unlockPage();
+  } else {
+    errEl.textContent = '❌ 패스워드가 올바르지 않습니다. 다시 입력해 주세요.';
+    input.classList.add('error', 'shake');
+    input.select();
+    input.addEventListener('animationend', () => input.classList.remove('shake'), { once: true });
+  }
+}
+
+function togglePwVisible() {
+  const input  = document.getElementById('pw-input');
+  const toggle = document.getElementById('pw-toggle');
+  if (input.type === 'password') {
+    input.type = 'text';
+    toggle.textContent = '🙈';
+  } else {
+    input.type = 'password';
+    toggle.textContent = '👁';
+  }
+}
+
+// 페이지 로드 시 쿠키 확인
+(function checkAuth() {
+  if (getCookie(COOKIE_NAME) === PW_CORRECT) {
+    // 쿠키가 유효하면 모달 즉시 제거
+    const overlay = document.getElementById('pw-overlay');
+    if (overlay) overlay.remove();
+  } else {
+    // 모달 표시 후 input 포커스
+    window.addEventListener('DOMContentLoaded', () => {
+      const input = document.getElementById('pw-input');
+      if (input) setTimeout(() => input.focus(), 100);
+    });
+  }
+})();
+
+
+// 파일명 규칙: DOP2_set01_v02.html ~ DOP2_set09_v02.html
+// 실제 환경에 맞게 URL 패턴을 수정하세요.
+// ────────────────────────────────────────────────
+function goSet(setNum) {
+  // 현재 페이지 파일명에서 set 번호만 교체
+  const currentPath = window.location.pathname;
+  const fileName = currentPath.split('/').pop(); // e.g. "DOP2_set01_v02.html"
+
+  let newFileName;
+  if (fileName && fileName.match(/DOP2_set\d{2}/i)) {
+    // 파일명에서 set 번호 교체
+    newFileName = fileName.replace(/set\d{2}/i, `set${setNum}`);
+  } else {
+    // 파일명 패턴을 찾지 못한 경우 기본 패턴 사용
+    newFileName = `DOP2_set${setNum}_v02.html`;
+  }
+
+  const newPath = currentPath.replace(fileName, newFileName);
+  window.location.href = newPath;
+}
+
 const QS = [
 {
   n:1,
@@ -1142,6 +1395,16 @@ let curLang = 'ko';
 function init() {
   buildSelect();
   renderQ(0);
+  // 현재 SET 번호를 콤보박스에 반영
+  syncSetSelect();
+}
+
+function syncSetSelect() {
+  const fileName = window.location.pathname.split('/').pop();
+  const match = fileName.match(/set(\d{2})/i);
+  if (match) {
+    document.getElementById('set-select').value = match[1];
+  }
 }
 
 function buildSelect() {

@@ -752,10 +752,8 @@ function setLang(lang, btn) {
 }
 
 function applyLang(lang) {
-  // 문제 영어 텍스트 — 'both'일 때 block으로 명시해야 CSS display:none을 덮어씀
   const enQ = document.getElementById('q-en-text');
   enQ.style.display = (lang === 'both') ? 'block' : 'none';
-  // 선택지 영어 텍스트
   document.querySelectorAll('.choice-en').forEach(e => {
     e.style.display = (lang === 'both') ? 'block' : 'none';
   });
