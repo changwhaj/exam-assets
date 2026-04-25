@@ -316,7 +316,7 @@ body{background:var(--bg);color:var(--text);font-family:'Pretendard','Noto Sans 
 
       <!-- 문제 선택 콤보박스 -->
       <div class="q-select-wrap">
-        <select class="q-select" id="q-select" onchange="goQWithReset(this.value-51)"></select>
+        <select class="q-select" id="q-select" onchange="goQWithReset(this.selectedIndex)"></select>
       </div>
       <button class="btn btn-nav" onclick="goQWithReset(curQ+1)" id="btn-next-top">→</button>
 
@@ -1814,7 +1814,7 @@ function updateSelectStatus() {
       opt.textContent = `Q${String(q.n).padStart(3,'0')}`;
     }
   });
-  sel.value = QS[curQ].n;
+  sel.selectedIndex = curQ;
 }
 
 // ────────────────────────────────────────────────

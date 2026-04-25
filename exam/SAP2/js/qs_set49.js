@@ -1,0 +1,172 @@
+window.QS_SET49 = [
+  {
+    n: 481,
+    en: `A company's web application has reliability issues. The application serves customers globally. The application runs on a single Amazon EC2 instance and performs read-intensive operations on an Amazon RDS for MySQL database.<br/><br/>During high load, the application becomes unresponsive and requires a manual restart of the EC2 instance. A solutions architect must improve the application's reliability.<br/><br/>Which solution will meet this requirement with the LEAST development effort?`,
+    ko: `회사의 웹 애플리케이션에 안정성 문제가 있습니다. 이 애플리케이션은 전 세계 고객에게 서비스를 제공합니다. 이 애플리케이션은 단일 Amazon EC2 인스턴스에서 실행되고 Amazon RDS for MySQL 데이터베이스에서 읽기 집약적 작업을 수행합니다. <br/><br/>부하가 높을 때 애플리케이션이 응답하지 않고 EC2 인스턴스를 수동으로 다시 시작해야 합니다. 솔루션 아키텍트는 애플리케이션의 안정성을 개선해야 합니다. <br/><br/>어떤 솔루션이 최소한의 개발 노력으로 이 요구 사항을 충족할까요?`,
+    type: 'single',
+    choices: [
+      { k:'A', en:`Create an Amazon CloudFront distribution. Specify the EC2 instance as the distribution’s origin. Configure a Multi-AZ deployment for the RDS for MySQL database. Use the standby DB instance for the read-intensive operations.`, ko:`Amazon CloudFront 배포를 만듭니다. EC2 인스턴스를 배포의 원점으로 지정합니다. RDS for MySQL 데이터베이스에 대한 Multi-AZ 배포를 구성합니다. 읽기 집약적 작업에 대기 DB 인스턴스를 사용합니다.` },
+      { k:'B', en:`Run the application on EC2 instances that are in an Auto Scaling group. Place the EC2 instances behind an Elastic Load Balancing (ELB) load balancer. Replace the database service with Amazon Aurora. Use Aurora Replicas for the read-intensive operations.`, ko:`Auto Scaling 그룹에 있는 EC2 인스턴스에서 애플리케이션을 실행합니다. EC2 인스턴스를 Elastic Load Balancing(ELB) 로드 밸런서 뒤에 배치합니다. 데이터베이스 서비스를 Amazon Aurora로 바꿉니다. 읽기 집약적 작업에는 Aurora Replicas를 사용합니다.` },
+      { k:'C', en:`Deploy AWS Global Accelerator. Configure a Multi-AZ deployment for the RDS for MySQL database. Use the standby DB instance for the read-intensive operations.`, ko:`AWS Global Accelerator를 배포합니다. RDS for MySQL 데이터베이스에 대한 Multi-AZ 배포를 구성합니다. 읽기 집약적 작업에 대기 DB 인스턴스를 사용합니다.` },
+      { k:'D', en:`Migrate the application to AWS Lambda functions. Create read replicas for the RDS for MySQL database. Use the read replicas for the read-intensive operations.`, ko:`애플리케이션을 AWS Lambda 함수로 마이그레이션합니다. RDS for MySQL 데이터베이스에 대한 읽기 복제본을 만듭니다. 읽기 집약적 작업에 읽기 복제본을 사용합니다.` },
+    ],
+    answer: ["B"],
+    vote: '77% B, 8% C, 8% A, 8% D',
+    explain: `<p><span class="mark-ok">✅ B</span></p><p>분명히 B</p>`,
+    wrong: `<p><span class="mark-no">❌ A</span> — B는 분명히 최소한의 노력에 대해 옳습니다.</p><p><span class="mark-no">❌ C</span> — 전 세계 고객이 좋은 소리를 내며 Global Accelerator More Work Lambda로 앱 마이그레이션 개발 PostgreSQL 및 MySQL용 Amazon Relational Database Service(Amazon RDS)는 이제 3개의 가용 영역(AZ)에 걸쳐 하나의 기본 인스턴스와 두 개의 읽기 가능한 STANDBY 데이터베이스(DB)</p><p><span class="mark-no">❌ D</span> — D. 애플리케이션을 AWS Lambda 함수로 마이그레이션합니다. RDS for MySQL 데이터베이스에 대한 읽기 복제본을 만듭니다. 읽기 집약적 작업에 읽기 복제본을 사용합니다. 다른 옵션에 더 많은 개발 노력이 필요한 이유는 다음과 같습니다. A. 다중 AZ RDS가 있는 CloudFront: 이 경우 CloudFront를 설정하고 EC2 인스턴스를 </p>`,
+    disc: [{ ans:'B', txt:'RDS에는 읽기 가능한 대기 인스턴스가 필요합니다.' }, { ans:'B', txt:'RDS need readable standby instance' }, { ans:'B', txt:'답은 B입니다. - 응답하지 않을 때 헬스 체크를 사용하여 자동으로 재시작 ->>ASG - 글로벌 고객 및 읽기 집약적 >> \'Read Replica\'를 사용할 수 있어야 합니다. A: EC2는 여전히 혼자입니다. C: EC2는 여전히 혼자입니다. D: 최소한의 개발 노력이 아닙니다.' }, { ans:'B', txt:'The answer is B. - Automatically restart using health check when not responding ->>ASG - Global customers and read-intensive >> \'Read Replica\' should be available. A: EC2 is still alone C: EC2 is still alone D: It\'s not a minimum development effort' }, { ans:'B', txt:'분명히 B' }]
+  },
+  {
+    n: 482,
+    en: `A company needs to use an AWS Transfer Family SFTP-enabled server with an Amazon S3 bucket to receive updates from a third-party data supplier. The data is encrypted with Pretty Good Privacy (PGP) encryption. The company needs a solution that will automatically decrypt the data after the company receives the data.<br/>A solutions architect will use a Transfer Family managed workflow. The company has created an IAM service role by using an IAM policy that allows access to AWS Secrets Manager and the S3 bucket. The role’s trust relationship allows the transfer amazonaws.com service to assume the role.<br/><br/>What should the solutions architect do next to complete the solution for automatic decryption?`,
+    ko: `회사에서는 Amazon S3 버킷이 있는 AWS Transfer Family SFTP 지원 서버를 사용하여 타사 데이터 공급업체로부터 업데이트를 받아야 합니다. 데이터는 Pretty Good Privacy(PGP) 암호화로 암호화됩니다. 회사에서는 데이터를 수신한 후 자동으로 데이터를 복호화하는 솔루션이 필요합니다. <br/>솔루션 아키텍트는 Transfer Family 관리 워크플로를 사용합니다. 회사에서는 AWS Secrets Manager와 S3 버킷에 액세스할 수 있는 IAM 정책을 사용하여 IAM 서비스 역할을 만들었습니다. 역할의 신뢰 관계를 통해 transfer amazonaws.com 서비스가 역할을 맡을 수 있습니다. <br/><br/>솔루션 아키텍트는 자동 복호화를 위한 솔루션을 완료하기 위해 다음에 무엇을 해야 합니까?`,
+    type: 'single',
+    choices: [
+      { k:'A', en:`Store the PGP public key in Secrets Manager. Add a nominal step in the Transfer Family managed workflow to decrypt files. Configure PGP encryption parameters in the nominal step. Associate the workflow with the Transfer Family server.`, ko:`Secrets Manager에 PGP 공개 키를 저장합니다. Transfer Family 관리 워크플로에 명목 단계를 추가하여 파일을 암호 해독합니다. 명목 단계에서 PGP 암호화 매개변수를 구성합니다. 워크플로를 Transfer Family 서버와 연결합니다.` },
+      { k:'B', en:`Store the PGP private key in Secrets Manager. Add an exception-handling step in the Transfer Family managed workflow to decrypt files. Configure PGP encryption parameters in the exception handler. Associate the workflow with the SFTP user.`, ko:`Secrets Manager에 PGP 개인 키를 저장합니다. Transfer Family 관리 워크플로에 예외 처리 단계를 추가하여 파일을 암호 해독합니다. 예외 처리기에서 PGP 암호화 매개변수를 구성합니다. 워크플로를 SFTP 사용자와 연결합니다.` },
+      { k:'C', en:`Store the PGP private key in Secrets Manager. Add a nominal step in the Transfer Family managed workflow to decrypt files. Configure PGP decryption parameters in the nominal step. Associate the workflow with the Transfer Family server.`, ko:`Secrets Manager에 PGP 개인 키를 저장합니다. Transfer Family 관리 워크플로에 명목 단계를 추가하여 파일을 암호 해독합니다. 명목 단계에서 PGP 암호 해독 매개변수를 구성합니다. 워크플로를 Transfer Family 서버와 연결합니다.` },
+      { k:'D', en:`Store the PGP public key in Secrets Manager. Add an exception-handling step in the Transfer Family managed workflow to decrypt files. Configure PGP decryption parameters in the exception handler. Associate the workflow with the SFTP user.`, ko:`Secrets Manager에 PGP 공개 키를 저장합니다. Transfer Family 관리 워크플로에 예외 처리 단계를 추가하여 파일을 암호 해독합니다. 예외 처리기에서 PGP 암호 해독 매개변수를 구성합니다. 워크플로를 SFTP 사용자와 연결합니다.` },
+    ],
+    answer: ["C"],
+    vote: '100% C',
+    explain: `<p><span class="mark-ok">✅ C</span></p><p>C 정답</p>`,
+    wrong: ``,
+    disc: [{ ans:'C', txt:'C 정답' }, { ans:'C', txt:'C correct' }, { ans:'C', txt:'C가 맞습니다. 왜냐하면 개인 키는 암호 해독에 필요하기 때문입니다.' }, { ans:'C', txt:'C is correct b/c private key is what is required for decryption' }, { ans:'C', txt:'물론이죠.' }]
+  },
+  {
+    n: 483,
+    en: `A company is migrating infrastructure for its massive multiplayer game to AWS. The game’s application features a leaderboard where players can see rankings in real time. The leaderboard requires microsecond reads and single-digit-millisecond write latencies. The datasets are single-digit terabytes in size and must be available to accept writes in less than a minute if a primary node failure occurs.<br/><br/>The company needs a solution in which data can persist for further analytical processing through a data pipeline.<br/><br/>Which solution will meet these requirements with the LEAST operational overhead?<br/>`,
+    ko: `한 회사가 대규모 멀티플레이어 게임을 위한 인프라를 AWS로 이전하고 있습니다. 이 게임의 애플리케이션에는 플레이어가 실시간으로 순위를 볼 수 있는 리더보드가 있습니다. 리더보드에는 마이크로초 단위의 읽기와 1자리 밀리초 단위의 쓰기 지연 시간이 필요합니다. 데이터 세트는 1자리 테라바이트 크기이며 기본 노드에 장애가 발생하면 1분 이내에 쓰기를 허용할 수 있어야 합니다. <br/><br/>이 회사에는 데이터 파이프라인을 통해 추가 분석 처리를 위해 데이터를 유지할 수 있는 솔루션이 필요합니다. <br/><br/>어떤 솔루션이 이러한 요구 사항을 가장 적은 운영 오버헤드로 충족할까요?<br/>`,
+    type: 'single',
+    choices: [
+      { k:'B', en:`Create an Amazon ROS database with a read replica. Configure the application to point writes to the writer endpoint. Configure the application to point reads to the reader endpoint.`, ko:`읽기 복제본이 있는 Amazon ROS 데이터베이스를 만듭니다. 쓰기를 작성자 엔드포인트로 가리키도록 애플리케이션을 구성합니다. 읽기를 리더 엔드포인트로 가리키도록 애플리케이션을 구성합니다.` },
+      { k:'C', en:`Create an Amazon MemoryDB for Redis cluster in Muit-AZ mode Configure the application to interact with the primary node.`, ko:`Muit-AZ 모드에서 Redis용 Amazon MemoryDB 클러스터를 만듭니다. 애플리케이션이 기본 노드와 상호 작용하도록 구성합니다.` },
+      { k:'D', en:`Create multiple Redis nodes on Amazon EC2 instances that are spread across multiple Availability Zones. Configure backups to Amazon S3.`, ko:`여러 가용성 영역에 걸쳐 분산된 Amazon EC2 인스턴스에 여러 Redis 노드를 만듭니다. Amazon S3에 대한 백업을 구성합니다.` },
+    ],
+    answer: ["C"],
+    vote: '100% C',
+    explain: `<p><span class="mark-ok">✅ C</span></p><p>관련 지연 요구 사항이 있는 게임 리더보드용 MEM DB</p>`,
+    wrong: ``,
+    disc: [{ ans:'C', txt:'관련 지연 요구 사항이 있는 게임 리더보드용 MEM DB' }, { ans:'C', txt:'MEM DB for gaming leaderboard with related latency requirement' }]
+  },
+  {
+    n: 484,
+    en: `A company is running several applications in the AWS Cloud. The applications are specific to separate business units in the company. The company is running the components of the applications in several AWS accounts that are in an organization in AWS Organizations.<br/><br/>Every cloud resource in the company’s organization has a tag that is named BusinessUnit. Every tag already has the appropriate value of the business unit name.<br/><br/>The company needs to allocate its cloud costs to different business units. The company also needs to visualize the cloud costs for each business unit.<br/><br/>Which solution will meet these requirements?`,
+    ko: `한 회사가 AWS 클라우드에서 여러 애플리케이션을 실행하고 있습니다. 애플리케이션은 회사의 별도 사업부에 특화되어 있습니다. 회사는 AWS Organizations의 조직에 있는 여러 AWS 계정에서 애플리케이션의 구성 요소를 실행하고 있습니다. <br/><br/>회사 조직의 모든 클라우드 리소스에는 BusinessUnit이라는 태그가 있습니다. 모든 태그에는 이미 사업부 이름의 적절한 값이 있습니다. <br/><br/>회사는 클라우드 비용을 여러 사업부에 할당해야 합니다. 회사는 또한 각 사업부의 클라우드 비용을 시각화해야 합니다. <br/><br/>어떤 솔루션이 이러한 요구 사항을 충족할까요?`,
+    type: 'single',
+    choices: [
+      { k:'A', en:`In the organization's management account, create a cost allocation tag that is named BusinessUnit. Also in the management account, create an Amazon S3 bucket and an AWS Cost and Usage Report (AWS CUR). Configure the S3 bucket as the destination for the AWS CUR. From the management account, query the AWS CUR data by using Amazon Athena. Use Amazon QuickSight for visualization.`, ko:`조직의 관리 계정에서 BusinessUnit이라는 이름의 비용 할당 태그를 만듭니다. 또한 관리 계정에서 Amazon S3 버킷과 AWS 비용 및 사용 보고서(AWS CUR)를 만듭니다. S3 버킷을 AWS CUR의 대상으로 구성합니다. 관리 계정에서 Amazon Athena를 사용하여 AWS CUR 데이터를 쿼리합니다. 시각화를 위해 Amazon QuickSight를 사용합니다.` },
+      { k:'B', en:`In each member account, create a cost allocation tag that is named BusinessUnit. In the organization’s management account, create an Amazon S3 bucket and an AWS Cost and Usage Report (AWS CUR). Configure the S3 bucket as the destination for the AWS CUR. Create an Amazon CloudWatch dashboard for visualization.`, ko:`각 멤버 계정에서 BusinessUnit이라는 이름의 비용 할당 태그를 만듭니다. 조직의 관리 계정에서 Amazon S3 버킷과 AWS 비용 및 사용 보고서(AWS CUR)를 만듭니다. S3 버킷을 AWS CUR의 대상으로 구성합니다. 시각화를 위한 Amazon CloudWatch 대시보드를 만듭니다.` },
+      { k:'C', en:`In the organization's management account, create a cost allocation tag that is named BusinessUnit. In each member account, create an Amazon S3 bucket and an AWS Cost and Usage Report (AWS CUR). Configure each S3 bucket as the destination for its respective AWS CUR. In the management account, create an Amazon CloudWatch dashboard for visualization.`, ko:`조직의 관리 계정에서 BusinessUnit이라는 이름의 비용 할당 태그를 만듭니다. 각 멤버 계정에서 Amazon S3 버킷과 AWS 비용 및 사용 보고서(AWS CUR)를 만듭니다. 각 S3 버킷을 해당 AWS CUR의 대상으로 구성합니다. 관리 계정에서 시각화를 위한 Amazon CloudWatch 대시보드를 만듭니다.` },
+      { k:'D', en:`In each member account, create a cost allocation tag that is named BusinessUnit. Also in each member account, create an Amazon S3 bucket and an AWS Cost and Usage Report (AWS CUR). Configure each S3 bucket as the destination for its respective AWS CUR. From the management account, query the AWS CUR data by using Amazon Athena. Use Amazon QuickSight for visualization.`, ko:`각 멤버 계정에서 BusinessUnit이라는 이름의 비용 할당 태그를 만듭니다. 또한 각 멤버 계정에서 Amazon S3 버킷과 AWS 비용 및 사용 보고서(AWS CUR)를 만듭니다. 각 S3 버킷을 해당 AWS CUR의 대상으로 구성합니다. 관리 계정에서 Amazon Athena를 사용하여 AWS CUR 데이터를 쿼리합니다. 시각화를 위해 Amazon QuickSight를 사용합니다.` },
+    ],
+    answer: ["A"],
+    vote: '100% A',
+    explain: `<p><span class="mark-ok">✅ A</span></p><p>답은 "A"입니다</p>`,
+    wrong: ``,
+    disc: [{ ans:'A', txt:'답은 "A"입니다' }, { ans:'A', txt:'A가 가장 좋은 답입니다' }, { ans:'A', txt:'CUR을 시각화하려면 Athena와 Quicksight가 필요합니다.' }, { ans:'A', txt:'Answer is "A"' }, { ans:'A', txt:'A is the best answer' }]
+  },
+  {
+    n: 485,
+    en: `A utility company wants to collect usage data every 5 minutes from its smart meters to facilitate time-of-use metering. When a meter sends data to AWS, the data is sent to Amazon API Gateway, processed by an AWS Lambda function. and stored in an Amazon DynamoDB table. During the pilot phase, the Lambda functions took from 3 to 5 seconds to complete.<br/><br/>As more smart meters are deployed, the engineers notice the Lambda functions are taking from 1 to 2 minutes to complete. The functions are also increasing in duration as new types of metrics are collected from the devices. There are many ProvisionedThroughputExceededException errors while performing PUT operations on DynamoDB, and there are also many TooManyRequestsException errors from Lambda.<br/><br/>Which combination of changes will resolve these issues? (Choose two.)`,
+    ko: `유틸리티 회사가 스마트 미터에서 5분마다 사용 데이터를 수집하여 사용 시간 측정을 용이하게 하려고 합니다. 미터가 AWS로 데이터를 보내면 데이터가 Amazon API Gateway로 전송되고 AWS Lambda 함수에서 처리되어 Amazon DynamoDB 테이블에 저장됩니다. 파일럿 단계에서는 Lambda 함수가 완료되는 데 3~5초가 걸렸습니다. <br/><br/>더 많은 스마트 미터가 배포됨에 따라 엔지니어는 Lambda 함수가 완료되는 데 1~2분이 걸린다는 것을 알게 되었습니다. 장치에서 새로운 유형의 메트릭이 수집됨에 따라 함수의 지속 시간도 길어지고 있습니다. DynamoDB에서 PUT 작업을 수행하는 동안 많은 ProvisionedThroughputExceededException 오류가 발생하고 Lambda에서 많은 TooManyRequestsException 오류도 발생합니다. <br/><br/>어떤 변경 조합이 이러한 문제를 해결할까요? (두 가지를 선택하세요.)`,
+    type: 'multi', multiCount: 2,
+    choices: [
+      { k:'A', en:`Increase the write capacity units to the DynamoDB table.`, ko:`DynamoDB 테이블에 대한 쓰기 용량 단위를 늘립니다.` },
+      { k:'B', en:`Increase the memory available to the Lambda functions.`, ko:`람다 함수에 사용할 수 있는 메모리를 늘립니다.` },
+      { k:'C', en:`Increase the payload size from the smart meters to send more data.`, ko:`더 많은 데이터를 전송하기 위해 스마트 미터의 탑재량 크기를 늘립니다.` },
+      { k:'D', en:`Stream the data into an Amazon Kinesis data stream from API Gateway and process the data in batches.`, ko:`API Gateway에서 Amazon Kinesis 데이터 스트림으로 데이터를 스트리밍하고 일괄 처리하여 데이터를 처리합니다.` },
+      { k:'E', en:`Collect data in an Amazon SQS FIFO queue, which triggers a Lambda function to process each message`, ko:`Amazon SQS FIFO 대기열에서 데이터를 수집하여 각 메시지를 처리하기 위한 Lambda 함수를 트리거합니다.` },
+    ],
+    answer: [],
+    vote: '100% AD',
+    explain: ``,
+    wrong: `<p><span class="mark-no">❌ A</span> — 저는 DynamoDB 테이블에 쓰기 용량 단위를 늘리고 API Gateway에서 Amazon Kinesis 데이터 스트림으로 데이터를 스트리밍하고 배치로 데이터를 처리하는 방법을 선택할 것입니다. 배치로 데이터를 처리하는 것이 람다 함수 메모리를 늘리는 것보다 훨씬 낫다고 생각합니다.</p><p><span class="mark-no">❌ D</span> — 저는 DynamoDB 테이블에 쓰기 용량 단위를 늘리고 API Gateway에서 Amazon Kinesis 데이터 스트림으로 데이터를 스트리밍하고 배치로 데이터를 처리하는 방법을 선택할 것입니다. 배치로 데이터를 처리하는 것이 람다 함수 메모리를 늘리는 것보다 훨씬 낫다고 생각합니다.</p>`,
+    disc: [{ ans:'A, D', txt:'저는 DynamoDB 테이블에 쓰기 용량 단위를 늘리고 API Gateway에서 Amazon Kinesis 데이터 스트림으로 데이터를 스트리밍하고 배치로 데이터를 처리하는 방법을 선택할 것입니다. 배치로 데이터를 처리하는 것이 람다 함수 메모리를 늘리는 것보다 훨씬 낫다고 생각합니다.' }, { ans:'A, D', txt:'I would go with Increasing the write capacity units to the DynamoDB table and Stream the data into an Amazon Kinesis data stream from API Gateway and process the data in batches. I think that processing the data in batches is much better than increasing the lambda functions memory.' }, { ans:'A, D', txt:'Kinesis를 사용하면 일괄 처리로 데이터를 처리할 수 있으므로 요청 수와 Lambda 함수 및 DynamoDB의 부하를 줄이는 데 도움이 될 수 있습니다.' }, { ans:'A, D', txt:'Kinesis allows to process data in batches, which can help reduce the number of requests and the load on your Lambda functions and DynamoDB.' }, { ans:'A, D', txt:'A와 D' }]
+  },
+  {
+    n: 486,
+    en: `A company recently completed a successful proof of concept of Amazon WorkSpaces. A solutions architect needs to make the solution highly available across two AWS Regions. Amazon WorkSpaces is deployed in a failover Region, and a hosted zone is deployed in Amazon Route 53.<br/><br/>What should the solutions architect do to configure high availability for the solution?`,
+    ko: `한 회사가 최근 Amazon WorkSpaces의 성공적인 개념 증명을 완료했습니다. 솔루션 아키텍트는 두 AWS 지역에서 솔루션을 고가용성으로 만들어야 합니다. Amazon WorkSpaces는 장애 조치 지역에 배포되고 호스팅된 영역은 Amazon Route 53에 배포됩니다. 솔루션 <br/><br/>아키텍트는 솔루션에 대한 고가용성을 구성하기 위해 무엇을 해야 합니까?`,
+    type: 'single',
+    choices: [
+      { k:'A', en:`Create a connection alias in the primary Region and in the failover Region. Associate the connection aliases with a directory in each Region. Create a Route 53 failover routing policy. Set Evaluate Target Health to Yes.`, ko:`기본 지역과 장애 조치 지역에 연결 별칭을 만듭니다. 연결 별칭을 각 지역의 디렉토리와 연결합니다. Route 53 장애 조치 라우팅 정책을 만듭니다. Evaluate Target Health를 Yes로 설정합니다.` },
+      { k:'B', en:`Create a connection alias in the primary Region and in the failover Region. Associate the connection aliases with a directory in the primary Region. Create a Route 53 multivalue answer routing policy.`, ko:`기본 지역과 장애 조치 지역에 연결 별칭을 만듭니다. 연결 별칭을 기본 지역의 디렉토리와 연결합니다. Route 53 다중값 응답 라우팅 정책을 만듭니다.` },
+      { k:'C', en:`Create a connection alias in the primary Region. Associate the connection alias with a directory in the primary Region. Create a Route 53 weighted routing policy.`, ko:`기본 리전에서 연결 별칭을 만듭니다. 연결 별칭을 기본 리전의 디렉토리와 연결합니다. Route 53 가중 라우팅 정책을 만듭니다.` },
+      { k:'D', en:`Create a connection alias in the primary Region Associate the connection alias with a directory in the failover Region. Create a Route 53 failover routing policy. Set Evaluate Target Health to Yes.`, ko:`기본 지역에서 연결 별칭을 만듭니다. 연결 별칭을 장애 조치 지역의 디렉토리와 연결합니다. Route 53 장애 조치 라우팅 정책을 만듭니다. Evaluate Target Health를 Yes로 설정합니다.` },
+    ],
+    answer: ["B"],
+    vote: '68% A, 32% D',
+    explain: `<p><span class="mark-ok">✅ B</span></p>`,
+    wrong: `<p><span class="mark-no">❌ A</span> — https://docs.aws.amazon.com/ja_jp/workspaces/latest/adminguide/cross-region-redirection.html</p><p><span class="mark-no">❌ D</span> — https://docs.aws.amazon.com/workspaces/latest/adminguide/cross-region-redirection.html#cross-region-redirection-associate-connection-aliases</p>`,
+    disc: [{ ans:'D', txt:'https://docs.aws.amazon.com/workspaces/latest/adminguide/cross-region-redirection.html#cross-region-redirection-associate-connection-aliases' }, { ans:'A', txt:'https://docs.aws.amazon.com/ja_jp/workspaces/latest/adminguide/cross-region-redirection.html' }, { ans:'A', txt:'A https://docs.aws.amazon.com/ja_jp/workspaces/latest/adminguide/cross-region-redirection.html' }, { ans:'A', txt:'A는 맞습니다' }, { ans:'A', txt:'A is correct' }]
+  },
+  {
+    n: 487,
+    en: `A company plans to migrate many VMs from an on-premises environment to AWS. The company requires an initial assessment of the on-premises environment before the migration, a visualization of the dependencies between applications that run on the VMs, and a report that provides an assessment of the on-premises environment.<br/><br/>To get this information, the company has initiated a Migration Evaluator assessment request. The company has the ability to install collector software in its on-premises environment without any constraints<br/><br/>Which solution will provide the company with the required information with the LEAST operational overhead?`,
+    ko: `한 회사가 온프레미스 환경에서 AWS로 많은 VM을 마이그레이션할 계획입니다. 이 회사는 마이그레이션 전에 온프레미스 환경에 대한 초기 평가, VM에서 실행되는 애플리케이션 간의 종속성에 대한 시각화, 온프레미스 환경에 대한 평가를 제공하는 보고서가 필요합니다. <br/><br/>이 정보를 얻기 위해 이 회사는 Migration Evaluator 평가 요청을 시작했습니다. 이 회사는 제약 없이 온프레미스 환경에 수집기 소프트웨어를 설치할 수 있습니다. <br/><br/>어떤 솔루션이 회사에 필요한 정보를 최소한의 운영 오버헤드로 제공할까요?`,
+    type: 'single',
+    choices: [
+      { k:'A', en:`Install the AWS Application Discovery Agent on each on-premises VM. After the data collection period ends, use AWS Migration Hub to view the application dependencies. Download the Quick insights assessment report from Migration Hub.`, ko:`온프레미스 VM마다 AWS 애플리케이션 검색 에이전트를 설치합니다. 데이터 수집 기간이 끝나면 AWS 마이그레이션 허브를 사용하여 애플리케이션 종속성을 확인합니다. 마이그레이션 허브에서 빠른 인사이트 평가 보고서를 다운로드합니다.` },
+      { k:'B', en:`Install the Migration Evaluator Collector on each on-premises VM. After the data collection period ends, use Migration Evaluator to view the application dependencies. Download and export the discovered server list from Migration Evaluator. Upload the list to Amazon QuickSight When the QuickSight report is generated, download the Quick Insights assessment report.`, ko:`온프레미스 VM마다 Migration Evaluator Collector를 설치합니다. 데이터 수집 기간이 끝나면 Migration Evaluator를 사용하여 애플리케이션 종속성을 확인합니다. Migration Evaluator에서 발견된 서버 목록을 다운로드하여 내보냅니다. Amazon QuickSight에 목록을 업로드합니다. QuickSight 보고서가 생성되면 Quick Insights 평가 보고서를 다운로드합니다.` },
+      { k:'C', en:`Setup the AWS Application Discovery Service Agentless Collector in the on-premises environment. After the data collection period ends, use AWS Migration Hub to view the application dependencies. Export the discovered server list from Application Discovery Service. Upload the list to Migration Evaluator. When the Migration Evaluator report is generated, download the Quick Insights assessment.`, ko:`온프레미스 환경에서 AWS Application Discovery Service Agentless Collector를 설정합니다. 데이터 수집 기간이 끝나면 AWS Migration Hub를 사용하여 애플리케이션 종속성을 확인합니다. Application Discovery Service에서 발견된 서버 목록을 내보냅니다. 목록을 Migration Evaluator에 업로드합니다. Migration Evaluator 보고서가 생성되면 Quick Insights 평가를 다운로드합니다.` },
+      { k:'D', en:`Set up the Migration Evaluator Collector in the on-premises environment. Install the AWS Application Discovery Agent on each VM. After the data collection period ends, use AWS Migration Hub to view the application dependencies. Download the Quick Insights assessment report from Migration Evaluator.`, ko:`온프레미스 환경에서 Migration Evaluator Collector를 설정합니다. 각 VM에 AWS Application Discovery Agent를 설치합니다. 데이터 수집 기간이 끝나면 AWS Migration Hub를 사용하여 애플리케이션 종속성을 확인합니다. Migration Evaluator에서 Quick Insights 평가 보고서를 다운로드합니다.` },
+    ],
+    answer: ["C"],
+    vote: '56% C, 44% A',
+    explain: `<p><span class="mark-ok">✅ C</span></p><p>네트워크를 추적해야 하는 경우가 아니면 VM의 경우 에이전트 없는 방식을 사용하세요.</p>`,
+    wrong: `<p><span class="mark-no">❌ A</span> — 옵션 C는 운영 오버헤드가 가장 적은 것은 아닙니다. 이 옵션에는 Application Discovery 에이전트 없는 수집기 + 보고서 내보내기 및 업로드가 필요합니다. 또한 Discovery 에이전트 없는 기능은 모든 종속성에 대한 데이터를 수집하지 않습니다.</p>`,
+    disc: [{ ans:'C', txt:'네트워크를 추적해야 하는 경우가 아니면 VM의 경우 에이전트 없는 방식을 사용하세요.' }, { ans:'C', txt:'For VMs use agentless unless you need to track network' }, { ans:'A', txt:'옵션 C는 운영 오버헤드가 가장 적은 것은 아닙니다. 이 옵션에는 Application Discovery 에이전트 없는 수집기 + 보고서 내보내기 및 업로드가 필요합니다. 또한 Discovery 에이전트 없는 기능은 모든 종속성에 대한 데이터를 수집하지 않습니다.' }, { ans:'A', txt:'Option C is not the least operation overhead. it requires Application Discovery agentless Collector + Export & Upload of the report. also, Discovery agentless will not gather data for all dependencies.' }, { ans:'A', txt:'"이 정보를 얻기 위해 회사는 Migration Evaluator 평가 요청을 시작했습니다. 회사는 제약 없이 온프레미스 환경에 수집기 소프트웨어를 설치할 수 있습니다." 따라서 질문에서 다음 단계는 각 온프레미스 VM에 AWS Application Discovery Agent를 설치하는 것이라고 이해했으므로 제 경우 답은 A입니다.' }]
+  },
+  {
+    n: 488,
+    en: `A company hosts its primary API on AWS by using an Amazon API Gateway API and AWS Lambda functions that contain the logic for the API methods. The company’s internal applications use the API for core functionality and business logic. The company’s customers use the API to access data from their accounts. Several customers also have access to a legacy API that is running on a single standalone Amazon EC2 instance.<br/><br/>The company wants to increase the security for these APIs to better prevent denial of service (DoS) attacks, check for vulnerabilities, and guard against common exploits.<br/><br/>What should a solutions architect do to meet these requirements?`,
+    ko: `한 회사는 API 메서드의 로직을 포함하는 Amazon API Gateway API와 AWS Lambda 함수를 사용하여 AWS에서 기본 API를 호스팅합니다. 회사의 내부 애플리케이션은 핵심 기능과 비즈니스 로직에 API를 사용합니다. 회사의 고객은 API를 사용하여 계정의 데이터에 액세스합니다. 여러 고객은 단일 독립형 Amazon EC2 인스턴스에서 실행되는 레거시 API에도 액세스할 수 있습니다. <br/><br/>이 회사는 이러한 API의 보안을 강화하여 서비스 거부(DoS) 공격을 더 잘 방지하고, 취약성을 확인하고, 일반적인 악용을 방지하고자 합니다. <br/><br/>솔루션 아키텍트는 이러한 요구 사항을 충족하기 위해 무엇을 해야 할까요?`,
+    type: 'single',
+    choices: [
+      { k:'A', en:`Use AWS WAF to protect both APIs. Configure Amazon Inspector to analyze the legacy API. Configure Amazon GuardDuty to monitor for malicious attempts to access the APIs.`, ko:`AWS WAF를 사용하여 두 API를 보호합니다. Amazon Inspector를 구성하여 레거시 API를 분석합니다. Amazon GuardDuty를 구성하여 API에 대한 악의적인 액세스 시도를 모니터링합니다.` },
+      { k:'B', en:`Use AWS WAF to protect the API Gateway API. Configure Amazon Inspector to analyze both APIs. Configure Amazon GuardDuty to block malicious attempts to access the APIs.`, ko:`AWS WAF를 사용하여 API Gateway API를 보호합니다. Amazon Inspector를 구성하여 두 API를 모두 분석합니다. Amazon GuardDuty를 구성하여 API에 대한 악의적인 액세스 시도를 차단합니다.` },
+      { k:'C', en:`Use AWS WAF to protect the API Gateway API. Configure Amazon Inspector to analyze the legacy API. Configure Amazon GuardDuty to monitor for malicious attempts to access the APIs.`, ko:`AWS WAF를 사용하여 API Gateway API를 보호합니다. Amazon Inspector를 구성하여 레거시 API를 분석합니다. Amazon GuardDuty를 구성하여 API에 액세스하려는 악의적인 시도를 모니터링합니다.` },
+      { k:'D', en:`Use AWS WAF to protect the API Gateway AP! Configure Amazon Inspector to protect the legacy API. Configure Amazon GuardDuty to block malicious attempts to access the APIs.`, ko:`AWS WAF를 사용하여 API Gateway AP를 보호하세요! Amazon Inspector를 구성하여 레거시 API를 보호하세요. Amazon GuardDuty를 구성하여 API에 액세스하려는 악의적인 시도를 차단하세요.` },
+    ],
+    answer: ["C"],
+    vote: '80% C, 20% A',
+    explain: `<p><span class="mark-ok">✅ C</span></p><p>GuardDuty는 악의적인 시도를 모니터링만 할 뿐 차단하지는 않습니다. 따라서 답은 C입니다.</p>`,
+    wrong: `<p><span class="mark-no">❌ A</span> — "회사는 서비스 거부(DoS) 공격을 더 잘 방지하고 취약성을 확인하며 일반적인 악용에 대비하기 위해 이러한 API의 보안을 강화하고자 합니다." 따라서 저는 우리가 둘 다 보호해야 한다는 것을 이해하며 GuardDuty는 아무것도 차단하지 않습니다... 저에게 답은 A입니다.</p>`,
+    disc: [{ ans:'C', txt:'GuardDuty는 악의적인 시도를 모니터링만 할 뿐 차단하지는 않습니다. 따라서 답은 C입니다.' }, { ans:'C', txt:'GuardDuty only monitors but doesn\'t block malicious attempts. So answer is C' }, { ans:'C', txt:'A가 아닙니다. 질문에 "여러 고객이 단일 독립형 Amazon EC2 인스턴스에서 실행되는 레거시 API에 액세스할 수 있습니다."라고만 나와 있기 때문입니다. ALB나 Cloudfront가 언급되지 않았으므로 WAF를 EC2에 직접 연결할 수 없습니다.' }, { ans:'C', txt:'Not A because the question only say "Several customers also have access to a legacy API that is running on a single standalone Amazon EC2 instance." There is no ALB or cloudfront mentioned so WAF can\'t be attached to EC2 directly.' }, { ans:'A', txt:'"회사는 서비스 거부(DoS) 공격을 더 잘 방지하고 취약성을 확인하며 일반적인 악용에 대비하기 위해 이러한 API의 보안을 강화하고자 합니다." 따라서 저는 우리가 둘 다 보호해야 한다는 것을 이해하며 GuardDuty는 아무것도 차단하지 않습니다... 저에게 답은 A입니다.' }]
+  },
+  {
+    n: 489,
+    en: `A company is running a serverless ecommerce application on AWS. The application uses Amazon API Gateway to invoke AWS Lambda Java functions. The Lambda functions connect to an Amazon RDS for MySQL database to store data.<br/><br/>During a recent sale event, a sudden increase in web traffic resulted in poor API performance and database connection failures. The company needs to implement a solution to minimize the latency for the Lambda functions and to support bursts in traffic.<br/><br/>Which solution will meet these requirements with the LEAST amount of change to the application?`,
+    ko: `한 회사가 AWS에서 서버리스 전자상거래 애플리케이션을 실행하고 있습니다. 이 애플리케이션은 Amazon API Gateway를 사용하여 AWS Lambda Java 함수를 호출합니다. Lambda 함수는 Amazon RDS for MySQL 데이터베이스에 연결하여 데이터를 저장합니다. <br/><br/>최근 세일 이벤트 중에 웹 트래픽이 갑자기 증가하여 API 성능이 저하되고 데이터베이스 연결에 오류가 발생했습니다. 이 회사는 Lambda 함수의 지연 시간을 최소화하고 트래픽 급증을 지원하는 솔루션을 구현해야 합니다. <br/><br/>어떤 솔루션이 애플리케이션에 최소한의 변경으로 이러한 요구 사항을 충족할까요?`,
+    type: 'single',
+    choices: [
+      { k:'A', en:`Update the code of the Lambda functions so that the Lambda functions open the database connection outside of the function handler. Increase the provisioned concurrency for the Lambda functions.`, ko:`Lambda 함수의 코드를 업데이트하여 Lambda 함수가 함수 핸들러 외부에서 데이터베이스 연결을 열도록 합니다. Lambda 함수에 대한 프로비저닝된 동시성을 증가시킵니다.` },
+      { k:'B', en:`Create an RDS Proxy endpoint for the database. Store database secrets in AWS Secrets Manager. Set up the required IAM permissions. Update the Lambda functions to connect to the RDS Proxy endpoint. Increase the provisioned concurrency for the Lambda functions.`, ko:`데이터베이스에 대한 RDS 프록시 엔드포인트를 만듭니다. AWS Secrets Manager에 데이터베이스 비밀을 저장합니다. 필요한 IAM 권한을 설정합니다. Lambda 함수를 업데이트하여 RDS 프록시 엔드포인트에 연결합니다. Lambda 함수에 대한 프로비저닝된 동시성을 늘립니다.` },
+      { k:'C', en:`Create a custom parameter group. Increase the value of the max_connections parameter. Associate the custom parameter group with the RDS DB instance and schedule a reboot. Increase the reserved concurrency for the Lambda functions.`, ko:`사용자 지정 매개변수 그룹을 만듭니다. max_connections 매개변수의 값을 늘립니다. 사용자 지정 매개변수 그룹을 RDS DB 인스턴스와 연결하고 재부팅을 예약합니다. Lambda 함수에 대한 예약된 동시성을 늘립니다.` },
+      { k:'D', en:`Create an RDS Proxy endpoint for the database. Store database secrets in AWS Secrets Manager. Set up the required IAM permissions. Update the Lambda functions to connect to the RDS Proxy endpoint. Increase the reserved concurrency for the Lambda functions.`, ko:`데이터베이스에 대한 RDS 프록시 엔드포인트를 만듭니다. AWS Secrets Manager에 데이터베이스 비밀을 저장합니다. 필요한 IAM 권한을 설정합니다. Lambda 함수를 업데이트하여 RDS 프록시 엔드포인트에 연결합니다. Lambda 함수에 대한 예약된 동시성을 늘립니다.` },
+    ],
+    answer: ["B"],
+    vote: '54% B, 31% D, 15% A',
+    explain: `<p><span class="mark-ok">✅ B</span></p><p>B는 문제의 최소 운영(비용 효율적이 아님)에 대해 정확합니다.</p>`,
+    wrong: `<p><span class="mark-no">❌ A</span> — A는 정답입니다. D는 틀렸습니다. 프로비저닝된 동시성은 람다의 사전 할당된 웜 인스턴스를 예약된 동시성이 아닌 상태로 유지하는 용어이기 때문입니다. B는 db 자동 확장이 없습니다.</p><p><span class="mark-no">❌ D</span> — "예약된 동시성"을 갖춘 옵션 D는 프로비저닝된 동시성의 잠재적인 과도한 프로비저닝 없이 최소한의 인스턴스 수를 보장하므로 갑작스러운 트래픽 버스트를 처리하는 데 더 비용 효율적이고 유연할 수 있습니다.</p>`,
+    disc: [{ ans:'B', txt:'B는 문제의 최소 운영(비용 효율적이 아님)에 대해 정확합니다.' }, { ans:'B', txt:'B is correct for least operation(not cost effectively) in question' }, { ans:'D', txt:'"예약된 동시성"을 갖춘 옵션 D는 프로비저닝된 동시성의 잠재적인 과도한 프로비저닝 없이 최소한의 인스턴스 수를 보장하므로 갑작스러운 트래픽 버스트를 처리하는 데 더 비용 효율적이고 유연할 수 있습니다.' }, { ans:'D', txt:'Option D with "reserved concurrency" can be more cost-effective and flexible for handling sudden traffic bursts, as it ensures a minimum number of instances without the potential over-provisioning of provisioned concurrency.' }, { ans:'B', txt:'비용이 주된 관심사라면 Reserved Concurrency가 더 경제적인 선택이 될 수 있습니다. Provisioned Concurrency는 Lambda 함수의 성능과 확장성을 더 잘 제어할 수 있도록 설계되었습니다. 답은 B입니다.' }]
+  },
+  {
+    n: 490,
+    en: `A company requires that all internal application connectivity use private IP addresses. To facilitate this policy, a solutions architect has created interface endpoints to connect to AWS Public services. Upon testing, the solutions architect notices that the service names are resolving to public IP addresses, and that internal services cannot connect to the interface endpoints.<br/><br/>Which step should the solutions architect take to resolve this issue?`,
+    ko: `어떤 회사에서는 모든 내부 애플리케이션 연결에 프라이빗 IP 주소를 사용하도록 요구합니다. 이 정책을 용이하게 하기 위해 솔루션 아키텍트가 AWS Public 서비스에 연결하는 인터페이스 엔드포인트를 만들었습니다. 테스트 결과, 솔루션 아키텍트는 서비스 이름이 퍼블릭 IP 주소로 확인되고 내부 서비스가 인터페이스 엔드포인트에 연결할 수 없다는 것을 알아챘습니다. <br/><br/>솔루션 아키텍트는 이 문제를 해결하기 위해 어떤 단계를 거쳐야 할까요?`,
+    type: 'single',
+    choices: [
+      { k:'A', en:`Update the subnet route table with a route to the interface endpoint.`, ko:`인터페이스 엔드포인트에 대한 경로로 서브넷 경로 테이블을 업데이트합니다.` },
+      { k:'B', en:`Enable the private DNS option on the VPC attributes.`, ko:`VPC 속성에서 개인 DNS 옵션을 활성화합니다.` },
+      { k:'C', en:`Configure the security group on the interface endpoint to allow connectivity to the AWS services.`, ko:`AWS 서비스에 대한 연결을 허용하도록 인터페이스 엔드포인트에서 보안 그룹을 구성합니다.` },
+      { k:'D', en:`Configure an Amazon Route 53 private hosted zone with a conditional forwarder for the internal application.`, ko:`내부 애플리케이션에 대한 조건부 포워더를 사용하여 Amazon Route 53 개인 호스팅 영역을 구성합니다.` },
+    ],
+    answer: ["B"],
+    vote: '100% B',
+    explain: `<p><span class="mark-ok">✅ B</span></p><p>인터페이스 엔드포인트에 대한 개인 DNS. 정답은 B입니다.</p>`,
+    wrong: ``,
+    disc: [{ ans:'B', txt:'VPC 엔드포인트에 대한 적절한 DNS 확인을 보장합니다.' }, { ans:'B', txt:'ensures proper DNS resolution for VPC endpoints.' }, { ans:'B', txt:'인터페이스 엔드포인트에 대한 개인 DNS. 정답은 B입니다.' }, { ans:'B', txt:'Private DNS for Interface Endpoints. Answer B.' }]
+  }
+];
