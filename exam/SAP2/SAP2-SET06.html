@@ -4,225 +4,43 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AWS SAP-C02 | SET 06 (Q251~Q300)</title>
-<style>
-[data-theme="dark"] {
-  --bg:#0f1117; --surface:#1a1d27; --surface2:#222636; --border:#2e3347;
-  --accent:#4f8ef7; --accent2:#38c9a0; --text:#e2e6f0; --text-muted:#7a83a0;
-  --correct-bg:#112a22; --wrong-bg:#2a1111; --explain-bg:#1e2030;
-  --hover-bg:#1e2236; --sel-bg:#1b2540;
-}
-[data-theme="light"] {
-  --bg:#f0f2f8; --surface:#ffffff; --surface2:#f5f6fa; --border:#d0d5e8;
-  --accent:#2e6fe0; --accent2:#1aaa7e; --text:#1a1d2e; --text-muted:#5a6280;
-  --correct-bg:#e6faf4; --wrong-bg:#fde8e8; --explain-bg:#f0f2fa;
-  --hover-bg:#eaf1ff; --sel-bg:#ddeaff;
-}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{background:var(--bg);color:var(--text);font-family:'Pretendard','Noto Sans KR','Segoe UI',sans-serif;font-size:15px;line-height:1.75;min-height:100vh;transition:background .25s,color .25s;}
-.wrap{max-width:860px;margin:0 auto;padding:28px 16px 60px;}
-
-/* Topbar */
-.topbar{display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border);flex-wrap:wrap;}
-
-/* SET 선택 콤보박스 */
-.set-select-wrap{position:relative;display:inline-flex;align-items:center;}
-.set-select{
-  appearance:none;-webkit-appearance:none;
-  background:linear-gradient(135deg,#4f8ef7,#38c9a0);
-  border:none;border-radius:20px;
-  color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;
-  padding:4px 28px 4px 12px;
-  cursor:pointer;outline:none;
-  transition:filter .2s,transform .1s;
-  white-space:nowrap;
-}
-.set-select:hover{filter:brightness(1.12);transform:translateY(-1px);}
-.set-select:focus{filter:brightness(1.08);outline:2px solid rgba(255,255,255,.5);outline-offset:2px;}
-.set-select option{background:#1a1d27;color:#e2e6f0;font-size:13px;font-weight:600;}
-.set-select-wrap::after{
-  content:'▾';
-  position:absolute;right:10px;top:50%;transform:translateY(-50%);
-  color:#fff;font-size:10px;pointer-events:none;
-}
-
-.badge{background:linear-gradient(135deg,#4f8ef7,#38c9a0);color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;padding:4px 12px;border-radius:20px;white-space:nowrap;}
-.topbar-title{font-size:13px;color:var(--text-muted);flex:1;min-width:120px;}
-.topbar-title strong{color:var(--text);font-size:15px;display:block;}
-.topbar-right{display:flex;align-items:center;gap:8px;margin-left:auto;flex-wrap:wrap;}
-
-/* 문제 선택 콤보박스 */
-.q-select-wrap{display:flex;align-items:center;gap:6px;}
-.q-select-label{font-size:12px;color:var(--text-muted);white-space:nowrap;}
-.q-select{background:var(--surface2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:13px;font-weight:600;padding:5px 10px;cursor:pointer;outline:none;transition:border-color .2s;}
-.q-select:focus,.q-select:hover{border-color:var(--accent);}
-.q-select option.opt-correct{color:#1aaa7e;}
-.q-select option.opt-wrong{color:#e05252;}
-
-.topbar-right .btn-nav,
-.topbar-right .q-select {
-  height: 24px;
-  padding: 0 14px;
-  font-size: 13px;
-}
-
-/* 테마 버튼 */
-.theme-btn{background:var(--surface2);border:1px solid var(--border);border-radius:20px;cursor:pointer;display:flex;align-items:center;gap:5px;padding:5px 12px;font-size:12px;font-weight:600;color:var(--text-muted);transition:border-color .2s,color .2s;white-space:nowrap;}
-.theme-btn:hover{border-color:var(--accent);color:var(--accent);}
-
-/* Progress */
-.progress-bar{background:var(--surface2);border-radius:4px;height:6px;margin-bottom:20px;overflow:hidden;}
-.progress-fill{background:linear-gradient(90deg,var(--accent),var(--accent2));height:100%;border-radius:4px;transition:width .4s;}
-
-/* Card */
-.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:28px;margin-bottom:16px;transition:background .25s,border-color .25s;}
-
-/* Lang Tabs */
-.lang-tabs{display:flex;gap:8px;margin-bottom:20px;}
-.lang-tab{background:transparent;border:1px solid var(--border);border-radius:6px;color:var(--text-muted);cursor:pointer;font-size:12px;font-weight:600;letter-spacing:.04em;padding:5px 14px;transition:all .2s;}
-.lang-tab.active{background:var(--accent);border-color:var(--accent);color:#fff;}
-.lang-tab:hover:not(.active){border-color:var(--accent);color:var(--accent);}
-
-/* Q Label */
-.q-label{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;margin-bottom:10px;}
-.q-type-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;padding:2px 8px;border-radius:10px;margin-left:8px;background:var(--surface2);border:1px solid var(--border);color:var(--text-muted);vertical-align:middle;}
-.q-type-badge.multi{background:#ede9ff;color:#6d28d9;border-color:#c4b5fd;}
-[data-theme="dark"] .q-type-badge.multi{background:#2a1f50;color:#a78bfa;border-color:#4c3a8c;}
-
-/* Q Text */
-.q-text{font-size:15px;color:var(--text);line-height:1.85;}
-.q-text.en-text{
-  font-size:14px;color:var(--text-muted);
-  margin-top:14px;padding-top:14px;
-  border-top:1px dashed var(--border);
-}
-.q-text code{background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:1px 6px;font-size:13px;font-family:'JetBrains Mono','Fira Code',monospace;color:var(--accent2);}
-
-/* Choices */
-.choices-section{margin-top:24px;}
-.choices-label{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--text-muted);text-transform:uppercase;margin-bottom:12px;}
-.choice{display:flex;align-items:flex-start;gap:14px;background:var(--surface2);border:2px solid var(--border);border-radius:10px;cursor:pointer;margin-bottom:10px;padding:14px 18px;transition:border-color .2s,background .2s;user-select:none;}
-.choice:hover{border-color:var(--accent);background:var(--hover-bg);}
-.choice.selected{border-color:var(--accent);background:var(--sel-bg);}
-.choice.correct{border-color:#38c9a0!important;background:var(--correct-bg)!important;}
-.choice.wrong{border-color:#f76f6f!important;background:var(--wrong-bg)!important;}
-.choice.disabled{cursor:default;pointer-events:none;}
-.choice-key{background:var(--border);border-radius:6px;color:var(--text);font-size:13px;font-weight:700;min-width:30px;height:30px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;transition:background .2s,color .2s;}
-.choice.selected .choice-key{background:var(--accent);color:#fff;}
-.choice.correct .choice-key{background:#38c9a0;color:#000;}
-.choice.wrong .choice-key{background:#f76f6f;color:#fff;}
-.choice-body{flex:1;}
-.choice-text{font-size:14px;line-height:1.75;}
-.choice-en{font-size:12px;color:var(--text-muted);margin-top:5px;display:none;font-style:italic;}
-.result-icon{margin-left:auto;font-size:18px;flex-shrink:0;display:none;}
-.choice.correct .result-icon,.choice.wrong .result-icon{display:block;}
-
-/* Actions */
-.actions{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap;align-items:center;}
-.btn{border:none;border-radius:8px;cursor:pointer;font-size:14px;font-weight:700;letter-spacing:.03em;padding:11px 24px;transition:opacity .2s,transform .1s;}
-.btn:hover:not(:disabled){opacity:.88;transform:translateY(-1px);}
-.btn:active{transform:translateY(0);}
-.btn-primary{background:var(--accent);color:#fff;}
-.btn-secondary{background:var(--surface2);color:var(--text);border:1px solid var(--border);}
-.btn-nav{background:var(--surface2);color:var(--text);border:1px solid var(--border);padding:11px 18px;}
-.btn:disabled{opacity:.35;cursor:not-allowed;}
-.hint-text{font-size:12px;color:var(--text-muted);margin-top:8px;min-height:18px;}
-
-/* Review Panel */
-.review-panel{display:none;background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--accent2);border-radius:12px;padding:24px 28px;margin-bottom:16px;animation:fadeIn .35s ease;transition:background .25s;}
-.review-panel.show{display:block;}
-@keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
-.answer-row{display:flex;align-items:center;gap:10px;margin-bottom:20px;flex-wrap:wrap;}
-.answer-label{font-size:13px;color:var(--text-muted);}
-.answer-badge{background:#38c9a0;color:#000;font-size:13px;font-weight:800;padding:4px 14px;border-radius:20px;}
-.vote-badge{background:var(--surface2);border:1px solid var(--border);color:var(--text-muted);font-size:12px;padding:3px 10px;border-radius:20px;}
-.vote-badge span{color:var(--accent);font-weight:700;}
-.section-title{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--accent2);text-transform:uppercase;margin-bottom:10px;}
-.explain-box{background:var(--explain-bg);border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:14px;font-size:14px;line-height:1.8;color:var(--text);}
-.explain-box p{margin-bottom:8px;}
-.explain-box p:last-child{margin-bottom:0;}
-.mark-ok{color:#38c9a0;font-weight:700;}
-.mark-no{color:#f76f6f;font-weight:600;}
-
-/* Discussion */
-.disc-toggle{background:transparent;border:1px dashed var(--border);border-radius:8px;color:var(--text-muted);cursor:pointer;font-size:13px;margin-top:8px;padding:9px 16px;width:100%;text-align:left;transition:border-color .2s,color .2s;}
-.disc-toggle:hover{border-color:var(--accent);color:var(--accent);}
-.disc-list{display:none;margin-top:10px;}
-.disc-list.show{display:block;}
-.disc-item{background:var(--surface2);border-left:3px solid var(--border);border-radius:0 6px 6px 0;font-size:13px;margin-bottom:8px;padding:10px 14px;color:var(--text-muted);line-height:1.7;}
-.disc-ans{color:var(--accent);font-weight:700;font-size:12px;margin-bottom:3px;}
-
-/* Bottom Nav */
-.nav-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:16px;gap:10px;}
-.nav-info{font-size:13px;color:var(--text-muted);text-align:center;flex:1;}
-
-@media(max-width:600px){
-  .card{padding:16px;}
-  .btn{padding:10px 16px;font-size:13px;}
-  .topbar{gap:8px;}
-  .topbar-right{gap:6px;}
-}
-
-/* 패스워드 모달 */
-.pw-overlay{
-  position:fixed;inset:0;z-index:9999;
-  display:flex;align-items:center;justify-content:center;
-  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
-  background:rgba(10,12,22,.55);
-  transition:opacity .3s;
-}
-.pw-overlay.hidden{opacity:0;pointer-events:none;}
-.pw-modal{
-  background:var(--surface);border:1px solid var(--border);border-radius:18px;
-  box-shadow:0 24px 64px rgba(0,0,0,.35);padding:40px 36px 34px;
-  width:min(400px,90vw);display:flex;flex-direction:column;align-items:center;
-  animation:pwSlideIn .35s cubic-bezier(.22,.9,.36,1) both;
-}
-@keyframes pwSlideIn{from{opacity:0;transform:translateY(28px) scale(.96);}to{opacity:1;transform:translateY(0) scale(1);}}
-.pw-logo{width:54px;height:54px;border-radius:14px;background:linear-gradient(135deg,#4f8ef7,#38c9a0);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px;box-shadow:0 8px 24px rgba(79,142,247,.35);}
-.pw-title{font-size:18px;font-weight:800;color:var(--text);letter-spacing:-.01em;margin-bottom:6px;text-align:center;}
-.pw-sub{font-size:13px;color:var(--text-muted);margin-bottom:28px;text-align:center;line-height:1.6;}
-.pw-input-wrap{position:relative;width:100%;margin-bottom:14px;}
-.pw-input{width:100%;background:var(--surface2);border:2px solid var(--border);border-radius:10px;color:var(--text);font-size:16px;font-weight:700;letter-spacing:.15em;padding:13px 46px 13px 18px;outline:none;transition:border-color .2s,box-shadow .2s;text-align:center;}
-.pw-input::placeholder{letter-spacing:normal;font-weight:400;font-size:14px;}
-.pw-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(79,142,247,.18);}
-.pw-input.shake{animation:pwShake .38s ease;}
-.pw-input.error{border-color:#f76f6f;box-shadow:0 0 0 3px rgba(247,111,111,.18);}
-@keyframes pwShake{0%,100%{transform:translateX(0);}20%{transform:translateX(-8px);}40%{transform:translateX(8px);}60%{transform:translateX(-6px);}80%{transform:translateX(6px);}}
-.pw-toggle{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:var(--text-muted);font-size:18px;padding:2px 4px;transition:color .2s;}
-.pw-toggle:hover{color:var(--accent);}
-.pw-error-msg{font-size:12px;color:#f76f6f;font-weight:600;min-height:18px;margin-bottom:18px;text-align:center;transition:opacity .2s;}
-.pw-btn{width:100%;background:linear-gradient(135deg,#4f8ef7,#38c9a0);border:none;border-radius:10px;color:#fff;font-size:15px;font-weight:800;letter-spacing:.04em;padding:14px;cursor:pointer;transition:filter .2s,transform .1s,box-shadow .2s;box-shadow:0 6px 20px rgba(79,142,247,.3);}
-.pw-btn:hover{filter:brightness(1.1);transform:translateY(-1px);box-shadow:0 8px 28px rgba(79,142,247,.4);}
-.pw-footer{font-size:11px;color:var(--text-muted);margin-top:20px;text-align:center;}
-</style>
+<link rel="stylesheet" href="css/exam.css">
 </head>
 <body>
 
 <!-- 패스워드 모달 -->
 <div class="pw-overlay" id="pw-overlay">
   <div class="pw-modal" role="dialog" aria-modal="true" aria-labelledby="pw-title">
-    <div class="pw-logo">🔐</div>
+    <div class="pw-logo">&#x1F510;</div>
     <div class="pw-title" id="pw-title">학습 콘텐츠 잠금</div>
     <div class="pw-sub">AWS SAP-C02 학습 자료에 접근하려면<br>패스워드를 입력해 주세요.</div>
     <div class="pw-input-wrap">
       <input class="pw-input" id="pw-input" type="password" placeholder="패스워드 입력"
         maxlength="20" autocomplete="current-password"
         onkeydown="if(event.key==='Enter') checkPw()" />
-      <button class="pw-toggle" id="pw-toggle" onclick="togglePwVisible()" tabindex="-1" title="표시/숨김">👁</button>
+      <button class="pw-toggle" id="pw-toggle" onclick="togglePwVisible()" tabindex="-1" title="표시/숨김">&#x1F441;</button>
     </div>
     <div class="pw-error-msg" id="pw-error"></div>
     <button class="pw-btn" onclick="checkPw()">확인</button>
-    <div class="pw-footer">🍪 인증 후 쿠키에 저장되어 다음 방문 시 자동 로그인됩니다.</div>
+    <div class="pw-footer">&#x1F36A; 인증 후 쿠키에 저장되어 다음 방문 시 자동 로그인됩니다.</div>
   </div>
 </div>
 
-<!-- 문제 데이터 (외부 JS 파일 참조) -->
-<!-- SET06: Q251~Q300 = qs_set26 ~ qs_set30 -->
+<!-- SET06: Q251~Q300 -->
 <script src="js/qs_set26.js"></script>
 <script src="js/qs_set27.js"></script>
 <script src="js/qs_set28.js"></script>
 <script src="js/qs_set29.js"></script>
 <script src="js/qs_set30.js"></script>
+<script>
+window.SAP_QS = [
+  ...(window.QS_SET26||[]),
+  ...(window.QS_SET27||[]),
+  ...(window.QS_SET28||[]),
+  ...(window.QS_SET29||[]),
+  ...(window.QS_SET30||[]),
+];
+</script>
 
 <div class="wrap">
 
@@ -230,32 +48,32 @@ body{background:var(--bg);color:var(--text);font-family:'Pretendard','Noto Sans 
   <div class="topbar">
     <div class="set-select-wrap">
       <select class="set-select" id="set-select" onchange="goSet(this.value)">
-        <option value="01">SAP-C02 · SET 01</option>
-        <option value="02">SAP-C02 · SET 02</option>
-        <option value="03">SAP-C02 · SET 03</option>
-        <option value="04">SAP-C02 · SET 04</option>
-        <option value="05">SAP-C02 · SET 05</option>
-        <option value="06" selected>SAP-C02 · SET 06</option>
-        <option value="07">SAP-C02 · SET 07</option>
-        <option value="08">SAP-C02 · SET 08</option>
-        <option value="09">SAP-C02 · SET 09</option>
-        <option value="10">SAP-C02 · SET 10</option>
-        <option value="11">SAP-C02 · SET 11</option>
+        <option value="01">SAP-C02 &middot; SET 01</option>
+        <option value="02">SAP-C02 &middot; SET 02</option>
+        <option value="03">SAP-C02 &middot; SET 03</option>
+        <option value="04">SAP-C02 &middot; SET 04</option>
+        <option value="05">SAP-C02 &middot; SET 05</option>
+        <option value="06" selected>SAP-C02 &middot; SET 06</option>
+        <option value="07">SAP-C02 &middot; SET 07</option>
+        <option value="08">SAP-C02 &middot; SET 08</option>
+        <option value="09">SAP-C02 &middot; SET 09</option>
+        <option value="10">SAP-C02 &middot; SET 10</option>
+        <option value="11">SAP-C02 &middot; SET 11</option>
       </select>
     </div>
 
     <div class="topbar-title">
       <strong>AWS Certified Solutions Architect - Professional</strong>
-      SET 06 · Q251~Q300 실전 학습
+      SET 06 &middot; Q251~Q300 실전 학습
     </div>
     <div class="topbar-right">
-      <button class="btn btn-nav" onclick="goQWithReset(curQ-1)" id="btn-prev-top">←</button>
+      <button class="btn btn-nav" onclick="goQWithReset(curQ-1)" id="btn-prev-top">&#x2190;</button>
       <div class="q-select-wrap">
         <select class="q-select" id="q-select" onchange="goQWithReset(this.selectedIndex)"></select>
       </div>
-      <button class="btn btn-nav" onclick="goQWithReset(curQ+1)" id="btn-next-top">→</button>
+      <button class="btn btn-nav" onclick="goQWithReset(curQ+1)" id="btn-next-top">&#x2192;</button>
       <button class="theme-btn" onclick="toggleTheme()">
-        <span id="theme-icon">🌙</span>
+        <span id="theme-icon">&#x1F319;</span>
         <span id="theme-label">다크</span>
       </button>
     </div>
@@ -283,8 +101,8 @@ body{background:var(--bg);color:var(--text);font-family:'Pretendard','Noto Sans 
       <div id="choices-container"></div>
     </div>
     <div class="actions">
-      <button class="btn btn-primary" id="btn-review" onclick="doReview()" disabled>📋 정답 확인</button>
-      <button class="btn btn-secondary" onclick="doReset()">↺ 초기화</button>
+      <button class="btn btn-primary" id="btn-review" onclick="doReview()" disabled>&#x1F4CB; 정답 확인</button>
+      <button class="btn btn-secondary" onclick="doReset()">&#x21BA; 초기화</button>
     </div>
     <div class="hint-text" id="hint-text">선택지를 클릭하면 정답 확인 버튼이 활성화됩니다.</div>
   </div>
@@ -296,325 +114,23 @@ body{background:var(--bg);color:var(--text);font-family:'Pretendard','Noto Sans 
       <span class="answer-badge" id="review-answer-badge"></span>
       <span class="vote-badge" id="review-vote-badge"></span>
     </div>
-    <div class="section-title">✦ 정답 해설</div>
+    <div class="section-title">&#x2736; 정답 해설</div>
     <div class="explain-box" id="review-explain"></div>
-    <div class="section-title" style="margin-top:14px;" id="wrong-section-title">✦ 오답 분석</div>
+    <div class="section-title" style="margin-top:14px;" id="wrong-section-title">&#x2736; 오답 분석</div>
     <div class="explain-box" id="review-wrong"></div>
-    <button class="disc-toggle" onclick="document.getElementById('disc-list').classList.toggle('show')">💬 주요 토론 의견 보기 / 숨기기</button>
+    <button class="disc-toggle" onclick="document.getElementById('disc-list').classList.toggle('show')">&#x1F4AC; 주요 토론 의견 보기 / 숨기기</button>
     <div class="disc-list" id="disc-list"></div>
   </div>
 
   <!-- Bottom Nav -->
   <div class="nav-bottom">
-    <button class="btn btn-nav" onclick="goQ(curQ-1)" id="btn-prev">← 이전</button>
+    <button class="btn btn-nav" onclick="goQ(curQ-1)" id="btn-prev">&#x2190; 이전</button>
     <span class="nav-info" id="nav-info"></span>
-    <button class="btn btn-nav" onclick="goQ(curQ+1)" id="btn-next">다음 →</button>
+    <button class="btn btn-nav" onclick="goQ(curQ+1)" id="btn-next">다음 &#x2192;</button>
   </div>
 
 </div>
 
-<script>
-// ── 패스워드 인증 ──────────────────────────────────
-const PW_CORRECT  = 'SAP2';
-const COOKIE_NAME = 'sap2_auth';
-const COOKIE_DAYS = 30;
-
-function getCookie(name) {
-  for (let c of document.cookie.split(';')) {
-    const [k, v] = c.trim().split('=');
-    if (k === name) return decodeURIComponent(v || '');
-  }
-  return null;
-}
-function setCookie(name, value, days) {
-  const expires = new Date(Date.now() + days * 864e5).toUTCString();
-  document.cookie = `${name}=${encodeURIComponent(value)};expires=${expires};path=/;SameSite=Lax`;
-}
-function unlockPage() {
-  const overlay = document.getElementById('pw-overlay');
-  overlay.classList.add('hidden');
-  overlay.addEventListener('transitionend', () => overlay.remove(), { once: true });
-}
-function checkPw() {
-  const input = document.getElementById('pw-input');
-  const errEl = document.getElementById('pw-error');
-  if (input.value.trim() === PW_CORRECT) {
-    setCookie(COOKIE_NAME, PW_CORRECT, COOKIE_DAYS);
-    errEl.textContent = '';
-    input.classList.remove('error');
-    unlockPage();
-  } else {
-    errEl.textContent = '❌ 패스워드가 올바르지 않습니다.';
-    input.classList.add('error', 'shake');
-    input.select();
-    input.addEventListener('animationend', () => input.classList.remove('shake'), { once: true });
-  }
-}
-function togglePwVisible() {
-  const input  = document.getElementById('pw-input');
-  const toggle = document.getElementById('pw-toggle');
-  input.type   = input.type === 'password' ? 'text' : 'password';
-  toggle.textContent = input.type === 'password' ? '👁' : '🙈';
-}
-(function checkAuth() {
-  if (getCookie(COOKIE_NAME) === PW_CORRECT) {
-    const overlay = document.getElementById('pw-overlay');
-    if (overlay) overlay.remove();
-  } else {
-    window.addEventListener('DOMContentLoaded', () => {
-      const input = document.getElementById('pw-input');
-      if (input) setTimeout(() => input.focus(), 100);
-    });
-  }
-})();
-
-// ── SET 이동 ───────────────────────────────────────
-function goSet(setNum) {
-  const currentPath = window.location.pathname;
-  const fileName = currentPath.split('/').pop();
-  const newFileName = fileName && fileName.match(/SAP2-SET\d{2}/i)
-    ? fileName.replace(/SET\d{2}/i, `SET${setNum}`)
-    : `SAP2-SET${setNum}.html`;
-  window.location.href = currentPath.replace(fileName, newFileName);
-}
-
-// ── 문제 데이터 병합 (외부 JS 파일에서 로드됨) ──────
-// 각 qs_setXX.js 파일은 window.QS_SETXX = [...] 형태로 정의
-const QS = [
-  ...(window.QS_SET26 || []),
-  ...(window.QS_SET27 || []),
-  ...(window.QS_SET28 || []),
-  ...(window.QS_SET29 || []),
-  ...(window.QS_SET30 || []),
-];
-
-// ── 상태 ───────────────────────────────────────────
-let curQ = 0;
-let state = QS.map(() => ({ sel: [], done: false }));
-let curLang = 'ko';
-
-// ── 초기화 ─────────────────────────────────────────
-function init() {
-  if (QS.length === 0) {
-    document.getElementById('q-card').innerHTML =
-      '<p style="color:var(--text-muted);text-align:center;padding:40px">문제 데이터를 불러올 수 없습니다.<br>qs_set01.js ~ qs_set05.js 파일 경로를 확인하세요.</p>';
-    return;
-  }
-  buildSelect();
-  renderQ(0);
-  syncSetSelect();
-}
-
-function syncSetSelect() {
-  const fileName = window.location.pathname.split('/').pop();
-  const match = fileName.match(/SET(\d{2})/i);
-  if (match) document.getElementById('set-select').value = match[1];
-}
-
-function buildSelect() {
-  const sel = document.getElementById('q-select');
-  sel.innerHTML = '';
-  QS.forEach(q => {
-    const opt = document.createElement('option');
-    opt.value = q.n;
-    opt.textContent = `Q${String(q.n).padStart(3,'0')}`;
-    sel.appendChild(opt);
-  });
-}
-
-function updateSelectStatus() {
-  const sel = document.getElementById('q-select');
-  Array.from(sel.options).forEach((opt, i) => {
-    const s = state[i];
-    const q = QS[i];
-    opt.className = '';
-    if (s.done) {
-      const correct = arraysEqual(s.sel.slice().sort(), q.answer.slice().sort());
-      opt.textContent = `Q${String(q.n).padStart(3,'0')} ${correct ? '✓' : '✗'}`;
-      opt.className = correct ? 'opt-correct' : 'opt-wrong';
-    } else {
-      opt.textContent = `Q${String(q.n).padStart(3,'0')}`;
-    }
-  });
-  sel.selectedIndex = curQ;
-}
-
-// ── 렌더 ───────────────────────────────────────────
-function renderQ(idx) {
-  if (idx < 0 || idx >= QS.length) return;
-  curQ = idx;
-  const q = QS[idx];
-  const s = state[idx];
-
-  document.getElementById('progress-fill').style.width = `${((idx+1)/QS.length)*100}%`;
-  document.getElementById('q-num-badge').textContent = String(q.n).padStart(3,'0');
-
-  const tb = document.getElementById('q-type-badge');
-  if (q.type === 'multi') {
-    tb.textContent = `복수 선택 (${q.multiCount}개)`;
-    tb.className = 'q-type-badge multi';
-  } else {
-    tb.textContent = '단일 선택';
-    tb.className = 'q-type-badge';
-  }
-
-  document.getElementById('q-ko-text').innerHTML = q.ko;
-  document.getElementById('q-en-text').innerHTML = q.en;
-  document.getElementById('choices-label').textContent =
-    q.type === 'multi' ? `선택지 — ${q.multiCount}개 선택` : '선택지 — 단일 선택';
-
-  const cc = document.getElementById('choices-container');
-  cc.innerHTML = '';
-  q.choices.forEach(ch => {
-    const div = document.createElement('div');
-    let cls = 'choice';
-    if (s.done) {
-      cls += ' disabled';
-      if (q.answer.includes(ch.k)) cls += ' correct';
-      else if (s.sel.includes(ch.k)) cls += ' wrong';
-    } else if (s.sel.includes(ch.k)) {
-      cls += ' selected';
-    }
-    div.className = cls;
-
-    let icon = '';
-    if (s.done) {
-      if (q.answer.includes(ch.k)) icon = '✓';
-      else if (s.sel.includes(ch.k)) icon = '✗';
-    }
-    div.innerHTML = `
-      <div class="choice-key">${ch.k}</div>
-      <div class="choice-body">
-        <div class="choice-text">${ch.ko}</div>
-        <div class="choice-en">${ch.en}</div>
-      </div>
-      <div class="result-icon">${icon}</div>`;
-    if (!s.done) div.onclick = () => doSelect(idx, ch.k);
-    cc.appendChild(div);
-  });
-
-  applyLang(curLang);
-
-  document.getElementById('btn-review').disabled = s.done || s.sel.length === 0;
-
-  const hint = document.getElementById('hint-text');
-  if (s.done) {
-    const correct = arraysEqual(s.sel.slice().sort(), q.answer.slice().sort());
-    hint.textContent = correct ? '🎉 정답입니다!' : `❌ 오답입니다. 정답은 ${q.answer.join(', ')} 입니다.`;
-  } else if (s.sel.length > 0) {
-    const remaining = q.type === 'multi' ? q.multiCount - s.sel.length : 0;
-    hint.textContent = (q.type === 'multi' && remaining > 0)
-      ? `${s.sel.join(', ')}번 선택됨. ${remaining}개 더 선택하세요.`
-      : `${s.sel.join(', ')}번을 선택했습니다. 정답 확인 버튼을 눌러주세요.`;
-  } else {
-    hint.textContent = '선택지를 클릭하면 정답 확인 버튼이 활성화됩니다.';
-  }
-
-  const rp = document.getElementById('review-panel');
-  if (s.done) { renderReview(q); rp.classList.add('show'); }
-  else rp.classList.remove('show');
-
-  document.getElementById('btn-prev').disabled  = idx === 0;
-  document.getElementById('btn-next').disabled  = idx === QS.length - 1;
-  document.getElementById('nav-info').textContent = `${idx+1} / ${QS.length} 문제`;
-  updateSelectStatus();
-}
-
-function renderReview(q) {
-  document.getElementById('review-answer-badge').textContent = '✓ ' + q.answer.join(', ');
-  document.getElementById('review-vote-badge').innerHTML = `커뮤니티 투표 <span>${q.vote}</span>`;
-  document.getElementById('review-explain').innerHTML = q.explain;
-
-  const ws = document.getElementById('review-wrong');
-  const wt = document.getElementById('wrong-section-title');
-  if (q.wrong) { ws.innerHTML = q.wrong; ws.style.display=''; wt.style.display=''; }
-  else { ws.style.display='none'; wt.style.display='none'; }
-
-  const dl = document.getElementById('disc-list');
-  dl.innerHTML = '';
-  dl.classList.remove('show');
-  (q.disc || []).forEach(d => {
-    dl.innerHTML += `<div class="disc-item"><div class="disc-ans">${d.ans}</div>${d.txt}</div>`;
-  });
-}
-
-// ── 인터랙션 ───────────────────────────────────────
-function doSelect(idx, key) {
-  const q = QS[idx];
-  const s = state[idx];
-  if (s.done) return;
-  if (q.type === 'single') {
-    s.sel = [key];
-  } else {
-    const pos = s.sel.indexOf(key);
-    if (pos >= 0) s.sel.splice(pos, 1);
-    else if (s.sel.length < q.multiCount) s.sel.push(key);
-  }
-  renderQ(idx);
-}
-
-function doReview() {
-  const s = state[curQ];
-  if (s.sel.length === 0 || s.done) return;
-  s.done = true;
-  renderQ(curQ);
-  document.getElementById('review-panel').scrollIntoView({ behavior:'smooth', block:'start' });
-}
-
-function doReset() {
-  state[curQ] = { sel: [], done: false };
-  renderQ(curQ);
-}
-
-function goQ(idx) {
-  idx = parseInt(idx);
-  if (isNaN(idx) || idx < 0 || idx >= QS.length) return;
-  renderQ(idx);
-  window.scrollTo({ top:0, behavior:'smooth' });
-}
-
-function goQWithReset(idx) {
-  idx = parseInt(idx);
-  if (isNaN(idx) || idx < 0 || idx >= QS.length) return;
-  curLang = 'ko';
-  document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.lang-tab')[0].classList.add('active');
-  state[idx] = { sel: [], done: false };
-  renderQ(idx);
-  window.scrollTo({ top:0, behavior:'smooth' });
-  document.getElementById('btn-prev-top').disabled = idx === 0;
-  document.getElementById('btn-next-top').disabled = idx === QS.length - 1;
-}
-
-// ── 언어 토글 ──────────────────────────────────────
-function setLang(lang, btn) {
-  curLang = lang;
-  document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
-  btn.classList.add('active');
-  applyLang(lang);
-}
-function applyLang(lang) {
-  document.getElementById('q-en-text').style.display = (lang === 'both') ? 'block' : 'none';
-  document.querySelectorAll('.choice-en').forEach(e => {
-    e.style.display = (lang === 'both') ? 'block' : 'none';
-  });
-}
-
-// ── 테마 ───────────────────────────────────────────
-function toggleTheme() {
-  const html = document.documentElement;
-  const dark = html.getAttribute('data-theme') === 'dark';
-  html.setAttribute('data-theme', dark ? 'light' : 'dark');
-  document.getElementById('theme-icon').textContent  = dark ? '☀️' : '🌙';
-  document.getElementById('theme-label').textContent = dark ? '라이트' : '다크';
-}
-
-// ── 유틸 ───────────────────────────────────────────
-function arraysEqual(a, b) {
-  return a.length === b.length && a.every((v, i) => v === b[i]);
-}
-
-init();
-</script>
+<script src="js/exam.js"></script>
 </body>
 </html>
