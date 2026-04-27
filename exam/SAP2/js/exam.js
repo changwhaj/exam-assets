@@ -67,8 +67,43 @@ const QS = window.SAP_QS || [];
 
 // ── 상태 ───────────────────────────────────────────
 let curQ = 0;
-let state = QS.map(() => ({ sel: [], done: false }));
+// result: null | 'ok' | 'ng' — 쿠키에서 로드한 과거 결과
+let state = QS.map(() => ({ sel: [], done: false, result: null }));
 let curLang = 'ko';
+
+// ── 히스토리 (쿠키) ────────────────────────────────
+function getSetNum() {
+  const m = window.location.pathname.match(/SET(\d{2})/i);
+  return m ? m[1] : '00';
+}
+const HIST_COOKIE = 'sap2_r_' + getSetNum();
+
+function loadHistory() {
+  const val = getCookie(HIST_COOKIE);
+  if (!val) return;
+  for (let i = 0; i < Math.min(val.length, QS.length); i++) {
+    if      (val[i] === '1') state[i].result = 'ok';
+    else if (val[i] === '0') state[i].result = 'ng';
+  }
+}
+
+function saveHistory() {
+  let val = '';
+  for (let i = 0; i < QS.length; i++) {
+    const r = getQuestionResult(i);
+    val += r === 'ok' ? '1' : r === 'ng' ? '0' : '.';
+  }
+  setCookie(HIST_COOKIE, val, COOKIE_DAYS);
+}
+
+// 현재 세션 결과 또는 쿠키 히스토리 결과 반환
+function getQuestionResult(i) {
+  const s = state[i];
+  if (s.done) {
+    return arraysEqual(s.sel.slice().sort(), QS[i].answer.slice().sort()) ? 'ok' : 'ng';
+  }
+  return s.result; // null | 'ok' | 'ng'
+}
 
 // ── 초기화 ─────────────────────────────────────────
 function init() {
@@ -77,9 +112,11 @@ function init() {
       '<p style="color:var(--text-muted);text-align:center;padding:40px">문제 데이터를 불러올 수 없습니다.<br>qs_setXX.js 파일 경로를 확인하세요.</p>';
     return;
   }
+  loadHistory();
   buildSelect();
   renderQ(0);
   syncSetSelect();
+  initScrollTop();
 }
 
 function syncSetSelect() {
@@ -102,13 +139,15 @@ function buildSelect() {
 function updateSelectStatus() {
   const sel = document.getElementById('q-select');
   Array.from(sel.options).forEach((opt, i) => {
-    const s = state[i];
     const q = QS[i];
+    const r = getQuestionResult(i);
     opt.className = '';
-    if (s.done) {
-      const correct = arraysEqual(s.sel.slice().sort(), q.answer.slice().sort());
-      opt.textContent = `Q${String(q.n).padStart(3,'0')} ${correct ? '✓' : '✗'}`;
-      opt.className = correct ? 'opt-correct' : 'opt-wrong';
+    if (r === 'ok') {
+      opt.textContent = `Q${String(q.n).padStart(3,'0')} ✓`;
+      opt.className = 'opt-correct';
+    } else if (r === 'ng') {
+      opt.textContent = `Q${String(q.n).padStart(3,'0')} ✗`;
+      opt.className = 'opt-wrong';
     } else {
       opt.textContent = `Q${String(q.n).padStart(3,'0')}`;
     }
@@ -172,7 +211,15 @@ function renderQ(idx) {
 
   applyLang(curLang);
 
-  document.getElementById('btn-review').disabled = s.done || s.sel.length === 0;
+  const reviewBtn = document.getElementById('btn-review');
+  reviewBtn.disabled = !s.done && s.sel.length === 0;
+  if (s.done) {
+    reviewBtn.textContent = '📁 정답 접기';
+    reviewBtn.classList.add('is-done');
+  } else {
+    reviewBtn.textContent = '📋 정답 확인';
+    reviewBtn.classList.remove('is-done');
+  }
 
   const hint = document.getElementById('hint-text');
   if (s.done) {
@@ -230,17 +277,32 @@ function doSelect(idx, key) {
   renderQ(idx);
 }
 
-function doReview() {
+// 정답확인 / 정답접기 토글
+function toggleReview() {
   const s = state[curQ];
-  if (s.sel.length === 0 || s.done) return;
-  s.done = true;
-  renderQ(curQ);
-  document.getElementById('review-panel').scrollIntoView({ behavior:'smooth', block:'start' });
-}
+  const rp = document.getElementById('review-panel');
+  const btn = document.getElementById('btn-review');
 
-function doReset() {
-  state[curQ] = { sel: [], done: false };
-  renderQ(curQ);
+  if (!s.done) {
+    if (s.sel.length === 0) return;
+    s.done = true;
+    saveHistory(); // 결과를 쿠키에 저장
+    renderQ(curQ);
+    rp.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    return;
+  }
+
+  // 이미 채점됨 → 패널 토글
+  if (rp.classList.contains('show')) {
+    rp.classList.remove('show');
+    btn.textContent = '📋 정답 확인';
+    btn.classList.remove('is-done');
+  } else {
+    rp.classList.add('show');
+    btn.textContent = '📁 정답 접기';
+    btn.classList.add('is-done');
+    rp.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 }
 
 function goQ(idx) {
@@ -254,9 +316,9 @@ function goQWithReset(idx) {
   idx = parseInt(idx);
   if (isNaN(idx) || idx < 0 || idx >= QS.length) return;
   curLang = 'ko';
-  document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.lang-tab')[0].classList.add('active');
-  state[idx] = { sel: [], done: false };
+  const langBtn = document.getElementById('btn-lang');
+  if (langBtn) { langBtn.textContent = '양국어'; langBtn.classList.remove('active'); }
+  state[idx] = { sel: [], done: false, result: state[idx].result }; // 히스토리는 유지
   renderQ(idx);
   window.scrollTo({ top:0, behavior:'smooth' });
   document.getElementById('btn-prev-top').disabled = idx === 0;
@@ -264,12 +326,20 @@ function goQWithReset(idx) {
 }
 
 // ── 언어 토글 ──────────────────────────────────────
-function setLang(lang, btn) {
-  curLang = lang;
-  document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
-  btn.classList.add('active');
-  applyLang(lang);
+function toggleLang() {
+  const btn = document.getElementById('btn-lang');
+  if (curLang === 'ko') {
+    curLang = 'both';
+    btn.textContent = '한국어만';
+    btn.classList.add('active');
+  } else {
+    curLang = 'ko';
+    btn.textContent = '양국어';
+    btn.classList.remove('active');
+  }
+  applyLang(curLang);
 }
+
 function applyLang(lang) {
   document.getElementById('q-en-text').style.display = (lang === 'both') ? 'block' : 'none';
   document.querySelectorAll('.choice-en').forEach(e => {
@@ -284,6 +354,18 @@ function toggleTheme() {
   html.setAttribute('data-theme', dark ? 'light' : 'dark');
   document.getElementById('theme-icon').textContent  = dark ? '☀️' : '🌙';
   document.getElementById('theme-label').textContent = dark ? '라이트' : '다크';
+}
+
+// ── 스크롤 상단 버튼 ────────────────────────────────
+function initScrollTop() {
+  const btn = document.getElementById('scroll-top-btn');
+  if (!btn) return;
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('visible', window.scrollY > 200);
+  }, { passive: true });
+}
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // ── 유틸 ───────────────────────────────────────────

@@ -82,13 +82,11 @@ window.SAP_QS = [
   <!-- Progress Bar -->
   <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:2%"></div></div>
 
-  <!-- Language Tabs -->
-  <div class="lang-tabs">
-    <button class="lang-tab active" onclick="setLang('ko',this)">한국어</button>
-    <button class="lang-tab" onclick="setLang('both',this)">양국어</button>
-  </div>
+  <!-- Language Toggle -->
+  <button class="btn-lang-toggle" id="btn-lang" onclick="toggleLang()">양국어</button>
 
   <!-- Question Card -->
+  <div class="card-wrap">
   <div class="card" id="q-card">
     <div class="q-label">
       문제 <span id="q-num-badge">001</span>
@@ -101,10 +99,11 @@ window.SAP_QS = [
       <div id="choices-container"></div>
     </div>
     <div class="actions">
-      <button class="btn btn-primary" id="btn-review" onclick="doReview()" disabled>&#x1F4CB; 정답 확인</button>
-      <button class="btn btn-secondary" onclick="doReset()">&#x21BA; 초기화</button>
+      <button class="btn btn-primary" id="btn-review" onclick="toggleReview()" disabled>&#x1F4CB; 정답 확인</button>
     </div>
     <div class="hint-text" id="hint-text">선택지를 클릭하면 정답 확인 버튼이 활성화됩니다.</div>
+  </div>
+  <button class="scroll-top-btn" id="scroll-top-btn" onclick="scrollToTop()" title="맨 위로">&#x25B2;</button>
   </div>
 
   <!-- Review Panel -->
@@ -114,9 +113,9 @@ window.SAP_QS = [
       <span class="answer-badge" id="review-answer-badge"></span>
       <span class="vote-badge" id="review-vote-badge"></span>
     </div>
-    <div class="section-title">&#x2736; 정답 해설</div>
+    <div class="section-title">정답 해설</div>
     <div class="explain-box" id="review-explain"></div>
-    <div class="section-title" style="margin-top:14px;" id="wrong-section-title">&#x2736; 오답 분석</div>
+    <div class="section-title" style="margin-top:14px;" id="wrong-section-title">오답 분석</div>
     <div class="explain-box" id="review-wrong"></div>
     <button class="disc-toggle" onclick="document.getElementById('disc-list').classList.toggle('show')">&#x1F4AC; 주요 토론 의견 보기 / 숨기기</button>
     <div class="disc-list" id="disc-list"></div>

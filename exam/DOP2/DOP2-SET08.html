@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AWS DOP-C02 | SET 08 (Q351~Q400)</title>
+<link rel="stylesheet" href="css/exam.css">
+</head>
+<body>
+
+<!-- 패스워드 모달 -->
+<div class="pw-overlay" id="pw-overlay">
+  <div class="pw-modal" role="dialog" aria-modal="true" aria-labelledby="pw-title">
+    <div class="pw-logo">&#x1F510;</div>
+    <div class="pw-title" id="pw-title">학습 콘텐츠 잠금</div>
+    <div class="pw-sub">AWS DOP-C02 학습 자료에 접근하려면<br>패스워드를 입력해 주세요.</div>
+    <div class="pw-input-wrap">
+      <input class="pw-input" id="pw-input" type="password" placeholder="패스워드 입력"
+        maxlength="20" autocomplete="current-password"
+        onkeydown="if(event.key==='Enter') checkPw()" />
+      <button class="pw-toggle" id="pw-toggle" onclick="togglePwVisible()" tabindex="-1" title="표시/숨김">&#x1F441;</button>
+    </div>
+    <div class="pw-error-msg" id="pw-error"></div>
+    <button class="pw-btn" onclick="checkPw()">확인</button>
+    <div class="pw-footer">&#x1F36A; 인증 후 쿠키에 저장되어 다음 방문 시 자동 로그인됩니다.</div>
+  </div>
+</div>
+
+<!-- SET08: Q351~Q400 -->
+<script src="js/qs_set36.js"></script>
+<script src="js/qs_set37.js"></script>
+<script src="js/qs_set38.js"></script>
+<script src="js/qs_set39.js"></script>
+<script src="js/qs_set40.js"></script>
+<script>
+window.SAP_QS = [
+  ...(window.QS_SET36||[]),
+  ...(window.QS_SET37||[]),
+  ...(window.QS_SET38||[]),
+  ...(window.QS_SET39||[]),
+  ...(window.QS_SET40||[]),
+];
+</script>
+
+<div class="wrap">
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="set-select-wrap">
+      <select class="set-select" id="set-select" onchange="goSet(this.value)">
+        <option value="01">DOP-C02 &middot; SET 01</option>
+        <option value="02">DOP-C02 &middot; SET 02</option>
+        <option value="03">DOP-C02 &middot; SET 03</option>
+        <option value="04">DOP-C02 &middot; SET 04</option>
+        <option value="05">DOP-C02 &middot; SET 05</option>
+        <option value="06">DOP-C02 &middot; SET 06</option>
+        <option value="07">DOP-C02 &middot; SET 07</option>
+        <option value="08" selected>DOP-C02 &middot; SET 08</option>
+        <option value="09">DOP-C02 &middot; SET 09</option>
+      </select>
+    </div>
+
+    <div class="topbar-title">
+      <strong>AWS Certified DevOps Engineer &#x2013; Professional</strong>
+      SET 08 &middot; Q351~Q400 실전 학습
+    </div>
+    <div class="topbar-right">
+      <button class="btn btn-nav" onclick="goQWithReset(curQ-1)" id="btn-prev-top">&#x2190;</button>
+      <div class="q-select-wrap">
+        <select class="q-select" id="q-select" onchange="goQWithReset(this.selectedIndex)"></select>
+      </div>
+      <button class="btn btn-nav" onclick="goQWithReset(curQ+1)" id="btn-next-top">&#x2192;</button>
+      <button class="theme-btn" onclick="toggleTheme()">
+        <span id="theme-icon">&#x1F319;</span>
+        <span id="theme-label">다크</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:2%"></div></div>
+
+  <!-- Language Toggle -->
+  <button class="btn-lang-toggle" id="btn-lang" onclick="toggleLang()">양국어</button>
+
+  <!-- Question Card -->
+  <div class="card-wrap">
+  <div class="card" id="q-card">
+    <div class="q-label">
+      문제 <span id="q-num-badge">001</span>
+      <span id="q-type-badge" class="q-type-badge">단일 선택</span>
+    </div>
+    <div class="q-text" id="q-ko-text"></div>
+    <div class="q-text en-text" id="q-en-text"></div>
+    <div class="choices-section">
+      <div class="choices-label" id="choices-label">선택지</div>
+      <div id="choices-container"></div>
+    </div>
+    <div class="actions">
+      <button class="btn btn-primary" id="btn-review" onclick="toggleReview()" disabled>&#x1F4CB; 정답 확인</button>
+    </div>
+    <div class="hint-text" id="hint-text">선택지를 클릭하면 정답 확인 버튼이 활성화됩니다.</div>
+  </div>
+  <button class="scroll-top-btn" id="scroll-top-btn" onclick="scrollToTop()" title="맨 위로">&#x25B2;</button>
+  </div>
+
+  <!-- Review Panel -->
+  <div class="review-panel" id="review-panel">
+    <div class="answer-row">
+      <span class="answer-label">정답</span>
+      <span class="answer-badge" id="review-answer-badge"></span>
+      <span class="vote-badge" id="review-vote-badge"></span>
+    </div>
+    <div class="section-title">정답 해설</div>
+    <div class="explain-box" id="review-explain"></div>
+    <div class="section-title" style="margin-top:14px;" id="wrong-section-title">오답 분석</div>
+    <div class="explain-box" id="review-wrong"></div>
+    <button class="disc-toggle" onclick="document.getElementById('disc-list').classList.toggle('show')">&#x1F4AC; 주요 토론 의견 보기 / 숨기기</button>
+    <div class="disc-list" id="disc-list"></div>
+  </div>
+
+  <!-- Bottom Nav -->
+  <div class="nav-bottom">
+    <button class="btn btn-nav" onclick="goQ(curQ-1)" id="btn-prev">&#x2190; 이전</button>
+    <span class="nav-info" id="nav-info"></span>
+    <button class="btn btn-nav" onclick="goQ(curQ+1)" id="btn-next">다음 &#x2192;</button>
+  </div>
+
+</div>
+
+<script src="js/exam.js"></script>
+</body>
+</html>
