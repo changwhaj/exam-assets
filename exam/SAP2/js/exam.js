@@ -292,11 +292,13 @@ function toggleReview() {
     return;
   }
 
-  // 이미 채점됨 → 패널 토글
+  // 이미 채점됨 → 정답 접기: 상태 초기화하여 문제 재풀이 가능
   if (rp.classList.contains('show')) {
     rp.classList.remove('show');
-    btn.textContent = '📋 정답 확인';
-    btn.classList.remove('is-done');
+    // 선택 및 채점 상태 초기화 (히스토리 결과는 유지)
+    state[curQ] = { sel: [], done: false, result: state[curQ].result };
+    renderQ(curQ);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   } else {
     rp.classList.add('show');
     btn.textContent = '📁 정답 접기';
