@@ -5,6 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AWS SAP-C02 | SET 03 (Q101~Q150)</title>
 <link rel="stylesheet" href="css/exam.css">
+<script>
+  // 페이지 로드 직후 저장된 테마 복원 (깜빡임 방지)
+  (function() {
+    function getCookieValue(name) {
+      for (let c of document.cookie.split(';')) {
+        const [k, v] = c.trim().split('=');
+        if (k === name) return decodeURIComponent(v || '');
+      }
+      return null;
+    }
+    const savedTheme = getCookieValue('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+  })();
+</script>
 </head>
 <body>
 
@@ -48,17 +64,17 @@ window.SAP_QS = [
   <div class="topbar">
     <div class="set-select-wrap">
       <select class="set-select" id="set-select" onchange="goSet(this.value)">
-        <option value="01">SAP-C02 &middot; SET 01</option>
-        <option value="02">SAP-C02 &middot; SET 02</option>
-        <option value="03" selected>SAP-C02 &middot; SET 03</option>
-        <option value="04">SAP-C02 &middot; SET 04</option>
-        <option value="05">SAP-C02 &middot; SET 05</option>
-        <option value="06">SAP-C02 &middot; SET 06</option>
-        <option value="07">SAP-C02 &middot; SET 07</option>
-        <option value="08">SAP-C02 &middot; SET 08</option>
-        <option value="09">SAP-C02 &middot; SET 09</option>
-        <option value="10">SAP-C02 &middot; SET 10</option>
-        <option value="11">SAP-C02 &middot; SET 11</option>
+        <option value="01">SET 01</option>
+        <option value="02">SET 02</option>
+        <option value="03" selected>SET 03</option>
+        <option value="04">SET 04</option>
+        <option value="05">SET 05</option>
+        <option value="06">SET 06</option>
+        <option value="07">SET 07</option>
+        <option value="08">SET 08</option>
+        <option value="09">SET 09</option>
+        <option value="10">SET 10</option>
+        <option value="11">SET 11</option>
       </select>
     </div>
 
@@ -72,6 +88,8 @@ window.SAP_QS = [
         <select class="q-select" id="q-select" onchange="goQWithReset(this.selectedIndex)"></select>
       </div>
       <button class="btn btn-nav" onclick="goQWithReset(curQ+1)" id="btn-next-top">&#x2192;</button>
+      <button class="wide-btn" id="btn-wide" onclick="toggleWideMode()" title="Wide 화면 전환">&#x1F4CF; 넓은 화면</button>
+      <button class="btn-lang-toggle" id="btn-lang" onclick="toggleLang()">양국어</button>
       <button class="theme-btn" onclick="toggleTheme()">
         <span id="theme-icon">&#x1F319;</span>
         <span id="theme-label">다크</span>
@@ -81,9 +99,6 @@ window.SAP_QS = [
 
   <!-- Progress Bar -->
   <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:2%"></div></div>
-
-  <!-- Language Toggle -->
-  <button class="btn-lang-toggle" id="btn-lang" onclick="toggleLang()">양국어</button>
 
   <!-- Question Card -->
   <div class="card-wrap">
