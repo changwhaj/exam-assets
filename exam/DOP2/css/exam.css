@@ -60,7 +60,8 @@ body {
   min-height: 100vh;
   transition: background .25s, color .25s;
 }
-.wrap { max-width: 900px; margin: 0 auto; padding: 0 16px 64px; }
+.wrap { max-width: 900px; margin: 0 auto; padding: 0 16px 64px; transition: max-width .3s ease; }
+.wrap.wide { max-width: 1200px; }
 
 /* ── Topbar (AWS Console style — full viewport width) ───────────────────────── */
 .topbar {
@@ -72,13 +73,19 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  min-height: 56px;
-  flex-wrap: wrap;
+  min-height: 64px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   position: sticky;
   top: 0;
   z-index: 100;
   box-shadow: 0 2px 8px rgba(0,0,0,.35);
   margin-bottom: 24px;
+  transition: padding .3s ease;
+}
+.topbar.wide {
+  padding: 0 max(24px, calc(50vw - 600px));
+  gap: 16px;
 }
 [data-theme="dark"] .topbar { background: #0F1111; border-bottom: 1px solid #3A4553; }
 
@@ -103,8 +110,9 @@ body {
 }
 
 /* Topbar 타이틀 */
-.topbar-title { font-size: 13px; color: rgba(255,255,255,.65); flex: 1; min-width: 120px; }
-.topbar-title strong { color: #fff; font-size: 14px; display: block; font-weight: 700; }
+.topbar-title { font-size: 12px; color: rgba(255,255,255,.65); flex: 1; min-width: 100px; }
+.topbar-title strong { color: #fff; font-size: 13px; display: block; font-weight: 700; margin-bottom: 2px; }
+.topbar-title br { display: none; }
 
 /* Topbar 오른쪽 컨트롤 */
 .topbar-right {
@@ -163,6 +171,29 @@ body {
   color: #fff;
 }
 
+/* Wide 모드 버튼 */
+.wide-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 3px; cursor: pointer;
+  display: flex; align-items: center; gap: 5px;
+  padding: 4px 10px; height: 28px;
+  font-size: 12px; font-weight: 600;
+  color: rgba(255,255,255,.8);
+  transition: background .15s, border-color .15s;
+  white-space: nowrap;
+}
+.wide-btn:hover {
+  background: rgba(255,255,255,.12);
+  border-color: rgba(255,255,255,.7);
+  color: #fff;
+}
+.wide-btn.active {
+  background: var(--aws-orange);
+  border-color: var(--aws-orange);
+  color: #111;
+}
+
 /* ── Progress Bar ────────────────────────────────────────────────────────────── */
 .progress-bar {
   background: var(--border); border-radius: 0;
@@ -191,6 +222,27 @@ body {
 }
 [data-theme="dark"] .btn-lang-toggle.active {
   background: var(--aws-orange); border-color: var(--aws-orange); color: #111;
+}
+
+/* topbar-right 내 언어 버튼 */
+.topbar-right .btn-lang-toggle {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.3);
+  color: rgba(255,255,255,.8);
+  padding: 4px 10px; height: 28px;
+  font-size: 12px; font-weight: 600;
+  margin-bottom: 0;
+  transition: background .15s, border-color .15s;
+}
+.topbar-right .btn-lang-toggle:hover {
+  background: rgba(255,255,255,.12);
+  border-color: rgba(255,255,255,.7);
+  color: #fff;
+}
+.topbar-right .btn-lang-toggle.active {
+  background: var(--aws-orange);
+  border-color: var(--aws-orange);
+  color: #111;
 }
 
 /* ── Card (카드 + 스크롤 버튼 나란히 배치) ──────────────────────────────────── */
@@ -531,7 +583,7 @@ body {
 /* ── Scroll-to-top Button (카드 우측 sticky) ─────────────────────────────────── */
 .scroll-top-btn {
   position: sticky;
-  top: 76px;           /* 토바 높이(56px) + 여유 */
+  top: 84px;           /* 토바 높이(64px) + 여유 */
   flex-shrink: 0;
   align-self: flex-start;
   width: 38px; height: 38px;

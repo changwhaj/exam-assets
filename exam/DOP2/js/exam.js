@@ -112,7 +112,9 @@ function init() {
       '<p style="color:var(--text-muted);text-align:center;padding:40px">문제 데이터를 불러올 수 없습니다.<br>qs_setXX.js 파일 경로를 확인하세요.</p>';
     return;
   }
+  loadTheme();
   loadHistory();
+  loadWideMode();
   buildSelect();
   renderQ(0);
   syncSetSelect();
@@ -238,6 +240,9 @@ function renderQ(idx) {
   if (s.done) { renderReview(q); rp.classList.add('show'); }
   else rp.classList.remove('show');
 
+  document.getElementById('btn-prev-top').disabled = idx === 0;
+  document.getElementById('btn-next-top').disabled = idx === QS.length - 1;
+
   document.getElementById('btn-prev').disabled  = idx === 0;
   document.getElementById('btn-next').disabled  = idx === QS.length - 1;
   document.getElementById('nav-info').textContent = `${idx+1} / ${QS.length} 문제`;
@@ -280,6 +285,7 @@ function doSelect(idx, key) {
 // 정답확인 / 정답접기 토글
 function toggleReview() {
   const s = state[curQ];
+  const q = QS[curQ];
   const rp = document.getElementById('review-panel');
   const btn = document.getElementById('btn-review');
 
@@ -288,15 +294,20 @@ function toggleReview() {
     s.done = true;
     saveHistory(); // 결과를 쿠키에 저장
     renderQ(curQ);
+    state[curQ].result = getQuestionResult(curQ); // 채점 결과를 상태에 보존
+    renderReview(q);
     rp.scrollIntoView({ behavior: 'smooth', block: 'start' });
     return;
   }
 
-  // 이미 채점됨 → 패널 토글
+  // 이미 채점됨 → 정답 접기: 상태 초기화하여 문제 재풀이 가능
   if (rp.classList.contains('show')) {
     rp.classList.remove('show');
-    btn.textContent = '📋 정답 확인';
-    btn.classList.remove('is-done');
+    // 초기화 전에 s.done=true 상태에서 정확한 결과(ok/ng)를 계산하여 result에 보존
+    const prevResult = getQuestionResult(curQ);
+    state[curQ] = { sel: [], done: false, result: prevResult };
+    renderQ(curQ);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   } else {
     rp.classList.add('show');
     btn.textContent = '📁 정답 접기';
@@ -308,21 +319,18 @@ function toggleReview() {
 function goQ(idx) {
   idx = parseInt(idx);
   if (isNaN(idx) || idx < 0 || idx >= QS.length) return;
+  curLang = 'ko';
+  const langBtn = document.getElementById('btn-lang');
+  if (langBtn) { langBtn.textContent = '양국어'; langBtn.classList.remove('active'); }
+  const prevResult = state[idx].result;
+  state[idx] = { sel: [], done: prevResult !== null, result: prevResult };
+  state[idx] = { sel: [], done: false, result: state[idx].result }; // 히스토리는 유지
   renderQ(idx);
   window.scrollTo({ top:0, behavior:'smooth' });
 }
 
 function goQWithReset(idx) {
-  idx = parseInt(idx);
-  if (isNaN(idx) || idx < 0 || idx >= QS.length) return;
-  curLang = 'ko';
-  const langBtn = document.getElementById('btn-lang');
-  if (langBtn) { langBtn.textContent = '양국어'; langBtn.classList.remove('active'); }
-  state[idx] = { sel: [], done: false, result: state[idx].result }; // 히스토리는 유지
-  renderQ(idx);
-  window.scrollTo({ top:0, behavior:'smooth' });
-  document.getElementById('btn-prev-top').disabled = idx === 0;
-  document.getElementById('btn-next-top').disabled = idx === QS.length - 1;
+  goQ(idx);
 }
 
 // ── 언어 토글 ──────────────────────────────────────
@@ -348,12 +356,60 @@ function applyLang(lang) {
 }
 
 // ── 테마 ───────────────────────────────────────────
+function loadTheme() {
+  const savedTheme = getCookie('theme');
+  if (savedTheme) {
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateThemeUI(savedTheme);
+  }
+}
+
+function updateThemeUI(theme) {
+  document.getElementById('theme-icon').textContent  = theme === 'dark' ? '☀️' : '🌙';
+  document.getElementById('theme-label').textContent = theme === 'dark' ? '라이트' : '다크';
+}
+
 function toggleTheme() {
   const html = document.documentElement;
   const dark = html.getAttribute('data-theme') === 'dark';
-  html.setAttribute('data-theme', dark ? 'light' : 'dark');
-  document.getElementById('theme-icon').textContent  = dark ? '☀️' : '🌙';
-  document.getElementById('theme-label').textContent = dark ? '라이트' : '다크';
+  const newTheme = dark ? 'light' : 'dark';
+  html.setAttribute('data-theme', newTheme);
+  setCookie('theme', newTheme, COOKIE_DAYS);
+  updateThemeUI(newTheme);
+}
+
+// ── Wide 모드 ──────────────────────────────────────
+let isWideMode = false;
+
+function loadWideMode() {
+  const val = getCookie('sap2_wide_mode');
+  isWideMode = val === '1';
+  applyWideMode();
+}
+
+function applyWideMode() {
+  const wrap = document.querySelector('.wrap');
+  const topbar = document.querySelector('.topbar');
+  const btn = document.getElementById('btn-wide');
+  if (!wrap || !btn) return;
+  
+  if (isWideMode) {
+    wrap.classList.add('wide');
+    if (topbar) topbar.classList.add('wide');
+    btn.classList.add('active');
+    btn.textContent = '📐 기본 화면';
+  } else {
+    wrap.classList.remove('wide');
+    if (topbar) topbar.classList.remove('wide');
+    btn.classList.remove('active');
+    btn.textContent = '📏 넓은 화면';
+  }
+}
+
+function toggleWideMode() {
+  isWideMode = !isWideMode;
+  setCookie('sap2_wide_mode', isWideMode ? '1' : '0', COOKIE_DAYS);
+  applyWideMode();
 }
 
 // ── 스크롤 상단 버튼 ────────────────────────────────
