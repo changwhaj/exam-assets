@@ -269,6 +269,73 @@ def remove_exam_element(driver):
         driver.execute_script("arguments[0].removeAttribute('class');", driver.find_element(By.TAG_NAME, 'html'))
         driver.execute_script("arguments[0].removeAttribute('href');", driver.find_element(By.CLASS_NAME, 'discussion-link'))
         driver.execute_script("arguments[0].removeAttribute('href');", driver.find_element(By.CLASS_NAME, 'title-username'))
+        # 팝업 제거
+        driver.execute_script("""
+            (function(){
+
+                const i = setInterval(()=>{}, 1000);
+
+                for(let e = 0; e <= i; e++) {
+                    clearInterval(e);
+                }
+
+                document.onclick = null;
+                document.onkeydown = null;
+
+                const popup = document.getElementById("notRemoverPopup");
+
+                if (popup) {
+
+                    const prev = popup.previousElementSibling;
+
+                    if (
+                        prev &&
+                        prev.tagName &&
+                        prev.tagName.toLowerCase() === "style"
+                    ) {
+                        prev.remove();
+                    }
+
+                    const next = popup.nextElementSibling;
+
+                    if (
+                        next &&
+                        next.tagName &&
+                        next.tagName.toLowerCase() === "script"
+                    ) {
+                        next.remove();
+                    }
+
+                    popup.remove();
+                }
+
+                if (typeof originalPopupContent !== "undefined") {
+                    originalPopupContent = null;
+                }
+            })();
+        """)
+        driver.execute_script("""
+            const oldBtn = document.querySelector(
+                'a.btn.btn-primary'
+            );
+
+            if (oldBtn && oldBtn.textContent.includes('Show Suggested Answer')) {
+
+                const newBtn1 = document.createElement('a');
+                newBtn1.href = '#';
+                newBtn1.className = 'btn btn-primary reveal-solution';
+                newBtn1.textContent = 'Show Suggested Answer';
+
+                const newBtn2 = document.createElement('a');
+                newBtn2.href = '#';
+                newBtn2.className = 'btn btn-primary hide-solution d-none';
+                newBtn2.textContent = 'Hide Answer';
+
+                oldBtn.replaceWith(newBtn1);
+                newBtn1.after(newBtn2);
+            }
+        """)
+
     except Exception as e:
         # print(f"*** Error remove_exam_element !!! {e}")
         pass
@@ -373,7 +440,7 @@ def open_new_discussion(driver, discuss_id):
     remove_discuss_element(driver)
 
     bs = BeautifulSoup(driver.page_source, 'html.parser')
-    
+   
     comment_spans = bs.find_all('span', class_='comment-date')
     for comment_span in comment_spans:
         title = comment_span.get('title')
@@ -388,13 +455,7 @@ def open_new_discussion(driver, discuss_id):
         script.extract()
 
     div_discuss = bs.find_all("div", {"class": "container outer-discussion-container"})[0]
-
-    div = bs.find('div', attrs={'class': 'container outer-discussion-container'})
-
-    if div_discuss and div:
-        div_discuss.clear()
-        div_discuss.append(div)
-    discussion_en = div.decode_contents() if div else ""
+    discussion_en = div_discuss.decode_contents()
 
     new_html = f"""
 <!DOCTYPE html><html lang="ko">
@@ -418,8 +479,7 @@ def open_new_discussion(driver, discuss_id):
     bs = BeautifulSoup(html, 'html.parser')
 
     pattern = r'</*font[^<]*>'
-    div_kr = bs.find("div", {"class": "container outer-discussion-container"})
-    discussion_kr = div_kr.decode_contents() if div_kr else ""
+    discussion_kr = bs.find("div", {"class": "container outer-discussion-container"}).decode_contents()
     discussion_kr = re.sub(pattern, '', discussion_kr)
 
     driver.close();
@@ -531,26 +591,6 @@ def save_html(driver, did, postdate, fname):
     discussion_contents = discussion.decode_contents() if discussion else ""
 
     bs = open_template_exam(postdate)
-
-    # title = bs.find("title")
-    # title.contents = [BeautifulSoup(page_title, 'html.parser')]
-
-    # header = bs.find("div", {"class": "discussion-list-header"})
-    # header.contents = [BeautifulSoup(header_contents, 'html.parser')]
-    # header = bs.find("div", {"class": "discussion-list-header-en"})
-    # header.contents = [BeautifulSoup(header_contents, 'html.parser')]
-
-    # container = bs.find("div", {"class": "discussion-header-container"})
-    # container.contents = [BeautifulSoup(container_contents, 'html.parser')]
-    # container = bs.find("div", {"class": "discussion-header-container-en"})
-    # container.contents = [BeautifulSoup(container_contents, 'html.parser')]
-
-    # discussion = bs.find("div", {"class": "discussion-page-comments-section"})
-    # discussion.contents = [BeautifulSoup(discussion_contents, 'html.parser')]
-    # discussion["data-discussion-question-id"] = did
-    # discussion = bs.find("div", {"class": "discussion-page-comments-section-en"})
-    # discussion.contents = [BeautifulSoup(discussion_contents, 'html.parser')]
-    # discussion["data-discussion-question-id"] = did
 
     # title
     title = bs.find("title")
@@ -813,14 +853,12 @@ def save_new_discuss(driver, fname, did, postdate, progress):
     discussion_contents = re.sub(pattern, '', discussion_contents)
     # pattern = r'<!-- Additional optional vote button: <a href=.+</a>-->'
     # container_contents = re.sub(pattern, '', container_contents)
-
     (d_en, d_kr) = open_new_discussion(driver, did)
 
     with open(fname, "r", encoding='utf-8') as file:
         html = file.read()
         file.close()
             
-    #print(html)
     bs = BeautifulSoup(html, 'html.parser')
     # meta 태그 찾기
     meta = bs.find("meta", attrs={"name": "refresh_date"})
@@ -833,14 +871,15 @@ def save_new_discuss(driver, fname, did, postdate, progress):
         )
         bs.head.append(new_meta)
 
-    container = bs.find("div", {"class": "discussion-header-container"})
-    progress_element = container.find("div", {"class": "progress"})
-    if progress_element: progress_element.contents = [BeautifulSoup(progress, 'html.parser')] 
+    if progress:
+        container = bs.find("div", {"class": "discussion-header-container"})
+        progress_element = container.find("div", {"class": "progress"})
+        if progress_element: progress_element.contents = [BeautifulSoup(progress, 'html.parser')] 
 
-    container = bs.find("div", {"class": "discussion-header-container-en"})
-    progress_element = container.find("div", {"class": "progress"})
-    if progress_element: progress_element.contents = [BeautifulSoup(progress, 'html.parser')] 
-    #progress_el.contents = [BeautifulSoup(progress, 'html.parser')] if progress_el else None
+        container = bs.find("div", {"class": "discussion-header-container-en"})
+        progress_element = container.find("div", {"class": "progress"})
+        if progress_element: progress_element.contents = [BeautifulSoup(progress, 'html.parser')] 
+        #progress_el.contents = [BeautifulSoup(progress, 'html.parser')] if progress_el else None
 
     discussion = bs.find("div", {"class": "discussion-page-comments-section"})
     if discussion:
@@ -952,11 +991,6 @@ def save_kr(driver, fname):
         for child in list(container_kr.children):
             container.append(child)
 
-    # progress = container_kr.find("div", {"class": "progress"})
-    # if progress and progress_contents is not None:
-    #     progress.contents = [BeautifulSoup(progress_contents, 'html.parser')]
-    # container.contents = [BeautifulSoup(container_kr.decode_contents(), 'html.parser')]
-
     # ===== discussion EN 영역 =====
     discussion_contents_en = bs_en.find("div", {"class": "discussion-page-comments-section"}).decode_contents()
     discussion_en = bs_en.find("div", {"class": "discussion-page-comments-section-en"})
@@ -1009,12 +1043,10 @@ def refresh_exam_file(driver, url, fname, did, data_id, postdate, basedate):
         driver.switch_to.window(driver.window_handles[0])
         if (driver.title != '404 - Page not found') & (len(driver.title) > 20):
             remove_exam_element(driver)
-
             bs = BeautifulSoup(driver.page_source, 'html.parser')
             container = bs.find("div", {"class": "discussion-header-container"})
             progress_element = container.find("div", {"class": "progress"})
             progress = progress_element.decode_contents() if progress_element else None
-
         save_new_discuss(driver, fname, did, postdate, progress)
 
     return new_data_id

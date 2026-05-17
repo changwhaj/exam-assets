@@ -170,7 +170,7 @@ def refresh_all_exam(discuss_file, qtitle, begin=0):
     write_Exam_list(df, "aaa.csv")
 
     driver = set_chrome_driver()
-    # driver.set_window_position(1600,10)
+    driver.set_window_position(1600,10)
 
     for i in range(len(df))[begin:]:
         qid = int(df.iloc[i]['ExamNo'])
@@ -211,16 +211,17 @@ if __name__ == "__main__":
 
     DISCUSS = 'AmazonDiscuss.txt'
 
-    AIP = 'Exam AWS Certified Generative AI Developer - Professional AIP-C01 topic 1'
-    refresh_all_exam('ExamList_AIP.csv', AIP, 0)         # OK 97
+    DOP2 = "Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1"
+    refresh_all_exam(DISCUSS, DOP2, 0)       # OK 429
+    # refresh_all_exam('ExamList_DOP2.csv', DOP2, 0)       # OK 429
+
     exit()
+
+    AIP = 'Exam AWS Certified Generative AI Developer - Professional AIP-C01 topic 1'
+    refresh_all_exam(DISCUSS, AIP, 0)         # OK 97
 
     AIF = 'Exam AWS Certified AI Practitioner AIF-C01 topic 1'
     refresh_all_exam(DISCUSS, AIF, 334)         # OK 422
-
-    DOP2 = "Exam AWS Certified DevOps Engineer - Professional DOP-C02 topic 1"
-    # refresh_all_exam(DISCUSS, DOP2, 0)       # OK 429
-    refresh_all_exam('ExamList_DOP2.csv', DOP2, 429)       # OK 429
 
     CLF2 = "Exam AWS Certified Cloud Practitioner CLF-C02 topic 1"
     refresh_all_exam(DISCUSS, CLF2, 719)        # OK 719

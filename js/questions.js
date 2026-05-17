@@ -22,7 +22,7 @@ var questionDetails = {
     'SOA3-Q': { qLength: 75, qDirectory: 'aws/SOA_C03' },
 
     // Professional 자격증
-    'DOP2-Q': { qLength: 390, qDirectory: 'aws/DOP_C02' },
+    'DOP2-Q': { qLength: 429, qDirectory: 'aws/DOP_C02' },
     // 'SAP-Q': { qLength: 1019, qDirectory: 'aws/SAP' },
     'SAP2-Q': { qLength: 529, qDirectory: 'aws/SAP_C02' },
     'AIP-Q': { qLength: 97, qDirectory: 'aws/AIP_C01' },
