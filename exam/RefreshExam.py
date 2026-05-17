@@ -1,7 +1,7 @@
 import time
 import pandas as pd
 from datetime import datetime, timedelta
-from random import *
+from random import randint, choice
 
 from ExamLibrary import refresh_exam_file, set_chrome_driver
 
@@ -105,6 +105,12 @@ def make_filename(qtitle, qid, dataid, tid=0):
             "qlength": 291,
             "first_id": 875171,
         },
+        {
+            "qtitle": "Exam AWS Certified Generative AI Developer - Professional AIP-C01 topic 1",
+            "prefname": "aws/AIP_C01/AIP-Q",
+            "qlength": 97,
+            "first_id": 984849,
+        },
     ]
 
     findexam = next((exam for exam in exams if exam["qtitle"] == qtitle), None)
@@ -164,12 +170,12 @@ def refresh_all_exam(discuss_file, qtitle, begin=0):
     write_Exam_list(df, "aaa.csv")
 
     driver = set_chrome_driver()
-    driver.set_window_position(1600,10)
+    # driver.set_window_position(1600,10)
 
     for i in range(len(df))[begin:]:
-        qid = int(df.at[i, 'ExamNo'])
-        did = int(df.at[i, 'DiscussNo'])
-        data_id = int(df.at[i, 'DataNo'])
+        qid = int(df.iloc[i]['ExamNo'])
+        did = int(df.iloc[i]['DiscussNo'])
+        data_id = int(df.iloc[i]['DataNo'])
         if did == 0:
             continue
 
@@ -197,12 +203,18 @@ def refresh_all_exam(discuss_file, qtitle, begin=0):
 
     print(f"Function duration: {formatted_duration}")
 
-    driver.close()
-    driver.quit()
+    if driver:
+        driver.close()
+        driver.quit()
 
 if __name__ == "__main__":
 
     DISCUSS = 'AmazonDiscuss.txt'
+
+    AIP = 'Exam AWS Certified Generative AI Developer - Professional AIP-C01 topic 1'
+    refresh_all_exam('ExamList_AIP.csv', AIP, 0)         # OK 97
+    exit()
+
     AIF = 'Exam AWS Certified AI Practitioner AIF-C01 topic 1'
     refresh_all_exam(DISCUSS, AIF, 334)         # OK 422
 

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta charset="utf-8"/>
+<title>Exam AWS Certified Generative AI Developer</title>
+<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="2026-04-30 18:17" name="refresh_date"/>
+</head>
+<body class="home2"><div style="position:relative;">
+<!-- bootstrap v4 css -->
+<link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<!-- font-awesome css -->
+<link defhref="../../../css/font-awesome.min.css" href="../../../css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<!-- slick css -->
+<link defhref="../../../css/slick.css" href="../../../css/slick.css" rel="stylesheet" type="text/css"/>
+<!-- rsmenu transitions CSS -->
+<link defhref="../../../css/rsmenu-transitions.css" href="../../../css/rsmenu-transitions.css" rel="stylesheet" type="text/css"/>
+<link href="../../../css/style.css?ver=1" rel="stylesheet" type="text/css"/>
+<link href="../../../css/color/default.css" rel="stylesheet" type="text/css"/>
+<!-- responsive css -->
+<link href="../../../css/responsive.css" rel="stylesheet" type="text/css"/>
+<link href="../../../css/forum.css" rel="stylesheet" type="text/css"/>
+<div class="sec-spacer pt-20">
+<div class="container">
+<div class="container action-row-container border-0 p-0 mb-2">
+<div class="container action-row clearfix d-flex">
+<i class="fa fm fa-language fa-2x mr-2"></i>
+<a class="btn show-english" href="javascript:void(0)">English</a>
+<a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
+<span class="pagination-container ml-auto">
+<span id="page-indicator"><strong></strong></span>
+<span class="pagination-nav ml-4">
+<a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
+<a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
+</span>
+</span>
+</div>
+</div>
+<script src="../../../js/questions.js"></script>
+<!-- BEGIN Discussions header / title -->
+<div class="row">
+<div class="col-12">
+<div class="discussion-list-header">
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified Generative AI Developer - Professional 시험 AIP-C01 주제 1 문제 84 토론</h1>
+</div>
+<div class="discussion-list-header-en" style="display: none;">
+<h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified Generative AI Developer - Professional AIP-C01 topic 1 question 84 discussion</h1>
+</div>
+</div>
+</div>
+<!-- END Discussions header / title -->
+<!-- BEGIN Discussion Content -->
+<div class="row">
+<div class="col-12">
+<div class="discussion-header-container">
+<!-- Question -->
+<div class="question-discussion-header">
+						
+							Amazon
+						 <a class="discussion-link" href="/exams/amazon/aws-certified-generative-ai-developer-professional-aip-c01/">AWS Certified Generative AI Developer - Professional AIP-C01 시험 문제</a>
+<div>
+							문제 번호: 84 <br/>
+							주제 번호: 1
+						</div>
+</div>
+<div class="question-body mt-3 pt-3 border-top" data-id="984932">
+<p class="card-text">
+							
+								한 스페셜티 커피 회사가 Amazon Bedrock 기반의 3단계 프롬프트 체인을 사용하여 개인 맞춤형 커피 로스팅 프로필을 생성하는 모바일 앱을 운영하고 있습니다. 이 프롬프트 체인은 사용자 입력을 구조화된 메타데이터로 변환하고, 관련 커피 로스팅 로그를 검색한 후, 각 고객에게 맞는 맞춤형 로스팅 추천을 생성합니다. <br/>여러 AWS 리전의 사용자들이 동일한 입력에 대해 일관성 없는 로스팅 추천, 검색 단계에서의 느린 추론 속도, 그리고 과도하게 높은 온도에서의 추출과 같은 안전하지 않은 추천을 보고하고 있습니다. 이 회사는 반복 입력에 대한 출력의 안정성을 개선해야 합니다. 또한 앱 성능과 앱 출력의 안전성도 향상시켜야 합니다. 개선된 솔루션은 동일한 입력에 대해 99.5%의 출력 일관성을 보장하고, 추론 지연 시간을 1초 미만으로 줄여야 합니다. 더불어 검증된 안전 제어 기능을 사용하여 안전하지 않거나 잘못된 추천을 차단해야 합니다. <br/>이러한 요구 사항을 충족하는 솔루션은 무엇일까요?
+							
+						</p>
+<div class="voted-answers-tally d-none">
+</div>
+<div class="question-choices-container">
+<ul>
+<li class="multi-choice-item correct-hidden">
+<span class="multi-choice-letter" data-choice-letter="A">
+													A.
+												</span> 
+											
+											프로비저닝된 처리량으로 Amazon Bedrock을 배포하여 추론 지연 시간을 안정화합니다. 의미론적 거부 규칙이 있는 Amazon Bedrock 가드레일을 적용하여 안전하지 않은 출력을 차단합니다. Amazon Bedrock 프롬프트 관리를 사용하여 승인 워크플로를 통해 프롬프트를 관리합니다.
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                가장 많은 표를 받은
+            </span></li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="B">
+													B.
+												</span> 
+											
+											Amazon Bedrock 에이전트를 사용하여 체이닝을 관리합니다. 모델 입력 및 출력을 Amazon CloudWatch Logs에 기록합니다. Amazon CloudWatch의 로그를 사용하여 프롬프트 버전에 대한 A/B 테스트를 수행합니다.
+										</li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="C">
+													C.
+												</span> 
+											
+											프롬프트 결과를 Amazon ElastiCache에 캐시합니다. AWS Lambda 함수를 사용하여 메타데이터를 사전 처리하고 엔드 투 엔드 지연 시간을 추적합니다. AWS X-Ray를 사용하여 성능 병목 현상을 식별하고 해결합니다.
+										</li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="D">
+													D.
+												</span> 
+											
+											Amazon Kendra를 사용하여 로스팅 로그 검색 정확도를 향상시키세요. 정규화된 프롬프트 메타데이터를 Amazon DynamoDB에 저장하세요. AWS Step Functions를 사용하여 다단계 프롬프트를 오케스트레이션하세요.
+										</li>
+</ul>
+</div>
+<a class="btn btn-primary reveal-solution" href="javascript:void(0)">제안된 답변 보기</a>
+<a class="btn btn-primary hide-solution d-none" href="javascript:void(0)">답변 숨기기</a>
+</div>
+<!-- / Question  -->
+</div>
+<div class="discussion-header-container-en" style="display: none;">
+<!-- Question -->
+<div class="question-discussion-header">
+						
+							Exam question from
+						
+						Amazon's
+						<a class="discussion-link" href="/exams/amazon/aws-certified-generative-ai-developer-professional-aip-c01/">AWS Certified Generative AI Developer - Professional AIP-C01</a>
+<div>
+							Question #: 84<br/>
+							Topic #: 1
+						</div>
+</div>
+<div class="question-body mt-3 pt-3 border-top" data-id="984932">
+<p class="card-text">
+							
+								A specialty coffee company has a mobile app that generates personalized coffee roast profiles by using Amazon Bedrock with a three-stage prompt chain. The prompt chain converts user inputs into structured metadata, retrieves relevant logs for coffee roasts, and generates a personalized roast recommendation for each customer.<br/>Users in multiple AWS Regions report inconsistent roast recommendations for identical inputs, slow inference during the retrieval step, and unsafe recommendations such as brewing at excessively high temperatures. The company must improve the stability of outputs for repeated inputs. The company must also improve app performance and the safety of the app's outputs. The updated solution must ensure 99.5% output consistency for identical inputs and achieve inference latency of less than 1 second. The solution must also block unsafe or hallucinated recommendations by using validated safety controls.<br/>Which solution will meet these requirements?
+							
+						</p>
+<div class="voted-answers-tally d-none">
+</div>
+<div class="question-choices-container">
+<ul>
+<li class="multi-choice-item correct-hidden">
+<span class="multi-choice-letter" data-choice-letter="A">
+													A.
+												</span>
+											
+											Deploy Amazon Bedrock with provisioned throughput to stabilize inference latency. Apply Amazon Bedrock guardrails that have semantic denial rules to block unsafe outputs. Use Amazon Bedrock Prompt Management to manage prompts by using approval workflows.
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                Most Voted
+            </span></li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="B">
+													B.
+												</span>
+											
+											Use Amazon Bedrock Agents to manage chaining. Log model inputs and outputs to Amazon CloudWatch Logs. Use logs from Amazon CloudWatch to perform A/B testing for prompt versions.
+										</li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="C">
+													C.
+												</span>
+											
+											Cache prompt results in Amazon ElastiCache. Use AWS Lambda functions to pre-process metadata and to trace end-to-end latency. Use AWS X-Ray to identify and remediate performance bottlenecks.
+										</li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="D">
+													D.
+												</span>
+											
+											Use Amazon Kendra to improve roast log retrieval accuracy. Store normalized prompt metadata within Amazon DynamoDB. Use AWS Step Functions to orchestrate multistep prompts.
+										</li>
+</ul>
+</div>
+<a class="btn btn-primary reveal-solution" href="javascript:void(0)">Show Suggested Answer</a>
+<a class="btn btn-primary hide-solution d-none" href="javascript:void(0)">Hide Answer</a>
+</div>
+<!-- / Question  -->
+</div>
+<div class="comments-wrapper">
+<a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
+<div class="discussion-page-comments-section" data-discussion-question-id="384293" style="display: none">
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
+<!-- discussion.html -->
+<!-- Discussion start -->
+<div class="container outer-discussion-container">
+<div class="row">
+<div class="comments-container p-2 w-100">
+<!-- New comment start -->
+<!-- New comment end -->
+<div class="discussion-container">
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1752537" id="comment-1752537">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				치부조1
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2026년 5월 1일 오전 3시 17분">2026년 5월 1일 오전 3시 17분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">정답은 A입니다. A는 Amazon Bedrock의 기본 기능으로 세 가지 요구 사항을 모두 직접적으로 충족하는 유일한 옵션이기 때문입니다. 이 세 가지 기능에는 일관되고 관리되는 프롬프트 실행을 위한 승인 워크플로가 포함된 프롬프트 관리, 1초 미만의 지연 시간을 보장하는 프로비저닝된 처리량, 그리고 안전하지 않거나 잘못된 권장 사항이 사용자에게 도달하기 전에 차단하는 검증되고 시행 가능한 안전 제어를 위한 의미론적 거부 규칙이 포함된 가드레일이 있습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
+			 
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1747848" id="comment-1747848">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				2d5eb96
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2026년 4월 16일 16시 46분">2026년 4월 16일 16시 46분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">필수 요건 중 하나인 안전 난간이 포함된 유일한 옵션입니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
+			 
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1721039" id="comment-1721039">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				이사
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2026년 3월 13일 오전 7시 5분">2026년 3월 13일 오전 7시 5분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">높은 일관성 + 낮은 지연 시간 + 안전 제어 + 프롬프트 체인 → 프로비저닝된 처리량 + Bedrock 가드레일(시맨틱 거부) + 프롬프트 관리 ✅ 1초 미만의 지연 시간 보장(프로비저닝된 처리량) ✅ 99.5% 일관성 달성(낮은 임시 + 프로비저닝 + 버전 관리) ✅ 안전하지 않은 출력 차단(시맨틱 거부 가드레일) ✅ 프롬프트 전문 관리(승인 워크플로) ✅ Bedrock 네이티브 기능 사용(간소화)</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
+			 
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1719375" id="comment-1719375">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				조르지오Gss
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2026년 3월 6일 오전 7시 16분">2026년 3월 6일 오전 7시 16분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">다른 옵션들은 오버헤드가 크거나 지연 시간을 증가시킵니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
+			 
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Discussion end -->
+</div>
+</div>
+<div class="comments-wrapper-en" style="display: none;">
+<a class="badge reveal-comment" href="javascript:void(0)">Show Comments</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">Hide Comments</a>
+<div class="discussion-page-comments-section-en" data-discussion-question-id="384293" style="display: none">
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">Comments</h4></div>
+<!-- discussion.html -->
+<!-- Discussion start -->
+<div class="container outer-discussion-container">
+<div class="row">
+<div class="comments-container p-2 w-100">
+<!-- New comment start -->
+<!-- New comment end -->
+<div class="discussion-container">
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1752537" id="comment-1752537">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				Chibuzo1
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2026-05-01 03:17">2026-05-01 03:17</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
+<div class="comment-content">The answer is A because it is the only option that directly addresses all three requirements with purpose-built Amazon Bedrock native capabilities: Prompt Management with approval workflows for consistent, governed prompt execution; Provisioned Throughput for guaranteed sub-second latency; and Guardrails with semantic denial rules for validated, enforceable safety controls that block unsafe or hallucinated recommendations before they reach users.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1747848" id="comment-1747848">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				2d5eb96
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2026-04-16 16:46">2026-04-16 16:46</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
+<div class="comment-content">Only option which include Guardrails which is one of the requirements</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1721039" id="comment-1721039">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				eesa
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2026-03-13 07:05">2026-03-13 07:05</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
+<div class="comment-content">High consistency + low latency + safety controls + prompt chain → Provisioned Throughput + Bedrock Guardrails (semantic denial) + Prompt Management
+✅ Garantiza latency &lt; 1s (provisioned throughput)
+✅ Logra 99.5% consistency (low temp + provisioned + versioning)
+✅ Bloquea unsafe outputs (guardrails con semantic denial)
+✅ Gestiona prompts profesionalmente (approval workflows)
+✅ Usa features nativas de Bedrock (menos complejidad)</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">2</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1719375" id="comment-1719375">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				GiorgioGss
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2026-03-06 07:16">2026-03-06 07:16</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
+<div class="comment-content">Other options are either overhead or add latency</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">2</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Discussion end -->
+</div>
+</div>
+</div>
+</div>
+<!-- END Discussion Content -->
+</div>
+</div>
+<!-- start scrollUp  -->
+<div class="d-print-none" id="scrollUp">
+<i class="fa fa-angle-up"></i>
+</div>
+<!-- Popper JS -->
+<script src="../../../js/popper.min.js"></script>
+<!-- jquery latest version -->
+<script src="../../../js/jquery.min.js"></script>
+<!-- bootstrap js -->
+<script src="../../../js/bootstrap.min.js"></script>
+<!-- slick.min js -->
+<script src="../../../js/slick.min.js"></script>
+<!-- wow js -->
+<script src="../../../js/wow.min.js"></script>
+<!-- main js -->
+<script src="../../../js/main.js"></script>
+<script type="text/javascript">
+    // Activate tooltips
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    })
+
+    $(document).ready(function () {
+        // Load stylesheets in a deferred way:
+        $('link[defhref]').each(function() {
+            $(this).attr('href', $(this).attr('defhref'));
+            //var src = $(this).attr('href');
+            //loadStyleSheet(src);
+        });
+
+        // Load mobile images in a deferred way:
+        var isMobile = window.matchMedia("only screen and (max-width: 490px)").matches;
+        if (isMobile) {
+            $('img[mobile-defsrc]').each(function () {
+                $(this).attr('src', $(this).attr('mobile-defsrc')).removeAttr('defsrc');
+            });
+        }
+
+        // Load images in a deferred way:
+        $('img[defsrc]').each(function() {
+            $(this).attr('src',$(this).attr('defsrc'));
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function (){
+        set_voting_configuration_by_question($(".question-body"));
+    });
+</script>
+<script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
+<script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
+</div>
+</body>
+</html>

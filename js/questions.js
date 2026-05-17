@@ -25,6 +25,7 @@ var questionDetails = {
     'DOP2-Q': { qLength: 390, qDirectory: 'aws/DOP_C02' },
     // 'SAP-Q': { qLength: 1019, qDirectory: 'aws/SAP' },
     'SAP2-Q': { qLength: 529, qDirectory: 'aws/SAP_C02' },
+    'AIP-Q': { qLength: 97, qDirectory: 'aws/AIP_C01' },
 
     // Specialty 자격증
     'MLS-Q': { qLength: 369, qDirectory: 'aws/MLS_C01' },

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta charset="utf-8"/>
+<title>Exam AWS Certified Generative AI Developer</title>
+<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="2026-03-18 8:23" name="refresh_date"/>
+</head>
+<body class="home2"><div style="position:relative;">
+<!-- bootstrap v4 css -->
+<link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<!-- font-awesome css -->
+<link defhref="../../../css/font-awesome.min.css" href="../../../css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<!-- slick css -->
+<link defhref="../../../css/slick.css" href="../../../css/slick.css" rel="stylesheet" type="text/css"/>
+<!-- rsmenu transitions CSS -->
+<link defhref="../../../css/rsmenu-transitions.css" href="../../../css/rsmenu-transitions.css" rel="stylesheet" type="text/css"/>
+<link href="../../../css/style.css?ver=1" rel="stylesheet" type="text/css"/>
+<link href="../../../css/color/default.css" rel="stylesheet" type="text/css"/>
+<!-- responsive css -->
+<link href="../../../css/responsive.css" rel="stylesheet" type="text/css"/>
+<link href="../../../css/forum.css" rel="stylesheet" type="text/css"/>
+<div class="sec-spacer pt-20">
+<div class="container">
+<div class="container action-row-container border-0 p-0 mb-2">
+<div class="container action-row clearfix d-flex">
+<i class="fa fm fa-language fa-2x mr-2"></i>
+<a class="btn show-english" href="javascript:void(0)">English</a>
+<a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
+<span class="pagination-container ml-auto">
+<span id="page-indicator"><strong></strong></span>
+<span class="pagination-nav ml-4">
+<a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
+<a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
+</span>
+</span>
+</div>
+</div>
+<script src="../../../js/questions.js"></script>
+<!-- BEGIN Discussions header / title -->
+<div class="row">
+<div class="col-12">
+<div class="discussion-list-header">
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified Generative AI Developer - Professional 시험 AIP-C01 주제 1 문제 25 해설</h1>
+</div>
+<div class="discussion-list-header-en" style="display: none;">
+<h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified Generative AI Developer - Professional AIP-C01 topic 1 question 25 discussion</h1>
+</div>
+</div>
+</div>
+<!-- END Discussions header / title -->
+<!-- BEGIN Discussion Content -->
+<div class="row">
+<div class="col-12">
+<div class="discussion-header-container">
+<!-- Question -->
+<div class="question-discussion-header">
+						
+							Amazon
+						 <a class="discussion-link" href="/exams/amazon/aws-certified-generative-ai-developer-professional-aip-c01/">AWS Certified Generative AI Developer - Professional AIP-C01 시험 문제</a>
+<div>
+							문제 번호: 25 <br/>
+							주제 번호: 1
+						</div>
+</div>
+<div class="question-body mt-3 pt-3 border-top" data-id="984873">
+<p class="card-text">
+							
+								금융 서비스 회사는 Amazon Bedrock을 통해 여러 기반 모델(FM)을 사용하여 생성형 AI(GenAI) 애플리케이션을 개발하고 있습니다. 민감한 금융 데이터를 사용하는 GenAI에 대한 새로운 규정을 준수하기 위해 토큰 관리 솔루션이 필요합니다. <br/>이 토큰 관리 솔루션은 애플리케이션이 모델별 토큰 제한에 근접할 경우 사전에 알림을 제공해야 합니다. 또한 분당 5,000건 이상의 요청을 처리하고 토큰 사용량 지표를 유지하여 사업부별 비용 배분을 효율적으로 관리해야 합니다. <br/>이러한 요구 사항을 충족하는 솔루션은 무엇일까요?
+							
+						</p>
+<div class="voted-answers-tally d-none">
+</div>
+<div class="question-choices-container">
+<ul>
+<li class="multi-choice-item correct-hidden">
+<span class="multi-choice-letter" data-choice-letter="A">
+													A.
+												</span> 
+											
+											AWS Lambda 함수에서 모델별 토크나이저를 개발합니다. Lambda 함수가 Amazon Bedrock에 요청을 보내기 전에 토큰 사용량을 예측하도록 구성합니다. Lambda 함수가 Amazon CloudWatch에 메트릭을 게시하고 요청량이 임계값에 근접할 때 알람을 트리거하도록 구성합니다. 비용 보고를 위해 자세한 토큰 사용량을 Amazon DynamoDB에 저장합니다.
+										</li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="B">
+													B.
+												</span> 
+											
+											토큰 할당량 정책을 사용하여 Amazon Bedrock Guardrails를 구현합니다. 거부된 요청에 대한 메트릭을 수집합니다. Amazon Bedrock Guardrails 메트릭을 기반으로 알림을 트리거하도록 Amazon EventBridge 규칙을 구성합니다. Amazon CloudWatch 대시보드를 사용하여 모델 전반의 토큰 사용 추세를 시각화합니다.
+										</li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="C">
+													C.
+												</span> 
+											
+											실패한 요청을 위한 Amazon SQS 데드 레터 큐를 배포합니다. 토큰 관련 오류를 분석하도록 AWS Lambda 함수를 구성합니다. Amazon CloudWatch Logs Insights를 사용하여 Amazon Bedrock API 응답의 오류 로그를 기반으로 토큰 사용 패턴에 대한 보고서를 생성합니다.
+										</li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="D">
+													D.
+												</span> 
+											
+											Amazon API Gateway를 사용하여 모든 Amazon Bedrock API 호출에 대한 프록시를 생성합니다. 미리 정의된 토큰 할당량을 사용하는 사용자 지정 사용량 플랜에 따라 요청 스로틀링을 구성합니다. 토큰 제한을 초과하는 요청을 거부하도록 API Gateway를 구성합니다.
+										</li>
+</ul>
+</div>
+<a class="btn btn-primary reveal-solution" href="javascript:void(0)">제안된 답변 보기</a>
+<a class="btn btn-primary hide-solution d-none" href="javascript:void(0)">답변 숨기기</a>
+</div>
+<!-- / Question  -->
+</div>
+<div class="discussion-header-container-en" style="display: none;">
+<!-- Question -->
+<div class="question-discussion-header">
+						
+							Exam question from
+						
+						Amazon's
+						<a class="discussion-link" href="/exams/amazon/aws-certified-generative-ai-developer-professional-aip-c01/">AWS Certified Generative AI Developer - Professional AIP-C01</a>
+<div>
+							Question #: 25<br/>
+							Topic #: 1
+						</div>
+</div>
+<div class="question-body mt-3 pt-3 border-top" data-id="984873">
+<p class="card-text">
+							
+								A financial services company uses multiple foundation models (FMs) through Amazon Bedrock for its generative AI (GenAI) applications. To comply with a new regulation for GenAI use with sensitive financial data, the company needs a token management solution.<br/>The token management solution must proactively alert when applications approach model-specific token limits. The solution must also process more than 5,000 requests each minute and maintain token usage metrics to allocate costs across business units.<br/>Which solution will meet these requirements?
+							
+						</p>
+<div class="voted-answers-tally d-none">
+</div>
+<div class="question-choices-container">
+<ul>
+<li class="multi-choice-item correct-hidden">
+<span class="multi-choice-letter" data-choice-letter="A">
+													A.
+												</span>
+											
+											Develop model-specific tokenizers in an AWS Lambda function. Configure the Lambda function to estimate token usage before sending requests to Amazon Bedrock. Configure the Lambda function to publish metrics to Amazon CloudWatch and trigger alarms when requests approach thresholds. Store detailed token usage in Amazon DynamoDB to report costs.
+										</li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="B">
+													B.
+												</span>
+											
+											Implement Amazon Bedrock Guardrails with token quota policies. Capture metrics on rejected requests. Configure Amazon EventBridge rules to trigger notifications based on Amazon Bedrock Guardrails metrics. Use Amazon CloudWatch dashboards to visualize token usage trends across models.
+										</li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="C">
+													C.
+												</span>
+											
+											Deploy an Amazon SQS dead-letter queue for failed requests. Configure an AWS Lambda function to analyze token-related failures. Use Amazon CloudWatch Logs Insights to generate reports on token usage patterns based on error logs from Amazon Bedrock API responses.
+										</li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="D">
+													D.
+												</span>
+											
+											Use Amazon API Gateway to create a proxy for all Amazon Bedrock API calls. Configure request throttling based on custom usage plans with predefined token quotas. Configure API Gateway to reject requests that will exceed token limits.
+										</li>
+</ul>
+</div>
+<a class="btn btn-primary reveal-solution" href="javascript:void(0)">Show Suggested Answer</a>
+<a class="btn btn-primary hide-solution d-none" href="javascript:void(0)">Hide Answer</a>
+</div>
+<!-- / Question  -->
+</div>
+<div class="comments-wrapper">
+<a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
+<div class="discussion-page-comments-section" data-discussion-question-id="384224" style="display: none">
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
+<!-- discussion.html -->
+<!-- Discussion start -->
+<div class="container outer-discussion-container">
+<div class="row">
+<div class="comments-container p-2 w-100">
+<!-- New comment start -->
+<!-- New comment end -->
+<div class="discussion-container">
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1722276" id="comment-1722276">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				아룬라브
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2026년 3월 18일 17시 23분">2026년 3월 18일 17시 23분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">B는 토큰 사용량을 모니터링하지 않고, C는 실패한 요청만 추적하며, D는 Amazon API Gateway가 토큰 사용량을 추적할 수 없습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
+			 
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1718846" id="comment-1718846">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				조르지오Gss
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2026년 3월 5일 오전 5시 35분">2026년 3월 5일 오전 5시 35분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>A</strong></span></div>
+<div class="comment-content">B - 가드레일에는 토큰 할당량 정책이 없습니다. C - SQS는 오류 발생 후 반응합니다. D - 스로틀링은 토큰 개수가 아닌 요청 개수를 기준으로 합니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
+			 
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1717806" id="comment-1717806">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				67bdb19
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2026년 2월 28일 23시 50분">2026년 2월 28일 23시 50분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>D</strong></span></div>
+<div class="comment-content">D. 최종 답변.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
+			 
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Discussion end -->
+</div>
+</div>
+<div class="comments-wrapper-en" style="display: none;">
+<a class="badge reveal-comment" href="javascript:void(0)">Show Comments</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">Hide Comments</a>
+<div class="discussion-page-comments-section-en" data-discussion-question-id="384224" style="display: none">
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">Comments</h4></div>
+<!-- discussion.html -->
+<!-- Discussion start -->
+<div class="container outer-discussion-container">
+<div class="row">
+<div class="comments-container p-2 w-100">
+<!-- New comment start -->
+<!-- New comment end -->
+<div class="discussion-container">
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1722276" id="comment-1722276">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				ArunRav
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2026-03-18 17:23">2026-03-18 17:23</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
+<div class="comment-content">B doesnt monitor token usage,C-only track failed reqeusts,D- amazon API Gateway cant track the token usage</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">2</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1718846" id="comment-1718846">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				GiorgioGss
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2026-03-05 05:35">2026-03-05 05:35</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>A</strong></span></div>
+<div class="comment-content">B - guardrails do not have token quota policies.
+C - sqs is reactive. after something is failing.
+D - throttling is based on request count, not token count</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">2</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1717806" id="comment-1717806">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				67bdb19
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2026-02-28 23:50">2026-02-28 23:50</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>D</strong></span></div>
+<div class="comment-content">D. Final answer.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Discussion end -->
+</div>
+</div>
+</div>
+</div>
+<!-- END Discussion Content -->
+</div>
+</div>
+<!-- start scrollUp  -->
+<div class="d-print-none" id="scrollUp">
+<i class="fa fa-angle-up"></i>
+</div>
+<!-- Popper JS -->
+<script src="../../../js/popper.min.js"></script>
+<!-- jquery latest version -->
+<script src="../../../js/jquery.min.js"></script>
+<!-- bootstrap js -->
+<script src="../../../js/bootstrap.min.js"></script>
+<!-- slick.min js -->
+<script src="../../../js/slick.min.js"></script>
+<!-- wow js -->
+<script src="../../../js/wow.min.js"></script>
+<!-- main js -->
+<script src="../../../js/main.js"></script>
+<script type="text/javascript">
+    // Activate tooltips
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    })
+
+    $(document).ready(function () {
+        // Load stylesheets in a deferred way:
+        $('link[defhref]').each(function() {
+            $(this).attr('href', $(this).attr('defhref'));
+            //var src = $(this).attr('href');
+            //loadStyleSheet(src);
+        });
+
+        // Load mobile images in a deferred way:
+        var isMobile = window.matchMedia("only screen and (max-width: 490px)").matches;
+        if (isMobile) {
+            $('img[mobile-defsrc]').each(function () {
+                $(this).attr('src', $(this).attr('mobile-defsrc')).removeAttr('defsrc');
+            });
+        }
+
+        // Load images in a deferred way:
+        $('img[defsrc]').each(function() {
+            $(this).attr('src',$(this).attr('defsrc'));
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function (){
+        set_voting_configuration_by_question($(".question-body"));
+    });
+</script>
+<script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
+<script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
+</div>
+</body>
+</html>

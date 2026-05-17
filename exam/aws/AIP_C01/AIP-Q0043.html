@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta charset="utf-8"/>
+<title>Exam AWS Certified Generative AI Developer</title>
+<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="2026-03-04 22:10" name="refresh_date"/>
+</head>
+<body class="home2"><div style="position:relative;">
+<!-- bootstrap v4 css -->
+<link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<!-- font-awesome css -->
+<link defhref="../../../css/font-awesome.min.css" href="../../../css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<!-- slick css -->
+<link defhref="../../../css/slick.css" href="../../../css/slick.css" rel="stylesheet" type="text/css"/>
+<!-- rsmenu transitions CSS -->
+<link defhref="../../../css/rsmenu-transitions.css" href="../../../css/rsmenu-transitions.css" rel="stylesheet" type="text/css"/>
+<link href="../../../css/style.css?ver=1" rel="stylesheet" type="text/css"/>
+<link href="../../../css/color/default.css" rel="stylesheet" type="text/css"/>
+<!-- responsive css -->
+<link href="../../../css/responsive.css" rel="stylesheet" type="text/css"/>
+<link href="../../../css/forum.css" rel="stylesheet" type="text/css"/>
+<div class="sec-spacer pt-20">
+<div class="container">
+<div class="container action-row-container border-0 p-0 mb-2">
+<div class="container action-row clearfix d-flex">
+<i class="fa fm fa-language fa-2x mr-2"></i>
+<a class="btn show-english" href="javascript:void(0)">English</a>
+<a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
+<span class="pagination-container ml-auto">
+<span id="page-indicator"><strong></strong></span>
+<span class="pagination-nav ml-4">
+<a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
+<a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
+</span>
+</span>
+</div>
+</div>
+<script src="../../../js/questions.js"></script>
+<!-- BEGIN Discussions header / title -->
+<div class="row">
+<div class="col-12">
+<div class="discussion-list-header">
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified Generative AI Developer - Professional 시험 AIP-C01 주제 1 문제 43 토론</h1>
+</div>
+<div class="discussion-list-header-en" style="display: none;">
+<h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified Generative AI Developer - Professional AIP-C01 topic 1 question 43 discussion</h1>
+</div>
+</div>
+</div>
+<!-- END Discussions header / title -->
+<!-- BEGIN Discussion Content -->
+<div class="row">
+<div class="col-12">
+<div class="discussion-header-container">
+<!-- Question -->
+<div class="question-discussion-header">
+						
+							Amazon
+						 <a class="discussion-link" href="/exams/amazon/aws-certified-generative-ai-developer-professional-aip-c01/">AWS Certified Generative AI Developer - Professional AIP-C01 시험 문제</a>
+<div>
+							문제 번호: 43 <br/>
+							주제 번호: 1
+						</div>
+</div>
+<div class="question-body mt-3 pt-3 border-top" data-id="984891">
+<p class="card-text">
+							
+								법률 연구 회사에서 Amazon Bedrock과 Amazon OpenSearch Service를 사용하는 검색 증강 생성(RAG) 애플리케이션을 운영하고 있습니다. 이 애플리케이션은 법령, 법원 판결, 사건 요약 등 1,500만 건의 법률 문서에 대한 768차원 벡터 임베딩을 저장합니다. <br/>현재 회사는 텍스트를 500개 토큰의 고정 길이 블록으로 분할하는 청킹 전략을 사용하고 있습니다. 이 전략은 법적 주장, 법원 의견, 법령 참조와 같이 문맥적으로 연결된 정보를 여러 개의 블록으로 분리하는 경우가 많습니다. 연구원들은 생성된 결과물에서 핵심적인 문맥이 누락되거나 오래된 법률 정보가 인용되는 경우가 빈번하다고 보고했습니다. <br/>최근 애플리케이션 로그를 분석한 결과 응답 시간이 40% 증가했으며, p95 지연 시간은 2초를 초과했습니다. 회사는 이 애플리케이션에 필요한 저장 공간이 1년 안에 90GB에서 360GB로 증가할 것으로 예상하고 있습니다. <br/>회사는 확장성 향상과 시스템 성능 개선을 위한 솔루션을 필요로 합니다. <br/>이러한 요구 사항을 충족하는 솔루션은 무엇일까요?
+							
+						</p>
+<div class="voted-answers-tally d-none">
+</div>
+<div class="question-choices-container">
+<ul>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="A">
+													A.
+												</span> 
+											
+											기존의 청킹 또는 전처리 전략을 변경하지 않고 임베딩 벡터의 차원을 768에서 4,096으로 증가시킵니다.
+										</li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="B">
+													B.
+												</span> 
+											
+											동적 검색을 Amazon S3에 저장된 정적인 사전 작성 요약으로 대체합니다. 컴퓨팅 요구량을 줄이고 예측 가능성을 높이기 위해 Amazon CloudFront를 사용하여 요약을 제공합니다.
+										</li>
+<li class="multi-choice-item correct-hidden">
+<span class="multi-choice-letter" data-choice-letter="C">
+													C.
+												</span> 
+											
+											고정된 토큰 제한 대신 완전한 법적 논거, 절 또는 섹션과 같은 의미론적 경계를 사용하도록 청킹 전략을 업데이트합니다. 새 청크 구조에 맞춰 벡터 임베딩을 다시 생성합니다.
+										</li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="D">
+													D.
+												</span> 
+											
+											OpenSearch 서비스에서 Amazon DynamoDB로 마이그레이션합니다. 법률 개념에 대한 더 빠른 검색을 위해 키워드 기반 인덱스를 구현합니다.
+										</li>
+</ul>
+</div>
+<a class="btn btn-primary reveal-solution" href="javascript:void(0)">제안된 답변 보기</a>
+<a class="btn btn-primary hide-solution d-none" href="javascript:void(0)">답변 숨기기</a>
+</div>
+<!-- / Question  -->
+</div>
+<div class="discussion-header-container-en" style="display: none;">
+<!-- Question -->
+<div class="question-discussion-header">
+						
+							Exam question from
+						
+						Amazon's
+						<a class="discussion-link" href="/exams/amazon/aws-certified-generative-ai-developer-professional-aip-c01/">AWS Certified Generative AI Developer - Professional AIP-C01</a>
+<div>
+							Question #: 43<br/>
+							Topic #: 1
+						</div>
+</div>
+<div class="question-body mt-3 pt-3 border-top" data-id="984891">
+<p class="card-text">
+							
+								A legal research company has a Retrieval Augmented Generation (RAG) application that uses Amazon Bedrock and Amazon OpenSearch Service. The application stores 768-dimensional vector embeddings for 15 million legal documents, including statutes, court rulings, and case summaries.<br/>The company's current chunking strategy segments text into fixed-length blocks of 500 tokens. The current chunking strategy often splits contextually linked information such as legal arguments, court opinions, or statute references across separate chunks. Researchers report that generated outputs frequently omit key context or cite outdated legal information.<br/>Recent application logs show a 40% increase in response times. The p95 latency metric exceeds 2 seconds. The company expects storage needs for the application to grow from 90 GB to 360 GB within a year.<br/>The company needs a solution to improve retrieval relevance and system performance at scale.<br/>Which solution will meet these requirements?
+							
+						</p>
+<div class="voted-answers-tally d-none">
+</div>
+<div class="question-choices-container">
+<ul>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="A">
+													A.
+												</span>
+											
+											Increase the embedding vector dimensionality from 768 to 4,096 without changing the existing chunking or pre-processing strategy.
+										</li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="B">
+													B.
+												</span>
+											
+											Replace dynamic retrieval with static, pre-written summaries that are stored in Amazon S3. Use Amazon CloudFront to serve the summaries to reduce compute demand and improve predictability.
+										</li>
+<li class="multi-choice-item correct-hidden">
+<span class="multi-choice-letter" data-choice-letter="C">
+													C.
+												</span>
+											
+											Update the chunking strategy to use semantic boundaries such as complete legal arguments, clauses, or sections rather than fixed token limits. Regenerate vector embeddings to align with the new chunk structure.
+										</li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="D">
+													D.
+												</span>
+											
+											Migrate from OpenSearch Service to Amazon DynamoDB. Implement keyword-based indexes to enable faster lookups for legal concepts.
+										</li>
+</ul>
+</div>
+<a class="btn btn-primary reveal-solution" href="javascript:void(0)">Show Suggested Answer</a>
+<a class="btn btn-primary hide-solution d-none" href="javascript:void(0)">Hide Answer</a>
+</div>
+<!-- / Question  -->
+</div>
+<div class="comments-wrapper">
+<a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
+<div class="discussion-page-comments-section" data-discussion-question-id="384269" style="display: none">
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
+<!-- discussion.html -->
+<!-- Discussion start -->
+<div class="container outer-discussion-container">
+<div class="row">
+<div class="comments-container p-2 w-100">
+<!-- New comment start -->
+<!-- New comment end -->
+<div class="discussion-container">
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1718890" id="comment-1718890">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				조르지오Gss
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2026년 3월 5일 오전 7시 10분">2026년 3월 5일 오전 7시 10분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
+<div class="comment-content">A - 차원 수가 많아질수록(4,096) 청킹 문제가 해결되지 않으면 컴퓨팅/저장 비용이 5배 증가하고, 벡터 크기가 커지면서 지연 시간이 악화됩니다. B - 정적 S3 요약은 RAG 기능을 완전히 배제합니다. D - DynamoDB에는 네이티브 벡터 검색 기능이 없습니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
+			 
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Discussion end -->
+</div>
+</div>
+<div class="comments-wrapper-en" style="display: none;">
+<a class="badge reveal-comment" href="javascript:void(0)">Show Comments</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">Hide Comments</a>
+<div class="discussion-page-comments-section-en" data-discussion-question-id="384269" style="display: none">
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">Comments</h4></div>
+<!-- discussion.html -->
+<!-- Discussion start -->
+<div class="container outer-discussion-container">
+<div class="row">
+<div class="comments-container p-2 w-100">
+<!-- New comment start -->
+<!-- New comment end -->
+<div class="discussion-container">
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1718890" id="comment-1718890">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				GiorgioGss
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2026-03-05 07:10">2026-03-05 07:10</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
+<div class="comment-content">A - Higher dimensionality (4,096) increases compute/storage costs 5x without fixing poor chunking; latency worsens due to larger vectors.
+B - Static S3 summaries eliminate RAG capabilities entirely
+D - DynamoDB lacks native vector search</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">2</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Discussion end -->
+</div>
+</div>
+</div>
+</div>
+<!-- END Discussion Content -->
+</div>
+</div>
+<!-- start scrollUp  -->
+<div class="d-print-none" id="scrollUp">
+<i class="fa fa-angle-up"></i>
+</div>
+<!-- Popper JS -->
+<script src="../../../js/popper.min.js"></script>
+<!-- jquery latest version -->
+<script src="../../../js/jquery.min.js"></script>
+<!-- bootstrap js -->
+<script src="../../../js/bootstrap.min.js"></script>
+<!-- slick.min js -->
+<script src="../../../js/slick.min.js"></script>
+<!-- wow js -->
+<script src="../../../js/wow.min.js"></script>
+<!-- main js -->
+<script src="../../../js/main.js"></script>
+<script type="text/javascript">
+    // Activate tooltips
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    })
+
+    $(document).ready(function () {
+        // Load stylesheets in a deferred way:
+        $('link[defhref]').each(function() {
+            $(this).attr('href', $(this).attr('defhref'));
+            //var src = $(this).attr('href');
+            //loadStyleSheet(src);
+        });
+
+        // Load mobile images in a deferred way:
+        var isMobile = window.matchMedia("only screen and (max-width: 490px)").matches;
+        if (isMobile) {
+            $('img[mobile-defsrc]').each(function () {
+                $(this).attr('src', $(this).attr('mobile-defsrc')).removeAttr('defsrc');
+            });
+        }
+
+        // Load images in a deferred way:
+        $('img[defsrc]').each(function() {
+            $(this).attr('src',$(this).attr('defsrc'));
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function (){
+        set_voting_configuration_by_question($(".question-body"));
+    });
+</script>
+<script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
+<script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
+</div>
+</body>
+</html>

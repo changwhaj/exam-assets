@@ -23,7 +23,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 from bs4 import BeautifulSoup
 
-from random import *
+from random import randint
 from pathlib import Path
 from dateutil import parser
 
@@ -91,33 +91,48 @@ def send_key_to_background_window(window_title, key):
     ctypes.windll.user32.PostMessageW(target_window, WM_KEYUP, vk_code, 0)
 
 def set_translate_to_kr(driver):
-    while True:
-        actionChains = ActionChains(driver)
-        actionChains.context_click().perform()
-        
-        time.sleep(1)
-        send_key_to_background_window(driver.title, "T")
-        # pyautogui.hotkey('T')
-        time.sleep(1)
+    max_retries = 5
+    for attempt in range(max_retries):
+        try:
+            time.sleep(1)
+            # 요소가 클릭 가능할 때까지 대기
+            WebDriverWait(driver, 10).until(
+                EC.visibility_of_element_located((By.TAG_NAME, "body"))
+            )
+            
+            actionChains = ActionChains(driver)
+            actionChains.context_click().perform()
+            
+            time.sleep(1)
+            send_key_to_background_window(driver.title, "T")
+            # pyautogui.hotkey('T')
+            time.sleep(1)
 
-        bs = BeautifulSoup(driver.page_source, 'html.parser')
+            bs = BeautifulSoup(driver.page_source, 'html.parser')
 
-        pattern = r'>답변 숨기기<'
-        match = re.search(pattern, str(bs))
-        if match:
-            pyautogui.hotkey('ESC')
-            return
-        
-        pattern = r'>댓글</font'
-        match = re.search(pattern, str(bs))
-        if match:
-            pyautogui.hotkey('ESC')
-            return
-        # print(bs)
-        if platform.system() == "Windows":
-            import winsound
-            winsound.PlaySound("SystemExclamation", winsound.SND_ALIAS)
-        ###time.sleep(1)
+            pattern = r'>답변 숨기기<'
+            match = re.search(pattern, str(bs))
+            if match:
+                pyautogui.hotkey('ESC')
+                return
+            
+            pattern = r'>댓글</font'
+            match = re.search(pattern, str(bs))
+            if match:
+                pyautogui.hotkey('ESC')
+                return
+            # print(bs)
+            if platform.system() == "Windows":
+                import winsound
+                winsound.PlaySound("SystemExclamation", winsound.SND_ALIAS)
+            ###time.sleep(1)
+            break
+        except Exception as e:
+            print(f"Translate retry {attempt+1}/{max_retries}: {str(e)}")
+            if attempt == max_retries - 1:
+                print(f"Failed to translate after {max_retries} attempts")
+                break
+            time.sleep(2)
         
         # try:
         #     driver.switch_to.window(driver.window_handles[1])
@@ -132,8 +147,15 @@ def scroll_page(driver):
     current_scroll_position = driver.execute_script("return window.scrollY;")
 
     while True:
-        # Send the down arrow key to scroll down the page
-        driver.find_element(By.TAG_NAME, "body").send_keys(Keys.PAGE_DOWN)
+        try:
+            # Send the down arrow key to scroll down the page
+            body = WebDriverWait(driver, 5).until(
+                EC.presence_of_element_located((By.TAG_NAME, "body"))
+            )
+            body.send_keys(Keys.PAGE_DOWN)
+        except Exception as e:
+            print(f"Scroll error: {e}")
+            break
         
         # Wait for the specified interval
         time.sleep(scroll_interval)
@@ -166,12 +188,14 @@ def open_exam(driver, discuss_url):
     exam_url = 'https://www.examtopics.com' + discuss_url
 
     driver.get(exam_url)
-    sleep_random_sec(1)
+    sleep_random_sec(2)
 
     bs = BeautifulSoup(driver.page_source, 'html.parser')
     div_discuss = bs.find_all("div", {"class": "container outer-discussion-container"})
-    while (len(div_discuss) <= 0):
-        print("Waiting...")
+    max_wait = 10
+    wait_count = 0
+    while (len(div_discuss) <= 0) and wait_count < max_wait:
+        print("Waiting for page load...")
         bs = BeautifulSoup(driver.page_source, 'html.parser')
         div_discuss = bs.find_all("div", {"class": "container outer-discussion-container"})
         if (driver.title == 'Error 404 (Not Found)!!1'):
@@ -181,6 +205,7 @@ def open_exam(driver, discuss_url):
             import winsound
             winsound.PlaySound("SystemExclamation", winsound.SND_ALIAS)
         time.sleep(1)
+        wait_count += 1
     
     return
 
@@ -199,7 +224,8 @@ def open_template_exam(postdate):
             "meta",
             attrs={"name": "refresh_date", "content": postdate}
         )
-        bs.head.append(new_meta)
+        if bs.head:
+            bs.head.append(new_meta)
 
     return bs
 
@@ -300,8 +326,9 @@ def open_discuss(driver, discuss_id):
         title = comment_span.get('title')
         if title:
             kst_time = parser.parse(str(title).replace("midnight", "12:00 a.m.").replace("noon", "12:00 p.m.")) + timedelta(hours=9)
-            comment_span.string = kst_time.strftime("%Y-%m-%d %H:%M")
-            comment_span["title"] = comment_span.string
+            time_str = kst_time.strftime("%Y-%m-%d %H:%M")
+            comment_span.string = time_str
+            comment_span["title"] = time_str
 
     div = bs.find('div', attrs={'class': 'container outer-discussion-container'})
     
@@ -311,10 +338,13 @@ def replace_duscuss(driver, discuss_id):
     bs = BeautifulSoup(driver.page_source, 'html.parser')
     loadfull = bs.find_all("a", {"class": "load-full-discussion-button ml-3"})
     if (len(loadfull) > 0):
-        div_discuss = bs.find_all("div", {"class": "container outer-discussion-container"})[0]
-        div_full_discuss = open_discuss(driver, discuss_id)
-        if ((len(div_discuss) > 0) & (len(div_full_discuss) > 0)):
-            div_discuss.contents = [BeautifulSoup(div_full_discuss.decode_contents(), 'html.parser')]
+        div_discuss_list = bs.find_all("div", {"class": "container outer-discussion-container"})
+        if len(div_discuss_list) > 0:
+            div_discuss = div_discuss_list[0]
+            div_full_discuss = open_discuss(driver, discuss_id)
+            if div_discuss and div_full_discuss:
+                div_discuss.clear()
+                div_discuss.append(div_full_discuss)
     else:
         remove_discuss_element(driver)
         bs = BeautifulSoup(driver.page_source, 'html.parser')
@@ -323,8 +353,9 @@ def replace_duscuss(driver, discuss_id):
             title = comment_span.get('title')
             if title:
                 kst_time = parser.parse(str(title).replace("midnight", "12:00 a.m.").replace("noon", "12:00 p.m.")) + timedelta(hours=9)
-                comment_span.string = kst_time.strftime("%Y-%m-%d %H:%M")
-                comment_span["title"] = comment_span.string
+                time_str = kst_time.strftime("%Y-%m-%d %H:%M")
+                comment_span.string = time_str
+                comment_span["title"] = time_str
 
     return bs
 
@@ -348,8 +379,9 @@ def open_new_discussion(driver, discuss_id):
         title = comment_span.get('title')
         if title:
             kst_time = parser.parse(str(title).replace("midnight", "12:00 a.m.").replace("noon", "12:00 p.m.")) + timedelta(hours=9)
-            comment_span.string = kst_time.strftime("%Y-%m-%d %H:%M")
-            comment_span["title"] = comment_span.string
+            time_str = kst_time.strftime("%Y-%m-%d %H:%M")
+            comment_span.string = time_str
+            comment_span["title"] = time_str
 
     # 모든 <script> 태그 제거
     for script in bs.find_all("script"):
@@ -359,8 +391,10 @@ def open_new_discussion(driver, discuss_id):
 
     div = bs.find('div', attrs={'class': 'container outer-discussion-container'})
 
-    div_discuss.contents = [BeautifulSoup(div.decode_contents(), 'html.parser')]
-    discussion_en = div.decode_contents()
+    if div_discuss and div:
+        div_discuss.clear()
+        div_discuss.append(div)
+    discussion_en = div.decode_contents() if div else ""
 
     new_html = f"""
 <!DOCTYPE html><html lang="ko">
@@ -384,7 +418,8 @@ def open_new_discussion(driver, discuss_id):
     bs = BeautifulSoup(html, 'html.parser')
 
     pattern = r'</*font[^<]*>'
-    discussion_kr = bs.find("div", {"class": "container outer-discussion-container"}).decode_contents()
+    div_kr = bs.find("div", {"class": "container outer-discussion-container"})
+    discussion_kr = div_kr.decode_contents() if div_kr else ""
     discussion_kr = re.sub(pattern, '', discussion_kr)
 
     driver.close();
@@ -423,7 +458,8 @@ def set_question_postdate(fname, postdate):
                     "meta",
                     attrs={"name": "refresh_date", "content": postdate}
                 )
-                bs.head.append(new_meta)
+                if bs.head:
+                    bs.head.append(new_meta)
 
         with open(fname, "w", encoding='utf-8') as file:
             file.write(str(bs))    
@@ -466,7 +502,8 @@ def save_html(driver, did, postdate, fname):
     bs = replace_duscuss(driver, did)
 
     page_title = driver.title.split(' - ')[0]
-    question_data_id = int(bs.find("div", {"class": "question-body mt-3 pt-3 border-top"})["data-id"])
+    q_div = bs.find("div", {"class": "question-body mt-3 pt-3 border-top"})
+    question_data_id = int(q_div["data-id"]) if q_div and q_div.get("data-id") else 0
     file_data_id = get_question_data_id(fname)
     if (file_data_id > 0) & (question_data_id > file_data_id):
         new_fname = fname[:-5] + '-1.html'
@@ -482,13 +519,16 @@ def save_html(driver, did, postdate, fname):
 #    while not check_for_overwrite(fname, question_data_id):
 #        fname = fname[:-5] + '-1.html'
 
-    header_contents = bs.find("div", {"class": "discussion-list-header"}).decode_contents()
-    container_contents = bs.find("div", {"class": "discussion-header-container"}).decode_contents()
+    header_el = bs.find("div", {"class": "discussion-list-header"})
+    header_contents = header_el.decode_contents() if header_el else ""
+    container_el = bs.find("div", {"class": "discussion-header-container"})
+    container_contents = container_el.decode_contents() if container_el else ""
     discussion = bs.find("div", {"class": "discussion-page-comments-section"})
     # 모든 <script> 태그 제거
-    for script in discussion.find_all("script"):
-        script.extract()
-    discussion_contents = discussion.decode_contents()
+    if discussion:
+        for script in discussion.find_all("script"):
+            script.extract()
+    discussion_contents = discussion.decode_contents() if discussion else ""
 
     bs = open_template_exam(postdate)
 
@@ -514,40 +554,59 @@ def save_html(driver, did, postdate, fname):
 
     # title
     title = bs.find("title")
-    title.clear()
-    title.append(page_title)
+    if title:
+        title.clear()
+        title.append(page_title)
 
     # header KR
     header = bs.find("div", {"class": "discussion-list-header"})
-    header.clear()
-    header.append(BeautifulSoup(header_contents, 'html.parser'))
+    if header:
+        header.clear()
+        header_soup = BeautifulSoup(header_contents, 'html.parser')
+        for child in list(header_soup.children):
+            header.append(child)
 
     # header EN
     header_en = bs.find("div", {"class": "discussion-list-header-en"})
-    header_en.clear()
-    header_en.append(BeautifulSoup(header_contents, 'html.parser'))
+    if header_en:
+        header_en.clear()
+        header_soup = BeautifulSoup(header_contents, 'html.parser')
+        for child in list(header_soup.children):
+            header_en.append(child)
 
     # container KR
     container = bs.find("div", {"class": "discussion-header-container"})
-    container.clear()
-    container.append(BeautifulSoup(container_contents, 'html.parser'))
+    if container:
+        container.clear()
+        container_soup = BeautifulSoup(container_contents, 'html.parser')
+        for child in list(container_soup.children):
+            container.append(child)
 
     # container EN
     container_en = bs.find("div", {"class": "discussion-header-container-en"})
-    container_en.clear()
-    container_en.append(BeautifulSoup(container_contents, 'html.parser'))
+    if container_en:
+        container_en.clear()
+        container_soup = BeautifulSoup(container_contents, 'html.parser')
+        for child in list(container_soup.children):
+            container_en.append(child)
 
     # discussion KR
     discussion = bs.find("div", {"class": "discussion-page-comments-section"})
-    discussion.clear()
-    discussion.append(BeautifulSoup(discussion_contents, 'html.parser'))
-    discussion["data-discussion-question-id"] = did
+    if discussion:
+        discussion.clear()
+        discussion_soup = BeautifulSoup(discussion_contents, 'html.parser')
+        for child in list(discussion_soup.children):
+            discussion.append(child)
+        discussion["data-discussion-question-id"] = did
 
     # discussion EN
     discussion_en = bs.find("div", {"class": "discussion-page-comments-section-en"})
-    discussion_en.clear()
-    discussion_en.append(BeautifulSoup(discussion_contents, 'html.parser'))
-    discussion_en["data-discussion-question-id"] = did
+    if discussion_en:
+        discussion_en.clear()
+        discussion_soup = BeautifulSoup(discussion_contents, 'html.parser')
+        for child in list(discussion_soup.children):
+            discussion_en.append(child)
+        discussion_en["data-discussion-question-id"] = did
 
     dir = os.path.dirname(fname)
     if not os.path.exists(dir):
@@ -657,6 +716,12 @@ def make_filename(qtitle, qid, dataid, tid=0):
             "qlength": 272,
             "first_id": 875171,
         },
+        {
+            "qtitle": "Exam AWS Certified Generative AI Developer - Professional AIP-C01 topic 1",
+            "prefname": "aws/AIP_C01/AIP-Q",
+            "qlength": 97,
+            "first_id": 984849,
+        },
     ]
 
     findexam = next((exam for exam in exams if exam["qtitle"] == qtitle), None)
@@ -702,16 +767,18 @@ def translate_discuss_to_kr(driver, fname, discuss_id):
         url = f'file:///E:/MyProjects/ExamTopics/exam-assets/exam/{fname}'
     elif platform.system() == "Darwin":
         url = f'file:///Users/changwhaj/MyProjects/ExamTopics/exam-assets/exam/{fname}'
+    else:
+        url = f'file://{fname}'
     # url = f'http://127.0.0.1:5500/exam-assets/exam/{fname}'
     driver.get(url)
     driver.switch_to.window(driver.window_handles[0])
 
     div_full_discuss = open_discuss(driver, discuss_id)
 
-    driver.find_element(By.CSS_SELECTOR, 'a.btn.btn-primary.reveal-solution').click()
+    # driver.find_element(By.CSS_SELECTOR, 'a.btn.btn-primary.reveal-solution').click()
     driver.find_element(By.CSS_SELECTOR, 'a.badge.reveal-comment').click()
     set_translate_to_kr(driver)
-    driver.find_element(By.CSS_SELECTOR, 'a.btn.btn-primary.hide-solution').click()
+    # driver.find_element(By.CSS_SELECTOR, 'a.btn.btn-primary.hide-solution').click()
     scroll_page(driver)
     try:
         driver.find_element(By.CSS_SELECTOR, '#scrollUp').click()
@@ -735,11 +802,14 @@ def save_new_discuss(driver, fname, did, postdate, progress):
 
     bs = BeautifulSoup(driver.page_source, 'html.parser')
     pattern = r'</*font[^<]*>'
-    header_contents = bs.find("div", {"class": "discussion-list-header"}).decode_contents()
+    header_el = bs.find("div", {"class": "discussion-list-header"})
+    header_contents = header_el.decode_contents() if header_el else ""
     header_contents = re.sub(pattern, '', header_contents)
-    container_contents = bs.find("div", {"class": "discussion-header-container"}).decode_contents()
+    container_el = bs.find("div", {"class": "discussion-header-container"})
+    container_contents = container_el.decode_contents() if container_el else ""
     container_contents = re.sub(pattern, '', container_contents)
-    discussion_contents = bs.find("div", {"class": "discussion-page-comments-section"}).decode_contents()
+    discussion_el = bs.find("div", {"class": "discussion-page-comments-section"})
+    discussion_contents = discussion_el.decode_contents() if discussion_el else ""
     discussion_contents = re.sub(pattern, '', discussion_contents)
     # pattern = r'<!-- Additional optional vote button: <a href=.+</a>-->'
     # container_contents = re.sub(pattern, '', container_contents)
@@ -764,21 +834,31 @@ def save_new_discuss(driver, fname, did, postdate, progress):
         bs.head.append(new_meta)
 
     container = bs.find("div", {"class": "discussion-header-container"})
-    progress_el = container.find("div", {"class": "progress"})
-    if progress_el: progress_el.contents = [BeautifulSoup(progress, 'html.parser')] 
+    progress_element = container.find("div", {"class": "progress"})
+    if progress_element: progress_element.contents = [BeautifulSoup(progress, 'html.parser')] 
 
     container = bs.find("div", {"class": "discussion-header-container-en"})
-    progress_el = container.find("div", {"class": "progress"})
-    if progress_el: progress_el.contents = [BeautifulSoup(progress, 'html.parser')] 
+    progress_element = container.find("div", {"class": "progress"})
+    if progress_element: progress_element.contents = [BeautifulSoup(progress, 'html.parser')] 
     #progress_el.contents = [BeautifulSoup(progress, 'html.parser')] if progress_el else None
 
     discussion = bs.find("div", {"class": "discussion-page-comments-section"})
-    diss_con = discussion.find("div", {"class": "container outer-discussion-container"})
-    diss_con.contents = [BeautifulSoup(d_kr, 'html.parser')]
+    if discussion:
+        diss_con = discussion.find("div", {"class": "container outer-discussion-container"})
+        if diss_con:
+            diss_con.clear()
+            d_kr_soup = BeautifulSoup(d_kr, 'html.parser')
+            for child in list(d_kr_soup.children):
+                diss_con.append(child)
 
     discussion = bs.find("div", {"class": "discussion-page-comments-section-en"})
-    diss_con = discussion.find("div", {"class": "container outer-discussion-container"})
-    diss_con.contents = [BeautifulSoup(d_en, 'html.parser')]
+    if discussion:
+        diss_con = discussion.find("div", {"class": "container outer-discussion-container"})
+        if diss_con:
+            diss_con.clear()
+            d_en_soup = BeautifulSoup(d_en, 'html.parser')
+            for child in list(d_en_soup.children):
+                diss_con.append(child)
 
     with open(fname, "w", encoding='utf-8') as file:
         file.write(str(bs))
@@ -788,14 +868,16 @@ def translate_page_to_kr(driver, fname):
         url = f'file:///E:/MyProjects/ExamTopics/exam-assets/exam/{fname}'
     elif platform.system() == "Darwin":
         url = f'file:///Users/changwhaj/MyProjects/ExamTopics/exam-assets/exam/{fname}'
+    else:
+        url = f'file://{fname}'
     # url = f'http://127.0.0.1:5500/exam-assets/exam/{fname}'
     driver.get(url)
     driver.switch_to.window(driver.window_handles[0])
 
-    driver.find_element(By.CSS_SELECTOR, 'a.btn.btn-primary.reveal-solution').click()
+    # driver.find_element(By.CSS_SELECTOR, 'a.btn.btn-primary.reveal-solution').click()
     driver.find_element(By.CSS_SELECTOR, 'a.badge.reveal-comment').click()
     set_translate_to_kr(driver)
-    driver.find_element(By.CSS_SELECTOR, 'a.btn.btn-primary.hide-solution').click()
+    # driver.find_element(By.CSS_SELECTOR, 'a.btn.btn-primary.hide-solution').click()
     scroll_page(driver)
     try:
         driver.find_element(By.CSS_SELECTOR, '#scrollUp').click()
@@ -818,11 +900,14 @@ def translate_page_to_kr(driver, fname):
 def save_kr(driver, fname):
     bs = BeautifulSoup(driver.page_source, 'html.parser')
     pattern = r'</*font[^<]*>'
-    header_contents = bs.find("div", {"class": "discussion-list-header"}).decode_contents()
+    header_el = bs.find("div", {"class": "discussion-list-header"})
+    header_contents = header_el.decode_contents() if header_el else ""
     header_contents = re.sub(pattern, '', header_contents)
-    container_contents = bs.find("div", {"class": "discussion-header-container"}).decode_contents()
+    container_el = bs.find("div", {"class": "discussion-header-container"})
+    container_contents = container_el.decode_contents() if container_el else ""
     container_contents = re.sub(pattern, '', container_contents)
-    discussion_contents = bs.find("div", {"class": "discussion-page-comments-section"}).decode_contents()
+    discussion_el = bs.find("div", {"class": "discussion-page-comments-section"})
+    discussion_contents = discussion_el.decode_contents() if discussion_el else ""
     discussion_contents = re.sub(pattern, '', discussion_contents)
     # pattern = r'<!-- Additional optional vote button: <a href=.+</a>-->'
     # container_contents = re.sub(pattern, '', container_contents)
@@ -834,18 +919,21 @@ def save_kr(driver, fname):
     #print(html)
     bs_en = BeautifulSoup(html, 'html.parser')
 
-    # header = bs_en.find("div", {"class": "discussion-list-header"})
-    # header.contents = [BeautifulSoup(header_contents, 'html.parser')]
-
     # header KR
     header = bs_en.find("div", {"class": "discussion-list-header"})
-    header.clear()
-    header.append(BeautifulSoup(header_contents, 'html.parser'))
+    if header:
+        header.clear()
+        header_soup = BeautifulSoup(header_contents, 'html.parser')
+        for child in list(header_soup.children):
+            header.append(child)
 
     # ===== discussion-header-container =====
     container = bs_en.find("div", {"class": "discussion-header-container"})
-    progress_element = container.find("div", {"class": "progress"})
-    progress_contents = progress_element.decode_contents() if progress_element else None
+    if container:
+        progress_element = container.find("div", {"class": "progress"})
+        progress_contents = progress_element.decode_contents() if progress_element else None
+    else:
+        progress_contents = None
  
     # container_contents (KR 버전) → 새로운 soup 객체
     container_kr = BeautifulSoup(container_contents, 'html.parser')
@@ -854,16 +942,15 @@ def save_kr(driver, fname):
     progress = container_kr.find("div", {"class": "progress"})
     if progress and progress_contents is not None:
         progress.clear()
-        progress.append(BeautifulSoup(progress_contents, 'html.parser'))
-        # progress_fragment = BeautifulSoup(progress_contents, 'html.parser')
-        # for child in progress_fragment.contents:
-        #     progress.append(child)
+        progress_soup = BeautifulSoup(progress_contents, 'html.parser')
+        for child in list(progress_soup.children):
+            progress.append(child)
 
     # 기존 container 내부 제거 후 새 내용 삽입
-    container.clear()
-    container.append(BeautifulSoup(container_kr.decode_contents(), 'html.parser'))
-    # for child in container_kr.contents:
-    #     container.append(child)
+    if container:
+        container.clear()
+        for child in list(container_kr.children):
+            container.append(child)
 
     # progress = container_kr.find("div", {"class": "progress"})
     # if progress and progress_contents is not None:
@@ -885,14 +972,11 @@ def save_kr(driver, fname):
 
     # ===== discussion KR 영역 =====
     discussion = bs_en.find("div", {"class": "discussion-page-comments-section"})
-    discussion.clear()
-    discussion.append(BeautifulSoup(discussion_contents, 'html.parser'))
-    # discussion_fragment = BeautifulSoup(discussion_contents, 'html.parser')
-    # for child in discussion_fragment.contents:
-    #     discussion.append(child)
-
-    # discussion = bs_en.find("div", {"class": "discussion-page-comments-section"})
-    # discussion.contents = [BeautifulSoup(discussion_contents, 'html.parser')]
+    if discussion:
+        discussion.clear()
+        discussion_soup = BeautifulSoup(discussion_contents, 'html.parser')
+        for child in list(discussion_soup.children):
+            discussion.append(child)
 
     fname_kr = fname[:-5] + '-KR.html'
     fname_kr = '/'.join(fname_kr.split('/')[:-1]) + '/kr/' + fname_kr.split('/')[-1]
@@ -1050,26 +1134,32 @@ def refresh_all_exam_answer(exam_list_file, exam_answer_file, qtitle):
             bs = BeautifulSoup(html, 'html.parser')
 
             container = bs.find("div", {"class": "discussion-header-container"})
-            match = re.match(r"^([A-Za-z]+)", container.find("div", {"class": "vote-bar"}).string)
-            vote = match.group(1) if match else ""
-            answer = container.find("span", {"class": "correct-answer"})
-            description = container.find("span", {"class": "answer-description"})
+            if container:
+                vote_bar = container.find("div", {"class": "vote-bar"})
+                vote_str = vote_bar.string if vote_bar and vote_bar.string else ""
+                match = re.match(r"^([A-Za-z]+)", str(vote_str))
+                vote = match.group(1) if match else ""
+                answer = container.find("span", {"class": "correct-answer"})
+                description = container.find("span", {"class": "answer-description"})
 
-            if answer:
-                if answer.string != df_answer.at[qid-1, 'Answer']:
-                    answer.string = f"{answer.string} ==> {df_answer.at[qid-1, 'Answer']}"
-                elif answer.string != vote:
-                    answer.string = f"{answer.string} @@@ {vote}"
-                else:
-                    answer.string = f"{answer.string} (OK)"
+                if answer and answer.string:
+                    if answer.string != df_answer.at[qid-1, 'Answer']:
+                        answer.string = f"{answer.string} ==> {df_answer.at[qid-1, 'Answer']}"
+                    elif answer.string != vote:
+                        answer.string = f"{answer.string} @@@ {vote}"
+                    else:
+                        answer.string = f"{answer.string} (OK)"
 
-            if description:
-                # description.string = '<div class="col-12 pt-2 pb-2">' + df_answer.at[qid-1, 'Description'] + '</div>'
-                description.contents = [BeautifulSoup('<div class="col-12 pt-2 pb-2">' + df_answer.at[qid-1, 'Description'] + '</div>', 'html.parser')]
+                if description:
+                    desc_str = str(df_answer.at[qid-1, 'Description'])
+                    description.clear()
+                    desc_soup = BeautifulSoup('<div class="col-12 pt-2 pb-2">' + desc_str + '</div>', 'html.parser')
+                    for child in list(desc_soup.children):
+                        description.append(child)
 
-            with open("my"+fname, "w", encoding='utf-8') as file:
-                file.write(str(bs))
-            print(fname, flush=True)
+                with open("my"+fname, "w", encoding='utf-8') as file:
+                    file.write(str(bs))
+                print(fname, flush=True)
 
 
         except Exception as e:
@@ -1085,6 +1175,7 @@ def refresh_all_exam_answer(exam_list_file, exam_answer_file, qtitle):
     print(f"Function duration: {formatted_duration}")
 
 if __name__ == "__main__":
+    pass
     # SAA_C03 = 'Exam AWS Certified Solutions Architect - Associate SAA-C03 topic 1'
     # refresh_all_exam('SAA3_Exam_imsi.csv', SAA_C03)    # OK 583
     # exit()
@@ -1128,9 +1219,9 @@ if __name__ == "__main__":
     # FORUM_NAME = 'cncf'
     # refresh_from_forum(DISCUSS, FORUM_NAME, 1)    
 
-    DISCUSS = 'AmazonDiscuss.txt'
-    FORUM_NAME = 'amazon'
-    refresh_from_forum(DISCUSS, FORUM_NAME, 1)
+    # DISCUSS = 'AmazonDiscuss.txt'
+    # FORUM_NAME = 'amazon'
+    # refresh_from_forum(DISCUSS, FORUM_NAME, 1)
     
     # DISCUSS = 'IsacaDiscuss.txt'
     # FORUM_NAME = 'isaca'

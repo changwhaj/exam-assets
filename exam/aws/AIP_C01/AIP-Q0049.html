@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta charset="utf-8"/>
+<title>Exam AWS Certified Generative AI Developer</title>
+<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="2026-04-13 9:10" name="refresh_date"/>
+</head>
+<body class="home2"><div style="position:relative;">
+<!-- bootstrap v4 css -->
+<link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<!-- font-awesome css -->
+<link defhref="../../../css/font-awesome.min.css" href="../../../css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<!-- slick css -->
+<link defhref="../../../css/slick.css" href="../../../css/slick.css" rel="stylesheet" type="text/css"/>
+<!-- rsmenu transitions CSS -->
+<link defhref="../../../css/rsmenu-transitions.css" href="../../../css/rsmenu-transitions.css" rel="stylesheet" type="text/css"/>
+<link href="../../../css/style.css?ver=1" rel="stylesheet" type="text/css"/>
+<link href="../../../css/color/default.css" rel="stylesheet" type="text/css"/>
+<!-- responsive css -->
+<link href="../../../css/responsive.css" rel="stylesheet" type="text/css"/>
+<link href="../../../css/forum.css" rel="stylesheet" type="text/css"/>
+<div class="sec-spacer pt-20">
+<div class="container">
+<div class="container action-row-container border-0 p-0 mb-2">
+<div class="container action-row clearfix d-flex">
+<i class="fa fm fa-language fa-2x mr-2"></i>
+<a class="btn show-english" href="javascript:void(0)">English</a>
+<a class="btn show-korean d-none" href="javascript:void(0)">한국어</a>
+<div class="custom-control custom-switch mr-2">
+<input class="custom-control-input" id="darkSwitch" type="checkbox"/>
+<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+</div>
+<div class="custom-control custom-switch">
+<input class="custom-control-input" id="fontSwitch" type="checkbox"/>
+<label class="custom-control-label" for="fontSwitch">Big Font</label>
+</div>
+<link href="../../../css/mode-switch.css" rel="stylesheet" type="text/css"/>
+<script src="../../../js/mode-switch.js"></script>
+<span class="pagination-container ml-auto">
+<span id="page-indicator"><strong></strong></span>
+<span class="pagination-nav ml-4">
+<a class="btn btn-sm" href="javascript:void(0)" id="prevLink"><i class="fa fm fa-arrow-circle-left mr-2"></i>이전</a>
+<select class="discussion-list-page-select form-control form-control-sm" id="pageSelect"></select>
+<a class="btn btn-sm" href="javascript:void(0)" id="nextLink">다음<i class="fa fm fa-arrow-circle-right ml-2"></i></a>
+</span>
+</span>
+</div>
+</div>
+<script src="../../../js/questions.js"></script>
+<!-- BEGIN Discussions header / title -->
+<div class="row">
+<div class="col-12">
+<div class="discussion-list-header">
+<h1><i class="fa fa-file-text-o mr-3"></i>AWS Certified Generative AI Developer - Professional 시험 AIP-C01 주제 1 문제 49 토론</h1>
+</div>
+<div class="discussion-list-header-en" style="display: none;">
+<h1><i class="fa fa-file-text-o mr-3"></i>Exam AWS Certified Generative AI Developer - Professional AIP-C01 topic 1 question 49 discussion</h1>
+</div>
+</div>
+</div>
+<!-- END Discussions header / title -->
+<!-- BEGIN Discussion Content -->
+<div class="row">
+<div class="col-12">
+<div class="discussion-header-container">
+<!-- Question -->
+<div class="question-discussion-header">
+						
+							Amazon
+						 <a class="discussion-link" href="/exams/amazon/aws-certified-generative-ai-developer-professional-aip-c01/">AWS Certified Generative AI Developer - Professional AIP-C01 시험 문제</a>
+<div>
+							문제 번호: 49 <br/>
+							주제 번호: 1
+						</div>
+</div>
+<div class="question-body mt-3 pt-3 border-top" data-id="984897">
+<p class="card-text">
+							
+								한 금융 서비스 회사가 프리미엄 고객과 일반 고객 모두에게 서비스를 제공하는 생성형 AI(GenAI) 애플리케이션을 개발 중입니다. 이 애플리케이션은 Amazon API Gateway REST API 뒤에서 AWS Lambda 함수를 사용하여 요청을 처리합니다. 회사는 각 사용자가 속한 고객 등급에 따라 AI 모델을 동적으로 전환해야 합니다. 또한 코드 재배포 없이 새로운 기능에 대한 A/B 테스트를 수행하고자 합니다. 변경 사항을 적용하기 전에 온도 및 최대 토큰 제한과 같은 모델 매개변수를 검증해야 합니다. <br/>이러한 요구 사항을 최소한의 운영 오버헤드로 충족하는 솔루션은 무엇일까요?
+							
+						</p>
+<div class="voted-answers-tally d-none">
+</div>
+<div class="question-choices-container">
+<ul>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="A">
+													A.
+												</span> 
+											
+											각 구성에 대한 AWS Systems Manager 파라미터 스토어 파라미터를 생성합니다. Lambda 함수를 사용하여 파라미터 업데이트를 폴링합니다. 구성이 변경될 때 재배포를 트리거하기 위해 Amazon EventBridge 이벤트를 사용합니다.
+										</li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="B">
+													B.
+												</span> 
+											
+											모델 구성을 Amazon DynamoDB 테이블에 저장합니다. 고객 등급에 따라 구성을 검색하도록 액세스 패턴을 최적화합니다. Lambda 함수가 각 요청 시작 시 DynamoDB를 쿼리하여 사용할 모델을 결정하도록 구성합니다.
+										</li>
+<li class="multi-choice-item correct-hidden">
+<span class="multi-choice-letter" data-choice-letter="C">
+													C.
+												</span> 
+											
+											AWS AppConfig를 사용하여 모델 구성을 관리합니다. 기능 플래그를 사용하여 A/B 테스트를 수행합니다. 모델 매개변수에 대한 JSON 스키마 유효성 검사 규칙을 정의합니다. AWS AppConfig 에이전트를 사용하여 Lambda 함수가 구성을 검색하도록 구성합니다.
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                가장 많은 표를 받은
+            </span></li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="D">
+													D.
+												</span> 
+											
+											모델 구성을 저장하기 위해 Amazon ElastiCache(Redis OSS) 클러스터를 생성합니다. 짧은 TTL 값을 설정합니다. Lambda 함수에서 사용자 지정 유효성 검사 로직을 실행합니다. Amazon CloudWatch 메트릭을 사용하여 구성 사용량을 모니터링합니다.
+										</li>
+</ul>
+</div>
+<a class="btn btn-primary reveal-solution" href="javascript:void(0)">제안된 답변 보기</a>
+<a class="btn btn-primary hide-solution d-none" href="javascript:void(0)">답변 숨기기</a>
+</div>
+<!-- / Question  -->
+</div>
+<div class="discussion-header-container-en" style="display: none;">
+<!-- Question -->
+<div class="question-discussion-header">
+						
+							Exam question from
+						
+						Amazon's
+						<a class="discussion-link" href="/exams/amazon/aws-certified-generative-ai-developer-professional-aip-c01/">AWS Certified Generative AI Developer - Professional AIP-C01</a>
+<div>
+							Question #: 49<br/>
+							Topic #: 1
+						</div>
+</div>
+<div class="question-body mt-3 pt-3 border-top" data-id="984897">
+<p class="card-text">
+							
+								A financial services company is developing a generative AI (GenAI) application that serves both premium customers and standard customers. The application uses AWS Lambda functions behind an Amazon API Gateway REST API to process requests. The company needs to dynamically switch between AI models based on which customer tier each user belongs to. The company also wants to perform A/B testing for new features without redeploying code. The company needs to validate model parameters like temperature and maximum token limits before applying changes.<br/>Which solution will meet these requirements with the LEAST operational overhead?
+							
+						</p>
+<div class="voted-answers-tally d-none">
+</div>
+<div class="question-choices-container">
+<ul>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="A">
+													A.
+												</span>
+											
+											Create an AWS Systems Manager Parameter Store parameters for each configuration. Use Lambda functions to poll for parameter updates. Use Amazon EventBridge events to trigger redeployments when configurations change.
+										</li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="B">
+													B.
+												</span>
+											
+											Store model configurations in Amazon DynamoDB tables. Optimize access patterns to retrieve configurations according to customer tier. Configure Lambda functions to query DynamoDB at the beginning of each request to determine which model to use.
+										</li>
+<li class="multi-choice-item correct-hidden">
+<span class="multi-choice-letter" data-choice-letter="C">
+													C.
+												</span>
+											
+											Use AWS AppConfig to manage model configurations. Use feature flags to perform A/B testing. Define JSON schema validation rules for model parameters. Configure Lambda functions to retrieve configurations by using the AWS AppConfig Agent.
+										<span class="badge badge-success most-voted-answer-badge" data-original-title="This answer is currently the most voted for in the discussion" style="display: none;" title="">
+                Most Voted
+            </span></li>
+<li class="multi-choice-item">
+<span class="multi-choice-letter" data-choice-letter="D">
+													D.
+												</span>
+											
+											Create an Amazon ElastiCache (Redis OSS) cluster to store model configurations. Set short TTL values. Run custom validation logic in Lambda functions. Use Amazon CloudWatch metrics to monitor configuration usage.
+										</li>
+</ul>
+</div>
+<a class="btn btn-primary reveal-solution" href="javascript:void(0)">Show Suggested Answer</a>
+<a class="btn btn-primary hide-solution d-none" href="javascript:void(0)">Hide Answer</a>
+</div>
+<!-- / Question  -->
+</div>
+<div class="comments-wrapper">
+<a class="badge reveal-comment" href="javascript:void(0)">댓글 표시</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">댓글 숨기기</a>
+<div class="discussion-page-comments-section" data-discussion-question-id="384273" style="display: none">
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">댓글</h4></div>
+<!-- discussion.html -->
+<!-- Discussion start -->
+<div class="container outer-discussion-container">
+<div class="row">
+<div class="comments-container p-2 w-100">
+<!-- New comment start -->
+<!-- New comment end -->
+<div class="discussion-container">
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1746591" id="comment-1746591">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				de1612d
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2026년 4월 13일 18시 10분">2026년 4월 13일 18시 10분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
+<div class="comment-content">정답은 C입니다.</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">1</span> 회
+			 
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1718899" id="comment-1718899">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				조르지오Gss
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2026년 3월 5일 오전 7시 30분">2026년 3월 5일 오전 7시 30분</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">선택된 답변: <span><strong>C</strong></span></div>
+<div class="comment-content">"코드를 재배포하지 않고" = 앱 구성</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="추천"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="회신하다"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="보고서"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text"><span class="upvote-count">2</span> 회
+			 
+				추천됨</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Discussion end -->
+</div>
+</div>
+<div class="comments-wrapper-en" style="display: none;">
+<a class="badge reveal-comment" href="javascript:void(0)">Show Comments</a>
+<a class="badge hide-comment d-none" href="javascript:void(0)">Hide Comments</a>
+<div class="discussion-page-comments-section-en" data-discussion-question-id="384273" style="display: none">
+<div class="mt-4 ml-2 font-"><h4 class="mb-0" id="comment-section-title">Comments</h4></div>
+<!-- discussion.html -->
+<!-- Discussion start -->
+<div class="container outer-discussion-container">
+<div class="row">
+<div class="comments-container p-2 w-100">
+<!-- New comment start -->
+<!-- New comment end -->
+<div class="discussion-container">
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1746591" id="comment-1746591">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				de1612d
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2026-04-13 18:10">2026-04-13 18:10</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
+<div class="comment-content">Answer is C</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">1</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+<!-- single_comment.html -->
+<div class="media comment-container" data-comment-id="1718899" id="comment-1718899">
+<a class="minimize-comment comment-toggle" href="#">
+<i class="fa fa-minus-square-o mr-2 mt-1"></i>
+</a>
+<a class="maximize-comment comment-toggle" href="#">
+<i class="fa fa-plus-square-o mr-2 mt-1"></i>
+</a>
+<div class="media-body">
+<div class="comment-head">
+<i class="fa fa-user mr-1 mt-1"></i>
+<a>
+<h5 class="mt-0 mb-0 align-middle d-inline-block comment-username">
+				GiorgioGss
+			</h5>
+</a>
+<span class="comment-date align-middle" title="2026-03-05 07:30">2026-03-05 07:30</span>
+</div>
+<div class="comment-body comment-toggled">
+<div class="comment-selected-answers badge badge-warning">Selected Answer: <span><strong>C</strong></span></div>
+<div class="comment-content">"without redeploying code" = appconfig</div>
+<div class="comment-control">
+<span class="comment-control-buttons d-print-none">
+<a class="comment-upvote requires-login" title="Upvote"><i class="fa fa-thumbs-up"></i></a>
+<a class="ml-2 comment-reply-to requires-login" title="Reply"><i class="fa fa-reply"></i></a>
+<a class="ml-2 comment-flag-report requires-login" title="Report"><i class="fa fa-flag"></i></a>
+</span>
+<span class="ml-2 upvote-text">
+				upvoted <span class="upvote-count">2</span> times
+			</span>
+<span class="comment-control-error ml-2"></span>
+</div>
+<div class="new-comment-box-container mt-2">
+</div>
+<div class="comment-replies">
+<!-- Nesting start -->
+<!-- Nesting end -->
+</div>
+</div>
+<div class="comment-ellipsis comment-toggled">
+		...
+	</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Discussion end -->
+</div>
+</div>
+</div>
+</div>
+<!-- END Discussion Content -->
+</div>
+</div>
+<!-- start scrollUp  -->
+<div class="d-print-none" id="scrollUp">
+<i class="fa fa-angle-up"></i>
+</div>
+<!-- Popper JS -->
+<script src="../../../js/popper.min.js"></script>
+<!-- jquery latest version -->
+<script src="../../../js/jquery.min.js"></script>
+<!-- bootstrap js -->
+<script src="../../../js/bootstrap.min.js"></script>
+<!-- slick.min js -->
+<script src="../../../js/slick.min.js"></script>
+<!-- wow js -->
+<script src="../../../js/wow.min.js"></script>
+<!-- main js -->
+<script src="../../../js/main.js"></script>
+<script type="text/javascript">
+    // Activate tooltips
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    })
+
+    $(document).ready(function () {
+        // Load stylesheets in a deferred way:
+        $('link[defhref]').each(function() {
+            $(this).attr('href', $(this).attr('defhref'));
+            //var src = $(this).attr('href');
+            //loadStyleSheet(src);
+        });
+
+        // Load mobile images in a deferred way:
+        var isMobile = window.matchMedia("only screen and (max-width: 490px)").matches;
+        if (isMobile) {
+            $('img[mobile-defsrc]').each(function () {
+                $(this).attr('src', $(this).attr('mobile-defsrc')).removeAttr('defsrc');
+            });
+        }
+
+        // Load images in a deferred way:
+        $('img[defsrc]').each(function() {
+            $(this).attr('src',$(this).attr('defsrc'));
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function (){
+        set_voting_configuration_by_question($(".question-body"));
+    });
+</script>
+<script src="../../../js/comments.js?ver=1" type="text/javascript"></script>
+<script src="../../../js/examview.js?ver=4" type="text/javascript"></script>
+</div>
+</body>
+</html>
